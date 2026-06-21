@@ -1,0 +1,174 @@
+\documentclass[Total.tex]{subfiles}
+
+\begin{document}
+	
+	\chapter{Riemannian Metrics}
+		\section{Definitions}
+			\begin{Def}
+				\begin{itemize}
+					\item Let $M$ be a smooth manifold. A \textbf{Riemannian metric} on $M$ is a $2$-tensor field $g\in \mathcal{T}^2M$, whose value
+					\begin{gather*}
+						g_p:T_p M\times T_p M\rightarrow \RR
+					\end{gather*}
+					which is positive definite in the sense of $g_p(v,v)\geq 0$. 
+					\item A \textbf{Riemannian manifold} is a pair $(M,g)$.
+				\end{itemize}
+			\end{Def}
+			
+			\textbf{Remark} Riemannian metric vs Metric Space
+			
+			\begin{example}
+				(Eucilidean Metric) 
+			\end{example}
+			\subsubsection{Isometires}
+			\subsubsection{Local Representation}
+				\begin{Def}
+					(Local Representation of Riemannian Metric)
+				\end{Def}
+				
+				
+				\begin{proposition}
+					(Existence of Orthonormal Frame)
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\begin{Def}
+					(Unit Tangent Bundle)   Define the \textbf{unit tangent bundles}
+					\begin{gather*}
+						UTM:=\{(p,v)||v|_g=1\}
+					\end{gather*}
+				\end{Def}
+				
+				\begin{proposition}
+					If $(M,g)$ is a Riemannian-Manifold with or without boundary, it unit tangent bundle $UTM$ is a \underline{smooth, properly embedded codimensional-1 submanifold with boundary in} $TM$, with
+					\begin{gather*}
+						\pi:UTM\rightarrow M\qquad \partial(UTM)=\pi^{-1}(\partial M)
+					\end{gather*}
+					Then, $UTM$ is connected$\Leftrightarrow$ $M$ is connected. $UTM$ is compact$\Leftrightarrow M$ is compact. 
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Riemannian Submanifold}
+				\begin{lemma}
+					Suppose $(\tilde{M},\tilde{g})$ is a Riemannian manifold with or without boundary. $M$ is a smooth manifold with or without boundary. And 
+					\begin{gather*}
+						F:M\rightarrow \tilde{M}
+					\end{gather*}
+					is a smooth map. The smooth 2-tensor field(pullback)
+					\begin{gather*}
+						g=F^*\tilde{g}
+					\end{gather*}
+					is a Riemannian metric iff $F$ is an immersion.
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+		\section{Models of Riemannian Manifolds}
+			\subsection{Symmetries}
+			\subsection{Covering Space of Riemannian Manifold}	 
+				
+				\subsubsection{Eucilidean Space}
+				\subsubsection{Sphere}
+				\subsubsection{Hyperbolic Space}
+				\subsubsection{Killing-Hopf Theorem}
+					\begin{theorem}
+						Suppose $(M,g)$ be compelete, simply connected Riemannian $n$-manifold with constant sectional curvature, $n\geq 2$.
+						
+						Then, $M$ is isometric to one of the model spaces $\RR^n,\mathbb{S}^n(R),\mathbb{H}^n(R)$.
+					\end{theorem}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{corollary}
+						内容...
+					\end{corollary}
+					\begin{proof}
+						内容...
+					\end{proof}
+				\subsubsection{Space Form}
+	\chapter{Riemannian Connections}
+		\section{Affine Connections}
+			\begin{Def}
+				Define the \textbf{affine connections}
+				\begin{gather*}
+					\nabla:\mathfrak{X}(M)\times \mathfrak{X}(M)\rightarrow \mathfrak{X}(M)\\
+					(X,Y)\mapsto 
+				\end{gather*}
+				With following properties:
+				\begin{itemize}
+					\item ($C^\infty(M)$-Linear) $\triangledown_{fX+gY}Z=f\triangledown_X Z+g\triangledown_{Y}Z$;
+					\item($\RR$-Linear) $\triangledown_{X}(aY+bZ)=a\triangledown_X(Y)+b\triangledown_X(Z)$
+					\item (Lebnitz)$\triangledown_{X}(fY)=f\triangledown_X Y+X(f)Y$
+				\end{itemize}
+				where $X,Y,Z\in \mathfrak{X}(M),f,g\in C^\infty(M)$.
+			\end{Def}
+			
+			\begin{proposition}
+				Let $M$ be a differentiable manifold with an affine connection $\triangledown$. There exists a \underline{unique} correspondnece which associates to a vector field $V$ along the differentiable curve
+				\begin{gather*}
+					c:I\rightarrow M
+				\end{gather*}
+				another vector field aloing $c$, called the \textbf{covariant derivative} of $V$ along $c$, such that:
+				\begin{itemize}
+					\item 
+					\item 
+					\item 
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Parallel Vector Field}
+		\section{Riemannian Metrics, Levi-Civita Theorems}
+	\chapter{Geodesics}
+		\section{The Geodesics Flow}
+		\section{Minimalizing Properties}
+	\chapter{Curvatures}
+		\section{Curvatures}
+		\section{Sectional Curvature}
+		\section{Ricci Curvature and Scalar}
+		\section{Tensors on Riemannian Manifolds}
+		\section{Manifolds of Nonpositive Curvature}
+			\subsection{Cartan-Hadamard Manifold}
+			\begin{theorem}
+				(Cartan-Hadamard)
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\begin{Def}
+				内容...
+			\end{Def}
+			\begin{proposition}
+				内容...
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				内容...
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Cartan's Fixed Point Theorem}
+			\subsection{Cartan's Torsion Theorem}
+	\chapter{Riemannian Submanifold}
+	\chapter{Gauss-Bonnet Theorem}
+	\chapter{Jacobi Field}
+	\chapter{Comparison Theory}
+	\chapter{Curvature and Topology}
+	\chapter{Isomorphic Immersions}
+	\chapter{Compelete Manifold, Hopf-Rinow and Hadamard Theorems}
+	\chapter{Spaces of Constant Curvature}
+	\chapter{Variations of Energy}
+	\chapter{The Morse Index Theorem}
+	\chapter{The Fundamental Group of Manifolds of Negative Curvatures}
+	\chapter{The Sphere Theorem}
+	\chapter{The Laplacian}
+		This will be given in geometric analysis.
+\end{document}

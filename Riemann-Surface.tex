@@ -1,0 +1,142 @@
+\documentclass[Total.tex]{subfiles}
+
+\begin{document}
+	\chapter{Riemann Surfaces}
+		\section{Definitions}
+		
+			\begin{Def}
+				A \textbf{Riemann surface} is one-dimensional complex=\underline{conneected} $1$-dimensional complex analytic manifold.
+				
+				That is, equipped with maximal charts $\{(U_\alpha,z_\alpha)\}_{\alpha\in A}$ on $M$ 
+				
+				\begin{gather*}
+					z_\alpha:U_\alpha\rightarrow \mathbb{C}
+				\end{gather*}
+				
+				Then transition functions are holomorphic
+				
+				\begin{gather*}
+					f_{\alpha\beta}=z_\alpha\circ z_\beta^{-1}:;U_\alpha\cap U_\beta=\varnothing
+				\end{gather*}
+				
+				The charts are called \textbf{transition functions}.
+			\end{Def}
+			
+			Notice that: The set of holomorphic functions forms a pseudogroup under composition. Taking
+			
+			\begin{gather*}
+				\mathcal{H}(X)=\{f:U\rightarrow V|f\mbox{ is biholomorphism};U,V\subseteq X\mbox{ are open}\}
+			\end{gather*}
+			
+			Then,
+			
+			\begin{itemize}
+				\item 
+				
+				\item 
+				
+				\item 
+				
+				\item 
+			\end{itemize}
+			
+			\begin{Def}
+				Classically, a compact Riemann surface is called \textbf{closed}, elsewise is \textbf{open}.
+			\end{Def}
+			
+			\begin{lemma}
+				内容...
+			\end{lemma}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			
+			\subsection{Holomorphic Mapping}
+			
+		\section{Topology of Riemann Surface}
+			\subsection{Fundamental Groups}
+			
+			\subsection{Covering Manifolds}
+			
+			\subsection{Riemann-Hurwitz Relation}
+			
+				\begin{theorem}
+					We have
+					
+					\begin{gather*}
+						g=n(\gamma-1)+1+B/2
+					\end{gather*}
+				\end{theorem}
+		
+		\section{Differential Forms}
+		
+		\section{Integration Forms}
+	\chapter{Analytic Continuation, Covering Surfaces and Algebraic Functions}
+		\section{Analytic Continuation}
+			\begin{Def}
+				\begin{itemize}
+					\item (Function Element) Let $M,N$ be fixed Riemann surfaces. A \textbf{function element} is pair
+					\begin{gather*}
+						(f,D)
+					\end{gather*}
+					
+					where:
+					\begin{itemize}
+						\item $D$ is a connected, open nonempty subset of $M$;
+						\item $f:D\rightarrow N$ is analytic. 
+					\end{itemize}
+					
+					\item Two elements $(f_1,D_1),(f_2,D_2)$ are \textbf{direct analytic continuation} of each other if
+					\begin{gather*}
+						D_1\cap D_2\not=\emptyset\qquad f_1|D_1\cap D_2=f_2|D_1\cap D_2
+					\end{gather*}
+					
+					Use the following notion $(f_1,D_1)\simeq (f_2,D_2)$.
+				\end{itemize}
+			\end{Def}
+			
+			\begin{Def}
+				(Analytic Continuations)
+				\begin{itemize}
+					\item We say $(f,D)$, $(g,\tilde{D})$ are \textbf{analytic continuation} if there exists function elements $(f_j,D_j);1\leq j\leq J$: 
+					\begin{gather*}
+						(f_1,D_1)=(f,D)\qquad (f_J,D_J)=(g,\tilde{J})\qquad (f_j,D_j)\simeq (f_{j+1},D_{j+1})
+					\end{gather*}
+					\item A \textbf{compelete analytic continuation} is an equivalence class of suc $(f,D)$. By analytic continuation.
+				\end{itemize}
+			\end{Def}
+			
+			\begin{lemma}
+				(Analytic Continuation$\Rightarrow$ Path) Suppose $(f,D),(g,\tilde{D})$ is an analytic continuation. Then, there exists a path
+				\begin{gather*}
+					\gamma:[0,1]\rightarrow M
+				\end{gather*}
+				
+				Connecting the points of $D$, with following property: Exists
+				\begin{gather*}
+					0<t_1<\dots<t_m=1
+				\end{gather*}
+				
+				where: Exists $B(\gamma(t_i),r_i)$
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{corollary}
+				内容...
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\section{The Unramified Riemann Surface of An Analytic Germ}
+			\section{The Ramified Riemann Surface of An Analytic Germ}
+			\section{Algebraic Germs and Functions}
+			\section{title}
+	\chapter{Stein Manifold}
+	\chapter{Compact Riemann Surface}
+		\section{Existence Theorem}
+\end{document}

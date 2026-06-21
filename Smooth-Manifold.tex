@@ -1,0 +1,424 @@
+\documentclass[Total.tex]{subfiles}
+
+\begin{document}
+	\chapter{Smooth Manifold}
+		\section{Definitions}
+			\begin{Def}
+				An $n$-dimensional \textbf{smooth manifold} is a topological manifold $(M,\{(U_i,\varphi_i)\})$ with \textbf{smooth transition function}
+				\begin{gather*}
+					\varphi_i\circ\varphi_j^{-1}\in C^\infty_{diff}(\hat{U}_j,\hat{U}_i)
+				\end{gather*}
+			\end{Def}
+			And for every smooth charts, there exists a \textbf{maximal chart} which contains the smooth charts. Such atlas is called the \textbf{smooth structure} of $M$.
+			
+			\begin{lemma} Let $M$ be a topological manifold:
+				\begin{itemize}
+					\item Every smooth atlas is contained in a maximal smooth atlas;
+					\item Two smooth atlases for $M$ determines the same maximal smooth atlas iff their union is smooth.
+				\end{itemize}
+			\end{lemma}
+			\begin{proof}
+				\begin{itemize}
+					\item Let $\mathcal{A}$ be the collection of charts that are smooth compatible with every chart in $\bar{\mathcal{A}}$. 
+					
+					 $\bar{\mathcal{A}}$ is a smooth chart. Firstly, $\mathcal{A}\subseteq \bar{\mathcal{A}}$. For two charts $(U,\varphi),(V,\psi)\in \bar{\mathcal{A}}$ where $U\cap V\not=\varnothing$, select some $p\in U\cap V$ and a chart $(W,\theta)$ where $p\in U\cap V\cap W$. Omitted.
+					\item Omitted.
+				\end{itemize}
+			\end{proof}
+			
+			\begin{theorem}
+				(Milnor,1956) $S^7$ has more than one the smooth structures.
+			\end{theorem}
+			\begin{theorem}
+				(Exotic $\RR^4$) $\RR^4$ has infinite many of smooth structures.
+			\end{theorem}
+			
+			\subsection{Smooth Functions}
+			\begin{Def}
+				A function $f:M\rightarrow \RR$ is \textbf{smooth function} if for every coordinate $(U_i,\varphi_i)$
+				\begin{gather*}
+					f\circ \varphi_i^{-1}:\hat{U}_i\rightarrow \RR
+				\end{gather*} 
+				is smooth.
+			\end{Def}
+			\subsection{Construction of Smooth Manifold}
+			\begin{lemma}
+				(Smooth Manifold Construction Lemma) Let $M$ be a set, and suppose we are given a collection $\{U_\alpha\}$ of subsete of $M$, together with injective maps $\varphi_\alpha:U_\alpha\rightarrow \RR^n$. With following properties:
+				\begin{itemize}
+					\item For each $\alpha,\varphi_\alpha(U_\alpha)$ is an open subset of $\RR^n$;
+					\item $\varphi_\alpha(U_\alpha\cap U_\beta)$ are open in $\RR^n$;
+					\item Whenever $U_\alpha\cap U_\beta\not=\varnothing,\varphi_\alpha\circ \varphi_\beta^{-1}$ is a diffeomorphism;
+					\item Countably many $U_\alpha$ cover $M$;
+					\item Hausdorfness;
+				\end{itemize}
+			\end{lemma}
+			\begin{proof}
+				Omitted.
+			\end{proof}
+		\section{Smooth Functions and Smooth Maps}
+			\subsection{Definitions}
+			\begin{Def}
+				\begin{itemize}
+					\item A function $f:M\rightarrow \RR^k$ is \textbf{smooth} if for every $p\in M$, there exists a smooth chart $(U,\varphi)$ and the composition $f\circ \varphi^{-1}:\hat{U}\rightarrow \RR^k$ is smooth;
+					
+					Such $f\circ \varphi^{-1}$ is called the \textbf{coordinate representation} of $f$;
+					\item Furthermore, $F:M\rightarrow N$ is smooth if for some charts $(U,\varphi),(V,\psi)$,
+					\begin{gather*}
+						\varphi\circ F\circ \psi^{-1}:\psi(U\cap V)\rightarrow \varphi(U\cap V)
+					\end{gather*}
+					is smooth
+				\end{itemize}
+			\end{Def}
+			
+			It is easy to verify:
+			\begin{itemize}
+				\item $C^\infty(M)$ is commutative $\RR$-algebra;
+				\item For every charts, the representation map is smooth;
+			\end{itemize}
+			
+			\begin{lemma}
+				(Smoothness is Local)Let $M,N$ be two smooth manifolds, $F:M\rightarrow N$ be a map. If every point $p\in M$, restriction $F|U$ is smooth, then $F$ is smooth; Conversely also holds.
+			\end{lemma}
+			\begin{proof}
+				Omitted;
+			\end{proof}
+			
+			\begin{lemma}
+				(Pasting) If given $F_\alpha:U_\alpha\rightarrow N$ with $F_\alpha|U_\alpha\cap U_\beta=F_\beta|U_\alpha\cap U_\beta,\cup U_\alpha=M$. Then there exists $F:M\rightarrow N$ such that
+				\begin{gather*}
+					F|U_\alpha=F_\alpha
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{lemma}
+				Every smooth map between smooth manifolds is continuous.
+			\end{lemma}
+			\begin{proof}
+				Omitted.
+			\end{proof}
+			
+			\subsection{Diffeomorphisms}
+			\begin{Def}
+				内容...
+			\end{Def}
+		\section{Smooth Covering Maps}
+		\section{Proper Maps}
+			\begin{Def}
+				$F:M\rightarrow N$ is \textbf{proper} if the inverse image of any compact $K\subseteq N$ is compact.
+			\end{Def}
+			\begin{lemma}
+				Suppose $M$ is a compact space and $N$ is a Hausdorff space, then every continuous map $F:M\rightarrow N$ is proper. 
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+		\section{Partition Unity}
+	\chapter{Tangent Spaces}
+		\section{Tangent Vectors}
+			\subsection{Derivative on Opens}
+				
+				\begin{Def}
+					内容...
+				\end{Def}
+				
+			\subsection{Formel Derivations}
+			
+			\subsection{Tangent Vectors on a Manifold}
+				
+				\begin{example}
+					(Tangent Space of Vector Space) Let $V\cong \RR^n$ be a vector space. We have
+					
+					\begin{gather*}
+						T_wV=V;w\in V
+					\end{gather*} 
+				\end{example}
+			\subsection{Pushforwards}
+		\section{Coordinate Computations}
+		\section{Tangent Vectors to Curves,Fibres}
+			\subsection{Curves}
+			\subsection{Fibres}
+				
+		
+	\chapter{Vector Fields}
+		\section{Tangent Bundles}
+			\begin{Def}
+				Define: For manifold $M$, the \textbf{tangent space}
+				\begin{gather*}
+					T M=\coprod_{p\in M} T_p M
+				\end{gather*}
+			\end{Def}
+			Then:
+			\begin{proposition}
+				(Smooth Structure of $TM$, Smoothness of Bundle Map)
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Functoriality}
+			
+			\begin{proposition}
+				$T:Man^1\rightarrow VBun$ is a functor. 
+			\end{proposition}
+			\begin{proof}
+				\begin{itemize}
+					\item Firstsly, $T$ is well-defined;
+					\item Secondly, $T(g\circ f)=T(g)\circ T(f)$. $f:M\rightarrow N,g:N\rightarrow L$,
+					
+					\begin{gather*}
+						T_p(g\circ f)(X)(h)=X(h\circ (g\circ f))\\
+						\qquad =T_p(f)(X)(h\circ g)\\
+						\qquad =T_p(g)\circ T_p(f)(X)
+					\end{gather*}
+					
+					where $X\in T_p M$. 
+				\end{itemize}
+			\end{proof}
+			
+			Especially
+			
+			\begin{proposition}
+				If $f:M\rightarrow N$ is smooth map, so is $T(f)$. 
+			\end{proposition}
+			\begin{proof}
+				Consider followin diagram
+				\begin{center}
+					\begin{tikzcd}
+						TM\arrow[r,"T(f)"]\arrow[d]&TN\arrow[d]\\
+						M\arrow[r,"f"]&N
+					\end{tikzcd}
+				\end{center}
+				
+				Take charts 
+			\end{proof}
+			
+			\subsection{Pfaffian Form}
+			
+			\begin{Def}
+				Let $M$ be a differentiable manifold and $V$ a finite dimensional vector space. A \textbf{$V$-valued Pfaffian form}, also called $1$-form on $M$ is a smooth map
+				\begin{gather*}
+					\omega:TM\rightarrow V
+				\end{gather*}
+				where $\omega_p:T_p M\rightarrow V$ is linear. 
+			\end{Def}
+			
+			The set of all Pfaffian forms on $M$
+			\begin{gather*}
+				\Omega^1(M,V)
+			\end{gather*}
+			Especially, when $V=\RR$, denoted by $\Omega_1(M)$.
+			
+			\begin{Def}
+				Define the product
+				\begin{gather*}
+					C^\infty(M)\times \Omega^1(M,V)\rightarrow \Omega^1(M,V)\\
+					f\cdot \omega:=(f\circ \pi_{TM})\cdot \omega
+				\end{gather*}
+			\end{Def}
+			
+			\begin{example}
+				内容...
+			\end{example}
+			
+			\subsubsection{Pullback}
+			
+			\begin{Def}
+				Let $f:N\rightarrow M$. Then, the \textbf{pullback}
+				\begin{gather*}
+					f^*:\Omega^1(M,V)\rightarrow \Omega^1(N,V)\\
+					\omega\mapsto \omega\circ Tf
+				\end{gather*}
+			\end{Def}
+			
+		\section{Lie Algebra of Vector Fields}
+			\begin{lemma}
+				If $U\subseteq M$ is an open subset and $f\in C^\infty(U,V)$ is a smooth function on $U$ with values in $V$, where $V$ is a finite dimensional vector space, $X\in \mathcal{V}(M)$.
+				
+				Then we obtain for each a smooth function
+				\begin{gather*}
+					\mathcal{L}_X f:=df\circ X|U\in C^\infty(U,V)
+				\end{gather*} 
+			\end{lemma}
+			\begin{proof}
+				Omitted.
+			\end{proof}
+			
+			\begin{Def}
+				Such $\mathcal{L}_X(f)$ is called \textbf{Lie derivative} of $f$ with respect to $X$.
+			\end{Def}
+			\subsection{Lie Bracket}
+			
+			\begin{lemma}
+				Let $U\subseteq \RR^n$ be an open subset. Then we obtain a Lie bracket on the space $C^\infty(U,\RR^n)$ by
+				\begin{gather*}
+					[X,Y](p):=dY(p)X(p)-dX(p)Y(p);p\in U
+				\end{gather*}
+				The map
+				\begin{gather*}
+					C^\infty(U,\RR^n)\rightarrow End(C^\infty(U,\RR)),X\mapsto \mathcal{L}_X
+				\end{gather*}
+				where $\mathcal{L}_X(f)(p)=df(p)X(p)$. is an injective homomorphism of Lie algebras. i.e. $\mathcal{L}_{[X,Y]}=[\mathcal{L}_X,\mathcal{L}_Y]$
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+		\section{Vector Field as Derivations}
+	\chapter{The Cotangent Bundle}
+		\section{Tangent Covectors on Manifolds}
+			\begin{Def}
+				Let $M$ be a manifold. For each $p\in M$, we define the \textbf{cotangent space} at $p$, 
+				\begin{gather*}
+					T_p^*M:=(T_p M)^\vee
+				\end{gather*}
+			\end{Def}
+		\section{Differentials}
+			
+			\begin{Def}
+				内容...
+			\end{Def}
+	\chapter{Submersions, Immersions and Embeddings}
+	\chapter{Submanifolds}
+		\section{Embedded Submanifold}
+			\begin{proposition}
+				Suppose $F:M\rightarrow N$ smooth, $q\in N$ regular value. Then, for $p\in f^{-1}(q)$,
+				\begin{gather*}
+					T_p(f^{-1}(q))=Ker(d_p F)
+				\end{gather*}
+			\end{proposition}
+		\section{Immersed Submanifold}
+			\begin{Def}
+				Immersed submanifold: Image of injective immersion.
+			\end{Def}
+			\begin{example}
+				$\RR\rightarrow T,x\mapsto (exp(2\pi ix),exp(2\pi i r x))$. 
+			\end{example}
+			
+			\textbf{Fact} If $f$ is closed injective immersion then $Im(f)$ is an embedded submanifold.
+	\chapter{Differential Forms}
+		\section{Differential Form}
+			\subsection{title}
+			Here is some of review of 
+			\begin{proposition}
+				We have
+				\begin{gather*}
+					\begin{cases}
+						dim\Lambda(V)=2^d\\
+						dim\Lambda_k(V)=\binom{d}{k},0\leq k\leq d
+					\end{cases},dim(V)=d
+					\wedge_k=\{0\};k\geq d
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+					\subsubsection{Univeresal Mapping Property}
+						\begin{proposition}
+							Denote $\varphi:V\times \dots\times V\rightarrow \Lambda_k(V),(v_1,\dots,v_k)\mapsto v_1\wedge\dots\wedge v_k$. Then, for arbitrary alternating multilinear map $h$ of $V\times \dots\times V$ into the vector space $W$. There exists a unique map $\tilde{h}:\wedge_k(V)\rightarrow W$ such that
+							\begin{gather*}
+								\tilde{h}\circ \varphi=h
+							\end{gather*}
+							With the following diagram commutes
+							\begin{center}
+								\begin{tikzcd}
+									\Lambda_k(V)\arrow[rd,dashrightarrow]\\
+									V\times \dots\times V\arrow[r,"h"]\arrow[u,"\varphi"]&W
+								\end{tikzcd}
+							\end{center}
+						\end{proposition}
+						\begin{proof}
+							内容...
+						\end{proof}
+						
+						\begin{corollary}
+							Suppose that $W=F$. Then, we could take the notion of
+							\begin{gather*}
+								\wedge_k(V)^*\cong A_k(V)
+							\end{gather*}
+						\end{corollary}
+						\begin{proof}
+							内容...
+						\end{proof}
+					\subsubsection{Pairing}
+						\begin{Def}
+							Let $V$ and $W$ be real finite dimensional vector spaces, a \textbf{pairing} of $V$ and $W$ is a bilinear map
+							\begin{gather*}
+								(-,-):V\times W\rightarrow \RR
+							\end{gather*}
+							A \textbf{pairing} is called \textbf{non-sigular} if whenever $w\not=0$ in $W$, theere exists 
+						\end{Def}
+					\subsubsection{Linear Transformation of $\Lambda(V)$}
+						Take the notion
+						\begin{gather*}
+							End(\Lambda(V))
+						\end{gather*}
+						for the endomorphisms of $\Lambda(V)$>
+			\subsection{Tensor Fields and Differential Forms}
+			\subsection{The Lie Derivative}
+		\section{Orientation}
+			\subsection{Orientation of Vector Spaces}
+				\begin{Def}
+					Let $V$ be an $N$-dimensional real inner product space. We extend the inner product from $V$ to all of $\Lambda(V)$
+					\begin{gather*}
+						<w_1\wedge \dots\wedge w_p,v_1\wedge\dots\wedge v_p>:=det<w_i,v_j>
+					\end{gather*}
+					The bilinear map can be extended linearly to $\Lambda_p(V)$.
+				\end{Def}
+				
+				\begin{proposition}
+					If $e_1,\dots,e_n$ is an orthonormal basis of $V$, then the corresponding basis of $\Lambda(V)$ is an orthonormal basis for $\Lambda(V)$.
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				
+				\begin{Def}
+					(Consistently Oriented) Assume that $(v_1,\dots,v_n)$ and $(w_1,\dots,w_n)$ be two bases of $V$ with $dim(V)=n$, then we have the transform matrix
+					\begin{gather*}
+						v^T=Bw^T
+					\end{gather*}
+					Then, they are \textbf{consistently oriented} if $det(B)>0$.
+				\end{Def}
+			\subsection{Orientation of Manifold}
+				\begin{Def}
+					Let $M$ be a manifold. Then a frame
+					\begin{gather*}
+						(E_1,\dots,E_n)
+					\end{gather*}
+					is \textbf{(positively) oriented} if
+				\end{Def}
+			\subsection{The Orientation Covering}
+			\subsection{The Orientation of Hypersurface}
+			\subsection{The Orientation of }
+	\chapter{Integration on Manifolds}
+		\begin{Def}
+			Let $M$ be a manifold. A \textbf{partition of unity} is a collection of smooth maps $(\varphi_i:M\rightarrow \RR)$ 
+			\begin{itemize}
+				\item there exists $\varphi_i:U_i\rightarrow V_i$ such that
+				\begin{gather*}
+					supp(\varphi_i)\subseteq U_i
+				\end{gather*}
+				
+				\item For each $p\in M$, only finitely many of $\varphi_i(p)\not=0$.
+			\end{itemize}
+		\end{Def}
+		\begin{Def}
+			Let $M$ be an oriented n-dim smooth manifold, $\omega$ a diff n-form, local integrable. Choose a partition of unity $(\varphi_i)$, define
+			\begin{gather*}
+				\int \omega=\sum_i \int h_i^{-1*}(\varphi_i\circ\omega) 
+			\end{gather*}
+		\end{Def}
+	\chapter{De Rham Cohomology}
+	\chapter{The de Rham Theorems}
+	\chapter{Integral Curves, and Flows}
+		\section{Integral Curves}
+			\begin{Def}
+				内容...
+			\end{Def}
+	\chapter{Integral Manifolds and Foliations}
+	\chapter{The Hodge Theorem}
+		
+\end{document}

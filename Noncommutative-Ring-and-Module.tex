@@ -1,0 +1,490 @@
+\documentclass[Total.tex]{subfiles}
+
+\begin{document}
+	
+	Reference
+	\begin{itemize}
+		\item T.Y.Lam
+		\item Noncommutative Noetherian Ring, J.C.McConnell
+	\end{itemize}
+	\chapter{Free Modules, Projective and Injective Modules}
+		\section{Free Modules}
+			\subsection{IBN}
+				\subsubsection{Category of Left/Right Modules}
+				
+					\begin{Def}
+						\begin{itemize}
+							\item 
+							\item 
+						\end{itemize}
+					\end{Def}
+				\subsubsection{Free Module}
+				
+					\begin{lemma}
+						(Generation Lemma)
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{corollary}
+						
+					\end{corollary}
+					\begin{proof}
+						内容...
+					\end{proof}
+				\subsubsection{IBN Properties}
+				
+					\begin{Def}
+						内容...
+					\end{Def}
+			\subsection{Stable Finiteness}
+				\begin{Def}
+					Recall: A ring is \textbf{Dedekind-finite} if
+					\begin{gather*}
+						c,d\in S,cd=1\Rightarrow dc=1
+					\end{gather*}
+					
+					A ring $R$ is \textbf{stably finite} if the matrix $M_n(R)$ are Dedekind-finite.
+				\end{Def}
+				
+				\textbf{Remark} Dedekind finiteness: In $M_n(F)$, we have
+				\begin{gather*}
+					AB=I\Rightarrow BA=I
+				\end{gather*}
+				
+				With:
+				\begin{gather*}
+					内容...
+				\end{gather*}
+				But for $M_{\omega}(F)$, a counterexample is
+				\begin{gather*}
+					内容...
+				\end{gather*}
+				\begin{proposition}
+					The following properties of $R$ are equivalent:
+					
+					\begin{itemize}
+						\item $R$ is stably finite;
+						\item For any $n$, $R^n\cong R^n\oplus N\Rightarrow 0$ in $\mathfrak{m}_R$;
+						\item For any $n$, any epimorphism $R^n\rightarrow R^n$ in $\mathfrak{m}_R$ is an isomorphism.
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{proposition}
+					For any \underline{nonzero element} $R$, stable finiteness implies IBN. But not conversely.
+				\end{proposition}
+				
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{proposition}
+					内容...
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{The Rank Condition}
+				\begin{Def}
+					\begin{itemize}
+						\item 
+						\item 
+					\end{itemize}
+				\end{Def}
+				
+				\begin{proposition}
+					内容...
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{The Strong Rank Condition}
+		\section{Projective Modules}
+			\subsection{Definitions, Examples}
+				
+				\begin{Def}
+					内容...
+				\end{Def}
+		\section{Injective Modules}
+	\chapter{Flat Modules and Homological Dimension}
+	
+		\section{Flat and Faithfully Flat Modules}
+			
+			\begin{Def}
+				内容...
+			\end{Def}
+	\chapter{Jacobson Radical of Noncommutative Rings}
+	
+	\begin{Def}
+		(Jacobson Radical) Define: The Jacobson radical
+		
+		\begin{gather*}
+			rad(R)=\cap_{I\in L} I\qquad L=\{I\subseteq R|I\mbox{ is the left ideal of }R\}
+		\end{gather*}
+	\end{Def}
+	
+	\begin{lemma}
+		For $y\in R$, the following statements are equivalent:
+		
+		\begin{itemize}
+			\item $y\in rad(R)$;
+			\item $1-xy$ is left-invertible for any $x\in R$;
+			\item $yM=0$ for any \underline{simple} left $R$-module M.
+		\end{itemize}
+	\end{lemma}
+	
+	\begin{proof}
+		\begin{itemize}
+			\item 
+			\item 
+			\item 
+		\end{itemize}
+	\end{proof}
+	
+	\subsubsection{Annihilators}
+	
+	\begin{Def}
+		内容...
+	\end{Def}
+	\subsubsection{Jacobson Semisimple}
+	\subsubsection{Nilpotent}
+	
+	\section{Jacobson Radical Under Change of Rings}
+	
+	\section{Group Ring and the J-Semisimplicity}
+	
+	\chapter{Division Algebra}
+	
+	\textbf{Reference}
+	
+	\begin{itemize}
+		\item A First Course in Noncommutative Rings, T.Y.Lam,Chapter 5;
+		\item 
+	\end{itemize}
+	
+	\section{Finite Dimensional Division Algebra}
+	
+	\subsection{Discussion of Complex Numbers,Quaternion and Frobenius's Theorem}
+	
+	\textbf{Introduction} We have the extension of field
+	
+	\begin{gather*}
+		\RR\rightsquigarrow \CC\qquad dim_\RR(\CC)=2
+	\end{gather*}
+	
+	Morever, we want to find some $\RR$-algebras, and be able to devide nubmers. 
+	
+	\begin{Def}
+		A unital algebra $D$ in which every nonzero element is invertible
+		is called a division algebra. 
+		
+		i.e. for every pair $a\in D-\{0\}$, such $x,y$ exists.
+		
+		\begin{gather*}
+			ax=1\qquad ya=1
+		\end{gather*}
+	\end{Def}
+	
+	A question is:
+	
+	\begin{center}
+		Is it possible to define multiplication on an n-dimensional real space so
+		that it becomes a real division algebra? 
+	\end{center}
+	
+	Standard Results:
+	
+	\begin{itemize}
+		\item 
+		\item 
+		\item 
+	\end{itemize}
+	
+	Assume: $D$ is an $n$-dimensional $\RR$-algebra.
+	
+	\begin{lemma}
+		For every $x\in D$, there exists a $\beta\in \RR$ such that
+		
+		\begin{gather*}
+			x^2+\beta x\in \RR
+		\end{gather*}
+	\end{lemma}
+	
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	Define:
+	
+	\begin{gather*}
+		V:=\{v\in D|v^2\leq 0\}
+	\end{gather*}
+	
+	
+	
+	\begin{lemma}
+		If $u,v\in V$ are linearly independent, then so are $u,v$ and $1$.
+	\end{lemma}
+	
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\subsubsection{Jordan Product}
+	
+	\begin{Def}
+		\label{Division-Algebra-Jordan-Product}(Jordan Product) For $x,y\in D$, we write
+		
+		\begin{gather*}
+			x\circ y:=xy+yx
+		\end{gather*}
+	\end{Def}
+	
+	\subsubsection{Frobenius's Theorem}
+	
+	\begin{theorem}
+		\label{Division-Algebra-Frobenius-Theorem} (Frobenius's Theorem) A \textbf{finite dimensional division algebra} $D$ is isomorphic to $\RR,\CC$ or $\HH$.
+	\end{theorem}
+	
+	\section{Structure of Finite Dimensional Algebras}
+	
+	\chapter{Wedderburn-Artin-Theory}
+	\section{Simple,Semisimple Modules Modules}
+	
+	\begin{Def}
+		
+		\begin{itemize}
+			\item 
+			\label{simple-module}\label{irreducible-module}  A nonzero module $M$ is \textbf{simple} or \textbf{irreducible} if it contains no \underline{proper} non-zero submodule.
+			
+			\item \label{semisimple-module}\label{completely- module} A module $M$ is called \textbf{semisimple} or \textbf{completely module} $R$-module if $M$ is a direct sum of simple modules. 
+		\end{itemize} 
+	\end{Def}
+	
+	\begin{Def}
+		An $R$-module is \textbf{cyclic} with generator $m\in M$ such that
+		
+		\begin{gather*}
+			M=Rm
+		\end{gather*} 
+	\end{Def}
+	
+	\subsection{Simple Modules}
+	
+	\begin{Def}
+		An \textbf{irreducible representation} of an algebra $A$ is defined as a representation
+		
+		\begin{gather*}
+			\varphi:A\rightarrow End_F(V)
+		\end{gather*}
+		
+		which contains no proper nonzero subspace $W$ of $V$ that is invariant under $\varphi(a),a\in A$.
+	\end{Def}
+	
+	Equivalently, the associated module with structure $A\times V\rightarrow V,(a,v)\mapsto \rho(a)(v)$. The module $V$ is irreducible. 
+	
+	\begin{proposition}
+		The following are equivalent for $R$-module $M$:
+		
+		\begin{itemize}
+			\item $M$ is simple;
+			\item $M$ is cyclic and every nonzero element is a generator;
+			\item $M\cong R/I$ for some \underline{maximal left ideal} $I$;
+		\end{itemize}
+	\end{proposition}
+	
+	\begin{proof}
+		\begin{itemize}
+			\item (1)$\Rightarrow$ (2) $M$ is simple. Then for any $m\in M$, either $Rm=0$ or $Rm=M$. Take
+			
+			\begin{gather*}
+				N:=\{m\in M|Rm=0\}
+			\end{gather*}
+			
+			Then, $N$ is a submodule, $N=0$. This implies, that for every $m\not=0,Rm=M$;
+			
+			\item (2)$\Rightarrow$ (3) Take
+			
+			\begin{gather*}
+				\phi:R\rightarrow Rm\qquad r\mapsto rm
+			\end{gather*}
+			
+			And $I:=Ker(\phi)$. $I$ is a submodule of $R$, and $R/I\cong Rm=M$.
+			
+			$I$ must be maixmal. If not, 
+			
+			\item (3)$\Rightarrow$ (1) $R/I$ contains no submodule.
+		\end{itemize}
+	\end{proof}
+	
+	\begin{example}
+		Let $D$ be a division ring and $V$ is vector space over $D$. Then $D$ is simple$\Leftrightarrow dim_D(V)=1$.
+	\end{example}
+	
+	\begin{example}
+		Let $V$ be a nonzero vector space over division ring $D$. 
+		
+		$V$ can be regard as a module over $R=End_D(V)$, via $fv:=f(v)$. 	We claim that $V$ is a simple $R$-module: For each pair $v,w\in V$ with $v\not=0$, there exist some $f$ such that $f(v)=w$. This is true. 
+	\end{example}
+	
+	\begin{example}
+		Let $R$ be a ring and $L$ be an ideal. Then $L$ is simple $L$-module iff $L$ is minimal. Omitted.
+	\end{example}
+	
+	\subsubsection{Minimal Left Ideals}
+	
+	\begin{lemma}
+		Let $R$ be a \underline{simple ring} having a minimal left ideal $L$. Then every simple $R$-module is isomorphic to $L$.
+	\end{lemma}
+	
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\subsubsection{Maximal Left Ideal}
+	
+	\begin{Def}
+		A left ideal $U$ of a ring $R$ is called a \textbf{maximal left ideal} if $U\not=R$ and $U$ is not properly contained in a proper left ideal.
+	\end{Def}
+	
+	\begin{example}
+		Let $R=M_n(D)$, with $D$ a division ring. And let
+		
+		\begin{gather*}
+			U=RE_{11}\oplus\dots\oplus RE_{n-1,n-1}
+		\end{gather*}
+		
+		It is easy to check: $U$ is a maximal left ideal of $R$. 
+		
+		And:
+		
+		\begin{gather*}
+			R=U\oplus L
+		\end{gather*}
+		
+		where $L=RE_{nn}$ is the minimal left ideal. Especially we have $R/U\oplus L$. 
+	\end{example}
+	
+	\begin{lemma}
+		Let $R$ be a unital ring. Then every proper left ideal $L$ of $R$ is contained in a maximal left ideal. 
+	\end{lemma}
+	
+	\begin{proof}
+		Let $\mathfrak{S}$ be the set of all proper left ideals of $R$ contains $L$,
+		
+		\begin{gather*}
+			S=\{I|I\mbox{ is left ideal and }L\subseteq I\}
+		\end{gather*}
+		
+		Now, let $\{K_i|i\in I\}$ be a chain in $S$. Then
+		
+		\begin{gather*}
+			K=\cup K_i
+		\end{gather*}
+		
+		is its upper bound. $K$ is a left ideal, $1\notin K\Rightarrow K\not=R$. By Zorn's lemma,
+	\end{proof}
+	
+	\begin{lemma}
+		Let $R$ be a ring. Every simple $R$-module is isomorphic to $R/U$ for some \underline{maximal left ideal} $U$ of $R$.
+		
+		Conversely, if $U$ is a maximal ideal of $R$ such that $R^2\not\subseteq U$. Then $R/U$ is simple $R$-module. 
+	\end{lemma}
+	
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\begin{corollary}
+		Every nonzero unital ring has a simple module. 
+	\end{corollary}
+	
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\subsection{Semisimple Modules}
+	
+	\begin{example}
+		内容...
+	\end{example}
+	
+	\begin{lemma}
+		If $M$ is the sum of a family of simple submodules $\{M_i|i\in I\}$. Then, there exists a subset $K\subseteq I$ such that
+		
+		\begin{gather*}
+			M=\oplus_{k\in K} M_k
+		\end{gather*}
+	\end{lemma}
+	
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\begin{corollary}
+		If a module is the sum of a family of simple submodules, then it is semisimple.
+	\end{corollary}
+	
+	\begin{proof}
+		Omitted.
+	\end{proof}
+	
+	\begin{lemma}
+		The following statements are equivalent for a \underline{nonzero module} $M$:
+		
+		\begin{itemize}
+			\item $M$ is semisimple;
+			\item Every submodule of $M$ is a direct summand and $Rm\not=0$ for every nonzero $m\in M$;
+		\end{itemize}
+	\end{lemma}
+	
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\begin{corollary}
+		A \textbf{unital} module $M$ is semisimple iff every submodule of $M$ is a direct summand.
+	\end{corollary}
+	
+	\begin{proof}
+		Omitted.
+	\end{proof}
+	\subsubsection{Endomorphisms Rings of Semisimple Modules}
+	
+	\begin{theorem}
+		(Schur's Lemma) If $M$ is a simple $R$-module. Then the endomorphism ring $End_R(M)$ is a division ring.	\label{Schurs-Lemma-for-Endomorphism-of-Simple-Modules}
+	\end{theorem}
+	
+	\begin{proof}
+		Let $f\in End_R(M)$ and $f\not=0$. Then, $ker(f)$ is a submodule of $M$, $Ker(f)=0$. 
+		
+		Then, $f\in Aut_R(M)$. $f$ is inversable. There exists some $f^{-1}\in Aut_R(M)$.
+	\end{proof}
+	
+	A slightly more general version: 
+	
+	\begin{itemize}
+		\item A nonzero homomorphism from an arbitrary module to a simple module is surjective,and;
+		
+		\item  A nonzero
+		homomorphism from a simple module to an arbitrary module is injective.
+	\end{itemize}
+	
+	\begin{lemma}
+		If $M,N$ are simple modules, when they are not isomorphic, there are no nonzero homomorphisms from one to another.
+	\end{lemma}
+	
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\subsubsection{Semisimple Rings}
+	
+	\subsection{Chain Conditions}
+	
+	\section{Wedderburn-Artin Theorem}
+\end{document}

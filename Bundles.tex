@@ -1,0 +1,647 @@
+\documentclass[Total.tex]{subfiles}
+
+\begin{document}
+	
+	\chapter{Bundles}
+	
+	\section{Bundles}
+	What is bundle?
+	
+	\subsection{Definitions}
+	
+	\begin{Def}
+		\begin{itemize}
+			\item In \underline{most} general case, a \textbf{bundle} over an object $B$ in a category $\mathcal{C}$ is simply an object $E$ of $\mathcal{C}$ equipped wiht a morphism in $\mathcal{C}$ from $E$ to $B$
+			
+			\begin{gather*}
+				p:E\rightarrow B
+			\end{gather*}
+			
+			And let $(x:U\rightarrow B)$ be a \underline{generalized element} of $B$. (\ref{Category-Theory-Generalized-Element}), the \textbf{fibre} $E_x$ of the bundle over $x$ is the pullback is the pullback $x^*E$
+			\begin{center}
+				\begin{tikzcd}
+					x^*E=U\times_B E\arrow[d]\arrow[r]&E\arrow[d,"p"]\\
+					U\arrow[r,"x"]&B
+				\end{tikzcd}
+			\end{center}
+			Here, $U=1$.
+			
+			Such bundles over $B$ is a category. Called \textbf{slide category} $\mathcal{C}_{/B}$ of $\mathcal{C}$ over $B$.
+			
+			\item The morphism $E_1\rightarrow E_2$ is a diagram such that the following diagram commutes
+			\begin{center}
+				\begin{tikzcd}
+					E_1\arrow[rr]\arrow[rd]&&E_2\arrow[ld]\\
+					&B
+				\end{tikzcd}
+			\end{center}
+		\end{itemize}
+	\end{Def}
+	
+	Some of Bundles are listed as following:
+	
+	\begin{itemize}
+		\item Fibre Bundle;
+		\item Micro Bundle;
+		\item Principle Bundle;
+		\item Vector Bundle;
+		\item Bundle with Connection;
+	\end{itemize}
+	
+	\subsubsection{Cross Sections}
+	\begin{Def}
+		A \textbf{cross section} of a bundle $(E,p,B)$ is a 
+	\end{Def}
+	
+	\subsubsection{Product Bundle}
+	
+	\subsubsection{Stiefel Variety}
+	
+	\begin{Def}
+		内容...
+	\end{Def}
+	
+	\subsubsection{Grasmannian Variety}
+	\begin{Def}
+		内容...
+	\end{Def}
+	\subsection{Morphsims of Bundles}
+	\subsection{Product and Fibre Products}
+	\subsection{Restriction and Induced Bundles}
+	\subsection{Local Properties}
+	
+	\section{Connections}
+	
+	\chapter{Fibre Bundles}
+		\section{Fibre Bundles}
+			\begin{Def}
+				Let $\eta:E\rightarrow B$ be a bundle. Then, a \textbf{fiber bundle} is $(\eta,E,B,F)$ with standard fiber $F$, such that for every general element $1\rightarrow B$, the pullback of $E$ along $x$ is isomorphic to $F$.
+				
+				i.e. $E_x\cong F$.
+			\end{Def}
+	\chapter{Associated Bundles}
+	\chapter{Projective Modules and Vector Bundles}
+	\section{Free module, $GL_n$ and Stably Free Modules}
+	
+	\subsection{The Module over Rings}
+	
+	Review:
+	
+	\begin{itemize}
+		\item Vector Space(over division ring);
+		
+		\item Base;
+		
+		\item IBP property;
+		
+		\begin{lemma}
+			If there exists a ring map $f:R\rightarrow F$, where $F$ is a field or division ring, then $R$ has IBP property.
+		\end{lemma}
+		
+		\begin{proof}
+			Consider the following map
+			
+			\begin{gather*}
+				M\rightarrow M\otimes_R F=V\qquad m\mapsto m\otimes_R 1
+			\end{gather*}
+			
+			Then, $\sum \lambda_i m_i=0\rightarrow \lambda_i=0\Leftrightarrow \sum \lambda_i (m_i\otimes_R 1)=0\rightarrow \lambda_i=0$.
+			
+			Especially, if commutative, we could take $F=R/m$.
+		\end{proof}
+		
+		Thus, $dim(V)=dim(M)$ is well-defined.
+		
+		\begin{Def}
+			In general, for the ring $R$, take the notation of 
+			
+			\begin{gather*}
+				GL_n(R)
+			\end{gather*}
+			
+			for the group of invertible matrices. Especially, $n=1$, $GL_1(R)=R^\times$.
+		\end{Def}
+		
+		\begin{lemma}
+			Any finite-dimensional algebra over a field/division ring must satisfies $IBP$, because the rank of free $R$-module $M$ is an invariant:
+			
+			\begin{gather*}
+				rank(M)=dim_F(M)/dim_F(R)
+			\end{gather*}
+		\end{lemma}
+		
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+	\end{itemize}
+	
+	\subsection{Stably Free}
+	
+	\begin{Def}
+		An $R$-module $P$ is called \textbf{stably free} of rank $n-m$ if
+		\begin{gather*}
+			P\oplus R^m\cong R^n
+		\end{gather*}
+		for some $m,n$. 
+		
+		Conversely:
+	\end{Def}
+	
+	\begin{example}
+		内容...
+	\end{example}
+	
+	
+	
+	\subsection{Stably Free Property}
+	
+	\begin{Def}
+		内容...
+	\end{Def}
+	
+	\subsection{Some of Noncommutative Ring Theory}
+	
+	\begin{proposition}
+		(P.M.Cohn) Consider the following conditions on a ring $R$:
+		
+		\begin{itemize}
+			\item $R$ satisfies IBP;
+			\item For all $m,n$, if $R^m\cong R^n\oplus P$, then $m\geq n$;
+			\item For all $n$, if $R^n\cong R^n\oplus P$, then $P=0$.
+		\end{itemize}
+	\end{proposition}
+	
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\section{Projective Modules}
+	
+	Given in noncommutative ring theory/Homological Algebra
+	
+	\section{Picard Group of Commutative Rings}
+	
+	Given in noncommutative ring theory.
+	
+	\section{Topological Vector Bundle, and Chern Classes}
+	
+	We will work on field $F=\RR,\CC$ or $\mathbb{H}$.
+	
+	\subsection{Families of Vector Spaces}
+	
+	\begin{Def}
+		\begin{itemize}
+			\item Let $X$ be a topological space. A family of vector spaces is a topological space $E$, together with map
+			\begin{gather*}
+				\eta:E\rightarrow X
+			\end{gather*}
+			with a finite dimensional vector space structure on each $E_x=\eta^{-1}(\{x\})$. 
+			
+			The structure of $E_x$ is compatible with the topological structure of $E$. i.e.
+			\begin{gather*}
+				F\times E\rightarrow E\qquad E\times_X E\rightarrow E
+			\end{gather*}
+			are continuous.
+			
+			\item  A \textbf{homomorphism} from $\eta:E\rightarrow X$ to $\varphi:F\rightarrow X$ is:
+			
+			\begin{itemize}
+				\item A continuous map $f:E\rightarrow F,\eta=\varphi f$;
+				\item $f_x:E_x\rightarrow F_x$ is a linear map of vector spaces;
+			\end{itemize}
+		\end{itemize}
+	\end{Def}
+	
+	
+	
+	If $Y\subseteq X$, then define
+	
+	\begin{gather*}
+		E|Y=(E|Y,Y,\eta|\eta^{-1}(Y))
+	\end{gather*}
+	With restriction map $\eta|\eta^{-1}(Y):\eta^{-1}(Y)\rightarrow Y$. 
+	
+	In general:
+	
+	\begin{Def}
+		If $f:Y\rightarrow X$ is any continuous map, then the \textbf{pullback} of $\eta:E\rightarrow X$ is 
+		\begin{gather*}
+			f^*\eta:f^*E\rightarrow Y
+		\end{gather*}
+		where $f^*E=Y\times_X E$
+		\begin{center}
+			\begin{tikzcd}						f^*E\arrow[r]\arrow[d,"f^*\eta"]&E\arrow[d,"\eta"]\\
+				Y\arrow[r,"f"]&X
+			\end{tikzcd}
+		\end{center}
+	\end{Def}
+	
+	\subsubsection{Vector Bundles}
+	
+	
+	\begin{example}
+		(Trivial Bundle) If $V$ is an $n$-dimensional vector space. The projection from $T^n=X\times V$ to $X$ is a \textbf{constant family}
+		\begin{gather*}
+			\eta:X\times V\rightarrow X
+		\end{gather*}
+		Such bundle is called \textbf{trivial vector bundle}.
+	\end{example}
+	
+	\begin{Def}
+		(Vector Bundle) A \textbf{vector bundle} is a family of vector spaces such that: 
+		
+		\begin{itemize}
+			\item Local Trivial: For every point $x\in X$, $\eta|U$ is a trivial.
+			\begin{center}
+				\begin{tikzcd}
+					\eta^{-1}(U)\arrow[rr,shift left=2]\arrow[rd]&&T=U\times V\arrow[ld]\arrow[ll,shift left=2]\\
+					&U
+				\end{tikzcd}
+			\end{center}
+		\end{itemize}
+	\end{Def}
+	
+	So sometimes a vector bundle is called a \textbf{locally trivial} family of vectors.
+	
+	\begin{Def}
+		(Category of vector bundles) Define the category $Vect_F(X)$, with the elements:
+		
+		\begin{itemize}
+			\item $Ob(Vect_F(X))=\{$Vector Bundles on $X\}$
+			\item $Mor(Vect_F(X))=\{$Morphisms between elements in $Ob(Vect_F(X))\}$
+		\end{itemize}
+		
+		And a functor is given by: $f^*:Vect(Y)\rightarrow Vect(X)$.
+	\end{Def}
+	
+	\subsubsection{Product}
+	
+	\begin{Def}
+		Let $\eta:E\rightarrow X,\varphi:F\rightarrow X$ be two vector bundle. Then, the \textbf{product of vector bundles} is defined as $(E\times F,X,\eta\times \varphi)$
+		
+		\begin{gather*}
+			\eta\times \varphi:E\times F\rightarrow X\times X
+		\end{gather*}
+	\end{Def}
+	
+	This gives a bilinear functor
+	\begin{gather*}
+		\boxplus:Vect(X)\times Vect(X)\rightarrow Vect(X\times X) 
+	\end{gather*}
+	
+	
+	
+	\subsubsection{Tensor Product}
+	
+	\begin{Def}
+		Let $\eta:E\rightarrow X,\varphi:F\rightarrow X$ be two vector bundles. Then,
+		
+		\begin{gather*}
+			E\otimes F:=\coprod_{x\in X} E_x\otimes F_x
+		\end{gather*}
+		
+		with $\eta\otimes \varphi:E\otimes F\rightarrow X,e\otimes f\mapsto x;e\in E_x,f\in F_x$.
+	\end{Def}
+	This is also a bilinear functor
+	\begin{gather*}
+		\otimes:Vect(X)\times Vect(X)\rightarrow Vect(X)
+	\end{gather*}
+	
+	\subsubsection{Whitney Sum}
+	
+	\begin{Def}
+		The \textbf{Whitney sum} $E\oplus F$ of two vector bundle $\eta:E\rightarrow X,\varphi:F\rightarrow X$ is the family of all vector spaces $E_x\oplus F_x$, which can be seen as a topological subspace of $E\times F$:
+		\begin{gather*}
+			(E_x\times F_x)_{x\in X}\hookrightarrow E\times F
+		\end{gather*}
+		With the new vector bundle construction induced by $\eta\times \varphi$:
+		\begin{gather*}
+			\eta\oplus \varphi:=\eta\times \varphi|E\oplus F
+		\end{gather*}
+	\end{Def}
+	
+	Whitney sum is the categoricial coporudct in $Vect(X)$. 
+	\begin{center}
+		\begin{tikzcd}
+			&E\oplus F\arrow[d,dashrightarrow]\arrow[dd,bend right=50]\\
+			E\arrow[rd]\arrow[ru]\arrow[r]&G\arrow[d]&F\arrow[ld]\arrow[lu]\arrow[l]\\
+			&X
+		\end{tikzcd}
+	\end{center}
+	
+	Given $E\oplus F\rightarrow G:E_x\times F_x\ni (e,f)\mapsto i_1(e)+i_2(f)$ which is well-defined. 
+	
+	And commutes: Via the product structure. 
+	
+	Especially: $E\oplus F$ is also the categoricial coproduct:
+	
+	\begin{center}
+		\begin{tikzcd}
+			&G\arrow[ld]\arrow[d,dashrightarrow]\arrow[rd]\arrow[dd,bend right=50]\\
+			E\arrow[rd]&E\oplus F\arrow[l]\arrow[r]\arrow[d]&F\arrow[ld]\\
+			&X
+		\end{tikzcd}
+	\end{center}
+	
+	$G\rightarrow E\oplus F,g\mapsto p_1(g)+ p_2(g)$. Omitted.
+	
+	\begin{corollary}
+		$Vect(X)$ is an additional category.
+	\end{corollary}
+	\begin{proof}
+		Via checking definition.
+	\end{proof}
+	
+	\begin{example}
+		(Mobius Bundles) The Mobius bundle $E^1$ over $S$
+		
+		\begin{gather*}
+			\pi:E^1\rightarrow S
+		\end{gather*}
+		With strip $E_x\cong \RR,x\in S^1$. 
+		
+		$E^1$ can be seen as the pasting of $[0,1]\times \RR$ via
+		\begin{gather*}
+			(0,v)\sim (1,-v)
+		\end{gather*}
+	\end{example}
+	
+	\begin{example}
+		(Whitney Sum of Tangent Bundle of Product Manifolds) For the product of manifolds $M_1\times M_2$, we have
+		
+		\begin{gather*}
+			T_{(x,y)}(M\times N)\cong T_x M\oplus T_y N
+		\end{gather*}
+		
+		Thus, we have
+		\begin{gather*}
+			T(M\times N)=TM\oplus TN\rightarrow M\times N
+		\end{gather*}
+	\end{example}
+	
+	New Vector Bundles from Olds:
+	
+	\begin{itemize}
+		\item Restsriction;
+		\item Induced;
+		\item Carstian Product
+		\item Whitney Sum;
+	\end{itemize}
+	
+	\subsubsection{Diemension of Vector Bundles}
+	
+	Notice that: $dim(E):X\rightarrow \NN,x\mapsto E_x$ is locally constant. 
+	
+	\begin{Def}
+		An $n$-dimensional vector space is a bundle $E$ such that $dim(E)=n$ is a constant function. 
+		
+		Especially, on connected $X$, the function is constant.
+	\end{Def}
+	
+	\begin{itemize}
+		\item 
+	\end{itemize}
+	
+	\begin{Def}
+		内容...
+	\end{Def}
+	
+	\begin{Def}
+		Define:
+		
+		\begin{gather*}
+			V_{n,F}(X):=
+		\end{gather*}
+	\end{Def}
+	
+	\subsubsection{Subbundles}
+	
+	\begin{Def}
+		\begin{itemize}
+			\item A \textbf{subbundle} of a vector space $\eta:E\rightarrow X$ is a subspace $F$ of $E$ which is a vector bundle under induced structure.
+			
+			i.e. $F_x$ is a vector subspace of $E_x$, and family $F\rightarrow X$ is locally trivial. 
+			
+			\item The \textbf{quotient bundle} $E/F$ is defined as the union of vector spaces
+			\begin{gather*}
+				(E_x/F_x)
+			\end{gather*}
+			given quotient topology(by $\eta$). 
+		\end{itemize}
+	\end{Def}
+	
+	Short exact sequence
+	\begin{center}
+		\begin{tikzcd}
+			0\arrow[r]&F\arrow[r]&E\arrow[r]&E/F\arrow[r]&0
+		\end{tikzcd}
+	\end{center}
+	
+	in $VB(X)$.
+	
+	\begin{Def}
+		A \textbf{vector bundle} $E\rightarrow X$ is said to be of \textbf{finite type} is there is a finite covering $U_1,\dots,U_n$ such that $E|U_i$ is a trivial bundle.
+	\end{Def}
+	
+	\begin{proposition}
+		\begin{itemize}
+			\item 
+			\item 
+		\end{itemize}
+	\end{proposition}
+	
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\begin{theorem}
+		(Subbundle Theorem) Let $E\rightarrow X$ be a vector bundle on \underline{paracomapct space} $X$:
+		
+		\begin{itemize}
+			\item 
+			\item 
+		\end{itemize}
+	\end{theorem}
+	
+	\begin{proof}
+		With the conclusion \ref{Algebraic-K-Theory-Vector-Bundles-Metrics-on-Paracompact-Space}, there exists a metric on the bundle. 
+	\end{proof}
+	\subsubsection{Sections}
+	
+	\begin{Def}
+		\begin{itemize}
+			\item Let $\eta:E\rightarrow X$ be a vector space. A \textbf{global section} of $\eta$ is a continuous map $s:X\rightarrow E$ such that
+			\begin{gather*}
+				\eta\circ s=1_X
+			\end{gather*}
+			
+			\item It is nowhere zero if $s(x)\not=0,\forall x\in X$.
+		\end{itemize}
+	\end{Def}
+	In general, we could define the \textbf{local section} 
+	\begin{gather*}
+		s:U\rightarrow E\qquad\eta\circ s=id_U
+	\end{gather*}
+	
+	\subsubsection{Vector Bundle under Riemannian Metrics}
+	
+	Review:
+	
+	\begin{itemize}
+		\item Riemannian Metrics;
+		\item Hermitian Metrics;
+	\end{itemize}
+	
+	Metric on $E_x\Rightarrow$ Metric on $E$.
+	
+	A fundamental result is:
+	
+	\begin{theorem}
+		\label{Algebraic-K-Theory-Vector-Bundles-Metrics-on-Paracompact-Space}If $X$ is a \underline{paracompact space}, then there exists a metric on $E$, when $F=\RR,\CC,\mathbb{H}$.
+	\end{theorem}
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\subsubsection{Patching Vector Bundles}
+	
+	{\LARGE T}ransition of vector bundles: Consider two locally trivial maps
+	\begin{gather*}
+		内容...
+	\end{gather*}
+	
+	\begin{Def}
+		(Tensor Product of Bundles)
+	\end{Def}
+	
+	\begin{Def}
+		(Determinant Bundle)
+	\end{Def}
+	
+	\subsubsection{Cancellation Theorems}
+	
+	\begin{theorem}
+		(Real Cancellation Theorm)
+	\end{theorem}
+	
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\subsubsection{Homotopy Invariance Theory}
+	
+	\subsubsection{Classifying Vector Bundles}
+	
+	\begin{theorem}
+		(Classifying Theorem) Let $X$ be paracompact space. Then, 
+		
+		\begin{gather*}
+			VB_n(X)\cong [X,Grass_n]
+		\end{gather*}
+	\end{theorem}
+	
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\begin{Def}
+		(Classifying Spaces)
+	\end{Def}
+	
+	\begin{theorem}
+		(Classifying Theorem for Line Bundles) 
+		
+		\begin{gather*}
+			内容...
+		\end{gather*}
+	\end{theorem}
+	
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\subsection{Serre-Swan Theorem}
+	
+	\begin{proposition}
+		(Global Section) Let $\eta:E\rightarrow X$ be a vector bundle. Let $\Gamma(E)$ be the set of global sections of $E$. 
+		
+		Then, $\Gamma(E)$ is a module over $C^0(X)$ of continuous functions on $X$. 
+		
+		Especially, if $E$ is a trivial bundle of dimension $n$, then $\Gamma(E)$ is a free $C^0(X)$-module of rank $n$.
+	\end{proposition}
+	
+	\begin{proof}
+		Module axiom:
+		\begin{itemize}
+			\item Sum:
+			\item Scalar Product:
+		\end{itemize}
+	\end{proof}
+	
+	\begin{corollary}
+		If $X$ is paracompact, then $\Gamma(E)$ is a locally free $C^0(X)$-module. 
+		
+		$\Gamma(E)$ is a finitely generated projective module if $X$ is compact or $E$ is of finite type.
+	\end{corollary}
+	
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\begin{theorem}
+		(Swan) Let $X$ be a compact Hausdorff space, and write $R$ for $C^0(X)$. 
+		
+		Then, $\Gamma:VB(X)\rightarrow P(R)$ of finitely generated projective modules is a functor. The homomorphism
+		\begin{gather*}
+			\Gamma_{VB(X)} (E,F)
+		\end{gather*}
+		This implies, there exists an equivalence of categories $VB(X)\cong P(C^0(X))$. 
+	\end{theorem}
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\textbf{Remark} The Serre's theorem will be given in AG.
+	
+	Here:
+	\begin{itemize}
+		\item Construction:
+		\item Affines:
+	\end{itemize}
+	
+	\subsubsection{Projective Flag Modules}
+	
+	\subsubsection{Splitting Principle}
+	
+	\subsubsection{Pontrijagin Classes}
+	\subsection{Characteristic Classes}
+	
+	\textbf{Abstract} The determinant line bundle $det(E)$ of a vector bundle $E$ yields to a cohomology class. 
+	
+	\begin{itemize}
+		\item 
+		\item 
+	\end{itemize}
+	
+	\subsubsection{Axioms for Stiefel-Whitney Classes}
+	
+	\begin{axiom}
+		内容...
+	\end{axiom}
+	
+	\subsubsection{Axioms for Chern Classes}
+	
+	\begin{axiom}
+		内容...
+	\end{axiom}
+	\subsubsection{Pontrjagin Classes}
+	
+	\begin{Def}
+		(Complex Conjugate Bundle) 
+	\end{Def}
+	
+	\subsection{Others}
+	\subsubsection{Complexification of Real Vector Bundlees}
+	\section{Algebraic Vector Bundles}
+\end{document}

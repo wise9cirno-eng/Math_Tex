@@ -1,0 +1,449 @@
+\documentclass[Total.tex]{subfiles}
+
+\begin{document}
+	\chapter{Differentiable Manifolds}
+	
+		\section{Differerentiable Manifolds}
+			\subsection{Pseudo Group Axioms}
+				
+				\begin{Def}
+					A pseudogroup of transformations on a topological space $S$ is a set $\Gamma$ of transformations satisfying the following axioms:
+					
+					\begin{itemize}
+						\item Each $f\in\Gamma$ is a homeomorphism of an open set of $S$ onto another open set of $S$.
+						
+						\begin{gather*}
+							f_{\cong}:U\rightarrow V;U,V\in Open(S)
+						\end{gather*}
+						\item If $f\in \Gamma$, then the restriction of $f$ to an arbitrary open subset of domain of $f$ is in $\Gamma$.(And it is still an homeomorphism)
+						
+						\begin{gather*}
+							f\in \Gamma\Rightarrow f|U\in \Gamma
+						\end{gather*}
+						
+						\item Let $U=\cup U_i$. Then, 
+						
+						\begin{gather*}
+							f|U_i\in \Gamma\Rightarrow f\in \Gamma
+						\end{gather*} 
+						\item For every open $U$,
+						
+						\begin{gather*}
+							id_U\in \Gamma
+						\end{gather*}
+						\item 
+						
+						\begin{gather*}
+							f\in \Gamma\Rightarrow f^{-1}\in \Gamma
+						\end{gather*}
+						\item $f\in \Gamma$ is a homeomorphism of $U$ onto $V$, $f'\in \Gamma$ is a homeomorphism of $U'$ onto $V'$, then 
+						
+						\begin{gather*}
+							\Gamma\ni f'\circ f:f^{-1}(V\cap U')\rightarrow f'(V\cap U')
+						\end{gather*}
+					\end{itemize}
+				\end{Def}
+				
+				\begin{example}
+					(Pseudogroup $\Gamma^r(\RR^n)$) Define:
+					
+					\begin{gather*}
+						\Gamma^r(\RR^n):=\{f\in C^r(U,V)|U,V\in Open(\RR^N)\}
+					\end{gather*}
+					
+					There is an inclusion
+					
+					\begin{gather*}
+						\Gamma^{r+1}(\RR^n)\hookrightarrow \Gamma^{r}(\RR^n)
+					\end{gather*}
+				\end{example}
+				
+				\begin{example}
+					Furthermore, Psudogroup
+					
+					\begin{gather*}
+						\mathcal{O}(\Omega)
+					\end{gather*}
+				\end{example}
+				
+				\subsection{Atlas}
+				
+				\begin{Def}
+					An \textbf{atlas} of a topological space $M$ is a family of \textbf{charts} $(U_i,\varphi_i)$ which satisfies:
+					
+					\begin{itemize}
+						\item Each $U_i$ is an open set of $M$, and 
+						
+						\begin{gather*}
+							\cup U_i=M
+						\end{gather*}
+						\item $\varphi_i:U_i\rightarrow S$ is a homeomorphism onto its image;
+						\item If $U_i\cap U_j\not=\varnothing$, then
+						
+						\begin{gather*}
+							\varphi_j\circ \varphi_i^{-1}:\varphi_i(U_i\cap U_j)\rightarrow \varphi_j(U_i\cap U_j)
+						\end{gather*}
+						
+						is an element of $\Gamma$.
+					\end{itemize}
+				\end{Def}
+				
+				\begin{Def}
+					An \textbf{compelete atlas} of $M$ compatible with $\Gamma$ is an atlas of $M$ compatible with $\Gamma$.
+				\end{Def}
+				
+				Then, every atlas is contained in a unique compelete atlas. 
+				
+				\textbf{Remark} Suppose $A,A'$ be two atlases. Then, if they are \textbf{compatible}
+				
+				\begin{gather*}
+					内容...
+				\end{gather*}
+				
+				\subsection{Differentiable Manifold}
+				
+				\begin{Def}
+					内容...
+				\end{Def}
+				
+				\subsection{Differentiable Mapping}
+				
+				\subsection{Differentiable Curve, Tangewnt Vectors}
+					
+					\subsubsection{Differentiable Curve}
+					
+						\begin{Def}
+							内容...
+						\end{Def}
+						
+					\subsubsection{Tangent Vectors}
+						
+						\begin{Def}
+							Let $\mathfrak{F}(p),p\in M$ be the equivalence class of differentiable functions at $p$,
+							
+							\begin{gather*}
+								\mathfrak{F}(p):=\{(U,f)|f\in C^1(U,\RR),p\in U\subseteq X\mbox{ open }\}/\sim\qquad (U,f)\sim (V,g)\Leftrightarrow f|U\cap V=g|U\cap V
+							\end{gather*}
+							
+							$\mathfrak{p}$ is an $\RR$-linear space.
+						\end{Def}
+						
+						Then, let $x:[a,b]\rightarrow M$ be a $C^1$-differentiable function where
+						
+						\begin{gather*}
+							x(t_0)=p
+						\end{gather*}
+						
+						Then, define 
+						
+						\begin{gather*}
+							X:\mathfrak{F}(p)\rightarrow \RR\\
+							[(U,f)]\mapsto (\frac{df(x(t))}{dt})|_{t_0} 
+						\end{gather*}
+						
+						In other word, $Xf$ is derivative of $f$ in the direction of the curve $x(t)$ at $t=t_0$. 
+						
+						The function $X$ satisfies the following properties:
+						
+						\begin{itemize}
+							\item 
+							\item 
+						\end{itemize}
+						
+					\subsubsection{Lie Bracket}
+					
+		\section{Tensor Algebra, Tensor Fields}
+			Given in Smooth manifold.
+		\section{Lie Groups}
+			Given in Lie theory.
+		\section{Fibre Bundles}
+			\subsection{Differentiable Principle Fibre Bundle}
+			
+				\begin{Def}
+					A \textbf{differentiable principle fibre bundle} over $M$ with group $G$ consists of $P(M,G,\pi)$, where:
+					
+					\begin{itemize}
+						\item $G$ acts freely on $P$ on the right:
+						\begin{gather*}
+							P\times G\rightarrow P\qquad(u,a)\mapsto ua=R_au\in P
+						\end{gather*}
+						\item $M$ is quotient space of $P$, and the canonical projection
+						\begin{gather*}
+							\pi:P\rightarrow M
+						\end{gather*}
+						is differentiable;
+						
+						\item $P$ is locally trivial:
+					\end{itemize}
+				\end{Def}
+				
+				We call:
+				
+				\begin{itemize}
+					\item 
+				\end{itemize}
+				
+				\subsubsection{Fibre of Differentiable Principle Fibre Bundle}
+				
+				\subsection{Fundamental Vector Field} 
+				\begin{Def}
+					Given a principle fiber bundle $P(M,G,\pi)$, the action of $G$ on $P$ induces a homomorphism $\sigma$ of the Lie algebra $\mathfrak{g}$ of $G$ into the Lie algebra $\mathfrak{X}(P)$ of vector fields on $P$.
+					\begin{gather*}
+						\mathfrak{g}=L(G)\rightarrow \mathfrak{X}(P) 
+					\end{gather*}
+				\end{Def}
+				Constructions:
+				\begin{itemize}
+					\item Exponential Maps:
+					\item Consider the action 
+					\begin{gather*}
+						\Phi_u:G\rightarrow P\quad g\mapsto u\cdot g
+					\end{gather*}
+					Then,
+					\begin{gather*}
+						\sigma:\mathfrak{g}=T_e G\rightarrow \mathfrak{X}(P	) \sigma(A)_u=(d\Phi_u)_e(A)
+					\end{gather*}
+				\end{itemize}
+				Take the following notation
+				\begin{gather*}
+					A^*:=\sigma A
+				\end{gather*}
+				Furthermore, we have
+				\begin{proposition}
+					\begin{gather*}
+						\mathfrak{g}\rightarrow T_u P\qquad A\mapsto (A^*)_u
+					\end{gather*}
+					is linear isomorphism.
+				\end{proposition}
+				\begin{proof}
+					\begin{itemize}
+						\item 
+						\item 
+						\item 
+					\end{itemize}
+				\end{proof}
+				
+				\begin{proposition}
+					Let $A^*$ be fundmanetal vector field, then there exists correspondence
+					\begin{gather*}
+						A\in \mathfrak{g}\Rightarrow A^*\in \mathfrak{X}(P)\\
+						(ad(a^{-1}))A\in \mathfrak{g}\Rightarrow (R_a)_*A^*
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				The mapping $\sigma$ is injective, but not surjective. But we could define a Lie-subalgebra of $\mathfrak{X}(P)$, so that $\sigma:L(G)\rightarrow \mathfrak{X}(P)$ is bijective.
+				
+				\begin{Def}
+					内容...
+				\end{Def}
+				
+				\begin{proposition}
+					Let $M$ be a manifold. $\{U_\alpha\}$ is an open covering of $M$ and $G$ a Lie group. 
+					
+					Given mapping 
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+	
+	\chapter{Theory of Connections}
+		\section{Connections in a Principle Vector Bundle}
+			\textbf{Remark} Firstsly, the fibre through $u$ is 
+			\begin{gather*}
+				E_{\pi(u)}
+			\end{gather*}
+			
+			\begin{Def}
+				Let $(P,M,G,\pi)$ be a principle fibre bundle over a manifold $M$. For each $u\in P$, $T_u(P)$ be the tangent space of $P$ at $u$, and $G_u$ be the subspace of $T_u(P)$ consisting of vectors tangent to fibre through $u$. 
+				\begin{gather*}
+					G_u:=T_u(E_{\pi(u)})=Ker(\pi_u)
+				\end{gather*}
+				\begin{itemize}
+					\item $T_u(P)=G_u\oplus Q_u$; $G_u$ is the verticle subspace, $Q_u$ is the horizontal subspace;
+					
+					Take the following notation $vX,hX$. 
+					\item $Q_{ua}=(R_a)^*Q_u;u\in P,a\in G$
+					\item $Q$ depends differentiably on $u$;
+				\end{itemize}
+				A \textbf{connection} is a distribution $u\mapsto Q_u$. 
+			\end{Def}
+			
+			\textbf{Remark 1} The tangent space is the formel tangent space, not rely on the open subset and the tangent line via limit. 
+			
+			\subsection{Connection Form}
+			
+			\begin{lemma}
+				$\sigma_u:\mathfrak{g}\rightarrow T_u(P)$ is injective, $u\in P$,with induced linear isomorphism
+				\begin{gather*}
+					\sigma_u:\mathfrak{g}\rightarrow V_u(P)\qquad A\mapsto (A^*)_u
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{Def}
+				Given a connection $\Gamma$ in $P$. We define the $1$-form $P$ with the value in Lie algebra of $G$ as follows: $\omega\in \Omega^1(P,\mathfrak{g})$,
+				\begin{gather*}
+					\omega_p:T_u(P)\rightarrow \mathfrak{g}\qquad X\mapsto A
+				\end{gather*}
+				
+				such that $(A^*)_u=vX$.
+			\end{Def}
+			
+			\textbf{Remark 1} $\mathfrak{g}\rightarrow G_u,A\mapsto (A^*)_u$ is a linear isomorphism.
+			
+			\begin{proposition}
+				The connection form $\omega$ of a connection satisfies the following conditions:
+				\begin{itemize}
+					\item $\omega(A^*)=A$;
+					\item $(R_a)^*=ad(a^{-1})\omega$, that is
+					\begin{gather*}
+						内容...
+					\end{gather*}
+					for every $a\in G$ and every vector field $X$ on $P$. 
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				内容...
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				内容...
+			\end{proposition}
+		
+		\section{Existence and Extension of Connections}
+			
+			\begin{theorem}
+				内容...
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+		\section{Parallelism}
+			\subsection{Horizontal Lift}
+				
+				\begin{Def}
+					Let $\tau=x(t)$ be a piecewise differentiable curve of $C^1$ in $M$. A \textbf{horizontal lift} or \textbf{lift} is a \textbf{horizontal curve}
+					\begin{gather*}
+						\tau^*=u(t)
+					\end{gather*}
+					such that $x(t)=\pi(u(t))$. 
+					
+					Horizontal: Piecewise differentiable, the tangent vectors are horizontal.
+				\end{Def}
+				
+				\begin{proposition}
+					(Existence, Uniqueness)
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+			\subsection{Parallel Displacement}
+		
+		\section{Holonomy Groups}
+		
+			Another Reference: Riemannian Holonomy Groups
+			and Calibrated Geometry by Dominic D. Joyce
+			\begin{Def}
+				For point $x\in M$, denote
+			\end{Def}
+		\section{Curvature Form, and Structure Equation}
+				\begin{Def}
+					Let $P(M,G,\pi)$ be a PFB and representation on $G$ on $V$, with $\rho(a)\in End(V),a\in G$. $\rho(ab)=\rho(a)\rho(b)$. 
+					
+					A \textbf{pseudotensorial form} of degree on $P$ of type $(\rho,V)$ is a $V$-valued $r$-form $\varphi$ such that
+					\begin{gather*}
+						R_a^*\varphi=\rho(a^{-1})\cdot \varphi;a\in G
+					\end{gather*} 
+					
+					Such a form is called \textbf{tensorial form} if it is horizontal in the sense of
+					\begin{gather*}
+						\varphi(X_1,\dots,X_i,\dots,X_r)=0;X_i\in V_i P
+					\end{gather*}
+				\end{Def}
+				
+				\begin{proposition}
+					\begin{itemize}
+						\item 
+						\item 
+						\item 
+					\end{itemize}
+				\end{proposition}
+				
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				Especially:
+				\begin{Def}
+					\begin{itemize}
+						\item The connection form $\omega$ is a pseudotensorial 1-form of type $ad(G)$;
+						\item $D\omega$  is called \textbf{tensorial 2-form} of type $ad(G)$, denoted by $\Omega$, is called the \textbf{curvature form} of $\omega$. 
+					\end{itemize}
+				\end{Def}
+				
+				\subsection{Structure Equation}
+				
+				\begin{theorem}
+					(Structure Equation,E.Cartan) Let $\omega$ be a connection form and $\Omega$ be its curvature form, then
+					\begin{gather*}
+						\Omega(X,Y)=d\omega(X,Y)+\frac{1}{2}[\omega(X),\omega(Y)]
+					\end{gather*}
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{proposition}
+					内容...
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\subsection{Bianchi's Identity}
+				
+				\begin{theorem}
+					(Bianchi)
+					\begin{gather*}
+						D\Omega=0
+					\end{gather*}
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+		\section{Mappings of Connections}
+		\section{Reduction Theorem}
+		\section{Holonomy Theorem}
+		\section{Flat Connections}
+		\section{Local, and Infinitesimal Holonomy Groups}
+		\section{Invariant Connections}
+	\chapter{Linear Affine Connections}
+		\section{Connections in Vector Bundles}
+			\subsection{Fibre Metrics}
+		\section{Linear Connections}
+	
+	\chapter{Curvature and Space Forms}
+	
+	\chapter{Transformations}
+	
+	\chapter{Submanifolds}
+	
+	\chapter{Variation of Length Integral}
+	
+	\chapter{Homogeneous Spaces}
+	
+	\chapter{Symmetric Spaces}
+\end{document}

@@ -1,0 +1,3249 @@
+\documentclass[Total.tex]{subfiles}
+
+\begin{document}
+	\chapter{Sheaves}
+		\section{Presheaves and Sheaves}
+			\subsection{Presheaves}
+					\begin{Def} (Axiom of Presheaves)
+					Suppose $\mathcal{C}$ be a category. Then, a presheaf $F$ of $\mathcal{C}$ on $X$, where $X$ is a topological space, is defined as following:
+					\begin{itemize}
+						\item For all open sets $U\subseteq X$, $F(U)\in \mathcal{C}$;
+						\item For all $V\subset U\subseteq X$, a morphism
+						\begin{gather*}
+							\rho_{UV}:F(U)\rightarrow F(V)
+						\end{gather*}
+					\end{itemize}
+					such that
+					\begin{itemize}
+						\item For open $U\subseteq X$, $F(U)\in \mathcal{C}$;
+						\item For open $W\subseteq V\subseteq U$,
+						\begin{center}
+							\begin{tikzcd}
+								&F(V)\arrow[rd,"\rho_{VW}"]&\\
+								F(U)\arrow[rr,"\rho_{UW}"]\arrow[ru,"\rho_{UV}"]&&F(W)
+							\end{tikzcd}
+						\end{center}
+					\end{itemize}
+					
+					Especially, $\rho_{UU}=id_U$.
+				\end{Def}
+				And for $s\in F(U)$:
+				\begin{Def}
+					\begin{itemize}
+						\item \begin{itemize}
+							\item Elements $s\in F(U)$ is called the \textbf{section} of $F$ over $U$; 
+							\item Collection $F(U)$ is called the \textbf{space of sections} of $F$ over $U$;
+						\end{itemize}
+						Especially, for $U=X$:
+						\begin{itemize}
+							\item $s\in F(U)$ is the \textbf{global section};
+							\item $F(U)$ is \textbf{the space of global sections};
+						\end{itemize}
+						\item Alternative Notation:
+						\begin{gather*}
+							\Gamma(U,F):=F(U)=H^0(U,F)
+						\end{gather*}
+						\item The morphisms $\rho_{UV}$ is called \textbf{restriction map}, and for $V\subseteq U$,
+						\begin{gather*}
+							s|_V:=\rho_{UV}(s),s\in F(U)
+						\end{gather*}
+					\end{itemize}
+				\end{Def}
+				\subsubsection{Morphisms}
+					\begin{Def}
+						Consider two presheaves $\mathcal{F},\mathcal{G}\in Psh(\mathcal{C})$. Then, the morphism $\varphi:\mathcal{F}\rightarrow \mathcal{G}$ is a family of morphisms in $\mathcal{C}$
+						\begin{gather*}
+							\varphi(U):\mathcal{F}(U)\rightarrow \mathcal{G}(U)
+						\end{gather*}
+						such that the following square commutes: For $U,V\subseteq X$ opens, $V\subseteq U$:
+						\begin{center}
+							\begin{tikzcd}
+								\mathcal{F}(U)\arrow[r]\arrow[d]&\mathcal{G}(U)\arrow[d]\\
+								\mathcal{F}(V)\arrow[r]&\mathcal{G}(V)
+							\end{tikzcd}
+						\end{center}
+					\end{Def}
+				\subsubsection{Constant Prehseaf}
+					\begin{Def}
+						Define: Suppose $X$ be a topological space and let $A$ be a fixed set.Define
+						\begin{itemize}
+							\item $\mathcal{F}(U):=A,U\in Open(X)$;
+							\item $\rho_U^V:=id_A$.
+						\end{itemize}
+					\end{Def}
+					
+					In general:
+					
+				\begin{Def}
+					Suppose $\mathcal{C}$ be a category which contains the final object $\bullet$ Then define the presheaf as following
+					\begin{gather*}
+						\mathcal{F}(U):=\bullet \qquad \rho_{UU}:=id_\bullet
+					\end{gather*}
+				\end{Def}
+				It is the final object in $Psh(\mathcal{C})$. 
+				\begin{proof}
+					Consider the following morphism of presheaves $\varphi:\mathcal{F}\rightarrow \bullet$:
+					\begin{gather*}
+						\varphi(U):\mathcal{F}(U)\rightarrow \bullet
+					\end{gather*}
+				\end{proof}
+				\subsubsection{Presheaf of Abelian Groups}
+				
+				\begin{proposition}
+					Let $X$ be a topological space. The category of presheaves of sets on $X$ has product
+					\begin{gather*}
+						F\in PSets,G\in PSets\Rightarrow F\times G\in PSets
+					\end{gather*}
+					
+					And $(F\times G)(U)=F(U)\times G(U),U\in Open(X)$.
+				\end{proposition}
+				\begin{proof}
+					Given by:
+					\begin{itemize}
+						\item Elements $U\mapsto F(U)\times G(U)$;
+						\item Restriction Maps for $V\subseteq U\subseteq X$,
+						\begin{gather*}
+							\rho_U^V:p_U^V\times q_U^V;p,q\mbox{ are restriction maps of }F,G
+						\end{gather*}
+					\end{itemize}
+					Furthermore, we have
+					\begin{gather}
+						Mor(\mathcal{H},\mathcal{F}\times \mathcal{G})=Mor(\mathcal{H},\mathcal{F})\times Mor(\mathcal{H},\mathcal{G})
+					\end{gather}
+				\end{proof}
+				
+				\begin{Def}
+					\label{Sheaves-Presheaf-of-Abelian-Groups}Define the category, $PAb(X)$
+					\begin{itemize}
+						\item Objects: $U\mapsto \mathcal{F}(U)\in Ab$, restriction maps $\rho_U^V:\mathcal{F}(U)\rightarrow \mathcal{F}(V)\in Mor(Ab)$
+						\item  Families $\mathcal{F}(U)\rightarrow \mathcal{G}(U)\in Mor(Ab)$;
+					\end{itemize}
+				\end{Def}
+				
+				\begin{proposition}
+					The following types of datas of structures are equivalent for $\mathcal{F}$ presheaf of sets:
+					
+					\begin{itemize}
+						\item Definition \ref{Sheaves-Presheaf-of-Abelian-Groups}
+						\item $(\mathcal{F},+,-,0)$: Morphisms of Presheaves
+						
+						\begin{itemize}
+							\item $+:\mathcal{F}\times \mathcal{F}\rightarrow \mathcal{F}$;
+							\item $-:\mathcal{F}\rightarrow \mathcal{F}$;
+							\item $0:*\rightarrow \mathcal{F}$
+						\end{itemize}
+						
+						satisfies the axiom of abelian group.
+						
+						\item Map of presheaves $+:\mathcal{F}\times\mathcal{F}\rightarrow \mathcal{F}$;Maps of presheaves $-:\mathcal{F}\rightarrow \mathcal{F}$ and a map $0:*\rightarrow \mathcal{F}$ such that for each open $U\subseteq X$, the quaduple
+						\begin{gather*}
+							(\mathcal{F}(U),+,-,0)
+						\end{gather*}
+						is an abelian group.
+						\item A map of presheaves $+:\mathcal{F}\times \mathcal{F}\rightarrow \mathcal{F}$ such that for every open $U\subseteq X$, the map $+:\mathcal{F}(U)\times \mathcal{F}(U)\rightarrow \mathcal{F}(U)$ defines the structure of an abelian group.
+					\end{itemize}
+					
+					$(3)\Leftrightarrow (4)$ Easy to check.
+				\end{proposition}
+				
+				\begin{proof}
+					\begin{itemize}
+						\item (1$\Rightarrow$ 2) Omitted.
+						\item (2$\Rightarrow$ 3) Consider $(\mathcal{F}(U),+_U,-_U,0_U)$ for $U\in Open(X)$;
+						\item (3$\Rightarrow$ 1) The restriction maps are group homomorphisms: The following diagram commutes
+						
+						\begin{center}
+							\begin{tikzcd}
+								\mathcal{F}(U)\times \mathcal{F}(U)\arrow[r,"+|U"]\arrow[d,"\rho_{U}^V\times \rho_U^V"]&\mathcal{F}(U)\arrow[d,"\rho_{U}^V"]\\
+								\mathcal{F}(V)\times\mathcal{F}(V)\arrow[r,"+|V"]&\mathcal{F}(V)
+							\end{tikzcd}
+						\end{center}
+					\end{itemize}
+				\end{proof}
+				
+				
+				\begin{example}
+					A construction: Given a family $\{M_x\}_{x\in X}$ of abelian groups, and
+					\begin{gather*}
+						\mathcal{F}(U):=\oplus_{x\in U} M_x
+					\end{gather*}
+					And restriction map
+					\begin{gather*}
+						\rho_U^V:\sum_{x\in U} m_x\mapsto \sum_{x\in V} m_x;V\subseteq U
+					\end{gather*}
+				\end{example}
+				
+				
+				\subsubsection{Algebraic Structures}
+				
+				\begin{Def}
+					(Algebraic Structure) Suppose:
+					
+					\begin{itemize}
+						\item $C$ be a category;
+						\item The functor $F\rightarrow Sets$ is faithful;(Example:Forgetful Functor)
+						
+						\item For $M\rightarrow M'$, a morphsim $F(M)\rightarrow F(M')$ the \textbf{underlying map} of sets.
+						\item Map of sets $F(M)\rightarrow F(M')$ is equal to some $F(f)$ for $f\in \mathcal{C}$.
+					\end{itemize}
+				\end{Def}
+				
+				\begin{Def}
+					A \textbf{presheaf objects} of $\mathcal{C}$, consists of following datas
+					
+					\begin{itemize}
+						\item A presheaf of sets $\mathcal{F}$ and 
+						\item For every open $U\subseteq X$ a choice of an object $A(U)\in Ob(\mathcal{C})$;
+					\end{itemize}
+					
+					Subject to the following conditions:
+					
+					\begin{itemize}
+						\item For every open $U\subseteq X$, the set $\mathcal{F}(U)$ is the uniderlying set of $A(U)$;
+						\item For $V\subseteq U\subseteq X$, $\rho^U_V:\mathcal{F}(U)\rightarrow \mathcal{F}(V)$ is a morphism of algebraic structures. In other word: For every $V\subseteq U$ open in $X$ the restriction mapping $\rho^U_V$ is the iamge $F(\alpha^U)V$ for some \underline{unique} morphism		
+						\begin{gather*}
+							\alpha_V^U:A(U)\rightarrow A(V)
+						\end{gather*}	
+						in the category $\mathcal{C}$. Here $F:\mathcal{C}\rightarrow Sets$ is a faithful functor, usually the forgetful functor.
+					\end{itemize}
+				\end{Def}
+				
+				Then, we recover the presheaf of setst $(\mathcal{F},\rho^U_V)$ via the rules
+				\begin{gather*}
+					\mathcal{F}(A(U))\qquad \rho^U_V=F(\alpha^U_V)
+				\end{gather*}
+				Where $(A(-),\aleph^U_V)$ is what we define as a presheaf with values in $\mathcal{C}$ on $X$.
+				\begin{Def}
+					Let $X$ be a topological space, $C$ be a category
+					
+					\begin{itemize}
+						\item A \textbf{presheaf} $\mathcal{F}$ on $X$ with values in $\mathcal{C}$ is given by rule which assigns to every open $U\subseteq X$ with
+						
+						\begin{itemize}
+							\item Objects $\mathcal{F}(U)\in \mathcal{C}$;
+							\item Morphisms $\rho^U_V:\mathcal{F}(U)\rightarrow \mathcal{F}(V)$ in $\mathcal{C}$ such that whenever $W\subseteq V\subseteq U$, we have
+							
+							\begin{gather*}
+								\rho^U_W=\rho^U_V\circ \rho_W^V
+							\end{gather*}
+						\end{itemize}
+						\item A morphism $\varphi:\mathcal{F}\rightarrow \mathcal{G}$ of presheaves with value in $\mathcal{C}$ given by a morphism
+						
+						\begin{gather*}
+							\varphi(U):\mathcal{F}(U)\rightarrow \mathcal{G}(U)
+						\end{gather*}
+						
+						compatible with restriction maps;
+					\end{itemize}
+				\end{Def}
+				Then:
+				\begin{Def}
+					Let $\mathcal{F}$ be a sheaf on $X$ with values in $\mathcal{C}$. The sheaf of sets 
+					\begin{gather*}
+						U\mapsto F(\mathcal{F}(U))
+					\end{gather*}
+					is the underlying presheaf of sets of $\mathcal{F}$. $F:\mathcal{C}\rightarrow Sets$ is a faithful functor.
+				\end{Def}
+				
+				
+				\subsubsection{Presheaf of Modules}
+				
+				\begin{Def}
+					Suppose $\mathcal{O}$ be a presheaf of rings on topological space $X$:
+					\begin{itemize}
+						\item A \textbf{presheaf} of $\mathcal{O}$-modules is given by an abelian presheaf $\mathcal{F}$ together with a map of presheaves of sets
+						\begin{gather*}
+							\mathcal{O}\times \mathcal{F}\rightarrow \mathcal{F}
+						\end{gather*}
+						such that for every open $U\subseteq X$, the map
+						\begin{gather*}
+							\mathcal{O}(U)\times \mathcal{F}(U)\rightarrow \mathcal{F}(U)
+						\end{gather*}
+						Gives a structure of $\mathcal{O}(U)$-module structure on $\mathcal{F}(U)$;
+						\item The \textbf{morphism} $\varphi:\mathcal{F}\rightarrow\mathcal{G}$ presheaves of $\mathcal{O}$-modules is a morphism of abelian presheaves $\varphi$, such that the following diagram(module)
+						\begin{center}
+							\begin{tikzcd}
+								\mathcal{O}\times \mathcal{F}\arrow[r]\arrow[d]&\mathcal{F}\arrow[d]\\
+								\mathcal{O}\times \mathcal{G}\arrow[r]&\mathcal{G}
+							\end{tikzcd}
+						\end{center}
+						commutes.
+						\item The set of $\mathcal{O}$-module morphisms as above denoted $Hom_\mathcal{O}(\mathcal{F},\mathcal{G})$;
+						
+						\item The category of presheaves of $\mathcal{O}$-modules is denoted $PMod(\mathcal{O})$.
+					\end{itemize}
+				\end{Def}
+				
+				
+				Especially, for the morphism of presheaves of rings
+				\begin{gather*}
+					\varphi:\mathcal{O}_1\rightarrow \mathcal{O}_2
+				\end{gather*}
+				
+				Then, $\mathcal{F}\in PMod(\mathcal{O}_2)$ has a $\mathcal{O}_2$-module structure
+				
+				\begin{gather*}
+					\mathcal{O}_1\times \mathcal{F}\rightarrow \mathcal{O}_2\times \mathcal{F}\rightarrow \mathcal{F}
+				\end{gather*}
+				
+				induces the functor $PMod(\mathcal{O}_2)\rightarrow PMod(\mathcal{O}_1),\mathcal{F}\mapsto \mathcal{F}_{\mathcal{O}_1}$. 
+				
+				\begin{center}
+					\begin{tikzcd}
+						\mathcal{O}_1\times \mathcal{F}\arrow[r]\arrow[d]&\mathcal{O}_2\times \mathcal{F}\arrow[r]\arrow[d]&\mathcal{F}\arrow[d]\\
+						\mathcal{O}_1\times \mathcal{G}\arrow[r]&\mathcal{O}_2\times \mathcal{G}\arrow[r]&\mathcal{G}
+					\end{tikzcd}
+				\end{center}
+				
+				\begin{Def}
+					Define the \textbf{tensor product} of presheaves of $\mathcal{O}$-modules
+					\begin{gather*}
+						(\mathcal{F}\otimes_{p,\mathcal{O}} \mathcal{G})(U):=\mathcal{F}(U)\otimes_{\mathcal{O}(U)} \mathcal{G}(U)
+					\end{gather*}
+					Especially,
+					\begin{gather*}
+						(\mathcal{O}_2\otimes_{p,\mathcal{O}_1} \mathcal{G})(U):=\mathcal{O}_2(U)\otimes_{\mathcal{O}_1(U)} \mathcal{G}(U)
+					\end{gather*}
+					
+					$p$ for presheaf.
+				\end{Def}
+				
+				So we got a functor $PMod(\mathcal{O}_1)\rightarrow PMod(\mathcal{O}_2)$. 
+				
+				The construction is the categorical tensor product in $PMod(\mathcal{O})$:{\tiny
+					\begin{center}
+						\begin{tikzcd}
+							&\mathcal{O}\arrow[ld]\arrow[rd]\\
+							\mathcal{F}\arrow[rd]&&\mathcal{G}\arrow[ld]\\
+							&\mathcal{F}\otimes_{p,\mathcal{O}} \mathcal{G}
+						\end{tikzcd}
+				\end{center}}
+				
+				\begin{proposition}
+					With $X,\mathcal{O}_1,\mathcal{O}_2,\mathcal{F},\mathcal{G}$ as above, we have
+					
+					\begin{gather*}
+						Hom_{\mathcal{O}_1}(\mathcal{G},\mathcal{F}_{\mathcal{O}_1})=Hom_{\mathcal{O}_2}(\mathcal{O}_2\otimes_{p,\mathcal{O}_1} \mathcal{G},\mathcal{F})
+					\end{gather*}
+					
+					Adjoint: Restriction$\dashv$ Change of Rings
+				\end{proposition} 
+				
+				\begin{proof}
+					Consider $\varphi\mapsto id_{\mathcal{O}_2}\otimes_{p,\mathcal{O}_1} \varphi:\mathcal{O}_2\otimes_{p,\mathcal{O}_1} \mathcal{G}\rightarrow \mathcal{O}_2\otimes_{p,\mathcal{O}_1} \mathcal{F}_{\mathcal{O}_1}=\mathcal{F}$
+					
+					The inverse: Restriction $\varphi\mapsto \varphi|1\otimes_{p,\mathcal{O}_1} \mathcal{G}$
+				\end{proof}
+			
+			\subsection{Sheaves}
+				\begin{Def}
+					A \textbf{sheaf} is a presheaf $\mathcal{F}$ which satisfies:  Let $U=\cup U_i$ be an open covering
+					\begin{itemize}
+						\item (Identity) Let $U=\cup U_i$ be an open covering. If 
+						\begin{gather*}
+							s|U_i=t|U_i
+						\end{gather*}
+						Then $s=t$;
+						\item (Pasting) Given $s_i\in \mathcal{F}(U_i)$, such that
+						\begin{gather*}
+							s_i|U_i\cap U_j=s_j|U_i\cap U_j
+						\end{gather*} 
+						Then there exists some $s\in \mathcal{F}(U)$ such that $s|U_i=s_i$.
+					\end{itemize}
+				\end{Def}
+				
+				\textbf{Remark} In the case of sheaves over Sets, the element $\mathcal{F}(\varnothing)$ can be deduced to be $\bullet$. 
+				
+				\textbf{Remark} Consturction for Sets
+				\begin{gather*}
+					\mathcal{F}(U\cup V)=\mathcal{F}(U)\times \mathcal{F}(V);U,V\in Open(X),U\cap V=\varnothing
+				\end{gather*}
+				
+				\begin{example}
+					内容...
+				\end{example}
+				\begin{Def}
+					(Constant Sheaf) Let $X$ be a topological space. $A$ be a set
+					
+					The \textbf{constant sheaf} with value $A$ denoted $\underline{A}$ or $\underline{A}_X$ is the sheaf that assigns to an open $U\subseteq X$ the set of all \underline{locally constant maps} $U\rightarrow A$:
+					\begin{gather*}
+						\underline{A}_X(U):=\{f:U\rightarrow A|f\mbox{ is locally constant}\}
+					\end{gather*}
+					And restriction mappings given by restrictions of functions.
+				\end{Def}
+				
+				\begin{example}
+					(Product Construction) Let $(A_x)_{x\in X}$ be a family of sets.Define:
+					\begin{gather*}
+						\prod(U):=\prod_{x\in U} A_x
+					\end{gather*}
+					With following restsriction maps:
+					\begin{gather*}
+						(a_x)_{x\in U}\mapsto (a_x)_{x\in V};U\subseteq V
+					\end{gather*}
+					And
+					\begin{itemize}
+						\item Identity: Omitted;
+						\item Pasting: Well-defined.
+					\end{itemize}
+				\end{example}
+				
+				\begin{example}
+					For abelian groups $M_x$, construction
+					\begin{gather*}
+						\mathcal{F}:U\mapsto \oplus_{x\in U} M_x
+					\end{gather*}
+					may be not a sheaf(but still a presheaf): Such $supp(s);s\in \oplus_{x\in X} M_x$ must be finite-supported. 
+				\end{example}
+				
+				Furthermore:
+				\begin{proposition}
+					For such $\mathcal{F}$: Every open of $X$ is quasi-compact, then $\mathcal{F}$ is a sheaf.
+				\end{proposition}
+				\begin{proof}
+					Pasting: For a family of $s_i\in \mathcal{F}(U_i)$, then select a finite covering, and exists $s|U_i=s_i,s\in M$ with finite number of supports.
+				\end{proof}
+				
+				\subsubsection{Abelian Sheaves}
+				
+				\begin{Def}
+					\begin{itemize}
+						\item An \textbf{abelian sheaf} on $X$ is an abelian presheaf on $X$ such that: The underlying presheaf is a sheaf;
+						\item The category of sheaves of abelian groups is denoted $Ab(X)$.
+					\end{itemize}
+				\end{Def}
+				
+				The conditions is equivalent to the exactness of
+				
+				\begin{center}
+					\begin{tikzcd}
+						0\arrow[r]&\mathcal{F}(U)\arrow[r]&\prod_i \mathcal{F}(U_i)\arrow[r]&\prod_{i,j}\mathcal{F}(U_i\cap U_j)
+					\end{tikzcd}
+				\end{center}
+				
+				With maps $s\mapsto \prod s|U_i,(s_i)_{i\in I}\mapsto (s_{i}|U_{i}\cap U_{j}-s_j|U_i\cap U_j)_{i,j}$.
+				
+				\subsubsection{Sheaves of Algebraic Structures}
+				
+				\begin{Def}
+					In general: Let $X$ be a topological space, $\mathcal{C}$ be a sheaf with product. 
+					
+					A presheaf with value in $\mathcal{C}$ is a sheaf if for every open covering, the diagram
+					\begin{center}
+						\begin{tikzcd}
+							0\arrow[r]&\mathcal{F}(U)\arrow[r]&\prod_i \mathcal{F}(U_i)\arrow[r,shift left=2]\arrow[r,shift right=2]&\prod_{i,j}\mathcal{F}(U_i\cap U_j)
+						\end{tikzcd}
+					\end{center}
+					is an equalizer diagram in the category $\mathcal{C}$.
+				\end{Def}
+				
+				Now, with the faithful functor $F:\mathcal{C}\rightarrow Sets$
+				\begin{center}
+					\begin{tikzcd}
+						0\arrow[r]&F(\mathcal{F}(U))\arrow[r]&F(\prod_i \mathcal{F}(U_i))\arrow[r,shift left=2]\arrow[r,shift right=2]&F(\prod_{i,j}\mathcal{F}(U_i\cap U_j))
+					\end{tikzcd}
+				\end{center}
+				
+				$F$ commutes with equalizer$\Leftrightarrow \mathcal{C}$ has limits and $F$ commutes with limits. 
+				
+				$F$ is needed to reflect ismorphisms: Bijection$\Leftrightarrow$ Isomorphism
+				
+				
+				\begin{lemma}
+					Suppose the category $\mathcal{C}$ and the functor $F:\mathcal{C}\rightarrow Sets$ has the following properties:
+					\begin{itemize}
+						\item $F$ is faithful;
+						\item $\mathcal{C}$ has limits and $F$ commutes with them;
+						\item The functor $F$ reflects isomorphisms.
+					\end{itemize}
+					Let $X$ be a topological space, sheaf $\mathcal{F}$ on $X$ is a presheaf with values in $\mathcal{C}$. Then, $\mathcal{F}$ is a sheaf iff the underlying presheaf is a sheaf.
+				\end{lemma} 
+				
+				\begin{proof}
+					\begin{itemize}
+						\item $\Rightarrow$ Assume $\mathcal{F}$ is a sheaf: We see that $F(\mathcal{F}(U))$ is a equalizer of teh corresponding digram of sets. Hence $F(\mathcal{F})$ is a sheaf of sets.
+						\item $\Leftarrow$ If $F(\mathcal{F})$ is a sheaf,then let $E\in Ob(\mathcal{C})$ be the equalizer of two parallel arrows:Consider a covering $\{U_i\}$ of $U$, tehn
+						\begin{center}
+							\begin{tikzcd}
+								E\arrow[r]&\prod\mathcal{F}(U_i)\arrow[r,shift left=2]\arrow[r,shift right=2]&\mathcal{F}(U_1\cap U_j)
+							\end{tikzcd}
+						\end{center}
+						The equilizer exists, because of the existence of limits. So, there exists a canonical morphism
+						\begin{gather*}
+							\mathcal{F}(U)\rightarrow E
+						\end{gather*}
+						By the universal property of equilizer. Apply functor $F$,the induced map
+						\begin{gather*}
+							F(\mathcal{F}(U))\rightarrow F(E)
+						\end{gather*}
+						is an isomorphism: Notice that, the equilizer commutes with functor $F$. 
+					\end{itemize}
+				\end{proof}
+				
+				This lemma can be applied on:
+				
+				\begin{itemize}
+					\item Groups;
+					\item Rings;
+					\item Algebras over a fixed Ring;
+					\item Modules over a fixed Ring;
+					\item Vector Space over a fixed Field.
+				\end{itemize}
+				
+				\subsubsection{Sheaves of Modules}
+				
+				\begin{Def}
+					(Shevaes of Modules) \label{Sheaves-Sheaves-Sheaves-of-Modules}
+					\begin{itemize}
+						\item A sheaf of $\mathcal{O}$-modules is a presheaf of $\mathcal{O}$-modules $\mathcal{F}$, such that the underlying presheaf of abelian groups $\mathcal{F}$ is a sheaf;
+						\item A \textbf{morphism} of sheaves of $\mathcal{O}$-modules is a morphismof presheaves of $\mathcal{O}$-modules;
+						\item Given sheaves of $\mathcal{O}$-modules $\mathcal{F},\mathcal{G}$. Then denote
+						\begin{gather*}
+							Hom_\mathcal{O}(\mathcal{F},\mathcal{G})
+						\end{gather*}
+						the set of morphisms of sheaves of $\mathcal{O}$-modules;
+						
+						\item The category of sheaves of $\mathcal{O}$-modules is denoted $Mod(\mathcal{O})$.
+					\end{itemize}
+				\end{Def}
+				
+				
+			
+			\subsection{Stalks}
+			
+				\begin{Def}
+					Let $\mathcal{F}$ be a sheaf over sets. Define: The \textbf{stalk of} $\mathcal{F}$ at $x\in X$ is the set
+					
+					\begin{gather*}
+						\mathcal{F}_x:=colim_{x\in U} \mathcal{F}(U) 
+					\end{gather*} 
+				\end{Def}
+				It has a directed system:
+				\begin{gather*}
+					(\mathcal{N}(x),\leq)
+				\end{gather*}
+				Where
+				\begin{itemize}
+					\item $\mathcal{N}(x):=\{U|x\in U,U\in Open(X)\}$;
+					\item $U\geq U'\Leftrightarrow U\subseteq U'$;
+					\item Transition Maps in the system are given by the restriction maps;
+				\end{itemize}
+				Equivalently,
+				\begin{gather*}
+					\mathcal{F}_x=\mathcal{N}(x)/\sim
+				\end{gather*}
+				\begin{Def}
+					There exists canonical map
+					\begin{gather*}
+						\mathcal{F}(U)\rightarrow \prod_{x\in U} \mathcal{F}_x\qquad s\mapsto \prod_{x\in U} (U,s)
+					\end{gather*}
+				\end{Def}
+				\subsubsection{Separated Property}
+					\begin{lemma}
+						Let $\mathcal{F}$ be a sheaf of sets on the topological space $X$. For every open $U\subseteq X$, the map
+						\begin{gather*}
+							\mathcal{F}(U)\rightarrow \prod_{x\in U}\mathcal{F}_x
+						\end{gather*}
+						is injective.
+					\end{lemma}
+					\begin{proof}
+						Now suppose $s,s'\in \mathcal{F}(U)$ with same image, then
+						\begin{gather*}
+							s|V^x=s'|V^x;U=\cup_{x\in U} V^x
+						\end{gather*}
+						By uniqueness of sheaf, $s=s'$.
+					\end{proof}
+					\begin{Def}
+						Let $X$ be a topological space, and $\mathcal{F}$ be a presheaf on $X$ over sets. Then, $\mathcal{F}$ is separated if for every open $U\subseteq X$,
+						\begin{gather*}
+							\mathcal{F}(U)\rightarrow \prod_{x\in U} \mathcal{F}_x
+						\end{gather*}
+						is injective.
+					\end{Def}
+				\subsubsection{Functoriality}
+					\begin{proposition}
+						$\mathcal{F}\mapsto \mathcal{F}_x$ is functorial in the presheaf $\mathcal{F}$. It gives a functor
+						\begin{gather*}
+							PSh(X)\rightarrow Sets\qquad \mathcal{F}\mapsto \mathcal{F}_x
+						\end{gather*}
+					\end{proposition}
+					\begin{proof}
+						Consider the following diagram:
+						\begin{center}
+							\begin{tikzcd}
+								\mathcal{F}\arrow[d,"\varphi"]\arrow[r]&\mathcal{F}(U)\arrow[d,"\varphi(U)"]\arrow[r]&\mathcal{F}_x\arrow[d,"\varphi_x"]\\
+								\mathcal{G}\arrow[r]&\mathcal{G}(U)\arrow[r]&\mathcal{G}_x
+							\end{tikzcd}
+						\end{center}
+						And $\varphi_x:\mathcal{F}_x\rightarrow \mathcal{G}_x$ given by $[(U,s)]\mapsto [(U,\varphi(s))]$.
+					\end{proof}
+					
+					\begin{example}
+						\begin{itemize}
+							\item Constant Presheaf:
+							\item Germ:
+							\item Consider a family of sets $\{A_x\}_{x\in X}$, Then, consider the sheaf
+							\begin{gather*}
+								\mathcal{F}:U\mapsto \prod_{x\in U} A_x
+							\end{gather*}
+							Then, we have the special case, that $x$ is in general not equal to the st $A_x$. For example:
+						\end{itemize}
+					\end{example}
+				\subsubsection{Stalks of Abelian Presheaves}
+				\begin{lemma}
+					Let $X$ be a topological space. Let $\mathcal{F}$ be a presheaf of abelian groups on $X$. There exists a unique structure of an abelian group on $\mathcal{F}_x$ such that for every $U\subseteq X$ open, $x\in U$ the map
+					\begin{gather*}
+						\mathcal{F}(U)\rightarrow \mathcal{F}_x
+					\end{gather*}
+					is a group homomorphism. Moreover:
+					\begin{gather*}
+						\mathcal{F}_x=colim_{x\in U} \mathcal{F}(U)
+					\end{gather*}
+					holds in category $\mathcal Ab$.
+					\end{lemma}
+				\begin{proof}
+					Define the addition on $\mathcal{F}_x$ by
+					\begin{gather*}
+						[(s,U)]+[(t,V)]:=[(s|U\cap V+t|U\cap V,U\cap V)]
+					\end{gather*}
+				\end{proof}
+				\subsubsection{Stalks of Presheaves of Algebraic Structures}
+				\begin{lemma}
+					Let $\mathcal{C}$ be a category, $F:\mathcal{C}\rightarrow Sets$ be a functor. Assume that:
+					\begin{itemize}
+						\item $F$ is faithful;
+						\item Directed colimits exist in $\mathcal{C}$ and $F$ commutes with them;
+					\end{itemize}
+					Let $X$ be a topological space, $x\in X$. Let $\mathcal{F}$ be a presheaf with values in $\mathcal{C}$. Then:
+					\begin{gather*}
+						\mathcal{F}_x=colim_{x\in U} \mathcal{F}(U)
+					\end{gather*}
+					exists in $\mathcal{C}$. Its underlying set is equal to the stalk of underlying presheaf of sets of $\mathcal{F}$.
+					
+					Furthermore, the construction $\mathcal{F}\mapsto \mathcal{F}_x$ is a functor from the category of presheaves with values in $\mathcal{C}$ to $\mathcal{C}$.
+				\end{lemma}
+				\begin{proof}
+					Notice that $F$ commutes with directed colimits.
+				\end{proof}
+				Inparticular:
+				\begin{itemize}
+					\item Groups;
+					\item Rings;
+					\item Modules over fixed ring;
+					\item Vector Spaces over a fixed Field;
+				\end{itemize}
+				By definition,
+				\begin{gather*}
+					\mathcal{F}(U)\rightarrow \mathcal{F}_x
+				\end{gather*}
+				are morphisms in the category $\mathcal{C}$ which turn into the corresoponding maps for the underlying sheaf of sets. Thus,
+				\begin{gather*}
+					\mathcal{F}(U)\rightarrow \mathcal{F}_x
+				\end{gather*}
+				\subsubsection{Stalks of Presheaves of Modules}
+					\begin{lemma}
+						Let $X$ be a topological space, $\mathcal{O}$ a presheaf of rings on $X$.
+						
+						Let $\mathcal{F}$ bea presheaf of $\mathcal{O}$-modules, $x\in X$. The canonical map
+						\begin{gather*}
+							\mathcal{O}_x\times \mathcal{F}_x\rightarrow \mathcal{F}_x
+						\end{gather*}
+						
+						coming from the multiplication map $\mathcal{O}\times \mathcal{F}\rightarrow \mathcal{F}$ defines a $\mathcal{O}_x$-module structure on the abelian group $\mathcal{F}_x$.
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{lemma}
+						(Tensor Product of Stalks) Let $X$ be a topological space, and $\mathcal{O}\rightarrow \mathcal{O}'$ be a morphism of presheaves of rings on $X$. 
+						
+						Let $\mathcal{F}$ be a presheaf of $\mathcal{O}$-modules, $x\in X$, we have
+						\begin{gather*}
+							\mathcal{F}_x\otimes_{\mathcal{O}_x} \mathcal{O}_x'=(\mathcal{F}\otimes_{p,\mathcal{O}} \mathcal{O}')_x
+						\end{gather*}
+						as $\mathcal{O}_x'$-module.
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+				\subsubsection{Algebraic Structure}
+					\begin{Def}
+						A type of algebraic struture is given by a category $\mathcal{C}$ and a functor $F:\mathcal{C}\rightarrow Sets$ with following properties:
+						\begin{itemize}
+							\item $F$ is faithful;
+							\item $\mathcal{C}$ has limits and $F$ commutes with limits;
+							\item $\mathcal{C}$ has filtered colimits and $F$ commutes with them;
+							\item $F$ reflects isomorphism.
+						\end{itemize}
+					\end{Def}
+					\begin{lemma}
+						The following categories, endowed with the obvious forgeetful functor, defines types of algebraic structures:
+						\begin{itemize}
+							\item Category of Pointed Sets;
+							\item Category of Abelian Groups;
+							\item Category of Groups;
+							\item Category of Monoids;
+							\item Categpry of Rings;
+							\item Category of $R$-modules for a fixed ring $R$;
+							\item Category of Lie Algebras over Field.
+						\end{itemize}
+					\end{lemma}
+					\begin{proof}
+						Omitted.
+					\end{proof}
+					
+					\begin{lemma}\label{Sheaves-Sheaves-Properties-of-Algebraic-Structure-1}
+						Let $(\mathcal{C},F)$ be a type of algebraic structure:
+						\begin{itemize}
+							\item $\mathcal{C}$ has a final object $0$, and $F(0)=\{*\}$;
+							\item $\mathcal{C}$ has products and $F(\prod A_i)=\prod F(A_i)$;
+							\item $\mathcal{C}$ has fibre product, and 
+							\begin{gather*}
+								F(A\times_B C)=F(A)\times_{F(B)} F(C)
+							\end{gather*}
+							\item $\mathcal{C}$ has equilizers, if $E\rightarrow A$ is the equilizer of $a,b:A\rightarrow B$, then
+							\begin{gather*}
+								F(E)\rightarrow F(A)
+							\end{gather*}
+							is the equalizer of $F(a),F(b):F(A)\rightarrow F(B)$.
+							\item $A\rightarrow B$ is a monomorphism iff $F(A)\rightarrow F(B)$ is injective.
+							
+							$A\rightarrow B$ is an epimorphism iff $F(A)\rightarrow F(B)$ is bijective.
+							\item Given $A_1\rightarrow A_2\rightarrow \dots$,then colimit $A_i$ exists, and 
+							\begin{gather*}
+								F(colim A_i)=colim(F(A_i))
+							\end{gather*}
+							\item 	
+						\end{itemize}
+					\end{lemma}
+					\begin{proof}
+						Omitted. Check definition.
+					\end{proof}
+					
+					\begin{lemma}
+						Let $(\mathcal{C},F)$ be a type of algebraic structure. Suppose that:
+						\begin{gather*}
+							A,B,C\in Ob(\mathcal{C})
+						\end{gather*}
+						Let $f:A\rightarrow B$ and $g:C\rightarrow B$ be morphisms of $\mathcal{C}$. If $F(g)$ is injective, and $Im(F(f))\subseteq Im(F(g))$, then $f$ factors as
+						\begin{gather*}
+							f=g\circ t,t:A\rightarrow C
+						\end{gather*}
+					\end{lemma}
+					\begin{center}
+						\begin{tikzcd}
+							A\arrow[rd,dashrightarrow]\arrow[r,"f"]&B\\
+							&C\arrow[u,"g"]
+						\end{tikzcd}
+					\end{center}
+					\begin{proof}
+						Consider $A\times_B C$:
+						\begin{center}
+							\begin{tikzcd}
+								A\times_B C\arrow[r]\arrow[d]&C\arrow[d]\\
+								A\arrow[r]&B
+							\end{tikzcd}
+						\end{center}
+						Then, $A\times_B C\rightarrow A$ is bijective: Use the property \ref{Sheaves-Sheaves-Properties-of-Algebraic-Structure-1}, $F$ commutes with fibre product, 
+						\begin{itemize}
+							\item Surjectivity: By condition.
+							\item Injectivity: Consider the set-theoretic mapping 
+							\begin{gather*}
+								F(A\times_B C)\rightarrow A\qquad (a,c)\mapsto a
+							\end{gather*}
+							Notice that $F(g)$ is injective, thus there exists a unique $c\in F(C)$ such that $F(f)(a)=F(g)(c)$, pair $(a,c)$ is unique. 
+						\end{itemize}
+					\end{proof}
+					
+					\begin{corollary}
+						\label{Sheaves-Sheaves-Square-of-Algebraic-Structure}Apply the lemma on the following diagram:
+						\begin{center}
+							\begin{tikzcd}
+								A\arrow[r]&B\arrow[d]\\
+								C\arrow[r]&D
+							\end{tikzcd}
+						\end{center}
+						Suppose $C\rightarrow D$ is injective, $Im(A\rightarrow B\rightarrow D)\subseteq Im(C\rightarrow D)$, then we have:
+						\begin{center}
+							\begin{tikzcd}
+								A\arrow[r]\arrow[d]&B\arrow[d]\\
+								C\arrow[r]&D
+							\end{tikzcd}
+						\end{center}
+					\end{corollary}
+				\subsubsection{Germs}
+					\begin{Def}
+						The germs aar defined as following: For $s\in \mathcal{F}(U),t\in \mathcal{F}(V)$ we have
+						\begin{gather*}
+							(U,s)\sim (V,t)\Leftrightarrow s|U\cap V=t|U\cap V
+						\end{gather*}
+					\end{Def}
+					
+					Then:
+					\begin{proposition}
+						(Germs-Stalks) The following classes are the same
+						\begin{gather*}
+							\mathcal{F}_x=\{(U,s)|U\in Open(X),s\in \mathcal{F}(U)\}/\sim
+						\end{gather*}
+					\end{proposition}
+					\begin{proof}
+						We will verify that this set satisfies the universal property: If there exists $M$ and $f_U:\mathcal{F}(U)\rightarrow M$, then $h:\mathcal{F}_x\rightarrow M$ exists, via
+						\begin{gather*}
+							h([U,s])=f_U(s)
+						\end{gather*}
+						Then, proved.
+					\end{proof}
+			\subsection{Exactness}
+				\subsubsection{Monomorphism and Epimorphism of Morphism}
+					\begin{proposition}
+						(The Monomorphhism and Epimorphism of Section) For $\varphi:\mathcal{F}\rightarrow \mathcal{G}$:
+						\begin{itemize}
+							\item $\varphi$ is mono$\Leftrightarrow$ For all open $U\subseteq X,\varphi(U)$ is mono;
+							\item $\varphi(U)$ is epi for any $U\Rightarrow \varphi$ is epi. Conversely not hold.
+						\end{itemize}
+					\end{proposition}
+					\begin{proof}
+						\begin{itemize}
+							\item Easy to check,
+							\item Omitted. And if all are epi, the it is \textbf{flasque}
+						\end{itemize}
+					\end{proof}
+				\subsubsection{Exactness}
+				\begin{lemma}
+					\label{Sheaves-Sheaves-Exactness-at-Point}Let $X$ be a topologicalspace, $\varphi:\mathcal{F}\rightarrow \mathcal{G}$ be a morphism of sheaves of sets on $X$:
+					
+					\begin{itemize}
+						\item The map $\varphi$ is a monomorphism in the category of sheaves iff for all $x\in X$, the map $\varphi_x:\mathcal{F}_x\rightarrow \mathcal{G}_x$ is injective;
+						\item The map $\varphi$ is an epimorphism in the category of sheaves iff for all $x\in X$, the map $\varphi_x:\mathcal{F}_x\rightarrow \mathcal{G}_x$ is surjective;
+						\item Isomorphsim$\Leftrightarrow$ bijective;
+					\end{itemize}
+				\end{lemma}
+				
+				\begin{proof}
+					\begin{itemize}
+						\item \begin{itemize}
+							\item $\Rightarrow$  Suppose $\varphi:\mathcal{F}\rightarrow \mathcal{G}$ is monomorphsim. Then, consider $\varphi_x$, with open neighborhood $U\ni x$, then
+							\begin{gather*}
+								\varphi_x([a])=\varphi_x([b])\Rightarrow 
+							\end{gather*}
+							And stalk is a filtered colimit, commutes with morphism $\varphi$. Thus,
+							\begin{gather*}
+								\Leftrightarrow (\varphi(U)(a))=(\varphi(U)(b)
+							\end{gather*}
+							\item $\Leftarrow$ If $\varphi_x$ is mono, then $\varphi$ According to the commutativity of colimit
+							\begin{gather*}
+								\varphi(U)(s)=\varphi(U)(t)\Rightarrow (\varphi(U))(s)_x=(\varphi(U))(t)_x,x\in U
+							\end{gather*}
+							Now, select convering of $U$. Thus $s=t$.
+						\end{itemize}
+						\item Similarly
+						\item Omitted.
+					\end{itemize}
+				\end{proof}
+				
+				\begin{Def} Let $X$ be a topological space
+					\begin{itemize}
+						\item A presheaf $\mathcal{F}$ is called a \textbf{subpresheaf} of a presheaf $\mathcal{G}$ if $\mathcal{F}(U)\subseteq \mathcal{G}(U)$ for all open $U\subseteq X$ such that the restriction maps of $\mathcal{G}$ induce the restriction map of $\mathcal{F}$. 
+						
+						If $\mathcal{F},\mathcal{G}$ are sheaves, then $\mathcal{F}$ is called a \textbf{subsheaf} of $\mathcal{G}$. We sometimes indicate this by the notation
+						\begin{gather*}
+							\mathcal{F}\subseteq \mathcal{G}
+						\end{gather*}
+						\item A morphisms of presheaves of sets $\varphi:\mathcal{F}\rightarrow\mathcal{G}$ is called \textbf{injective} iff $\mathcal{F}(U)\rightarrow \mathcal{G}(U)$ is injective, $U\subseteq X$ opens.
+						\item A morphisms of presheaves of setss $\varphi:\mathcal{F}\rightarrow \mathcal{G}$ is called \textbf{surjective} iff $\mathcal{F}(U)\rightarrow \mathcal{G}(U)$ is surjective.
+						\item Sheaves of Sets injective iff $\mathcal{F}(U)\rightarrow \mathcal{G}(U)$ is injective;
+						\item A morphism of sheaves of sets $\varphi:\mathcal{F}\rightarrow \mathcal{G}$ on $X$ is called \textbf{surjective} iff for every open $U$ of $X$, and every section $s\in \mathcal{G}(U)$, there exists an open covering $U=\cup U_i$ such that
+						\begin{gather*}
+							s|U_i\in Im(\mathcal{F}(U_i)\rightarrow \mathcal{G}(U_i))
+						\end{gather*}
+					\end{itemize}
+				\end{Def}
+				
+				\begin{lemma}
+					Let $X$ be a topological space:
+					\begin{itemize}
+						\item Epimorphisms/Monomorphisms in the category of presheaves are exactly the surjective/injective maps of presheaves;
+						\item Epimorphisms/Monomorphisms in the category of sheaves are exactly the maps which are surjective/injective \underline{on all stalks}.
+					\end{itemize}
+				\end{lemma}
+				\begin{proof} Omitted.
+				\end{proof}
+				
+				\subsubsection{Algebraic Construction}
+				\begin{lemma}
+					Let $X$ be a topological space, $(\mathcal{C},F)$ be a type of algebraic structure.
+					
+					Suppose $\mathcal{F},\mathcal{G}$ are sheaves on $X$ with valuess in $\mathcal{C}$, $\varphi:\mathcal{F}\rightarrow \mathcal{G}$ be the map of underlying sheaves of sets. 
+					
+					If for all $x\in X$, the map $\mathcal{F}_x\rightarrow \mathcal{G}_x$ is a morphisms of algebraic structures, then $\varphi$ is a morphism of sheaves of algebraic sturctures.
+				\end{lemma}
+				\begin{proof}
+					Consider the following diagram
+					\begin{center}
+						\begin{tikzcd}
+							\mathcal{F}(U)\arrow[r]\arrow[d]&\prod_{x\in U} \mathcal{F}_x\arrow[d]\\
+							\mathcal{G}(U)\arrow[r]&\prod_{x\in U} \mathcal{G}_x
+						\end{tikzcd}
+					\end{center}
+					
+					And except $\mathcal{F}(U)\rightarrow \mathcal{G}(U)$. By the lemma \ref{Sheaves-Sheaves-Square-of-Algebraic-Structure}, $\mathcal{F}(U)\rightarrow \mathcal{G}(U)$ is also morphism of algebraic structure, thus we conclude that $\mathcal{F}\rightarrow\mathcal{G}$ is algebraic.
+				\end{proof}
+			
+			\subsection{Sheafifications}
+			
+				\begin{Def}
+					Let $\mathcal{F}$ be a presheaf. For every open $U\subseteq X$, we define
+					\begin{gather*}
+						\mathcal{F}^\#(U):=\{(s_u)_{u\in U}\in \prod_{u\in U} \mathcal{F}_u|*\}
+					\end{gather*}
+					where $*$ is the property: For every $u\in U$, there exists a neighborhood $V$ with $\sigma\in \mathcal{F}(V)$ such that
+					\begin{gather*}
+						s_v=(\sigma,V)\in \mathcal{F}_v;v\in V
+					\end{gather*}
+					with restriction maps(projection), for $V\subseteq U$,
+					\begin{gather*}
+						\mathcal{F}^\#(U)\rightarrow \mathcal{F}^\#(V)\qquad \prod_{u\in U} \mathcal{F}_u\rightarrow \prod_{v\in V} \mathcal{F}_v
+					\end{gather*}
+				\end{Def}
+				Define sheaf $\prod\mathcal{F}:U\mapsto \prod_{u\in U} \mathcal{F}_u$ There exists morphism of presheaves
+				\begin{gather*}
+					\mathcal{F}\rightarrow \mathcal{F^\#}\rightarrow \prod\mathcal{F}
+				\end{gather*}
+				with following diagrams:
+				\begin{center}
+					\begin{tikzcd}
+						\mathcal{F}(U)\arrow[r]\arrow[d]&\mathcal{F}^\#(U)\arrow[r]\arrow[d]&\prod_{u\in U} \mathcal{F}_u\arrow[d]\\
+						\mathcal{F}(V)\arrow[r]&\mathcal{F}^\#(V)\arrow[r]&\prod_{v\in V} \mathcal{F}_v
+					\end{tikzcd}
+				\end{center}
+				
+				\begin{proposition}
+					The presheaf $\mathcal{F}^\#$ is a sheaf.
+				\end{proposition}
+				\begin{proof}
+					\begin{itemize}
+						\item Pasting: Suppose that there exists covering $U=\cup V_i$ with $(V_i,s_i)$ such that 
+						\begin{gather*}
+							s_i|V_i\cap V_j=s_j|V_i\cap V_j
+						\end{gather*}
+						Then, equivalently, if we write
+						\begin{gather*}
+							s_i=\prod_{v\in V_i}(s_v),s_j=\prod_{v\in V_j} (s'_v)\\
+							\Rightarrow s_v=s'_v,v\in V_i\cap V_j
+						\end{gather*}
+						Then, there exists construction
+						\begin{gather*}
+							s=\prod_{v\in U} (s_v)
+						\end{gather*}
+						\item Identity: Omitted.
+					\end{itemize}
+				\end{proof}
+				\subsubsection{Stalks}
+				\begin{lemma}
+					Let $X$ be a topological space. Let $\mathcal{F}$ be a presheaf of sets on $X$. Let $x\in X$, then
+					\begin{gather*}
+						\mathcal{F}_x=\mathcal{F}_x^\#
+					\end{gather*}
+				\end{lemma}
+				\begin{proof}
+					Notice that:
+					\begin{gather*}
+						colim_{x\in U} (\prod_{v\in V} (s_v))=s_x
+					\end{gather*}
+				\end{proof}
+				\begin{lemma}
+					Let $\mathcal{F}$ be a sheaf, then $\mathcal{F}^\$=\mathcal{F}$.
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{lemma}
+					Let $\mathcal{F}$ be a presheaf of sets on $X$. Any map $\mathcal{F}\rightarrow \mathcal{G}$ into a sheaf of sets factors uniquely as
+					\begin{gather*}
+						\mathcal{F}\rightarrow \mathcal{F}^\#\rightarrow \mathcal{G}
+					\end{gather*}
+				\end{lemma}
+				\begin{proof}
+					Consider the following diagram
+					\begin{center}
+						\begin{tikzcd}
+							\mathcal{F}\arrow[r]\arrow[d]&\mathcal{F}^\#\arrow[r]\arrow[d]&\prod(\mathcal{F})\arrow[d]\\
+							\mathcal{G}\arrow[r]&\mathcal{G}^\#\arrow[r]&\prod(\mathcal{G})
+						\end{tikzcd}
+					\end{center}
+				\end{proof}
+				This implies, that there is an adjoint pair of functors:
+				\begin{gather*}
+					i:Sh(X)\rightarrow Psh(X)\qquad \#:PSh(X)\rightarrow Sh(X)
+				\end{gather*}
+				
+				\begin{proposition}
+					There is an adjoint pair of functors $i:Sh(X)\rightarrow PSh(X)$ and $\#:Psh(X)\rightarrow X$, the formula
+					\begin{gather*}
+						Mor_{PSh(X)}(\mathcal{F},i(\mathcal{G}))=Mor_{Sh(X)}(\mathcal{F}^\#,\mathcal{G})
+					\end{gather*}
+					holds for sheaf $\mathcal{G}$, presheaf $\mathcal{F}$.
+				\end{proposition}
+				\begin{proof}
+					Consider the diagram above. 
+				\end{proof}
+				\begin{lemma}
+					Let $X$ be a topological space. A presheaf $\mathcal{F}$ is separated iff the canonical map $\mathcal{F}\rightarrow \mathcal{F}^\#$ is injective.
+				\end{lemma}
+				\begin{proof}
+					By definition of Construction.
+				\end{proof}
+				\begin{lemma}
+					Let $X$ be a topological space. The \textbf{sheafification} of a surjecitve/injective morphism of presheaves of sets is surjective/injective.
+				\end{lemma}
+				\begin{proof}
+					According to our discussion of monomorphism/epiomorphsim of stalk.
+				\end{proof}
+			
+				\subsubsection{Sheafification of Abelian Presheaves}
+					\begin{lemma}
+						We have: For (pre)sheaf of abelian group we have
+						\begin{gather*}
+							\mathcal{F}_x=\mathcal{F}_x^\#
+						\end{gather*}
+					\end{lemma}
+					\begin{proof}
+						Category $\mathcal Ab$ is also algebraic, preverse filtered colimit.
+					\end{proof}
+					\begin{lemma}
+						Let $X$ be a topological space, $\mathcal{F}$ be a presheaf of sets on $X$. Let $U\subseteq X$ open, there exists a canonical fibre product diagram:
+						\begin{center}
+							\begin{tikzcd}
+								\mathcal{F}^\#(U)\arrow[r]\arrow[d]&(\prod \mathcal{F})(U)\arrow[d]\\
+								\prod_{x\in U} \mathcal{F}_x\arrow[r]&\prod_{x\in U} \prod(\mathcal{F})_x
+							\end{tikzcd}
+						\end{center}
+						where the maps are the following:
+						\begin{itemize}
+							\item The left vertical map has components
+							\begin{gather*}
+								\mathcal{F}^\#(U)\rightarrow \mathcal{F}^\#_x=\mathcal{F}_x
+							\end{gather*}
+							\item The top horizontal map comes from the map of presheaves $\mathcal{F}\rightarrow \prod  (\mathcal{F})$;
+							\item The right vertical map has obvious component maps $\prod \mathcal{F}(U)\rightarrow \prod_{x\in U} (\prod \mathcal{F})_x$;
+							\item The bottom horizontal map has components $\mathcal{F}_x\rightarrow (\prod \mathcal{F})_x$ which come from the map of presheaves $\mathcal{F}\rightarrow \prod (\mathcal{F})$.
+						\end{itemize}
+					\end{lemma}
+					\begin{proof}
+						\begin{itemize}
+							\item By the conclusion above.
+							\item Notice: $\prod(\mathcal{F})$ is a sheaf, so there exists factorization
+							\begin{gather*}
+								\mathcal{F}\rightarrow \mathcal{F}^\#\rightarrow \prod (\mathcal{F})
+							\end{gather*}
+							\item By the morphism of $\prod \mathcal{F}$;
+							\item Obvious. By taking $\mathcal{F}_x\rightarrow (\prod \mathcal{F})_x$ because of category $\mathcal Ab$.
+						\end{itemize}
+					\end{proof}
+					
+					\begin{lemma}
+						Let $X$ be a topological space, $\mathcal{F}$ be an abelian presheaf on $X$. Then, there exists a unique structure of abelian sheaf on $\mathcal{F}^\#$ such that:
+						\begin{gather*}
+							\mathcal{F}\rightarrow \mathcal{F}^\#
+						\end{gather*}
+						is a morpism of abelian presheaves.
+						
+						Moreover, the following adjointness property holds:
+						\begin{gather*}
+							Mor_{PAb(X)}(\mathcal{F},i(\mathcal{G}))=Mor_{b(X)}(\mathcal{F}^\#,\mathcal{G})
+						\end{gather*}
+					\end{lemma}
+					\begin{proof}
+						Firstly, let $\mathcal{F}$ be an abelian sheaf, then $\mathcal{F}_x$ is abelian. Consider the morphism of abelian group
+						\begin{gather*}
+							\mathcal{F}\rightarrow (\prod \mathcal{F})
+						\end{gather*}
+						
+						$\mathcal{F}^\#(U)$ is a subgroup of $(\prod \mathcal{F})(U)$ by definition. Especially, as above, $\mathcal{F}^\#(U)$ is a fibre product. 
+						
+						$\mathcal{F}_x\rightarrow \mathcal{F}^\#_x$ is an isomorphism of abelian group, to prove the adjointness: We use the adjointness property of sets.
+					\end{proof}
+				\subsubsection{Sheafification of Presheaves of Algebraic Structures}
+				\begin{lemma}
+					Let $X$ be a topological space. Let $(\mathcal{C},F)$ be a type of algebraic structure. Let $\mathcal{F}$ be a presheaf with values in $\mathcal{C}$ on $X$. Then there exists a sheaf $\mathcal{F}^\#$ with values in $\mathcal{C}$, and a morphism
+					\begin{gather*}
+						\mathcal{F}\rightarrow \mathcal{F}^\#
+					\end{gather*}
+					of presheaves with values in $\mathcal{C}$ with the following propertis:
+					\begin{itemize}
+						\item The map $\mathcal{F}\rightarrow \mathcal{F}^\#$ identifies the underlying presheaf of sets of $\mathcal{F}$;
+						\item For any morphism $\mathcal{F}\rightarrow \mathcal{G}$ , where $\mathcal{G}$ is a sheaf with values in $\mathcal{C}$ there exists a unique factorization
+						\begin{gather*}
+							\mathcal{F}\rightarrow \mathcal{F}^\#\rightarrow \mathcal{G}
+						\end{gather*}
+					\end{itemize}
+				\end{lemma}
+				\begin{proof}
+					Same as proof above. Define $\mathcal{F}^\#(U)$ to be the fibre product in $\mathcal{C}$ of the diagram
+					\begin{center}
+						\begin{tikzcd}
+							&\prod (\mathcal{F})(U)\arrow[d]\\
+							\prod_{x\in U} \mathcal{F}_x\arrow[r]&\prod_{x\in U} \prod(\mathcal{F})_x
+						\end{tikzcd}
+					\end{center}
+				\end{proof}
+				
+				\subsubsection{Sheafification of Presheaves of Modules}
+					\begin{lemma}
+						Let $X$ be a topological space, $\mathcal{O}$ presheaf of rings on $X$. Let $\mathcal{F}$ be a presheaf of $\mathcal{O}$-modules, $\mathcal{O}^\#$ be the sheafification and $\mathcal{F}^\#$ also be the sheafification, then there exists module structure of sheafification
+						\begin{gather*}
+							\mathcal{O}^\#\times \mathcal{F}^\#\rightarrow \mathcal{F}^\#
+						\end{gather*}
+						which makes the diagram
+						\begin{center}
+							\begin{tikzcd}
+								\mathcal{O}\times \mathcal{F}&\mathcal{F}\\
+								\mathcal{O}^\#\times \mathcal{F}^\#&\mathcal{F}^\#
+							\end{tikzcd}
+						\end{center}
+						Moreover, $\mathcal{F}\rightarrow \mathcal{G}$ factors uniquely throug $\mathcal{F}\rightarrow \mathcal{F}^\#\rightarrow \mathcal{G}$ is a morphism of $\mathcal{O}^\#$-modules.
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+					\begin{corollary}
+						Formula
+						\begin{gather*}
+							Mor_{PMod(\mathcal{O})}(\mathcal{F},i\mathcal{G})=Mor_{Mod(\mathcal{O})}(\mathcal{F}^\#,\mathcal{G})
+						\end{gather*}
+					\end{corollary}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{Def}
+						Define:
+						\begin{itemize}
+							\item Let $\mathcal{F}$ be a sheaf of $\mathcal{O}_2$-module, with module homomorphism
+							\begin{gather*}
+								\rho:\mathcal{O}_1\rightarrow \mathcal{O}_2
+							\end{gather*}
+							Then: $\mathcal{F}$ has a $\mathcal{O}_1$-module structrue, with
+							\begin{gather*}
+								\mathcal{O}_1\times \mathcal{F}\rightarrow \mathcal{F}\qquad (s,t)\mapsto \rho(U)(s)\cdot t
+							\end{gather*}
+							Define the following module as $\mathcal{F}_{\mathcal{O}_1}$.
+							\item Tensor Product: For $\mathcal{O}_1\rightarrow \mathcal{O}_2$, define
+							\begin{gather*}
+								\mathcal{O}_2\otimes_{\mathcal{O}_1} \mathcal{F}:=(\mathcal{O}_2(U)\otimes_{\mathcal{O}_1(U)} \mathcal{F}(U))^\#
+							\end{gather*}
+						\end{itemize}
+					\end{Def}
+					
+					
+					\begin{lemma}
+						(Adjointness of Modules) With $X,\mathcal{O}_1,\mathcal{O}_2$ and $\mathcal{F},\mathcal{G}$ as above there exists a canonical bijection
+						\begin{gather*}
+							Hom_{\mathcal{O}_1}(\mathcal{G},\mathcal{F}_{\mathcal{O}_1})=Hom_{\mathcal{O}_2}(\mathcal{O}_2\otimes_{\mathcal{O}_1} \mathcal{G},\mathcal{F})
+						\end{gather*}
+						In other words, the restriction and change of rings are adjoint to each other.
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+					\begin{corollary}
+						Let $X$ be a topological space, $\mathcal{O}\rightarrow \mathcal{O}'$ be a morphism of sheaves of ringss on $X$, $\mathcal{F}$ be a sheaf of $\mathcal{O}$-module. We have
+						\begin{gather*}
+							\mathcal{F}_x\otimes_{\mathcal{O}_x} \mathcal{O}_x'=(\mathcal{F}\otimes_\mathcal{O} \mathcal{O}')_x
+						\end{gather*}
+					\end{corollary}
+					\begin{proof}
+						内容...
+					\end{proof}
+			\subsection{Limits and Colimits}
+			
+				\subsubsection{Presheaves}
+					\begin{lemma}
+						Let $X$ be a topological space, $\mathcal{I}\rightarrow Psh(X),i\mapsto \mathcal{F}_i$ be a diagram:
+						\begin{itemize}
+							\item Both $\lim_i \mathcal{F}_i$ and $colim_i \mathcal{F}_i$ exists;
+							\item For any $U\subseteq X$ open we have
+							\begin{gather*}
+								\begin{cases}
+									\lim_i \mathcal{F}_i(U)=(\lim \mathcal{F}_i)(U)\\
+									colim_i\mathcal{F}_i (U)=(colim_i \mathcal{F}_i)(U)
+								\end{cases}
+							\end{gather*}
+							\item Let $x\in X$ be point, then in general
+							\begin{gather*}
+								(\lim_i \mathcal{F}_i)_x\not= \lim_i (\mathcal{F}_i)_x
+							\end{gather*}
+							
+							If index category $\mathcal{I}$ is finite, then equal.
+							\item Let $x\in X$, we always have
+							\begin{gather*}
+								(colim_i \mathcal{F}_i)_x=colim_i \mathcal{F}_{i,x}
+							\end{gather*}
+						\end{itemize}
+					\end{lemma}
+					\begin{proof}
+						\begin{itemize}
+							\item 
+							\item 
+							\item 
+							\item 
+						\end{itemize}
+					\end{proof}
+				\subsubsection{Sheaves}
+				\begin{lemma}
+					Let $X$ be a topological space, $\mathcal{I}\rightarrow Psh(X),i\mapsto \mathcal{F}_i$ be a diagram:
+					
+					\begin{itemize}
+						\item $\lim_{i} \mathcal{F}_i$ and $colim_{i} \mathcal{F}_i$ exist;
+						\item For any open $U\subseteq X$, we have
+						
+						\begin{gather*}
+							(lim_{i}\mathcal{F}_i)(U)=lim(\mathcal{F}_i(U))\\
+							colim_i\mathcal{F}_i=(U\mapsto colim_i \mathcal{F}_i(U))^\#
+						\end{gather*}
+						\item Let $x\in X$ be a point. In general the stalk of $lim_i\mathcal F_i$ at $x$ is not equal to the limit of stalks.
+						
+						But: If the index category is finite, then the two operations commute.
+						\item Let $x\in X$, we always have
+						
+						\begin{gather*}
+							(colim_i \mathcal{F}_i)_x=colim_i \mathcal{F}_{i,x}
+						\end{gather*}
+						\item Sheafification $(-)^\#:PSh(X)\rightarrow Sh(X)$ commutes with all colimites, finite limits. But it does not commute with all limits.
+					\end{itemize}
+				\end{lemma}
+				\begin{proof}
+					\begin{itemize}
+						\item 
+						\item 
+						\item 
+						\item 
+						\item 
+						\item 
+					\end{itemize}
+				\end{proof}
+				
+				\begin{lemma}
+					Let $X$ be a topological space, $I$ be a direceted set. Let $(\mathcal{F}_i,\varphi_{ii'})$ be a system of sheaves of sets over $I$. lET $U\subseteq X$ be an open subset. Consider the canonical map
+					\begin{gather*}
+						\Psi:colim_i\mathcal{F}_i(U)\rightarrow (colim_i\mathcal{F}_i)(U)
+					\end{gather*}
+					\begin{itemize}
+						\item 
+						\item 
+						\item 
+						\item 
+					\end{itemize}
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{example}
+					内容...
+				\end{example}
+		\section{Morphisms}
+		
+			\begin{Def}
+				\begin{itemize}
+					\item A morphsim of presheaves is a family of mapping $\varphi(U):\mathcal{F}(U)\rightarrow \mathcal{G}(U)$ with: For $U\subseteq V$,
+					\begin{center}
+						\begin{tikzcd}
+							\mathcal{F}(U)\arrow[r,"\varphi(U)"]\arrow[d]&\mathcal{G}(U)\arrow[d]\\
+							\mathcal{F}(V)\arrow[r,"\varphi(V)"]&\mathcal{G}(V)
+						\end{tikzcd}
+					\end{center}
+					\item The morphism of sheaves is the morphism of presheaves.
+					
+					\item (Restrictions) Let $\varphi:\mathcal{F}\rightarrow \mathcal{G}$ be a morphisms in $Psh(X)$. Then, the \textbf{restriction} on $U\subseteq X$ is defined as:
+					\begin{gather*}
+						\varphi|U(V):\mathcal{F}(U\cap V)\rightarrow \mathcal{G}(U\cap V)\qquad s\mapsto \varphi(U\cap V)(s) 
+					\end{gather*}
+				\end{itemize}
+			\end{Def}
+			\begin{lemma}
+				内容...
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Continuous Maps and Sheaves}
+			
+				
+				Let $f:X\rightarrow Y$ be a continuous map of topological spaces. We define the \textbf{pushforward} and \textbf{pullback} functors for presheaves and sheaves.
+				\subsubsection{Pushforward}
+				
+				\begin{Def}
+				
+				Let $\mathcal{F}$ be a presheaf of sets on $X$. Define the \textbf{pushforward}
+				
+				\begin{gather*}
+					f_*\mathcal{F}(V)=\mathcal{F}(f^{-1}(V))
+				\end{gather*}
+				
+				for open $V\subseteq Y$. With following restriction maps: For $V_1\subseteq V_2\subseteq Y$,
+				
+				\begin{center}
+					\begin{tikzcd}
+						f_*\mathcal{F}(V_2)\arrow[r,"="]\arrow[d]&\mathcal{F}(f^{-1}(V_2))\arrow[d,"restriction for \mathcal{F}"]\\
+						f_*\mathcal{F}(V_1)\arrow[r,"="]&\mathcal{F}(f^{-1}(V_1))
+					\end{tikzcd}
+				\end{center}
+				
+				This gives rise to a functor
+				
+				\begin{gather*}
+					内容...
+				\end{gather*}
+				
+				\end{Def}
+				
+				\begin{lemma}
+					Let $f:X\rightarrow Y$ be a continuous map, $\mathcal{F}$ be a sheaf of sets on $X$. Then $f_*\mathcal{F}$ is a sheaf on $Y$.
+				\end{lemma}
+				
+				\begin{proof}
+					\begin{itemize}
+						\item Identity: For $U=\cup U_i,s=0\in f_*\mathcal{F}(U_i)\Leftrightarrow s=0\in \mathcal{F}(f^{-1}(U_i))\Leftrightarrow s=0$
+						\item Pasting: $U=\cup U_i,s_i|U_i=s_j|U_j\Leftrightarrow s_i|f^{-1}(U_i)=s_i|f^{-1}(U_j)\Rightarrow $Exists $s\in f^{-1}(U),s|f^{-1}(U_i)=s_i$.
+					\end{itemize}
+				\end{proof}
+				
+				\begin{corollary}
+					The functor $f_*:PSh(X)\rightarrow PSh(Y)$ has a restriction on $Sh(X)$
+					
+					\begin{gather*}
+						f_*:Sh(X)\rightarrow Sh(Y)
+					\end{gather*}
+				\end{corollary}
+				
+				\begin{proof}
+					Apply the decomposition $V=\cup V_j\subseteq Y\Rightarrow f^{-1}(V)=\cup f^{-1}(V_j)\subseteq X$ on identity lemma and pasting lemma.
+				\end{proof}
+				\begin{lemma}
+					Let $f:X\rightarrow Y$ and $Y\rightarrow Z$ be continuous maps of topological spaces. The functors
+					
+					\begin{gather*}
+						(g\circ f)_*=g_*\circ f_*
+					\end{gather*}
+					
+					are equal.
+				\end{lemma}
+				
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{Def}
+					Via Yoneda's lemma, define left adjoint of the pushforward
+					\begin{gather*}
+						Mor_{Psh(X)}(f_p \mathcal{G},\mathcal{F})=Mor_{Psh(Y)}(\mathcal{G},f_*\mathcal{F})
+					\end{gather*} 
+					is uniquely determined.
+				\end{Def}
+				
+				Existence/Consstruction:
+				\begin{lemma}
+					Let $f:X\rightarrow Y$ be a continuous map. There exists a functor
+					\begin{gather}
+						f_p:Psh(Y)\rightarrow Psh(X)
+					\end{gather}
+					which is left adjoint to $f_*$. For a presheaf $\mathcal{G}$ it is determined by the rule
+					\begin{gather*}
+						f_p\mathcal{G}(U)=colim_{f(U)\subseteq V} \mathcal{G}(V)
+					\end{gather*}
+				\end{lemma}
+				\begin{proof}
+					$f_p\mathcal{G}$ is a presheaf. 
+					\begin{itemize}
+						\item Objects: Given by set-theoretic colimit;
+						\item Restriction Maps: Now suppose $U_1\subseteq U_2$, then 
+						\begin{gather*}
+							\{V|f(U_1)\subseteq V\}\supseteq \{V|f(U_2)\subseteq V\}
+						\end{gather*}
+						\item 	Colimit is functorial in $\mathcal{G}$，Thus $f_p$ is functorial. 
+						\item 	(Universal Property)A useful remark: Canonical map
+						\begin{gather*}
+							\mathcal{G}(U)\rightarrow f_p \mathcal{G}(f^{-1}(U))=colim_{f(f^{-1}(U))\subseteq V} \mathcal{G}(V)
+						\end{gather*}
+						
+						Because of $f(f^{-1}(U))\subseteq U$, $U$ is a member of system. Then select the open subsets(subsystem) contained in $U$.(The collections are directed) 
+						\begin{center}{\small
+								\begin{tikzcd}
+									&\mathcal{G}(U)\arrow[ld]\arrow[rd]\\
+									\mathcal{G}(V_1)\arrow[rr]\arrow[rd]&&\mathcal{G}(V_2)\arrow[ld]\\
+									&colim_{f(f^{-1}(U))\subseteq V}\mathcal{G}(V)
+							\end{tikzcd}}
+						\end{center}
+						And then, there exists canonical map $i_\mathcal{G}:\mathcal{G}\rightarrow f_*f_p\mathcal{G}$.
+						
+						Now: Suppose $\psi:f_p\mathcal{F}\rightarrow \mathcal{F}$ be a map of presheaves. Then the corresponding map
+						\begin{gather*}
+							f_*\psi\circ i_\mathcal{G}:\mathcal{G}\rightarrow f_*f_p\mathcal{G}\rightarrow f_*\mathcal{F}
+						\end{gather*}
+						
+						
+						Another remark is canonical map $c_\mathcal{F}:f_pf_*\mathcal{F}\rightarrow \mathcal{F}$. If $f(U)\subseteq V$ in $Y$ there exists a map($f(U)\subseteq V\Rightarrow U\subseteq f^{-1}(f(U))\subseteq f^{-1}(V)$)
+						\begin{gather*}
+							f_*\mathcal{F}(V)=\mathcal{F}(f^{-1}(V))\rightarrow \mathcal{F}(U)
+						\end{gather*}
+						
+						Now take the colimit
+						\begin{gather*}
+							f_pf_*\mathcal{F}(V)=colim_{f(U)\subseteq V} f_*\mathcal{F}(V)\rightarrow \mathcal{F}(U)
+						\end{gather*}
+						
+						Similarly, for $\varphi:\mathcal{G}\rightarrow f_*\mathcal{F}$, consider $f_p\varphi:f_p\mathcal{G}\rightarrow f_pf_*\mathcal{F}$. Then we desire the map
+						\begin{gather*}
+							c_\mathcal{F}\circ f_p\varphi:f_p\mathcal{G}\rightarrow \mathcal{F}
+						\end{gather*}
+						
+						Thus, we have
+						\begin{gather*}
+							Mor_{Sh(Y)}(\mathcal{G},f_*\mathcal{F})\cong Mor_{Sh(X)}(f_p\mathcal{G},\mathcal{F})
+						\end{gather*}
+					\end{itemize}
+				\end{proof}
+				
+				\begin{lemma}
+					Let $f:X\rightarrow Y$ be a continuous map. Let $x\in X,\mathcal{G}$ be a presheaf of sets on $Y$. There is a canonical bijection of stalks
+					\begin{gather*}
+						(f_p \mathcal{G})_x=\mathcal{G}_{f(x)}
+					\end{gather*}
+				\end{lemma}
+				\begin{proof}
+					\begin{gather*}
+						(f_p\mathcal{G})_x=colim_{x\in U} f_p \mathcal{G}(U)\\
+						\qquad=colim_{x\in U} colim_{f(U)\subseteq V} \mathcal{G}(V)\\
+						\qquad=colim_{f(x)\in V} \mathcal{G}(V)\\
+						\qquad=\mathcal{G}_{f(x)}
+					\end{gather*}
+				\end{proof}
+				
+				\begin{Def}
+					Let $\mathcal{G}$ be a sheaf of sets on $Y$. The \textbf{pullback sheaf} $f^{-1}\mathcal{G}$ is  
+					
+					\begin{gather*}
+						f^{-1}\mathcal{G}:=(f_p\mathcal{G})^\#
+					\end{gather*}
+				\end{Def}
+				
+				\begin{lemma}
+					In the category of sheaves,
+					\begin{gather*}
+						Mor_{Sh(X)}(f^{-1}\mathcal{G},\mathcal{F})=Mor_{Sh(Y)}(\mathcal{G},f_*\mathcal{F})
+					\end{gather*}
+				\end{lemma}
+				\begin{proof}
+					We have:
+					\begin{gather*}
+						Mor_{Sh(X)}(f^{-1}\mathcal{G},\mathcal{F})=Mor_{Psh(X)}(f_p\mathcal{G},\mathcal{F})\\
+						=Mor_{Psh(Y)}(\mathcal{G},f_*\mathcal{F})\\
+						=Mor_{Sh(Y)}(\mathcal{G},f_*\mathcal{F})
+					\end{gather*}
+				\end{proof}
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\subsubsection{$f$-Map}
+					\begin{Def}
+						Let $f:X\rightarrow Y$ be a continuous map. Let $\mathcal{F}$ be a sheaf of sets on $X$ and let $\mathcal{G}$ be a sheaf of sets on $Y$. 
+						
+						An $f$-map $\xi:\mathcal{G}\rightarrow \mathcal{F}$ is a collection of maps
+						\begin{gather*}
+							\xi_V:\mathcal{G}(V)\rightarrow \mathcal{F}(f^{-1}V)
+						\end{gather*}
+						Indexed by open $V\subseteq Y$ such that: For $V'\subseteq V\subseteq Y$,
+						
+						\begin{center}
+							\begin{tikzcd}
+								\mathcal{G}(V)\arrow[r,"\xi_V"]\arrow[d]&\mathcal{F}(f^{-1}(V))\arrow[d]\\
+								\mathcal{G}(V')\arrow[r,"\xi_{V'}"]&\mathcal{F}(f^{-1}(V'))
+							\end{tikzcd}
+						\end{center}
+					\end{Def}
+					
+					\begin{lemma}
+						(The Bijection between $f$-Maps)\label{Sheaves-Sheaves-Equivalence-of-Morphsims-Induced-by-Continuous-Maps} Let $f:X\rightarrow Y$ be continuous map. There are bijection between the four sets:
+						\begin{itemize}
+							\item Set of Maps $\mathcal{G}\rightarrow f_*\mathcal{F}$;
+							\item Set of Maps $f^{-1}\mathcal{G}\rightarrow \mathcal{F}$;
+							\item Set of Maps $f$-maps $\xi:\mathcal{G}\rightarrow \mathcal{F}$;
+							\item Set of all collections of maps
+							\begin{gather*}
+								\xi_{U,V}:\mathcal{G}(V)\rightarrow \mathcal{F}(U);f(U)\subseteq X,V\subseteq Y,f(U)\subseteq V
+							\end{gather*}
+							and compatible with those restriction maps.
+						\end{itemize}
+						Functorially in $\mathcal{F}\in Sh(X),\mathcal{G}\in Sh(Y)$ 
+					\end{lemma}
+					\begin{proof}
+						\begin{itemize}
+							\item (1)$\Leftrightarrow$ (2) Ommited;
+							\item (1)$\Leftrightarrow$ (3) Now, the morphisms
+							\begin{gather*}
+								\mathcal{G}(U)\rightarrow \mathcal{F}(f^{-1}(V))
+							\end{gather*}
+							
+							It is actually the $f$-map.
+							\item (2)$\Leftrightarrow$ (4) $Hom(f^{-1}\mathcal{G},\mathcal{F})$ is correspondnet to a family of morphisms $\mathcal{G}(V)\rightarrow f_p\mathcal{G}(V)\rightarrow \mathcal{F}$ 
+							
+							Conversely, define the forgetting structure $\xi_V:=\xi_{f^{-1}(V),V}$.
+						\end{itemize}
+					\end{proof}
+					
+					\begin{Def}
+						(Composition) Suppose $f:X\rightarrow Y,g:Y\rightarrow Z$ be continuous maps of topological spaces. And $\varphi:\mathcal{G}\rightarrow \mathcal{F}$ is $f$-map and $\psi:\mathcal{H}\rightarrow \mathcal{G}$ is $g$-map. The \textbf{composition} of $\varphi,\psi$ is the $(g\circ f)$-map $\varphi\circ\psi$ defined by the commutativity
+						\begin{center}
+							\begin{tikzcd}
+								\mathcal{H}(W)\arrow[rr]\arrow[rd]&&\mathcal{F}(f^{-1}g^{-1}W)\arrow[ld]\\
+								&\mathcal{G}(g^{-1}W)
+							\end{tikzcd}
+						\end{center}
+					\end{Def}
+					
+					\begin{lemma}
+						Suppose $f:X\rightarrow Y,g:Y\rightarrow Z$ be continuous map of topological spaces. Suppose $\mathcal{F}$ is a sheaf on $X$,$\mathcal{G}$ is a sheaf on $Y$, $\mathcal{H}$ is a sheaf on $Z$.
+						
+						Let $\varphi:\mathcal{G}\rightarrow \mathcal{F}$ be an $f$ map and $\psi:\mathcal{H}\rightarrow \mathcal{G}$ be an $g$ map. Let $x\in X$ be a point. Then, the map on stalk $(\varphi\circ \psi)_x:\mathcal{H}_{g(f(x))}\rightarrow \mathcal{F}_x$ is the composition
+						
+						\begin{gather*}
+							\mathcal{H}_{g(f(x))}\rightarrow \mathcal{G}_{f(x)}\rightarrow \mathcal{F}_x
+						\end{gather*}
+\					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+				
+				\subsubsection{Continuous Maps and Abelian Sheaves}
+				
+				We have following functors:
+				
+				\begin{itemize}
+					\item $f_*:PAb(X)\rightarrow PAb(Y)$;
+					\item  $f_*:Ab(X)\rightarrow Ab(Y)$;
+					\item $f_p:PAb(Y)\rightarrow PAb(X)$;
+					\item $f^{-1}:Ab(Y)\rightarrow Ab(X)$;
+				\end{itemize}
+				
+				\subsubsection{Continuous Maps and Sheaves of Algebraic Structures}
+				
+				\subsubsection{Continuous Maps and Sheaves of Modules}
+			\subsection{Open Immersions and (Pre)sheaves}
+			
+				\textbf{Review} Let
+				
+				\begin{gather*}
+					j:U\rightarrow X
+				\end{gather*}
+				
+				be the inclusion of an open subset $U$ into $X$. We have defined the following functors on sheaves
+				
+				\begin{gather*}
+					j_*:Sh(U)\rightarrow Sh(X)\qquad j^{-1}:Sh(X)\rightarrow Sh(U)
+				\end{gather*}
+				
+				which are adjointed.
+				
+				\begin{lemma}
+					Let $X$ be a topological space, $j:U\rightarrow X$ be the inclusion of an open subset $U$ of $X$:
+					
+					\begin{itemize}
+						\item 
+						\item 
+						\item 
+						\item 
+						\item 
+					\end{itemize}
+				\end{lemma}
+				
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{Def}
+					\begin{itemize}
+						\item 
+						\item 
+						\item 
+						\item 
+					\end{itemize}
+				\end{Def}
+			
+			\subsection{Closed Immersions and (Pre)sheaves}
+			
+				\textbf{Review} Let $i:Z\rightarrow X$ be the inclusion. Then we have defined the adjointed functors
+				
+				\begin{gather*}
+					i_*:Sh(Z)\rightarrow Sh(X)\qquad i^{-1}:Sh(X)\rightarrow Sh(Z)
+				\end{gather*}
+				
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				
+				\begin{proof}
+					内容...
+				\end{proof}
+		\section{Ringed Spaces and Modules}
+		
+			\begin{Def}
+				\label{Sheaves-Sheaves-Ringed-Spaces}
+				\begin{itemize}
+					\item  A \textbf{ringed space} is a pair $(X,\mathcal{O}_X)$ consistsing:
+					
+					\begin{itemize}
+						\item A topological space $X$;
+						\item The sheaf of rings $\mathcal{O}_X$;
+					\end{itemize}
+					\item A morphism of ringed spaces $
+					(f,f^\#):(X,\mathcal{O}_X)\rightarrow (Y,\mathcal{O}_Y)$;
+					
+					
+					\item Composition: $(g,g^\#)\circ (f,f^\#)=(g\circ f,f^\#\circ g^\#)$;
+					
+				\end{itemize}
+			\end{Def}
+			
+			\subsection{Morphisms of Ringed Spaces and Modules}
+			
+				\begin{Def}
+					Let $(f,f^\#):(X,\mathcal{O}_X)\rightarrow (Y,\mathcal{O}_Y)$ be a morphism of ringed spaces:
+					
+					\begin{itemize}
+						\item 
+						
+						\item 
+					\end{itemize}
+				\end{Def}
+				
+				\begin{lemma}
+					Let 
+				\end{lemma}
+				
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{lemma}
+					Let $(f,f^\#):(X,\mathcal{O}_X)\rightarrow (Y,\mathcal{O}_Y)$ be a morphism of ringed spaces. Let $\mathcal{G}$ be a sheaf of $\mathcal{O}_X$-modules, $x\in X$, we have
+					
+					\begin{gather*}
+						(f_*\mathcal{G})_x=\mathcal{G}_{f(x)}\otimes_{\mathcal{O}_{Y,f(x)}} \mathcal{O}_{X,x}
+					\end{gather*}
+				\end{lemma}
+				
+				\begin{proof}
+					内容...
+				\end{proof}
+		\section{Constructions}
+			\subsection{Skycraper Sheaves and Stalks}
+				\begin{Def}
+					\begin{itemize}
+						\item Let $x\in X$ be a point. Denote
+						\begin{gather*}
+							i_x:\{x\}\rightarrow X
+						\end{gather*}
+						The inclusion map. Let $A$ be a set, and think of $A$ as a sheaf on one-point space $\{x\}$. We call $i_{x,*}A$ the \textbf{skycraper sheaf} at $x$ with value $A$: 
+						\begin{gather*}
+							A(x):=A\\
+							\Rightarrow i_{x,*}A(U):=A(i^{-1}(U)),U\subseteq X
+						\end{gather*}
+						\item If $A$ is an abelian group, then we think of $i_{x*} A$ as a sheaf of abelian groups on $X$;
+						\item If $A$ is an algebraic structure, then we think of $i_{x,*}A$ as a sheaf of algebraic structures.
+						\item If $(X,\mathcal{O}_X)$ is a ringed space, then we think of
+						\begin{gather*}
+							i_x:\{x\}\rightarrow X
+						\end{gather*}
+						as a morphism of ringed spaces
+						\begin{gather*}
+							(\{x\},\mathcal{O}_{X,x})\rightarrow (X,\mathcal{O}_X)
+						\end{gather*}
+						and: If $A$ is a $\mathcal{O}_{X,x}$-module, then we think of $i_{x,*}A$ as a sheaf of $\mathcal{O}_{X}$-module.
+						\item We say a sheaf of sets $\mathcal{F}$ is a \textbf{skycraper sheaf} if there exists a point $x\in X$ and a set such that
+						\begin{gather*}
+							\mathcal{F}\cong i_{x,*}A
+						\end{gather*}
+						Similarly for:
+						\begin{itemize}
+							\item Abelian group;
+							\item Algebraic Structures;
+							\item Modules;
+						\end{itemize}
+					\end{itemize}
+				\end{Def}
+				\begin{lemma}
+					Let $X$ be a topological space, $x\in X$ a point, $A$ a set.
+					
+					For any point $x'\in X$ the stalk of the skyscraper sheaf st $x$ with value $A$ at $x'$ is:
+					\begin{gather*}
+						(i_{x,,*}A)_{x'}=\begin{cases}
+							A&x'\in \bar{\{x\}}\\
+							\{*\}&x'\notin \bar{\{x\}}
+						\end{cases}
+					\end{gather*}
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\begin{lemma}
+					Let $X$ be a topological space, and let $x\in X$ a point. The functors
+					\begin{gather*}
+						\mathcal{F}\mapsto\mathcal{F}_x\qquad A\mapsto i_{x,*}A
+					\end{gather*}
+					are adjoint.In formula
+					\begin{gather*}
+						Mor_{Sets}(\mathcal{F}_x,A)=Mor_{Sh(X)}(\mathcal{F},i_{x,*}(A))
+					\end{gather*}
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Bases and Sheaves}
+			
+				\subsubsection{Presheaves}
+			
+				\begin{Def}
+					Let $X$ be a topological space, $\mathcal{B}$ be a basis for the topology on $X$:
+					
+					\begin{itemize}
+						\item A presheaf $\mathcal{F}$ of sets on $\mathcal{B}$ is a rule which assigns to each $U\in \mathcal{B}$ a set $\mathcal{F}(U)$ and to each inclusion $V\subseteq U$ of elements in $\mathcal{B}$, and $U\in \mathcal{B}$, map
+						\begin{gather*}
+							\rho_V^U:\mathcal{F}(U)\rightarrow \mathcal{F}(V)\qquad \rho^U_U=id_{\mathcal{F}(U)}
+						\end{gather*}
+						And for $U\subseteq V\subseteq W$, we have
+						\begin{gather*}
+							\rho_W^U=\rho_V^U\circ \rho_W^V
+						\end{gather*}
+						\item A morphism $\varphi:\mathcal{F}\rightarrow \mathcal{G}$ of presheaves of sets on $\mathcal{B}$ is a rule which assigns to each element $U\in \mathcal{B}$ a map of sets
+						\begin{gather*}
+							\varphi:\mathcal{F}(U)\rightarrow \mathcal{G}(U)
+						\end{gather*}
+						compatible with restriction maps.
+					\end{itemize}
+				\end{Def}
+				With the definition above, for the sheaf on $\mathcal{B}$ we have
+				\begin{gather*}
+					\mathcal{F}_x=colim_{U\in \mathcal{B},x\in U} \mathcal{F}(U)
+				\end{gather*}
+				The limit is directed. Because of the neighborhoods around $x$ is a directed system.
+				
+				\subsubsection{Sheaves}
+				\begin{Def}
+					Let $X$ be a topological space, $\mathcal{B}$ be a basis for the topology on $X$:
+					\begin{itemize}
+						\item A \textbf{sheaf of sets} on $\mathcal{B}$ is a presheaf of sets on $\mathcal{B}$ which satisfies the following additional property: Given any $U\in \mathcal{B}$, and any covering $U=\cup_i U_i$, with $U_i\in \mathcal{B}$, and any coverings $U_i\cap U_j=\cup_{k\in I_{ij}}$, and the \underline{sheaf condition}: 
+						
+						For any collection of sections $s_i\in \mathcal{F}(U_i),i\in I$ such that $\forall i,j\in I,\forall k\in I_{ij}$,
+						\begin{gather*}
+							s_i|U_{ijk}=s_j|U_{ijk}
+						\end{gather*}
+						Then, there exists a unique section $s\in \mathcal{F}(U)$ such that
+						\begin{gather*}
+							s_i=s|U_i,i\in I
+						\end{gather*}
+						\item A morphism of sheaves of sets on $\mathcal{B}$ is simply a morphism of presheaves of sets.
+					\end{itemize}
+				\end{Def}
+				\textbf{Remark}
+				\subsubsection{Extension of Sheaf}
+				\begin{lemma}
+					Let $X$ be a topological space,$\mathcal{B}$ be a basis for the topology on $X$.
+					
+					Let $\mathcal{F}$ be a sheaf of sets on $\mathcal{B}$. There exists a unique sheaf of sets $\mathcal{F}^{ext}$ on $X$ such that
+					\begin{gather*}
+						\mathcal{F}^{ext}(U)=\mathcal{F}(U);U\in \mathcal{B}
+					\end{gather*}
+					and compactibly with the restriction mappings.
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{corollary}
+					Let $X$ be a topological space, $\mathcal{B}$ a basis for the topology on $\mathcal{B}$. Denote $Sh(\mathcal{B})$ for te category of sheaves on $\mathcal{B}$, there is an equivalence of categories:
+					\begin{gather*}
+						Sh(X)\rightarrow Sh(\mathcal{B})
+					\end{gather*}
+					which assigns to a sheaf on $X$ its restriction to the members of $\mathcal{B}$.
+				\end{corollary}
+				\begin{proof}
+					Omitted.
+				\end{proof}
+				\subsubsection{Algebraic Structure}
+				\begin{Def}
+					Let $X$ be a topological space, $\mathcal{B}$ be a basis for the topology on $X$. Let $(\mathcal{C},F)$ be a type of algebraic structure:
+					\begin{itemize}
+						\item A \textbf{preseheaf} $\mathcal{F}$ with values in $\mathcal{C}$ on $\mathcal{B}$ is a rule which assign to each $U\in \mathcal{B}$ an object $\mathcal{F}(U)$ of $\mathcal{C}$ and to each inclusion $V\subseteq U$ of elements of $\mathcal{B}$, a morphism
+						\begin{gather*}
+							\rho^U_V:\mathcal{F}(U)\rightarrow \mathcal{F}(V)
+						\end{gather*}
+						in $\mathcal{C}$ with $\rho^U_U:=id_\mathcal{F}(U)$ for all $U\in \mathcal{B}$.
+						
+						Whenever $W\subseteq V\subseteq U$ in $\mathcal{B}$ we have $\rho^U_W=\rho^V_W\circ \rho^U_V$.
+						\item A morphism $\varphi:\mathcal{F}\rightarrow \mathcal{G}$ of presheaves with values in $\mathcal{C}$ on $\mathcal{B}$ is a rule which assigns to each element $U\in \mathcal{B}$ a morphism of algebraic strucutres
+						\begin{gather*}
+							内容...
+						\end{gather*}
+						\item Given a presheaf $\mathcal{F}$ with values in $\mathcal{C}$ on $\mathcal{B}$, we say that 
+						\begin{gather*}
+							U\mapsto F(\mathcal{F}(U))
+						\end{gather*}
+						is the underlying presheaf of sets;
+						\item A \textbf{sheaf} $\mathcal{F}$ with values in $\mathcal{C}$ on $\mathcal{B}$ is a presheaf with values in $\mathcal{C}$ on $\mathcal{B}$ whose underlying presheaf of sets is a sheaf.
+					\end{itemize}
+				\end{Def}
+				
+				\begin{lemma}
+					Let $X$ be a topological space, $(\mathcal{C},F)$ be a type of algebraic structure.
+					
+					Let $\mathcal{B}$ be a basis for the topology on $X$, let $\mathcal{F}$ be a sheaf with values in $\mathcal{C}$ on $\mathcal{B}$. There exists a unique sheaf
+					\begin{gather*}
+						\mathcal{F}^{ext}
+					\end{gather*}
+					wit values in $\mathcal{C}$ on $X$ such that
+					\begin{gather*}
+						\mathcal{F}^{ext}(U)=\mathcal{F}(U);U\in \mathcal{B}
+					\end{gather*}
+					compatibly with the restriction mappings.
+				\end{lemma}
+				\begin{proof}
+					\begin{gather*}
+						\mathcal{F}^{ext}(U):=colim_\mathcal{U} 
+					\end{gather*}
+				\end{proof}
+				
+				\begin{lemma}
+					Let $X$ be a topological space, $\mathcal{B}$ be a basis for the topology on $X$.
+					
+					Let $(\mathcal{C},F)$ be a type of algebraic structure, denote $Sh(\mathcal{B},\mathcal{C})$ the category of sheaves with values in $\mathcal{C}$ on $\mathcal{B}$, there is an equivalence of categories:
+					\begin{gather*}
+						内容...
+					\end{gather*}
+					which assigns to a sheaf on $X$ its restriction to the member of $\mathcal{B}$.
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\subsubsection{Presheaf of Modules on Bases}
+					\begin{Def}
+						Let $X$ be a topological space, $\mathcal{B}$ a basi for the topology on $X$, $\mathcal{O}$ a presheaf of rings on $\mathcal{B}$:
+						\begin{itemize}
+							\item A \textbf{presheaf} of $\mathcal{O}$-modules $\mathcal{F}$ on $\mathcal{B}$ is a presheaf of abelian groups on $\mathcal{B}$, together with a morphism of presheaves of sets
+							\begin{gather*}
+								\mathcal{O}\times \mathcal{F}\rightarrow \mathcal{F}
+							\end{gather*}
+							Such that: $\mathcal{O}(U)\times \mathcal{F}(U)\rightarrow \mathcal{F}(U)$ turns the group into $\mathcal{O}(U)$-module;
+							\item A morphism $\varphi:\mathcal{F}\rightarrow \mathcal{G}$ of presheaves of $\mathcal{O}$-modules on $\mathcal{B}$ is a morphism of abelian presheaves on $\mathcal{B}$ which induces an $\mathcal{O}(U)$-module homomorphism
+							\begin{gather*}
+								\mathcal{F}(U)\rightarrow \mathcal{G}(U)
+							\end{gather*}
+							\item Suppose thaat $\mathcal{O}$ is a sheaf of rings on $\mathcal{B}$. A \textbf{sheaf} $\mathcal{F}$ of $\mathcal{O}$-modules on $\mathcal{B}$ is a presheaf of $\mathcal{O}$-modules on $\mathcal{B}$, whose underlying presheaf of abelian groups is a sheaf.
+						\end{itemize}
+						Then, define the stalk:
+						\begin{itemize}
+							\item \begin{gather*}
+								\mathcal{F}_x:=colim_{x\in U\in \mathcal{B}} \mathcal{F}(U)
+							\end{gather*}
+							It is a $\mathcal{O}_x$-module.
+						\end{itemize}
+					\end{Def}
+					
+					\begin{lemma}
+						(Extension of Sheaf on Bases) Let $X$ be a topological space, with basis $\mathcal{B}$. Let $\mathcal{O}$ a sheaf of rings on $\mathcal{B}$.
+						
+						Let $\mathcal{F}$ be a sheaf of $\mathcal{O}$-modules on $\mathcal{B}$, $\mathcal{O}^{ext}$ be the sheaf of rings on $X$ extending $\mathcal{O}$ and let $\mathcal{F}^{ext}$ be the abelian sheaf on $X$ extending $\mathcal{F}$. Therer exists a canonical map
+						\begin{gather*}
+							\mathcal{O}^{ext}\times \mathcal{F}^{ext}\rightarrow \mathcal{F}^{ext}
+						\end{gather*}
+						which agrees with the given map over elements of $\mathcal{B}$, which endows $\mathcal{F}^{ext}$ with the structure of an $\mathcal{O}^{ext}$-module. 
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{corollary}
+						Let 
+					\end{corollary}
+					\begin{proof}
+						内容...
+					\end{proof}
+				\subsubsection{Sheaf under Continuous Map}
+			\subsection{Gluing Sheaves}
+			
+				\begin{lemma}
+					(Pasting of Morphisms) \label{Sheaves-Pasting-of-Morphisms-between-Sheaves} Let $X$ be a topological space and $X=\cup U_i$ be an open covering, and $\mathcal{F},\mathcal{G}$ are sheaves of sets on $X$. Given a collection of morphisms
+					\begin{gather*}
+						\varphi_i:\mathcal{F}|U_i\rightarrow \mathcal{G}|U_i
+					\end{gather*}
+					with $\varphi_i|U_i\cap U_j=\varphi_j|U_i\cap U_j$, then there exists a unique map of sheaves
+					\begin{gather*}
+						\varphi:\mathcal{F}\rightarrow \mathcal{G}\qquad \varphi|U_i=\varphi_i
+					\end{gather*}
+				\end{lemma}
+				
+				\begin{proof}
+					Define:
+					\begin{gather*}
+						\varphi(U):\mathcal{F}(U)\rightarrow \mathcal{G}(U)\qquad s\mapsto \varphi(U)(s) 
+					\end{gather*}
+					where $\varphi(U)(s)$ is determined by $(\varphi(U\cap U_i)(s|U\cap U_i))$.
+					\begin{gather*}
+						\varphi(U)(s)|U\cap U_i=\varphi_i(U\cap U_i)(s|U\cap U_i)
+					\end{gather*}
+					We should verify the condition for pasting axiom. 
+					\begin{gather*}
+						\varphi_i(U\cap U_i)(s|U\cap U_i)|U_i\cap U_j=\varphi_i(U\cap U_i\cap U_j)(s|U_i\cap U_j)\\
+						=\varphi_j(U\cap U_i\cap U_j)(s|U_i\cap U_j)\\
+						=\varphi_j(U\cap U_j)(s|U\cap U_j)|U_i\cap U_j
+					\end{gather*}
+					And $\varphi$ is a sheaf map: Let $U\subseteq V\subseteq X$, 
+					\begin{gather*}
+						(\varphi(U)(s))|V=\varphi_V(s|V)
+					\end{gather*}
+					Because of :
+					\begin{gather*}
+						内容...
+					\end{gather*}
+				\end{proof}
+				\begin{lemma}
+					(Pasting of Sheaf)Let $X$ be a topological space. 
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{lemma}
+					(Pasting of Sheaf of Abelian Groups)
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{lemma}
+					(Pasting of Sheaf of Algebraic Structures)
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{lemma}
+					(Pasting of Sheaf of Modules)
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+		
+	\chapter{Sheaves of Modules}
+	
+		\section{Fundamentals}
+		\subsection{Sheaves of Modules}
+	
+		\subsubsection{Sheaves of Modules is an Abelian Category}
+		
+		\begin{Def}
+			Let $(X,\mathcal{O}_X)$ be a ringed space (\ref{Sheaves-Sheaves-Ringed-Spaces}); Let $\mathcal{F},\mathcal{G}$ be sheaves of $\mathcal{O}_X$-modules (\ref{Sheaves-Sheaves-Sheaves-of-Modules}). 
+			
+			\begin{itemize}
+				\item Let $\varphi,\psi:\mathcal{F}\rightarrow \mathcal{G}$ be $Mod(\mathcal{O}_X)$-morphisms. Then, define:
+				
+				\begin{gather*}
+					\varphi+\psi:\mathcal{F}\rightarrow \mathcal{G}\qquad (\varphi+\psi)(U)=\varphi(U)+\psi(U)
+				\end{gather*}
+				
+				It is clearly, that $(\varphi+\psi)$ is a morphism of sheaves of $\mathcal{O}_X$-modules. 
+				
+				
+				\item Let $f:\mathcal{F}\rightarrow \mathcal{G},g:\mathcal{G}\rightarrow \mathcal{H}$ are $\mathcal{O}_X$-module homomorphsims, then their composition
+				\begin{gather*}
+					g\circ f
+				\end{gather*}
+				is $\mathcal{O}_X$-module.
+				\item $Mor(Mod_{\mathcal{O}_X})$ has a bilinear form
+				\begin{gather*}
+					Mor(\mathcal{G},\mathcal{H})\times Mor(\mathcal{F},\mathcal{G})\rightarrow Mor(\mathcal{F},\mathcal{H})\\
+					(g,f)\mapsto g\circ f
+				\end{gather*} 
+			\end{itemize}
+		\end{Def}
+		\begin{itemize}
+			\item Final and Initial Object(Zero Object) of $Mod(\mathcal{O}_X)$ is $0:U\mapsto 0$. 
+			
+			\item \begin{lemma}
+				Let $\varphi:\mathcal{F}\rightarrow \mathcal{G}$ be the morphism of $\mathcal{O}_X$-modules. Then, the followings are equivalent:
+				\begin{itemize}
+					\item $\varphi$ is zero;
+					\item $\varphi$ factors through $0$;
+					\item $\varphi$ is zero on sections over each open $U$;
+					\item $\varphi_x=0,x\in X$.
+				\end{itemize}
+			\end{lemma}
+			\begin{proof}
+				Here: \ref{Sheaves-Sheaves-Exactness-at-Point}
+			\end{proof}
+			\item Finite Direct Sum, Finite Product
+			\begin{gather*}
+				\mathcal{F}\oplus \mathcal{G}=\mathcal{F}\times \mathcal{G}
+			\end{gather*}
+			Thus,
+			\begin{proposition}
+				 $Mod(\mathcal{O}_X)$ is an additive category
+			\end{proposition}
+			\begin{proof}
+				Omitted, with maps $(i,j,p,q)$.
+			\end{proof}
+		\end{itemize}
+		
+		\subsubsection{Kernel,Cokernel}
+		
+		\begin{Def}
+			\begin{itemize}
+				\item Let $\varphi:\mathcal{F}\rightarrow \mathcal{G}$ be a morphism of $\mathcal{O}_X$-modules. Then,
+				\begin{gather*}
+					Ker(\varphi)(U)=\{s\in \mathcal{F}(U)|\varphi(s)=0\in \mathcal{G}(U)\}
+				\end{gather*}
+				for all open $U\subseteq X$.
+				\item Define the cokernel: $\varphi:\mathcal{F}\rightarrow \mathcal{G}$ be $\mathcal{O}_X$-modules morphism.
+				\begin{gather*}
+					Coker(\varphi):=(U\mapsto \mathcal{G}(U)/\varphi(\mathcal{F}(U)))^\#
+				\end{gather*}
+			\end{itemize}
+		\end{Def}
+		They are categoricial kernel, cokernel, with decomposition
+		\begin{itemize}
+			\item $\varphi\circ\alpha=0\Leftrightarrow$ \begin{tikzcd}
+				Ker(\varphi)\arrow[r]&\mathcal{F}\arrow[r,"\varphi"]&\mathcal{G}\\
+				\mathcal{H}\arrow[ru,"\alpha"]\arrow[u,dashrightarrow]
+			\end{tikzcd}
+			\item $\beta\circ \varphi=0\Leftrightarrow$ \begin{tikzcd}
+				\mathcal{F}\arrow[r,"\varphi"]&\mathcal{G}\arrow[r]\arrow[rd,"\beta"]&Coker(\varphi)\arrow[d,dashrightarrow]\\
+				&&\mathcal{H}
+			\end{tikzcd}
+		\end{itemize}
+		
+		The cokernel is defined as $Coim(\varphi)=Coker(Ker\varphi\rightarrow \mathcal{F})$.
+		
+		\subsubsection{Exact Sequence}
+		
+			\begin{lemma}
+				Let $(X,\mathcal{O}_X)$ be a ringed space. The category $Mod(\mathcal{O}_X)$ is an abelian category.
+				
+				Moreover, a complex
+				\begin{center}
+					\begin{tikzcd}
+						\mathcal{F}\arrow[r]&\mathcal{G}\arrow[r]&\mathcal{H}
+					\end{tikzcd}
+				\end{center}
+				
+				is exact at $\mathcal{G}$ iff
+				\begin{center}
+					\begin{tikzcd}
+						\mathcal{F}_x\arrow[r]&\mathcal{G}_x\arrow[r]&\mathcal{H}_x
+					\end{tikzcd}
+				\end{center}
+				
+				is exact at $\mathcal{G}_x$.
+			\end{lemma}
+			
+			\begin{proof}
+				\begin{itemize}
+					\item Firstly, $Mod(\mathcal{O}_X)$ is additive. Thus there exists a morphism
+					\begin{gather*}
+						\alpha:Coim(f)\rightarrow Im(f)
+					\end{gather*}
+					With universal property 
+					\begin{center}
+						\begin{tikzcd}
+							\mathcal{F}\arrow[r]&Coim(f)\arrow[r,"\alpha"]&Im(f)\arrow[r]&\mathcal{G}
+						\end{tikzcd}
+					\end{center}
+					
+					With lemma:\ref{Sheaves-Sheaves-Exactness-at-Point}, the functor $(-)_x:Mod(\mathcal{O}_X)\rightarrow \mathcal{O}_{X,x}-Mod$ is exact. Thus
+					\begin{gather*}
+						(coim(f))_x=coim(f_x)\\
+						(Im(f))_x=im(f_x)
+					\end{gather*} $\alpha_x$ is an isomorphism, $\alpha$ is an isomrophism, thus is an abelian category.
+					\item Omitted.
+				\end{itemize}
+			\end{proof}
+		\subsubsection{Product,Sums,Limits,Colimits}
+		
+			\begin{Def}
+				\begin{itemize}
+					\item Given any set $I$ and for each $i\in I$ a $\mathcal{O}_X$-module we can form the product
+					
+					\begin{gather*}
+						\prod_{i\in I} F_i
+					\end{gather*}
+					
+					which is the sheaf that associates to each open $U$ the product of the modules $\mathcal{F}_i(U)$;
+					\item Given any set $I$ and for each $i\in I$ a $\mathcal{O}_X$-module we can form the direct sum
+					
+					\begin{gather*}
+						\oplus_{i\in I} F_i=(U\mapsto \oplus_{i\in I} \mathcal{F}_i(U))^+
+					\end{gather*}
+					
+					which is the categorical coproduct.
+				\end{itemize}
+			\end{Def}
+			
+			Using these we conclude that all limits and colimits exist in $Mod(\mathcal{O}_X)$.
+			
+			\begin{lemma}
+				Let $(X,\mathcal{O}_X)$ be a ringed space:
+				\begin{itemize}
+					\item All limits exist in $Mod(\mathcal{O}_X)$, same as corresponding limits of presheaves;
+					\item All colimits exist in $Mod(\mathcal{O}_X)$, which are sheafification of colimits of presheaves;
+					\item Filtered Limits are exact;
+					\item Finite direct sums are the same as corresponding finite direct sums of presheaves of $\mathcal{O}_X$-modules.
+				\end{itemize}
+			\end{lemma}
+			\begin{proof}
+				\begin{itemize}
+					\item 
+					\item 
+					\item 
+					\item 
+				\end{itemize}
+			\end{proof}
+			
+			\begin{lemma}
+				Let $f:(X,\mathcal{O}_X)\rightarrow (Y,\mathcal{O}_Y)$ be a morphism of ringed spaces:
+				\begin{itemize}
+					\item $f_*:Mod(\mathcal{O}_X)\rightarrow Mod(\mathcal{O}_Y)$ is left exact, commutes with all limits;
+					\item $f^*:Mod(\mathcal{O}_Y)\rightarrow Mod(\mathcal{O}_X)$ is right exact, commutes with all colimits;
+					\item Pullback $f^{-1}:Ab(Y)\rightarrow Ab(X)$ on abelian sheaves is exact.
+				\end{itemize}
+			\end{lemma}
+			\begin{proof}
+				\begin{itemize}
+					\item Notice that: $f_*$ and $f^*$ are adjoint pairs;
+					\item We could check this stalkwise.
+				\end{itemize}
+			\end{proof}
+			
+			\begin{lemma}
+				Let $j:U\rightarrow X$ be an open immersion of topological spaces. The functor $j_!:AB(U)\rightarrow Ab(X)$ is exact.
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{lemma}
+				Let $(X,\mathcal{O}_X)$ be a ringed space, $I$ be a set. For $i\in I$, let $\mathcal{F}_i$ be a sheaf of $\mathcal{O}_X$-modules. For quasi-compact open $U\subseteq X$, the map
+				\begin{gather*}
+					\oplus_{i\in I} \mathcal{F}_i(U)\rightarrow (\oplus \mathcal{F}_i)(U)
+				\end{gather*}
+				is bijective.
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+		
+		
+		\subsubsection{Sections}
+		
+			\begin{Def}
+				
+				Let $(X,\mathcal{O}_X)$ be a toplogical space. Let $\mathcal{F}$ be a sheaf of $\mathcal{O}_X$-modules. There is a \underline{unique map} of $\mathcal{O}_X$-modules
+				\begin{gather*}
+					\mathcal{O}_X\rightarrow \mathcal{F}\qquad f\mapsto fs
+				\end{gather*}
+				associated to $s$. 
+			\end{Def}
+			
+			The notation above signified that a local section $f$ of $\mathcal{O}_X$. i.e. $f\in \Gamma(U,\mathcal{O}_X)$, is mapped to the multiplication of $f$ with restriction of $s$ to $U$. 
+			\begin{gather*}
+				f\mapsto f\cdot s|U,
+			\end{gather*}
+			Conversely, any ($\mathcal{O}_X$-module) map $\varphi:\mathcal{O}_X\rightarrow \mathcal{F}$ gives rise to a section $s=\varphi(1)$ such that $\varphi$ is the morphsim associated to $s$.
+			
+			\begin{gather*}
+				\varphi:\mathcal{O}_X\rightarrow \mathcal{F}\qquad f\mapsto f\cdot s
+			\end{gather*}
+			
+			\begin{center}
+				$Hom_{\mathcal{O}_X}(\mathcal{O}_X,\mathcal{F})\Leftrightarrow s\in \Gamma(X,F)$ 
+			\end{center}
+			We could use a family of maps $\mathcal{O}_X\rightarrow \mathcal{F}$ to construct some of sheaf(sheaf generated by global secions)
+			
+		\subsubsection{Supports of Modules and Sections}
+			
+			\begin{Def}
+				Let $(X,\mathcal{O}_X)$ be a ringed space, let $\mathcal{F}$ be a sheaf of $\mathcal{O}_X$-modules:
+				
+				\begin{itemize}
+					\item The \textbf{support} of $\mathcal{F}$ is the set of points $x\in X$ such that $\mathcal{F}_x\not=0$
+					
+					\begin{gather*}
+						supp(\mathcal{F}):=\{x\in X|\mathcal{F}_x\not=0\}
+					\end{gather*}
+					\item Let $s\in \Gamma(X,F)$ be a global section. The \textbf{support} of $s$ is the set of points $x\in X$ such that $s_x\in \mathcal{F}_x$ of $s$ is not zero
+					
+					\begin{gather*}
+						supp(s):=\{x\in X|s_x\not=0\}
+					\end{gather*}
+				\end{itemize}
+				
+				\item Let $s\in \Gamma(U,F)$ be a local section. The \textbf{support} of $s$ is the set of points $x\in X$ such that $s_x\in \mathcal{F}_x$ of $s$ is not zero
+				
+				\begin{gather*}
+					supp(s)=\{x\in U|s_x\not=0\}
+				\end{gather*}
+			\end{Def}
+			
+			\begin{lemma}
+				Let $(X,\mathcal{O}_X)$ be a ringed space, and $\mathcal{F}$ be a sheaf of $\mathcal{O}_X$-modules, $U\subseteq X$ open
+				
+				\begin{itemize}
+					\item $supp(s)$ is closed in $U,s\in \Gamma(U,F)$;
+					\item $supp(fs)\subseteq supp(f)\cap supp(s)$;
+					\item $supp(s+s')\subseteq supp(s)\cup supp(s')$;
+					\item $supp(\mathcal{F})=\cup_{s\in \Gamma(U,\mathcal{F}),U\in Open(X)} supp(s)$;
+					\item If $\varphi:\mathcal{F}\rightarrow \mathcal{G}$ is a morphism of $\mathcal{O}_X$-modules, then
+					\begin{gather*}
+						supp(\varphi(s))\subseteq supp(s);s\in \mathcal{F}(U)
+					\end{gather*}
+				\end{itemize}
+			\end{lemma}
+			\begin{proof}
+				\begin{itemize}
+					\item Conversely, $X-supp(s)$ is open;
+					\item $X-supp(fs)\supseteq (X-supp(f))\cup (X-supp(s))$;
+					\item $X-supp(s+s')\supseteq (X-supp(s))\cap (X-supp(s'))$;
+					\item Omitted;
+					\item Omitted;
+				\end{itemize}
+			\end{proof}
+			\begin{lemma}
+				Let $X$ be a topological space. The support of a sheaf of rings is closed.
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{A Little Discussion: Quotient}
+			\begin{Def}
+				The \textbf{quotient} is defined as
+				\begin{gather*}
+					(U\mapsto \mathcal{F}(U)/\mathcal{G}(U))^+
+				\end{gather*}
+			\end{Def}
+			
+			\textbf{Remark} The quotient of presheaf $(U\mapsto \mathcal{F}(U)/\mathcal{G}(U))$ is not a sheaf. But it is \textbf{separated}: For $U=\cup U_i$
+			\begin{gather*}
+				0=\bar{s}|U_i\in \mathcal{F}(U_i)/\mathcal{G}(U_i)\Leftrightarrow s|U_i\in \mathcal{G}(U_i)\Leftrightarrow  s\in \mathcal{G}(U)\Leftrightarrow 0=\bar{s}\in \mathcal{F}(U)/\mathcal{G}(U)
+			\end{gather*}
+			
+		\subsection{Morpshisms}
+		\subsubsection{Closed Immersions and Abelian Sheaves}
+		
+		\begin{lemma}
+			Let $X$ be a topological space. $Z\subseteq X$ be a closed subset. Denote
+			\begin{gather*}
+				i:Z\rightarrow X
+			\end{gather*}
+			the inclusion map. The functor $i_*:Ab(Z)\rightarrow Ab(X)$ is
+			\begin{itemize}
+				\item Exact;
+				\item Fully faithful;
+				\item With esssential image exactly those abelian sheaves whose support is contained in $Z$.
+			\end{itemize}
+			And: $i^{-1}$ is left inverse to $i_*$.
+		\end{lemma}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{Def}
+			Let $X$ be a topological space. Let $Z\subseteq X$ be a closed subset. Let $\mathcal{F}$ be an abelian sheaf on $X$, $U\subseteq X$ open, define the sheaf:
+			\begin{gather*}
+				\mathcal{H}_Z(U):=\{s\in \mathcal{F(U)}|supp(s)\subseteq Z\cap U\}
+			\end{gather*}
+			Then, $\mathcal{H}_Z$ is an abelian subsheaf of $\mathcal{F}$, which is the largest subsheaf such that 
+			\begin{gather*}
+				supp(\mathcal{H}_Z))\subseteq Z
+			\end{gather*}
+		\end{Def}
+		
+		We may view $\mathcal{H}_Z(\mathcal{F})$ as an abelian sheaf on $Z$. With left exact functor:
+		\begin{gather*}
+			Ab(X)\rightarrow Ab(Z)\qquad \mathcal{F}\mapsto \mathcal{H}_Z(\mathcal{F})
+		\end{gather*}
+		
+		\begin{lemma}
+			内容...
+		\end{lemma}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\subsubsection{A Canonical Exact Sequence}
+		
+			\subsubsection{Bilinear Maps}
+			
+			\subsubsection{Tensor Product}
+			
+			\subsubsection{Duals}
+			
+			\subsubsection{Symmetric and Exterior Power}
+			
+			\subsubsection{Internal Hom}
+			
+			\subsubsection{The Annihilator of Sheaf of Modules}
+				
+				\begin{Def}
+					Let $(X,\mathcal{O}_X)$ be a ringed space. Let $\mathcal{F}$ be an $\mathcal{O}_X$-module. There is a canonical map of sheaves of $\mathcal{O}_X$-modules
+					\begin{gather*}
+						\mathcal{O}_X\rightarrow Hom_{\mathcal{O}_X}(\mathcal{F},\mathcal{F})\qquad \mathcal{O}_X(U)\ni f\mapsto \varphi_f:s\mapsto s\cdot f
+					\end{gather*}
+					Then, define hte \textbf{aniihilator} 
+					\begin{gather*}
+						Ann_{\mathcal{O}_X}:=Ker(\mathcal{O}_X\rightarrow Hom_{\mathcal{O}_X}(\mathcal{F},\mathcal{F}))
+					\end{gather*}
+				\end{Def}
+				
+				\begin{lemma}
+					We have:
+					\begin{gather*}
+						(Ann_{\mathcal{O}_X}(\mathcal{F}))_x\subseteq Ann_{\mathcal{O}_{X,x}}(\mathcal{F}_x)
+					\end{gather*}
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				Furthermore, we have
+				\begin{proposition}
+					
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+		\section{Classification of Modules}
+		
+			\subsection{Sheaf Generated by Global Sections}
+			
+			\begin{Def}
+				Let $(X,\mathcal{O}_X)$ be a ringed space. Let $\mathcal{F}$ be a sheaf of $\mathcal{O}_X$-modules. We say that $\mathcal{F}$ generated by global sections if there exists a set $I$, and global sections $s_i\in \Gamma(X,F),i\in I$ such that the map
+				
+				\begin{gather*}
+					\oplus_{i\in I} \mathcal{O}_X\rightarrow \mathcal{F}
+				\end{gather*}
+				
+				is surjective. In this case we say the sections $s_i$ generate $\mathcal{F}$.
+			\end{Def}
+			
+			
+			\begin{lemma}
+				Let $(X,\mathcal{O}_X)$ be a ringed space, and $\mathcal{F}$ be a sheaf of $\mathcal{O}_X$-modules. Let $I$ be a set. $s_i\in \Gamma(X,F),i\in I$ be global sections.
+				
+				The section $s_i$ generate $\mathcal{F}$ iff for all $x\in X$, the elements $s_{i,x}\in \mathcal{F}_x$ generate the $\mathcal{O}_{X,x}$-module $\mathcal{F}_x$.
+			\end{lemma} 
+			
+			\begin{proof}
+				\begin{itemize}
+					\item $\Rightarrow$
+					\item $\Leftarrow$
+				\end{itemize}
+			\end{proof}
+			
+			\begin{lemma}
+				Let $(X,\mathcal{O}_X)$ be a ringed space, let $\mathcal{F},\mathcal{G}$ be sheaves of $\mathcal{O}_X$-moduels, then : If $\mathcal{F},\mathcal{G}$ are generated by global sections, so is $\mathcal{F}\otimes_{\mathcal{O}_X}\mathcal{G}$. 
+			\end{lemma}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\subsubsection{Smallest Subsheaf}
+			\begin{lemma}
+				Let $(X,\mathcal{O}_X)$ be a ringed space, $\mathcal{F}$ be a sheaf of $\mathcal{O}_X$-modules. $I$ be a set.
+				
+				Let $s_i,i\in I$ be a family of local sections $s_i\in \mathcal{F}(U_i)$. 
+				
+				Then, there exists a unique smallest subsheaf of $\mathcal{O}_X$-modules $\mathcal{G}$ such that $s_i$ corresponds to a local section of $\mathcal{G}$.
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{Def}
+				内容...
+			\end{Def}
+			
+			\begin{lemma}
+				内容...
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+		
+			\subsection{Modules locally Generated by Sections}
+			
+			\begin{Def}
+				Let $(X,\mathcal{O}_X)$ be a ringed space. Let $\mathcal{F}$ be a sheaf of $\mathcal{O}_X$ modules. 
+				
+				We say $\mathcal{F}$ is locally generated by sections if for every $x\in X$, there exists an open neighborhood $U$ of $x$ such that $\mathcal{F}|U$ is globally generated as a sheaf of $\mathcal{O}_U$-modules.
+			\end{Def}
+			\begin{center}
+				\begin{tikzcd}
+					\oplus_{i\in I} \mathcal{O}_i\arrow[r]&\mathcal{F}|U\arrow[r]&0
+				\end{tikzcd}
+			\end{center}
+			
+			\begin{lemma}
+				Let $f:(X,\mathcal{O}_X)\rightarrow (Y,\mathcal{O}_Y)$ be a morphism of ringed spaces. The pullback $f^*\mathcal{G}$ is generated by sections if $\mathcal{G}$ is locally generated by sections.
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			
+			\subsection{Modules of Finite Type}
+				
+				\begin{Def}
+					Let $(X,\mathcal{O}_X)$ be a ringed space. Let $\mathcal{F}$ be a sheaf of $\mathcal{O}_X$-modules.
+					
+					We say that $\mathcal{F}$ is of \textbf{finite type} if for every $x\in X$, there exists an open neighborhood $U$ such that $\mathcal{F}|U$ is generated by finitely many sections.
+				\end{Def}
+				
+				Equivalently, the following sequence is exact
+				
+				\begin{center}
+					\begin{tikzcd}
+						\oplus_{i=1}^n \mathcal{O}_U\rightarrow \mathcal{F}|U\rightarrow 0
+					\end{tikzcd}
+				\end{center}
+				
+				\begin{lemma}
+					Let $f:(X,\mathcal{O}_X)\rightarrow (Y,\mathcal{O}_Y)$ be a morphism of ringed spaces. The pullback $f^*\mathcal{G}$ of a finite type $\mathcal{O}_Y$-module is a finite type $\mathcal{O}_X$-module.
+				\end{lemma}
+				
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{lemma}
+					Let $X$ be a ringed space. Then, 
+					
+					\begin{itemize}
+						\item The image of a morphisms of $\mathcal{O}_X$-modules of finite type is of finite type;
+						
+						\item Let $0\rightarrow \mathcal{F}_1\rightarrow \mathcal{F}_2\rightarrow \mathcal{F}_3\rightarrow 0$ be a short exact sequence of $\mathcal{O}_X$-modules. If $\mathcal{F}_1,\mathcal{F}_3$ are of finite type, so is $\mathcal{F}_2$.
+					\end{itemize}
+				\end{lemma}
+				
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				
+				\begin{proof}
+					内容...
+				\end{proof}
+			
+			\subsection{Quasi-Coherent Modules}
+			
+			\begin{Def}
+				Let $(X,\mathcal{O}_X)$ be a ringed space, $\mathcal{F}$ be a sheaf of $\mathcal{O}_X$-modules. 
+				
+				We say that $\mathcal{F}$ is \textbf{quasi-coherent sheaf} of $\mathcal{O}_X$-module if for every point $x\in X$, there exists an open neighborhood $x\in U\subseteq X$ such that
+				
+				\begin{gather*}
+					\mathcal{F}|U=Coker(\oplus_{j\in J} \mathcal{O}_U\rightarrow \oplus_{i\in I} \mathcal{O}_U)
+				\end{gather*}
+				
+				Take the notation of quasi-coherent $\mathcal{O}_X$-modules by $QCoh(\mathcal{O}_X)$.
+			\end{Def}
+			Equivalently, $\mathcal{F}|U$ has a presentation of the form
+			\begin{gather*}
+				\oplus_{j\in J} \mathcal{O}_U\rightarrow \oplus_{i\in I} \mathcal{O}_U\rightarrow \mathcal{F}|U\rightarrow 0
+			\end{gather*}
+			In other word:
+			\begin{itemize}
+				\item For every point $x\in X$, there exists an open neighborhood $x\in U\subseteq X$, and $\mathcal{F}|U$ is generated by local sections;
+				\item For a suitable choice of these sections, the kernel of associated surjection is also generated by local sections.
+			\end{itemize}
+			\subsubsection{Sum}
+			\begin{lemma}
+				Let $(X,\mathcal{O}_X)$ be a ringed space. The direct sum of two two quasi-coherent $\mathcal{O}_X$-modules is a quasi-coherent $\mathcal{O}_X$-modules. 
+			\end{lemma}
+			\begin{proof}
+				Take the disjoint union of indexes $I\sqcup I',J\sqcup J'$. 
+			\end{proof}
+			
+			\subsubsection{Pullback}
+			
+			\begin{lemma}
+				Let $f:(X,\mathcal{O}_X)\rightarrow (Y,\mathcal{O}_Y)$ be a morphism. The \textbf{pullback} $f^*\mathcal{G}$ of quasi-coherent $\mathcal{O}_Y$-module is quasi-coherent.
+			\end{lemma}
+			\begin{proof}
+				Firstly, consider the following diagram:
+				
+				\begin{center}
+					\begin{tikzcd}
+						\oplus_{i\in I} \mathcal{O}_U\arrow[r]&\oplus_{j\in J} \mathcal{O}_U\arrow[r]&\mathcal{G}|U\arrow[r]&0
+					\end{tikzcd}
+				\end{center}
+				
+				Apply the operation $f^*=\mathcal{O}_X\otimes_{f^{-1}\mathcal{O}_Y} f^{-1}-\Rightarrow f^*|U=\mathcal{O}_X|f^{-1}(U)\otimes_{f^{-1}\mathcal{O}_Y|U} f^{-1}\mathcal{O}_U$, exactness
+				
+				\begin{center}
+					\begin{tikzcd}
+						\oplus_{i\in I} \mathcal{O}_X|f^{-1}(U)\arrow[r]&\oplus_{j\in J} \mathcal{O}_X(U)|f^{-1}(U)\arrow[r]&f^*\mathcal{G}|f^{-1}(U)\arrow[r]&0
+					\end{tikzcd}
+				\end{center}
+			\end{proof}
+			
+			\subsubsection{Sheaf Associated to the Module $M$ and Ring Map $\alpha$}
+			
+			\begin{lemma}
+				Let $(X,\mathcal{O}_X)$ be ringed space, $\alpha:R\rightarrow \Gamma(X,\mathcal{O}_X)$ be a ring homomorphism from a ring $R$ into the ring of global sections on $X$.
+				
+				Let $M$ be an $R$-module. The following three constructions give canonically isomorphic sheaves of $\mathcal{O}_X$-modules:
+				\begin{itemize}
+					\item Let $\pi:(X,\mathcal{O}_X)\rightarrow (\{*\},R)$ be the morphism of ringed spaces with:
+					
+					\begin{itemize}
+						\item $\pi:X\rightarrow \{*\}$ unique map;
+						\item $\pi$ map $\pi^\#(\{x\})=\alpha:R\rightarrow \Gamma(X,\mathcal{O}_X)$. Set 
+						\begin{gather*}
+							\mathcal{F}_1:=\pi^*M
+						\end{gather*}
+					\end{itemize}
+					\item Choose a presentation $\oplus_{j\in J} R\rightarrow \oplus_{i\in I} R\rightarrow M\rightarrow 0$, set 
+					\begin{gather*}
+						\mathcal{F}_2=Coker(\oplus_{j\in J} \mathcal{O}_X\rightarrow \oplus_{i\in I} \mathcal{O_X})
+					\end{gather*}
+					\item Set $\mathcal{F}_3$ equal to the sheaf associated to the prehsheaf 
+					\begin{gather*}
+						U\mapsto \mathcal{O}_X(U)\otimes_R M
+					\end{gather*}
+					where: $R\rightarrow M$ by module structure, $R\rightarrow \mathcal{O}_X(U)$ the composition of $\alpha$ and the composition with restriction map $\Gamma(X,\mathcal{O}_X)\rightarrow \Gamma(U,\mathcal{O}_X)$. 
+				\end{itemize}
+				The construction has the following properties:
+				\begin{itemize}
+					\item The \textbf{resulting sheaf} of $\mathcal{O}_X$-modules
+					\begin{gather*}
+						\mathcal{F}_M=\mathcal{F}_1=\mathcal{F}_2=\mathcal{F}_3
+					\end{gather*}
+					is quasi-coherent.
+					\item The construction gives a functor from the category of $R$-modules to the category of quasi-coherent sheaves on $X$, which commutes with \underline{arbitrary colimits};
+					\item For any $x\in X$, we have 
+					\begin{gather*}
+						\mathcal{F}_{M,x}=\mathcal{O}_{X,x}\otimes_R M
+					\end{gather*}
+					\item Given any $\mathcal{O}_X$-module $\mathcal{G}$ we have
+					\begin{gather*}
+						Mor_{\mathcal{O}_X}(\mathcal{F}_M,\mathcal{G})=Hom_R(M,\Gamma(X,\mathcal{G}))
+					\end{gather*}
+				\end{itemize}
+			\end{lemma}
+			\begin{proof}
+				\begin{itemize}
+					\item \begin{itemize}
+						\item 
+						\item 
+						\item 
+					\end{itemize}
+					\item \begin{itemize}
+						\item 
+						\item 
+						\item 
+						\item 
+					\end{itemize}
+				\end{itemize}
+			\end{proof}
+			\begin{Def}
+				Such sheaf $\mathcal{F}_M$ is\textbf{the sheaf associated to the module} $M$ and the ring map $\alpha:R\rightarrow \Gamma(X,\mathcal{O}_X)$.
+			\end{Def}
+			
+			\begin{lemma}
+				Let $(X,\mathcal{O}_X)$ be a ringed space, $R=\Gamma(X,\mathcal{O}_X)$.
+				
+				Let $M$ be an $R$-module, $\mathcal{F}_M$ be the quasi-coherent sheaf of $\mathcal{O}_X$-modules associated to $M$.
+				
+				If $g:(Y,\mathcal{O}_Y)\rightarrow (X,\mathcal{O}_X)$ is a morphism of ringed spaces, then $g^*\mathcal{F}_M$ is the sheaf associated to the $\Gamma(Y,\mathcal{O}_Y)$-module $\Gamma(Y,\mathcal{O}_Y)\otimes_R M$.
+			\end{lemma}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{lemma}
+				内容...
+			\end{lemma}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\subsection{Modules of Finite Representation}
+			
+			\begin{Def}
+				Let $(X,\mathcal{O}_X)$ be a ringed space. Let $\mathcal{F}$ be a sheaf of $\mathcal{O}_X$-modules. We say that $\mathcal{F}$ is of \textbf{finite presentation} if for every point $x\in X$, there exists an open subset $x\in U\subseteq X$ and $n,m\in \NN$ such that
+				
+				\begin{gather*}
+					\mathcal{F}|U=Coker(\oplus_{j=1}^m \mathcal{O}_U\rightarrow \oplus_{i=1}^n \mathcal{O}_U)
+				\end{gather*}
+			\end{Def}
+			
+			Equivalently, the following diagram
+			
+			\begin{gather*}
+				\oplus_{j=1}^m \mathcal{O}_U\rightarrow \oplus_{i=1}^n \mathcal{O}_U\rightarrow \mathcal{F}|U\rightarrow 0
+			\end{gather*}
+			
+			is exact.
+			
+			\begin{lemma}
+				Let $(X,\mathcal{O}_X)$ be a ringed space Then: Any $\mathcal{O}_X$-module of finite presentation is quasi-coherent.
+			\end{lemma}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\subsection{Coherent Modules}
+			
+			\begin{Def}
+				Let $(X,\mathcal{O}_X)$ be a ringed space. Let $\mathcal{F}$ be a sheaf of $\mathcal{O}_X$-modules. We say that $\mathcal{F}$ is a coherent $\mathcal{O}_X$-module if the following condition holds:
+				\begin{itemize}
+					\item 
+					\item For \underline{every} open $U\subseteq X$, and every finite collection $s_i\in \mathcal{F}(U),i=1,\dots,n$,
+					\begin{gather*}
+						Ker(\oplus \mathcal{O}_U\rightarrow \mathcal{F}|U)
+					\end{gather*}
+					is of finite type.
+				\end{itemize}
+				The category of coherent $\mathcal{O}_X$-modules is $Coh(\mathcal{O}_X)$.
+			\end{Def}
+			
+			\subsection{Locally free Sheaves}
+			
+				\begin{Def}
+					Let $(X,\mathcal{O}_X)$ be a ringed space. Let $\mathcal{F}$ be a sheaf of $\mathcal{O}_X$-modules:
+					
+					\begin{itemize}
+						\item We say $\mathcal{F}$ is \textbf{locally free} if for every point $x\in X$, there exists a set $I$ and an open neighborhood $x\in U\subseteq X$ such that
+						
+						\begin{gather*}
+							\mathcal{F}|U=\oplus_{i\in I} \mathcal{O}_X|U
+						\end{gather*}
+						
+						as an $\mathcal{O}_X|U$-module;
+						
+						\item We say $\mathcal{F}$ is \textbf{finite locally free} if we may choose the index sets $I$ to be \underline{finite};
+						\item We say $\mathcal{F}$ is locally free of \textbf{rank} $r$ if we may choose the index sets of cardinality $r$;
+					\end{itemize}
+				\end{Def}
+				
+				\begin{lemma}
+					Let $(X,\mathcal{O}_X)$ be a ringed space, $\mathcal{F}$ be a sheaf of $\mathcal{O}_X$-modules. If $\mathcal{F}$ is locally free, then it is quasi-coherent.
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\subsubsection{Pullback}
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\subsubsection{Rank}
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{lemma}
+					Let $(X,\mathcal{O}_X)$ be a ringed space, $r\geq 0$. Let $\varphi:\mathcal{F}\rightarrow \mathcal{G}$ be a finite locally free $\mathcal{O}_X$-modules of rank $r$. Then $\varphi$ is an isomorphism iff $\varphi$ is surjective
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\subsubsection{Locally Ringed Space}
+				\begin{lemma}
+					Let $(X,\mathcal{O}_{X})$ be a locally ringed space, then any direct summand of a finite lcoally free $\mathcal{O}_X$-module is finite locally free.
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{lemma}
+					Let $(X,\mathcal{O}_X)$ be locally ringed space, then $\varphi:\mathcal{F}\rightarrow \mathcal{G}$ is an isomorphism iff $\varphi$ is injective.
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\textbf{Remark} Actually, locally free sheaves is correspondent to the vector bundle. Via Serre-Swan theorem, we have a equivalence of Categories
+				\begin{gather*}
+					Vect(X)\cong P(C^0(X))
+				\end{gather*}
+				
+				$C^0(X)$ is a local ring. 
+				
+			\subsection{Flat Modules}
+			
+				\begin{Def}
+					Let $(X,\mathcal{O}_X)$ be a ringed space. An $\mathcal{O}_X$-module $\mathcal{F}$ is \textbf{flat} if the functor
+					
+					\begin{gather*}
+						-\otimes_{\mathcal{O}_X} \mathcal{F}:Mod(\mathcal{O}_X)\rightarrow Mod(\mathcal{O}_X)\qquad \mathcal{G}\mapsto \mathcal{G}\otimes_{\mathcal{O}_X} \mathcal{F}
+					\end{gather*}
+					
+					is exact.
+				\end{Def}
+				
+				\begin{lemma}
+					Let $(X,\mathcal{O}_X)$ be a ringed space. An $\mathcal{O}_X$-module $\mathcal{F}$ is flat iff the stalk $\mathcal{F}_x$ is a flat $\mathcal{O}_{X,x}$-module for all $x\in X$.
+				\end{lemma}
+				
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{Def}
+					Let $(X,\mathcal{O}_X)$ be a ringed space. Let $x\in X$. An $\mathcal{O}_X$-module $\mathcal{F}$ is \textbf{flat at} $x$ if $\mathcal{F}_x$ is flat $\mathcal{O}_{X,x}$-module.
+				\end{Def}
+				
+				\subsubsection{Pullback}
+				
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\subsubsection{Filtered Colimit}
+			
+			\subsection{Constructible Sheaves of Sets}
+			
+			\subsection{Flat Morphisms of Ringed Spaces}
+			
+			\subsection{Invertible Modules}
+			
+			\begin{Def}
+				Let $(X,\mathcal{O}_X)$ be a ringed space. An \textbf{invertible} $\mathcal{O}_X$-module is a sheaf of $\mathcal{O}_X$-modules $\mathcal{L}$ such that the functor
+				
+				\begin{gather*}
+					Mod(\mathcal{O}_X)\rightarrow Mod(\mathcal{O}_X)\qquad \mathcal{F}\rightarrow \mathcal{L}\otimes_{\mathcal{O}_X} \mathcal{F}
+				\end{gather*}
+				
+				is an equivalence of categories. 
+			\end{Def}
+			
+			We say $\mathcal{L}$ is \textbf{trivial} if its ismorphic to $\mathcal{O}_X$, as an $\mathcal{O}_X$-modules.
+			
+			\begin{lemma}
+				Let $(X,\mathcal{O}_X)$ be a ringed space. Let $\mathcal{L}$ be an $\mathcal{O}_X$-module. Equivalent are:
+				
+				\begin{itemize}
+					\item $\mathcal{L}$ is invertible;
+					\item There exists an $\mathcal{O}_X$-module $\mathcal{N}$ such that $\mathcal{L}\otimes_{\mathcal{O}_X} \mathcal{N}\cong \mathcal{O_X}$
+					
+					where $\mathcal{L}$ is locally a direct summand of a finite free $\mathcal{O}_X$-module and the module $\mathcal{N}$ is isomorphic to $Hom_{\mathcal{O}_X}(\mathcal{L},\mathcal{O}_X)$.
+					
+					\begin{gather*}
+						\mathcal{O}_X^n|U\cong \mathcal{L}|U\oplus \mathcal{L}'|U\qquad \mathcal{N}\cong Hom_{\mathcal{O}_X}(\mathcal{L},\mathcal{O}_X)
+					\end{gather*}
+				\end{itemize}
+			\end{lemma}
+			
+			\begin{proof}
+				\begin{itemize}
+					\item $\Rightarrow$
+					\item $\Leftarrow$
+				\end{itemize}
+			\end{proof}
+			
+			\begin{lemma}
+				内容...
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Tensor Power}
+				\begin{Def}
+					Let $(X,\mathcal{O}_X)$ be a ringed space. Given an invertible sheaf $\mathcal{L}$ on $X$ and $n\in \ZZ$. 
+					
+					We define the $n$th tensor power:
+					
+					\begin{gather*}
+						\mathcal{L}^{\otimes n}:=\begin{cases}
+							\mathcal{O}_X&n=0\\
+							Hom_{\mathcal{O}_X}(\mathcal{L},\mathcal{O}_X)&n=-1\\
+							\underbrace{\mathcal{L}\otimes_{\mathcal{O}_X} \dots\otimes_{\mathcal{O}_X} \mathcal{L}}_{\mbox{n times}}&n>1\\
+							\underbrace{\mathcal{L}^{-1}\otimes_{\mathcal{O}_X} \dots\otimes_{\mathcal{O}_X} \mathcal{L}}_{\mbox{n times}}&n>1
+						\end{cases}
+					\end{gather*}
+				\end{Def}
+			
+			
+			\subsubsection{Associated Graded Ring}
+			
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				
+				\begin{proof}
+					内容...
+				\end{proof}
+			
+				\begin{Def}
+					Let $(X,\mathcal{O}_X)$ be a ringed space. Given an inversable sheaf $\mathcal{L}$ on $X$. We define the \textbf{associated graded ring} to be
+					
+					\begin{gather*}
+						\Gamma_*(X,\mathcal{L})=\oplus_{n\geq 0} \Gamma(X,\mathcal{L}^{\otimes n})\\
+						\Gamma_*(X,\mathcal{L},\mathcal{F})=\oplus_{n\in \ZZ} \Gamma(X,\mathcal{F}\otimes_{\mathcal{O}_X} \mathcal{L}^{\otimes n})
+					\end{gather*}
+					
+					Take the notation of $\Gamma_*(\mathcal{L}),\Gamma_*(\mathcal{F})$.
+				\end{Def}
+				Equipped with the multiplication given by lemma above.
+			\subsubsection{Picard Group}
+				\begin{lemma}
+					Let $(X,\mathcal{O}_X)$ be a ringed sapce. There exists a st of invertible modules $\{\mathcal{L}_i\}_{i\in I}$ such that: Each invertible module on $X$ is isomorphic to exactly one of the $\mathcal{L}_i$.
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+			
+				\begin{Def}
+					Let $(X,\mathcal{O}_X)$ be a ringed space. The \textbf{Picard group} $Pic(X)$ is the abelian group, whose elements are ismorphism classes of invertible $\mathcal{O}_X$-modules, with addition corresponding to tensor products.
+				\end{Def}
+					
+					\begin{lemma}
+						(Local Inversability) Let $X$ be a ringed space. Assume that each stalk $\mathcal{O}_{X,x}$ is a local ring with $m_x$. Let $\mathcal{L}$ be an invertible $\mathcal{O}_X$-module. For any section $s\in \Gamma(X,\mathcal{L})$, the set
+						
+						\begin{gather*}
+							内容...
+						\end{gather*}
+						
+						is open in $X$. 
+						
+						The map $s:\mathcal{O}_{X_s}\rightarrow \mathcal{L}|X_s$ is an isomorphism, and there exists a section $s'\in \mathcal{L}^{\otimes -1}|X_s$ such that
+						
+						\begin{gather*}
+							s'(s|X_s)=1
+						\end{gather*}
+					\end{lemma}
+					
+					\begin{proof}
+						内容...
+					\end{proof}
+				\subsubsection{Geometry of Invertible Module: Line Bundle}
+					
+					\textbf{Remark} The geometric correspondnece of invertible module is the line bundle: Which is a fibre bundle with fibres of lines. In K-theory:
+					
+					\begin{itemize}
+						\item Addition$\Leftrightarrow$ Direct Sum;
+						\item Multiplication$\Leftrightarrow$ Tensor Product.
+					\end{itemize}
+		\section{Other Constructions}
+		
+			\subsection{Konzul Complexes}
+				\begin{Def}
+					Let $X$ be a ringed space, and $\varphi:\epsilon\rightarrow \mathcal{O}_X$ be $\mathcal{O}_X$-module map.
+					
+					The \textbf{Konzul complex} $K_\bullet(\varphi)$ associated to $\varphi$ is the sheaf of commutative differential graded algebras defined as follows:
+					\begin{itemize}
+						\item The underlying graded algebra is the exterior algebra
+						\begin{gather*}
+							K_\bullet(\varphi)=\wedge(\epsilon)
+						\end{gather*}
+						\item Differentials 
+						\begin{gather*}
+							d:K_\bullet(\varphi)\rightarrow K_\bullet(\varphi)
+						\end{gather*}
+						is the unique \underline{derivation} such that $d(e)=\varphi(e)$ for all local secttion $e\in \epsilon=K_1(\varphi)$.
+					\end{itemize}
+				\end{Def}
+				Precisely,
+				\begin{gather*}
+					内容...
+				\end{gather*}
+				\begin{Def}
+					Let $X$ be a ringed space, $f_1,\dots,f_n\in \Gamma(X,\mathcal{O}_X)$. Then, the \textbf{Konzul complex on} $f_1,\dots,f_n$ is the Konzul complex associated to $(f_1,\dots,f_n):\mathcal{O}_X^{\oplus n}\rightarrow \mathcal{O}_X$.
+				\end{Def}
+				\begin{proposition}
+					(Algebraic Poincare's Lemma) \begin{gather*}
+						dd\omega=0
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Rank and Determinant}
+			
+				\subsubsection{K-Groups}
+					Now, consider the zeroth Grothendieck group 
+					\begin{gather*}
+						K_0(Vect(X))
+					\end{gather*}
+					
+					where $Vect(X)=\{[\epsilon]|\epsilon$ is finite locally gree$\}$, and $K_0$ is the abelian group generated by this set. 
+					
+					\begin{gather*}
+						[\epsilon]=[\epsilon']+[\epsilon'']\Leftrightarrow \mbox{Exists} 0\rightarrow\epsilon'\rightarrow \epsilon\rightarrow \epsilon''\rightarrow 0
+					\end{gather*}
+					
+					With an exact sequence, we have local direct-sum composition via
+					\begin{gather*}
+						内容...
+					\end{gather*}
+				\subsubsection{Rank}
+				
+					\begin{Def}
+						Let $\epsilon$ be a \underline{finite locally free} $\mathcal{O}_X$-module $\epsilon$. The rank is a locally constant function
+						\begin{gather*}
+							rank_\epsilon:X\rightarrow \ZZ_{\geq 0}\qquad x\mapsto rank_{\mathcal{O}_{X,x}}(\epsilon_x)
+						\end{gather*}
+					\end{Def}
+					
+					There exists a homomorphism
+					\begin{gather*}
+						K_0(Vect(X))\rightarrow Map_{cont}(X,\ZZ)\qquad [\epsilon]\mapsto rank_\epsilon
+					\end{gather*}
+					
+					Here, $Map_{cont}(-,-)$ for locally constant functions.
+				\subsubsection{Determinant}
+					
+					\begin{Def}
+						Let $X=\coprod X_i$. With $X_i$ open and closed. 
+					\end{Def}
+			
+			\subsection{Localization}
+			
+			\subsection{Modules of Differentials}
+			
+			\subsection{Finite Order differential Operators}
+			
+			\subsection{De Rham Complex}
+			
+			\subsection{The Naive Cotangent Complex}
+			
+			\begin{Def}
+				(Polynomial Algebras)
+			\end{Def}
+		\section{Differential Graded Sheaves}
+			\subsection{Sheaves of Graded Algebras}
+				\begin{Def}
+					Let $(\mathcal{C},\mathcal{O})$ be a ringed site. A \textbf{sheaf of graded $\mathcal{O}$-algebras} or a \textbf{sheaf of graded algebras on $(\mathcal{C},\mathcal{O})$} is given by
+					\begin{itemize}
+						\item A family $\mathcal{A}^n,nin \ZZ$;
+						\item $\mathcal{O}$-bilinear maps
+						\begin{gather*}
+							\mathcal{A}^n\times \mathcal{A}^m\rightarrow \mathcal{A}^{n+m}\\
+							(a,b)\mapsto ab
+						\end{gather*}
+						called the \textbf{multiplication maps} with following properties:
+						\begin{itemize}
+							\item 
+							\item 
+						\end{itemize}
+					\end{itemize}
+				\end{Def}
+				\subsubsection{Homomorphism}
+				\begin{Def}
+					内容...
+				\end{Def}
+				\subsection{Sheaves of Graded Modules}
+				\subsection{The Graded Category of Sheaves of Graded Modules}
+				\subsection{Tensor Product for Sheaves of Graded Modules}
+				\subsection{Internal Hom for Sheaves of Graded Modules}
+				\subsection{Localization and Sheaves of Graded Modules}
+				\subsection{Homotopy Category}
+					\begin{Def}
+						Let $(\mathcal{C},\mathcal{O})$ be a ringed site. Let $\mathcal{A}$ be a sheaf of differential graded algebras on $(\mathcal{C},\mathcal{O})$. Let $f,g:\mathcal{M}\rightarrow \mathcal{N}$ be differential graded $\mathcal{A}$-modules.
+						
+						A \textbf{homotopy} between $f$ and $g$ is a graded $\mathcal{A}$-module map $h:\mathcal{M}\rightarrow \mathcal{N}$ homogeneous of degree $-1$ such that
+						\begin{gather*}
+							f-g=d_\mathcal{N}\circ h+h\circ d_\mathcal{M}
+						\end{gather*}
+						
+					\end{Def}
+					\subsubsection{Cone, and Triangles}
+						\begin{lemma}
+							Let $(\mathcal{C},\mathcal{O})$ be a ringed site. Let $\mathcal{A}$ be a sheaf of differential graded algebra
+						\end{lemma}
+	\chapter{Sheaves over Abelian Groups}
+	
+		In this chapter, we will construct the sheaves via covering space.
+		
+		\section{Definitions}
+		
+		\begin{Def}
+			A \textbf{sheaf} on $X$ is a pair $(\mathcal{A},\pi)$ where
+			
+			\begin{itemize}
+				\item $\mathcal{A}$ is a topological space;
+				\item $\pi:\mathcal{A}\rightarrow X$ is a local homeomorphism onto $X$;
+				\item Each fiber $\mathcal{A}_x=\pi^{-1}(x)$ is an abelian group;
+				\item The group operations are continuous. 
+			\end{itemize}
+		\end{Def}
+		
+		\begin{Def}
+			Take the following notation:
+			
+			\begin{itemize}
+				\item Define:
+				
+				\begin{gather*}
+					\mathcal{A}\triangle \mathcal{A}：=\{(\alpha,\beta)|\pi(\alpha)=\pi(\beta)\}\subseteq \mathcal{A}\times \mathcal{A}
+				\end{gather*}
+				\item Continuous Operations:
+				
+				\begin{gather*}
+					\mathcal{A}\triangle \mathcal{A}\rightarrow \mathcal{A}\\
+					(\alpha,\beta)\mapsto \alpha-\beta
+				\end{gather*}
+				
+				Or equivalently, two operations:
+				
+				\begin{itemize}
+					\item 
+					\item 
+				\end{itemize}
+			\end{itemize}
+		\end{Def}
+		
+		Similarly, we have defined the 
+		
+		\begin{itemize}
+			\item 
+			\item 
+		\end{itemize}
+		
+		\subsubsection{Restriction}
+		
+		\begin{Def}
+			Let $\mathcal{A}$ be a sheaf and $Y\subseteq X$. Then, the \textbf{restriction} of $\mathcal{A}$ on $Y$, denoted by $\mathcal{A}|Y$ is defined as:
+			
+			\begin{gather*}
+				\mathcal{A}(Y)=(\pi^{-1}(Y),\pi)
+			\end{gather*}
+			
+			which is a sheaf on $Y$.
+		\end{Def}
+		
+		
+		
+		\subsubsection{Section}
+		
+			\begin{Def}
+				Let $\mathcal{A}$ be a sheaf on $X$ and $Y\subseteq X$ be an open subset, the \textbf{section} of $\mathcal{A}$ over $Y$ is a map $s:Y\rightarrow\mathcal{A}$ such that
+				
+				\begin{gather*}
+					\pi\circ s=id_Y
+				\end{gather*}
+				
+				Take the following notation $\mathcal{A}(Y)=\{s|\pi\circ s=id_Y\}$. 
+			\end{Def}
+			
+			
+			Some of facts:
+			
+			\begin{proposition}
+				\begin{itemize}
+					\item $\pi$ is an open map;
+					\item Any section of $\mathcal{A}$ over an open set is an open map;
+					\item An element of $\mathcal{A}$ is in the range of some section over some open set;
+					\item The set of all images of sections over open sets is a base for the topology of $\mathcal{A}$;
+					\item For two sections $s\in \mathcal{A}(U),t\in \mathcal{A}(V)$, then
+					
+					\begin{gather*}
+						V=\{x\in Y|s(x)=t(x)\}
+					\end{gather*}
+					
+					is open in $Y$.
+				\end{itemize}
+			\end{proposition}
+			
+			\begin{proof}
+				\begin{itemize}
+					\item 
+					\item 
+					\item 
+				\end{itemize}
+			\end{proof}
+			
+			\begin{proposition}
+				\begin{itemize}
+					\item (Pasting Lemma)
+					
+					\item (Identity Lemma)
+				\end{itemize}
+			\end{proposition}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\subsubsection{Sheafification}
+			
+			\subsection{Homomorphisms，Subsheaves and Quotient Sheaves}
+			
+			\subsection{Cohomologies}
+				Let $f:X\rightarrow Y$ be a given continuous map.
+			
+				\begin{Def}
+					\begin{itemize}
+						\item Let $A,B$ be presheaves on $X,Y$ respectly, then an $f$-homomorphism $k:B\rightarrow A$ is
+						
+						\begin{gather*}
+							k(U):B(U)\rightarrow A(f^{-1}(U))
+						\end{gather*}
+						
+						for $U$ open in $Y$ and compatible with restrictions:
+						
+						\begin{center}
+							\begin{tikzcd}
+								B(U)&A(f^{-1}(U))\\
+								B(V)&A(f^{-1}(V))
+							\end{tikzcd}
+						\end{center}
+						
+						\item 
+					\end{itemize}
+				\end{Def}
+				
+			\subsection{Algebraic Constructions}
+			
+			\subsection{Supports}
+		\chapter{Sheaf Cohomologies}
+			\section{Homological Properties}
+				\begin{example}
+					Consider $X=Spec(F_p),\mathcal{F}=\bar{F_p}$,
+					
+					$F$ is inj. in $Mod(X,\mathcal{O}_X)$ but not in $Sh(X)$
+				\end{example}
+				\subsubsection{title}
+				\subsection{Cech Cohomology}
+				\begin{Def}
+					(Cech Cohomology) Take the following notion:
+					\begin{gather*}
+						\mathscr{U}:=(U_i)_{i\in I}\qquad U_J:=\cap_{j\in J} U_j,J\subseteq I
+					\end{gather*}
+					Consider the cochain
+					\begin{gather*}
+						C^i:=\prod_{J\subseteq I,|J|=i+1} \mathcal{F}(U_J)\qquad d^j(s):=\prod_{J=\{j_0,\dots,j_{i+1}\}} \sum_{k=0}^{i+1} (-1)^k  s_{j_0,\dots,\hat{j}_k,\dots,j_{i+1}}|U_J
+					\end{gather*}
+				\end{Def}
+				Verify the cochain condition:
+				\begin{gather*}
+					d^{j}\circ d^{j+1}=
+				\end{gather*}
+				\subsubsection{First Cohomology}
+					\begin{Def}
+						Let $X$ be a topological space, $\mathcal{G}$ a sheaf of groups on $X$(\textbf{Remark:} Possibly even non-abelian) 
+					\end{Def}
+					
+					\begin{lemma}
+						内容...
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{lemma}
+						Let $X$ be a topological space, $\mathcal{H}\in Ab(X)$. Then, there exists a canonical isomorphism between set of 
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+					\subsubsection{Extensions}
+					\subsubsection{Invertible Sheaves}
+					\begin{lemma}
+						(Picard Group)
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+				\subsection{Locality of Cohomology}
+				\subsection{Mayer-Vietoris}	
+				\subsection{Functoriality of Cohomology}
+				\subsection{Refinement and Cech Cohomology}
+				\subsection{Noetherian Space}
+			\section{Flasque Sheaves}
+				\begin{Def}
+					(Flasque Sheaves) 
+				\end{Def}
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\section{The Leray Spectral Sequence}
+			\section{Base Change}
+			\section{Colimits}
+			\section{Cup Product}
+		\chapter{Sites}
+			\section{Definitions}
+				\subsection{Morphisms with Fixed Target}
+					\begin{Def}
+						Let $\mathcal{C}$ be a category.
+						
+						A \textbf{family of morphisms} with fixed target in $\mathcal{C}$ is given by
+						\begin{itemize}
+							\item an object $U\in Ob(\mathcal{C})$;
+							\item a set $I$ and for each $i\in I$ a morphism $U_i\rightarrow U$ of $\mathcal{C}$ with target $U$.
+						\end{itemize}
+						Take notation of
+						\begin{gather*}
+							\{U_i\rightarrow U\}_{i\in I}
+						\end{gather*}
+					\end{Def}
+				\subsection{Sites}
+					\begin{Def}
+						A \textbf{site} is given by a category $\mathcal{C}$ and a set $Cov(\mathcal{C})$ of families of morphisms with fixed target $\{U_i\rightarrow U\}_{i\in I}$ called \textbf{covering} of $\mathcal{C}$, satisfying the following axioms:
+						\begin{itemize}
+							\item (Isomorphism)If $V\rightarrow U$ is an isomorphism then $\{V\rightarrow U\}\in Cov(\mathcal{C})$;
+							\item (Compositions)If $\{U_i\rightarrow U\}_{i\in I}\in Cov(\mathcal{C})$ and for each $i\in I$ we have $\{V_{ij}\rightarrow U_i\}_{j\in J_i}\in Cov(\mathcal{C})$, then
+							\begin{gather*}
+								\{V_{ij}\rightarrow U\}_{i\in I,j\in J_i}\in Cov(\mathcal{C})
+							\end{gather*}
+							\item (Fiber Products) If $\{U_i\rightarrow U\}_{i\in I}\in Cov(\mathcal{C});(V\rightarrow U)\in Mor(\mathcal{C})$. Then, 
+							\begin{gather*}
+								\exists U_i\times_{U} V\in \mathcal{C},\{U_i\times _U V\rightarrow V\}_{i\in I}\in Cov(\mathcal{C})
+							\end{gather*}
+						\end{itemize}
+					\end{Def}
+					It is the generation of $PSh(\mathcal{C})$. 
+					\begin{example}
+						内容...
+					\end{example}
+\end{document}

@@ -1,0 +1,2999 @@
+\documentclass[Total.tex]{subfiles}
+
+\begin{document}
+	\tableofcontents
+	\chapter{Fundamentals}
+	
+		\section{Affine and Projective Spaces}
+		\subsection{Affine Spaces,Affine Varieties,Quasi-Affine Varieties}
+		
+			\begin{Def}
+				\begin{itemize}
+					\item By \textbf{affine space} over field $K$, we mean simply the vector space $K^n$. This is usually denoted as
+					
+					\begin{gather*}
+						A^n_K\qquad\mbox{or}\qquad A^n
+					\end{gather*}
+					
+					(And the origin point plays no role in the affine space)
+					
+					\item An \textbf{affine variety} is the common zero locus of a collection of polynomials $f_\alpha\in K[X_1,\dots,X_n]$.
+					
+					\item An open subset of an affine variety is a \textbf{quasi-affine variety}.
+				\end{itemize}
+			\end{Def}
+			
+		
+		\subsection{Projective Space, Projective Varieties}
+			\subsubsection{Projective Space, Projective Varieties}
+			\begin{Def}
+				\begin{itemize}
+					\item By \textbf{projective space} over field $K$, we mean the quotient of $K^{n+1}-\{0\}$ specified by
+					
+					\begin{gather*}
+						(x_1,\dots,x_n)\sim (\lambda x_1,\dots,\lambda x_n),\lambda\in K^\times
+					\end{gather*}
+					
+					\item For vector space $V$, 
+					
+					\begin{gather*}
+						\mathbb{P}(V):=(V-\{0\})/\sim
+					\end{gather*}
+					
+					\item Polynomials: Homogeneneous with degree $d$
+					
+					\begin{gather*}
+						F(\lambda X_0,\dots,\lambda X_n)=\lambda^dF(X_0,\dots,X_n)
+					\end{gather*}
+					
+					\item A \textbf{projective variety} is define to be zero locus of a family numbers of homogeneous polynomials $F_\alpha$. 
+				\end{itemize}
+			\end{Def}
+			
+		
+			
+			\subsubsection{Action of $PGL_{n+1}K$}
+			
+			\begin{Def}
+				\begin{itemize}
+					\item Firstly, define the matrix algebra $PGL_{n+1}K$
+					
+					\begin{gather*}
+						PGL_{n+1}K:=GL_{n+1}K/\sim
+					\end{gather*}
+					
+					\item Secondly, define the action on $\mathbf{P}^n$ via action of $GL_{n+1}K$ on $\mathbf{R}^{n+1}$
+					
+					\begin{gather*}
+						PGL_{n+1}K\times \mathbb{P}^n \rightarrow \mathbb{P}^n\\
+						([A],[v]) \mapsto [Av]
+					\end{gather*}
+					
+					\item Two varieties $X,Y\subseteq \mathbf{P}^n$ are \textbf{projectively equivalent} iff they are congruent modulo the map. 
+					
+					\begin{gather*}
+						X\sim Y \Leftrightarrow \exists \varphi\in PGL_{n+1}K,\varphi(X)=Y
+					\end{gather*}
+				\end{itemize}
+			\end{Def}
+			
+				\textbf{Remark} Actually, in Harris's book, the projective space is defined as: The one-dimensional subspaces of the vector space $V$.
+			
+			\begin{gather*}
+				\mathbb{P}V:=\{L\subseteq V|V\in Vect_K,dim(V)=1\}
+			\end{gather*}
+			
+			\subsubsection{Homogeneous Coordinates,Dual Space}
+			
+			\begin{example}
+				When we consider the coordinate of $\mathbb{P}V$, we may think of,to write those coordinate in the form of
+				
+				\begin{gather*}
+					Z_0,\dots,Z_n
+				\end{gather*}
+				
+				However, this is a misleading. $Z_i$ are not function on $\mathbb{P}^n$: By definittion we have
+				
+				\begin{gather*}
+					[Z_0,\dots,Z_n]=[\lambda Z_0,\dots,\lambda Z_n],\lambda\in K
+				\end{gather*}
+				
+				On their otherwise, $(Z_i/Z_j)$ are functions, the denominator is nonzero. 
+			\end{example}
+			
+			
+			
+			\begin{Def}
+				\begin{itemize}
+					\item Define the dual of projective space via
+					
+					\begin{gather*}
+						(\mathbb{P}V)^*:=\mathbb{P}V^*
+					\end{gather*}
+					
+					where $V^*$ has elements of linear functions $Z_i:V\rightarrow K$.
+					
+					\item Similarly: The homogeneous functions of degree $d$ can be naturally identified with
+					
+					\begin{gather*}
+						Sym^d(V^*)\cong F[X_0,\dots,X_n]^d
+					\end{gather*}
+				\end{itemize}
+			\end{Def}
+			
+			\textbf{Remark} The \textbf{coordinate} of points in $\mathbb{P}V$ is given by
+			
+			\begin{gather*}
+				\mathbb{P}V\rightarrow \mathbb{P}^n\\
+				v\mapsto [Z_0(v):\dots:Z_n(v)]
+			\end{gather*}
+			
+			\newpage
+			
+			\subsubsection{Affine Coverings}
+			
+			\begin{Def}
+				\begin{gather*}
+					U_i\subseteq \mathbb{P}^n,U_i:=\{[Z_0,\dots,Z_n]|Z_i\not=0\}
+				\end{gather*}
+				
+				Then, the ratios $z_j:=Z_j/Z_i$ are well defined. Give a bijection
+				
+				\begin{gather*}
+					U_i\cong \mathbb{A}^n\qquad [Z_0,\dots,Z_n]\mapsto (z_1,\dots,z_n)
+				\end{gather*}
+			\end{Def}
+			
+			Geometrically, we can think of the map as associating to a line $L\subseteq K^{n+1}$ not contained in the hyperplane $Z_i=0$. Its point $p$ with the affine plane intersects with the affine plane $Z_i=1\subseteq K^{n+1}$.
+			
+			\textbf{Remark} In fact, this is a projection. See here: \ref{Classical-Algebra-Projections}
+			
+			\begin{Def}
+				We may thus think of projective space as a compactification of affine space. The function $z_j$ of $U_i$ are called \textbf{affine/Euclidean coordinates} on the projective space or on the open set $U_i$. 
+			\end{Def}
+			
+			\begin{lemma}
+				Let $X\subseteq \mathbb{P}^n$ be a variety. Then $X_i=X\cap U_i$ is an affine variety. 
+			\end{lemma}
+			
+			\begin{proof}
+				Suppose that $X$ is specified by polynomials. And one of polynomials is $F\in K[Z_0,\dots,Z_n]$ which is homogeneous. Then, for $U_i$
+				
+				\begin{gather*}
+					f=F(Z_0,\dots,Z_n)/Z_i^d=F(Z_0,\dots,1,\dots,Z_n);d=deg(F)
+				\end{gather*} 
+				
+				
+			\end{proof}
+			
+			Thus: Any projective space is the union of affine spaces,any projective variety is the union of affine varieties.
+			
+			\begin{lemma}
+				Conversely: Every affine variety is the intersection of $U_0$ with a projective variety $X$. Given by
+				
+				\begin{gather*}
+					F_\alpha(Z_0,\dots,Z_n):=Z_0^{d_\alpha}\cdot f_\alpha(Z_1/Z_0,\dots,Z_n/Z_0)
+				\end{gather*}
+			\end{lemma}
+			
+			\begin{proof}
+				Omitted. It is the inverse process of the lemma above.
+			\end{proof}
+			
+			\textbf{Remark} If $\mathbb{R},\mathbb{C}$ are given usal topology, then 
+			
+			\begin{gather*}
+				\mathbb{P}^n(\mathbb{R})\qquad \mathbb{P}^n(\mathbb{C})
+			\end{gather*}
+			
+			are compact. The two can be seen as a compactification of $\RR^n,\CC^n$, which can be imbedded in $\RR^{n+1},\CC^{n+1}$.
+			
+			\subsubsection{Dual Projective Space}
+			
+			\begin{Def}
+				(Hyperplane) The hyperplane can be specified by the linear equation
+				
+				\begin{gather*}
+					H(l):=\{[v]\in \mathbb{P}V^*|l(v)=0\},l\in V^*
+				\end{gather*}
+				
+				It is equivalent to the definition later.
+			\end{Def}
+			
+			\begin{Def}
+				\label{Classical-Algebraic-Geometry-Dual-Projective-Space} The hyperplanes in a projective space $\mathbb{P}^n$ is again a projective space, denoted by $\mathbb{P}^{n*}$.
+				
+				\begin{gather*}
+					\mathbb{P}^{n*}:=\{H(l)|l\in V^*\}\cong \mathbb{P}(V^*)
+				\end{gather*}
+				
+				More generally, if $\wedge\cong \mathbb{P}^{n-k-1}$, then
+				
+				\begin{gather*}
+					\mathbb{P}^{n-k-1*}=\{H(l)|\wedge\subseteq H(l)\}
+				\end{gather*}
+			\end{Def}
+			
+			Especially: $W\subseteq V,(V/W)^*=Ann(W)$. We have $\mathbb{P}(Ann(W))\subseteq \mathbb{P}(V^*)$. 
+			
+		\subsection{Examples}
+			
+			\subsubsection{Linear Spaces}
+			
+			\begin{Def}
+				(Linear Subspace in Projective Space) An inclusion of vector spaces is $W\cong K^{k+1}\hookrightarrow V\cong K^{n+1}$. This induces 
+				
+				\begin{gather*}
+					\mathbb{P}K^{k+1}\hookrightarrow \mathbb{P}K^{n+1}
+				\end{gather*}
+				
+				The image $\wedge$ is called the \textbf{linear subspace} of $\mathbb{P}^n$. 
+			\end{Def}
+			
+			In the case:
+			
+			\begin{itemize}
+				\item $n=k+1$ Hyperplane;
+				\item $k=1$ Line;
+			\end{itemize}
+			
+			Operations on Linear Spaces:
+			
+			\begin{Def}
+				(Span of Linear Subspaces) Suppose $\begin{cases}
+					\wedge=\mathbb{P}W\\
+					\wedge'=\mathbb{P}W'
+				\end{cases}$, which are the linear subspaces of $\mathbb{P}^n$. Then, define
+				
+				\begin{gather*}
+					\overline{\wedge,\wedge'}:=\mbox{The smallest linear subspace containing }\wedge,\wedge'
+				\end{gather*}
+				
+				In general, for any subset $\Phi,\Gamma\subseteq \mathbb{P}^n$, the span $\overline{\Gamma\cup \Phi}$.
+			\end{Def}
+			
+			\textbf{Remark} It is easy to show, that
+			
+			\begin{gather*}
+				\overline{\Gamma\cup \Phi}=\mathbb{P}(W+W')
+			\end{gather*}
+			
+			\textbf{Remark} We will define the dimension later. 
+			
+			\begin{proposition}
+				
+				
+				\begin{gather*}
+					dim(\overline{\wedge,\wedge'})=dim(\wedge)+dim(\wedge')-dim(\wedge\cap \wedge')
+				\end{gather*}
+			\end{proposition}
+			
+			\begin{proof}
+				Omitted.
+			\end{proof}
+			
+			\textbf{Remark} Especially, define
+			
+			\begin{gather*}
+				dim\mathbb{P}0:=-1
+			\end{gather*}
+			
+			Then: We can get the following inequality
+			
+			\begin{gather*}
+				dim(\wedge\cap \wedge')=dim(\wedge)+dim(\wedge')-dim(\overline{\wedge,\wedge'})\geq dim(\wedge)+dim(\wedge')-dim(\mathbb{P}V)
+			\end{gather*}
+			
+			
+			
+			\subsubsection{Finite Sets}
+			
+			\begin{proposition}
+				Any finite subset $\Gamma$ of $\mathbb{P}^n$ is a variety.
+			\end{proposition}
+			
+			\begin{proof}
+				Given any $q\notin \Gamma$. We can find a polynomial on $\mathcal{P}^n$ vanishing on the point $p_i\in \Gamma$ but not at $q$(Especially, it is a homogeneous linear form $L_i$) Take its product
+				
+				\begin{gather*}
+					F:=\prod L_i
+				\end{gather*}
+				
+				And $F_q$ is associated to $q\notin \Gamma$. Then, $\Gamma=\cap_{q\notin \Gamma} V(F_q)$.
+			\end{proof}
+			
+			\begin{prob}
+				The smallest degree polynomial that suffice to describe a given variety $\Gamma\subseteq \mathbb{P}^n$?
+			\end{prob}
+			
+			\begin{lemma}
+				Suppose $card(\Gamma)=d$. And $\Gamma$ is not contained in a line. Then $\Gamma$ may be described as the zero locus of polynomials of degree $d-1$ and less.
+			\end{lemma}
+			
+			\begin{proof}
+				Notice that: When $d=3$, $n\geq 2$. 
+				
+				The space of polynomials of degree $m=2$, the space of polynomials
+				
+				\begin{gather*}
+					dim V_m=\binom{n+m}{n}=\binom{n+2}{n}\geq 6
+				\end{gather*}
+				
+				And the valuation map
+				
+				\begin{gather*}
+					V_m\rightarrow k^3\qquad F\mapsto (F(P_1),F(P_2),F(P_3))
+				\end{gather*}
+				
+				is a linear map. The dimension of kernel $\geq 3$. 
+				
+				In general case, for other $d-3$ points, We can add the degree of polynomial by multiplicating the linear homogeneous form.
+			\end{proof}
+			
+			Especially, to describe the lower bound of $n$ for $\mathbf{P}^n$ and $m$: 
+			
+			\textbf{Remark} 'And less' is unnecessary:  If a variety $X\subseteq \mathbf{P}^n$ is the zero locus of the polynomials $F_\alpha$ of degree $d_x\leq m$, then it may also be represented as the zero locus of
+			
+			\begin{gather*}
+				X^l\cdot F_\alpha
+			\end{gather*}
+			
+			where for each $\alpha$, the monomial $X^l$ range over all monomials of degree $m-d_\alpha$.
+			
+			\subsubsection{Dependent and Independent} 
+			
+			Another direction in which we can go is to focus our attension on sets of points that satisfy no more linear relation than they have to. To be precise, we say
+			
+			\begin{Def}
+				We say that $l$ points $p_i=[v_i]\in \mathbf{P}^n$ are \textbf{independent} if the corresponding vector $v_i$ are independent. Or equivalently,
+				
+				\begin{gather*}
+					dim[Span(v_1,\dots,v_l)]=l-1
+				\end{gather*}
+			\end{Def}
+			
+			\begin{lemma}
+				\begin{itemize}
+					\item Any $n+2$ points in $\mathbf{P}^n$ are dependent.
+					
+					
+					\item $n+1$ points are dependent$\Leftrightarrow$ They lies in a hyperplane;
+				\end{itemize}
+			\end{lemma}
+			
+			\begin{proof}
+				\begin{itemize}
+					\item Notice that,
+					
+					\begin{gather*}
+						Span(v_1,\dots,v_{n+2})=\mathbb{R}^{n+1}
+					\end{gather*} 
+					
+					There must be two vectors which are not linear independent. 
+					
+					\begin{gather*}
+						\lambda w_1+\mu w_2=0
+					\end{gather*}
+					
+					Then, $[w_1],[w_2]$ are on the same projective line
+					
+					\begin{gather*}
+						L=\{[\lambda p+\mu q]|[p],[q]\in \mathbb{P}^n,(\lambda:\mu)\in \mathbb{P}^1\}
+					\end{gather*}
+					
+					\item $n+1$ points $[v_i]$ are dependent$\Leftarrow span(v_1,\dots,v_{n+1})\leq n\Leftrightarrow $ There exists a vector $w\notin span(v_1,\dots,v_{n+1})$. So 
+					
+					\begin{gather*}
+						span(v_1,\dots,v_{n+1})\hookrightarrow \mathbb{A}^n_K\hookrightarrow \mathbb{A}^{n+1}_K
+					\end{gather*}
+					
+					Take projective space.
+				\end{itemize}
+			\end{proof}
+			
+			\subsubsection{General Position}
+			
+			\begin{Def}
+				We say a \underline{finite set} $\Gamma\subseteq \mathbf{P}^n$ is in \textbf{general position} if no $n+1$ or fewer of them are dependent.
+			\end{Def}
+			
+			We can ask: What is the smallest degree needed to cut out a set of points in general position in $\mathbf{P}^n$?
+			
+			\begin{theorem}
+				If $\Gamma\subseteq \mathbb{P}^n$ is any collection of $d\leq 2n$ points in general position. Then $\Gamma$ may be described as the zero locus of quadratic polynomials.
+			\end{theorem}
+			
+			\begin{proof}
+				Let $\Gamma=\{p_{1},\dots,p_{2n}\}$ consisting of exactly $2n$ points. The general case:
+				
+				\begin{center}
+					Suppose now that $q\in \mathbb{P}^n$ is any point such that: Every quadratic polynomial vanishing on $\Gamma$ vanishes at $q$\\
+					$\Rightarrow q\in \Gamma$ 
+				\end{center}
+				
+				Suppose $\Gamma=\Gamma_1\cup \Gamma_2$ is a decomposition of $\Gamma$ into sets of cardinality $n$, then each $\Gamma_i$ spans a hyperplane 
+				
+				\begin{gather*}
+					\wedge_i\subset \mathbb{P}^n
+				\end{gather*}
+				
+				Then, union of hypersurfaces $\wedge_1\cup \wedge_2$ is the zero locus of polynomials vanishing on $\Gamma$.(Detail: The two hypersurfaces can be described by linear equation. Then consider their product). So $p\in \wedge_1\cup \wedge_2$.
+				
+				Now, let $p_1,\dots,p_k$ be any \underline{minimal} subset(in the sense of cardinal) of $\Gamma$ such that: $q\in Span(p_1,\dots,p_k)$. By preceding, we can take $k\leq n$. (General Position)
+				
+				\textbf{Remark} 
+				
+				Suppose that $\Sigma\subseteq \Gamma-\{p_1,\dots,p_k\}=\{p_{k+1},\dots,p_{2n}\};card(\Sigma)=n-k+1$
+				
+				\begin{gather*}
+					p_1\notin \wedge=span(p_2,\dots,p_k,\Sigma)
+				\end{gather*}
+				
+				If not, then $\wedge$ is a hypersurface, contradict to the general position. Also hold $q\notin \wedge$ because 
+				
+				\begin{gather*}
+					q\in \wedge,p_1\notin \wedge\Rightarrow q\in \wedge\cap span\{p_1,\dots,p_k\}
+				\end{gather*}
+				
+				Contraidict to minimal subset.
+				
+				Finally $q\in span(\Gamma-\{p_2,\dots,p_k\}-\Sigma)$. (One of $\wedge_1,\wedge_2$). And we take arbitrary $\Sigma$. So
+				
+				\begin{gather*}
+					q\in \cap span(\Gamma-\{p_2,\dots,p_k\}-\Sigma)=\{p_1\}
+				\end{gather*}
+				
+			\end{proof}
+			
+			
+			
+			
+			\begin{theorem}
+				In general for $k\geq 2$, any collection $\Gamma$ of $d\leq kn$ points in general position may be described by polynomials of degree $k$ and less.
+			\end{theorem}
+			
+			\begin{proof}
+				Similarly. 
+			\end{proof}
+			
+			
+			An associated proposition is: \ref{classical-algebraic-geometry-Fundamentals-rational-normal-curve-1}
+			
+			\begin{lemma}
+				Consider $n+2$ points in general points in $\mathbb{P}^n$. For $n+1$ points of them, there exists projective transformation
+				
+				\begin{gather*}
+					\varphi(P_i)=[e_i]
+				\end{gather*}
+				
+				And $\varphi(P_{n+1})=[1:\dots:1]$.
+						
+			\end{lemma}
+			
+			\begin{proof}
+				Suppose that $P_i=[v_i]$. Then, notice that there exists a transformation
+				
+				\begin{gather*}
+					\varphi:Span(v_0,\dots,v_n)\rightarrow Span(e_0,\dots,e_n)
+				\end{gather*}
+				
+				such that $\varphi(v_i)=e_i$. Then take $[\varphi]$. 
+			\end{proof}
+			
+			\textbf{Remark} $dimPGL_{n+1}=(n+1)^2-1=n(n+2)$, and the constriant for $n+2$ points $(n+2)\cdot n$.
+			
+			\begin{theorem}
+				Any two ordered subsets of $n+2$ points in general position in $\mathbf{P}^n$ are projectively equivalent.
+			\end{theorem}
+			
+			\begin{proof}
+				Apply the transformation above.
+			\end{proof}
+			
+			\subsubsection{Cross Ratio}
+			
+			\begin{prob}
+				 When could two ordered subsets of $d\geq n+3$ points in general position in $\mathbf{P}^n$ are projectively equivalent? The question is answered in the case of $n=1$:
+			\end{prob}
+			
+			\begin{Def}
+				(Cross-Ratio) Define:
+				
+				\begin{gather*}
+					\lambda(z_1,\dots,z_4):=\frac{(z_1-z_2)(z_3-z_4)}{(z_1-z_3)(z_2-z_4)}
+				\end{gather*}
+			\end{Def}
+			
+			Especially, the function $\lambda(z_1,z_2;z_3,-):\mathbf{P}^1\rightarrow \mathbf{P}^1$(Linear Homogeneous Form) and $z_1\mapsto 1,z_2\mapsto \infty,z_3\mapsto 0$.
+			
+			\begin{proposition}
+				\begin{itemize}
+					\item (n=1) $z_1,\dots,z_4;z_1',\dots,z_4'\in \mathbf{P}^1$ are projectively equivalent$\Leftrightarrow \lambda(z_1,\dots,z_4)=\lambda(z_1)$;
+					
+					\item In general, for points $p_i,p_i'\in \mathbf{P}^n$:
+					
+					$(p_1,\dots,p_{n+3})$ and $(p_1',\dots,p_{n+3}')$ are equivalent$\Leftrightarrow　\lambda(p_1,p_2;p_3,p_i)=\lambda(p_1',p_2';p_3',p_i');i=4,\dots,n+3$.
+				\end{itemize}
+			\end{proposition}
+			
+			\begin{proof}
+				\begin{itemize}
+					\item 
+					\item 
+				\end{itemize}
+			\end{proof}
+			
+			\subsubsection{Hypersurfaces}
+			
+			\begin{Def}
+				A hypersurface $X$ is a subvariety of $\mathbf{P}^n$ described as the zero locus of one single homogeneous polynomial 
+				
+				\begin{gather*}
+					F(Z_0,\dots,Z_n)
+				\end{gather*}
+				
+				And with the definintion later, we have $dim\Gamma=V(F)=n-1$.
+			\end{Def}
+			
+			\begin{lemma}
+				Every hypersurface $X$ can be described as a polynomial $F$ with no repeated prime factor.
+			\end{lemma}
+			
+			\begin{proof}
+				Via Hilbert's Nullstellensatz, for prime $f$,
+				
+				\begin{gather*}
+					I(V(f^e))=(f)\Rightarrow V(f)=V(f^e)
+				\end{gather*}
+				
+				Then, consider each component of $\Gamma=V(F)=V(\prod F_i^{e_i})=\coprod V(F_i)$
+			\end{proof}
+			
+			\textbf{Remark} Hilbert's Nullstellensatz is the tool, which could make the definition in classiacal algebraic geometry and the definition in algebraic geometry coincided. 
+			
+			
+			We must consider the condition, that for example, $f^n=0$.
+			
+			
+			
+			\subsubsection{Analytic Subvarieties and Submanifolds}
+			
+			\begin{example}
+				Observe \underline{the polynomial}
+				
+				\begin{gather*}
+					f\in \mathbb{C}[z_1,\dots,z_n]
+				\end{gather*}
+				
+				with complex coefficient are holomorphic function(Complex Analysis in Multivariable)
+				
+				An algebraic variety $X$ in $\mathbf{A}^n_\mathbf{C}$ or $\mathbf{P}^n_\mathbf{C}$ will be particular a complex analytic subvariety of these complex manifolds. 
+				
+				Notably, this give us an a priorinotion of dimension of an algebraic variety $X\subseteq \mathbf{P}_\mathbb{C}^n$, and likewise a smooth and singular points of $X$.
+			\end{example}
+			
+			\textbf{Remark} But the definition of dimension, smoothness and singularity is not algebraic...
+			
+			\begin{theorem}
+				(Chow's Theorem) If $X\subseteq \mathbb{P}^n_\mathbb{C}$ is any \textbf{complex analytic subvariety} then $X$ is an algebraic subvariety.
+			\end{theorem}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			This is an inverse version of statement above.
+			
+			\subsubsection{The Twisted Cubic}
+			
+			\begin{Def}
+				The \textbf{twisted cubic} given in terms of affine coordinates on both spaces by
+				
+				\begin{gather*}
+					v:x\mapsto (x,x^2,x^3) 
+				\end{gather*}
+				
+				And its image is the curve. Or in terms of homogeneous coordinates on both
+				
+				\begin{gather*}
+					v:[X_0,X_1]\mapsto [X_0^3,X_0^2X_1,X_0X_1^3,X_1^3]=[Z_0,Z_1,Z_2,Z_3]
+				\end{gather*}
+			\end{Def}
+			
+			$C$ lies on $3$ quadric surfaces $Q_0,Q_1$ and $Q_2$. Given by the zero locus of following homogeneous polynomials
+			
+			\begin{gather*}
+				\begin{cases}
+					Q_1:F_0(Z)=Z_0Z_2-Z_1^2\\
+					Q_2:F_1(Z)=Z_0Z_3-Z_1Z_2\\
+					Q_3:F_2(Z)=Z_1Z_3-Z_2^2
+				\end{cases}
+			\end{gather*}
+			
+			\begin{lemma}
+				\begin{itemize}
+					\item Show that for any $0\leq i\leq j\leq 2$, the surface $Q_i$ and $Q_j$ intersect in the union of $C$ and a line $L$;
+					\item Generally, for any $\lambda=[\lambda_0,\dots,\lambda_2]$, let 
+					
+					\begin{gather*}
+						F_\lambda=\lambda_0 F_0+\lambda_1 F_1+\lambda_2 F_2
+					\end{gather*}
+					
+					And $Q_\lambda$ is the surface defined by $F_\lambda$. Then, 
+					
+					\begin{gather*}
+						Q_\lambda\cap Q_\mu=L_{\lambda,\mu}\cup C
+					\end{gather*}
+				\end{itemize}
+			\end{lemma}
+			
+			\begin{proof}
+				\begin{itemize}
+					\item $Q_1\cap Q_2=\{(Z_0,Z_1,Z_2,Z_3)|Z_0Z_2-Z_1^2=0,Z_0Z_3-Z_1Z_2=0\}$
+					
+					$Q_1\cap Q_3=\{(Z_1,Z_2,Z_3,Z_4)|Z_0Z_2-Z_1^2=0,Z_1Z_3-Z_2^2=0\}$
+					
+					We have
+					
+					\begin{gather*}
+						Z_3F_0(Z)=Z_1 F_1(Z)\Rightarrow Z_1(Z_1Z_3-Z_2^2)=0\\
+						Z_2F_0(Z)=Z_0F_2(Z)\Rightarrow Z_2(Z_1^2-Z_0Z_2)=0
+					\end{gather*}
+					
+					When
+					
+					\begin{gather*}
+						Z_1=0\Rightarrow Z_0Z_2=0,Z_0Z_3=0\Rightarrow Z_0=0\\
+						Z_2=0\Rightarrow Z_1^2=0,Z_1Z_3=0\Rightarrow  Z_1=0
+					\end{gather*}
+					
+					\item Given in the part of determinant variety.
+				\end{itemize}
+			\end{proof}
+			
+			Family: 
+			
+			\subsubsection{Rational Normal Curve}
+			
+			\begin{Def}
+				This is the generalization of the twisted cubic:
+				
+				\begin{gather*}
+					v_d:P^1\rightarrow P^d\qquad [X_0:X_1]\mapsto [X_0^d,X_0^{d-1}X_1,\dots,X_1^d]=[Z_0,\dots,Z_d]
+				\end{gather*}
+				
+				The image $C\subseteq \mathbb{P}^d$ is readily seen to be common zero locus of polynomials
+				
+				\begin{gather*}
+					F_{i,j}(Z)=Z_iZ_j-Z_{i-1}Z_{j+1};1\leq i\leq j\leq d-1
+				\end{gather*}
+			\end{Def}
+			
+			\begin{proposition}
+				If $p_1,\dots,p_{kd+1}$ are any points on a rational normal curve of $\mathbb{P}^d$, then any polynomial $F$ of degree $k$ on $\mathbb{P}^d$ vanishing on the points $p_i$ vanish on $C$.
+				
+				\label{classical-algebraic-geometry-Fundamentals-rational-normal-curve-1}
+			\end{proposition}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			
+	
+			
+			
+			\subsubsection{Determinantal Representation of Rational Normal Curve}
+			
+			\begin{Def}
+				The rational normal curve can be represented as the zero locus of $det\begin{pmatrix}
+					z_{i}&z_{i+1}\\
+					z_{i+1}&z_{i+2}
+				\end{pmatrix}$, in general, can be represented as the matrix
+				
+				\begin{gather*}
+					\begin{pmatrix}
+						z_0&z_1\dots&z_{k}\\
+						z_1&z_2&\dots&z_{k+1}\\
+						\vdots&\vdots&\ddots&\vdots\\
+						z_{d-k}&\dots&\dots&Z_d
+					\end{pmatrix}
+				\end{gather*}
+				
+				with rank $1$.
+			\end{Def}
+			
+			\subsubsection{Another Parametrization of the Rational Normal Curve}
+			
+			\begin{Def}
+				内容...
+			\end{Def}
+			\subsubsection{The Family of Plane Conics}
+			
+			
+			
+			\subsubsection{Other Rational Curves}
+			
+			\begin{enumerate}
+				\item 
+				\item 
+				
+				\item 
+			\end{enumerate}
+			
+			
+			
+			\subsection{Quasi-Projective Varieties}
+			
+			\begin{Def}
+				An open subset of projective variety is \textbf{quasi-projective} variety.
+			\end{Def}
+		
+		\section{Regular Functions, Regular Maps and Irreducibility}
+		
+			\subsection{Zariski Topology}
+			
+			\begin{Def}
+				Define: 
+				
+				\begin{itemize}
+					\item Open and closed subsets in $\mathbb{A}^n$
+					
+					\begin{gather*}
+						\begin{cases}
+							D(f)=\{x\in \mathbb{A}^n|f(x)\not=0\}\\
+							V(f)=\{x\in \mathbb{A}^n|f(x)=0\}
+						\end{cases},f\in K[X_1,\dots,X_n]
+					\end{gather*}
+					\item Open and closed subsets in $\mathbb{P}^n$
+					
+					\begin{gather*}
+						\begin{cases}
+							D(F)=\{x\in \mathbb{P}^n|F(x)=0\}\\
+							V(F)=\{x\in \mathbb{P}^n|F(x)=0\}
+						\end{cases},F\in K[X_0,\dots,X_n]^h
+					\end{gather*}
+				\end{itemize}
+			\end{Def}
+			
+			\begin{lemma}
+				We have:
+				
+				\begin{itemize}
+					\item $\cap V(F_\alpha)=V(\{F_\alpha\})=V((F_\alpha))$;
+					\item $\cup V(F_\alpha)=V(\prod F_\alpha)$
+				\end{itemize}
+			\end{lemma}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				The Zariksi topology is Noetherian.
+			\end{proposition}
+			
+			\begin{proof}
+				According to Hilbert's basis theorem. 
+			\end{proof}
+			
+			\subsubsection{Quasi-Affine/Projective Variety}
+			
+			\begin{Def}
+				Especially: Let $X$ be a variety. An open subset $U\subseteq X$ is called a \textbf{quasi-projective variety}. 
+				
+				Equivalently, it is a locally closed subset of $\mathbb{P}^n$: For each 
+			\end{Def}
+			
+			We have the following statement
+			
+			\begin{center}
+				The quasi varieties is much larger than varieties.
+			\end{center}
+			
+			\textbf{Remark} Notice that: The topology is generated by those \textbf{principle elements}. But, what we must note, is that: 
+			
+			\begin{center}
+				Not every open/closed subset in Zariski topology is priciple.
+			\end{center}
+			
+			An obvious logic proof: The polynomial ring in multivariables is not PID.
+			
+		
+		
+			\subsection{Regular Functions on Affine Varieties}
+			
+				\begin{Def}
+					\begin{itemize}
+						\item Let $X\subseteq \mathbb{A}^n$ be a variety. We define the \textbf{ideal} of $X$ to be the ideal
+						
+						\begin{gather*}
+							I(X):=\{f\in K[z_1,\dots,z_n]|f\equiv 0\mbox{ on }X\}
+						\end{gather*}
+						
+						\item Define the \textbf{coordinate ring}
+						
+						\begin{gather*}
+							A(X):=K[z_1,\dots,z_n]/I(X)
+						\end{gather*}
+					\end{itemize}
+				\end{Def}
+				
+				A special case is the regular function on open subsets:
+				
+				\begin{Def}
+					(Affine)Let $U\subseteq X$ be an open subset. We say that a function $f$ on $U$ is \textbf{regular} at $p$ if in some neighborhood $V$ of $p$, the function can be expressed as a quotient
+					
+					\begin{gather*}
+						f|D(w)\cap X=\frac{g}{h};g,h\in K[z_1,\dots,z_n],h(p)\not=0
+					\end{gather*}
+					
+					$f$ is \textbf{regular on }$U$ if it is regular at every point of $U$.
+				\end{Def}
+				
+				\begin{lemma}
+					The ring of functions regular at every point of $X$ is the \textbf{coordinate ring} $A(X)$. 
+					
+					More generally, for $U=D(f)$, we have
+					
+					\begin{gather*}
+						A(U)=A(X)_f
+					\end{gather*}
+					
+					which is the localization.
+				\end{lemma}
+				
+				\begin{proof}
+					Important tool: A step of Hilbert's Nullstellensatz. 
+					
+					$h(z)\not=0,z\in D(w)\Leftrightarrow w(z)\not=0\Rightarrow h(z)\not=0\Rightarrow D(w)\subseteq D(h)$
+					
+					$f$ is regular on $U\Leftrightarrow \forall p\exists D(w),f|D(h)=\frac{g}{h}$.
+					
+					Now, we will prove that
+					
+					\begin{gather*}
+						A(X)=\{\mbox{The ring of functions regular at every point of }X\}
+					\end{gather*}
+					
+					Eqivalently, for $h\in K[X_1,\dots,X_n]$,
+					
+					\begin{gather*}
+						\mbox{image of }h\mbox{ is a unit in }A(X)\Leftrightarrow h\mbox{ is nowhere zero on }X
+					\end{gather*}
+					
+					$\Rightarrow$ Obviously; 
+					
+					$\Leftarrow$ Firstly, Suppose $h$ is nowhere zero on $X$. $V(h)\cap X=\varnothing$. According to Hilbert's Nullstellensatz(version for quotient correspondence), we have: In algebra $A(X)$
+					
+					\begin{gather*}
+						V(\bar{h})=\varnothing\Rightarrow \sqrt{\bar{h}}=A(X)\Rightarrow 1=g\cdot \bar{h}^e
+					\end{gather*}
+					
+					This implies, that $h$ is inversable in $A(X)$.
+					
+					
+				\end{proof}
+				
+				\subsubsection{Continuation of Regular Functions on Irrreducible Sets}
+				
+				\begin{proposition}
+					Suppose $X$ be an irreducilble variety. Then, any pair $(U,f)$ has a unique continuation $F$ on $X$ such that
+					
+					\begin{gather*}
+						F|U=f
+					\end{gather*}
+				\end{proposition}
+				
+				\begin{proof}
+					\begin{itemize}
+						\item Existence: Firstly, $(U,f)$ has a local representation 
+						
+						\begin{gather*}
+							f=\frac{g}{h^n}
+						\end{gather*}
+						
+						Then, take the finite covering 
+						
+						\begin{gather*}
+							X=\cup_{i=1}^n D(h_i)
+						\end{gather*}
+						
+						Because of $U$ is dense, so on every $D(h_i)\cap D(h_j)$, we have
+						
+						\begin{gather*}
+							\frac{g_i}{h_i^{n_i}}=\frac{g_j}{h_j^{n_j}}
+						\end{gather*} 
+						
+						Construct the global morphism
+						
+						\begin{gather*}
+							内容...
+						\end{gather*}
+						
+						\item Uniqueness: Omitted.
+					\end{itemize}
+				\end{proof}
+				
+				This construction is also applied for the proof on the Zariski topology of $Spec(A)$. 
+				
+			\subsection{Regular Functions on Projective Varieties}
+			
+			\subsection{Regular Maps}
+			
+			
+			
+				
+				
+			\subsection{The Veronese Map}
+			
+				\begin{Def}
+					For any $n,d$, define the \textbf{Veronese map}
+					
+					\begin{gather*}
+						v_d(\mathbb{P}^n):\mathbb{P}^n\rightarrow \mathbb{P}^N\qquad [X_0,\dots,X_n]\mapsto [\dots,X^l,\dots]
+					\end{gather*}
+					
+					where $X^l$ is the polynomial of degree $d$ in $X_0,\dots,X_n$. 
+				\end{Def}
+				
+				\begin{lemma}
+					We have the following relation 
+					
+					\begin{gather*}
+						N=\binom{n+d}{d}-1
+					\end{gather*}
+				\end{lemma}
+				
+				\begin{proof}
+					This is an enumeration problem. We should apply stars-and-bars method, for $n+d$ positions, $n$ stars and $d$ bars.
+				\end{proof}
+				
+				\begin{example}
+					Consider the quadratic Veronese map
+					
+					\begin{gather*}
+						v_2:\mathbb{P}^2\rightarrow \mathbb{P}^5\qquad [X_0,X_1,X_2]\mapsto [X_0^2,X_1^2,X_2^2,X_0X_1,X_0X_2,X_1X_2]
+					\end{gather*}
+					
+					And $Im(v_2)$ is called the \textbf{Veronese surface}.
+					
+					It can be represented as:
+					
+					\begin{gather*}
+						\begin{cases}
+							Z_0Z_1=Z_3^2\\
+							Z_0Z_2=Z_4^2\\
+							Z_1Z_2=Z_5^2\\
+							Z_3Z_5=Z_1Z_4\\
+							Z_4Z_5=Z_2Z_3\\
+							Z_3Z_4=Z_0Z_5
+						\end{cases}
+					\end{gather*}
+					
+					and has a determinantal representation of Veronese varieties
+					
+					\begin{gather*}
+						\begin{pmatrix}
+							Z_0&Z_3&Z_4\\
+							Z_3&Z_1&Z_5\\
+							Z_4&Z_5&Z_2
+						\end{pmatrix}
+					\end{gather*}
+					
+					has rank $1$.
+				\end{example}
+				
+				\subsubsection{Properties of Ideals of Veronese Variety}
+				
+				With this example, we can find its generalization: Let $I,J,K,L$ be the coordinate $(\alpha_0,\dots,\alpha_n),\sum \alpha_i=d$. 
+				
+				\begin{gather*}
+					X^IX^J=X^KX^L
+				\end{gather*}
+				
+				Then, we can associate index to coordinates in $\mathbb{P}^N$. So,
+				
+				\begin{proposition}
+					The Veronese variety is the intersection of quadric hypersurfaces
+					
+					\begin{gather*}
+						Im(v_d(\mathbb{P}^n))=\cap V(Z_IZ_J-Z_KZ_L)
+					\end{gather*}
+				\end{proposition}
+				
+				\begin{proof}
+					\begin{itemize}
+						\item $\subseteq$ Omitted.
+						
+						\item $\supseteq$ Conversely, the index and pair $(I,J)$ are bijective.
+					\end{itemize}
+				\end{proof}
+				
+				
+				
+				\subsubsection{Subvarieties}
+				
+				
+				In particular, we will consider the restriction of $v_d$ on linear subspace $\wedge\cong \mathbb{P}^k\subseteq \mathbb{P}^n$.
+				
+				\begin{example}
+					Consider a projective line in $\mathbb{P}^2$. Then, the image is plane curve on Veronese surface $S$.
+				\end{example}
+				
+				More generally:
+				
+				\begin{lemma}
+					Suppose $Y\subseteq \mathbb{P}^n$ be a variety. Then, its image under Veronese map is a subvareity of $\mathbb{P}^N$.
+				\end{lemma}
+				
+				\begin{proof}
+					Consider the induced mapping
+					
+					\begin{gather*}
+						k[y_0,\dots,y_N]\rightarrow k[x_0,\dots,x_n]\qquad y_\alpha\mapsto x_0^{a_0}\dots x_n^{a_n};\alpha=(a_0,\dots,a_n)
+					\end{gather*}
+					
+					via this map, we could define the \textbf{Veronese ideals}, which are the preimage of ideals in $k[X]$. Thus the image,which is the intersection of polynomials in the ideal of preimage, is also a subvariety.
+				\end{proof}
+				
+				
+				\subsubsection{Coordinate-Free Description}
+				
+			\subsection{The Segre Map}
+			
+				\begin{Def}
+					\label{Classical-Algebraic-Geometry-Segre-Map}Consider the map of Segre maps
+					
+					\begin{gather*}
+						\sigma:\mathbb{P}^n\times \mathbb{P}^m\rightarrow \mathbb{P}^{(n+1)(m+1)-1}\qquad ([X_0,\dots,X_n],[Y_0,\dots,Y_m])\mapsto [\dots,X_iY_j,\dots]
+					\end{gather*}
+					
+					where the coordinates in the target space range over all pairwise product of coordinates $X_i,Y_j$. 
+					
+					The image is called \textbf{Segre variety}. Take the notation of 
+					
+					\begin{gather*}
+						\Sigma_{m,n}=\cap_{i,j}V(Z_{i,j}\cdot Z_{k,l}-Z_{i,l}\cdot Z_{k,j})
+					\end{gather*}
+				\end{Def}
+				
+				It is also a determinantal variety, via zero locus of 2$\times$ 2 minor.
+				
+				\begin{example}
+					The first example is $\Sigma_{1,1}\subseteq \mathbb{P}^3$. It is the zero locus of
+					
+					\begin{gather*}
+						内容...
+					\end{gather*}
+					
+					whose image is simply a quadric surface. Note that: The fibers of two projections maps
+					
+					\begin{gather*}
+						\mathbb{P}^{n+m}\rightarrow \mathbb{P}^n,\mathbb{P}^m
+					\end{gather*} 
+					
+					Consider a fiber of $\mathbb{P}^1\times \mathbb{P}^1$, 
+				\end{example}
+				
+				\begin{example}
+					(Segre Threefold)
+				\end{example}
+				
+				\subsubsection{Subvarieties of Segre Varieties}
+				
+				
+				
+			\subsection{Product, Fibre Product, Tensor Product}
+			
+				\subsubsection{Product}
+				
+				\subsubsection{Fibre Product}
+				
+				\subsubsection{Tensor Product}
+				
+			\subsection{Graphs}
+				
+				\begin{proposition}
+					Let $X\subseteq\mathbb{P}^n$ be any projective subvariety, and $\varphi:X\rightarrow \mathbb{P}^m$ is a regular map. Then,
+					
+					\begin{gather*}
+						\Gamma_\varphi\subseteq X\times \mathbb{P}^n= \mathbb{P}^n\times \mathbb{P}^m
+					\end{gather*}
+					
+					is a variety.
+				\end{proposition}
+				
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+			\subsection{Category of Varieties}
+			
+				\begin{Def}
+					内容...
+				\end{Def}
+				
+		\section{Smoothness and Dimension}
+		
+			\subsection{Smooth and Singular Points}
+			
+				\subsubsection{(Zariski Affine) Tangent Space of Hyperplane}
+				
+					\begin{Def}
+						To begin, we will consider the situation: Assume that 
+						
+						\begin{gather*}
+							V=V(f)
+						\end{gather*}
+						
+						Let $P=(a_1,\dots,a_n)\in V$. The \textbf{tangent space} is the \underline{hypersurface} $V$, in the form of 
+						
+						\begin{gather*}
+							T_pV:=\{(x_1,\dots,x_n)\in A^n_k|\sum_{i=1}^n \frac{\partial f}{\partial x_i}(x_i-a_i)=0\}
+						\end{gather*}
+						
+						where $\frac{\partial f}{\partial x_i}$ is the formal derivative of $f$ with respect to $x_i$.
+					\end{Def}
+					
+					
+					
+					\begin{lemma}
+						Let $L\subseteq \mathbb{A}^n_k$ be an affine line through $P$. Then: $P$ is a multiple root of $f|L$ $\Leftrightarrow L\subseteq T_p V$ 
+					\end{lemma}
+					
+					\begin{proof}
+						With parametrization
+						
+						\begin{gather*}
+							L:x_i=a_i+b_it,i=1,\dots,n
+						\end{gather*}
+						
+						Then, let $g=f|L$,
+						
+						\begin{gather*}
+							g(t)=f(a_1+b_1t,\dots,a_n+b_nt);t\in \mathbb{A}^1
+						\end{gather*}
+						
+						$P=(a_1,\dots,a_n)\in V$. We have
+						
+						\begin{gather*}
+							g(0)=f|L(P)=0
+						\end{gather*}
+						
+						Then, $g$ has multiroot at $0\Leftrightarrow \frac{\partial g}{\partial t}=0\Leftrightarrow \sum_{i=1}^n b_i \frac{\partial f}{\partial t_i}=0\Leftrightarrow L\subseteq T_p V$
+					\end{proof}
+					
+					\begin{Def}
+						\begin{itemize}
+							\item $P$ is called \textbf{smooth point} of hypersurface $V$ if there is some $i$ such that
+							
+							\begin{gather*}
+								\frac{\partial f}{\partial x_i}(P)=0
+							\end{gather*} 
+							
+							or equivalently, $(\frac{\partial f}{\partial x_i})(P)\not=0$. Take the notation of collection of smooth points in $V\subseteq \mathbb{A}^n_K$ by $V_{smooth}$.
+							
+							\item Elsewise is \textbf{singular}.
+						\end{itemize}
+					\end{Def}
+					
+					Under these definitions, we could get the conclusion immediately: For hypersurface $V$
+					
+					\begin{itemize}
+						\item $P$ is smooth$\Leftrightarrow T_p V$ is affine hyperplane;
+						\item $P$ is singular$\Leftrightarrow T_pV=\mathbf{A}^n_K$.  
+					\end{itemize}
+					
+					\begin{proposition}
+						For an \underline{irrducible affine hyperplane},$V_{smooth}$ is open and dense in $V$.
+					\end{proposition}
+					
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\subsubsection{Tangent Space of Irrducible Variety}
+					
+					\begin{Def}
+						Let $f\in K[X_1,\dots,X_n]$. Then, the \textbf{linear part} of $f$ at $P=(a_1,\dots,a_n)$ is defined as
+						
+						\begin{gather*}
+							f^{(1)}_P=\sum_{i=1}^n \frac{\partial f}{\partial x_i}(P)(x_i-a_i)
+						\end{gather*}
+					\end{Def}
+					
+					\begin{Def}
+						\begin{itemize}
+							\item Let $V$ be an irrducible affine variety. Then,
+							
+							\begin{gather*}
+								T_p V:=\cap_{f\in I(V)} f^{(1)}_P \subseteq \mathbb{A}^n_1
+							\end{gather*}
+							
+							\item For an irrdcible variety,
+							
+							\begin{gather*}
+								dimV:=\min\{T_pV|p\in V\}
+							\end{gather*}
+							
+							immediately follows, $dimV\geq dim T_p V$.
+						\end{itemize}
+					\end{Def}
+					
+					\begin{proposition}
+						The function
+						
+						\begin{gather*}
+							X\rightarrow\qquad \qquad p\mapsto dimT_p X
+						\end{gather*}
+						
+						is upper semi-continuous.
+					\end{proposition}
+					
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{proposition}
+						内容...
+					\end{proposition}
+					
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{Def}
+						(Dimension) 
+						
+						\begin{itemize}
+							\item 
+							\item 
+							\item 
+						\end{itemize}
+					\end{Def}
+					
+					\subsubsection{Jacobian Criterion}
+					
+					\subsubsection{Zariski Cotangent Space}
+					
+						\begin{Def}
+							Let $X$ be a variety. Then, define the \textbf{Zariski cotangent space}
+							
+							\begin{gather*}
+								T^*_p(X)=\mathfrak{m}/\mathfrak{m}^2\qquad \mathfrak{m}\subseteq \mathcal{O}_{X,p}
+							\end{gather*}
+							
+							Then, the Zariski tangent space can be defined as the dual of Zariski cotangent space
+							
+							\begin{gather*}
+								T_p(X)=(T_p^*(X))^*
+							\end{gather*}
+						\end{Def}
+					
+					
+					\subsubsection{Example:Real and Smooth Manifolds}
+					
+					
+			
+			\subsection{Algebraic Characterizations}
+			
+			
+		\section{Ideals of Varieties, Irreducible Decomposition and Nullstellensatz}
+		
+		\subsection{Generating Ideals}
+		
+		Correspodnece:
+		
+		\begin{center}
+			\begin{tikzcd}
+				\{\mbox{Subvarieties of }\mathbb{A}^n\}\arrow[r,shift left=4,"I"]&\{\mbox{Ideals }I\subseteq K[z_1,\dots,z_n]\}\arrow[l,shift left=4,"V"]
+			\end{tikzcd}
+		\end{center}
+		
+		\begin{theorem}
+			For any ideal $I\subseteq k[z_1,\dots,z_n]$, the ideal of functions vanishing on the common zero locus of $I$ is the radical of $I$. i.e.
+			
+			\begin{gather*}
+				I(V(I))=\sqrt{I}
+			\end{gather*}
+		\end{theorem}
+		
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\subsection{Ideals of Projective Varieties}
+		
+		\begin{Def}
+			The projective v
+		\end{Def}
+		
+		\begin{proposition}
+			
+		\end{proposition}
+		
+		\subsection{Irreducible Varieties and Irreducible Decomposition}
+		
+		\begin{Def}
+			We say: A variety is \textbf{irreducible} if for any pair of closed subvarieties $Y,Z\subseteq X$,
+			
+			\begin{gather*}
+				Y\cup Z=X\Rightarrow X=Y\mbox{ or }X=Z
+			\end{gather*}
+		\end{Def}
+		
+		\begin{lemma}
+			$X\subseteq \mathbb{A}^n$ is irreducible $\Leftrightarrow$ Ideal $I(X)\subseteq k[x_1,\dots,x_n]$ is prime.
+		\end{lemma}
+		
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{proposition}
+			A variety $X$ is irreducible iff every Zariski open subset of $X$ is dense. i.e. Every two Zariski open subsets of $X$ meet.\label{Classical-Algebraic-Geometry-Zariski-Open-Subset-is-Dense}
+		\end{proposition}
+		
+		\begin{proof}
+			Suppose $X$ be irreducible, $U\subseteq X$ be Zariski open, then for $V\subseteq X$
+			
+			$U\cap V=\varnothing\Leftarrow (X-U)\cup (X-V)=X$. Contradiction.
+			
+		\end{proof}
+		
+		\begin{proposition}
+			\begin{itemize}
+				\item Any variety $X$ may be uniquly expressed as a finite union of irreducible subvarieties $X_i$ with $X_i\not\subseteq X_j,i\not=j$;
+				\item 
+			\end{itemize}
+		\end{proposition}
+		
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{theorem}
+			内容...
+		\end{theorem}
+		
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\subsection{General Object}
+		
+		\subsection{Algebras}
+		
+		\section{Cones, Projection and More about Product}
+		
+		\begin{example}
+			(Cones) Here we start with the \underline{hypersurface} $\mathbb{P}^{n-1}\subseteq \mathbb{P}^n$, as a hypersurface given by
+			
+			\begin{gather*}
+				Z_n=0
+			\end{gather*}
+			
+			Take point $p=[0:\dots:1]$. Let $X\subseteq \mathbf{P}^{n-1}$ be any \underline{variety}. Then, we then define the \textbf{cone}
+			
+			\begin{gather*}
+				\overline{X,p}=\cup_{q\in X}\overline{qp}
+			\end{gather*}
+			
+			of the lines joining $p$ to points of $X$.
+			
+			$\overline{X,p}$ is easily to seen to be a variety: If wew choose coordinates as earlier and $X\subseteq \mathbf{P}^{n-1}$ is the locus of polynomials
+			
+			\begin{gather*}
+				F_\alpha=F_\alpha(Z_0,\dots,Z_{n-1})
+			\end{gather*}
+			
+			And the line $\overline{qp}$ is specified by: Suppose $q=[\alpha_0,\dots,\alpha_{n-1},0]\in X$
+			
+			\begin{gather*}
+				\overline{qp}=\overline{[Span((\alpha_0,\dots,\alpha_{n-1},0),(0,\dots,0,1)])}\\
+				=Span[\{(\lambda \alpha_0,\dots,\lambda \alpha_{n-1},\mu)|\lambda,\mu\in K\}]\\
+				=\{[(a_0,\dots,a_{n-1}),[\mu]]|\mu\in K\}
+			\end{gather*}
+			
+			Then, the cone $\overline{X,p}$ will be the locus of 
+			
+			\begin{gather*}
+				F_\alpha\in K[Z_0,\dots,Z_n]
+			\end{gather*}
+		\end{example}
+		
+		\begin{Def}
+			\label{Classical-Algebra-Projections}(Generation of Cones) Let: $\wedge\cong \mathbb{P}^k\subseteq \mathbb{P}^n$ and $\Psi\cong \mathbb{P}^{n-k-1}$ be its complementary linear subspaces. i.e. $\wedge\oplus \psi=\mathbb{P}^n$.
+			
+			Let $X\subseteq \Psi$ be any variety. We can define the \textbf{cone} $\overline{X,\wedge}$ over $X$ with,
+			
+			\begin{gather*}
+				\overline{X,\wedge}=\cup_{p\in \wedge} \overline{X,p} 
+			\end{gather*}
+			
+			or equivalently.
+			
+			\begin{gather*}
+				\overline{X,\wedge}=\cup_{q\in X} \overline{q,\wedge}
+			\end{gather*}
+		\end{Def}
+		
+		\begin{proposition}
+			Let $\Psi$ and $\wedge\subseteq \mathbb{P}^n$ be complementary linear subspaces as earlier, and $X\subseteq \Psi$ and $Y\subseteq \wedge$ subvarieties. 
+			
+			The union of all lines joining points of $X$ to points of $Y$ is a variety.
+		\end{proposition}
+		
+		\begin{proof}
+			Suppose 
+		\end{proof}
+		
+		\subsubsection{The Joint of Two Varieties}
+		
+		\begin{Def}
+			(H\&F, P88) 
+		\end{Def}
+		
+		
+		
+		\subsection{Quadrics}
+		
+		\begin{example}
+			(Quadrics) Suppose $char(K)\not=2$.
+			
+			\begin{Def}
+				A \textbf{quadratic hypersurface} $Q\subseteq \mathbb{P}V=\mathbf{P}^n$ is given as the zero locus of a homogeneous quadratic polynomial
+				
+				\begin{gather*}
+					Q:V\rightarrow K
+				\end{gather*}
+				
+				Then, the associated bilinear form can be denoted as $Q_0$,
+				
+				\begin{gather*}
+					Q_0(v,w)=\frac{Q(v+w)-Q(v)-Q(w)}{2}
+				\end{gather*} 
+				
+				Then,
+				
+				\begin{gather*}
+					\tilde{Q}:V\rightarrow V^*\qquad v\mapsto (w\mapsto Q_0(v,w))
+				\end{gather*}
+			\end{Def}
+		\end{example}
+		
+		\subsubsection{Classifying Problem of Quadratics}
+		
+		\begin{proposition}
+			(Gram-Schmidt)Every quadratic form can be written in the form of 
+			
+			\begin{gather*}
+				\sum x_i^2
+			\end{gather*} 
+			
+			via choosing Basis.
+		\end{proposition}
+		
+		\begin{proof}
+			In linear algebra.
+		\end{proof}
+		
+		Rank of Quadrics: 
+		
+		More information about quadrics should is given here: \ref{Classical-Algebraic-Geometry-Quadrics}.
+		
+		
+		\subsection{Projection}
+		
+		\subsubsection{Resultant}
+		
+		This is a short introduction, aim to provide the tool of proof for the theorem later.
+		
+		
+		\begin{example}
+			\begin{Def}
+				Let the hyperplane $\mathbb{P}^{n-1}\subset \mathbb{P}^n$ and the point $p\in \mathbb{P}^n-\mathbb{P}^{n-1}$(as what we did for cone). Then, we can define a map
+				
+				\begin{gather*}
+					\pi_p:\mathbb{P}^n-\{p\}\rightarrow \mathbb{P}^{n-1}\\
+					q\mapsto \overline{qp}\cap \mathbb{P}^{n-1}
+				\end{gather*}
+			\end{Def}
+			
+			\begin{theorem}
+				The projection $\bar{X}$ of $X$ from $p$ to $\mathbb{P}^{n-1}$ is a projective variety.
+			\end{theorem}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+		\end{example}
+		
+		\begin{example}
+			(Definition of Cones via Projection)
+		\end{example}
+		
+		\subsubsection{Constructible Sets}
+		
+		
+		
+		
+		\section{Rational Function and Rational Maps}
+		
+		A useful lemma:
+		\begin{lemma}
+			(Hartshorne, P24)Suppose $X,Y$ be varieties. And $\varphi,\psi$ are two morphism $X\rightarrow Y$. Suppose there is a nonempty open subset $U\subseteq X$ such that
+			
+			\begin{gather*}
+				\varphi|U=\psi|U
+			\end{gather*}
+			
+			Then, $\varphi=\psi$.
+		\end{lemma}
+		
+		\begin{proof}
+			Suppose $Y\subseteq\mathbb{P}^n$. Then, by composing 
+			
+			\begin{gather*}
+				Y\hookrightarrow \mathbb{P}^n
+			\end{gather*}
+			
+			We can reduce this problem to the case $Y=\mathbb{P}^n$. Then, take the product of maps
+			
+			\begin{gather*}
+				\varphi\times \psi:X\rightarrow \mathbb{P}^n\times \mathbb{P}^n
+			\end{gather*}
+			
+			Notice: The space $\mathbb{P}^n\times \mathbb{P}^n$ is a projective variety via segre map. And consider the following closed subset 
+			
+			\begin{gather*}
+				\Delta=\{P\times P|P\in \mathbb{P}^n\}
+			\end{gather*}
+			
+			which is closed in $\mathbb{P}^n\times \mathbb{P}^n$, specified by the equations(from the conditions of projective coordinate)
+			
+			\begin{gather*}
+				x_iy_j-x_jy_i=0
+			\end{gather*}
+			
+			So, $\Delta=\cap V(x_iy_j-x_jy_i)\cap (\mathbb{P}^n\times \mathbb{P}^n)$ is closed. And $U$ is dense in $X$,$\Delta$ is closed, so $(\varphi\times\psi)(X)\subseteq \Delta$. Thus $\psi=\varphi$.(Apply the conclusion here \ref{Classical-Algebraic-Geometry-Zariski-Open-Subset-is-Dense})
+		\end{proof}
+		
+		\begin{Def}
+			We loosely define, that an variety is \textbf{affine} if its isomorphic to an affine variety.
+		\end{Def}
+		
+		\begin{lemma}
+			Let $Y=V(f)\subseteq \mathbb{A}^n$ be a hypersurface.
+			
+			Then, $\mathbb{A}^n-Y$ is isomorphic to the hypersurface in $\mathbb{A}^{n-1}$, given by $x_{n+1}f=1$.
+			
+			\begin{gather*}
+				\mathbb{A}^n\supseteq V(f)\cong V(x_{n+1}f-1)\subseteq \mathbb{A}^{n+1}
+			\end{gather*}
+			
+			In particular, $A^n-Y$ is affine, the coordinate ring is $k[x_1,\dots,x_n]_f$. 
+		\end{lemma}
+		
+		\begin{proof}
+			Define:
+			
+			\begin{gather*}
+				\varphi:H\rightarrow \mathbb{A}^n-Y\\
+				(a_1,\dots,a_{n+1})\mapsto (a_1,\dots,a_n)
+			\end{gather*}
+			
+			which is correspondent to $A\rightarrow A_f$. 
+			
+			To show $\varphi$ is an isomrophism, inverse $(a_1,\dots,a_n)\mapsto (a_1,\dots,a_n,\frac{1}{f(a_1,\dots,a_n)})$.
+		\end{proof}
+		
+		\begin{corollary}
+			On any variety $Y$, there is a base for the topology consisting of open affine subsets.
+		\end{corollary}
+		
+		\begin{proof}
+			Especially, we will finish the proof for projective/quasi-projective varieties. 
+		\end{proof}
+		
+		\subsection{Affine Rational Functions}
+		
+		
+		\begin{Def}
+			Let $X\subseteq \mathbb{A}^n$ be an irreducible affine variety. $A(X)$ is an integral domain. We can form a quotient field
+			
+			\begin{gather*}
+				K(X):=Quot(A(X))
+			\end{gather*}
+			
+			Elements $h\in K(X)$ can be written as $h=f/g;f,g\in A(X)$, which are regular.
+		\end{Def}
+		
+		\textbf{Remark} It is allowed, that at some point $p\in X$, we have the value at some points
+		
+		\begin{gather*}
+			\frac{\infty}{\infty}\qquad \frac{0}{0}
+		\end{gather*}
+		
+		So, the rational function is not a real function $X\rightarrow K$.
+		
+		\begin{proposition}
+			Such $K(X)$ is a field.
+		\end{proposition}
+		
+		\begin{proof}
+			$A(X)$ is integral domain.
+		\end{proof}
+		
+		\begin{proposition}
+			Suppose $X$ be irreducible, and $U$ be an open subset. Then, we have
+			
+			\begin{gather*}
+				K(U)=K(X)
+			\end{gather*}
+		\end{proposition}
+		
+		\begin{proof}
+			Firstly, consider the open covering
+			
+			\begin{gather*}
+				U=\cup D(f_i)
+			\end{gather*}
+			
+			Then, we could consider the pasting
+			
+			\begin{gather*}
+				\mathcal{O}_X(U)=\{(s_1,\dots,s_r)\in \prod A_{f_i}|s_i|D(f_i)\cap D(f_j)=s_j|D(f_i)\cap D(f_j)\}
+			\end{gather*}
+			
+			or directly, define the affine ring of $U$ be the subalgebra generated by $A_{f_1}\cup \dots\cup A_{f_r}$. Finally we have
+			
+			\begin{gather*}
+				\mathcal{O}_X(U)=A(U)=A[A_{f_1},\dots,A_{f_r}]
+			\end{gather*}
+			
+			via the embedding $A_{f_i}\hookrightarrow K(X)$
+			
+			$X$ is irreducible. So, there there exists a unique embedding
+			
+			\begin{gather*}
+				\mathcal{O}_X(U)\hookrightarrow K(X)
+			\end{gather*}
+		\end{proof}
+		
+		\begin{proposition}
+			Suppose $X$ be an irreducible subset.
+			
+			The definition via quotient field and the definition via regular function on open subset are equivalent.
+		\end{proposition}
+		
+		\begin{proof}
+			
+			Take the following notation: $K(X)$ for the equivalence class via intersection, and $Quot(A(X))$ for the formal function field.
+			
+			\begin{itemize}
+				\item $\subseteq$ Given two local regular functions $(U,\frac{f_U}{g_U}));(V,\frac{f_V}{g_V})$ can be seen as the element in $K(U),K(V)$. Then, $\frac{f_U}{g_U}|U\cap V=\frac{f_V}{g_V}|U\cap V$, correspondent to the element in $K(U\cap V)=K(X)$. 
+				\item $\supseteq$ With the lemma above.
+			\end{itemize}
+		\end{proof}
+		
+		
+		
+		
+		
+		\subsection{Projective Rational Functions}
+		
+		\begin{Def}
+			Two formal definitions are given:
+			
+			\begin{itemize}
+				\item Via affine opens: By $U=X\cap \mathbb{A}^n$ of any affine open;
+				
+				\item Via formal quotient of homogenous polynomials:
+				
+				\begin{gather*}
+					h(Z)=\frac{f(Z)}{g(Z)};deg(f)=deg(g);f,g\in S(X)=K[X_1,\dots,X_n]^h/I(X)^h
+				\end{gather*}
+			\end{itemize}
+		\end{Def}
+		
+		\begin{proposition}
+			The two formal definitions are equivalent.
+		\end{proposition}
+		
+		\begin{proof}
+			With the affinization map $\mathbb{A}^n\hookrightarrow \mathbb{P}^n$.
+		\end{proof}
+		
+		\textbf{Remark} Furthermore, we can develope the theory on the reducible variety. Any variety can be written as the union of
+		
+		\begin{gather*}
+			X=\cup_{i=1}^n X_i
+		\end{gather*}
+		
+		Then, the quotient $K(X)$ is a ring. We have
+		
+		\begin{gather*}
+			I(X)=\cap{i=1}^n I(X_i)\\
+			A(X)=K[X_1,\dots,X_n]/I(X),A(X_i)=K[X_1,\dots,X_n]/I(X_i)\\
+			K(X)\hookrightarrow \prod K(X_i)
+		\end{gather*}
+		
+		
+		
+		
+		\subsection{Rational Maps}
+		
+		\subsubsection{Rational Map in $\mathbb{A}^n$}
+		
+		\begin{Def}
+			\begin{itemize}
+				\item Let $X$ be an irreducible variety. A \textbf{rational map} $\varphi$ from $X$ to $\mathbb{A}^n$ given by an $n$-turple of rational functions. i.e.
+				
+				\begin{gather*}
+					\varphi(x)=(h_1(x),\dots,h_n(x));h_i(x)\in K(X)
+				\end{gather*}
+				
+				
+				
+				\item Likewise, define a \textbf{rational map} $\varphi$ from $X$ to $\mathbb{P}^n$
+				
+				\begin{gather*}
+					\varphi(x)=[h_0(x),\dots,h_n(x)]
+				\end{gather*}
+			\end{itemize}
+		\end{Def}
+		
+		\textbf{Remark}: Another form of rational map in projective space.
+		
+		
+		
+		\subsubsection{Rational Maps}
+		
+		\begin{Def}
+			Let $X$ be an irreducible variety and $Y$ any variety. A \textbf{rational map}
+			
+			\begin{gather*}
+				\varphi:X\rightarrow Y
+			\end{gather*}
+			
+			is defined to be an equivalence class of pairs $(U,\gamma)$ with:
+			
+			\begin{itemize}
+				\item $U\subseteq X$ a dense Zariski open subset; and 
+				\item $\gamma:U\rightarrow Y$ a regular map
+			\end{itemize}
+			
+			Two pairs are equivalent if $\gamma|U\cap V=\eta|U\cap V$. Take the notation of the collection
+			
+			\begin{gather*}
+				Rat(X,Y)
+			\end{gather*}
+		\end{Def}
+		
+		With the discussion above, we have
+		
+		\begin{gather*}
+			Rat(X,Y)\cong Rat(U,Y);U\mbox{ open}\\
+			Rat(X,W)\hookrightarrow Rat(X,Y);W\subseteq Y\mbox{ open}
+		\end{gather*}
+		
+		And $Rat(X,W)$ is defined via $[(U,\gamma)],\gamma(U)\not\subseteq Y-W$.
+		
+		\begin{Def} 
+			
+			\begin{itemize}
+				\item 
+				(Composition of Rational Maps) Consider the representive element $\varphi=[(U,f)]:X\rightarrow Y,\eta=[(V,g)]:Y\rightarrow Z$. Then, the composition
+				
+				\begin{gather*}
+					\eta\circ\gamma=[(f^{-1}V,g\circ f)]
+				\end{gather*}
+				
+				\item (Inclusion,Restriction) Inclusion $\eta:Z\rightarrow X$,
+				
+				\begin{gather*}
+					\eta=[(U,\iota)]
+				\end{gather*}
+			\end{itemize}
+		\end{Def}
+		
+		\begin{example}
+			The simplest example of a rational map that is not regular is the map
+			
+			\begin{gather*}
+				\varphi:\mathbb{A}^2\rightarrow \mathbb{P}^1\\
+				(x,y)\mapsto [x,y]
+			\end{gather*}
+			
+			Note that: 
+			
+			\begin{itemize}
+				\item This map is defined exactly on $\mathbb{A}^2-\{(0,0)\}$: Consider the intersection of 
+				
+			\end{itemize}
+			
+			Completing, we may think of $\varphi$ as a rational map from $\mathbb{P}^2$ to $\mathbb{P}^1$
+		\end{example}
+		
+		\begin{example}
+			Generalization: For any plane $\wedge\cong \mathbb{P}^k$, the projection map 
+			
+			\begin{gather*}
+				\pi_A:\mathbb{P}
+			\end{gather*}
+		\end{example}
+		
+		\subsection{Graphs}
+		
+		
+		\begin{Def}
+			Let $X$ be an irreducible projective variety and $\varphi:X\rightarrow \mathbb{P}^n$ be a rational map.
+			
+			Let $U\subseteq X$ be an open subset where $\varphi$ is defined. The graph
+			
+			\begin{gather*}
+				\varphi|U
+			\end{gather*}
+			
+			is as we have seen a closed subvariety $U\times \mathbb{P}^n$. The \textbf{graph} of the rational map $\varphi$ will mean closure $\Gamma_\varphi$ in $X\times \mathbb{P}^n$ of graph of $\varphi|U$.
+			
+			\begin{gather*}
+				\Gamma_\varphi=\overline{\varphi|U}
+			\end{gather*}
+		\end{Def}
+		
+		\begin{proposition}
+			Let $X$ be irreducible.
+			
+			The closure, denoted as $\Gamma_\varphi$, is independent of the choice of open subset $U$.
+		\end{proposition}
+		
+		\begin{proof}
+			$\overline{\varphi|U}=\overline{\varphi|V}$. Notice that $\bar{U}=\bar{V}$. We just do the comparation for images. Notice that
+			
+			\begin{gather*}
+				\overline{\varphi(U)}=\overline{\varphi(V)}
+			\end{gather*}
+			
+			Notice that $\varphi(U)\subseteq \varphi(X)\subseteq \overline{\varphi(V)}$, we have $\overline{\varphi(U)}=\overline{\varphi(V)}$.
+		\end{proof}
+		
+		\begin{itemize}
+			\item Its closure is a closed subvariety of $X\times \mathbb{P}^n$;
+			
+			\item The projection $\pi_2(\Gamma_\varphi)$ of the graph $\Gamma_\varphi$ to $\mathbb{P}^n$ is a gain a projective variety. 
+		\end{itemize}
+		
+		\begin{Def}
+			(Inverse Image) Let $Z\subseteq \mathbb{P}^n$. Then, the \textbf{inverse image} $\varphi^{-1}(Z)$ of $Z$ in $X$ to be the image
+			
+			\begin{gather*}
+				\varphi^{-1}(Z):=\pi_1(\pi_2^{-1}(Z))
+			\end{gather*}
+			
+			where $\pi_1:\Gamma_\varphi\rightarrow X,\pi_2:\Gamma_\varphi\rightarrow\mathbb{P}^n$ are projections.
+			
+			Let $Y\subseteq X$, we define the \textbf{image} or \textbf{total transform} of $Y$ under $\varphi$ to be the image
+			
+			\begin{gather*}
+				\varphi(Y):=\pi_2(\pi_2^{-1}(Y))
+			\end{gather*}
+		\end{Def}
+		
+		\textbf{Remark} Let $Z\subseteq Y$ be a subvariety such that the restriction of $\varphi$ to $Z$ is defined. The graph
+		
+		\begin{gather*}
+			\Gamma_\eta\subseteq Z\times \mathbb{P}^n\Rightarrow \Gamma_\eta\subseteq (\pi_1)^{-1}(Z)=\Gamma_\varphi\cap (Z\times \mathbb{P}^n)\subseteq X\times \mathbb{P}^n
+		\end{gather*}
+		
+		But they may not be equal. 
+		
+		\subsubsection{Rational Normal Curve}
+		
+		\begin{proposition}
+			内容...
+		\end{proposition}
+		
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\subsubsection{General Fiber}
+		
+		\begin{proposition}
+			内容...
+		\end{proposition}
+		
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\subsubsection{Domain of Regularity}
+		
+		\begin{proposition}
+			Let $\varphi:X\dashrightarrow \mathbb{P}^n$ be a rational map. $\Gamma_\varphi$ be a graph. 
+			
+			There is a unique maximal open subset $U\subseteq X$ such that the projection $\pi_1$ on the first factor induces an isomorphism
+			
+			\begin{gather*}
+				\Gamma_\varphi\supseteq \pi_1^{-1}(U)\Leftrightarrow U
+			\end{gather*}
+			
+			There is a pair $(U,f)$ in the equivalence class $\varphi$ such that for all $(V,g)\in \varphi,V\subseteq U$.
+		\end{proposition}
+		
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		
+		\subsection{Birational Isomorphisms}
+		
+		\subsubsection{Dominant}
+		
+		Consider the rational map $\varphi:X\rightarrow Y,\psi:Y\rightarrow Z$ and their composition. Then, we want to calculate the value, for $\varphi=[(U,f)],\psi=[(V,g)]$, we have 
+		
+		\begin{gather*}
+			g(f(x));x\in f^{-1}V\cap U
+		\end{gather*} 
+		
+		But then, a question is: If $f(U)\subseteq Y-V$, the composition is meaningless. 
+		
+		\begin{Def}
+			Let $\varphi:X\rightarrow Y$ be a rational map. Then, $X$ is \textbf{dominant} if
+			
+			\begin{gather*}
+				\overline{f(X)}=Y
+			\end{gather*}
+		\end{Def}
+		
+		Now, $g\circ f$ is well-defined on $f^{-1}(V)\cap U$.
+		
+		\textbf{Remark} This is not surjective.
+		
+		\subsubsection{Pullback}
+		
+		\begin{Def}
+			Let $\varphi:X\rightarrow Y$ be a rational map. In particular, if $f\in K(Y)$ is a rational function, $\varphi^*f$ is the \textbf{pullback}
+			
+			\begin{gather*}
+				\varphi^*(f):=f\circ \varphi
+			\end{gather*}
+			
+			And induces the inclusion 
+			
+			\begin{gather*}
+				K(Y)\hookrightarrow K(X)
+			\end{gather*}
+		\end{Def}
+		
+		\subsubsection{Birationality}
+		
+		\begin{Def}
+			A rational map $\varphi:X\rightarrow Y$ is \textbf{birational} iff there exists a rational map $\psi:Y\rightarrow X$ such that 
+			
+			\begin{gather*}
+				\gamma\circ \psi=id_Y\qquad \psi\circ \gamma=id_X
+			\end{gather*}
+		\end{Def}
+		
+		\begin{theorem}
+			The following conditions are equivalent:
+			
+			\begin{itemize}
+				\item $K(X)\cong K(Y)$;
+				
+				\item There exists nonempty open subsets $U\subseteq X$ and $V\subseteq Y$ isomorphic to one another.
+			\end{itemize}
+		\end{theorem}
+		
+		\begin{proof}
+			\begin{itemize}
+				\item 
+				\item 
+			\end{itemize}
+		\end{proof}
+		
+		\begin{Def}
+			(Rational Variety) We say a variety is \textbf{rational} if:
+			
+			\begin{itemize}
+				\item $X$ is birational to $\mathbb{P}^n$;
+				\item $K(X)\cong K(x_1,\dot,x_n)$;
+				\item $X$ possesses an open subset $U$ isomorphic to an open subset of $\mathbb{A}^n$;
+			\end{itemize}
+			
+			Elsewise irrational.
+		\end{Def}
+		
+		\begin{example}
+			(The Quadric Surface) Consider the quadric surface. It has a standard form of 
+			
+			\begin{gather*}
+				Z_0Z_3-Z_1Z_2=0
+			\end{gather*}
+			
+			Take $\varphi:[Z_0,\dots,Z_3]\rightarrow [Z_0,Z_1,Z_2]$. Defined on points except $[0,0,0,1]$. 
+			
+			Conversely
+			
+			
+		\end{example}
+		
+		In general: 
+		
+		\begin{proposition}
+			In general: Let $Q\subseteq \mathbb{P}^n$ be a quadric hypersurface and $p\in Q$ be any point not lying on the vertex of $Q$. The map
+			
+			\begin{gather*}
+				\pi_p:Q\rightarrow \mathbb{P}^{n-1}
+			\end{gather*}
+			
+			is a birational isomorphism.
+		\end{proposition}
+		
+		\begin{proof}
+			Similarly, 
+		\end{proof}
+		
+		
+		
+		\begin{example}
+			Consider the cubic curve $C\subseteq \mathbb{P}^2$ given by equation
+			
+			\begin{gather*}
+				F=ZY^2-X^3+X^2Z,C=V(F)
+			\end{gather*}
+			
+			$\pi_p:C-\{[0,0,1]\}\rightarrow \mathbb{P}^1,[X,Y,Z]\mapsto [X,Y]$. It is the intersection of the line which goes through $[0,0,1]$ and $[X,Y,Z]$, and the plane $Z=0$.  
+			
+			Inverse:  $\mathbb{P}^1\rightarrow C,[X,Y]\mapsto [X(Y^2+X^2),Y(Y^2+X^2),X^3]$. 
+			
+			$C-\{0,0,1\}$ is dense open: $\{[0,0,1]\}=V(X=0,Y=0)$ is closed.
+		\end{example}
+		
+		\begin{example}
+			For $m,n$, the product $\mathbb{P}^m\times \mathbb{P}^n$ is birational with $\mathbb{P}^{m+n}$. 
+			
+			We could take affine opens $\mathbb{A}^{m+n}\cong \mathbb{A}^m\times \mathbb{A}^n$. With the irreducibility, $\mathbb{P}^{m+n}$ is birational to $\mathbb{P}^m\times \mathbb{P}^n$.
+			
+			Or: Another way to construct the map is
+			
+			\begin{gather*}
+				F:\mathbb{P}^{m+n}-\{[Z_0:\dots:Z_{m+n}]|Z_0=0\}\rightarrow \mathbb{P}^m\times \mathbb{P}^n\qquad [Z_0:\dots:Z_{m+n}]\mapsto ([Z_0,\dots,Z_m],[Z_0:Z_{m+1}:\dots,Z_n])\\
+				F^{-1}:\mathbb{P}^{m}\times \mathbb{P}^n-\{([X_0,\dots,X_m],[Y_0,\dots,Y_n])|X_0=0,Y_0=0\}\rightarrow \mathbb{P}^{m+n}\qquad([X_0,\dots,X_m],[Y_0,\dots,Y_n])\mapsto [X_0Y_0:\dots:Y_mY_0:X_mY_0:Y_1X_0:\dots: X_n X_0]
+			\end{gather*}
+		\end{example}
+		
+		
+		
+		
+		
+		\subsubsection{Example: The Brationality from $X$ of dimension $r$ to a hypersurface $Y$ of $\mathbb{P}^{r+1}$(Hartshorne)}
+		
+		\begin{theorem}
+			(Theorem of Primitive Element) Let $L$ be a finite separable extension field of a field $K$. Then there is an element $\alpha\in L$, which generates $L$ as an extension field of $K$.
+			
+			Furthermore, let $\beta_1,\dots,\beta_n$ be the set of generators of $L$ over $K$, annd if $K$ is infinite. Then, $\alpha$ can be taken to be a linear combination
+			
+			\begin{gather*}
+				内容...
+			\end{gather*}
+		\end{theorem}
+		
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{Def}
+			内容...
+		\end{Def}
+		
+		\begin{theorem}
+			内容...
+		\end{theorem}
+		
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{theorem}
+			内容...
+		\end{theorem}
+		
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		We have the following conclusion:
+		
+		\begin{proposition}
+			Any variety $X$ of dimension $r$ is birational to a hypersurface $Y$ of $\mathbb{P}^{r+1}$.
+		\end{proposition}
+		
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\subsection{Degree of Rational Map}
+		
+		\begin{proposition}
+			The general fiber of map $f:X\rightarrow Y$ is finite iff the inclusion $f^*$ expresses the field $K(Y)$ as a finite extension of field $K(X)$.
+			
+			In this case, $char(K)=0$, and
+			
+			\begin{gather*}
+				card(f^{-1}\{x\})=[K(Y):K(X)]
+			\end{gather*}
+		\end{proposition}
+		
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\subsection{Blowing Up}
+		
+		\begin{Def}
+			In general: Let $X\subseteq \mathbb{A}^m$ be any affine variety and $Y\subseteq X$ any subvariety. Choose a set of generators
+			
+			\begin{gather*}
+				f_0,\dots,f_n\in A(X)
+			\end{gather*}
+			
+			for $I(Y)\subseteq A(X)$. And the rational map
+			
+			\begin{gather*}
+				\varphi:X\dashrightarrow \mathbb{P}^n\qquad x\mapsto [f_0(x),\dots,f_n(x)]
+			\end{gather*}
+			
+			Then, $\varphi$ is regular on $X-Y$, but not generally on $Y$. (Image $[0:\dots,:0]$ not well-dewfined)
+			
+			The graph $\Gamma_\varphi$ together with projection $\pi:\Gamma_\varphi\rightarrow X$ called the \textbf{blow-up} of $X$ along $Y$, and denoted by
+			
+			\begin{gather*}
+				Bl_Y(X)=\tilde{X}=(\Gamma_\varphi,\pi)
+			\end{gather*}
+			
+			Inverse image $E=\pi^{-1}(Y)\subseteq \tilde{X}$ is called \textbf{exceptional divisor}.
+		\end{Def}
+		
+		\begin{proposition}
+			\begin{itemize}
+				\item Construction $Bl_Y(X)$ is local. i.e. for $X$ any variety, $Y$ a subvariety and $U\subseteq X$ an affine open subset. The inverse image of $U$ in $Bl_Y(X)$ is 
+				
+				\begin{gather*}
+					Bl_{Y\cap U}(U)
+				\end{gather*}
+				
+				\item The construction does not depend on the choice of generators of the ideal of $Y$ in $X$.
+			\end{itemize}
+		\end{proposition}
+		
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{proposition}
+			\begin{itemize}
+				\item Naturality property of blow-ups. So $BL_N(M)$ makes sense;
+				\item If complex manifold $M$ is a subvariety of $\mathbb{C}^n=\mathbb{A}^n_{\CC}$, the two notions of $BL_N(M)$ coincide.
+			\end{itemize}
+		\end{proposition}
+		
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{theorem}
+			Let $X$ be any variety and 
+			
+			\begin{itemize}
+				\item 
+				\item 
+			\end{itemize}
+		\end{theorem}
+		
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		A well-know result by Hironaka: [He proved that it was possible to resolve singularities of varieties over fields of characteristic 0 by repeatedly blowing up along non-singular subvarieties, using a very complicated argument by induction on the dimension. ]
+		
+		More information can be read here: \url{https://en.wikipedia.org/wiki/Resolution_of_singularities#}
+		
+		\begin{example}
+			Let $r\in X$ be any point. Then, 
+			
+			\begin{gather*}
+				\pi_r:X\dashrightarrow \mathbb{P}^3
+			\end{gather*}
+			
+			the projection from $r$. And $Q\subseteq \mathbb{P}^3$ the image of $\pi_r$. 
+		\end{example}
+		
+		
+		\subsection{Unrationality}
+		
+		\begin{Def}
+			An irreducible variety $X$ is \textbf{unirational} if  there is a dominant rational map
+			
+			\begin{gather*}
+				\varphi:\mathbb{P}^n\rightarrow X
+			\end{gather*}
+		\end{Def}
+		
+		Equivalently in the language of field, if the function field $K(X)$ can be embedded in a purely transcendental extension
+		
+		\begin{gather*}
+			K(z_1,\dots,z_n)
+		\end{gather*}
+		
+		\subsection{Appendix: Lüroth Problem}
+		
+		\textbf{Question}: (Lüroth) Is every unirational curve is rational?
+		
+		\subsubsection{Dimension 1}
+		
+		\begin{theorem}
+			(Lüroth, 1876) Suppose $k\subseteq L\subseteq k(t)$ is a field extension. $k$ is algebraically closed(mostly $k=\CC$). 
+			
+			If $L$ is a intermediate field which containing  $F$.Then, $L=F(u)$ for some $u=$ transcendental over $F$.
+		\end{theorem}
+		
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{corollary}
+			Every dominant irreducible algebraic curve is birational to $\mathbb{P}^1$.
+		\end{corollary}
+		
+		\begin{proof}
+			As above.
+		\end{proof}
+		
+		\subsubsection{Dimension 2(Castelnuovo, Enriques)}
+		
+		\subsubsection{Higher Dimension}
+		
+		\section{Blow-Ups, Nash Blow-Ups and the Resolution of Singularities}
+		
+		\begin{prob}
+			Given any arbitrary variety $X$, does there exist a smooth variety $Y$ birational to it?
+		\end{prob}
+		
+		\begin{theorem}
+			(Hironaka) Let $X$ be any variety(of zero characteristic). Then, there exists a smooth variety $Y$ and a regular birational map
+			
+			\begin{gather*}
+				\pi:Y\rightarrow X
+			\end{gather*}
+		\end{theorem}
+		
+		\begin{Def}
+			Such a map $\pi:X\rightarrow Y$ is called a \textbf{resolution of singularities} of $X$. 
+		\end{Def}
+		
+	\chapter{Parameterizations}
+		\section{Parameter Spaces}
+		
+		\begin{Def}
+			Let $B$ be a variety. Then, given a collection of projective varieties $\{V_b\}_{b\in B}$, whose elements is the projective space with \textbf{base} $B$,
+			
+			\begin{gather*}
+				\mathcal{V}=B\times V_b\subseteq \mathbb{P}^n\quad V_b:=\pi_1^{-1}(b)
+			\end{gather*}
+			
+			The space $\mathcal{V}$ is called the \textbf{total space}. $V_b$ is member. The pair $(B,\mathcal{V})$ is parametrized by $B$. 
+		\end{Def}
+		
+		Suppose $B$ be projective variety. Then it can be described as the zero locus of homogeneous polynomials $F_\alpha(Z,W)$;
+		
+		Suppose $B$ be affine variety/ Then it can be described as the zero lucus of polynomials $F_\alpha(z,W)$.
+		
+		\begin{lemma}
+			\begin{itemize}
+				\item Let $X\subseteq \mathbb{P}^n$ be any projective variety and $\{V_b\}$ be any family of projective varieties in $\mathbb{P}^n$ with base $B$. Then, the set
+				
+				\begin{gather*}
+					\{b\in B|X\cap V_b\not=\varnothing\}
+				\end{gather*} 
+				
+				is closed in $B$. 
+				
+				\item Let $\{W_b\}$ be another family, then
+				
+				\begin{gather*}
+					\{b\in B|V_b\cap W_b\not=\varnothing\}
+				\end{gather*}
+				
+				is a closed subvariety of $B$
+			\end{itemize}
+		\end{lemma}
+		
+		\begin{proof}
+			\begin{itemize}
+				\item 
+				
+				
+			\end{itemize}
+		\end{proof}
+		
+		\begin{lemma}
+			内容...
+		\end{lemma}
+		
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{example}
+			(The Universal Hyperplane) If we think of the projective space $\mathbb{P}^{n*}$ as a collection of hyperplanes $H\subseteq \mathbb{P}^n$:(Here: \ref{Classical-Algebraic-Geometry-Dual-Projective-Space})
+			
+			Then, define a subset of product $\mathbb{P}^{n*}\times\mathbb{P}^n$ simply as
+			
+			\begin{gather*}
+				\Gamma=\{(H,p)|p\in H\}
+			\end{gather*}
+			
+			This is a subvariety of $\mathbb{P}^{n^*}\times \mathbb{P}^n$
+		\end{example}
+		
+		In particular, it may be relized as a hyperplane section of the Segre variety
+		
+		\begin{gather*}
+			\mathbb{P}^{n^*}\times \mathbb{P}^n \hookrightarrow \mathbb{P}^{n^2+2n}
+		\end{gather*}
+		
+		\begin{example}
+			(The Universal Hyperlplane Section)
+			
+			\begin{gather*}
+				\Omega_X=\{(H,p)|p\in H\cap X\}=\pi_2^{-1}(X)
+			\end{gather*}
+		\end{example}
+		
+		\begin{example}
+			(Parameter Spaces of Hypersurfaces)
+		\end{example}
+		
+		\begin{example}
+			(Universal Families of Hypersurfaces)
+		\end{example}
+		
+		\begin{example}
+			(A Family of Lines)
+		\end{example}
+		
+		
+		\section{Parameter Spaces and Moduli Spaces}
+		
+		\section{Grassmannians and Related Varieties}
+		
+		\begin{Def}
+			\begin{itemize}
+				\item Let $G(k,n)$ denote the set of $k$-dimensional linear subspaces of vector space $K^n$,
+				
+				\begin{gather*}
+					G(k,n):=\{V\subseteq K^n|V\in Vect_k,dimV=k\}
+				\end{gather*}
+				
+				Especially, for an abstract vector space, take the notation of $G(k,V)$. 
+				
+				\item Of course: A $k$-dimensional linear subspace of a vector space $K^n$ is the same thing as a $(k-1)$ plane of $\mathbf{P}^{n-1}$. 
+			\end{itemize}
+		\end{Def}
+		
+		In most contexts, Grassmannians are defined initially via coordinate patches or as a quotient of groups:
+		
+		\begin{itemize}
+			\item (Local Chart)
+			
+			\item Quotient: We could describe the Grassmanian as a homogeneous space. 
+		\end{itemize}
+		
+		If $W$ is a $k$-dimensional subspace of $V$. We can associate the subspace $W$ to a vector
+		
+		\begin{gather*}
+			\lambda=v_1\wedge\dots\wedge v_k,W=span(v_1,\dots,v_k)
+		\end{gather*}
+		
+		Then: $\lambda$ is determined up to scalars by $W$. If we choose a different basis, then 
+		
+		\begin{gather*}
+			\lambda'=det(A)\lambda
+		\end{gather*}
+		
+		So: The following map is well-defined.
+		
+		\begin{Def}
+			In algebraic geometry, the Grassmannian is specified by the \textbf{Plücker embedding}
+			
+			\begin{gather*}
+				\Psi:G(k,V)\rightarrow \mathbb{P}(\wedge^k V)
+			\end{gather*}
+		\end{Def}
+		
+		\textbf{Inverse Process} Given any $[\omega]=\psi(W)$, we can recover the corresponding subspace $W$ as the space of vector spaces
+		
+		\begin{gather*}
+			W:=\{v\in V|v\wedge w=0\in \wedge^{k+1}V\}
+		\end{gather*}
+		
+		\begin{Def}
+			The homogeneous coordinates on $\mathbb{P}^N=\mathbb{P}(\wedge^k V)$ are called \textbf{Plücker coordinate} on $G(k,V)$.
+			
+			
+		\end{Def}
+		
+		\subsubsection{Special Case:$k=2$}
+		
+		\subsection{Subvarieties of Grassmannians}
+		
+		\subsubsection{Grassmannians $\mathbf{G}(1,3)$}
+		
+		
+		\subsubsection{Fano Varieties}
+		
+		A fundamental type of subvarietyof the Grassmannian $\mathbb{G}(k,n)$ is the \textbf{Fano variety}
+		
+		\begin{Def}
+			Let $X\subseteq \mathbb{P}^n$ be a projective variety. Then, the \textbf{Fano variety} is the collection
+			
+			\begin{gather*}
+				F_k(X):=\{\wedge\subseteq X|\wedge\mbox{ is the variety of k-plane}\} \hookrightarrow \mathbb{G}(k,n)
+			\end{gather*}
+		\end{Def}
+		
+		Firstly, we could observe the fano vareity of a hypersurface $X=G(Z)$. Then, 
+		
+		\begin{gather*}
+			F_k(X)=\{\}
+		\end{gather*}
+		
+		\subsection{Tangent Spaces to Grassmannians}
+		
+		
+			
+		
+		\section{Gauss Map, Tangential and Dual Varieties}
+		
+		
+		
+	\chapter{Rational Maps}
+		
+		
+			
+			
+		\chapter{Plane Curves}
+			\label{Classical-Algebraic-Geometry-Plane-Curves}
+			\section{Plane Curves}
+				\subsection{Intersection Multiplicities}
+				
+					\begin{Def}
+						The intersection multiplicity of $C$ and $C'$ at a point $P\in \mathbf{P}^2_k$ is defined as:
+						
+						\begin{gather*}
+							I_P(C,C'):=dim_k \mathcal{O}_{\mathbb{P}^2_k,P}/(f,g)
+						\end{gather*}
+					\end{Def}
+					
+					\begin{lemma}
+						内容...
+					\end{lemma}
+					
+					\begin{proof}
+						内容...
+					\end{proof}
+			\section{Local Properties}
+			
+				\subsection{Multiplicities}
+			
+				\subsection{Intersection Numbers}
+			\section{Projective Plane Curves}
+			
+			\section{Divisors}
+				
+				\begin{Def}
+					Let $C$ be a \underline{smooth projective curve} over algebraically closed.(i.e. A smooth irreducible projective variety of dimension 1)
+					
+					A \textbf{divisor} $D$ on $C$ is a finite formal sum given by
+					
+					\begin{gather*}
+						D=\sum_{i=1}^n n_i P_i;n_i\in \ZZ, P_i\in C
+					\end{gather*} 
+					
+					The \textbf{divisor group}
+					
+					\begin{gather*}
+						Div(C):=\{\sum n_i P_i|n_i\in \ZZ,P_i\in C\}=\ZZ(C)
+					\end{gather*}
+					
+					The \textbf{degree of divisor}
+					
+					\begin{gather*}
+						deg(D):=\sum n_i
+					\end{gather*}
+				\end{Def} 
+				
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				
+				\begin{proof}
+					内容...
+				\end{proof}
+			
+			\section{Bezout's Theorem}
+			
+				\subsection{Degree}
+				
+				\begin{Def}
+					内容...
+				\end{Def}
+				
+				\subsection{Join of Varieties}
+				
+				\begin{Def}
+					Define:
+					
+					\begin{gather*}
+						J(X,Y):=\cup_{x\in X,y\in Y} \bar{xy}
+					\end{gather*}
+				\end{Def}
+				
+				\begin{lemma}
+					For varieties $X,Y$, we have
+					
+					\begin{gather*}
+						degJ(X,Y)=deg(X)\cdot deg(Y)
+					\end{gather*}
+				\end{lemma}
+				
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\subsection{Multiplicities}
+					
+					{\Large\itshape Consider}\quad  two varieties $X,Y$ intersects at point $p\in X\cap Y$ and smooth. Then, we have
+					
+					\begin{gather*}
+						T_pX+T_pY=T_p P^n
+					\end{gather*}
+					
+					\begin{Def}
+						\begin{itemize}
+							\item 
+							\item 
+							\item 
+							\item  
+						\end{itemize}
+					\end{Def}
+					
+					\begin{itemize}
+						\item $m_Z(X,Y)\geq 1$
+						\item 
+						\item 
+					\end{itemize}
+					
+					\subsubsection{Compeletions Operation}
+				
+				\subsection{Bezout's Theorem}
+				
+				\begin{theorem}
+					(Bezout)
+				\end{theorem}
+				
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{example}
+					(Rational Curves) 
+				\end{example}
+			
+				The Beuzout's theorem gives a tool for the research of Elliptic curve group structure:
+			
+		
+		\chapter{Normalization}
+		\chapter{Quadrics}
+			\label{Classical-Algebraic-Geometry-Quadrics}
+			
+			Suppose we works on algebraically closed field. Then, the quadric on $\mathbb{P}^n$ can is in the form of
+			
+			\begin{gather*}
+				F(X)=\sum \alpha_i X_i^2
+			\end{gather*}
+			
+			Under the base transformation, we have $rank(F)=card(supp\{\alpha_i\})$. The rank
+			
+			\begin{gather*}
+				Q=Im(F),rank(Q)=
+			\end{gather*}
+			
+			\section{Tangent Spaces to Quadrics}
+			
+			
+			\begin{proposition}
+				If $H\subseteq \mathbb{P}V$ is a hyperplane, and $Q'=Q\cap H$. Then,
+				
+				\begin{gather*}
+					rank(Q)-2\leq rank(Q')\leq rank(Q)
+				\end{gather*}
+				
+				\begin{gather*}
+					rank(Q)-2k\leq rank(Q')\leq rank(Q)
+				\end{gather*}
+			\end{proposition}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\section{Quadrics on Plane and in Space}
+			
+			\subsection{Quadrics on Plane}
+			
+			We have: $rank(Q)=1,2,3$:
+			
+			\begin{itemize}
+				\item $rank(Q)=3$: It has a stardard form $Q=V(X_1^2+X_2^2+X_3^2)$
+				
+				Via veronese embedding, we have the isomorphism
+				
+				\begin{gather*}
+					v_2:(\mathbb{P}^1)\mathbb{P}_1\rightarrow Q\subseteq \mathbb{P}^2\qquad  [X_0,X_1]\mapsto [X_0^2,X_0X_1,X_1^2]=[Z_0,Z_1,Z_2]
+				\end{gather*}
+				
+				\item $rank(Q)=2$: $Q=V(X_1^2+X_2^2)=V(Z_1Z_2)$, where $Z_1=X_1+iZ_2,Z_2=X_1-iZ_2$. 
+				
+				\item $rank(Q)=1$: $Q=V(X_1^2)$. It is a straight line with multiple $2$;
+			\end{itemize}
+			
+			\subsection{Quadrics in Space}
+			
+			We have: $rank(Q)=1,2,3,4$:
+			
+			\begin{itemize}
+				\item $rank(Q)=4$: It is smooth. And $V(\sum X_i^2)=V((X_1-iX_2)(X_1+iX_2)-(X_3+X_4)(X_3-iX_4))=V(Z_1Z_3-Z——2Z_4)$. 
+				\item $rank(Q)=3$: Quadric Cone.
+				\item $rank(Q)=2$: Union of two Planes
+				\item $rank(Q)=1$: 
+			\end{itemize}
+			
+			We have the following conclusion of birationality: 
+			
+			\begin{proposition}
+				(H\& F,P84,Exercise 7.22) Quadrics in $\mathbb{P}^3$ is birational to $\mathbb{P}^2$.
+			\end{proposition}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+				
+			
+			\section{Linear Spaces on Quadrics}
+			
+			\section{Families of Quadrics}
+			
+			\section{Pencils of Quadrics}
+		\chapter{Cubics}
+			\section{Plane Cubic Curve}
+			
+				\subsection{Classification of Smooth Plane Cubics}
+		
+			\section{Cubic Surfaces}
+			
+				\subsubsection{Polar}
+				
+					\begin{Def}
+						For homogeneous cubic polynomial $f$ in $x_0,\dots,x_3$, the polar of $f$ is defined by
+						
+						\begin{gather*}
+							内容...
+						\end{gather*}
+					\end{Def}
+					
+					Then: The tangent space
+					
+					\begin{center}
+						内容...
+					\end{center}
+				\subsubsection{Resultant}
+				
+					\begin{Def}
+						\begin{gather*}
+							\begin{cases}
+								r(u,v)=a_0u^2+a_1uv+a_2v^2\\
+								s(u,v)=b_0u^3+b_1 u^2v+b_1uv^2+b_3v^3
+							\end{cases}
+						\end{gather*}
+						
+						Then, $R()$
+					\end{Def}
+					
+					
+					
+					\begin{lemma}
+						
+					\end{lemma}
+					
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{theorem}
+						内容...
+					\end{theorem}
+					
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+				\subsubsection{The Configuration of the 27 Lines}
+				
+				
+				\subsection{Rationality of Cubics}
+		
+	\chapter{Algebraic Groups}
+	
+		\textbf{Remark} We will discuss some of algebraic group in the context of classical algebraic geometry. More contents will be discussed in an independent part.
+		
+		\begin{Def}
+			\begin{itemize}
+				\item (Algebraic Group) An \textbf{algebraic group} is defined to be simply a variety $X$ with regular maps $(X,m,i)$,
+				
+				multiplication
+				
+				\begin{gather*}
+					m:X\times X\rightarrow X
+				\end{gather*}
+				
+				and inverse
+				
+				\begin{gather*}
+					i:X\rightarrow X
+				\end{gather*}
+				
+				satisfying the usual rules for multiplication and inverse in a group. e.g. There exists a point $e\in X$
+				
+				\begin{gather*}
+					m(e,p)=m(p,e)=p;\\
+					m(p,i(p))=e
+				\end{gather*}
+				
+				\item (Algebraic Group Homomorphism) A \textbf{morphism of algebraic groups} is a map $\varphi:G\rightarrow H$ such that: It is a 
+				
+				\begin{itemize}
+					\item Group homomorphism;
+					\item Regular Map;
+				\end{itemize}
+			\end{itemize}
+		\end{Def}
+		\section{Matrix Algebraic Groups}
+		\subsection{The General Linear Group, $GL_nK$}
+		
+		\begin{Def}
+			Define the open subset of $\mathbb{A}^{n^2}$:
+			
+			\begin{gather*}
+				GL_nK:=\{x\in \mathbb{A}^{n^2}|det(x)\not=0\}
+			\end{gather*}
+			
+			With:
+			
+			\begin{itemize}
+				\item Multiplication: $GL_nK\times GL_nK\rightarrow GL_nK$, Matrix Multiplication;
+				\item Inverse: $GL_nK\rightarrow GL_nK$, Matrix Inverse;
+			\end{itemize}
+		\end{Def}
+		
+		\subsection{Subgroup $SL_nK$}
+		
+		\begin{Def}
+			内容...
+		\end{Def}
+		
+		\section{Group Action}
+		
+			\begin{Def}
+				\begin{itemize}
+					\item By an action of an algebraic group $G$ on an algebraic variety, we mean a regular map
+					
+					\begin{gather*}
+						内容...
+					\end{gather*}
+					
+					\item A projective action on a projective variety $X\subseteq \mathbb{P}^n$ mean the action of $G$ on $\mathbb{P}^n$ such that
+					
+					\begin{gather*}
+						\varphi(g,X)=X,\forall g\in G
+					\end{gather*}
+				\end{itemize}
+			\end{Def}
+			
+			Stronger condition:
+			
+			\subsection{$PGL_{n+1}K$ on $\mathbb{P}^n$}
+		
+		\section{Quotient}
+		
+	\chapter{Intersections and Degree Reasearch}
+
+	
+	\chapter{Varieties of Arbitrary Dimension}
+		\section{Dimension of Arbitrary Varieties}
+		
+	\chapter{Hilbert Functions}
+	
+		
+	
+		This is a short note of Hilbert function, with the intuition from the background of algebraic geometry.
+		
+		\textbf{Problem} Given a hypersurface $X\subseteq \mathbb{P}^n$ be an intersection of hypersurfaces. One of the basic problem, is to describe the hypersurfaces $X\subseteq \Gamma$.
+		
+		\section{Hilbert Function, Hilbert Polynomials}
+		
+		\begin{Def}
+			Define the function
+			
+			\begin{gather*}
+				h_X:\NN\rightarrow \NN\qquad m\mapsto dim(S(X)_m)
+			\end{gather*}
+			
+			where $S(X)=K[Z_0,\dots,Z_n]/I(X)$ is the homogeneous coordinate ring and $m$ denote the $m$ graded piece.
+		\end{Def}
+		
+		\section{Syzygies}
+			
+	\chapter{Resolutions}
+	
+	\chapter{Segre Varieties}
+	
+	\chapter{Appendix: From Classical Algebraic Geometry to Algebraic Geometry}
+	
+	\newpage
+	
+	\textbf{Abstract} The remaning chapters are mainly depend on the book 
+	
+	\begin{center}
+		Classical Algebraic Geometry: a modern
+		view/Topics in Classical Algebraic Geometry
+	\end{center}
+	
+	By Igor V. Dolgachev.
+	
+	\textbf{Remark 1} We will take $\CC$ as the base field.
+	
+	\chapter{Polarity}
+	
+		\section{The Polar Paring}
+		
+		Take the following notations:
+		
+		\begin{itemize}
+			\item $E$: A finite dimesnional vecot space; $E^\vee$ is its dual;
+			\item $S^kE$: Symmetric $k$-th power; 
+		\end{itemize}
+	
+		\begin{Def}
+			Define the \textbf{bilinear paring}
+			
+			\begin{gather*}
+				S^kE\otimes S^dE^\vee\rightarrow S^{d-k} E^\vee;d\geq k
+			\end{gather*}
+			
+			In coordinate, for the basis $E=span<\xi_0,\dots,\xi_{n-1}>,E^\vee=span<t_0,\dots,t_{n-1}>$, then the elements in 
+			
+			\begin{itemize}
+				\item $S^dE^\vee$ can be seen as a homogeneous polynomial $f$ of degreee $d$, in variables $t_0,\dots,t_{n-1}$. 
+				
+				\item $S^k E$ can be seen as as a homogeneous polynomial $\psi$ of degree $k$ in variables $\xi_1,\dots,\xi_{n-1}$
+			\end{itemize}
+			
+			We have $<\xi_i,t_j>=\delta_{ij}$. We can view each $\xi_i$ as the operator
+			
+			\begin{gather*}
+				\xi_i=\frac{\partial}{\partial t_i}
+			\end{gather*}
+		\end{Def}
+		
+		Then, $D_\psi=\psi(\partial_0,\dots,\partial_{n-1})$, where $\psi$ is the corresponding polynomial of $S^k E$. Then, the paring becomes:
+		
+		\begin{gather*}
+			<\psi(\xi_0,\dots,\xi_{n-1}),f(t_0,\dots,t_{n-1})>=D_{\psi}(f)
+		\end{gather*}
+		
+		For monomials $\partial^i=\partial_0^{i_0}\dots\partial_{n-1}^{i_{n-1}}$, monomials $t^j=\partial_0^{j_0}\dots\partial_{n-1}^{j_{n-1}}$ we have
+		
+		\begin{gather*}
+			\partial^i(t^j)=\begin{cases}
+				\frac{j!}{(j-i)!}t^{j-i}&j\geq i\\
+				0&Otherwise
+			\end{cases}
+		\end{gather*}
+		
+		Here, take the following notation
+		
+		\begin{gather*}
+			i!=\prod i_k!\quad i=(i_0,\dots,i_{n-1})\geq 0\Leftrightarrow i_k\geq 0\qquad |i|=\sum i_k
+		\end{gather*}
+		
+		Consider the following cases:
+		
+		\begin{gather*}
+			\psi=(a_0\partial_0+\dots+a_{n-1}\partial_{n-1})^k=\sum_{|i|=k} \frac{k!}{i!}a^i\partial^i\\
+			\Rightarrow D_\psi(f)=<\sum_{|i|=k} \frac{k!}{i!}a^i\partial^i,f>=\sum_{|i|=k} \frac{k!}{i!}a^i\partial^i(f)
+		\end{gather*}
+		
+		We have the following canonical isomorphisms
+		
+		\begin{gather*}
+			S^k E^\vee\cong (S^k E)^\vee\quad S^kE=(S^k E^\vee)^\vee
+		\end{gather*}
+		
+		
+		\subsection{Hypersurface}
+		
+		Take the following notations:
+		
+		\begin{itemize}
+			\item $|E|=\mathbb{P}_{sub}(E):=\mathbb{P} E$;
+			\item If $E\cong \CC^{n+1}$, then $|E|\cong (\CC^{n+1}-\{0\})/\CC^*=\mathbb{P}^n \CC$;
+			
+			\item There exists a canonical projection $E\rightarrow \mathbb{P}_{sub}(E),v\mapsto [v]$;
+		\end{itemize}
+		
+		\subsubsection{Structure Sheaf on $|E|$}
+		
+		\begin{Def}
+			\begin{itemize}
+				\item Take the notation $\mathcal{O}_{|E|}(1)$: With global section
+				
+				\begin{gather*}
+					[\mathcal{O}_{|E|}(1)](|E|)=E^\vee
+				\end{gather*}
+				
+				The sheaf is called \textbf{tautological invertible sheaf}.
+				
+				\item Take the notation $\mathcal{O}_{|E|}(d)$: With global section
+				
+				\begin{gather*}
+					[\mathcal{O}_{|E|}(d)](|E|)=S^dE^\vee
+				\end{gather*}
+				
+				\item  For any $f\in S^d E^\vee$ take the notation 
+				
+				\begin{gather*}
+					V(f)=\{x\in |E||f(x)=0\}
+				\end{gather*}
+				
+				Such collection is also called \textbf{hypersurface} of \textbf{degree} $d$ in $|E|$. 
+			\end{itemize}
+		\end{Def}
+		
+		Especially, a hypersurface of degree $1$ is a hyperplane. 
+		
+		
+		
+		\begin{Def}
+			Let $X=V(f)$ be a hypersurface of degree $d$ in $|E|$. Let $a=[v]\in |E|$ for some $v\in E$, the hypersurface
+			
+			\begin{gather*}
+				P_{a^k}(X)=V(D_{v^k}(f))
+			\end{gather*}
+		\end{Def}
+		
+		\begin{example}
+			内容...
+		\end{example}
+	
+	\chapter{Conics and Quadric Surfaces}
+		
+	
+\end{document}

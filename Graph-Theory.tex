@@ -1,0 +1,336 @@
+\documentclass[Total.tex]{subfiles}
+
+\begin{document}
+	\chapter{Fundamental of Concepts in Graph Theory}
+		
+		\section{Graphs}
+		
+			\subsection{}
+		
+			\begin{Def}
+				\begin{itemize}
+					\item (Directed Graph)
+					\item (Undirected Grpah)
+				\end{itemize}
+			\end{Def}
+			
+			\subsection{Vertexes}
+			
+			\begin{Def}
+				内容...
+			\end{Def}
+			\subsection{Matrix Representation}
+		\section{Path, Circle and Connectedness}
+			\begin{Def}
+				\begin{itemize}
+					\item A walk in a graph $G$ is a sequence as following:
+					\begin{gather*}
+						内容...
+					\end{gather*}
+					where $e_i=(x_i,x_{i+1})$ or $e_{i}=\{x_i,x_{i+1}\}$
+					\item A \textbf{path}
+					\item A \textbf{cycle} in a graph $G$ is a 
+				\end{itemize}
+			\end{Def}
+			\subsection{Connectedness}
+			\subsubsection{Undirected Graph}
+			\begin{lemma}
+				Suppose $G$
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{Def}
+				内容...
+			\end{Def}
+			\begin{proposition}
+				内容...
+			\end{proposition}
+			\begin{proof}
+				Take the negation $G$ is disconnected$\Leftrightarrow$ There exists some collection $X$ such that 
+			\end{proof}
+			
+			Then, the component for graphs is well-defined
+			\begin{Def}
+				Let $G$ be a undirected graph, then,
+				\begin{gather*}
+					V(G)=\cup V(G_i)
+				\end{gather*}
+			\end{Def}
+			\subsubsection{Directed Graph}
+				\begin{proposition}
+					内容...
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\begin{Def}
+					内容...
+				\end{Def}
+			\subsubsection{Euler Tour}
+				\begin{Def}
+					\begin{itemize}
+						\item 
+						\item 
+					\end{itemize}
+				\end{Def}
+				\begin{proposition}
+					A connected graph has one and only one Eulertour, when the graph is Euler.
+				\end{proposition}
+				\begin{proof}
+					\begin{itemize}
+						\item $\Rightarrow$
+						\item $\Leftarrow$
+					\end{itemize}
+				\end{proof}
+			\subsection{Leaf,Tree, Forest}
+				\subsubsection{Tree, Leaves}
+					\begin{Def} Suppose following graphs are undirected.
+						\begin{itemize}
+							\item (Tree) A
+							\begin{itemize}
+								\item Connected
+								\item Undirected
+								\item with no cycle
+							\end{itemize}
+							graph is called \textbf{tree}.
+							\item The vertice of grad $1$ is called \textbf{leaf}.
+						\end{itemize}
+					\end{Def}
+					\begin{lemma}
+						The following proposition holds: For undirected graph $G$, we have
+						\begin{itemize}
+							\item Every tree with at least two vertices contains at least $2$ leaves;
+							\item Suppose $G$ be a tree with 
+							\begin{itemize}
+								\item $n$ Vertices
+								\item $m$ edges
+								\item $p$ connected components.
+							\end{itemize}
+							Then we have
+							\begin{gather*}
+								n=m+p
+							\end{gather*}
+						\end{itemize}
+					\end{lemma}
+					\begin{proof}
+						\begin{itemize}
+							\item 
+							\item 
+						\end{itemize}
+					\end{proof}
+					
+					\begin{proposition}
+						The followings are equivalent:
+						\begin{itemize}
+							\item 
+							\item 
+							\item 
+							\item 
+							\item 
+							\item 
+							\item 
+						\end{itemize}
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+				\subsubsection{Arborenzence}
+					\begin{Def}
+						内容...
+					\end{Def}
+				\subsubsection{Minimal Spanned Tree}
+					\begin{Def}
+						内容...
+					\end{Def}
+			\subsection{Graph }
+	\chapter{Optimal Tree and Path}
+	
+		\section{Minimum Spanning Tree Problem}
+		
+			\subsubsection{Kruskals Algorithms}
+			
+			\subsubsection{Prim Algorithms}
+	
+		\section{Graph Traversal}
+		
+		\begin{Def}
+			\begin{itemize}
+				\item A \textbf{connected and undirected graph}, which contains no circle, is called \textbf{tree}. 
+				
+				\item A \textbf{undirected graph}, which contains no circle, is called \textbf{forest};
+				
+				\item The vertex $e$, such that $|\delta(e)|=1$, is called \textbf{leaf},representing endpoints.
+			\end{itemize}
+		\end{Def}
+		
+		\begin{lemma}
+			The following propositions hold:
+			
+			\begin{itemize}
+				\item Every tree with at least $2$ vertexes contains 2 leaves;
+				\item Suppose $G$ be a forest with $n$  vertexes, $m$ edges and $p$ components. Then: 
+				
+				\begin{gather*}
+					n=m+p
+				\end{gather*}
+			\end{itemize}
+		\end{lemma}
+		
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{proposition}
+			Suppose $G$ be a undirected graph with $n$ vertexes. The following are equivalent
+			
+			\begin{itemize}
+				\item $G$ is a tree;
+				\item $G$ has $n-1$ vertexes and contains no circle;
+				\item $G$ has $n-1$ vertexes and is connected;
+				\item $G$ is connected and by deleting a vertex, we get a disconnected graph;
+				\item $G$ is a graph with $\delta(X)\not=\varnothing$, for every $\varnothing\subseteq X\subseteq V(G)$, and the property is destroyed by deleting one vertex;
+				\item $G$ is a forest. 
+				\item Every two path in $G$ is connected by a unique path;
+			\end{itemize}
+		\end{proposition}
+		
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{Def}
+			
+			
+			\begin{itemize}
+				\item A directed graph $G$ is called \textbf{arborescence}, if:
+				
+				\begin{itemize}
+					\item At every vertex $e\in E(G)$, the $\delta^+(e)\leq 1$;
+					\item The correspondent undirected graph is a tree.
+				\end{itemize}
+				\item In an arborescence, there exists one and only one of vertex such that $\delta^-(r)=\varnothing$, which is called the \textbf{root};
+				\item As a dual of concept forest, such directed graph is called \textbf{Silvanescence}.
+			\end{itemize}
+		\end{Def}
+		
+		\subsubsection{Graph Traversal Algorithm}
+		
+		\begin{proposition}
+			内容...
+		\end{proposition}	
+		
+		\begin{proof}
+			内容...
+		\end{proof}
+		\subsubsection{DFS}
+		\subsubsection{BFS}
+		
+		\subsubsection{Distance}
+		
+		\begin{Def}
+			(Unweighted) For two vertexes $x,y$ in a graph $G$, the distance $dist(x,y)$ is the minimal number of $x-y$ path.
+			
+			If there exists no $x-y$ path, then $dist(x,y):=\infty$.
+		\end{Def}
+		\section{Weighted Graph}
+		
+		\begin{Def}
+			A \textbf{weighted graph} is a graph $G$ with a function
+			
+			\begin{gather*}
+				c:E(G)\rightarrow \mathbb{R}
+			\end{gather*}
+			
+			which is called the \textbf{weight of edge}.
+		\end{Def}
+		
+		Let $H\subseteq G$ be a subgraph. Then, 
+		
+		\begin{gather*}
+			c(E(H)):=\sum_{e\in E(H)} c(e)
+		\end{gather*}
+		
+		is called the \textbf{weight} of subgraph $H$.
+		
+		\subsubsection{Distance}
+		
+		
+		
+		A main problem is: \textbf{The shortest path problem}. 
+		
+		
+		
+		\subsubsection{Dijkstra's Algorithm}
+		
+		\begin{Def}
+			\begin{itemize}
+				\item 	Input: Weighted graph $(G,c)$ with $s\in V(G)$.  
+				
+				\item  Output: Arboriculture $A=(R,T)$ in $G$, such that $R$ contains all , and 
+				
+				\begin{gather*}
+					disc_{(G,c)}(s,v)=disc_{(A,c)}(s,v);\forall v\in R
+				\end{gather*}
+			\end{itemize}
+			
+			The Pseudocode is given here: \ref{Dijkstras-Algorithm}
+		\end{Def}
+		
+		\begin{algorithm}
+			\caption{Dijkstra's Algorithm}
+			\label{Dijkstras-Algorithm}
+			\begin{algorithmic}
+				\REQUIRE Weighted Graph $(G,c)$, Knot $s\in V(G)$;
+				\ENSURE Arborescences $A=(R,T)$ in $G$, which contains all , and satisfy $dist_{G,c}(s,v)=dist_{(A,c)}(s,v)$
+				\STATE R$\leftarrow$ 0;Q$\leftarrow\{s\}$ ;l(s)$\leftarrow$ 0\qquad$\backslash$$\backslash$ R:The ensured vertex with shortest path; Q:
+				
+				\WHILE{Q$\not=\varnothing$:}
+				\STATE Select $v\in Q$ with $l(v)$ smallest;
+				\STATE Q$\leftarrow Q-\{v\}$;R$\leftrightarrow R-\{v\}$;
+				\STATE $\backslash\backslash$ To find out the neighbors of $v$;
+				\FOR{$e=(v,w)\in \delta_G^+(v)$ with $w\notin R$} 
+				\IF{$w\notin Q$ or $l(v)+c(e)<l(w)$}
+				\STATE $l(w)\leftarrow l(v)+c(e);p(w)\leftarrow e;Q\leftarrow Q\cup \{w\}$;\qquad$\backslash$$\backslash$ If we find a shorter path from $s$ to $w$ via $v$,
+				\STATE $\backslash$$\backslash$ then:$l(w):=l(v)+c(e);p(w)=e$, the previous edge; $Q:=Q\cup \{w\}$, extending the  
+				\ENDIF
+				\ENDFOR
+				\ENDWHILE 
+				
+				$T\leftarrow \{p(v)|v\in R-\{s\}\}$;
+			\end{algorithmic}
+		\end{algorithm}
+		
+		
+		\begin{proposition}
+			Dijkstras Algorithmus is correct. And has a 
+			
+			\begin{gather*}
+				\mathcal{O}(n^2+m)
+			\end{gather*}
+			
+			where $n=|V(G)|,m=|E(G)|$.
+		\end{proposition}
+		
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\textbf{Remark}
+		
+		\textbf{Remark}
+		
+		\begin{Def}
+			内容...
+		\end{Def}
+		
+	
+	\chapter{Flow in Network}
+		\section{Network}
+			\begin{Def}
+				内容...
+			\end{Def}
+		
+			
+\end{document}

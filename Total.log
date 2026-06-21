@@ -1,0 +1,4644 @@
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.13)  20 MAY 2026 20:56
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Total.tex
+(./Total.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-22> (./ModulEN.cls
+Document Class: ModulEN 
+(c:/texlive/2022/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2022/07/02 v1.4n Standard LaTeX document class
+(c:/texlive/2022/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count181
+\c@chapter=\count182
+\c@section=\count183
+\c@subsection=\count184
+\c@subsubsection=\count185
+\c@paragraph=\count186
+\c@subparagraph=\count187
+\c@figure=\count188
+\c@table=\count189
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+(c:/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2022/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(c:/texlive/2022/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen141
+))
+(c:/texlive/2022/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen142
+)
+(c:/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count190
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count191
+\leftroot@=\count192
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count193
+\DOTSCASE@=\count194
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen143
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count195
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count196
+\dotsspace@=\muskip16
+\c@parentequation=\count197
+\dspbrk@lvl=\count198
+\tag@help=\toks17
+\row@=\count199
+\column@=\count266
+\maxfields@=\count267
+\andhelp@=\toks18
+\eqnshift@=\dimen144
+\alignsep@=\dimen145
+\tagshift@=\dimen146
+\tagwidth@=\dimen147
+\totwidth@=\dimen148
+\lineht@=\dimen149
+\@envbody=\toks19
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(c:/texlive/2022/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(c:/texlive/2022/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(c:/texlive/2022/texmf-dist/tex/latex/stix/stix.sty
+Package: stix 2018/04/17 v1.1.3-latex STIX fonts support package
+
+(c:/texlive/2022/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+LaTeX Font Info:    Changing ? sub-encoding to TS1/0 on input line 78.
+)
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 76.
+LaTeX Font Info:    Encoding `OML' has changed to `LS1' for symbol font
+(Font)              `letters' in the math version `normal' on input line 76.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> LS1/stix/m/it on input line 76.
+LaTeX Font Info:    Encoding `OML' has changed to `LS1' for symbol font
+(Font)              `letters' in the math version `bold' on input line 76.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> LS1/stix/m/it on input line 76.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 77.
+LaTeX Font Info:    Encoding `OT1' has changed to `LS1' for symbol font
+(Font)              `operators' in the math version `normal' on input line 77.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> LS1/stix/m/n on input line 77.
+LaTeX Font Info:    Encoding `OT1' has changed to `LS1' for symbol font
+(Font)              `operators' in the math version `bold' on input line 77.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> LS1/stix/m/n on input line 77.
+\symbold-operators=\mathgroup6
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 79.
+LaTeX Font Info:    Encoding `OMS' has changed to `LS1' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 79.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> LS1/stixscr/m/n on input line 79.
+LaTeX Font Info:    Encoding `OMS' has changed to `LS1' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 79.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> LS1/stixscr/m/n on input line 79.
+\symsymbols2=\mathgroup7
+\symsymbols3=\mathgroup8
+\symsymbols4=\mathgroup9
+\symintegrals=\mathgroup10
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 84.
+LaTeX Font Info:    Encoding `OMX' has changed to `LS2' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 8
+4.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> LS2/stixex/m/n on input line 84.
+LaTeX Font Info:    Encoding `OMX' has changed to `LS2' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 84.
+
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> LS2/stixex/m/n on input line 84.
+\symarrows1=\mathgroup11
+\symarrows2=\mathgroup12
+\symarrows3=\mathgroup13
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  LS1/stix/m/it --> LS1/stix/b/it on input line 88.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  LS1/stix/m/n --> LS1/stix/b/n on input line 89.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  LS1/stixscr/m/n --> LS1/stixscr/b/n on input line 90.
+LaTeX Font Info:    Overwriting symbol font `symbols2' in version `bold'
+(Font)                  LS1/stixfrak/m/n --> LS1/stixfrak/b/n on input line 91.
+
+LaTeX Font Info:    Overwriting symbol font `symbols3' in version `bold'
+(Font)                  LS1/stixbb/m/n --> LS1/stixbb/b/n on input line 92.
+LaTeX Font Info:    Overwriting symbol font `symbols4' in version `bold'
+(Font)                  LS1/stixbb/m/it --> LS1/stixbb/b/it on input line 93.
+LaTeX Font Info:    Overwriting symbol font `integrals' in version `bold'
+(Font)                  LS2/stixcal/m/n --> LS2/stixcal/b/n on input line 94.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  LS2/stixex/m/n --> LS2/stixex/b/n on input line 95.
+LaTeX Font Info:    Overwriting symbol font `arrows1' in version `bold'
+(Font)                  LS1/stixsf/m/n --> LS1/stixsf/b/n on input line 96.
+LaTeX Font Info:    Overwriting symbol font `arrows2' in version `bold'
+(Font)                  LS1/stixsf/m/it --> LS1/stixsf/b/it on input line 97.
+LaTeX Font Info:    Overwriting symbol font `arrows3' in version `bold'
+(Font)                  LS2/stixtt/m/n --> LS2/stixtt/b/n on input line 98.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 99.
+LaTeX Font Info:    Redeclaring math alphabet \mathfrak on input line 102.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 106.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 108.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 109.
+LaTeX Info: Redefining \yen on input line 456.
+LaTeX Info: Redefining \circledR on input line 458.
+LaTeX Info: Redefining \checkmark on input line 460.
+LaTeX Info: Redefining \maltese on input line 461.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 698.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 699.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 700.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 701.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 702.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 703.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 704.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 705.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 707.
+LaTeX Font Info:    Redeclaring math accent \check on input line 708.
+LaTeX Font Info:    Redeclaring math accent \vec on input line 716.
+LaTeX Font Info:    Redeclaring math accent \widehat on input line 728.
+LaTeX Font Info:    Redeclaring math accent \widetilde on input line 729.
+LaTeX Info: Redefining \vdots on input line 1518.
+LaTeX Info: Redefining \cdots on input line 1522.
+LaTeX Font Info:    Redeclaring math symbol \mathsterling on input line 1978.
+LaTeX Info: Redefining \not on input line 2144.
+)
+(c:/texlive/2022/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup14
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+)
+(c:/texlive/2022/texmf-dist/tex/latex/mdframed/mdframed.sty
+Package: mdframed 2013/07/01 1.9b: mdframed
+
+(c:/texlive/2022/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+(c:/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(c:/texlive/2022/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))
+(c:/texlive/2022/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(c:/texlive/2022/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2023-02-22 L3 programming layer (loader) 
+
+(c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2023-01-16 L3 backend support: XeTeX
+\g__graphics_track_int=\count268
+\l__pdf_internal_box=\box53
+\g__pdf_backend_object_int=\count269
+\g__pdf_backend_annotation_int=\count270
+\g__pdf_backend_link_int=\count271
+))
+Package: xparse 2023-02-02 L3 Experimental document command parser
+)
+(c:/texlive/2022/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count272
+)
+(c:/texlive/2022/texmf-dist/tex/latex/zref/zref-abspage.sty
+Package: zref-abspage 2022-04-07 v2.34 Module abspage for zref (HO)
+
+(c:/texlive/2022/texmf-dist/tex/latex/zref/zref-base.sty
+Package: zref-base 2022-04-07 v2.34 Module base for zref (HO)
+
+(c:/texlive/2022/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(c:/texlive/2022/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(c:/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+)
+(c:/texlive/2022/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+(c:/texlive/2022/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+Package zref Info: New property list: main on input line 767.
+Package zref Info: New property: default on input line 768.
+Package zref Info: New property: page on input line 769.
+)
+(c:/texlive/2022/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\c@abspage=\count273
+Package zref Info: New property: abspage on input line 65.
+)
+(c:/texlive/2022/texmf-dist/tex/latex/needspace/needspace.sty
+Package: needspace 2010/09/12 v1.3d reserve vertical space
+)
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: xetex.def on input line 149.
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
+)
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+\mdf@templength=\skip53
+\c@mdf@globalstyle@cnt=\count274
+\mdf@skipabove@length=\skip54
+\mdf@skipbelow@length=\skip55
+\mdf@leftmargin@length=\skip56
+\mdf@rightmargin@length=\skip57
+\mdf@innerleftmargin@length=\skip58
+\mdf@innerrightmargin@length=\skip59
+\mdf@innertopmargin@length=\skip60
+\mdf@innerbottommargin@length=\skip61
+\mdf@splittopskip@length=\skip62
+\mdf@splitbottomskip@length=\skip63
+\mdf@outermargin@length=\skip64
+\mdf@innermargin@length=\skip65
+\mdf@linewidth@length=\skip66
+\mdf@innerlinewidth@length=\skip67
+\mdf@middlelinewidth@length=\skip68
+\mdf@outerlinewidth@length=\skip69
+\mdf@roundcorner@length=\skip70
+\mdf@footenotedistance@length=\skip71
+\mdf@userdefinedwidth@length=\skip72
+\mdf@needspace@length=\skip73
+\mdf@frametitleaboveskip@length=\skip74
+\mdf@frametitlebelowskip@length=\skip75
+\mdf@frametitlerulewidth@length=\skip76
+\mdf@frametitleleftmargin@length=\skip77
+\mdf@frametitlerightmargin@length=\skip78
+\mdf@shadowsize@length=\skip79
+\mdf@extratopheight@length=\skip80
+\mdf@subtitleabovelinewidth@length=\skip81
+\mdf@subtitlebelowlinewidth@length=\skip82
+\mdf@subtitleaboveskip@length=\skip83
+\mdf@subtitlebelowskip@length=\skip84
+\mdf@subtitleinneraboveskip@length=\skip85
+\mdf@subtitleinnerbelowskip@length=\skip86
+\mdf@subsubtitleabovelinewidth@length=\skip87
+\mdf@subsubtitlebelowlinewidth@length=\skip88
+\mdf@subsubtitleaboveskip@length=\skip89
+\mdf@subsubtitlebelowskip@length=\skip90
+\mdf@subsubtitleinneraboveskip@length=\skip91
+\mdf@subsubtitleinnerbelowskip@length=\skip92
+
+(c:/texlive/2022/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(c:/texlive/2022/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(c:/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks22
+\pgfutil@tempdima=\dimen150
+\pgfutil@tempdimb=\dimen151
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box54
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(c:/texlive/2022/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(c:/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 107.
+)
+\Gin@req@height=\dimen152
+\Gin@req@width=\dimen153
+)
+(c:/texlive/2022/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks23
+\pgfkeys@temptoks=\toks24
+
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.co
+de.tex
+\pgfkeys@tmptoks=\toks25
+))
+\pgf@x=\dimen154
+\pgf@y=\dimen155
+\pgf@xa=\dimen156
+\pgf@ya=\dimen157
+\pgf@xb=\dimen158
+\pgf@yb=\dimen159
+\pgf@xc=\dimen160
+\pgf@yc=\dimen161
+\pgf@xd=\dimen162
+\pgf@yd=\dimen163
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count275
+\c@pgf@countb=\count276
+\c@pgf@countc=\count277
+\c@pgf@countd=\count278
+\t@pgf@toka=\toks26
+\t@pgf@tokb=\toks27
+\t@pgf@tokc=\toks28
+\pgf@sys@id@count=\count279
+ (c:/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-xetex.def
+
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.def
+File: pgfsys-xetex.def 2023-01-15 v3.1.10 (3.1.10)
+
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx.def
+File: pgfsys-dvipdfmx.def 2023-01-15 v3.1.10 (3.1.10)
+
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)
+\pgfsys@objnum=\count280
+)))
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count281
+\pgfsyssoftpath@bigbuffer@items=\count282
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (c:/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 227.
+LaTeX Info: Redefining \color on input line 711.
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen164
+\pgfmath@count=\count283
+\pgfmath@box=\box55
+\pgfmath@toks=\toks29
+\pgfmath@stack@operand=\toks30
+\pgfmath@stack@operation=\toks31
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.te
+x)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric
+.code.tex)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.t
+ex)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.co
+de.tex)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.te
+x)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithm
+etics.code.tex)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count284
+))
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen165
+\pgf@picmaxx=\dimen166
+\pgf@picminy=\dimen167
+\pgf@picmaxy=\dimen168
+\pgf@pathminx=\dimen169
+\pgf@pathmaxx=\dimen170
+\pgf@pathminy=\dimen171
+\pgf@pathmaxy=\dimen172
+\pgf@xx=\dimen173
+\pgf@xy=\dimen174
+\pgf@yx=\dimen175
+\pgf@yy=\dimen176
+\pgf@zx=\dimen177
+\pgf@zy=\dimen178
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.cod
+e.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen179
+\pgf@path@lasty=\dimen180
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.te
+x
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen181
+\pgf@shorten@start@additional=\dimen182
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box56
+\pgf@hbox=\box57
+\pgf@layerbox@main=\box58
+\pgf@picture@serial@count=\count285
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code
+.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen183
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.c
+ode.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen184
+\pgf@pt@y=\dimen185
+\pgf@pt@temp=\dimen186
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.co
+de.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen187
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen188
+\pgf@sys@shading@range@num=\count286
+\pgf@shadingcount=\count287
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box59
+) (c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code
+.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (c:/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.te
+x
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box60
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(c:/texlive/2022/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.st
+y
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen189
+\pgf@nodesepend=\dimen190
+)
+(c:/texlive/2022/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.st
+y
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+)) (c:/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(c:/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(c:/texlive/2022/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen191
+\pgffor@skip=\dimen192
+\pgffor@stack=\toks32
+\pgffor@toks=\toks33
+))
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.co
+de.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count288
+\pgfplotmarksize=\dimen193
+)
+\tikz@lastx=\dimen194
+\tikz@lasty=\dimen195
+\tikz@lastxsaved=\dimen196
+\tikz@lastysaved=\dimen197
+\tikz@lastmovetox=\dimen198
+\tikz@lastmovetoy=\dimen199
+\tikzleveldistance=\dimen256
+\tikzsiblingdistance=\dimen257
+\tikz@figbox=\box61
+\tikz@figbox@bg=\box62
+\tikz@tempbox=\box63
+\tikz@tempbox@bg=\box64
+\tikztreelevel=\count289
+\tikznumberofchildren=\count290
+\tikznumberofcurrentchild=\count291
+\tikz@fig@count=\count292
+
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count293
+\pgfmatrixcurrentcolumn=\count294
+\pgf@matrix@numberofcolumns=\count295
+)
+\tikz@expandcount=\count296
+
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(c:/texlive/2022/texmf-dist/tex/latex/mdframed/md-frame-1.mdf
+File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
+)
+\mdf@frametitlebox=\box65
+\mdf@footnotebox=\box66
+\mdf@splitbox@one=\box67
+\mdf@splitbox@two=\box68
+\mdf@splitbox@save=\box69
+\mdfsplitboxwidth=\skip93
+\mdfsplitboxtotalwidth=\skip94
+\mdfsplitboxheight=\skip95
+\mdfsplitboxdepth=\skip96
+\mdfsplitboxtotalheight=\skip97
+\mdfframetitleboxwidth=\skip98
+\mdfframetitleboxtotalwidth=\skip99
+\mdfframetitleboxheight=\skip100
+\mdfframetitleboxdepth=\skip101
+\mdfframetitleboxtotalheight=\skip102
+\mdffootnoteboxwidth=\skip103
+\mdffootnoteboxtotalwidth=\skip104
+\mdffootnoteboxheight=\skip105
+\mdffootnoteboxdepth=\skip106
+\mdffootnoteboxtotalheight=\skip107
+\mdftotallinewidth=\skip108
+\mdfboundingboxwidth=\skip109
+\mdfboundingboxtotalwidth=\skip110
+\mdfboundingboxheight=\skip111
+\mdfboundingboxdepth=\skip112
+\mdfboundingboxtotalheight=\skip113
+\mdf@freevspace@length=\skip114
+\mdf@horizontalwidthofbox@length=\skip115
+\mdf@verticalmarginwhole@length=\skip116
+\mdf@horizontalspaceofbox=\skip117
+\mdfsubtitleheight=\skip118
+\mdfsubsubtitleheight=\skip119
+\c@mdfcountframes=\count297
+
+****** mdframed patching \endmdf@trivlist
+
+****** -- success******
+
+\mdf@envdepth=\count298
+\c@mdf@env@i=\count299
+\c@mdf@env@ii=\count300
+\c@mdf@zref@counter=\count301
+Package zref Info: New property: mdf@pagevalue on input line 895.
+)
+(c:/texlive/2022/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
+Package: tikz-cd 2021/05/04 v1.0 Commutative diagrams with TikZ
+
+(c:/texlive/2022/texmf-dist/tex/generic/tikz-cd/tikzlibrarycd.code.tex
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryquotes.code.tex
+File: tikzlibraryquotes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(c:/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.cod
+e.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen258
+\pgfarrowlength=\dimen259
+\pgfarrowwidth=\dimen260
+\pgfarrowlinewidth=\dimen261
+))) (c:/texlive/2022/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2021/07/05 v2.14 Sectioning titles
+\ttl@box=\box70
+\beforetitleunit=\skip120
+\aftertitleunit=\skip121
+\ttl@plus=\dimen262
+\ttl@minus=\dimen263
+\ttl@toksa=\toks34
+\titlewidth=\dimen264
+\titlewidthlast=\dimen265
+\titlewidthfirst=\dimen266
+)
+(c:/texlive/2022/texmf-dist/tex/latex/titlesec/titletoc.sty
+Package: titletoc 2021/07/05 v2.14 TOC entries
+\ttl@leftsep=\dimen267
+)
+(c:/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(c:/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count302
+\Gm@cntv=\count303
+\c@Gm@tempcnt=\count304
+\Gm@bindingoffset=\dimen268
+\Gm@wd@mp=\dimen269
+\Gm@odd@mp=\dimen270
+\Gm@even@mp=\dimen271
+\Gm@layoutwidth=\dimen272
+\Gm@layoutheight=\dimen273
+\Gm@layouthoffset=\dimen274
+\Gm@layoutvoffset=\dimen275
+\Gm@dimlist=\toks35
+)
+(c:/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2023-02-07 v7.00v Hypertext links for LaTeX
+
+(c:/texlive/2022/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(c:/texlive/2022/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(c:/texlive/2022/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(c:/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+
+(c:/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(c:/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count305
+)
+\@linkdim=\dimen276
+\Hy@linkcounter=\count306
+\Hy@pagecounter=\count307
+
+(c:/texlive/2022/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
+)
+(c:/texlive/2022/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count308
+
+(c:/texlive/2022/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Hyper figures OFF on input line 4177.
+Package hyperref Info: Link nesting OFF on input line 4182.
+Package hyperref Info: Hyper index ON on input line 4185.
+Package hyperref Info: Plain pages OFF on input line 4192.
+Package hyperref Info: Backreferencing OFF on input line 4197.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4425.
+\c@Hy@tempcnt=\count309
+
+(c:/texlive/2022/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen277
+
+(c:/texlive/2022/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(c:/texlive/2022/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count310
+\Field@Width=\dimen278
+\Fld@charsize=\dimen279
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+\Hy@abspage=\count311
+\c@Item=\count312
+\c@Hfootnote=\count313
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+
+(c:/texlive/2022/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2023-02-07 v7.00v Hyperref driver for XeTeX
+
+(c:/texlive/2022/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\pdfm@box=\box71
+\c@Hy@AnnotLevel=\count314
+\HyField@AnnotCount=\count315
+\Fld@listcount=\count316
+\c@bookmark@seq@number=\count317
+
+(c:/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(c:/texlive/2022/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+(c:/texlive/2022/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip122
+)
+(c:/texlive/2022/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip123
+\f@nch@O@elh=\skip124
+\f@nch@O@erh=\skip125
+\f@nch@O@olh=\skip126
+\f@nch@O@orh=\skip127
+\f@nch@O@elf=\skip128
+\f@nch@O@erf=\skip129
+\f@nch@O@olf=\skip130
+\f@nch@O@orf=\skip131
+)
+(c:/texlive/2022/texmf-dist/tex/latex/subfiles/subfiles.sty
+Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
+
+(c:/texlive/2022/texmf-dist/tex/latex/import/import.sty
+Package: import 2020/04/01  v 6.2
+))
+(c:/texlive/2022/texmf-dist/tex/latex/algorithms/algorithm.sty
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(c:/texlive/2022/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count318
+\float@exts=\toks36
+\float@box=\box72
+\@float@everytoks=\toks37
+\@floatcapt=\box73
+)
+(c:/texlive/2022/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks38
+\c@algorithm=\count319
+)
+(c:/texlive/2022/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count320
+\c@ALC@line=\count321
+\c@ALC@rem=\count322
+\c@ALC@depth=\count323
+\ALC@tlm=\skip132
+\algorithmicindent=\skip133
+)
+(c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf.sty
+Package: epstopdf 2020-01-24 v2.11 Conversion with epstopdf on the fly (HO)
+
+(c:/texlive/2022/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
+(c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+
+
+Package epstopdf Warning: Drivers other than `pdftex' and `luatex' are not supp
+orted.
+
+))
+\c@thm=\count324
+\c@prob=\count325
+)
+LaTeX Font Info:    Trying to load font information for T1+stix on input line 3
+.
+ (c:/texlive/2022/texmf-dist/tex/latex/stix/t1stix.fd
+File: t1stix.fd 2015/04/17 v1.1.2-latex STIX T1 font definitions
+) (./Total.aux)
+\openout1 = `Total.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 3
+.
+
+(c:/texlive/2022/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 3.
+LaTeX Font Info:    Trying to load font information for LS1+stix on input line 
+3.
+
+(c:/texlive/2022/texmf-dist/tex/latex/stix/ls1stix.fd
+File: ls1stix.fd 2015/04/17 v1.1.2-latex STIX LS1 font definitions
+)
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for LS2/stix/m/n on input line 3.
+LaTeX Font Info:    Trying to load font information for LS2+stix on input line 
+3.
+
+(c:/texlive/2022/texmf-dist/tex/latex/stix/ls2stix.fd
+File: ls2stix.fd 2015/04/17 v1.1.2-latex STIX LS2 font definitions
+)
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Info: Command `\dddot' is already robust on input line 3.
+LaTeX Info: Command `\ddddot' is already robust on input line 3.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(47.7999pt, 478.00812pt, 71.69986pt)
+* v-part:(T,H,B)=(67.60269pt, 676.04005pt, 101.4041pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=478.00812pt
+* \textheight=676.04005pt
+* \oddsidemargin=-24.4701pt
+* \evensidemargin=-0.57013pt
+* \topmargin=-34.73479pt
+* \headheight=12.0pt
+* \headsep=18.06749pt
+* \topskip=10.0pt
+* \footskip=25.29494pt
+* \marginparwidth=125.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package hyperref Info: Link coloring OFF on input line 3.
+(./Total.out) (./Total.out)
+\@outlinefile=\write4
+\openout4 = `Total.out'.
+
+LaTeX Font Info:    Trying to load font information for LS1+stixscr on input li
+ne 5.
+
+(c:/texlive/2022/texmf-dist/tex/latex/stix/ls1stixscr.fd
+File: ls1stixscr.fd 2015/04/17 v1.1.2-latex STIX script LS1 font definitions
+)
+LaTeX Font Info:    Trying to load font information for LS2+stixex on input lin
+e 5.
+
+(c:/texlive/2022/texmf-dist/tex/latex/stix/ls2stixex.fd
+File: ls2stixex.fd 2015/04/17 v1.1.2-latex STIX extentions LS2 font definitions
+
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
+
+(c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
+
+(c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for LS1+stixfrak on input l
+ine 5.
+
+(c:/texlive/2022/texmf-dist/tex/latex/stix/ls1stixfrak.fd
+File: ls1stixfrak.fd 2015/04/17 v1.1.2-latex STIX fraktur LS1 font definitions
+)
+LaTeX Font Info:    Trying to load font information for LS1+stixbb on input lin
+e 5.
+
+(c:/texlive/2022/texmf-dist/tex/latex/stix/ls1stixbb.fd
+File: ls1stixbb.fd 2015/04/17 v1.1.2-latex STIX blackboard LS1 font definitions
+
+)
+LaTeX Font Info:    Trying to load font information for LS2+stixcal on input li
+ne 5.
+
+(c:/texlive/2022/texmf-dist/tex/latex/stix/ls2stixcal.fd
+File: ls2stixcal.fd 2015/04/17 v1.1.2-latex STIX calligraphic LS2 font definiti
+ons
+)
+LaTeX Font Info:    Trying to load font information for LS1+stixsf on input lin
+e 5.
+
+(c:/texlive/2022/texmf-dist/tex/latex/stix/ls1stixsf.fd
+File: ls1stixsf.fd 2015/04/17 v1.1.2-latex STIX sans-serif LS1 font definitions
+
+)
+LaTeX Font Info:    Trying to load font information for LS2+stixtt on input lin
+e 5.
+
+(c:/texlive/2022/texmf-dist/tex/latex/stix/ls2stixtt.fd
+File: ls2stixtt.fd 2015/04/17 v1.1.2-latex STIX typewriter LS2 font definitions
+
+)
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 5.
+
+
+(c:/texlive/2022/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+
+LaTeX Warning: No \author given.
+
+[1
+
+
+] (./Total.toc
+
+LaTeX Font Warning: Font shape `U/lasy/m/n' in size <7.5> not available
+(Font)              size <7> substituted on input line 2.
+
+[2
+
+]
+LaTeX Font Info:    Font shape `T1/stix/m/sl' in size <10> not available
+(Font)              Font shape `T1/stix/m/it' tried instead on input line 102.
+ [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15]
+Overfull \hbox (4.49997pt too wide) detected at line 772
+\T1/stix/m/n/10 131.10 
+ []
+
+[16])
+\tf@toc=\write5
+\openout5 = `Total.toc'.
+
+ [17] [18
+
+] (./AnalysisI.tex
+Chapter 1.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 5.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 5.
+
+
+Overfull \hbox (3.96707pt too wide) in paragraph at lines 5--5
+|[]\T1/stix/b/n/24.88 Continuous Func-tion on $\LS1/stix/b/n/24.88 R$\T1/stix/b
+/n/24.88 ,Limits
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 13.
+Package mdframed Info: mdframed works in twoside mode on input line 24.
+LaTeX Font Info:    Trying to load font information for TS1+stix on input line 
+58.
+(c:/texlive/2022/texmf-dist/tex/latex/stix/ts1stix.fd
+File: ts1stix.fd 2015/04/17 v1.1.2-latex STIX TS1 font definitions
+) [19
+
+]
+Package mdframed Info: mdframed works in twoside mode on input line 107.
+ [20]
+Package mdframed Info: mdframed works in twoside mode on input line 128.
+Package mdframed Info: mdframed works in twoside mode on input line 139.
+Package mdframed Info: mdframed works in twoside mode on input line 154.
+Package mdframed Info: mdframed works in twoside mode on input line 173.
+
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 178.
+
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 178.
+[21]
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last split box is empty
+(mdframed)                You have to change the settings on input line 178.
+
+Package mdframed Info: mdframed works in twoside mode on input line 195.
+Package mdframed Info: mdframed works in twoside mode on input line 204.
+Package mdframed Info: mdframed works in twoside mode on input line 231.
+[22]
+Package mdframed Info: mdframed works in twoside mode on input line 255.
+ [23]
+Package mdframed Info: mdframed works in twoside mode on input line 319.
+Package mdframed Info: mdframed works in twoside mode on input line 327.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 345.
+Package mdframed Info: Not enough space on this page on input line 350.
+[24]
+Package mdframed Info: Not enough space on this page on input line 350.
+Package mdframed Info: mdframed works in twoside mode on input line 364.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 372.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 379.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 389.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 389.
+
+Package mdframed Info: mdframed works in twoside mode on input line 390.
+[25]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 410.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[26]
+Chapter 2.
+Package mdframed Info: mdframed works in twoside mode on input line 425.
+[27
+
+]
+Chapter 3.
+Package mdframed Info: mdframed works in twoside mode on input line 430.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[28
+
+]
+Package mdframed Info: mdframed works in twoside mode on input line 495.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[29]
+Chapter 4.
+[30
+
+]
+Chapter 5.
+) [31
+
+] [32
+
+] [33
+
+] [34
+
+] [35
+
+] [36
+
+] (./Smooth-Manifold.tex
+Chapter 6.
+Package mdframed Info: mdframed works in twoside mode on input line 6.
+Package mdframed Info: mdframed works in twoside mode on input line 29.
+Package mdframed Info: mdframed works in twoside mode on input line 32.
+Package mdframed Info: mdframed works in twoside mode on input line 37.
+[37
+
+]
+Package mdframed Info: mdframed works in twoside mode on input line 60.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 104.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[38]
+Package mdframed Info: mdframed works in twoside mode on input line 109.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[39]
+Chapter 7.
+Package mdframed Info: mdframed works in twoside mode on input line 123.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[40
+
+]
+Chapter 8.
+Package mdframed Info: mdframed works in twoside mode on input line 147.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 199.
+Package mdframed Info: Not enough space on this page on input line 205.
+[41
+
+]
+Package mdframed Info: Not enough space on this page on input line 205.
+Package mdframed Info: mdframed works in twoside mode on input line 213.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 227.
+Package mdframed Info: mdframed works in twoside mode on input line 248.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[42] [43]
+Chapter 9.
+Package mdframed Info: mdframed works in twoside mode on input line 271.
+Package mdframed Info: mdframed works in twoside mode on input line 279.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[44
+
+]
+Chapter 10.
+
+Overfull \hbox (33.58923pt too wide) in paragraph at lines 282--282
+|[]\T1/stix/b/n/24.88 Submersions, Im-mer-sions and Em-
+ []
+
+[45
+
+]
+Chapter 11.
+Package mdframed Info: mdframed works in twoside mode on input line 292.
+[46
+
+]
+Chapter 12.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 345.
+[47
+
+]
+Package mdframed Info: mdframed works in twoside mode on input line 362.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 378.
+Package mdframed Info: mdframed works in twoside mode on input line 386.
+[48]
+Chapter 13.
+Package mdframed Info: mdframed works in twoside mode on input line 397.
+Package mdframed Info: mdframed works in twoside mode on input line 408.
+[49
+
+]
+Chapter 14.
+[50
+
+]
+Chapter 15.
+[51
+
+]
+Chapter 16.
+Package mdframed Info: mdframed works in twoside mode on input line 418.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[52
+
+]
+Chapter 17.
+
+Overfull \hbox (15.68555pt too wide) in paragraph at lines 421--421
+|[]\T1/stix/b/n/24.88 Integral Man-i-folds and Fo-li-a-tions| 
+ []
+
+[53
+
+]
+Chapter 18.
+) [54
+
+] [55
+
+] (./Bundles.tex
+Chapter 19.
+Package mdframed Info: mdframed works in twoside mode on input line 12.
+Package mdframed Info: mdframed works in twoside mode on input line 52.
+Package mdframed Info: mdframed works in twoside mode on input line 60.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[56
+
+]
+Package mdframed Info: Not enough space on this page on input line 62.
+Package mdframed Info: mdframed works in twoside mode on input line 65.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[57]
+Chapter 20.
+Package mdframed Info: mdframed works in twoside mode on input line 77.
+[58
+
+]
+Chapter 21.
+[59
+
+]
+Chapter 22.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 84.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 84.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 84.
+
+Package mdframed Info: mdframed works in twoside mode on input line 115.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 141.
+Package mdframed Info: Not enough space on this page on input line 149.
+[60
+
+]
+Package mdframed Info: Not enough space on this page on input line 149.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 159.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 193.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 214.
+[61]
+Package mdframed Info: mdframed works in twoside mode on input line 227.
+Package mdframed Info: mdframed works in twoside mode on input line 251.
+Package mdframed Info: mdframed works in twoside mode on input line 267.
+Package mdframed Info: mdframed works in twoside mode on input line 280.
+
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 286.
+
+[62]
+Package mdframed Info: mdframed works in twoside mode on input line 297.
+Package mdframed Info: mdframed works in twoside mode on input line 313.
+ [63]
+Package mdframed Info: mdframed works in twoside mode on input line 396.
+Package mdframed Info: mdframed works in twoside mode on input line 406.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 410.
+Package mdframed Info: mdframed works in twoside mode on input line 420.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 432.
+
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 432.
+[64]
+Package mdframed Info: mdframed works in twoside mode on input line 443.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 458.
+Package mdframed Info: mdframed works in twoside mode on input line 472.
+Package mdframed Info: mdframed works in twoside mode on input line 500.
+Package mdframed Info: Not enough space on this page on input line 502.
+[65]
+Package mdframed Info: Not enough space on this page on input line 502.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Package mdframed Info: mdframed works in twoside mode on input line 514.
+Package mdframed Info: mdframed works in twoside mode on input line 518.
+Package mdframed Info: mdframed works in twoside mode on input line 524.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 536.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 548.
+Package mdframed Info: mdframed works in twoside mode on input line 552.
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[66]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 592.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 629.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 635.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[67]
+Package mdframed Info: mdframed works in twoside mode on input line 640.
+) [68] [69
+
+] [70
+
+] (./Riemannian-Manifold.tex
+Chapter 23.
+Package mdframed Info: mdframed works in twoside mode on input line 7.
+Package mdframed Info: mdframed works in twoside mode on input line 25.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 36.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[71
+
+]
+Package mdframed Info: mdframed works in twoside mode on input line 76.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[72]
+Chapter 24.
+Package mdframed Info: mdframed works in twoside mode on input line 94.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[73
+
+]
+Chapter 25.
+[74
+
+]
+Chapter 26.
+Package mdframed Info: mdframed works in twoside mode on input line 136.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 142.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[75
+
+]
+Chapter 27.
+[76
+
+]
+Chapter 28.
+[77
+
+]
+Chapter 29.
+[78
+
+]
+Chapter 30.
+[79
+
+]
+Chapter 31.
+[80
+
+]
+Chapter 32.
+[81
+
+]
+Chapter 33.
+
+Overfull \hbox (22.26883pt too wide) in paragraph at lines 166--166
+|[]\T1/stix/b/n/24.88 Compelete Man-i-fold, Hopf-Rinow
+ []
+
+[82
+
+]
+Chapter 34.
+[83
+
+]
+Chapter 35.
+[84
+
+]
+Chapter 36.
+[85
+
+]
+Chapter 37.
+
+Overfull \hbox (15.61095pt too wide) in paragraph at lines 170--170
+|[]\T1/stix/b/n/24.88 The Fun-da-men-tal Group of Man-
+ []
+
+[86
+
+]
+Chapter 38.
+[87
+
+]
+Chapter 39.
+) [88
+
+] [89
+
+] (./Differential-Geometry.tex
+Chapter 40.
+Package mdframed Info: mdframed works in twoside mode on input line 9.
+[90
+
+]
+Package mdframed Info: mdframed works in twoside mode on input line 71.
+Package mdframed Info: mdframed works in twoside mode on input line 91.
+
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Package mdframed Info: mdframed works in twoside mode on input line 105.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 115.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 121.
+[91]
+Package mdframed Info: mdframed works in twoside mode on input line 162.
+Package mdframed Info: mdframed works in twoside mode on input line 189.
+ [92]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 239.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[93]
+Chapter 41.
+Package mdframed Info: mdframed works in twoside mode on input line 259.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 288.
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[94
+
+]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 327.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 336.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 359.
+Package mdframed Info: mdframed works in twoside mode on input line 363.
+[95]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 390.
+Package mdframed Info: mdframed works in twoside mode on input line 399.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 418.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[96] [97]
+Chapter 42.
+[98
+
+]
+Chapter 43.
+[99
+
+]
+Chapter 44.
+[100
+
+]
+Chapter 45.
+[101
+
+]
+Chapter 46.
+[102
+
+]
+Chapter 47.
+[103
+
+]
+Chapter 48.
+) [104
+
+] [105
+
+] (./Morse-Theory.tex) [106
+
+] [107
+
+] [108
+
+] [109
+
+] [110
+
+] [111
+
+] [112
+
+]
+[113
+
+] [114
+
+] [115
+
+] [116
+
+] [117
+
+] (./Linear-Algebra.tex
+Chapter 49.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+) [118
+
+] [119
+
+] (./Linear-Algebra-Division-Ring.tex) [120
+
+] [121
+
+]
+(./Ring-Module.tex
+Chapter 50.
+[122
+
+]
+Chapter 51.
+Package mdframed Info: mdframed works in twoside mode on input line 8.
+Package mdframed Info: mdframed works in twoside mode on input line 52.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 76.
+[123
+
+]
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[124]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[125]
+Chapter 52.
+[126
+
+]
+Chapter 53.
+[127
+
+]
+Chapter 54.
+) [128
+
+] [129
+
+] (./Field.tex
+Chapter 55.
+Package mdframed Info: mdframed works in twoside mode on input line 7.
+Package mdframed Info: mdframed works in twoside mode on input line 64.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 72.
+
+[130
+
+]
+Package mdframed Info: mdframed works in twoside mode on input line 76.
+Package mdframed Info: mdframed works in twoside mode on input line 111.
+Package mdframed Info: mdframed works in twoside mode on input line 128.
+Package mdframed Info: mdframed works in twoside mode on input line 142.
+ [131]
+Package mdframed Info: mdframed works in twoside mode on input line 146.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 160.
+Package mdframed Info: mdframed works in twoside mode on input line 169.
+[132]
+Chapter 56.
+
+Overfull \hbox (23.92088pt too wide) in paragraph at lines 180--180
+|[]\T1/stix/b/n/24.88 The Fun-da-men-tal The-o-rem of Ga-
+ []
+
+[133
+
+]
+Chapter 57.
+[134
+
+]
+Chapter 58.
+) [135
+
+] [136
+
+] (./Galois-Inverse-Problem.tex
+Package mdframed Info: mdframed works in twoside mode on input line 4.
+Package mdframed Info: Not enough space on this page on input line 12.
+Package mdframed Info: mdframed works in twoside mode on input line 23.
+) [137] [138
+
+]
+(./Commutative-Algebra.tex
+Chapter 59.
+
+Overfull \hbox (26.70743pt too wide) in paragraph at lines 4--4
+|[]\T1/stix/b/n/24.88 Additional Text for Ring and Mod-
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 11.
+Package mdframed Info: mdframed works in twoside mode on input line 21.
+[139
+
+]
+Package mdframed Info: mdframed works in twoside mode on input line 96.
+ [140]
+Package mdframed Info: mdframed works in twoside mode on input line 127.
+ [141]
+Chapter 60.
+Package mdframed Info: mdframed works in twoside mode on input line 131.
+Package mdframed Info: mdframed works in twoside mode on input line 142.
+Package mdframed Info: mdframed works in twoside mode on input line 147.
+[142
+
+]
+Package mdframed Info: mdframed works in twoside mode on input line 202.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[143]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 295.
+Package mdframed Info: mdframed works in twoside mode on input line 319.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[144]
+Package mdframed Info: mdframed works in twoside mode on input line 335.
+ [145]
+Chapter 61.
+Package mdframed Info: mdframed works in twoside mode on input line 362.
+[146
+
+]
+Package mdframed Info: mdframed works in twoside mode on input line 447.
+Package mdframed Info: mdframed works in twoside mode on input line 452.
+ [147]
+Chapter 62.
+
+Overfull \hbox (5.68388pt too wide) in paragraph at lines 456--456
+|[]\T1/stix/b/n/24.88 Associated Prime,Prime De-com-
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 460.
+Package mdframed Info: mdframed works in twoside mode on input line 469.
+[148
+
+]
+Chapter 63.
+
+Overfull \hbox (34.21123pt too wide) in paragraph at lines 517--517
+|[]\T1/stix/b/n/24.88 Seperable Ex-ten-sion, Per-fect Fields| 
+ []
+
+[149
+
+]
+Chapter 64.
+[150
+
+]
+Chapter 65.
+Package mdframed Info: mdframed works in twoside mode on input line 524.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[151
+
+]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 619.
+[152]
+Package mdframed Info: mdframed works in twoside mode on input line 636.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[153]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[154]
+Chapter 66.
+Package mdframed Info: mdframed works in twoside mode on input line 717.
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[155
+
+]
+Chapter 67.
+Package mdframed Info: mdframed works in twoside mode on input line 749.
+Package mdframed Info: mdframed works in twoside mode on input line 787.
+Package mdframed Info: mdframed works in twoside mode on input line 794.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 799.
+
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 799.
+[156
+
+]
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last split box is empty
+(mdframed)                You have to change the settings on input line 799.
+
+Package mdframed Info: mdframed works in twoside mode on input line 824.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 843.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 850.
+[157]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 869.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 912.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[158]
+Package mdframed Info: mdframed works in twoside mode on input line 925.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 931.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 931.
+
+Package mdframed Info: mdframed works in twoside mode on input line 932.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 938.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 938.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 938.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 938.
+
+Package mdframed Info: mdframed works in twoside mode on input line 939.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[159]
+Chapter 68.
+[160
+
+]
+Chapter 69.
+Package mdframed Info: mdframed works in twoside mode on input line 951.
+Package mdframed Info: mdframed works in twoside mode on input line 975.
+Package mdframed Info: mdframed works in twoside mode on input line 982.
+[161
+
+]
+Package mdframed Info: mdframed works in twoside mode on input line 1037.
+ [162]
+Package mdframed Info: mdframed works in twoside mode on input line 1062.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1079.
+Package mdframed Info: mdframed works in twoside mode on input line 1094.
+Package mdframed Info: mdframed works in twoside mode on input line 1108.
+[163]
+Package mdframed Info: mdframed works in twoside mode on input line 1132.
+ [164]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[165]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1240.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[166]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[167]
+Chapter 70.
+
+Overfull \hbox (12.9488pt too wide) in paragraph at lines 1296--1296
+|[]\T1/stix/b/n/24.88 Blow-Up Al-ge-bras/Rees Al-ge-bras| 
+ []
+
+Missing character: There is no – ("2013) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1300.
+[168
+
+]
+Chapter 71.
+
+Overfull \hbox (10.65984pt too wide) in paragraph at lines 1309--1309
+|[]\T1/stix/b/n/24.88 Ext Groups and Free Res-o-lu-tions| 
+ []
+
+[169
+
+]
+Chapter 72.
+Package mdframed Info: mdframed works in twoside mode on input line 1317.
+Package mdframed Info: mdframed works in twoside mode on input line 1337.
+[170
+
+] [171]
+Package mdframed Info: mdframed works in twoside mode on input line 1449.
+Package mdframed Info: mdframed works in twoside mode on input line 1455.
+Package mdframed Info: mdframed works in twoside mode on input line 1470.
+ [172]
+Chapter 73.
+Package mdframed Info: mdframed works in twoside mode on input line 1485.
+[173
+
+]
+Chapter 74.
+Package mdframed Info: mdframed works in twoside mode on input line 1507.
+[174
+
+]
+Chapter 75.
+Package mdframed Info: mdframed works in twoside mode on input line 1530.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1569.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 1588.
+[175
+
+]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1627.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 1640.
+[176]
+! Missing } inserted.
+<inserted text> 
+                }
+l.1670 ...m of $(R_i\rightarrow S_i,\varphi_{ii')$
+                                                   be a system of ring maps ...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[177]
+Package mdframed Info: mdframed works in twoside mode on input line 1706.
+Package mdframed Info: mdframed works in twoside mode on input line 1722.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1730 ^^I^^I^^I^^I
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[178]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1777.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1806.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[179] [180]
+Chapter 76.
+Package mdframed Info: mdframed works in twoside mode on input line 1817.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[181
+
+]
+Chapter 77.
+[182
+
+]
+Chapter 78.
+[183
+
+]
+Chapter 79.
+[184
+
+]
+Package mdframed Info: mdframed works in twoside mode on input line 1941.
+Package mdframed Info: mdframed works in twoside mode on input line 1971.
+Package mdframed Info: mdframed works in twoside mode on input line 1986.
+Package mdframed Info: mdframed works in twoside mode on input line 1990.
+Package mdframed Info: mdframed works in twoside mode on input line 1994.
+
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 2003.
+
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 2003.
+[185]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2017.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 2017.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 2017.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2017.
+
+[186]
+Chapter 80.
+) [187
+
+] [188
+
+] (./Valuation-Theory.tex
+Chapter 81.
+Package mdframed Info: mdframed works in twoside mode on input line 5.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 50.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 57.
+
+[189
+
+]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[190]
+Chapter 82.
+[191
+
+]
+Chapter 83.
+) [192
+
+] [193
+
+] (./Finite-Group-Representation.tex) [194
+
+]
+(./Algebraic-Representation-Theory.tex) [195
+
+]
+(./Noncommutative-Ring-and-Module.tex [196]
+Chapter 84.
+
+Overfull \hbox (7.36577pt too wide) in paragraph at lines 10--10
+|[]\T1/stix/b/n/24.88 Free Mod-ules, Pro-jec-tive and In-
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 15.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 38.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 42.
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+[197
+
+]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 92.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 109.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[198]
+Chapter 85.
+Package mdframed Info: mdframed works in twoside mode on input line 117.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[199
+
+]
+Chapter 86.
+
+Overfull \hbox (10.31157pt too wide) in paragraph at lines 120--120
+|[]\T1/stix/b/n/24.88 Jacobson Rad-i-cal of Non-com-mu-
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 122.
+Package mdframed Info: mdframed works in twoside mode on input line 150.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[200
+
+]
+Chapter 87.
+Package mdframed Info: mdframed works in twoside mode on input line 181.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 239.
+[201
+
+]
+Package mdframed Info: mdframed works in twoside mode on input line 249.
+ [202]
+Chapter 88.
+Package mdframed Info: mdframed works in twoside mode on input line 258.
+Package mdframed Info: mdframed works in twoside mode on input line 268.
+Package mdframed Info: mdframed works in twoside mode on input line 278.
+[203
+
+]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 350.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[204]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 458.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[205]) [206] [207
+
+] (./Serres-Problem-on-Projective-Modules.tex) [208
+
+] [209
+
+]
+[210
+
+] [211
+
+] (./Graph-Theory.tex
+Chapter 89.
+
+Overfull \hbox (34.94269pt too wide) in paragraph at lines 4--4
+|[]\T1/stix/b/n/24.88 Fundamental of Con-cepts in Graph
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 10.
+Package mdframed Info: mdframed works in twoside mode on input line 19.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 24.
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 44.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 55.
+[212
+
+]
+Package mdframed Info: Not enough space on this page on input line 60.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 68.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 72.
+Package mdframed Info: mdframed works in twoside mode on input line 89.
+[213]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 140.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 144.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[214]
+Chapter 90.
+Package mdframed Info: mdframed works in twoside mode on input line 158.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 203.
+[215
+
+]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 232.
+Package mdframed Info: mdframed works in twoside mode on input line 239.
+Package mdframed Info: mdframed works in twoside mode on input line 267.
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 282.
+[216]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 324.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[217]
+Chapter 91.
+Package mdframed Info: mdframed works in twoside mode on input line 331.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+) [218
+
+] [219
+
+] [220
+
+] [221
+
+] (./Category-Theory.tex
+Chapter 92.
+[222
+
+]
+Chapter 93.
+Package mdframed Info: mdframed works in twoside mode on input line 18.
+Package mdframed Info: mdframed works in twoside mode on input line 28.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 59.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[223
+
+]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 8
+5.
+(c:/texlive/2022/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Overfull \hbox (3.74055pt too wide) in paragraph at lines 87--88
+[][]$\T1/lmtt/m/n/10 https : / / www . voutsadakis . com / TEACH / LECTURES / C
+ATEGORY / Chapter4 . pdf ? utm _ source = chatgpt . com$[]
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 98.
+) [224] [225
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 127.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\infty' on input line 127.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 127.
+
+[226
+
+] [227
+
+] [228
+
+] [229
+
+] [230
+
+] [231
+
+] [232
+
+] [233
+
+] (./Homological-Algebra.tex
+(./Total.toc)
+\tf@toc=\write6
+\openout6 = `Total.toc'.
+
+ [234
+
+]
+Chapter 94.
+
+Overfull \hbox (15.06363pt too wide) in paragraph at lines 5--5
+|[]\T1/stix/b/n/24.88 Projective and In-jec-tive Mod-ules,
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 7.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 21.
+Package mdframed Info: mdframed works in twoside mode on input line 33.
+[235
+
+]
+Package mdframed Info: mdframed works in twoside mode on input line 70.
+
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+[236]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 158.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 163.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 169.
+[237]
+Package mdframed Info: mdframed works in twoside mode on input line 191.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 207.
+[238]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 232.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 260.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[239]
+Package mdframed Info: mdframed works in twoside mode on input line 284.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 302.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 337.
+Package mdframed Info: Not enough space on this page on input line 345.
+[240]
+Package mdframed Info: Not enough space on this page on input line 345.
+Package mdframed Info: mdframed works in twoside mode on input line 386.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[241]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[242]
+Package mdframed Info: mdframed works in twoside mode on input line 454.
+
+Overfull \hbox (10.28212pt too wide) in paragraph at lines 454--456
+[]\T1/stix/b/n/10 Definition 94.4.2.6  \T1/stix/m/n/10 An \T1/stix/b/n/10 in-je
+c-tive \T1/stix/m/n/10 res-o-lu-tion is a cochain com-plex $\LS1/stix/m/it/10 J
+[] \LS1/stix/m/n/10 Ë \LS1/stix/m/it/10 Ch[]\LS1/stix/m/n/10 .\LS2/stixcal/m/n/
+10 A\LS1/stix/m/n/10 /$ \T1/stix/m/n/10 equipped with a \T1/stix/b/n/10 quasi-i
+somorphism 
+ []
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 481.
+Package mdframed Info: mdframed works in twoside mode on input line 495.
+[243]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 521.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 521.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 521.
+
+Package mdframed Info: mdframed works in twoside mode on input line 525.
+Package mdframed Info: mdframed works in twoside mode on input line 537.
+[244]
+Chapter 95.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 550.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 550.
+
+Package mdframed Info: mdframed works in twoside mode on input line 551.
+Package mdframed Info: mdframed works in twoside mode on input line 567.
+Package mdframed Info: mdframed works in twoside mode on input line 578.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[245
+
+]
+Package mdframed Info: mdframed works in twoside mode on input line 626.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 638.
+[246]
+Package mdframed Info: mdframed works in twoside mode on input line 700.
+ [247]
+Package mdframed Info: mdframed works in twoside mode on input line 747.
+Package mdframed Info: mdframed works in twoside mode on input line 760.
+ [248]
+Package mdframed Info: mdframed works in twoside mode on input line 795.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 824.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 838.
+
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 838.
+[249]
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last split box is empty
+(mdframed)                You have to change the settings on input line 838.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 855.
+Package mdframed Info: mdframed works in twoside mode on input line 876.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 895.
+[250]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[251]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 963.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[252]
+Package mdframed Info: mdframed works in twoside mode on input line 1020.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1055.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[253]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1081.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\delta' on input line 1081.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1081.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1082.
+[254]
+Package mdframed Info: mdframed works in twoside mode on input line 1117.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1121.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1139.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 1177.
+[255]
+
+LaTeX Warning: Reference `Homological-Algebra-Abelian-Category-Product-Equals-C
+oproduct' on page 256 undefined on input line 1230.
+
+[256]
+Package mdframed Info: mdframed works in twoside mode on input line 1294.
+Package mdframed Info: Not enough space on this page on input line 1306.
+ [257]
+Package mdframed Info: Not enough space on this page on input line 1306.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1317.
+Package mdframed Info: mdframed works in twoside mode on input line 1321.
+Package mdframed Info: mdframed works in twoside mode on input line 1328.
+Package mdframed Info: mdframed works in twoside mode on input line 1346.
+Package mdframed Info: Not enough space on this page on input line 1352.
+[258]
+Package mdframed Info: Not enough space on this page on input line 1352.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1385.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[259]
+Package mdframed Info: mdframed works in twoside mode on input line 1419.
+Package mdframed Info: mdframed works in twoside mode on input line 1431.
+Package mdframed Info: mdframed works in twoside mode on input line 1449.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[260]
+Package mdframed Info: mdframed works in twoside mode on input line 1469.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1475.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+[261]
+Package mdframed Info: mdframed works in twoside mode on input line 1525.
+Package mdframed Info: mdframed works in twoside mode on input line 1535.
+Package mdframed Info: mdframed works in twoside mode on input line 1545.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[262]
+Package mdframed Info: mdframed works in twoside mode on input line 1576.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1602.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\partial' on input line 1602.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1602.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[263]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1630.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 1630.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1630.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1631.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1661.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1690.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[264]
+Package mdframed Info: Not enough space on this page on input line 1692.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1696.
+Package mdframed Info: mdframed works in twoside mode on input line 1701.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[265]
+Chapter 96.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1727.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\delta' on input line 1727.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1727.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1728.
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 1776.
+
+[266
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1835.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\delta' on input line 1835.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1835.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1836.
+Package mdframed Info: mdframed works in twoside mode on input line 1846.
+Package mdframed Info: Not enough space on this page on input line 1856.
+[267]
+Package mdframed Info: Not enough space on this page on input line 1856.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1880.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1896.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\delta' on input line 1896.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1896.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1896.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 1896.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1896.
+
+[268]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1916.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1916.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1917.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1923.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 1923.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1923.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1923.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\delta' on input line 1923.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1923.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1936.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1950.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[269]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1971.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1988.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 2001.
+[270]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 2034.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 2050.
+Package mdframed Info: mdframed works in twoside mode on input line 2057.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[271]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 2084.
+[272]
+Chapter 97.
+Package mdframed Info: mdframed works in twoside mode on input line 2100.
+Package mdframed Info: mdframed works in twoside mode on input line 2109.
+Package mdframed Info: mdframed works in twoside mode on input line 2124.
+Package mdframed Info: mdframed works in twoside mode on input line 2132.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+[273
+
+] [274]
+Chapter 98.
+[275
+
+]
+Chapter 99.
+Package mdframed Info: mdframed works in twoside mode on input line 2158.
+Package mdframed Info: mdframed works in twoside mode on input line 2187.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 2191.
+Package mdframed Info: mdframed works in twoside mode on input line 2203.
+[276
+
+]
+Package mdframed Info: Not enough space on this page on input line 2212.
+Package mdframed Info: mdframed works in twoside mode on input line 2221.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 2241.
+[277]
+Chapter 100.
+[278
+
+]
+Chapter 101.
+[279
+
+]
+Chapter 102.
+Package mdframed Info: mdframed works in twoside mode on input line 2257.
+Package mdframed Info: mdframed works in twoside mode on input line 2304.
+Missing character: There is no ‘ ("2018) in font stix-mathrm!
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 2343.
+[280
+
+]
+Package mdframed Info: mdframed works in twoside mode on input line 2346.
+Package mdframed Info: mdframed works in twoside mode on input line 2366.
+
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 2371.
+
+
+Overfull \vbox (15.55872pt too high) detected at line 2371
+ []
+
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 2371.
+
+Overfull \vbox (16.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (17.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (18.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (19.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (20.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (21.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (22.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (23.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (24.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (25.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (26.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (27.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (28.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (29.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (30.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (31.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (32.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (33.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (34.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (35.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (36.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (37.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (38.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (39.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (40.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (41.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (42.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (43.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (44.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (45.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (46.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (47.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (48.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (49.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (50.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (51.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (52.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (53.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (54.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (55.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (56.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (57.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (58.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (59.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (60.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (61.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (62.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (63.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (64.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (65.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (66.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (67.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (68.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (69.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (70.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (71.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (72.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (73.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (74.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (75.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (76.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (77.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (78.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (79.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (80.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (81.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (82.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (83.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (84.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (85.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (86.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (87.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (88.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (89.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (90.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (91.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (92.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (93.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (94.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (95.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (96.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (97.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (98.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (99.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (100.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (101.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (102.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (103.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (104.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (105.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (106.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (107.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (108.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (109.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (110.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (111.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (112.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (113.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (114.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (115.55872pt too high) detected at line 2371
+ []
+
+
+Overfull \vbox (116.55872pt too high) detected at line 2371
+ []
+
+
+Package mdframed Warning: correct box splittet fails
+ It seems you are using a non splittable contents
+(mdframed)                 on input line 2371.
+
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 2371.
+[281]
+Package mdframed Info: mdframed works in twoside mode on input line 2373.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no ‘ ("2018) in font stix-mathrm!
+Missing character: There is no ’ ("2019) in font stix-mathrm!
+[282]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 2438.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 2467.
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 2481.
+[283]) [284] [285
+
+] (./Syzygies.tex
+Chapter 103.
+
+Overfull \hbox (0.24756pt too wide) in paragraph at lines 5--5
+|[]\T1/stix/b/n/24.88 Introduction: What is Syzygy?| 
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 37.
+[286
+
+]
+Package mdframed Info: mdframed works in twoside mode on input line 93.
+Package mdframed Info: mdframed works in twoside mode on input line 109.
+ [287]
+Chapter 104.
+
+Overfull \hbox (21.4826pt too wide) in paragraph at lines 118--118
+|[]\T1/stix/b/n/24.88 Hilbert's Syzy-gies The-o-rem,Free
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 124.
+Package mdframed Info: mdframed works in twoside mode on input line 143.
+[288
+
+]
+Chapter 105.
+
+Overfull \hbox (4.88766pt too wide) in paragraph at lines 155--155
+|[]\T1/stix/b/n/24.88 Introduction to Boij-Söderberg
+ []
+
+) [289
+
+] [290
+
+] [291
+
+] [292
+
+]
+(./Topological-K-Theory-and-Characteristic-Classes.tex
+Chapter 106.
+Package mdframed Info: mdframed works in twoside mode on input line 8.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 30.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 80.
+Package mdframed Info: Not enough space on this page on input line 87.
+[293
+
+]
+Package mdframed Info: Not enough space on this page on input line 87.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 92.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 99.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[294]
+Chapter 107.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 108.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 108.
+
+[295
+
+]
+Chapter 108.
+[296
+
+]
+Chapter 109.
+[297
+
+]
+Chapter 110.
+
+Overfull \hbox (17.17838pt too wide) in paragraph at lines 111--111
+|[]\T1/stix/b/n/24.88 Computation of Some K-Groups| 
+ []
+
+[298
+
+]
+Chapter 111.
+[299
+
+]
+Chapter 112.
+[300
+
+]
+Chapter 113.
+[301
+
+]
+Chapter 114.
+[302
+
+]
+Chapter 115.
+) [303
+
+] [304
+
+] (./Classical-Algebraic-Geometry.tex (./Total.toc)
+\tf@toc=\write7
+\openout7 = `Total.toc'.
+
+ [305
+
+]
+Chapter 116.
+Package mdframed Info: mdframed works in twoside mode on input line 10.
+Package mdframed Info: mdframed works in twoside mode on input line 29.
+Package mdframed Info: mdframed works in twoside mode on input line 57.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 78.
+[306
+
+]
+Package mdframed Info: mdframed works in twoside mode on input line 106.
+ [307]
+Package mdframed Info: mdframed works in twoside mode on input line 135.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-343' on page 308 undefined on input lin
+e 145.
+
+Package mdframed Info: mdframed works in twoside mode on input line 151.
+
+LaTeX Warning: Reference `mdf@pagelabel-344' on page 308 undefined on input lin
+e 153.
+
+Package mdframed Info: mdframed works in twoside mode on input line 193.
+
+LaTeX Warning: Reference `mdf@pagelabel-345' on page 308 undefined on input lin
+e 201.
+
+Package mdframed Info: mdframed works in twoside mode on input line 203.
+Package mdframed Info: Not enough space on this page on input line 215.
+[308]
+Package mdframed Info: Not enough space on this page on input line 215.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-346' on page 309 undefined on input lin
+e 215.
+
+Package mdframed Info: mdframed works in twoside mode on input line 223.
+
+LaTeX Warning: Reference `mdf@pagelabel-347' on page 309 undefined on input lin
+e 231.
+
+Package mdframed Info: mdframed works in twoside mode on input line 242.
+
+LaTeX Warning: Reference `mdf@pagelabel-348' on page 309 undefined on input lin
+e 253.
+
+[309]
+Package mdframed Info: mdframed works in twoside mode on input line 347.
+Package mdframed Info: Not enough space on this page on input line 353.
+ [310]
+Package mdframed Info: Not enough space on this page on input line 353.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-349' on page 311 undefined on input lin
+e 353.
+
+Package mdframed Info: mdframed works in twoside mode on input line 396.
+
+LaTeX Warning: Reference `mdf@pagelabel-350' on page 311 undefined on input lin
+e 398.
+
+Package mdframed Info: mdframed works in twoside mode on input line 402.
+
+LaTeX Warning: Reference `mdf@pagelabel-351' on page 311 undefined on input lin
+e 404.
+
+[311]
+Package mdframed Info: mdframed works in twoside mode on input line 451.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-352' on page 312 undefined on input lin
+e 453.
+
+Package mdframed Info: mdframed works in twoside mode on input line 485.
+Package mdframed Info: Not enough space on this page on input line 487.
+[312]
+Package mdframed Info: Not enough space on this page on input line 487.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-353' on page 313 undefined on input lin
+e 487.
+
+Package mdframed Info: mdframed works in twoside mode on input line 499.
+
+LaTeX Warning: Reference `mdf@pagelabel-354' on page 313 undefined on input lin
+e 505.
+
+Missing character: There is no 　 ("3000) in font stix-mathrm!
+Package mdframed Info: mdframed works in twoside mode on input line 528.
+
+LaTeX Warning: Reference `mdf@pagelabel-355' on page 313 undefined on input lin
+e 536.
+
+[313]
+Package mdframed Info: mdframed works in twoside mode on input line 577.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-356' on page 314 undefined on input lin
+e 579.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 589.
+
+LaTeX Warning: Reference `mdf@pagelabel-357' on page 314 undefined on input lin
+e 601.
+
+[314]
+Package mdframed Info: mdframed works in twoside mode on input line 658.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-358' on page 315 undefined on input lin
+e 670.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 688.
+
+LaTeX Warning: Reference `mdf@pagelabel-359' on page 315 undefined on input lin
+e 704.
+
+Package mdframed Info: mdframed works in twoside mode on input line 708.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[315]
+
+LaTeX Warning: Reference `mdf@pagelabel-360' on page 316 undefined on input lin
+e 710.
+
+Package mdframed Info: mdframed works in twoside mode on input line 728.
+
+LaTeX Warning: Reference `mdf@pagelabel-361' on page 316 undefined on input lin
+e 730.
+
+Package mdframed Info: mdframed works in twoside mode on input line 736.
+
+LaTeX Warning: Reference `mdf@pagelabel-362' on page 316 undefined on input lin
+e 757.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 782.
+Package mdframed Info: Not enough space on this page on input line 786.
+[316]
+Package mdframed Info: Not enough space on this page on input line 786.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-363' on page 317 undefined on input lin
+e 786.
+
+Package mdframed Info: mdframed works in twoside mode on input line 806.
+
+LaTeX Warning: Reference `mdf@pagelabel-364' on page 317 undefined on input lin
+e 820.
+
+Package mdframed Info: mdframed works in twoside mode on input line 824.
+
+LaTeX Warning: Reference `mdf@pagelabel-365' on page 317 undefined on input lin
+e 832.
+
+[317]
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Package mdframed Info: mdframed works in twoside mode on input line 930.
+Package mdframed Info: Not enough space on this page on input line 938.
+[318]
+Package mdframed Info: Not enough space on this page on input line 938.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-366' on page 319 undefined on input lin
+e 938.
+
+[319]
+Package mdframed Info: mdframed works in twoside mode on input line 1045.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-367' on page 320 undefined on input lin
+e 1059.
+
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+[320]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1113.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+
+LaTeX Warning: Reference `mdf@pagelabel-368' on page 321 undefined on input lin
+e 1115.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1123.
+
+LaTeX Warning: Reference `mdf@pagelabel-369' on page 321 undefined on input lin
+e 1137.
+
+[321]
+Package mdframed Info: mdframed works in twoside mode on input line 1167.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-370' on page 322 undefined on input lin
+e 1179.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1198.
+
+LaTeX Warning: Reference `mdf@pagelabel-371' on page 322 undefined on input lin
+e 1204.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1206.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 1222.
+
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 1222.
+
+LaTeX Warning: Reference `mdf@pagelabel-372' on page 322 undefined on input lin
+e 1222.
+
+[322]
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last split box is empty
+(mdframed)                You have to change the settings on input line 1222.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-373' on page 323 undefined on input lin
+e 1222.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1246.
+
+LaTeX Warning: Reference `mdf@pagelabel-374' on page 323 undefined on input lin
+e 1254.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1260.
+
+LaTeX Warning: Reference `mdf@pagelabel-375' on page 323 undefined on input lin
+e 1272.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1294.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 1300.
+
+LaTeX Warning: Reference `mdf@pagelabel-376' on page 323 undefined on input lin
+e 1300.
+
+[323]
+
+LaTeX Warning: Reference `mdf@pagelabel-377' on page 324 undefined on input lin
+e 1300.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1308.
+
+LaTeX Warning: Reference `mdf@pagelabel-378' on page 324 undefined on input lin
+e 1310.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1318.
+
+LaTeX Warning: Reference `mdf@pagelabel-379' on page 324 undefined on input lin
+e 1324.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1356.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+
+LaTeX Warning: Reference `mdf@pagelabel-380' on page 324 undefined on input lin
+e 1358.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[324]
+Package mdframed Info: mdframed works in twoside mode on input line 1406.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-381' on page 325 undefined on input lin
+e 1420.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1434.
+Package mdframed Info: Not enough space on this page on input line 1436.
+[325]
+Package mdframed Info: Not enough space on this page on input line 1436.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-382' on page 326 undefined on input lin
+e 1436.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1445.
+
+LaTeX Warning: Reference `mdf@pagelabel-383' on page 326 undefined on input lin
+e 1463.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1495.
+
+LaTeX Warning: Reference `mdf@pagelabel-384' on page 326 undefined on input lin
+e 1502.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1504.
+
+LaTeX Warning: Reference `mdf@pagelabel-385' on page 326 undefined on input lin
+e 1506.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[326]
+Package mdframed Info: mdframed works in twoside mode on input line 1564.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-386' on page 327 undefined on input lin
+e 1566.
+
+[327]
+Package mdframed Info: mdframed works in twoside mode on input line 1604.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-387' on page 328 undefined on input lin
+e 1612.
+
+[328]
+Package mdframed Info: mdframed works in twoside mode on input line 1688.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-388' on page 329 undefined on input lin
+e 1700.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1731.
+
+LaTeX Warning: Reference `mdf@pagelabel-389' on page 329 undefined on input lin
+e 1747.
+
+[329]
+
+LaTeX Warning: Reference `mdf@pagelabel-390' on page 330 undefined on input lin
+e 1747.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1755.
+
+LaTeX Warning: Reference `mdf@pagelabel-391' on page 330 undefined on input lin
+e 1774.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1785.
+
+LaTeX Warning: Reference `mdf@pagelabel-392' on page 330 undefined on input lin
+e 1801.
+
+[330]
+Package mdframed Info: mdframed works in twoside mode on input line 1832.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-393' on page 331 undefined on input lin
+e 1846.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1870.
+
+LaTeX Warning: Reference `mdf@pagelabel-394' on page 331 undefined on input lin
+e 1884.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[331]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1945.
+
+LaTeX Warning: Reference `mdf@pagelabel-395' on page 332 undefined on input lin
+e 1951.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1959.
+
+LaTeX Warning: Reference `mdf@pagelabel-396' on page 332 undefined on input lin
+e 1971.
+
+[332]
+
+LaTeX Warning: Reference `mdf@pagelabel-397' on page 333 undefined on input lin
+e 1971.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1975.
+
+LaTeX Warning: Reference `mdf@pagelabel-398' on page 333 undefined on input lin
+e 1981.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1983.
+
+LaTeX Warning: Reference `mdf@pagelabel-399' on page 333 undefined on input lin
+e 1991.
+
+Package mdframed Info: mdframed works in twoside mode on input line 2000.
+
+LaTeX Warning: Reference `mdf@pagelabel-400' on page 333 undefined on input lin
+e 2010.
+
+[333]
+Overfull \hbox (159.50168pt too wide) detected at line 2068
+[]
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 2077.
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+
+LaTeX Warning: Reference `mdf@pagelabel-401' on page 334 undefined on input lin
+e 2085.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 2091.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+
+LaTeX Warning: Reference `mdf@pagelabel-402' on page 334 undefined on input lin
+e 2093.
+
+Package mdframed Info: mdframed works in twoside mode on input line 2095.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+
+LaTeX Warning: Reference `mdf@pagelabel-403' on page 334 undefined on input lin
+e 2097.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 2103.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+
+LaTeX Warning: Reference `mdf@pagelabel-404' on page 334 undefined on input lin
+e 2105.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[334]
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 2139.
+
+LaTeX Warning: Reference `mdf@pagelabel-405' on page 335 undefined on input lin
+e 2161.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 2190.
+Package mdframed Info: Not enough space on this page on input line 2197.
+[335]
+Package mdframed Info: Not enough space on this page on input line 2197.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-406' on page 336 undefined on input lin
+e 2197.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 2220.
+
+LaTeX Warning: Reference `mdf@pagelabel-407' on page 336 undefined on input lin
+e 2226.
+
+Package mdframed Info: mdframed works in twoside mode on input line 2240.
+
+LaTeX Warning: Reference `mdf@pagelabel-408' on page 336 undefined on input lin
+e 2244.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[336]
+Package mdframed Info: mdframed works in twoside mode on input line 2268.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-409' on page 337 undefined on input lin
+e 2274.
+
+Package mdframed Info: mdframed works in twoside mode on input line 2276.
+
+LaTeX Warning: Reference `mdf@pagelabel-410' on page 337 undefined on input lin
+e 2278.
+
+[337]
+Chapter 117.
+Package mdframed Info: mdframed works in twoside mode on input line 2283.
+
+LaTeX Warning: Reference `mdf@pagelabel-411' on page 338 undefined on input lin
+e 2291.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[338
+
+]
+Package mdframed Info: mdframed works in twoside mode on input line 2376.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-412' on page 339 undefined on input lin
+e 2388.
+
+Package mdframed Info: mdframed works in twoside mode on input line 2412.
+
+LaTeX Warning: Reference `mdf@pagelabel-413' on page 339 undefined on input lin
+e 2418.
+
+Package mdframed Info: mdframed works in twoside mode on input line 2426.
+Package mdframed Info: Not enough space on this page on input line 2430.
+[339]
+Package mdframed Info: Not enough space on this page on input line 2430.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-414' on page 340 undefined on input lin
+e 2430.
+
+Package mdframed Info: mdframed works in twoside mode on input line 2443.
+
+LaTeX Warning: Reference `mdf@pagelabel-415' on page 340 undefined on input lin
+e 2449.
+
+[340]
+Chapter 118.
+[341
+
+]
+Chapter 119.
+Package mdframed Info: mdframed works in twoside mode on input line 2476.
+
+LaTeX Warning: Reference `mdf@pagelabel-416' on page 342 undefined on input lin
+e 2482.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 2500.
+
+LaTeX Warning: Reference `mdf@pagelabel-417' on page 342 undefined on input lin
+e 2520.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[342
+
+]
+Package mdframed Info: mdframed works in twoside mode on input line 2534.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+
+LaTeX Warning: Reference `mdf@pagelabel-418' on page 343 undefined on input lin
+e 2536.
+
+Package mdframed Info: mdframed works in twoside mode on input line 2540.
+
+LaTeX Warning: Reference `mdf@pagelabel-419' on page 343 undefined on input lin
+e 2546.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 2568.
+
+LaTeX Warning: Reference `mdf@pagelabel-420' on page 343 undefined on input lin
+e 2575.
+
+Package mdframed Info: mdframed works in twoside mode on input line 2587.
+
+LaTeX Warning: Reference `mdf@pagelabel-421' on page 343 undefined on input lin
+e 2589.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[343]
+Chapter 120.
+[344
+
+]
+Chapter 121.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Missing character: There is no — ("2014) in font stix-mathrm!
+Missing character: There is no — ("2014) in font stix-mathrm!
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[345
+
+] [346]
+Chapter 122.
+Package mdframed Info: mdframed works in twoside mode on input line 2694.
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+
+LaTeX Warning: Reference `mdf@pagelabel-422' on page 347 undefined on input lin
+e 2700.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 2709.
+
+LaTeX Warning: Reference `mdf@pagelabel-423' on page 347 undefined on input lin
+e 2718.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 2730.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+
+LaTeX Warning: Reference `mdf@pagelabel-424' on page 347 undefined on input lin
+e 2732.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[347
+
+]
+Chapter 123.
+Package mdframed Info: mdframed works in twoside mode on input line 2747.
+
+LaTeX Warning: Reference `mdf@pagelabel-425' on page 348 undefined on input lin
+e 2777.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2779.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 2779.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2779.
+
+Package mdframed Info: mdframed works in twoside mode on input line 2781.
+
+LaTeX Warning: Reference `mdf@pagelabel-426' on page 348 undefined on input lin
+e 2794.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2796.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 2796.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2796.
+
+Package mdframed Info: mdframed works in twoside mode on input line 2798.
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+
+LaTeX Warning: Reference `mdf@pagelabel-427' on page 348 undefined on input lin
+e 2800.
+
+[348
+
+]
+Package mdframed Info: mdframed works in twoside mode on input line 2804.
+
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+Missing character: There is no 内 ("5185) in font stix-mathrm!
+Missing character: There is no 容 ("5BB9) in font stix-mathrm!
+
+LaTeX Warning: Reference `mdf@pagelabel-428' on page 349 undefined on input lin
+e 2818.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2822.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 2822.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2822.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2822.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 2822.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2822.
+
+[349]
+Chapter 124.
+
+Overfull \hbox (51.86118pt too wide) in paragraph at lines 2826--2826
+|[]\T1/stix/b/n/24.88 Intersections and De-gree Reasearch| 
+ []
+
+[350
+
+]
+Chapter 125.
+[351
+
+]
+Chapter 126.
+Package mdframed Info: mdframed works in twoside mode on input line 2842.
+
+LaTeX Warning: Reference `mdf@pagelabel-429' on page 352 undefined on input lin
+e 2850.
+
+[352
+
+]
+Chapter 127.
+[353
+
+]
+Chapter 128.
+[354
+
+]
+Chapter 129.
+[355
+
+] [356]
+Chapter 130.
+Package mdframed Info: mdframed works in twoside mode on input line 2884.
+
+LaTeX Warning: Reference `mdf@pagelabel-430' on page 357 undefined on input lin
+e 2904.
+
+[357
+
+]
+Package mdframed Info: mdframed works in twoside mode on input line 2954.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-431' on page 358 undefined on input lin
+e 2978.
+
+Package mdframed Info: mdframed works in twoside mode on input line 2984.
+
+LaTeX Warning: Reference `mdf@pagelabel-432' on page 358 undefined on input lin
+e 2990.
+
+Missing character: There is no 内 ("5185) in font t1-stixgeneral!
+Missing character: There is no 容 ("5BB9) in font t1-stixgeneral!
+[358]
+Chapter 131.
+) [359
+
+] [360
+
+] [361
+
+] [362
+
+] [363
+
+] [364
+
+] [365
+
+] (./Algebraic-Curve.tex [366]
+Chapter 132.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 7.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7.
+
+[367
+
+]
+Chapter 133.
+[368
+
+]
+Chapter 134.
+) [369
+
+] [370
+
+] (./Algebraic-Surface.tex) [371] [372
+
+] (./Abelian-Varieties.tex
+Chapter 135.
+) [373
+
+] [374
+
+] [375
+
+] [376
+
+] (./Resolution-of-Singularities.tex
+Chapter 136.
+[377
+
+]
+Chapter 137.
+[378
+
+]
+Chapter 138.
+) [379
+
+] [380
+
+] [381
+
+] [382
+
+] [383
+
+] (./Total.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.5pt have occurred.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `Total.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Total.out':
+(rerunfilecheck)             Before: E8567ADE96C1601513EDA4CF7156089B;107080
+(rerunfilecheck)             After:  A8CF56DCB283A716ECD0C641546961D2;121007.
+ ) 
+Here is how much of TeX's memory you used:
+ 33035 strings out of 476684
+ 650530 string characters out of 5807583
+ 1880012 words of memory out of 5000000
+ 52712 multiletter control sequences out of 15000+600000
+ 630986 words of font info for 215 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 135i,20n,140p,556b,2101s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on Total.pdf (383 pages).

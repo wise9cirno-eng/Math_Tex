@@ -1,0 +1,295 @@
+\documentclass[Total.tex]{subfiles}
+\begin{document}
+	\chapter{Rings}
+		\section{Definitions}
+		\section{UFD,PID,Euclidean Ring}
+		\section{Localization}
+		\section{title}
+			\subsection{Ring Maps of Finite Type and of Finite Representation}
+			\begin{Def}
+				Let $R\rightarrow S$ be a ring map:
+				\begin{itemize}
+					\item $R\rightarrow S$ is \textbf{of finite type}, or that $S$ is a \textbf{finite type $R$-algebra} if there exist an $n\in \NN$ and an \underline{surjection} of $R$-algebras
+					\begin{gather*}
+						R[x_1,\dots,x_n]\rightarrow S
+					\end{gather*}
+					\item $R\rightarrow S$ is \textbf{of finite presentation} if there exist integers $n,m\in \NN$ and polynomials
+					\begin{gather*}
+						f_1,\dots,f_m\in R[x_1,\dots,x_n]
+					\end{gather*}
+					and an isomorphism of $R$-algebras
+					\begin{gather*}
+						R[x_1,\dots,x_n]/(f_1,\dots,f_m)\cong S
+					\end{gather*}
+				\end{itemize}
+			\end{Def}
+			\subsection{Ring Maps of Finite Type and of Finite Presentation}
+			\subsection{Finite Ring Maps}
+			\subsection{Homomorphisms Essentially of Finite Type}
+				\begin{Def}
+					Let $R\rightarrow S$ be a ring map:
+					\begin{itemize}
+						\item $R\rightarrow S$ is \textbf{essentially of finite type} if $S$ is the localization of an $R$-algebra of finite type. i.e.
+						\begin{gather*}
+							S=M^{-1}R[x_1,\dots,x_n]
+						\end{gather*}
+						\item $R\rightarrow S$ is \textbf{essentially of finite representation} if $S$ is the localization of an $R$-algebra of finite representation
+					\end{itemize}
+				\end{Def}
+				
+				\begin{lemma}
+					The class of ring maps which are \textbf{essentially of finite type} is preserved under composition.
+					
+					Similarly for essentially finite representation.
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\subsubsection{Under Base CHange}
+					\begin{proposition}
+						内容...
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+				\subsubsection{Maps to Artinian Local Ring}
+					\begin{lemma}
+						内容...
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+				\subsubsection{Essentially Finite Maps between Local Rings}
+					\begin{lemma}
+						If $\varphi:R\rightarrow S$ be essentially of finite type with $R$ and $S$ local(but, $\varphi$ may be not local) .
+						
+						Then, there exists an $n$ and a maximal ideal
+						\begin{gather*}
+							m\subseteq R[x_1,\dots,x_n]
+						\end{gather*}
+						
+						lying over $m_R$ such that: $S$ is a localization of a quotient $R[x_1,\dots,x_n]_m$.
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+	\chapter{Modules}
+		\section{Internal Hom}
+		\section{Tensor Product}
+			
+			\begin{Def}
+			\end{Def}
+			
+			\begin{lemma}
+				(Tensor Product commutes with Colimits) Let $(M_i,\mu_{ij})$ be a system over a preordered set $I$, then  
+				
+				\begin{gather*}
+					colim(M_i\otimes N) \cong (Colim M_i)\otimes N
+				\end{gather*}
+			\end{lemma}
+			
+			\begin{proof}
+			\end{proof}
+			
+			\begin{lemma}
+				Let \begin{tikzcd}
+					M_1\arrow[r,"f"]&M_2\arrow[r,"g"]&M_3\arrow[r]&0
+				\end{tikzcd} be an exact sequence of $R$-modules and homomorphisms, and $N$ be an $R$-module, then the sequence
+				
+				\begin{center}
+					\begin{tikzcd}
+						M_1\otimes N\arrow[r,"f\otimes id"]&M_2\otimes N\arrow[r,"g\otimes id"]&M_3\otimes N\arrow[r]&0
+					\end{tikzcd}
+				\end{center}
+				
+				is exact. In other word, $-\otimes N$ is right exact.
+			\end{lemma}
+			
+			\begin{proof}
+			\end{proof}
+			
+			\subsection{Finiteness}
+			
+			\begin{lemma}
+			\end{lemma}
+			
+			\begin{proof}
+			\end{proof}
+			
+			\subsection{Tensor Algebra}
+		
+		\section{Limits, Colimits}
+			\subsection{Directed System, Directed Limits}
+			\begin{Def}
+				Let $(I,\leq)$ be preordered set. Then, $(M_i,\mu_{ij})$ of $R$-modules over $I$ consists of a family of $R$-modules $\{M_i\}$ indexed by $I$, and a family of $R$-module maps $\{\mu_{ij}:M_i\rightarrow M_j\}_{i\leq j}$ such that for $i\leq j\leq k$ 
+				\begin{gather*}
+					\mu_{ii}=id_{M_i}\qquad \mu_{ik}=\mu_{jk}\circ \mu_{ij}
+				\end{gather*}
+				We say $(M_i,\mu_{ij})$ is a \textbf{directed system} if $I$ is a directed set.
+			\end{Def}
+			
+			\begin{lemma}
+				Let $(M_i,\mu_{ij})$ be a family of $R$-modules over the preordered set $I$. The colimit o the system $(M_i,\mu_{ij})$ is the quotient $R$-module
+				\begin{gather*}
+					(\oplus_i M_i)/Q\qquad Q=<\{\iota_i(x_i)-\iota_j(\mu_{ij}(x_i))\}_{i\leq j}>_R
+				\end{gather*}
+				
+				where $\iota_i:M_i\rightarrow \oplus_{i\in I} M_i$ is a natural inclusion.
+				
+				We denote the colimit
+				\begin{gather*}
+					colimit(M)=colim_i M_i
+				\end{gather*}
+				
+				Denote $\pi:\oplus_{i\in I} M_i\rightarrow M$ the projection map and $\phi_i=\pi\circ \iota_i:M_i\rightarrow M$.
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{lemma}
+				Let $(M_i,\mu_{ij})$ be a system of $R$-modules over the preordered set $I$.
+				
+				Assume that $I$ is directed. The colimit of the system $(M_i.\mu_{ij})$ is canonically isomorphic to the module $M$ defined as follows:
+				\begin{itemize}
+					\item 
+					\item 
+					\item 
+				\end{itemize}
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{lemma}
+				Let $(M_i,\mu_{ij})$ be a directed system. Let $M=colim M_i$ with
+				\begin{gather*}
+					\mu_i:M_i\rightarrow M
+				\end{gather*}
+				Then, $\mu_i(x_i)=0,x_i\in M\Leftrightarrow $ There exists $j\geq i$ such that $\mu_{ij}(x_i)=0$
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Morphisms of Directed Systems}
+			\begin{lemma}
+				内容...
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{lemma}
+				内容...
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Directed Limit in Index Category}
+			
+			\begin{proposition}
+				内容...
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+		\section{Characterizing Finite and Finitely Presented Modules}
+			
+		\section{Finite Case of Modules and Maps}
+			\subsection{Finite Modules, and Finitely presented modules}
+		
+			\begin{Def}
+				Let $R$ be a ring and $M$ is $R$-module:
+				
+				\begin{itemize}
+					\item We say $M$ is a \textbf{finite} $R$-module, or finitely generated module if there exists $n\in \NN$ and $x_i\in M$, with exact sequence
+					\begin{gather*}
+						\oplus Rx_i\rightarrow M \rightarrow 0\quad\mbox{or}\quad R^{\oplus n}\rightarrow M\rightarrow 0
+					\end{gather*}
+					\item $M$ is \textbf{finitely represented} if there exists $m,n\in \NN$ and exact sequence
+					\begin{gather*}
+						R^{\oplus m}\rightarrow R^{\oplus n}\rightarrow M\rightarrow 0
+					\end{gather*}
+					which implies:
+					\begin{itemize}
+						\item $M$ is finitely generated;
+						\item The relation between the generators are also finitely generated.
+					\end{itemize}
+					such choice of exact sequence is called a \textbf{presentation}.
+ 				\end{itemize}
+			\end{Def}
+			
+			\begin{lemma}
+				Let $R$ be a ring, and 
+				
+				\begin{gather*}
+					\alpha:R^{\oplus n}\rightarrow M\qquad \beta:N\rightarrow M
+				\end{gather*}
+				
+				be $R$-module maps.If $Im(\alpha)\subseteq Im(\beta)$, then there exists an $R$-module map $\gamma:R^{\oplus n}\rightarrow N$ such that $\alpha=\beta\circ\gamma$.
+				
+				\begin{center}
+					\begin{tikzcd}
+						N\arrow[r,"\beta"]&M\\
+						R^{\oplus n}\arrow[u,dashrightarrow,"\gamma"]\arrow[ru,"\alpha"]
+					\end{tikzcd}
+				\end{center}
+			\end{lemma}
+			
+			\begin{proof}
+				Let $\alpha(e_i)=\beta(n_i)$. Then, consider the mapping
+				
+				\begin{gather*}
+					\gamma:R^{\oplus n}\rightarrow N\qquad (a_1,\dots,a_n)\mapsto \sum a_i n_i
+				\end{gather*}
+			\end{proof}
+			
+			\begin{lemma}
+				Let $R$ be a ring, and $0\rightarrow M_1\rightarrow M_2\rightarrow M_3\rightarrow 0$ be a short exact sequence of $R$-modules:
+				
+				\begin{itemize}
+					\item If $M_1$ and $M_3$ are finite $R$-modules, then $M_2$ is a finite $R$-module;
+					\item If $M_1$ and $M_3$ are finitely presented $R$-modules, then $M_2$ is finitely presented;
+					\item If $M_2$ is a finite $R$-module, then $M_3$ is a finite $R$-module;
+					\item If $M_2$ is finitely presented $R$-module and $M_1$ is a finite $R$-module, then $M_3$ is a finitely represented $R$-module;
+					\item If $M_3$ is finitely presented $R$-module and $M_2$ is a finite $R$-module,then $M_1$ is a finite $R$-module. 
+				\end{itemize}
+			\end{lemma}
+			
+			\begin{proof}
+				\begin{itemize}
+					\item 
+					\item 
+					\item 
+					\item 
+					\item 
+				\end{itemize}
+			\end{proof}
+			
+			\begin{lemma}
+				Let $R$ be a ring and let $M$ be a finite $R$-module. There exists a filtration by finite $R$-module 
+				\begin{gather*}
+					0\subseteq M_0 \subseteq M_1\subseteq \dots\subseteq M_n=M
+				\end{gather*}
+				
+				such that each quotient $M_i/M_{i-1}$ is isomorphic to $R/I_i$ for some ideal $I_i$ of $R$.
+			\end{lemma}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{lemma}
+				Let $R\rightarrow S$ be a map, and $M$ be an $S$-module. If $M$ is finite as an $R$-module, then $M$ is finite as an $S$-module.	
+			\end{lemma}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+		\section{Base Change}
+	\chapter{Associative Algebra}
+	
+	\chapter{Polynomial Algebra}
+		\section{Discriminant }
+	\chapter{Matrix Algebra}
+\end{document}

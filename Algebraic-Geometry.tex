@@ -1,0 +1,2851 @@
+\documentclass[Total.tex]{subfiles}
+
+\begin{document}
+	Examples Reference:\url{https://adjectivesproject.org/?page=data}
+	\chapter{Affine Schemes}
+		\section{Locally Ringed Spaces}
+		
+			\textbf{Note} The knowledge here should be listed in the part of sheaves. But the locally ringed is mainly used in algebraic geometry. It is convenient to introduce here. 
+			
+			\begin{Def}
+				\begin{itemize}
+					\item A \textbf{locally ringed space} is sheaf $(X,\mathcal{O}_X)$, whose stalks $\mathcal{O}_{X,x},x\in X$ are local rings.
+					\item Define the \textbf{residue field}
+					\begin{gather*}
+						\kappa(x):=\mathcal{O}_{X,x}/m_x
+					\end{gather*}
+					\item The morphism of locally ringed spaces is the morphism of ringed spaces
+					\begin{gather*}
+						(f,f^\#):(X,\mathcal{O}_X)\rightarrow (Y,\mathcal{O}_Y)
+					\end{gather*} 
+					via this lemma: \ref{Sheaves-Sheaves-Equivalence-of-Morphsims-Induced-by-Continuous-Maps} There exists a correspondence(It is actually an $f$-map)
+					\begin{gather*}
+						f^\#:f^{-1}\mathcal{O}_Y\rightarrow \mathcal{O}_X\qquad f^\flat:\mathcal{O}_Y\rightarrow f_*\mathcal{O}_X
+					\end{gather*}
+					\item Composition: Consider 
+					\begin{gather*}
+						f:X\rightarrow Y\qquad g:Y\rightarrow Z
+					\end{gather*}
+					
+					Then, there exists a composition
+					\begin{gather*}
+						\mathcal{O}_{Z,g(f(x))}\stackrel{g^\#}{\rightarrow} \mathcal{O}_{Y,f(x)}\stackrel{f^\#}{\rightarrow} \mathcal{O}_{X,x}
+					\end{gather*}
+				\end{itemize}
+			\end{Def}
+			
+			Then, $(f,f^\#)$ induces the morphism of stalks
+			\begin{gather*}
+				f^\#_x:\mathcal{O}_{Y,f(x)}\rightarrow \mathcal{O}_{X,X}
+			\end{gather*}
+			
+			which is a local ring map. It maps $m_{Y,f(x)}$ to $m_{X,x}$.
+			
+			It is easy to check, stalks isomorphism $\Leftrightarrow$ Local ring isomorphisms.
+			
+			
+			\begin{Def}
+				Trivial: Functor
+				\begin{center}
+					Locally ringed spaces$\rightarrow$ Ringed Spaces
+				\end{center}
+				
+				which reflects isomorphisms. 
+			\end{Def}
+			\subsection{Morphisms}
+			\subsubsection{Open Immersion of Locally Ringed Spaces}
+				
+				\begin{Def}
+					Let $f:X\rightarrow Y$ be a morphism of locally ringed spaces. We say that $f$ is an \textbf{open immersion} if $f$ is  homeomorphism of $X$ onto an open subset of $Y$, and the map
+					\begin{gather*}
+						f^\#:f^{-1}\mathcal{O}_Y\rightarrow \mathcal{O}_X
+					\end{gather*}
+					is an isomorphism.
+				\end{Def}
+				\begin{example}
+					Consider the open subset $U\subseteq X$, then 
+					\begin{gather*}
+						j:(U,\mathcal{O}_U)\rightarrow (X,\mathcal{O}_X)
+					\end{gather*}
+					
+					is an open immersion. Where $\mathcal{O}_U(V):=\mathcal{O}_X(V);V\subseteq U$.
+				\end{example}
+				\begin{Def}
+					Let $X$ be a locally ringed space.$U\subseteq X$ is a closed subset. Then, the scheme above is called an \textbf{open subspace} of scheme $(X,\mathcal{O}_X)$.
+				\end{Def}
+				\begin{lemma}
+					Let $f:X\rightarrow Y$ be an open immersion of locally ringed spaces with $j:V=f(X)\rightarrow Y$ be the open subspace of $Y$ assocaited to the image of $f$. Then: There exists unique isomorphism $f':X\cong V$ of locally ringed spaces such that
+					\begin{gather*}
+						f=j\circ f'
+					\end{gather*}
+				\end{lemma}
+				\begin{proof}
+					Firstly, let $f':X\rightarrow V=f(X)$ the homomorphism between $X$ and $V$ induced by $f$. Then we have $f=j\circ f'$, where $f'$ is the homeomorphism. 
+					
+					Then, there exists an isomorphism of sheaves
+					\begin{gather*}
+						f^\#:f^{-1}\mathcal{O}_Y\rightarrow \mathcal{O}_X
+					\end{gather*}
+					
+					because of open immersion, there exists an isomorphism of rings
+					\begin{gather*}
+						f^\#:\Gamma(U,f^{-1}\mathcal{O}_Y)\rightarrow \Gamma(U,\mathcal{O}_X)
+					\end{gather*}
+					
+					And we have $f^{-1}\mathcal{O}_Y\cong f'^{-1}\mathcal{O}_V$:
+					\begin{gather*}
+						\mathcal{O}_V=j^{-1}\mathcal{O}_U\Rightarrow f^{-1}\mathcal{O}_Y=(j\circ f')^{-1}\mathcal{O}_Y=f'^{-1}(j^{-1}\mathcal{O}_Y)=f'^{-1}\mathcal{O}_V
+					\end{gather*}
+					
+					thus we have an isomorphism $\Gamma(U,(f')^{-1}\mathcal{O}_V)\rightarrow \Gamma(U,\mathcal{O}_X)$. Now we've seen an isomorphism
+					\begin{gather*}
+						f'^{-1}(\mathcal{O}_V)\rightarrow \mathcal{O}_X
+					\end{gather*}
+					
+					Consider $(f',f'^\#:f'^{-1}\mathcal{O}_V\rightarrow \mathcal{O}_x)$. 
+					
+					Uniqueness: Suppose there exists another $f'':(X,\mathcal{O}_X)\rightarrow (V,\mathcal{O}_V)$, where
+					\begin{gather*}
+						f'=f''\in Top
+					\end{gather*}
+					
+					 then 
+					\begin{center}
+						\begin{tikzcd}
+							\Gamma(U,f^{-1}\mathcal{O}_Y)\arrow[r,"\cong"]\arrow[d,"\cong"]&\Gamma(U,\mathcal{O}_X)\\
+							\Gamma(U,(f')^{-1}\mathcal{O}_V)\arrow[ru,bend left=5,"(f')^\#"]\arrow[ru,bend right=5,"(f'')^\#",swap]
+						\end{tikzcd}
+					\end{center}
+					
+					The locally ringed space is unique.
+					\end{proof}
+					
+					\begin{lemma}
+						Let $f:X\rightarrow Y$ be a morphism of locally ringed spaces. Let $U\subseteq X$, and $V\subseteq Y$ be open subsets.
+						
+						Suppose $f(U)\subseteq V$. There exists a unique morphism of locally ringed spaces $f|U:U\rightarrow V$ such that the following diagram is a commutative square of locally ringed spaces
+						\begin{center}
+							\begin{tikzcd}
+								U\arrow[r]\arrow[d,"f|U"]&X\arrow[d,"f"]\\
+								V\arrow[r]&Y
+							\end{tikzcd}
+						\end{center}
+					\end{lemma}
+					\begin{proof}
+						Omitted.
+					\end{proof}
+					
+					There exists a factorization
+					\begin{gather*}
+						X\rightarrow V\rightarrow Y
+					\end{gather*}
+					
+					where $f|U$ is an open immersion.
+			
+			\subsubsection{Closed Immersion of Locally Ringed Spaces}	
+				\begin{Def}
+					Let $i:Z\rightarrow X$ be a morphism of locally ringed spaces. We say that $i$ is a \textbf{closed immersion} if:
+					\begin{itemize}
+						\item $i$ is a homeomorphism of $Z$ onto a closed subset of $X$;
+						\item $\mathcal{O}_X\rightarrow i_*\mathcal{O}_Z$ is surjective; Denote
+						\begin{gather*}
+							\mathcal{I}:=Ker(\mathcal{O}_X\rightarrow i_*\mathcal{O}_Z)
+						\end{gather*}
+						\item $\mathcal{I}$ is locally generated by sections.
+					\end{itemize}
+				\end{Def}
+				
+				\textbf{Remark} Sometimes, the third condition
+				\begin{center}
+					$\mathcal{I}$ is locally generated by sections
+				\end{center}
+				
+				is not necessary. (Especially, for the theory of geometry). 
+				
+				The main problem is 
+				\begin{itemize}
+					\item Partition of Unity;
+					\item Bump functions;
+				\end{itemize}
+				
+				In complex, we have the following theorem
+				\begin{theorem}
+					(Oka's Coherence Theorem) The sheaf of holomorphic functions $\mathcal{O}^{an}_X$ on complex is a coherent sheaf. 
+				\end{theorem}
+				
+				\begin{example}
+					Objects in $C^\infty(\RR)$: Consider
+					\begin{gather*}
+						\mathcal{I}(U):=\{f\in C^\infty(U)|f(x)=0,\forall x\in U\cap [0,\infty)\}
+					\end{gather*}
+					
+					\begin{itemize}
+						\item Homeomorphism: $[0,\infty)$;
+						\item Surjectivity: Whitney's extension theorem
+						
+						\url{https://etd.ohiolink.edu/acprod/odb_etd/ws/send_file/send?accession=ucin1712912147070133&disposition=inline}
+						\item Locally generated: Not hold. Consider the neighborhood of $0$.
+					\end{itemize}
+				\end{example}
+				
+				\begin{lemma}
+					Let $f:Z\rightarrow X$ be a morphism of locally ringed spaces.
+					
+					In order for $f$ to be a closed immersion, it suffices that there exists an open covering $X=\cup U_i$ such that
+					\begin{gather*}
+						f^{-1}U_i\rightarrow U_i
+					\end{gather*}
+					
+					is a closed immersion.
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\subsubsection{Sheaf of Ideals}
+				Now, we consider te sheaf ideals, as $\mathcal{O}_X$ submodule, which is locally generated by sections.  Now, the support
+				\begin{gather*}
+					Z:=supp(\mathcal{O}_X/I)=\{x\in X|(\mathcal{O}_X/\mathcal{I})_x\not=0\}
+				\end{gather*}
+				
+				is closed, with inclusion $i:Z\rightarrow X$. There exists a unique sheaf of rings $\mathcal{O}_Z$ on $Z$, with
+				\begin{gather*}
+					i_*\mathcal{O}_Z:=\mathcal{O}_X/\mathcal{I}
+				\end{gather*}
+				
+				Then, its stalk
+				\begin{gather*}
+					(i_*\mathcal{O}_Z)=(\mathcal{O}_X/\mathcal{I})=\mathcal{O}_{X,i(z)}/\mathcal{I}_{i(z)}
+				\end{gather*}
+				
+				\subsubsection{Closed Subspace}
+				\begin{Def}
+					Let $X$ be a locally ringed space, $\mathcal{I}$ be a sheaf of ideals on $X$, which is locally generated by sections.
+					
+					Then, the \textbf{locally ringed space} is the \textbf{closed subspace} of $X$, associated to the sheaf of ideals $\mathcal{I}$.
+				\end{Def}
+				
+				\begin{lemma}
+					Let $f:X\rightarrow Y$ be a closed immersion of locally ringed spaces. Let 
+					\begin{gather*}
+						\mathcal{I}:=Ker(\mathcal{O}_Y\rightarrow f_*\mathcal{O}_X)
+					\end{gather*}
+					
+					Let $i:Z\rightarrow Y$ be the closed subspace associated to $\mathcal{I}$. There exists a unique isomorphism $f':X\cong Z$ of locally ringed spaces such that
+					\begin{gather*}
+						f=i\circ f'
+					\end{gather*}
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\begin{lemma}
+					Let $X,Y$ be locally ringed spaces. $\mathcal{I}\subseteq \mathcal{O}_X$ be a sheaf of ideals, locally generated by sections.
+					
+					Let $i:Z\rightarrow X$ be theassociated closed subspace. 
+					
+					Then, a morphism $f:Y\rightarrow X$ factors through $Z\Leftrightarrow$ the map $f^*\mathcal{I}\rightarrow f^*\mathcal{O}_x=\mathcal{O}_Y$ is zero.
+					
+					If this is the case the morphism $g:Y\rightarrow Z$ such that $f=i\circ g$ is unique.
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				
+				\begin{proposition}
+					Let $f:X\rightarrow Y$ be a morphism of locally ringed spaces, $\mathcal{I}\subseteq \mathcal{O}_Y$ be a sheaf of ideals, which is locally generated by sections.
+					
+					Let $i:Z\rightarrow Y$ be the closed subspace associated to the sheaf of ideals $\mathcal{I}$, and
+					\begin{gather*}
+						\mathcal{J}:=Im(f^*\mathcal{I}\rightarrow f^*\mathcal{O}_Y=\mathcal{O}_X)
+					\end{gather*}
+					
+					Then, $\mathcal{J}$ is ideal locally generated by sections.
+					
+					Moreover, let $i':Z\rightarrow X$ be the associated closed subspace of $X$, there exists a unique morphism of locally ringed spaces
+					\begin{gather*}
+						f':Z'\rightarrow Z
+					\end{gather*}
+					
+					such that the following diagram is a commutative locally ringed spaces
+					\begin{center}
+						\begin{tikzcd}
+							Z'\arrow[r,"i'"]\arrow[d,"f'"]&X\arrow[d,"f"]\\
+							Z\arrow[r,"i"]&Y
+						\end{tikzcd}
+					\end{center}
+					
+					Moreover, this diagram is a \textbf{fibre square} in the category of locally ringed spaces.
+				\end{proposition}
+				\begin{proof}
+					\begin{itemize}
+						\item Locally generated:
+						\item Factorization:
+					\end{itemize}
+				\end{proof}
+				
+				\begin{proposition}
+					Given a subsheaf $\mathcal{I}$ of $\mathcal{O}_X$. Let $Z=supp(U\mapsto \mathcal{O}_X(U)/\mathcal{I}(U))$. Then, we have the isomorphism
+					\begin{gather*}
+						\mathcal{O}_X/\mathcal{I}\cong i_*\mathcal{O}_Z
+					\end{gather*}
+					if $\mathcal{I}$ is locally generated. 
+				\end{proposition}
+				\begin{proof}
+					Now, for any $x\in X$:
+					\begin{itemize}
+						\item $x\notin Z\Rightarrow \mathcal{O}_X(U)/\mathcal{I}(U)=0\Rightarrow \mathcal{O}_{X,x}=\mathcal{I}_{X,x}$;
+						\item $x\in Z\Rightarrow \mathcal{O}_{Z,x}:=\mathcal{O}_{X,x}/\mathcal{I}_x$
+					\end{itemize}
+					
+					The isomorphism
+					\begin{gather*}
+						i_*\mathcal{O}_{Z,x}=\mathcal{O}_{X,x}/\mathcal{I}_x
+					\end{gather*}
+					
+					By checking definition.
+				\end{proof}
+				
+				The quotient of stalk is also a local ring. So $(Z,\mathcal{O}_Z)$ is a locally ringed space.
+		\section{Affine Schemes}
+		\subsection{Modules Sheaf}
+			
+			\begin{lemma}
+				Let $R$ be a ring, $f\in R$:
+				
+				\begin{itemize}
+					\item If $g\in R$ and $D(g)\subseteq D(f)$ then:
+					\begin{itemize}
+						\item $f$ is invertible in $R_g$;
+						\item $g^e=af$ for some $e\geq 1,a\in R$;
+						
+						\textbf{Remark} Equivalently, $f\in \sqrt{(g)}$;
+						
+						\item Three is a canonical ring map $R_f\rightarrow R_g$;
+						\item There exists a canonical $R_f$-module map $M_f\rightarrow M_g$ for any $R$-module $M$;
+					\end{itemize}
+					\item (Every Open is Compact) Any open covering $D(f)$ can be refined to a finite open covering of the form
+					\begin{gather*}
+						D(f)=\cup_{i=1}^n D(g_i)
+					\end{gather*}
+					\item If $g_1,\dots,g_n\in R$, then $D(f)\subseteq \cup D(g_i)\Leftrightarrow g_i$ generate the unit ideal in $R_f$.
+				\end{itemize}
+			\end{lemma}
+			
+			\begin{proof}
+				\begin{itemize}
+					\item With $D(g)\cong Spec(R_g)$.Thus $f$ is invertible in $R_g$. And $f\cdot \frac{a}{g^d}=1\Leftrightarrow (fg^d-a)\in Ann(g^{e-d})\Rightarrow g^e=af$.
+					
+					Map $R_f\rightarrow R_g,\frac{b}{f^n}\mapsto \frac{a^nb}{g^{ne}}$, or induced by inclusion $Spec(R_g)\hookrightarrow Spec(R_f)$.
+					
+					Take the tensor product. 
+					\item Omitted. In CA.
+					\item Omitted. In CA.
+				\end{itemize}
+			\end{proof}
+			\begin{Def}
+				Let $R$ be a ring:
+				\begin{itemize}
+					\item A \textbf{standard open covering} of $Spec(R)$ is a covering
+					\begin{gather*}
+						Spec(R)=\cup_{i=1}^n D(f_i);f_i\in R
+					\end{gather*}
+					\textbf{Remark} Topology of $Spec(R)$ is compact, take the standard open covering.
+					\item Suppose $D(f)\subseteq Spec(R)$ is a standard open. A \textbf{standard open covering} of $D(f)$ is a covering
+					\begin{gather*}
+						D(f)=\cup_{i=1}^n D(g_i);g_i\in R
+					\end{gather*}
+				\end{itemize}
+			\end{Def}
+			
+			\subsection{Modules Sheaf}
+			
+			\begin{Def}
+				Let $R$ be a ring, and $M$ be an $R$-sheaf. We will define a presheaf $\hat{M}$ on the basis of standard opens.
+				
+				Suppose that $U\subseteq Spec(R)$ is a standard open. If $f,g\in R$ are such that $D(f)=D(g)$, then there are canonical maps
+				\begin{gather*}
+					M_f\rightarrow M_g\qquad M_g\rightarrow M_f
+				\end{gather*}
+				Then, define: For $U=D(f)$,
+				\begin{gather*}
+					\hat{M}(U)=M_f
+				\end{gather*}
+				Suppose $D(g)\subseteq D(f)$, then there exists a canonical map
+				\begin{gather*}
+					\hat{M}(D(f))=M_f\rightarrow M_g=\hat{M}(D(g))
+				\end{gather*}
+				which is a presheaf of abelian groups.
+			\end{Def}
+			
+			\subsubsection{Stalks}
+				Take some $p=x\in Spec(R)$, we have
+				\begin{gather*}
+					\hat{M}_x=colim_{f\in R,f\notin p} M_f
+				\end{gather*}
+				With the preorder property: Set $\{f\in R,f\notin p\}$ is preordered by the rule
+				\begin{gather*}
+					f\geq f'\Leftrightarrow D(f)\subseteq D(f')
+				\end{gather*}
+				Via definition, we have: For $f_1,f_2\in R-p$, we have
+				\begin{gather*}
+					f_1f_2\subseteq f_1
+				\end{gather*}
+				By algebra wew could finally conclude, that
+				\begin{gather*}
+					\hat{M}_x=colim_{f\in R,f\notin p} M_f=M_p
+				\end{gather*}
+				
+				By the contents of sheaf, there exists a correspondence
+				\begin{gather*}
+					Mod(\mathcal{O}_X)\Leftrightarrow Mod(\mathcal{O}|B)
+				\end{gather*}
+				
+				where $B$ is a basis. So for the standard opens, $\mathcal{O}_{Spec(R)}$ is unique.
+			\subsubsection{Sheaf Property}
+			If $D(f)=\cup_{i=1}^n D(g_i)$, then the sheaf condition for this covering is equivalent to the exactness:
+			\begin{center}
+				\begin{tikzcd}
+					0\arrow[r]&M_f\arrow[r]&\oplus M_{g_i}\arrow[r]&M_{g_ig_j}
+				\end{tikzcd}
+			\end{center}
+			Notice that: $D(g_i)=D(fg_i)$. Hence rewritten as
+			\begin{center}
+				\begin{tikzcd}
+					0\arrow[r]&M_f\arrow[r]&\oplus M_{fg_i}\arrow[r]&\oplus M_{fg_ig_j}
+				\end{tikzcd}
+			\end{center}
+			This sequence is exact:\ref{Commutative-Algebra-Rings-Exactness-of-Modules}.
+			
+			\begin{Def}
+				Let $R$ be a ring:
+				
+				\begin{itemize}
+					\item The \textbf{structure sheaf} $\mathcal{O}_{Spec(R)}$ of the spectrum of $R$ is the unique sheaf rings $\mathcal{O}_{Spec(R)}$ which \underline{agrees} with $\hat{R}$ on the basis of standard opens;
+					\item The locally ringed space $(Spec(R),\mathcal{O}_{Spec(R)})$ is called the \textbf{spectrum} of $R$ denoted by $Spec(R)$;
+					\item The sheaf of $\mathcal{O}_{Spec(R)}$-modules extending $\hat{M}$ to all open subsets on $Spec(R)$ is called the \textbf{sheaf of }$\mathcal{O}_{Spec(R)}$-modules associated to $M$. This sheaf is denoted $\hat{M}$ as well.
+				\end{itemize}
+			\end{Def}
+			
+			\begin{lemma}
+				Let $R$ be a ring, $M$ be an $R$-module. Let $\hat{M}$ be the sheaf of $\mathcal{O}_{Spec(R)}$-modules associated to $M$:
+				
+				\begin{itemize}
+					\item $\Gamma(Spec(R),\mathcal{O}_{Spec(R)})=R$;  $\Gamma(Spec(R),\tilde{M})=M$;
+					\item $\Gamma(D(f),\mathcal{O}_{Spec(R)})=R_f,f\in R$;$\Gamma(D(f),\tilde{M})=M_f,f\in R$;
+					\item Restriction maps for $D(g)\subseteq D(f)$
+					\begin{gather*}
+						R_f\rightarrow R_g\qquad M_f\rightarrow M_g
+					\end{gather*}
+					\item Stalk: $\mathcal{O}_{Spec(R),x}=R_p,\tilde{M}_{x}=M_p$
+					\item 	In particular,
+					\begin{gather*}
+						R-Mod\rightarrow Mod(\mathcal{O}_{Spec(R)})\qquad M\mapsto \tilde{M}
+					\end{gather*}
+					is an exact functor.
+				\end{itemize}
+			\end{lemma}
+			\begin{proof}
+				\begin{itemize}
+					\item Consider $D(1)$;
+					\item Definition;
+					\item Omitted;
+					\item Omitted;
+					\item We could prove this stalkwise: Notice that, the localization functor is exact, so the sequence in $Mod(\mathcal{O}_X)$ is exact on each $D(f)$. Thus the functor is exact.
+				\end{itemize}
+			\end{proof}
+			\subsection{The Structure Sheaf}
+			\begin{Def}
+				Firstly, let $A$ be a ring with $X=Spec(A)$. Define the \textbf{structure sheaf
+				\begin{gather*}
+					\mathcal{O}_X(U):=\{s:U\rightarrow \sqcup_{p\in U} A_p|s\mbox{ saatisfies (i) (ii)}\}
+				\end{gather*}}
+				
+				with:
+				\begin{itemize}
+					\item For all $p\in U$, we have $s(p)\in A_p$;
+					\item For all $p\in U$, there exists $a,b\in A$ and $V\subseteq U$, with $p\in V\subseteq D(b)$ and
+					\begin{gather*}
+						s(q)=\frac{a}{b}\in A_q\qquad q\in V
+					\end{gather*}
+					
+					and $\rho_{UV}(s)=s|V$.
+					
+					\textbf{Remark} $b\in A-q$.
+				\end{itemize}
+			\end{Def}
+			
+			\textbf{Remark} There exists a natural ring homomorphism
+			\begin{gather*}
+				A\rightarrow \mathcal{O}_{Spec(A)}(Spec(A))\\
+				a\mapsto (p\mapsto \frac{a}{1}\in A_p)
+			\end{gather*}
+			
+			\begin{Def}
+				An \textbf{affine scheme} is a locally ringed space $(X,\mathcal{O}_X)$ if there exists a ring $A$, and an isomorphism 
+				
+				\begin{gather*}
+					(X,\mathcal{O}_X)\stackrel{\sim}{\rightarrow} (Spec(A),\mathcal{O}_{Spec(A)})
+				\end{gather*}
+			\end{Def}
+			\subsection{$AffSch$ and $CRing$ Correspondence}
+		
+			\begin{lemma}
+				\label{algebraic-geometry-morphism-of-stalks-of-locally-ringed-spaces}Let $X$ be a locally ringed space. And $Y=Spec(A)$ be an affine scheme. $f:X\rightarrow Y$ be a morphism of locally ringed spaces.
+				
+				Given a point $x\in X$ and consider the following ring maps
+				\begin{center}
+					\begin{tikzcd}
+						\Gamma(\mathcal{O}_Y,Y)=A\arrow[r,"f^\#"]&\Gamma(\mathcal{O}_X,X)\arrow[r]&\mathcal{O}_{X,x}
+					\end{tikzcd}
+				\end{center}
+				Then, the preimage of $m_x$ is prime in $A$, denoted by $p$, correspondent to $y\in Spec(A)$. We have
+				\begin{gather*}
+					f(x)=y
+				\end{gather*}
+			\end{lemma}
+			
+			\begin{proof}
+				\begin{center}
+					\begin{tikzcd}
+						\Gamma(X,\mathcal{O}_X)\arrow[r]&\mathcal{O}_{X,x}\\
+						\Gamma(Y,\mathcal{O}_Y)\arrow[u]\arrow[r]&\mathcal{O}_{Y,y}=A_p\arrow[u]
+					\end{tikzcd}
+				\end{center}
+				
+				Take the inverse image(notice, the right upward arrow is local ring map)
+			\end{proof}
+			
+			\begin{lemma}
+				Let $X$ be a locally ringed space, $f\in \Gamma(X,\mathcal{O}_X)$, the set
+				\begin{gather*}
+					D(f):=\{x\in X|\mbox{image }f\notin m_x\}
+				\end{gather*}
+				is open. Moreover $f|D(f)$ has an inverse.
+			\end{lemma}
+			
+			\begin{proof}
+				Firstly, $x\in X\Leftrightarrow \rho_x(f)\notin m_x\Leftrightarrow \rho_x(f)$ is inversable in $\mathcal{O}_{X,x}\Leftrightarrow $Exists $g\in \Gamma(X,\mathcal{O}_X),\rho_x(f)\rho_x(g)=\rho_x(fg)=id_{\mathcal{O}_{X,x}}\Leftrightarrow \rho_x(fg-id_{\mathcal{O}_X(X)})=0\Leftrightarrow$ Exists $g,U,f|U\circ g|U=id_U$. And notice that $x\in U\subseteq D(f)$, so $D(f)$ is open. 
+				
+				Moreover, $f|D(f)$ has an inverse: Suppose that $f$ has inverse on $U,V$ with $g,h\in \Gamma(X,\mathcal{O}_X)$:
+				
+				\begin{gather*}
+					g|U\circ f|U=f|U\circ g|U=id_U\qquad h|V\circ f|V=f|V\circ h|V=id_V
+				\end{gather*}
+				
+				Then on $U\cap V$, we have
+				
+				\begin{gather*}
+					g|U\cap V=h|U\cap V
+				\end{gather*}
+				
+				With the pasting property of $\mathcal{O}_X$, there exists some $f^{-1}\in \Gamma(X,\mathcal{O}_X)$ and $f^{-1}|D(f)\circ f|D(f)=f|D(f)\circ f^{-1}|D(f)=id_{D(f)}$.
+			\end{proof}
+			
+			Moreover, in the chapter of invertible modules, we have the following conclusion in general:
+			
+			\begin{lemma}
+				In lemma above, if $X=Spec(A)$ is an affine scheme, then, for $f\in A$,
+				
+				\begin{gather*}
+					D(f)=\{p\in Spec(A)|f\notin p\}
+				\end{gather*}
+				
+				agrees with the definition previously.
+			\end{lemma}
+			
+			\begin{proof}
+				$X=Spec(A)x=p\in Spec(A)$, then: $\rho_x:A\rightarrow A_p,t\mapsto\frac{t}{1}$. We have
+				
+				\begin{gather*}
+					\rho_x(t)=\frac{t}{1}\notin m_x=pR_p\Leftrightarrow \frac{t}{1}\in (R-p)R_p
+				\end{gather*} 
+				
+				Suppose $\frac{t}{1}=\frac{a}{b},a,b\in R-p$, then $tb=a$. But $t\in p\Rightarrow a\in p$ contradiction. So $t\notin p$. Conversely also hold, because $(R-p)R_p\cap pR_p=\varnothing$ with inversability. So $\Leftrightarrow f\notin p$. 
+				
+			\end{proof}
+			
+			\begin{theorem}
+				Let \label{Algebraic-Geometry-Affine-Schemes-Morphisms-from-Locally-Ringed-Space-to-Affine-Scheme}
+				\begin{itemize}
+					\item $X$ be a locally ringed space;
+					\item $Y$ be an affine scheme;
+				\end{itemize}
+				The map
+				\begin{gather*}
+					Mor(X,Y)\rightarrow Hom(\Gamma(Y,\mathcal{O}_Y),(X,\mathcal{O}_X))\\
+					f\mapsto f^\#
+				\end{gather*}
+				is bijective.
+			\end{theorem}
+			
+			\begin{proof}
+				$Y$ is affine. Let $Y=Spec(R)$, then 
+				
+				$\rightarrow$ Omitted
+				
+				$\leftarrow$ Construction of the inverse map: Given some 
+				\begin{gather*}
+					\psi_Y:\Gamma(Y,\mathcal{O}_Y)=R\rightarrow \Gamma(X,\mathcal{O}_X)
+				\end{gather*}
+				Then, we will construct the corresponding map $\Psi:X\rightarrow Y$. Given $x\in X$, then define
+				\begin{center}
+					$\Psi(x):=Ker($\begin{tikzcd}
+						\Gamma(Y,\mathcal{O}_Y)\arrow[r,"\psi_Y"]&\Gamma(X,\mathcal{O}_X)\arrow[r]&\mathcal{O}_{X,x}\arrow[r]&\mathcal{O}_{X,x}/m_x
+					\end{tikzcd}$)$
+				\end{center}
+				\begin{itemize}
+					\item Continuity: Take standard open $D(g)\subseteq Y=Spec(R)$. Then, 
+					\begin{gather*}
+						\Psi^{-1}(D(g))=D(\Psi_Y(g))
+					\end{gather*}
+					which is open.
+					
+					\item Sheaf Structure Homomorphism: We should construct the $\Psi$-map 
+					\begin{itemize}
+						\item Given by:
+						\begin{gather*}
+							\Gamma(D(g),\mathcal{O}_Y)=\Gamma(Y,\mathcal{O}_Y)_g\rightarrow \Gamma(\Psi^{-1}(D(g)),\mathcal{O}_X))
+						\end{gather*}
+						
+						And $\Psi_Y(g)$ is invertible on $D(\Psi_Y(g))$. Thus we could extend $\Psi_Y$ to 
+						\begin{gather*}
+							\psi_{D(g)}:\Gamma(Y,\mathbb{O}_Y)_g\rightarrow \Gamma(\Psi^{-1}(D(g),\mathcal{O}_X))
+						\end{gather*} 
+						\item The morphism is local for stalks. Suppose the morphism is defined as
+						\begin{gather*}
+							(\Psi,\psi):(X,\mathcal{O}_X)\rightarrow (Y,\mathcal{O}_Y)
+						\end{gather*} 
+						
+						Now, 
+						\begin{gather*}
+							\psi_x:\mathcal{O}_{Y,\Psi(x)}\rightarrow \mathcal{O}_{X,x}
+						\end{gather*}
+						
+						it is local: \ref{algebraic-geometry-morphism-of-stalks-of-locally-ringed-spaces}
+					\end{itemize}
+					\item Finally, theere exists an inverse between $(\Psi,\psi)\mapsto \psi_Y$ and the construction $\psi_Y\mapsto (\Psi,\psi)$. 
+				\end{itemize}
+			\end{proof}
+			
+			\begin{corollary}
+				The category of affine schemes is equivalent to the opposite of the category of rings.
+				
+				The equivalence is given by the functor that associates to an affine scheme the global sections of its structure sheaf.
+			\end{corollary}
+			\begin{proof}
+				Omitted.
+			\end{proof}
+			
+			\begin{corollary}
+				$Spec(\ZZ)$ is the final object in the category of affine scheme/locally ringed space.\label{algebraic-geometry-affine-scheme-specZ-is-final-object-of-locally-ringed-space}
+			\end{corollary}
+			\begin{proof}
+				Suppose that $(X,\mathcal{O}_X)$ be a locally ringed space. Then, we have $Hom(X,Spec(\ZZ))\cong Hom(\Gamma(Spec(\ZZ),Spec(\ZZ)),\Gamma(X,\mathcal{O}_X))=Hom(\ZZ,\mathcal{O}_X(X))$. And the morphism $\ZZ\rightarrow \mathcal{O}_X(X)$ is well-defined.
+			\end{proof}
+			\subsection{Product, Fibre Product}
+			\begin{lemma}
+				The category of affine schemes has:
+				\begin{itemize}
+					\item Finite products;
+					\item Fibre products;
+				\end{itemize}
+				In other words, it has finite limits. 
+				
+				Moreover, the products and fibre products in the category of affine schemes are the same as in the category of locally ringed spaces. In formula
+				\begin{gather*}
+					Spec(R)\times Spec(S)=Spec(R\otimes_\ZZ S)\\
+					Spec(A)\times_{Spec R} Spec(B)=Spec(A\otimes_R B)
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				\begin{itemize}
+					\item 
+					\item 
+					\item 
+				\end{itemize}
+			\end{proof}
+			
+			\subsection{Disjointed Union}
+			
+			\begin{lemma}
+				Let $X$ be a locally ringed space. Assume that:
+				\begin{gather*}
+					X=U\sqcup V
+				\end{gather*}
+				where $U,V$ are affine opens. Then $X$ is an affine scheme.
+			\end{lemma}
+			
+			\begin{proof}
+				Define: 
+				\begin{gather*}
+					R=\mathcal{O}_X(U)\times \mathcal{O}_X(V)
+				\end{gather*}
+				Then, there exists a canonical morphism of locally ringed spaces
+				\begin{gather*}
+					内容...
+				\end{gather*}
+			\end{proof}
+		
+		\subsection{Quasi-Coherent Sheaf on Affines}
+			We will prove the equivalence of following categories
+			\begin{gather*}
+				QCoh(\mathcal{O}_{Spec(R)})\Leftrightarrow Mod-R
+			\end{gather*}
+			
+			Where $QCoh(\mathbb{O}_X)$ is a subcategory of $Mod(\mathcal{O}_X)$.
+			
+			\begin{lemma}
+				Let: 
+				\begin{itemize}
+					\item $(X,\mathcal{O}_X)=(Spec(R),\mathcal{O}_{Spec(R)})$ be an affine scheme; 
+					\item $M$ be an $R$-module. 
+				\end{itemize}
+				
+				Then, there exists an isomorphsim between sheaf $\hat{M}$ associated to the R-module $M$ and the sheaf $\mathcal{F}_M$ associated to the R-module $M$. This isomorphism is functorial in module $M$. 
+				
+				Moreover they are characterized by the following mapping property
+				\begin{gather*}
+					Hom_{\mathcal{O}_X}(\hat{M},\mathcal{F})=Hom_R(M,\Gamma(X,\mathcal{F}))
+				\end{gather*}
+				for any sheaf of $\mathcal{O}_X$-modules $\mathcal{F}$. Here a map $\alpha:\hat{M}\rightarrow \mathcal{F}$ corresponds to its effect on global sections.
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{lemma}
+				Let $(X,\mathcal{O}_X)=(Spec(R),\mathcal{O}_{Spec(R)})$ be an affine scheme. There exists canonical isomorphisms
+				\begin{itemize}
+					\item $\widetilde{M\otimes_R N}=\widetilde{M}\otimes_{\mathcal{O}_{Spec(R)}}\widetilde{N}$;
+					\item $\widetilde{T^nM}\cong T^n(\widetilde{M}),\widetilde{Sym^n(M)}\cong Sym^n(\widetilde{M}),\widetilde{\wedge^n(M)}=\wedge^n (\widetilde{M})$;
+					\item If $M$ is finitely presented, then
+					\begin{gather*}
+						Hom_{\mathcal{O}_X}(\tilde{M},\tilde{N})\cong \widetilde{Hom_R(M,N)}
+					\end{gather*}
+				\end{itemize}
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{lemma}
+				内容...
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{lemma}
+				内容...
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{theorem}
+				Let $(X,\mathcal{O}_X)=(Spec(R),\mathcal{O}_{Spec(R)})$ be affine scheme. The functors
+				\begin{gather*}
+					M\mapsto \tilde{M}\qquad \mathcal{F}\mapsto \Gamma(X,\mathcal{F})
+				\end{gather*}
+				give a rise to the equivalence of functors
+				\begin{center}
+					\begin{tikzcd}
+						Mod(\mathcal{O}_X)\arrow[r,shift left=1]&Mod-R\arrow[l,shift left=1]
+					\end{tikzcd}
+				\end{center}
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Kernels,Cokernels}
+			\begin{lemma}
+				Let $X=Spec(R)$ be an affine scheme. Kernels and cokernels of maps of quasi-coherent $\mathcal{O}_X$-modules are quasi-coherent.
+			\end{lemma}
+			\begin{proof}
+				
+			\end{proof}
+			\subsection{Direct Sum}
+			\begin{lemma}
+				内容...
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Exact Sequence}
+				\begin{lemma}
+				Let $(X,\mathcal{O}_X)=(Spec(R),\mathcal{O}_{Spec(R)})$ be an affine scheme. Suppose that
+				\begin{gather*}
+					0\rightarrow\mathcal{F}_1\rightarrow \mathcal{F}_2\rightarrow \mathcal{F}_3\rightarrow 0
+				\end{gather*}
+				is a short exact sequence of sheaves of $\mathcal{O}_X$-modules. If two out of three are quasi-coherent so is the third.
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Open and Closed Subspaces of Affines}
+			
+			In general, the open/closed subspaces and immersions are discussed in locally ringed spaces.
+			
+			\subsubsection{Open Subspace}
+				\begin{lemma}
+				Let $Y$ be an affine scheme, $f\in \Gamma(Y,\mathcal{O}_Y)$, the open subspace $D(f)$ is an affine subspace. 
+			\end{lemma}
+			\begin{proof}
+				As a matter of fact, $D(f)$ has a structure of ringed space by
+				\begin{gather*}
+					\Gamma(D(f),\mathcal{O}_{D(f)})=\Gamma(Y,\mathcal{O}_Y)_f\\
+					\phi:U=Spec(R_f)\rightarrow Spec(R)=Y
+				\end{gather*}
+				
+				We have know:
+				\begin{itemize}
+					\item $Spec(R_f)\rightarrow Spec(R)$ is a homeomorphism onto $D(f)$;
+					\item $\phi^{-1}\mathcal{O}_Y\rightarrow \mathcal{O}_U$ is an isomorphism on stalk. Thus is an open immersion because isomorphism of sheaves.
+				\end{itemize}
+			\end{proof}
+			\subsubsection{Closed Subspace}
+			\begin{example}
+				Let: $R$ be a ring, $I\subseteq R$ be an ideal. Consider the morphism of affine schemes
+				\begin{gather*}
+					i:Z=Spec(R/I)\rightarrow Spec(R)=X
+				\end{gather*}
+				
+				This is a homeomorphism of $Z$ onto the closed subset of $X$. 
+				
+				Moreover, if $I\subseteq p\subseteq R$ is a prime corresponding ot a point $x=i(z)$, where $x\in X,z\in Z$, then on stalks we get the map
+				\begin{gather*}
+					\mathcal{O}_{X,x}=R_p\rightarrow R_p/IR_p=\mathcal{O}_{Z,z}
+				\end{gather*} 
+				Thus we see that $i$ is a closed immersion of locally ringed spaces.
+			\end{example}
+			\begin{lemma}
+				Let $(X,\mathcal{O}_X)=(Spec(R),\mathcal{O}_{Spec(R)})$ be an affine scheme. Let $i:Z\rightarrow X$ be any closed immersion of locally ringed spaces. Then, there exists a unique ideal $I\subseteq R$ such that:$i:Z\rightarrow X$ can be identified with the closed immersion
+				\begin{gather*}
+					Spec(R/I)\rightarrow Spec(R)
+				\end{gather*}
+				constructed above.
+			\end{lemma}
+			\begin{proof}
+				Such $I$ is given by: The ideal sheaf $\mathcal{I}=Ker(\mathcal{O}_X\rightarrow i_*\mathcal{O}_Z)$ on $Spec(R)$. $I=\Gamma(Spec(R),\mathcal{I})$ is an ideal.(By kernel)
+			\end{proof}
+			
+			And such $\hat{I}$ is naturally locally generated...
+		\section{Topological Properties}
+			More discussion should be listed in CA.
+	\chapter{Schemes}
+		\section{Definitions}
+			
+		\begin{Def}
+			A \textbf{scheme} is a locally ringed space $(X,\mathcal{O}_X)$, with
+			
+			\begin{itemize}
+				\item Open Covering $X=\cup U_i$;
+				\item $(U_i,\mathcal{O}_X|U_i)$ is affine scheme.
+			\end{itemize}
+		\end{Def}
+		
+		\subsection{Morphisms of Schemes}
+		
+		\begin{Def}
+			The morphism of schemes is the morphism of locally ringed spaces.
+		\end{Def}
+		\subsubsection{Affinization Morphism}
+		\begin{Def}
+			\label{Algebraic-Geometry-Affinization-Map}Define the functor:
+			\begin{gather*}
+				aff:Sch\rightarrow Affsch\qquad X\mapsto Spec(\mathcal{O}_X(X))
+			\end{gather*}
+			And induces a natural morphism $X\rightarrow Spec(\mathcal{O}_X(X))$
+		\end{Def}
+		Especially,
+		\begin{gather*}
+			(aff_X,aff_X^\#):X\rightarrow Spec(\mathcal{O}_X(X))
+		\end{gather*}
+		\begin{itemize}
+			\item $\phi(x)=aff_X(x):=[\mathcal{O}_X(X)\rightarrow \mathcal{O}_{X,x}]^{-1}(m_x)$
+			\item $aff_X(D(f)):\mathcal{O}_X(X)_f\rightarrow \Gamma(\phi^{-1}(D(f)),\mathcal{O}_X)$ induced by the morphism $\mathcal{O}_X(X)\rightarrow$. 
+			
+			$f|D(f))$ is inversable. 
+		\end{itemize}
+		Specified by the module homomorphism
+		\begin{gather*}
+			Hom(X,Spec(\mathcal{O}_X(X)))=Hom(\Gamma(Spec\mathcal{O}_X(X),\mathcal{O}_{Spec(\mathcal{O}_X(X))}),\Gamma(X,\mathcal{O}_X))\\
+			\qquad=Hom(\mathcal{O}_X(X),\mathcal{O}_X(X))
+		\end{gather*}
+		Take the identity.
+		
+		
+		\begin{lemma}
+			Firstly, $aff$ is a covariant functor.
+		\end{lemma}
+		\begin{proof}
+			Consider morphism $\varphi\in Hom(X,Y)$. Then, we have $aff(\varphi):Spec(\mathcal{O}_Y(Y))\rightarrow Spec(\mathcal{O}_X(X))$. 
+		\end{proof}
+		\begin{proposition}
+			The morphism $X\rightarrow Spec(A)$ factors through $aff_X$
+			\begin{gather*}
+				X\rightarrow Spec(\mathcal{O}_X(X))\rightarrow Spec(A)
+			\end{gather*}
+		\end{proposition}
+		\begin{proof}
+			Notice that: There exists $f^\#(Spec(A)):A\rightarrow \mathcal{O}_X(X)$. We have correspondence $aff_X\Leftrightarrow id_{\mathcal{O}_X(X)}$. Then the factorization $Spec(\mathcal{O}_X(X))\rightarrow Spec(A)$ is $Spec(f^\#(Spec(A)))$. Then consider the composition of $f^\#(Spec(A))\circ aff_X^\#=f^\#$
+		\end{proof}
+		\begin{proposition}
+			Scheme $X$ is affine iff $aff_X$ is an isomorphism.
+		\end{proposition}
+		\begin{proof}
+			Omitted.
+		\end{proof}
+		\subsubsection{Open Immersion}
+		
+		\begin{lemma}
+			Let $X$ be a scheme, $j:U\rightarrow X$ be an open immersion of locally ringed spaces.
+			
+			Then, $U$ is a scheme. In particular, any open subspace of $X$ is a scheme.
+		\end{lemma}
+		
+		\begin{proof}
+			Suppose $u\in U$. Then, select affine neighborhood $u\in V$, there must be some $u\in D(f)\subseteq U$.
+			
+			$D(f)$ is affine scheme, so $U$ is a scheme via $U=\cup_{u\in U} D(f_u)$, with paasting of sheaves $\mathcal{O}_X|D(f_u)$.
+		\end{proof}
+		
+		\begin{corollary}
+			Any scheme $X$ has a basis for topology consisting of affine opens $D(f)$ where $f\in \Gamma(U,\mathcal{O}_X|U)=(Spec(R),\mathcal{O}_{Spec(R)})$.
+		\end{corollary}
+		\begin{proof}
+			Omitted.
+		\end{proof}
+		\subsubsection{Closed Immersion}
+		\begin{lemma}
+			Let $X$ be a scheme, $i:Z\rightarrow X$ be a closed immersion of locally ringed spaces:
+			\begin{itemize}
+				\item The locally ringed space $Z$ is a scheme;
+				\item The kernel $\mathcal{I}$ of the map $\mathcal{O}_X\rightarrow i_*\mathcal{O}_Z$ is a \textbf{quasi-coherent sheaf};
+				\item For any affine open $U=Spec(R)$ of $X$, the morphism
+				\begin{gather*}
+					i^{-1}(U)\rightarrow U\qquad Spec(R/I)\rightarrow Spec(R)
+				\end{gather*}
+				for some ideal $I\subseteq R$ and
+				We have $\mathcal{I}|U=\hat{I}$.
+			\end{itemize}
+		\end{lemma}
+		\begin{proof}
+			
+		\end{proof}
+		
+		\begin{lemma}
+			Let $f:Y\rightarrow X$ be an immersion of schemes. Then $f$ is closed immersion iff $f(Y)\subseteq X$ is a closed subset.(immersion: Here \ref{Algebraic-Geometry-Schemes-Immersion})
+		\end{lemma}
+		\begin{proof}
+			$\Rightarrow$ Omitted.
+			
+			$\Leftarrow$ 
+		\end{proof}
+		\subsubsection{Immersion}
+		\begin{Def}
+			\begin{itemize}
+				\item The morphism of schemes is called an \textbf{open immersion} if it is an open immersion of locally ringed spaces;
+				\item An \textbf{open subscheme} of $X$ is an open subspace of $X$ is an open subspace of $X$ or a scheme by taking subset;
+				\item A morphism of schemess is called a \textbf{closed immersion} if it is a closed immersion of locally ringed spaces;
+				\item A \textbf{closed subscheme} of $X$ is a closed subspace of locally ringed space $X$ or by lemma above;
+				\item An \textbf{immersion} can be factored as $f=j\circ i$ where $i$ is closed immerions, $j$ is open immersion.\label{Algebraic-Geometry-Schemes-Immersion}
+			\end{itemize}
+		\end{Def}
+		
+			More contents of morphisms of schemes will be given in another chapter.
+		\subsection{Zariski Topology of Schemes}
+		
+			\begin{lemma}
+				Let $X$ be a scheme. A \textbf{irreducible closed subset} of $X$ has a unique generic point.
+				
+				In other words, it is a sober space.
+			\end{lemma}
+			
+			\begin{proof}
+				Select irrducible set $Z$
+				
+				Existence of generic point: For every affine open $U=Spec(R)$ and we know that
+				\begin{gather*}
+					Z\cap U=V(I)
+				\end{gather*}
+				
+				for a unique radical ideal $I\subseteq R$. And $V(I)$ is irreducible$\Leftrightarrow$ $I$ is prime. Thus $p=I$ is the generic point of $Z\cap U$ by $Z\cap U=V(I)$.
+				
+				Now, suppose $\xi'$ be another generic point, then there exists some neighborhood $U$ contains $\xi,\xi'$ by definition. Finally $\xi'=\xi$. 
+			\end{proof}
+			
+			\begin{lemma}
+				The underlying topological space of any shceme is locally quasi-compact.
+			\end{lemma}
+			\begin{proof}
+				Affine open is compact. Omitted.
+			\end{proof}
+			\begin{lemma}
+				Let $X$ be a scheme, $U,V$ be affine opens of $X$, $x\in U\cap V$.
+				
+				There exists an affine open neighborhood $W$ of $x$ such that $W$ is a standard open of both $U$ and $V$.
+			\end{lemma}
+			\begin{proof}
+				Let $U=Spec(R)$ and $V=Spec(S)$. Then, suppose $p=q=x\in U\cap V;p\subseteq R,q\subseteq S$. 
+			\end{proof}
+			\begin{lemma}
+				Let $X$ be a scheme and $X=\cup U_i$ be an affine open covering.Then, if $V$ is an affine open, there exists a standard open covering $V=\cup V_i$ where $V_j\subseteq U_i$ is a standard open.
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\begin{lemma}
+				Let $X$ be a scheme and $\mathcal{B}$ be the set of affine opens of $X$. Let $\mathcal{F}$ be a presheaf of sets on $\mathcal{B}$. The followings are equivalent:
+				\begin{itemize}
+					\item $\mathcal{F}$ is the restriction of sheaf on $X$ to $\mathcal{B}$;
+					\item $\mathcal{F}$ on $\mathcal{B}$ and
+					\item $\mathcal{F}(\varnothing)$ is a singeleton;
+					\item Whenever $U=V\cup W$ with $U,V,W\in \mathcal{B}$ and $V,W\subseteq U$ standard open. the map 
+					\begin{gather*}
+						\mathcal{F}(U)\rightarrow \mathcal{F}(V)\times \mathcal{F}(W)
+					\end{gather*} 
+					is injetive with image the set of pair $(s,t)$ such that $s|V\cap W=t|V\cap W$ 
+				\end{itemize}
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\subsubsection{Special Case:Scheme on Finite discrete Set}
+			\begin{lemma}
+				Let $X$ be a finite and discrete topological space and $(X,\mathcal{O}_X)$ be a scheme. Then it is affine.
+			\end{lemma}
+			\begin{proof}
+				Now consider $\coprod \{x_i\}$, then each $x_i$ must be affine. Thus $X$ is the finite disjoint union of affine schemes. Hence is affine by taking disjoint union.
+			\end{proof}
+			\begin{example}
+				Existence of a scheme without closed point:
+			\end{example}
+			
+			\subsection{Points in Schemes}\label{Algebraic-Geometry-Points-in-Schemes}
+			\begin{Def}
+				Given a scheme $X$ we can define a functor
+				\begin{gather*}
+					h_X:Sch^{opp}\rightarrow Sets\qquad T\mapsto Mor(T,X)
+				\end{gather*}
+				This is called the \textbf{functor of points} of $X$. 
+			\end{Def}
+			Let 
+			\begin{itemize}
+				\item $X$ be a scheme;
+				\item $R$ be a local ring with maximal ideal $m$;
+			\end{itemize}
+			Suppose that $f:Spec(R)\rightarrow X$ be a morphisms of schemes. Then, $x:=f(m)$, we obtain a local homomorphsim of local rings
+			\begin{gather*}
+				f^\#:\mathcal{O}_{X,x}\rightarrow \mathcal{O}_{Spec(R),m}=R_m=R
+			\end{gather*}
+			
+			\textbf{Remark} $R_m=R$. For local ring $R$, $R-m$ is the collection of inversable elements. Thus,
+			\begin{lemma}
+				Let $X$ be a scheme, $R$ be a local ring. Then, the construction above gives a bijective correspondence
+				\begin{center}
+					Morphisms $Spec(R)\rightarrow X\Leftrightarrow$ Pairs $(x,\varphi)$ consisting of a point $X$ and a local homomorphism of local rings $\mathcal{O}_{X,x}\rightarrow R$. 
+				\end{center}
+			\end{lemma}
+			\begin{proof}
+				Firstly, we should consider the affine case: Let $X=Spec(A)$. Then, $\psi:A\rightarrow R$ has a factorization of local rings
+				\begin{gather*}
+					A\rightarrow A_p\rightarrow R
+				\end{gather*}
+				where $p=\psi^{-1}(m)$. Thus $Spec(R)\rightarrow X$ is given by composition of $A\rightarrow A_p$ and $A_p\rightarrow R$, which is the local homomorphism $\mathcal{O}_{X,x}\rightarrow R$.
+				
+				Now consider the general case. $\Leftarrow$ Consider $\mathcal{O}_X(U)\rightarrow \mathcal{O}_{X,x}\rightarrow R,Spec(R)\rightarrow U$ where $U$ is affine. And paste the morphisms for sheaf. 
+				
+				Conversely, given $f:Spec(R)\rightarrow X$, we must prove: For \underline{any} affine open of $X$ such that $x=f(m)\in U$, $Im(f)\subseteq U$. In fact: $m\in f^{-1}(U)$, so $f^{-1}(U)=Spec(R)$.
+			\end{proof}
+			As a special case of the lemma above we obtain for every point $x$ of a scheme $X$ a canonical morphism
+			\begin{gather*}
+				内容...
+			\end{gather*}
+			
+			\begin{center}
+				\begin{tikzcd}
+					Spec(\mathcal{O}_{X,x})\arrow[r]\arrow[d]&X\arrow[d]\\
+					Spec(\mathcal{O}_{S,s})\arrow[r]&S
+				\end{tikzcd}
+			\end{center}
+			\subsubsection{Generalization,Specialization}
+			
+			\begin{Def}
+				\begin{itemize}
+					\item Let $x,x'\in X$. If $x'\in \overline{\{x\}}$, we say that 
+					
+					\begin{itemize}
+						\item $x'$ is a specialization of $x$;
+						\item $x$ is a generalization of $x'$
+					\end{itemize}
+					\item A subset $V\subseteq X$ is called \textbf{closed under specialization/generalization} if it contains all specializations(generalizations) of all its points.
+ 				\end{itemize}
+			\end{Def}
+			
+			\begin{lemma}
+				Let $X$ be a scheme, $x,x'\in X$. Then:
+				\begin{center}
+					$x'\in X$ is a generalization of $x\Leftrightarrow x'$ is in the image of canonical morphism $Spec(\mathcal{O}_{X,x})\rightarrow X$. 
+				\end{center}
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{example}
+				内容...
+			\end{example}
+			\subsubsection{Points-Spectra Field Correspondence}
+			\begin{lemma}
+				Let $X$ be a 
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{Def}
+				Let $f:X\rightarrow Y$ be a continuous map, we say that
+				
+				\begin{itemize}
+					\item 
+					\item 
+				\end{itemize}
+			\end{Def}
+			\subsubsection{Valuative Criterion for Universal Closedness}
+			Review: The \textbf{closed map} is the map which maps closed sets to closed sets.
+			\begin{Def}
+				
+			\end{Def}
+			
+			\subsubsection{Valuative Criterion of Separatedness}
+		
+		\subsection{Representability}
+			\begin{Def}
+				Suppose that $F:Sch^{op}\rightarrow Sets$ be functor. Then, $F$ is \textbf{representable} if there exists a scheme $X$ such that $h_X\cong F$.
+			\end{Def}
+			Now apply \underline{Yoneda's lemma} we have
+			\begin{gather*}
+				Hom(h_X,F)\cong F(X)
+			\end{gather*}
+			Thus $(X,s:h_X\rightarrow F)$ is unique up to unique isomorphism if it exists.
+			
+			Moreover, we have a bijection
+			\begin{gather*}
+				Mor_{Fun(Sch^{op},Sets)}(h_Y,F)\rightarrow F(Y)\qquad s\mapsto s(id_Y)
+			\end{gather*}
+			Conversely, we have
+			\begin{gather*}
+				F(Y)\rightarrow Mor_{Fun(Sch^{op},Sets)}(h_Y,F)\qquad \xi\mapsto s_\xi
+			\end{gather*}
+			where $s_\xi:h_Y\rightarrow F,h_Y(T)=Mor(T,Y)\rightarrow F(T),f\mapsto f^*\xi$
+			
+			\textbf{Remark} In particular, in hte case that $F$ is representable, there exists a scheme $X$ and an element $\xi\in F(X)$ We say
+			\begin{Def}
+				Pair $(X,\xi)$ represents $F$, if $F=s_\xi$.
+			\end{Def}
+			
+			\begin{Def}
+				Such $\xi\in F(X)$ is often called the \textbf{universal family} for reasons that will become more clear when we talk about [algebraic stacks].
+			\end{Def}
+			
+			Then, every element $\xi'\in F(T)$ for any $T$ is of the form $\xi'\in F(T)$ for any $T$ is of the form $\xi'=f^*\xi$ for a unique morphism $f:T\rightarrow T$.
+			
+			\begin{example}
+				Consider the rule which associates to every scheme $T$ the set
+				\begin{gather*}
+					F(T)=\Gamma(T,\mathcal{O}_T)
+				\end{gather*}
+				Then, we can trun this into a contravariant functor by using for a morphism $f:T\rightarrow T'$ the pullback $f^\#:\Gamma(T,\mathcal{O}_{T})\rightarrow \Gamma(T',\mathcal{O}_{T'})$. 
+				
+				Thus, given a ring $R$ with element $t\in R$ there exists a unique ring homomorphism $\ZZ[x]\rightarrow R$ which maps $x$ to $t$, thus we have a bijection $R\cong Hom(\ZZ[x],R)$,
+				\begin{gather*}
+					Mor(T,Spec(\ZZ[x]))=Hom(\ZZ[x],\Gamma(T,\mathcal{O}_T))=\Gamma(T,\mathcal{O}_T)
+				\end{gather*}
+				This give an isomorphism of functors
+				\begin{gather*}
+					F\rightarrow h_{Spec(\ZZ[x])}
+				\end{gather*}
+			\end{example}
+			
+			
+			
+			\subsubsection{Criterion for Representability}
+			
+			\begin{Def} Let $F$ be a contravariant functor on category of schemes with values in sets:
+				\begin{itemize}
+					\item We say $F$ \underline{satisfies the sheaf property for the Zariski topology} if for every scheme $T$ and every open covering $T=\cup_{i\in I} U_i$ and for any collection of elements $\xi_i\in F(U_i)$ such that
+					\begin{gather*}
+						\xi_i|U_i\cap U_j=\xi_j|U_i\cap U_j
+					\end{gather*}
+					There exists a unique element $\xi\in F(T)$ such that $\xi_i=\xi|U_i\in \mathcal{F}(U_i)$;
+					\item A \textbf{subfunctor } $H\subseteq T$ is a rule associate to every scheme $T$ a subset
+					\begin{gather*}
+						H(T)\subseteq F(T)
+					\end{gather*} 
+					And for $T\rightarrow T'$ we have $F(f):F(T)\rightarrow F(T');H(f)=F(f)|H(T):H(T)\rightarrow H(T')$.
+					\item Let $H\subseteq F$ be a subfunctor. We say $H\subseteq F$ is \textbf{representable by open immersions} if for all pairs $(T,\xi)$, where $T$ is a scheme and $\xi\in F(T)$ there exists an open subscheme $U_\xi\subseteq T$ with following properties
+					\begin{center}
+						A morphism $f:T'\rightarrow T$ factors through $U_\xi$ iff $f^*\xi\in H(T')$.
+					\end{center}
+					\item Let $I$ be a set. For each $i\in I$ $H_i\subseteq F$ be a subfuncotr. We say that the collection $(H_i)_{i\in I}$ covers $F$ iff for every $\xi\in F(T)$ there exists an open covering $T=\cup U_i$ such that $\xi|U_i\in H_i(U_i)$
+				\end{itemize}
+			\end{Def}
+			
+			\begin{lemma}
+				Let $F$ bea covariant functor on the category of schemes with value in the category of sets. Suppose that:
+				\begin{itemize}
+					\item $F$ satisfies the sheaf property for the Zariski topology;
+					\item There exists a set $I$ and a collection of subfunctors such that:
+					\begin{itemize}
+						\item each $F_i$ is representable;
+						\item each$F_i\subseteq F$ is representable by open immersions;
+						\item the collection $(F_i)_{i\in I}$ covers $F$
+					\end{itemize}
+					Then, $F$ is representable.
+				\end{itemize}
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\textbf{Remark} Suppose the functor $F$ is defined on all locally ringed spaces, and if conditions of above are replaced by the following:
+			\begin{itemize}
+				\item $F$ satisfies the sheaf property on the category of locally ringed spaces;
+				\item There exists a set $I$ and a collection of subfunctors $F_i\subseteq F$ such that:
+				\begin{itemize}
+					\item Each $F_i$ is representable by a scheme;
+					\item Each $F_i\subseteq F$ is representable by open immersions on the category of locally ringed spaces; and
+					\item The collection $(F_i)_{i\in I}$ cover $F$ as a functor on the category of locally ringed spaces.
+				\end{itemize}
+			\end{itemize}
+		\section{Classification of Schemes(by Rings)}
+			
+			\subsection{Reduced Scheme}
+			
+				
+				\subsection{Integral, Irreducible and Reduced Scheme}
+					
+					\subsubsection{Integral Scheme}
+						\begin{Def}
+							Let $X$ be a scheme. Then $X$ is \textbf{integral} if for every nonempty affine open $Spec(R)=U$, $R$ is an integral domain.
+						\end{Def}
+						
+					\subsubsection{Irreducible Scheme}
+						\begin{Def}
+							Scheme $X$ is \textbf{irreducible} iff its underlying topological space $|X|$ is irreducible.
+						\end{Def}
+						
+						\begin{lemma}
+							The followings are equivalent:
+							\begin{itemize}
+								\item Scheme $X$ is irreducible;
+								\item There exists an affine open covering $X=\cup_i U_i$ such that $I$ is not empty, $U_i$ is irreducible for all $i\in I$. And $U_i\cap U_j\not=\varnothing$ for all $i,j\in I$; 
+								\item The scheme $X$ is nonempty and every nonempty affine open $U\subseteq X$ is irreducible;
+							\end{itemize}
+						\end{lemma}
+						\begin{proof}
+							内容...
+						\end{proof}
+					\subsubsection{Integral$\Leftrightarrow$ Reduced+Irreducible}
+						\begin{proposition}
+							A scheme $X$ is integral iff it is reduced and irreducible.
+						\end{proposition}
+						\begin{proof}
+							$\Rightarrow$
+							
+							$\Leftarrow$
+						\end{proof}
+				\subsection{Types of Schemes defined by Propreties of Rings}
+					\subsubsection{Local Properties}
+						\begin{Def}
+							\begin{itemize}
+								\item Let $P$ be a \underline{local property of rings}. We say $P$ is local if the following hold:
+								\begin{itemize}
+									\item 
+									\item 
+								\end{itemize}
+								\item Let $X$ be a scheme. We say $X$ is locally $P$ if for any $x\in X$ there exists an affine open neighborhood $U$ of $x$ in $X$ such that $\mathcal{O}_X(U)$ has property $P$.
+							\end{itemize}
+						\end{Def}
+						\begin{lemma}
+							内容...
+						\end{lemma}
+						\begin{proof}
+							内容...
+						\end{proof}
+						
+						\begin{lemma}
+							内容...
+						\end{lemma}
+						\begin{proof}
+							内容...
+						\end{proof}
+						
+						\begin{lemma}
+							The following properties of a ring $R$ are local:
+							\begin{itemize}
+								\item 
+								\item 
+								\item 
+								\item 
+							\end{itemize}
+						\end{lemma}
+						\begin{proof}
+							内容...
+						\end{proof}
+				\subsection{Noetherian Schemes}
+				
+				\subsection{Jacobson Schemes}
+					\begin{Def}
+						内容...
+					\end{Def}
+				
+				\subsection{Normal Schemes}
+					\begin{Def}
+						A scheme $X$ is normal iff for all $x\in X$ the local ring $\mathcal{O}_{X,x}$ is a normal domain.
+					\end{Def}
+				
+			
+					
+			\section{Fibre Products of Schemes}
+				\subsection{Schemes as Functors}
+					Here: \ref{Algebraic-Geometry-Points-in-Schemes}
+				\subsection{Fibre Products}
+			
+				\subsubsection{Existence of Fibre Products of Schemes}
+				
+					\begin{lemma}
+						The category of schemes has a
+						
+						\begin{itemize}
+							\item Final Objects;
+							\item Products;
+							\item Fibre Products;
+						\end{itemize}
+						
+						In other words, the category of schemes has finite limits.
+					\end{lemma}
+					
+					\begin{proof}
+						Review: \ref{algebraic-geometry-affine-scheme-specZ-is-final-object-of-locally-ringed-space}
+						
+						Let $f:X\rightarrow S,g:Y\rightarrow S$ be morphisms of schemes. We have to show that the functor
+						\begin{gather*}
+							F:Sch\rightarrow Sets\qquad T\mapsto Mor(T,X)\times_{Mor(T,S)} Mor(T,Y)
+						\end{gather*}
+						
+						is representable. We should apply the lemma: 
+					\end{proof}
+					Another proof through affine case:
+					\begin{lemma}
+						(Affine Case)Suppose that $X=Spec(A),Y=Spec(B)$ with $S=Spec(C)$, with
+						
+						Then, $X\otimes_S Y$ exists in $Sch/S$, and is given by $Spec(A\otimes_C B)$ together with the ring morphism 
+						\begin{gather*}
+							A\rightarrow A\otimes B\qquad a\mapsto a\otimes 1\\
+							B\rightarrow A\otimes B\qquad b\mapsto 1\otimes b
+						\end{gather*}
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{corollary}
+						For affine $X,Y,S$ and morphisms $f:X\rightarrow S,g:Y\rightarrow S$ then $X\times_S Y$ is affine.
+					\end{corollary}
+					\begin{proof}
+						Omitted.
+					\end{proof}
+				\subsubsection{Fibre Products}
+					\begin{Def}
+						Given morphisms of schemes $f:X\rightarrow S$ and $g:Y\rightarrow S$, the \textbf{fibre product} is a scheme $X\times_S Y$ together with projection morphisms
+						\begin{gather*}
+							p:X\times_S Y\rightarrow X\qquad q:X\times_S Y\rightarrow Y
+						\end{gather*}
+						With the following commutative diagram.
+						\begin{center}
+							\begin{tikzcd}
+								X\times_S Y\arrow[r,"q"]\arrow[d,"p"]&Y\arrow[d,"g"]\\
+								X\arrow[r,"f"]&S
+							\end{tikzcd}
+						\end{center}
+						which is universal among all diagrams of this sort.
+					\end{Def}
+					In other word, for $T\rightarrow X,T\rightarrow Y$, we have 
+					\begin{center}
+						\begin{tikzcd}
+							T\arrow[rd,dashrightarrow]\arrow[rrd]\arrow[rdd]\\
+							&X\times_S Y\arrow[r]\arrow[d]&Y\arrow[d]\\
+							&X\arrow[r]&S
+						\end{tikzcd}
+					\end{center}
+					\subsubsection{Open Subschemes}
+					\begin{proposition}
+						Let $f:X\rightarrow S$ and $g:Y\rightarrow S$ be morphisms of schemes with the same target, and $X\times_S Y,p,q$ be fibre product.
+						
+						 Suppose that $U\subseteq S,V\subseteq X,W\subseteq Y$ be open subschemes such that $f(V)\subseteq U,g(W)\subseteq U$.Then the canonical morphism
+						 \begin{gather*}
+						 	V\times_U W\rightarrow X\times_S Y
+						 \end{gather*}
+						 is an open immersion which identifies $V\times_U W$ with $p^{-1}(V)\cap q^{-1}(W)$.
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{proposition}
+						There exists a correspondnece of points
+						\begin{gather*}
+							X\times_S Y\ni z\Leftrightarrow (x,y,s,p)
+						\end{gather*}
+						where:
+						\begin{itemize}
+							\item 
+							\item 
+						\end{itemize}
+					\end{proposition}
+					\begin{proof}
+						\begin{center}
+							\begin{tikzcd}
+								X\times_S Y\\
+								&Spec()&Spec&Y\\
+								&Spec()&Spec\\
+								&X&&S
+							\end{tikzcd}
+						\end{center}
+					\end{proof}
+				\subsubsection{Points in Fibre Product}
+					\begin{proposition}
+						内容...
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+				\subsubsection{Immersions}
+					\begin{lemma}
+						内容...
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+			\subsection{Base Change}
+				\subsubsection{Base Change}
+			
+				\begin{Def}
+					Let $S$ be a scheme:
+					\begin{itemize}
+						\item We say $X$ is a \textbf{scheme over $S$} to mean that $X$ is equipped with a morphisms of schemes 
+						\begin{gather*}
+							X\rightarrow S
+						\end{gather*}
+						The morphism $X\rightarrow S$ is sometimes called the \textbf{structure morphism};
+						\item If $R$ is a ring we say $X$ is a \textbf{scheme over $S$} if $X$ is a scheme over $Spec(R)$;
+						\item We denote $Mor_S(X,Y)$ the set of all morphisms from $X$ to $Y$ over $S$,
+						\begin{center}
+							\begin{tikzcd}
+								X\arrow[rr]\arrow[rd]&&Y\arrow[ld]\\
+								&S
+							\end{tikzcd}
+						\end{center}
+						\item (Base Change of Scheme)
+						\item (Base Change of Morphisms)
+						\item 
+						\item 
+					\end{itemize}
+				\end{Def}
+				\subsubsection{Immersions}
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				
+				\begin{proof}
+					内容...
+				\end{proof}
+				\subsubsection{Properties}
+				\begin{Def}
+					内容...
+				\end{Def}
+				\subsubsection{Scheme Theoretic Fibre}
+				\begin{Def}
+					内容...
+				\end{Def}
+				
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				
+				\begin{proof}
+					内容...
+				\end{proof}
+			
+			
+			\subsection{Separation Axioms}
+			
+			'Hausdorffness for Schemes'
+			
+			\begin{Def}
+				A topological space $X$ is Hausdorff iff $\Delta\subseteq X\times X$ is a closed subset.
+				
+				In anologue in AG is: Given a scheme $X$ over $S$
+				\begin{gather*}
+					\Delta_{X/S}:X\rightarrow X\times_S X
+				\end{gather*}
+				This is a unique morphism given by
+				\begin{center}
+					\begin{tikzcd}
+						X\arrow[rd,"\Delta"]\arrow[rrrdd,"id_X",bend left=50]\arrow[dddrr,"id_X",bend right=50]\\
+						&X\times X\arrow[rdd,"\pi_1",swap,bend right=20]\arrow[rrd,"\pi_2",bend left=20]\arrow[rd,dashrightarrow]\\
+						&&X\times_S X\arrow[r,"pr_2"]\arrow[d,"pr_1"]&X\arrow[d]\\
+						&&X\arrow[r]&S
+					\end{tikzcd}
+				\end{center}
+				And $\Delta_{x/s}:X\stackrel{\Delta}{\rightarrow} X\times X\stackrel{p}{\rightarrow} X\times_S X$ is the unique morphism such that
+				\begin{gather*}
+					pr_1\circ \Delta_{X/S}=pr_2\circ \Delta_{X/S}
+				\end{gather*}
+			\end{Def}
+			
+			\begin{lemma}
+				The diagonal morphisms of a morphism between affines is closed.
+			\end{lemma}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{lemma}
+				Let $X$ be a scheme over $S$. The diagonal morphsim $\Delta_{X/S}$ is an immersion.
+			\end{lemma}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{Def}
+				Let $f:X\rightarrow S$ be a morphism of schemes:
+				
+				\begin{itemize}
+					\item We say $f$ is \textbf{separated} if the diagonal morphism $\Delta_{X/S}$ is a closed immersion;
+					\item $f$ is \textbf{quasi-separated} if the diagonal morphism $\Delta_{X/S}$ is quasi-compact morphism;
+					\item We say scheme $Y$ is \textbf{separated} if the morphism $Y\rightarrow Spec(Z)$ is separated;
+					\item We say scheme $Y$ is \textbf{quasi-separted} if the morphism $Y\rightarrow Spec(Z)$ is quasi-separated;
+				\end{itemize}
+			\end{Def}
+			
+			\begin{lemma}
+				内容...
+			\end{lemma}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+		\section{Quasi-Coherent Modules}
+		\section{Schemes over Fields}
+			\subsection{Schemes over a Field which is not Algebraically Closed}
+				\subsubsection{title}
+				\textbf{Construction} 
+				
+		\section{Local Properties of Schemes}
+			\subsection{The Tangent Space}
+				\subsubsection{Formal Derivatives}
+		\section{Affine and Proper Morphisms}
+			Affine Morphisms: \ref{Algebraic-Geometry-Affinization-Map}
+	\chapter{Constructions}
+		\section{Glueing Scheme,Relative Glueing, Relative Spectrum}
+			\subsection{Glueing Scheme}
+				\begin{Def}
+					(Glueing Data) Let $I$ be a set. $(X_i,\mathcal{O}_i)$ be the locally ringed space. For each pair $i,j\in I$ and $U_{ij}\subseteq X_i$ be open subspace, and 
+					\begin{gather*}
+						\varphi_{ij}:U_{ij}\rightarrow U_{ji}
+					\end{gather*}
+				\end{Def}
+				
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Relative Spectrum via Glueing}
+				Here: 
+				
+				\begin{itemize}
+					\item $S$ is a scheme;
+					\item $\mathcal{A}$ is a quasi-coherent $\mathcal{O}_S$-algebra;
+				\end{itemize}
+				\subsubsection{Relative Glueing}
+					\begin{lemma}
+						Let $S$ be a scheme, $\mathcal{B}$ be a basis for the topology of $S$. Suppose given the following data:
+						\begin{itemize}
+							\item For every $U\in \mathbb{B}$ a scheme
+							\begin{gather*}
+								f_U:X_U\rightarrow U
+							\end{gather*}
+							over $U$ of $S$;
+							\item For $U,V\in \mathbb{B}$ a morphism $\rho^U_V:X_V\rightarrow X_U$ over $U$;
+						\end{itemize}
+						Assuming:
+						\begin{itemize}
+							\item Each $\rho_V^U$ induces an isomorphism
+							\begin{gather*}
+								X_V\rightarrow f_U^{-1}(V)
+							\end{gather*}
+							\item Whatever $W,V,U\in \mathcal{B}$, with $W\subseteq V\subseteq U$ have
+							\begin{gather*}
+								\rho^U_W=\rho^U_V\circ \rho^V_W
+							\end{gather*}
+						\end{itemize}
+						Then, there exists a morphism $f:X\rightarrow S$ of schemes and isomorphism
+						\begin{gather*}
+							i_U:f^{-1}U\rightarrow X_U
+						\end{gather*}
+						over $U$ such that for $V,U\in \mathbf{B},V\subseteq U$ the composition
+						\begin{gather*}
+							X_V\stackrel{i_V^{-1}}{\rightarrow} f^{-1}(V)\stackrel{inclusion}{\rightarrow} f^{-1}(U)\stackrel{i_U}{\rightarrow} X_U
+						\end{gather*}
+						is the morphism $\rho^U_V$. Moreover $X$ is unique up to unique isomorphism over $S$.
+					\end{lemma}
+					\begin{proof}
+						Firstly, we set
+						\begin{gather*}
+							F(T):=\{(g,\{h_U\}_{U\in \mathcal{B}})|g:T\rightarrow S,h_U:g^{-1}(U)\rightarrow X_U,f_U\circ h_U=g|g^{-1}(U),h_U|g^{-1}(V)=\rho^U_V\circ h_V,V\subseteq U\}
+						\end{gather*}
+						And we use the sheaf representability lemma:
+						\begin{itemize}
+							\item Sheaf Property:
+							\item \begin{itemize}
+								\item Representabillity
+								\item Representable by Open Immersion:
+								\item The collections $(F_i)$ covers $F$:
+							\end{itemize}
+						\end{itemize}
+					\end{proof}
+					
+					\begin{lemma}
+						Let $S$ be a scheme, $\mathcal{B}$ be a basis for the topology of $S$. Suppose given the following data:
+						\begin{itemize}
+							\item For every $U\in \mathcal{B}$ a scheme
+							\begin{gather*}
+								f_U:X_U\rightarrow U 
+							\end{gather*}
+							over $U$.
+							\item For every $U\in \mathcal{B}$ a quasi-coherent sheaf $\mathcal{F}_U$ over $X_U$;
+							\item For every $U,V\in \mathcal{B}$, morphism $\rho^U_W=\rho^U_V\circ \rho^V_W$;
+							\item For every $U,V\in \mathcal{B}$, morphism $\theta^U_V:(\rho^U_V)^*\mathcal{F}_U\rightarrow \mathcal{F}_V$
+						\end{itemize}
+						assume that:
+						\begin{itemize}
+							\item 
+							\item 
+							\item 
+							\item 
+						\end{itemize}
+						Then, there exists a morphism of schemes $f:X\rightarrow S$ together with a quasi-coherent sheaf on $X$ and isomorphism $i_U:f^{-1}(U)\rightarrow X_U;\theta_U:i^*_U\mathcal{F}_U\rightarrow \mathcal{F}|f^{-1}(U)$ and composition for $V\subseteq U$
+						\begin{gather*}
+							内容...
+						\end{gather*}
+					\end{lemma}
+					\begin{proof}
+						内容..
+					\end{proof}
+				\subsubsection{Affine Case}
+				We will construct a scheme $X$ over $S$: Especially, if $S=Spec(R)$ is affine, and $A=\Gamma(S,\mathcal{A})$, then define:
+				\begin{gather*}
+					\underline{Spec}_S(\mathcal{A}):=Spec(A)
+				\end{gather*} 
+				With sheaf morphism induced by $R\rightarrow A$.
+				\begin{gather*}
+					\pi:Spec(A)=\underline{Spec}_S(\mathcal{A})\rightarrow S=Spec(R)
+				\end{gather*}
+				Furthermore: Suppose $\mathcal{A}$ be a quasi-coherent $\mathcal{O}_S$-alglebra, then we can construct the morphism of schemes
+				\begin{gather*}
+					\underline{Spec}_S(\mathcal{A})\rightarrow S
+				\end{gather*}
+				by lueing $Spec(\Gamma(U,\mathcal{A}))$ over the affine opens of $S$.
+			
+				\begin{lemma}
+					Suppose $U\subseteq U'\subseteq S$ be affine opens, and
+					\begin{gather*}
+						A=\mathcal{A}(U),A'=\mathcal{A}(U')
+					\end{gather*}
+					The map of rings $A'\rightarrow A$ induces a morphism $Spec(A)\rightarrow Spec(A')$, and the diagram
+					\begin{center}
+						\begin{tikzcd}
+							Spec(A)\arrow[r]\arrow[d]&Spec(A')\arrow[d]\\
+							U\arrow[r]&U'
+						\end{tikzcd}
+					\end{center}
+					is cartsian.
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\begin{lemma}
+					In situation above, suppose $U\subseteq U'\subseteq U''\subseteq S$ are affine opens, $A=\mathcal{A}(U),A'=\mathcal{A}(U'),A''=\mathcal{A}(U'')$, then the composition of morphisms $Spec(A)\rightarrow Spec(A'')$
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\begin{lemma}
+					There exists a morphism of schemes
+					\begin{gather*}
+						\pi:\underline{Spec}_S(\mathcal{A})\rightarrow S
+					\end{gather*}
+					with following properties:
+					\begin{itemize}
+						\item 
+						\item 
+					\end{itemize}
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Relative Spectrum as Functor}
+				Short review: For $f:T\rightarrow S$, there exists a pullback for quasi-coherent sheaf of $\mathcal{O}_S$-algebras $\mathcal{A}$:
+				\begin{gather*}
+					f^*\mathcal{A}\in \mathcal{O}_T-Algs
+				\end{gather*}
+				Consider paisrs $(f:T\rightarrow S,\varphi)$ with corresponding morphism
+				\begin{gather*}
+					\varphi:f^*\mathcal{A}\rightarrow \mathcal{O}_T\\
+					\varphi:f^{-1}\mathcal{A}\rightarrow \mathcal{O}_T\\
+					\varphi:\mathcal{A}\rightarrow f_*\mathcal{O}_T		
+				\end{gather*}
+				Via $a:T'\rightarrow T$ we could get a second pair $(f'=f\circ a,\varphi'=a^*\varphi)$, which we call the \textbf{pullback}
+				\begin{lemma}
+					Let $F$ be the funtor associated to $(S,\mathcal{A})$ above, let $g:S'\rightarrow S$ be a morphism of schemes, $\mathcal{A}'=g^*\mathcal{A}$, let $F'$ be the functor associated to $(S',\mathcal{A}')$ above, there exists a canonnical isomorphism
+					\begin{gather*}
+						F'\cong h_{S'}\times_{h_S} F
+					\end{gather*}
+					of functors.
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{lemma}
+					Let $F$ be the functor associated to $(S,\mathcal{A})$, if $S$ is affine, then $F$ is representable by the affine scheme $Spec(\Gamma(S,\mathcal{A}))$.
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{lemma}
+					The functor 
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Relative Spectrum}
+				\begin{Def}
+					Consider $\pi:\underline{Spec}_S(\mathcal{A})\rightarrow S$, the \textbf{''universal family''} is a family of $\mathcal{O}_S$-algebras
+					\begin{gather*}
+						\mathcal{A}\rightarrow 
+					\end{gather*}
+				\end{Def}
+		\section{Affine $n$-Space}
+			\begin{Def}
+				Let $S$ be a scheme and $n\geq0$. Define:
+				\begin{gather*}
+					A^n_S=(\mathcal{O}_S[T_1,\dots,T_n])
+				\end{gather*}
+				called \textbf{affine $n$-space over $S$}. 
+				
+				If $S=Spec(R)$ is affine, then this affine $n$-space over $R$ and we denote it $A^n_R$.
+			\end{Def}
+			
+			Base Change: Especially, let $S\rightarrow S'$ of schemes we have
+			\begin{gather*}
+				g^*\mathcal{O}_S[T_1,\dots,T_n]=\mathcal{O}_{S'}[T_1,\dots,T_n]
+			\end{gather*}
+			
+			and hence $A^n_{S'}=S'\times_S A_S^n$ is the base change. Therefore an alternative definition of affine $n$-space is the formula
+			\begin{gather*}
+				A^n_S=S\times_{Spec\ZZ} A^n_\ZZ
+			\end{gather*}
+			
+			Also, a morphism from an $S$-scheme $f:X\rightarrow S$ to $A^n_S$ is given by a homomorphism of $\mathcal{O}_S$-algebras
+			\begin{gather*}
+				\mathcal{O}_S[T_1,\dots,T_n]\rightarrow f_*\mathcal{O}_X
+			\end{gather*}
+			
+			with the bijection $Hom_{Sch/S}(X,\underline{Spec}_S(\mathcal{A}))\cong Hom_{\mathcal{O}_S-alg}(\mathcal{A},f_*\mathcal{O}_X)$We could define the value elementswise $h_i\in \Gamma(X,\mathcal{O}_X)$.
+		\section{Vector Bundles}
+			\begin{Def}
+				Let $S$ be a scheme and $\epsilon$ be a quasi-coherent $\mathcal{O}_S$-module. The \textbf{vector bundle} associated to $\epsilon$ is
+				\begin{gather*}
+					V(\mathcal{E})=\underline{Spec}_S(Sym(\mathcal{E}))
+				\end{gather*}
+			\end{Def}
+			Then, we have the grading
+			\begin{gather*}
+				\pi_*\mathcal{O}_{V(\mathcal{E})}=\oplus_{n\geq 0} Sym^n(\mathcal{E})
+			\end{gather*}
+			
+			\begin{Def}
+				Let $S$ be a scheme. A \textbf{vector bundle} $\pi:V\rightarrow S$ over $S$ is an affine morphism of schemes such that
+			\end{Def}
+			\subsection{Vector Bundle and Locally Free Bundles}
+			\subsection{Torsors and Non-Abelian Cohomology	}
+			\subsection{Vector Bundles and $GL_n$-Torsors}'
+			\subsection{Flattening Stratification for Modules}
+			\subsection{Divisors}
+		\section{Cones}
+		\section{Proj}
+			\subsection{$Proj$ of a graded Ring(Algebra)}
+			\subsection{Standard Open Covering}
+					\begin{lemma}
+						Let $S$ be a graded ring, and $f\in S$ wiht $deg(f)>0$:
+						\begin{itemize}
+							\item If $g\in S$ homogeneous of positive dgree with $D_+(g)\subseteq D_+(f)$, then:
+								\begin{itemize}
+									\item $f$ is invertible in $S_g$; $\frac{f^{deg(g)}}{g^{deg(f)}}$ is invertible in $S_{(g)}$;
+									\item $g^e=af$ for some $e\geq 1$ and $a\in S$ homogeneous;
+									\item there is a canonical $S$-algebra map $S_f\rightarrow S_g$;
+									\item there is a canonical $S_0$-algebra map $S_{(f)}\rightarrow S_{(g)}$ compatible with the map $S_f\rightarrow S_g$;
+									\item The map $S_{(f)}\rightarrow S_{(g)}$ induces an isomorphism
+									\begin{gather*}
+										(S_{(f)})_{g^{deg(f)}/f^{deg(g)}}\cong S_{(g)}
+									\end{gather*}
+									\item These maps induce a commutative diagram of topological spaces
+									\begin{center}
+										内容...
+									\end{center}
+									\item There are compatible canonical $S_f$ and $S_{(f)}$-module maps
+									\begin{gather*}
+										M_f\rightarrow M_g\qquad M_{(f)}\rightarrow M_{(g)}
+									\end{gather*}
+									
+									induces an isomorphism
+									\begin{gather*}
+										(M_{(f)})_{g^{deg(f)}/f^{deg(g)}}=M_{(g)}
+									\end{gather*}
+								\end{itemize}
+							\item Any open covering of $D_+(f)$ can be refined to be a finite open covering of the form
+							\begin{gather*}
+								D_+(f)=\cup_{i=1}^n D_+(g_i)
+							\end{gather*}
+							\item Let $g_1,\dots,g_n\in S$ be a homogeneous of positive degree. Then,
+							\begin{gather*}
+								D_+(f)\subseteq \cup D_+(g_i)\Leftrightarrow g_1^{deg(f)}/f^{deg(g_1)},\dots,g_n^{deg(f)}/f^{deg(g_n)}\mbox{ generate the unit ideal in $S(f)$}
+							\end{gather*}
+						\end{itemize}
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{Def}
+						Let $S$ be a graded ring. Suppose that $D_+(f)\subseteq Proj(S)$ is a standard open. 
+						
+						A \textbf{standard open covering} of $D_+(f)$ is a covering $D_+(f)=\cup_{i=1}^n D_+(g_i)$ where $g_1,\dots,g_n\in S$ are homogeneous of positive degree.
+					\end{Def}
+				\subsection{Structure Sheaf}
+			\subsection{Quas-Coherent Sheaves on $Proj$}
+			\subsection{Invertible Sheaves on $Proj$}
+			\subsection{Functoriality of $Proj$}
+			\subsection{Morphisms into $Proj$}
+		\section{Projective Space}
+		\section{Relative Proj}
+		\section{Projective Bundles}
+		\section{Grassmannians}
+	\chapter{Classification of Schemes}
+		\section{Types of Schemes by Rings}
+		\subsection{Local}
+		\begin{Def}
+			\begin{itemize}
+				\item Let $P$ be a property of rings. We say that $P$ is \textbf{local} if the followings hold
+				\begin{itemize}
+					\item For any ring $R$, any $f\in R$ we have
+					\begin{gather*}
+						P(R)\Rightarrow P(R_f)
+					\end{gather*}
+					\item For any ring $R$ aand $f_i\in R,R=(f_1,\dots,f_n)$, then 
+					\begin{gather*}
+						\forall i,P(R_{f_i})\Rightarrow P(R)
+					\end{gather*}
+				\end{itemize}
+				\item Let $P$ be a property of rings, $X$ be a scheme. We say $X$ is locally $P$, if for any $x\in X$ there exists an affine open neighbourhood $x\in U$ such that $\mathcal{O}_X(U)$ has the property $P$.
+			\end{itemize}
+		\end{Def}
+		\begin{lemma}
+			Let $X$ bea scheme, and $P$ is a local property of rings. The following are equivalent:
+			\begin{itemize}
+				\item 
+				\item 
+				\item 
+				\item 
+			\end{itemize}
+		\end{lemma}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{lemma}
+			Let $X$ be a scheme. Then $X$ is reduced iff $X$ is locally reduced.
+		\end{lemma}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{lemma}
+			The following properties of a ring $R$ are local:
+			\begin{itemize}
+				\item (Cohen-Macaulay)
+				\item (Regular)
+				\item (Absolutely Noetherian)
+				\item 
+			\end{itemize}
+		\end{lemma}
+		\begin{proof}
+			内容...
+		\end{proof}
+		\section{Reduced Scheme}
+			
+			\begin{Def}
+				Let $X$ be a scheme. We say $X$ is \textbf{reduced} if every local ring $\mathcal{O}_{X,x}$ is reduced.
+			\end{Def}
+			\subsubsection{Reduced on Sections and on Stalks}
+			\begin{lemma}
+				A scheme $X$ is reduced iff $\mathcal{O}_X(U)$ is a reduced ring for all open $U\subseteq X$ open.
+			\end{lemma}
+			
+			\begin{proof}
+				$\Rightarrow$ Let $f\in \mathcal{O}_X(U)$ such that $f^n=0$. Then, $f^n|u=0,\forall u\in U\Rightarrow f|u=0,\forall u\in U$. Thus $f=0$. 
+				
+				$\Leftarrow$ Conversely, if for all $\mathcal{O}_X(U)$, it is reduced. Then let $\bar{f}\in \mathcal{O}_{X,x}$ be nonzero with nonzero representive element $f\in \mathcal{O}(U)$. Thus $f^n\not=0\Rightarrow \bar{f}^n\not=0$
+			\end{proof}
+			\subsubsection{Affine Scheme}
+			\begin{lemma}
+				An affine scheme $Spec(R)$ is reduced iff $R$ is reduced.
+			\end{lemma}
+			\begin{proof}
+				$\Rightarrow$ Take $\mathcal{O}_{Spec(R)}(Spec(R))$;
+				
+				$\Leftarrow$ If $R$ is reduced, then $\mathcal{O}_{Spec(R),p}=R_p$ is reduced.
+			\end{proof}
+			
+			\subsection{Scheme Structure on Closed Subset}
+			\begin{lemma}
+				Let $X$ be a scheme, $T\subseteq X$ be a closed subset. There exists a unique closed subscheme $Z\subseteq X$ with the following properties:
+				\begin{itemize}
+					\item The underlying topological space of subscheme $|Z|=T$;
+					\item $Z$ is reduced.
+				\end{itemize}
+			\end{lemma}
+			
+			\begin{proof}
+				\begin{itemize}
+					\item Firstly, consider the subscheme of $X$ by
+					\begin{gather*}
+						\mathcal{I}(U):=\{f\in \mathcal{O}_X(U)|\forall t\in T\cap U,f(t)=0\}
+					\end{gather*}
+					where $f(t):=\kappa(t)$. $\mathcal{I}$ is a sheaf on $X$:
+					\begin{itemize}
+						\item Identity: As a substructure of $X$;
+						\item Pasting: Given $s_i\in \mathcal{I}(U_i)$. Then we will prove the pasting $s\in \mathcal{I}(U)$: Omitted.
+					\end{itemize}
+					Moreover, take the open affine $U=Spec(R)$ we have
+					\begin{gather*}
+						T\cap U=V(I)
+					\end{gather*}
+					for a \underline{unique} radical ideal $I\subseteq R$. Now given $p\in V(I)$ corresponding to $t\in T\cap U$ and an element . Hence:
+					\begin{gather*}
+						\mathcal{I}(U)=\cap_{p\in V(I)} p=I
+					\end{gather*}
+					Moreover, take standard open $D(g)\subseteq Spec(R)=U$ we have
+					\begin{gather*}
+						\mathcal{I}(D(g))=I_g
+					\end{gather*}
+					Thus $\mathcal{I}$ is quasi-coherent sheaf of ideals.
+					\item Now take the closed subspace $Z$ associated to $\mathcal{I}$. For every affine open $U=Spec(R)$ of $X$ we see that
+					\begin{gather*}
+						Z\cap U=Spec(R/I)
+					\end{gather*}
+					where $I$ is a \underline{radical ideal}, so $Z$ is reduced. And the underlying topological space $|Z|=supp(\mathcal{O}_X/\mathcal{I})=T$.
+					
+					\item Uniqueness: Now let $Z'\subseteq X$ be a second closed subscheme with the properties. But notice that on every affines, we have $V(I)=V(I')$ because of uniqueness of $I$ or $I'$ we have $Z=Z'$.
+				\end{itemize}
+			\end{proof}
+			
+			\begin{Def}
+				Let $X$ be a scheme, $Z\subseteq X$ be a closed subset. 
+				
+				A \textbf{scheme structure} on $Z$ is given by a closed subscheme $Z'$ of $X$ whose underlying set is equal to $Z$. 
+				
+				Espcially, the scheme structure on $X$ could be denoted as $X_{red}$.
+			\end{Def}
+			
+			\textbf{Remark} For locally closed subset $T$, then $T$ is a closed subset of the open subscheme $X-\partial T$ of $X$, hence $\partial T=\bar{T}-T$ is the boundary of $T$ in the topological space $X$.
+			
+			($T$ is closed in $\bar{T}$, by definition)
+			
+			\begin{lemma}
+				Let $X$ be a scheme. $Z\subseteq X$ be a closed subscheme. $Y$ be reuduced scheme. The morphism $f:Y\rightarrow X$ factors through $Z\Leftrightarrow f(Y)\subseteq Z$. 
+				
+				In particular, any morphism $Y\rightarrow X$ factors as
+				\begin{gather*}
+					Y\rightarrow X_{red}\rightarrow X
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				$\Rightarrow$ Omitted;
+				
+				$\Leftarrow$ Assume $f(Y)\subseteq Z$, then 
+			\end{proof}
+			
+			\begin{lemma}
+				The followings are equivalent
+				\begin{itemize}
+					\item 
+					\item 
+				\end{itemize}
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+		\section{Integral, Irreducible and Reduced Schemes}
+			\subsection{Integral Scheme}
+			\subsection{Irreducible Scheme}
+		
+		\section{Noetherian Schemes}
+				\begin{Def}
+				\begin{itemize}
+					\item We say $X$ is \textbf{locally Noetherian} if for every $x\in X$ has an affine open neighborhood $Spec(R)=U$ such that ring $R$ is Noetherian;
+					\item We say $X$ is Noetherian if $X$ is locally Noetherian and quasi-compact;
+				\end{itemize}
+			\end{Def}
+			\begin{lemma}
+				(Equivalent Conditions for Noetherian Scheme) Let $X$ be a scheme, the following are equivalent:
+				\begin{itemize}
+					\item The scheme $X$ is locally Noetherian;
+					\item For every affine open $U\subseteq X$ the ring $\mathcal{O}_X(U)$ is open;
+					\item There exists an affine open covering $X=\cup U_i$ such that each each $\mathcal{O}_X(U_i)$ is Noetherian;
+					\item There exists an affine covering $X=\cup X_j$ such that each $X_j$ is locally Noetherian.
+				\end{itemize}
+				Moreover, if $X$ is locally Noetherian then every open subschemme is locally Noetherian.
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Immersion}
+			\begin{lemma}
+				Any immersion $Z\rightarrow X$ with $X$ locally Noetherian is quasi-compact.
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{lemma}
+				
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\subsubsection{Underlying Space}
+			\begin{lemma}
+				A (locally) Noetherian scheme has a (locally) Noetherian underlying topological space.
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Morphism with Source Noetherian}
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsubsection{Closed Point}
+			\subsubsection{Specialization}
+				\begin{lemma}
+					Let $X$ be a locally Noetherian scheme. Let $x'\rightsquigarrow x$ be a specialization of points of $X$. Then:
+					\begin{itemize}
+						\item There exists a discrete valuation ring $R$ and a morphism 
+						\begin{gather*}
+							f:Spec(R)\rightarrow X
+						\end{gather*}
+						such that the generic point $\eta$ of $Spec(R)$ maps to $x'$ and the special point maps to $x$; and
+						\item provided $x\not=x'$ given a finitely generated field extension $K/\kappa(x')$, we may arrange it so that the extension $\kappa(\eta)/\kappa(x')$ induced by $f$ is isomorphic to the given one.
+					\end{itemize}
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{lemma}
+					Let $S$ be a Noetherian scheme. Let $T\subseteq S$ be an infinite subset. Then, there exists an infinite subset $T'\subseteq T$ such that there are no nontrivial specialization aong the points $T'$.
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\subsubsection{Countable Dense Subset}
+				\begin{lemma}
+					Let $S$ be a Noetherian scheme, let $T\subseteq S$ be an infinite dense subset, then there exists a countable subset $E\subseteq T$ which is dense in $S$.
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+		\section{Jacobson Schemes}
+			\begin{Def}
+				\begin{itemize}
+					\item 	Let $X$ be a topological space, let $X_0$ be the set of closed points of $X$. We say: $X$ is \textbf{Jacobson} if every closed subset $Z\subseteq X$ is the closure of 
+					\begin{gather*}
+						Z\cap X_0
+					\end{gather*}
+					\item 	A scheme $S$ is said to be \textbf{Jacobson} if its underlying topological space is Jacobson.
+				\end{itemize}
+			\end{Def}
+			\begin{lemma}
+				An affine scheme $Spec(R)$ is Jacobson iff the ring $R$ is Jacobson.
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Equivalent Conditions}
+			\begin{lemma}
+				Let $X$ be a scheme. The following are equivalent
+				\begin{itemize}
+					\item The scheme $X$ is Jacobson;
+					\item The scheme is 'locally Jacobson';(In the sense of 'local property' of Schemes by Rings)
+					\item For every affine open $U\subseteq X$ the ring $\mathcal{O}_X(U)$ is Jacobson.
+					\item There exists an affine open covering $X=\cup U_i$ such that each $\mathcal{O}_X(U_i)$ is Jacobson;
+					\item There exists an open covering $X=\cup X_j$ such that each open subscheme $X_j$ is Jacobson.
+				\end{itemize}
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Noetherian Jacobson Schemes}
+			\begin{lemma}
+				\begin{itemize}
+					\item 
+					\item 
+					\item 
+				\end{itemize}
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+		\section{Normal Schemes}
+			\begin{Def}
+				A scheme $X$ is normal iff for all $x\in X$, the local ring $\mathcal{O}_{X,x}$ is a normal domain.
+			\end{Def}
+		\section{Cohen-Macaulay Schemes}
+		\section{Regular Schemes}
+		\section{Diemnsion of Schemes}
+			\begin{Def}
+				Let $X$ be a scheme:
+				\begin{itemize}
+					\item The dimension of $X$ is just the dimension of $X$ as a topological space;
+					\item For $x\in X$ we denote 
+					\begin{gather*}
+						dim_x(X):=\min\{dim(U)|x\in U\mbox{ open}\}
+					\end{gather*}
+				\end{itemize}
+			\end{Def}
+			
+			\begin{lemma}
+				The followings are equal:
+				\begin{itemize}
+					\item The dimension of $X$;
+					\item The superemum of the dimensions of local rings of $X$;
+					\item The superemum of $dim_x(X)$ for $x\in X$;
+				\end{itemize}
+			\end{lemma}
+			\begin{proof}
+				\begin{itemize}
+					\item 
+					\item 
+					\item 
+				\end{itemize}
+			\end{proof}
+			
+			\begin{lemma}
+				Let $X$ be a scheme, $Y\subseteq X$ be an irreducible closed subset. Let $\xi\in Y$ be the generic point. Then
+				\begin{gather*}
+					codim(Y,X)=dim(\mathcal{O}_{X,\xi})
+				\end{gather*}
+				where the codimension is as defined in topology.
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{lemma}
+				Let $X$ be a scheme with $x\in X$. Then $x$ is a generic point of an irreducible component of $X$ iff $dim(\mathcal{O}_{X,x})=0$
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\subsection{Catenary Schemes}
+				\begin{Def}
+					\begin{itemize}
+						\item A ring $A$ is called \textbf{catenary} if for any pair of prime ideals $p\subseteq q$ there exists a maximal chain of primes
+						\begin{gather*}
+							p=p_0\subseteq \dots\subseteq p_e=q
+						\end{gather*}
+						and all of these have the same length.
+						\item Let $S$ be a scheme. We say $S$ is \textbf{catenary} if the underlying topological space of $S$ is catenary.
+					\end{itemize}
+				\end{Def}
+				\begin{lemma}
+					Let $S$ be a scheme, the following are equivalent:
+					\begin{itemize}
+						\item $S$ is catenary
+						\item There exists an open covering of $S$ all of whose members are catenary;
+						\item for every affine open $Spec(R)=U\subseteq S$ the ring $R$ is catenary;
+						\item There exists an affine open covering $S=\cup U_i$ such that each $U_i$ is the spectrum of a catenary ring;
+						\item For any $x\in X$, the local ring $\mathcal{O}_{X,x}$ is catenary.
+					\end{itemize}
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\subsubsection{Locally Noetherian Rings}
+				\begin{lemma}
+					Let $S$ be a locally Noetherian scheme. The following are equivalent:
+					\begin{itemize}
+						\item $S$ is catenary;
+						\item locally in the Zariski topology there exists a dimension function on $S$;
+					\end{itemize}
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Serre's Condition}
+			\begin{Def}
+				Let $X$ be a locally Noetherian scheme, $k\geq 0$:
+				\begin{itemize}
+					\item We say $X$ is regular in codimension $k$, or we say $X$ has the property $(R_k)$ if for every $x\in X$ we have
+					\begin{gather*}
+						dim(\mathcal{O}_{X,x})\leq k\Rightarrow \mathcal{O}_{X,x}\mbox{ is regular}
+					\end{gather*}
+					\item We say $X$ has property $(S_k)$ if for every $x\in X$ we have
+					\begin{gather*}
+						depth(\mathcal{O}_{X,x})\geq \min(k,dim(\mathcal{O}_{X,x}))
+					\end{gather*}
+				\end{itemize}
+			\end{Def}
+			\subsection{The Singular Locus}
+		\section{Japanese and Nagata Schemes}
+		\section{Quasi-Affine Scheme}
+		\begin{Def}
+			内容...
+		\end{Def}
+		\section{Ample Invertible Sheaves}
+			\textbf{Review} Given an invertible shaef $\mathcal{L}$ on a locally ringed space $X$, and given a glocal section of $\mathcal{L}$, the set
+			\begin{gather*}
+				X_s:=\{x\in X|s\notin m_x \mathcal{L}_x\}
+			\end{gather*}
+			is open(Consider as open subscheme). Take the following remark
+			\begin{gather*}
+				X_{ss'}:=X_s\cap X_{s'}
+			\end{gather*}
+			where $ss'$ denote the section $s\otimes s'\in \Gamma(X,\mathcal{L}\otimes \mathcal{L}')$. 
+			\begin{Def}
+				Let $X$ be a scheme, $\mathcal{L}$ be an invertible $\mathcal{O}_X$-module. We say $\mathcal{L}$ is \textbf{ample} if
+				\begin{itemize}
+					\item $X$ is quasi-compact;
+					\item for every $x\in X$ there exists an $n\geq 1$ and $s\in \Gamma(X,\mathcal{L}^{\otimes n})$ such that $x\in X_s$ and $X_s$ is affine.
+				\end{itemize}
+			\end{Def}
+			\begin{lemma}
+				Let $X$ be a scheme, $\mathcal{L}$ be an invertible $\mathcal{O}_X$-module, $n\geq 1$. 
+				
+				Then, $\mathcal{L}$ is ample iff $\mathcal{L}^{\otimes n}$ is ample.
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{lemma}
+				Let $X$ be a scheme, $\mathcal{L}$ be an invertible $\mathcal{O}_X$-module. Let $s\in \Gamma(X,\mathcal{L})$, for any affine $U\cap X$ the intersection
+				\begin{gather*}
+					U\cap X_s
+				\end{gather*}
+				is affine.
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Tensor Product}
+			\begin{lemma}
+				Let $X$ bea scheme, let $\mathcal{L}$ and $\mathcal{M}$ be invertible $\mathcal{O}_X$-modules. If 
+				\begin{itemize}
+					\item 
+					\item 
+				\end{itemize}
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Topology}
+		\subsection{Quasi-Coherent Sheaves and Ample Invertible Sheaves}
+			\textbf{Situation} Let $X$ be a scheme. Let $\mathcal{L}$ be an ample invertible sheaf on $X$. Then, set
+			\begin{gather*}
+				S:=\Gamma_*(X,\mathcal{L})=\oplus_{n\geq 0} S_n,S_n:=\Gamma(X,\mathcal{L}^{\otimes n})
+			\end{gather*}
+			Set: $Y:=Proj(S)$, then $f:X\rightarrow Y$ be the canonical morphism
+		\section{Appendix: How to find Suitable Affine Opens}
+	\chapter{Morphsism of Schemes}
+		\section{Classification of Properties}
+			This section is just an elementary introduction.
+			\subsection{Properties of Morphisms}
+				\textbf{Notation} Let $f:X\rightarrow Y,g:Y'\rightarrow Y$. Now let 
+				\begin{gather*}
+					X_{Y'}:=X\times_Y Y'\qquad f_{Y'}:X_{Y'}\rightarrow Y'\qquad 
+				\end{gather*}
+				\begin{center}
+					\begin{tikzcd}
+						X_{Y'}\arrow[d,"g'"]\arrow[r,"f_{Y'}"]&Y'\arrow[d,"g"]\\
+						X\arrow[r,"f"]&Y
+					\end{tikzcd}
+				\end{center}
+				\begin{Def}
+					Let $P$ be a property of morphisms of schemes 
+					\begin{itemize}
+						\item (COMP) It is stable under composition. That is: 
+						\begin{center}
+							For every (pair) $f:X\rightarrow Y,g:Y\rightarrow Z$ satisfies $P\Rightarrow g\circ f$ satisfies $P$;
+						\end{center}
+						\item (CANC) It is cancellable. That is :
+						\begin{center}
+							 For all $f:X\rightarrow Y,g:Y\rightarrow Z$; $g\circ f$ satisfies $P$$\Rightarrow$ $f$ satisfies $P$
+						\end{center} 
+						
+						\item (BC) It is stable under base change, 
+						\begin{center}
+							For all $f:X\rightarrow Y,g:Y'\rightarrow Y$ satisfies $P$$\Rightarrow$  $f_Y':X_{Y'}\rightarrow Y'$.
+						\end{center}
+						\item (LOCT) It is (Zariski-)local on the target, if for all morphism $f:X\rightarrow Y$, all open covers $Y=\cup_i V_i$, the morphism $f$ satisfies $P$ iff $f_{V_i}:f^{-1}(V_i)\rightarrow V_i$ satisfies $P$ for all $i\in I$.
+						\item (LOCS) It is (Zariski-)local on the source if for all morphism $f:X\rightarrow Y$ and all open covers $X=\cup U_i$, the moprhism $f$ satisfies $P$ iff $f|U_i$ satisfies $P$ for all $i\in I$.
+						\item (Universally) A morphism $f:X\rightarrow Y$ is \textbf{universally} $P$ if for all morphism $g:Y'\rightarrow Y$, morphhism $f_{Y'}$ satisfies $P$.
+					\end{itemize}
+				\end{Def}
+				
+				\textbf{Remark: Universally} In algebra, we define
+				\begin{Def}
+					Ring homomorphism $\phi:A\rightarrow B$ is universally $P$: For any ring homomorphsim $A\rightarrow C$, the induced homomorphism $\phi_C:C\rightarrow B\otimes_A C$ satisfies $P$
+					\begin{center}
+						\begin{tikzcd}
+							B\otimes_A C\arrow[r]\arrow[d]&C\arrow[d]\\
+							B\arrow[r]&A
+						\end{tikzcd}
+					\end{center}
+				\end{Def}
+				
+				\begin{example}
+					Property 'flatness; is universal.
+				\end{example}
+				
+				\begin{lemma}
+					Let $f:X\rightarrow Y$ be aa morphism of schemes over $S$. Then: The following square is Cartesian:
+					\begin{center}
+						\begin{tikzcd}
+							X\arrow[r,"\Gamma_f"]\arrow[d,"f"]&X\times_S Y\arrow[d,"f_Y"]\\
+							Y\arrow[r,"\Delta_{Y/S}"]&Y\times_S Y
+						\end{tikzcd}
+					\end{center}
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{Def}
+					If $P$ is a \underline{property of morphisms of schemes}. We say that a morphism satisfies $\Delta_P$ if $\Delta_{X/Y}$ satisfies $P$.
+				\end{Def}
+				
+				\begin{proposition}
+					内容...
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{theorem}
+					(Cancellation Theorem)
+				\end{theorem}
+			\subsection{Topological Properties}
+				\begin{Def}
+					A morphism $(f,f^\#):(X,\mathcal{O}_X)\rightarrow (Y,\mathcal{O}_Y)$ of schemes:
+					\begin{itemize}
+						\item is inj./surj./bi. if $f$ is inj./surj./bi.;
+						\item is open if $f$ is;
+						\item is quasi-compact if $f$ is quasi-compact;
+						\item is quasi-separated if $\Delta_{X/Y}:X\rightarrow X\times_Y X$ is quasi-compact;
+						\item has finite fibers if $f^{-1}(y)$ is finite for all $y\in Y$;
+					\end{itemize}
+				\end{Def}
+				
+				\begin{proposition}
+					The properties satisfies:
+					\begin{itemize}
+						\item 
+						\item 
+						\item 
+						\item 
+						\item 
+						\item 
+						\item 
+						\item 
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+						\begin{itemize}
+						\item 
+						\item 
+						\item 
+						\item 
+						\item 
+						\item 
+						\item 
+						\item 
+					\end{itemize}
+				\end{proof}
+			\subsection{Scheme-Theoretic Properties}
+				\begin{Def}
+					\begin{itemize}
+						\item (Locally Closed) Immersion
+						\item Locally of finite type if: For all affine open 
+						\item of finite type:
+						\item quasi-finite if:
+						\item affine: If
+						\item Finite:
+						\item Separated:
+						\item Proper: If
+					\end{itemize}
+				\end{Def}
+		\section{Valuative Criteria}
+			\begin{Def}
+				内容...
+			\end{Def}
+		\section{Quasi-Compact Morphism}
+			\begin{Def}
+				A morphism $f:X\rightarrow S$ is \textbf{quasi-compact} if its underlying map of topological space is quasi-compact. 
+				
+				i.e. for compact $K\subseteq S$ we have $f^{-1}(K)$ is compact.
+			\end{Def}
+			\begin{proposition}
+				Let $f:X\rightarrow S$ be a morphism of schemes. The followings are equivalent:
+				\begin{itemize}
+					\item $f:X\rightarrow S$ is quasi-compact;
+					\item the inverse image of every affine open is quasi-compact;
+					\item there exists some affine open covering $S=\cup U_i$ such that $f^{-1}(U_i)$ is quasi-compact for all $i$;
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				
+			\end{proposition}
+			\subsubsection{Closed Immersion}
+			\begin{lemma}
+				A closed immersion is quasi-compact.
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Specialization}
+			
+			\begin{proposition}
+				Let $f:X\rightarrow S$ be a quasi-commpact morphism of schemes. The followings are equivalent
+				\begin{itemize}
+					\item $f(X)\subseteq S$ is closed;
+					\item $f(X)\subseteq S$ is stable under specialization;
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\begin{proposition}
+				Suppose $f:X\rightarrow S$ be a quasi-compact morphism of schemes. Then, $f$ is closed iff specialization lift along $f$.
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+		\section{Universal Closedness}
+			\begin{Def}
+				A morphsim of schemes $f:X\rightarrow S$ is said to be \textbf{universally closed} if every base change
+				\begin{gather*}
+					f':X_{S'}\rightarrow S'
+				\end{gather*}
+				is closed.
+			\end{Def}
+			\subsection{Valuative Criterion}
+		\section{Immersion}
+			\subsection{Open Immersion}
+			\subsection{Closed Immersion}
+			\subsection{Closed Immersions and Quasi-Coherent Sheaaves}
+			\subsection{Support}
+		\section{Scheme Theoretic Image}
+			\begin{lemma}
+				Let $f:X\rightarrow Y$ be a morphism of schemes. There exists aclosed subscheme $Z\subseteq Y$ such that $f$ factors through $Z$, and that for any other closed subscheme $Z'\subseteq Y$ such that $f$ factors through $Z'$ we have $Z\subseteq Z'$.
+			\end{lemma}
+			\begin{proof}
+				Define $\mathcal{I}:=Ker(\mathcal{O}_Y\rightarrow f_*\mathcal{O}_X)$, then by earlier discussion we have known, that $\mathcal{I}$ is quasi-coherent then we just take $Z$ to be the closed subscheme determined by $\mathcal{I}$.
+				
+				In general, to show that there exists a largest ideal $\mathcal{I}'$ contained in $\mathcal{I}$.
+			\end{proof}
+			
+			\begin{Def}
+				内容...
+			\end{Def}
+		\section{Scheme Theoretic Closure and Density}
+		\section{Quasi-Compact Morphisms}
+			Review: A map $f:X\rightarrow Y$ is called \textbf{quasi-compact} iff the preimage $f^{-1}(V)$ of every compact $V$ is compact.
+			\begin{Def}
+				A morphism of schemes if called \textbf{quasi-compact} if the underlying map of  topological maps is quasi-compact. 
+			\end{Def}
+			
+			\begin{lemma}
+				
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Quasi-Compact$\Rightarrow$ $f(X)$ is Closed$\leftrightarrow f(X)$   is stable under Spelization}
+			\begin{lemma}
+				内容...
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Quasi-Compact$\Rightarrow$ $f$ is closed$\leftrightarrow$ Specialization lift along $f$}
+				\begin{lemma}
+				内容...
+			\end{lemma}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+		\section{Monomorphisms}
+		
+			\begin{Def}
+				A morphism of schemes is called a \textbf{monomorphism} if it is a monomorphism in the category of schemes.
+			\end{Def}
+			
+			\begin{lemma}
+				内容...
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+		\section{Surjective Morphisms}
+		\begin{Def}
+			A morphism of schemes is said to be \textbf{surjective} if it is surjective on underlying topological spaces.
+		\end{Def}
+		\begin{lemma}
+			The composition of surjective morphisms is surjective.
+		\end{lemma}
+		\begin{proof}
+			Omitted.
+		\end{proof}
+		\subsection{Properties}
+		\subsubsection{Fibre Product}
+		\begin{lemma}
+			Let $X,Y$ be schemes over a base schemes $S$. Then, given points $x\in X,y\in Y$, there is a point of $X\times_S Y$ mapping to $x$ and $y$ under the projection iff $x,y$ lie above the same point of $S$.
+		\end{lemma}
+		\begin{proof}
+			内容...
+		\end{proof}
+		\subsubsection{The Base Change}
+		\begin{lemma}
+			内容...
+		\end{lemma}
+		\begin{proof}
+			内容...
+		\end{proof}
+		\section{Radicial and Universally Injective Morphisms}
+			\begin{Def}
+				内容...
+			\end{Def}
+		
+		\section{Dominant Morphisms}
+			\begin{Def}
+				A morphism $f:X\rightarrow S$ of schemes is called \textbf{dominant} if the image of $f$ is dense subset of $S$.
+			\end{Def}
+			\begin{example}
+				Suppose $k$ be an infinite field, $(\lambda_i)_{i\in \NN}$ be the elements in $k$. Then, the morphism
+				\begin{gather*}
+					\sqcup_i Spec(k)\rightarrow Spec(k[x])
+				\end{gather*}
+				induced by $x\mapsto \prod_{i} (\lambda_i)$
+			\end{example}
+			\begin{lemma}
+				Let $f:X\rightarrow S$ be a morphism of schemes, if every generic point of every irreducible component of $S$ is in the image of $f$, then $f$ is dominant.
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{lemma}
+				Let $f:X\rightarrow S$ be \underline{quasi-coompact} morphism of schemes.
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\subsection{Irreducible Component}
+			\subsection{Base Change}
+		\section{Affine Morphisms}
+			\begin{Def}
+				A morphism of scheme $f:X\rightarrow S$ is called \textbf{affine} if the inverse image of every affine open of $S$ is an affine open of $X$.
+			\end{Def}
+			\begin{lemma}
+				Morphism $f:X\rightarrow S$ is affine $\Leftrightarrow f$ is separated and quasi-compact.
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Relative Spectrum}
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+		\section{Familes of Ample Invertible Modules}
+			\begin{Def}
+				Let $X$ be a scheme, $\{\mathcal{L}_i\}$ be a family of invertible $\mathcal{O}_X$-modules. We say $\{\mathcal{L}_i\}$ is an \textbf{ample family of invertible modules} on $X$ if:
+				\begin{itemize}
+					\item $X$ is quasi-compact;
+					\item for every $x\in X$, there exists an $i\in I$ and $n\geq 1$, and $s\in \Gamma(X,\mathcal{L}_i^{\otimes n})$ such that
+					\begin{itemize}
+						\item $x\in X_s$;
+						\item $X_s$ is affine;
+					\end{itemize}
+				\end{itemize}
+			\end{Def}
+		\section{Morphisms of Finite Type}
+		\section{Dimension}
+		\subsection{Morphisms and Dimension of Fibres}
+			\begin{Def}
+				 For $x\in X$ define
+				 \begin{gather*}
+				 	dim_x(X):=\min\{dim(U)|x\in U\mbox{ is open}\}
+				 \end{gather*}
+			\end{Def}
+			
+			\begin{lemma}
+				Let $f:X\rightarrow S$ be a morphism of schemes, $x\in X$ and $s=f(x)$. Assume that $f$ is locally of finite type, then
+				\begin{gather*}
+					dim_x(X_S)=dim(\mathcal{O}_{X_s,x})+trdeg_{\kappa(s)}(\kappa(x))
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+		\subsection{Morphisms of Given Relative Dimension}
+			\begin{Def}
+				内容...
+			\end{Def}
+		\section{Ample}
+			\subsection{Relatively Ample Sheaves}
+			\subsection{Very Ample Sheaves}
+			\subsection{Ample and Very Ample Sheaves Relative to Finite Type Morphisms}
+		\section{Proper Morphisms}
+		\section{Valuative Criteria}
+		\section{Projective Morphisms}
+		\section{Integral and Finite Morphisms}
+		\section{Universal Homeomorphism}
+			\subsection{Definitions}
+			\subsection{Universal Homeomorphisms of Affine Schemes}
+		\section{Normalization}
+			\subsection{Absolute Weak Normalization and Seminormalization}
+			\subsection{Relative Normalization}
+			\subsection{Normalization}
+			\subsection{Weak Normalization}
+			\subsection{Weak Relative Noether Normalization}
+		\section{Finite Locally Free Morphisms}
+		\section{Rational Maps}
+			\subsection{Definitions}
+			\subsection{Birational Morphisms}
+			\subsection{Zariski's Main Theorem}
+		\section{Universally Bounded Fibres}
+		\section{Sections of Quasi-Coherent Sheaves}
+		
+			\begin{lemma}
+				Let $A$ be a ring. Let $I\subseteq A$ be a \underline{finitely generated ideal}. $M$ be an $A$-module.
+				
+				Then, there is a canonical map
+				
+				\begin{gather*}
+					colim_{n}Hom_A(I^n,M)\rightarrow \Gamma(Spec(A)-V(I),\hat{M})
+				\end{gather*}
+				
+				The maps is always injective.
+				
+				If for all $x\in M$, we have $Ix=0\Rightarrow x=0$  then this map is an isomorphism.
+				
+				In general, set $M_n:=\{x\in M|I^nx=0\}$, there exists an isomorphism
+				
+				\begin{gather*}
+					colim_n Hom_A(I^n,M/M_n)\rightarrow \Gamma(Spec(A)-V(I),\hat{M})
+				\end{gather*}
+			\end{lemma}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{example}
+				The first displayed map is not an isomorphism. 
+				
+				Let $k$ be a ring, 
+			\end{example}
+			
+			\begin{lemma}
+				Let $X$ be a quasi-compact scheme, $\mathcal{I}\subseteq \mathcal{O}_X$ be a quasi-coherent sheaf of ideals of finite type. Let $Z\subseteq X$ be the closed subscheme defined by $\mathcal{I}$ with $U=X-Z$. Let $\mathcal{F}$ be a quasi-coherent $\mathcal{O}_X$-module. The canonical map
+				
+				\begin{gather*}
+					colim_n Hom_{\mathcal{O}_X} (\mathcal{I}^n,\mathcal{F})\rightarrow \Gamma(U,\mathcal{F})
+				\end{gather*}
+				
+				is injective. Assume further that $X$ is quasi-separated, let $\mathcal{F}_n\subseteq \mathcal{F}$ be subsheaf of sections annihilated by $\mathcal{I}^n$, the canonical map
+				
+				\begin{gather*}
+					colim_n Hom_{\mathcal{O}_X} (\mathcal{I}^n,\mathcal{F}/\mathcal{F}_n)\rightarrow \Gamma(U,\mathcal{F})
+				\end{gather*}
+			\end{lemma}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+		\section{Thickenings}
+			\subsection{Definitions}
+			\subsection{Morphisms}
+			\subsection{Picard Groups of Thinkenings}
+			\subsection{Universal First Order Thickenings}
+		\section{Unramified Morphisms}
+			\subsection{Definitions}
+			\subsection{Formally Unramified Morphisms}
+		\section{Etale Morphisms}
+			\subsection{title}
+			\subsection{Formally Etale Morphisms}
+		\section{Smooth Morphisms}
+			\subsection{title}
+			\subsection{Formally Smooth Morphisms}
+			\subsection{Smoothness over a Noetherian Base}
+		\section{The }
+	\chapter{Classification of Schemes}
+	\chapter{Divisors}
+		\section{Associated Points}
+			\begin{Def}
+				Let $X$ be a scheme. Let $\mathcal{F}$ be a quasi-coherent sheaf on $X$:
+				
+				\begin{itemize}
+					\item We say $x\in X$ is \textbf{associated to} $\mathcal{F}$ if the maximal ideal $m_x$ is associated to the $\mathcal{O}_{X,x}$-module $\mathcal{F}_x$, i.e. There exists $a\in \mathcal{F}_X$
+					\begin{gather*}
+						m_x=Ann(a)
+					\end{gather*}
+					\item Take the following notation:
+					\begin{gather*}
+						Ass(\mathcal{F})\qquad \mbox{or}\qquad Ass_X(\mathcal{F})
+					\end{gather*}
+					\item And: The associated points of $X$ are associated points of $\mathcal{O}_X$.
+				\end{itemize}
+			\end{Def}
+			\textbf{Remark} These definitions are most useful when X is locally Noetherian and F of finite type.
+			For example it may happen that a generic point of an irreducible component of X
+			is not associated to X, see Example 2.7. In the non-Noetherian case it may be
+			more convenient to use weakly associated points, see Section 5. Let us link the
+			scheme theoretic notion with the algebraic notion on affine opens; note that this
+			correspondence works perfectly only for locally Noetherian schemes.
+			
+			\begin{lemma}
+				Let $X$ be a scheme. Let $\mathcal{F}$ be a quasi-coherent sheaf on $X$. Let $Spec(A)=U\subseteq X$ be an affine open, and set $M=\Gamma(U,\mathcal{F})$, $x\in U$, $p\subseteq A$ is the corresponding prime:
+				\begin{itemize}
+					\item If $p$ is associated to $M$, then $x$ is associated to $\mathcal{F}$;
+					\item If $p$ is finitely generated, then the coverse holds as well.
+				\end{itemize}
+				In particular, if $X$ is Noetherian, then the equivalence
+				\begin{gather*}
+					p\in Ass(M)\Leftrightarrow x\in Ass(\mathcal{F})
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Weakly Associated Points}
+			\subsection{Morphisms and Weakly Associated Points}
+			\subsection{Support}
+			\begin{lemma}
+				Let $X$ be a scheme, $\mathcal{F}$ be a quasi-coherent $\mathcal{O}_X$-module, then
+				\begin{gather*}
+					Ass(\mathcal{F})\subseteq Supp(\mathcal{F})
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Short Exact Sequence}
+			\subsubsection{Locally Noetherian Scheme}
+			\subsection{Morphisms and Associated Points}
+			\subsection{Embedded Points}
+		\section{Assassin}
+			\subsection{Relative Assassin}
+			\subsection{Relative Weak Assassin}
+		\section{Fitting Ideals}
+		\section{Effective Cartier Divisors}
+			\subsection{Definitions}
+			\subsection{Effective Cartier Divisors and }
+		\section{Norm}
+		\section{Weil Divisors}
+	\chapter{Varities}
+		\section{Definitions}
+			\begin{Def}
+				Let $k$ be a field. A \textbf{variety} is a scheme $X$ over $k$ such that $X$ is integral and the structure morphism
+				\begin{gather*}
+					X\rightarrow Spec(k)
+				\end{gather*}
+				
+				is separated and of finite type.
+			\end{Def}
+			\subsection{Varieties and Rational Maps}
+		\section{Base Field Changes}
+	\chapter{Topology of Schemes}
+	\chapter{Limits of Schemes}
+	\chapter{Chow Homology and Chern Classes}
+	\chapter{Intersection Theory}
+		\textbf{Remark} 
+		\section{Cycles}
+			\subsection{Definitions}
+	\chapter{title}
+\end{document}

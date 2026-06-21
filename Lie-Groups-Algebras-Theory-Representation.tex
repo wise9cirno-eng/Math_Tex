@@ -1,0 +1,487 @@
+\documentclass[Total.tex]{subfiles}
+
+\begin{document}
+	\chapter{Introduction: An Overview of Some Topics}
+		
+	\chapter{Lie Groups}
+		\section{Lie Groups}
+			\subsection{Definition}
+			\begin{Def}
+				A \textbf{Lie group} is a group $G$, endowed with the structure of smooth manifold, such that the operations
+				\begin{gather*}
+					m_G:G\times G\rightarrow G\qquad (x,y)\mapsto xy\\
+					\iota_G:G\rightarrow G\qquad x\mapsto x^{-1}
+				\end{gather*}
+				are smooth.
+			\end{Def}
+			
+			In addition,
+			\begin{Def}
+				Equipped with the maps
+				\begin{gather*}
+					\lambda_g:G\rightarrow G,x\mapsto gx\\
+					\rho_g:G\rightarrow G,x\mapsto xg\\
+					c_g:G\rightarrow G,x\mapsto gxg^{-1}
+				\end{gather*}
+				They are bijective with
+				\begin{gather*}
+					\begin{cases}
+						\lambda_{g^{-1}}=(\lambda_g)^{-1}\\
+						\rho_{g^{-1}}=(\rho_g)^{-1}\\
+						c_{g^{-1}}=(c_g)^{-1}
+					\end{cases}
+				\end{gather*}
+			\end{Def}
+			
+			$(c_g)_{g\in G}$ is a homomorphism of groups, with 
+			\begin{gather*}
+				c_{(-)}:G\hookrightarrow Aut(G)\qquad g\mapsto c_g
+			\end{gather*}
+			
+			Its image is a subgroup of $G$, denoted by $Inn(G)$. 
+			
+			\begin{example}
+				Some are listed as followings:
+				\begin{itemize}
+					\item $(\RR,0,+,-)$: Non-compact, connected;
+					\item $(\RR,1,\cdot,(-)^{-1})$: Non-compact, non-connected;
+					
+					\item $(GL_N(\RR),1_N,\cdot,(-)^{-1})$. Non-compact,non-connected;
+					\item 
+					\item 
+				\end{itemize}
+			\end{example}
+			\begin{lemma}
+				内容...
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\begin{corollary}
+				内容...
+			\end{corollary}
+			\subsubsection{Morphisms of Lie Groups}
+			
+			
+			\begin{Def}
+				The morphism of Lie groups is a smooth Lie groups is a smooth homomorphism
+				\begin{gather*}
+					\varphi:G_1\rightarrow G_2
+				\end{gather*}
+			\end{Def}
+			\subsubsection{Lie Subgroups}
+			\subsection{The Identity Component}
+			\subsection{Invariant of Vector Fields}
+			\subsection{Classification of Abelian Lie Groups}
+		\section{Covering of Lie Groups}
+		\section{Matrix Groups}
+			\subsubsection{Some Works with Determinant}
+			
+			\begin{lemma}
+				Determinant
+				\begin{gather*}
+					det:Mat_n(F)\rightarrow F
+				\end{gather*}
+				
+				is continuous on $Mat_n(F)$. 
+			\end{lemma}
+			\begin{proof}
+				Notice that
+				\begin{gather*}
+					\Vert det(A+H)-det(A)\Vert =\Vert det(A)[det(1+A^{-1}H)-det(1)]\Vert \\
+					\qquad =\Vert det(A)(tr(A^{-1}H))\Vert=O(\Vert H\Vert )
+				\end{gather*}
+			\end{proof}
+			\begin{lemma}
+				The map $det:Mat_n(\RR)\rightarrow \RR$ is differentiable at any $A\in GL_n(\RR)$, and we have
+				\begin{gather*}
+					d[det](A):Mat_n(\RR)\rightarrow \RR\qquad H\mapsto det(A)tr(A^{-1}H)
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				Firstly, in the case of $A=1$:
+				\begin{gather*}
+					d[det](1)H=(det(1+H)-det(1))\cdot 1+o(\Vert H\Vert)
+				\end{gather*}
+				
+				And, let $H=[h_1|\dots|h_n]$, we use the following inequality
+				\begin{gather*}
+					O(\Vert H\Vert^n)\leq O(\Vert H\Vert^2)\leq o(\Vert H\Vert )
+				\end{gather*}
+				\begin{gather*}
+					det(1+H)=det([e_1+h_1|\dots|e_n+h_n])\\\qquad=tr(H)+det([e_1|\dots|e_n])+o(\Vert H\Vert)\\
+					=1+tr(H)+o(\Vert H\Vert)\\
+					\Rightarrow d[det](1)H=tr(H)+o(\Vert H\Vert)
+				\end{gather*}
+				
+				In general:
+				\begin{gather*}
+					d[det](A)H=(det(A+H)-det(A))+o(\Vert H\Vert)\\
+					\qquad=det(A)(det(1+A^{-1}H)-det(1))+o(\Vert H\Vert)\\
+					\qquad =det(A)\cdot d[det](1)(A^{-1}H)=det(A)tr(A^{-1}H)
+				\end{gather*}
+			\end{proof}
+			
+			\begin{corollary}
+				$1$ is the regular value of $det$. 
+			\end{corollary}
+			\begin{proof}
+				We have: $1$ is the regular value of $det\Leftrightarrow det(A)=1\rightarrow d[det](A)\not=0$. Thus, action on $X=A$,
+				\begin{gather*}
+					det(A)=1\Rightarrow d[det](A)A=det(A)tr(A^{-1}A)=n1
+				\end{gather*}
+			\end{proof}
+			
+			We can combine this lemma with \textbf{regular value's theorem}, 
+			
+			\subsection{Orthonormal Groups}
+			\begin{Def}
+				Define:
+				\begin{gather*}
+					O(n;\RR):=\{X\in M_n(\RR)|\}
+				\end{gather*}
+			\end{Def}
+			
+			Especially, 
+			\begin{Def}
+				Let $V$ be a finite-dimensional vector space, with $<-,->$ a non-degenerate symmetric bilinear form on $V$(not assume positive definite). Define:
+				\begin{gather*}
+					O(<-,->;\RR):=\{A\in GL(V)|<Ax,Ay>=<x,y>;x,y\in V\}
+				\end{gather*}
+				
+				It is a disconnected group.
+			\end{Def}
+			
+			So in $\RR^n$, the inner product $<x,y>:=x^Ty$
+			
+			\begin{lemma}
+				$O(<-,->)$ is disconnected.
+			\end{lemma}
+			\begin{proof}
+				Define: $det(-):GL(V)\rightarrow F$, then we have $det(A)\not=0,A\in GL(V)$.
+			\end{proof}
+			
+			\begin{lemma}
+				\begin{itemize}
+					\item The map
+					\begin{gather*}
+						\Phi:End(V)\rightarrow S^2V^*\qquad A\mapsto A^*<-|->
+					\end{gather*}
+					
+					is differentiable at $A\in End(V)$. 
+					\item For $A\in O(<-,->)$ we have
+					\begin{gather*}
+						d\Phi_A:End(V)\rightarrow S^2 V^*\qquad H\mapsto (\mapsto )
+					\end{gather*}
+				\end{itemize}
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{corollary}
+				内容...
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Affine Linear Transformations}
+			\subsubsection{Minkowski 4-Space}
+			\subsubsection{Isometry Group of Sphere}
+		\section{Exponential Function}
+				\subsection{The Matrix Exponential Map}
+			\begin{Def}
+				Define the matrix exponential of matrix: For a compelete field
+				\begin{gather*}
+					exp(X):=\sum_{k=0}^\infty \frac{1}{k!} X^k
+				\end{gather*}
+			\end{Def}
+			
+			\begin{proposition}
+				内容...
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{The Exponential Map}
+			\begin{proposition}
+				Let $X\in \mathfrak{g}$. There exists a \textbf{unique group homomorphism}
+				\begin{gather*}
+					\gamma_X:\RR\rightarrow G\qquad \gamma'_X(0)=X
+				\end{gather*}
+				
+				
+			\end{proposition}
+			\begin{proof}
+				\begin{itemize}
+					\item Existence:
+					\item Uniqueness:
+				\end{itemize}
+			\end{proof}
+			
+			\begin{Def}
+				For such $\gamma_X$, define:
+				\begin{gather*}
+					exp_G(X):=\gamma_X(1)
+				\end{gather*}
+			\end{Def}
+			
+			\begin{theorem}
+				The map $exp_G:\mathfrak{g}\rightarrow G$ is smooth, with following properties:
+				\begin{itemize}
+					\item (Commutativity)$Ad(x)\circ exp_G=exp_G\circ Ad(x);x\in G$;
+					\item $Ad\circ exp_G=exp_{GL(\mathfrak{g})}\circ ad$;
+					\item $dexp_G(0)=id_\mathfrak{g}$;
+					\item If $\phi:G\rightarrow H$ is a homomorphism, then
+					\begin{gather*}
+						\phi\circ exp_G=exp_H\circ d\phi(1)
+					\end{gather*}
+					\item 
+				\end{itemize} 
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				(Commutativity of Exponential Maps) Let $G$ be a Lie Group, with $X,Y\in \mathfrak{g}$.
+				
+				If $[X,Y]=0$, then
+				\begin{gather*}
+					exp_G(X)\cdot exp_G(Y)=exp_G(Y)\cdot exp_(X)
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\subsection{Application: Homomorphism of Lie Groups on Connected Groups}
+			\begin{lemma}
+				Let $f_1,f_2:H\rightarrow G$ be homomorphism of Lie groups. If $H$ is connected, and $df_1(1)=df_2(1)$, then
+				\begin{gather*}
+					f_1=f_2
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+		\section{Linear Lie Group}
+		\section{Representation of Lie Groups}
+			\begin{Def}
+				内容...
+			\end{Def}
+			
+			\begin{theorem}
+				内容...
+			\end{theorem}
+			\subsubsection{Review of Some Linear Algebra}
+			\subsubsection{Review of Functional Analysis}
+			\subsection{Haar Integral}
+			\subsection{Representation}
+			
+			\subsubsection{Examples: Representation of $SU(2),SO(3),U(2),O(3)$}
+	\chapter{Compact Lie Groups}
+		\section{Representation}
+			\subsection{Finite-Dimensional Representation of Lie Groups/Algebras}
+			
+				\begin{proposition}
+					Let $G$ be a Lie group, and $\pi:G\rightarrow $
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{The Killing Form}
+	\chapter{Lie Algebras}
+		\section{Elementary Theories}
+			\subsection{Basic Concepts}
+				\subsubsection{Lie Algebras}
+				
+					\begin{Def}
+						A \textbf{Lie algebra} is a finite-dimensional real/complex vector space, together with a bilinear map
+						\begin{gather*}
+							[-|-]:L\times L\rightarrow L
+						\end{gather*}
+						
+						with following conditions:
+						\begin{itemize}
+							\item 
+							\item 
+						\end{itemize}
+					\end{Def}
+					
+					\begin{proposition}
+						内容...
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\subsubsection{Homomorphisms}
+		\section{Root Decompositions}
+		\section{Representation Theory of Lie Algebra}
+	\chapter{Basic Lie Theory}
+		\section{Lie Groups and their Lie Algebras}
+			\subsection{Lie Groups and Tangent Groups}
+				
+				
+				
+				In addition, $c_g$ is a homomorphsim of groups
+				\begin{gather*}
+					c_{-}:G\hookrightarrow Aut(G)\qquad g\mapsto c_g
+				\end{gather*}
+				And the image can be denoted as $Inn(G)$.
+				
+				\begin{example}
+					Consider the following additive group $G=(\RR^n,+)$, endowed with the $n$-dimensional manifold structure. Chart
+					\begin{gather*}
+						(\RR^n,id_{\RR^n})
+					\end{gather*}
+					Product of groups: Induced by Cartian Product structure.
+				\end{example}
+				\begin{example}
+					内容...
+				\end{example}
+				
+				\subsection{Tangential Map}
+				
+				Similarly,
+				
+				\begin{gather*}
+					d(\lambda_g)_h:T_h G\rightarrow T_{gh} G\\
+					d(\rho_g)_h:T_g G\rightarrow T_{gh}G
+				\end{gather*}
+				
+				\subsection{Lie Group Structure of $T(G)$}
+				
+				\begin{lemma} Let $G$ be a Lie group:
+					\begin{itemize}
+						\item Tangent map
+						\begin{gather*}
+							T(e_G):T(G\times G)=T(G)\times T(G)\rightarrow T(G)\\
+							(X_g,Y_h)\mapsto d(\lambda_g)_h Y_h+d(\lambda_h)_g X_g
+						\end{gather*}
+						
+						defines a Lie-group structure on $T(G)$. And $T(G)$ has:
+						\begin{itemize}
+							\item Zero $0_1\in T_1(G)$;
+							\item Inverse $T(\iota_G)$;
+						\end{itemize}
+						And $\pi_{T(G)}:T(G)\rightarrow G$ is a morphism of Lie groups. With kernel
+						\begin{gather*}
+							ker(\pi_{T(G)})=T_1(G)
+						\end{gather*}
+						Zero section $\sigma:G\rightarrow T(G),g\mapsto 0_g$ is a homomorphsim of Lie groups. And
+						\begin{gather*}
+							\pi_{T(G)}\circ \sigma=id_{G}
+						\end{gather*}
+						
+						
+						\item Map
+						\begin{gather*}
+							\Phi:G\times T_1(G)\rightarrow T(G)
+						\end{gather*}
+						
+						is a diffeomorphism.
+					\end{itemize}
+				\end{lemma}
+				\begin{proof}
+					\begin{itemize}
+						\item Group axioms:
+						\begin{itemize}
+							\item (Associativity) $m_G\circ (m_G\times id_G)=m_G\circ(id_G\times m_G)\Rightarrow T(m_G)\circ (T(m_G)\times T(id_G))=T_{m_G}\circ (T_{id_G}\times T(m_G))$;
+							\item (Unit)
+							\item (Inversion) 
+						\end{itemize}
+						\item 
+					\end{itemize}
+				\end{proof}
+				
+				\textbf{Remark} In vector bundle, we usually have $T(G\times G)=T(G)\oplus T(G)$. But for finite dimensional $G$, $T(G)\oplus T(G)\cong T(G)\times T(G)$, abelian category. 
+				
+			\subsection{The Lie Functor}
+				\begin{Def}
+					(The Lie algebra of $G$) A vector field $X\in \mathcal{V}(G)$ is \textbf{left invaraint} if 
+					\begin{gather*}
+						X=T(\lambda_g)\circ X\circ \lambda_g^{-1};\forall g\in G
+					\end{gather*}
+					Define: $(\lambda_g)_*X:=T(\lambda_g)\circ X\circ \lambda_g^{-1}$. 
+				\end{Def}
+				
+				Write $V^l(G):=\{X\in \mathcal{V}(G)|X$ is invariant$\}$. 
+				
+				\begin{proposition}
+					内容...
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\subsubsection{Isomorphism $T_1(G)\cong \mathcal{V}(G)^l$}
+				
+					\begin{corollary}
+						If $G$ acts freely on $M$, then there exists an isomorphism
+						\begin{gather*}
+							T_1(G)\cong \mathcal{V}(G)
+						\end{gather*}
+					\end{corollary}
+					\begin{proof}
+						内容...
+					\end{proof}
+			\subsection{Smooth Actions of Lie Groups}
+				\begin{Def}
+					内容...
+				\end{Def}
+			\subsection{Topology of Lie Groups}
+		\section{Exponential Functions}
+			\subsection{Basic Properties of Exponential Function}
+		
+			\begin{Def}
+				内容...
+			\end{Def}
+			
+	\chapter{Smooth Action of Lie Groups}
+	\chapter{Structure Theory of Lie Groups}
+	\chapter{Compact Lie Theory}
+		\section{Clasical Groups}
+		\section{Vector Invariants}
+			\subsection{The Main Proposition of the Theory of Invariants}
+				\begin{Def}
+					\begin{itemize}
+						\item Consider the following \textbf{elementary symmetric functions}: For vectors $x=(x_1,\dots,x_n)$, define
+						\begin{gather*}
+							\varphi_0(x)=1\\
+							\varphi_1(x)=\sum_{i_1} x_{i_1}\\
+							\varphi_2(x)=\sum_{i_1,i_2} x_{i_1}x_{i_2}\\
+							\dots\\
+							\varphi_n(x)=x_1\dots x_n
+						\end{gather*}
+						\item Then, we have the polynomial coeficient for $\Phi(t)$:
+						\begin{gather*}
+							\Phi(t)=(t-x_1)\dots (t-x_n)=\sum_0^n (-1)^{i}t^{n-i}\varphi_i(x)
+						\end{gather*}
+						\item Furthermore, if $f(x_1,\dots,x_n)$ is any symmetric function of arguments $x_1,\dots,x_n$, there exists a function
+					\end{itemize}
+				\end{Def}
+				
+				This is the altest form of FMT.
+				
+				Furthermore, we have the follwing statement the functions,
+				
+				\textbf{Clain} If $f(x_1,\dots,x_n)$ is any symmetric function of $n$ arguments $x_1,\dots,x_n$, there exists a function $F(\xi_1,\dots,\xi_n)$ of $n$ arguments $\xi_1,\dots,\xi_n$ such that
+				\begin{gather*}
+					f(x)=F(\varphi_1(x),\dots,\varphi_n(x))
+				\end{gather*}
+				\subsubsection{Integral Rational Basis}
+				\begin{Def}
+					内容...
+				\end{Def}
+				\subsubsection{First Example: Orthogonal Transformation}
+				
+				Define: $\Gamma=O(n)$. Then, take $x,y\in F^n$,
+				\begin{gather*}
+					内容...
+				\end{gather*}
+				\subsubsection{Orthogonally Invariant Form}
+				
+				
+\end{document}

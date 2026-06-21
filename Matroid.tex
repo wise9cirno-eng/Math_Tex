@@ -1,0 +1,136 @@
+\documentclass[Total.tex]{subfiles}
+
+\begin{document}
+	\textbf{Notions}
+	
+	\begin{itemize}
+		\item For a set $E$, the cardinal and cardinal of collection of subsets are finite, denoted by
+		
+		\begin{gather*}
+			|E|\qquad 2^{|E|}
+		\end{gather*}
+		
+		\item Given a collection of sets $\mathcal{A}$, 
+		
+		\begin{gather*}
+			min(\mathcal{A})\qquad max(\mathcal{A})
+		\end{gather*}
+		
+		are well-defined.
+	\end{itemize}
+	
+	\chapter{Definitions}
+		\section{Independent Set and Circuits}
+		
+			\subsection{Matroid}
+		
+			\begin{Def}
+				\label{Matroid-Matroid}(Whitney,1935) A matroid $M$ is an ordered pair $(E,\mathcal{I})$ consisting of a finite set $E$ and a collection $\mathcal{I}$ of subsets of $E$ having the following three properties:
+				
+				\begin{itemize}
+					\item $\varnothing\in \mathcal{I}$;
+					\item (Hereditary) If $I\in \mathcal{I}',I'\subseteq I$, then $I'\in \mathcal{I}$;
+					\item (Independence Augmentation) If $I_1$ and $I_2$ are in $\mathcal{I}$ and $|I_1|<|I_2|$(which implies $I_2-I_1\not=\varnothing$), then there is an element $e$ of $I_2-I_1$ such that
+					
+					\begin{gather*}
+						I_1\cup \{e\}\in \mathcal{I}
+					\end{gather*}
+				\end{itemize}
+				
+				The members of $\mathcal{I}$ are called \textbf{independent sets} of $M$. $E$ is called the \textbf{ground set}. 
+				
+				If $I\notin \mathcal{I}$, $I$ is dependent.
+			\end{Def}
+			
+			
+		
+			
+			\begin{proposition}
+				Let $E$ be the set of column labels of $m\times n$ matrix over $F$. And let $\mathcal{I}$ be the set $X$ of subsets of $E$, whose vectors indexed by the $X$ is linear independent in $V(m,F)$, then 
+				
+				\begin{gather*}
+					(E,\mathcal{I})
+				\end{gather*}
+				
+				is a matroid.
+			\end{proposition}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\subsection{Circuits}
+			
+			\begin{Def}
+				内容...
+			\end{Def}
+		\section{Bases}
+			
+			\begin{lemma}
+				If $B_1,B_2$ are bases of Matroid $M$. Then
+				
+				\begin{gather*}
+					|B_1|=|B_2|
+				\end{gather*}
+			\end{lemma}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{lemma}
+				内容...
+			\end{lemma}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{theorem}
+				内容...
+			\end{theorem}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{lemma}
+				All the members of $\mathcal{B}$ have the same cardinality.
+			\end{lemma}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+		\section{Rank}
+		\section{Closure}
+		\section{Geometric Representation of Matroid of Small Rank}
+		
+	\chapter{Matroid Intersection}
+	
+		\section{Matroid Intersection Theorem}
+			
+			\begin{theorem}
+				(Matroid Intersection Theorem, Edmond) Let 
+				
+				\begin{gather*}
+					M_1=(S,I_1)\qquad M_2=(S,I_2)
+				\end{gather*}
+				
+				be matroids, with rank functions $r_1,r_2$. Then the maximum size of set in $\mathcal{I}_1\cap \mathcal{I}_2$ is equal to 
+				
+				\begin{gather*}
+					\min_{U\subseteq S} (r_1(U)+r_2(S-U))
+				\end{gather*}
+			\end{theorem}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+	\chapter{Duality}
+	\chapter{Minors}
+	\chapter{Connectivity}
+	\chapter{Representable Matroids}
+	\chapter{Constructions}
+	\chapter{Higer Connectivity}
+	\chapter{Binary Matroid}
+\end{document}

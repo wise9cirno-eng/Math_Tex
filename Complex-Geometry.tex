@@ -1,0 +1,319 @@
+\documentclass[Total.tex]{subfiles}
+\begin{document}
+	\chapter{Local Theory}
+		These will be given in complex analysis in multivariables.
+		
+		\section{Analytic Variety}
+			We will have a quick review of the notions/concepts in (classical) algebraic geometry:
+			\begin{itemize}
+				\item (Analytic Variety) A subset $V$ of open set $U\subseteq \CC^n$ is an analytic variety if each $p\in V$, there exists a neighborhood $W$ such that
+				\begin{gather*}
+					V\cap W=V(f_1,\dots,f_k)
+				\end{gather*}
+				
+				Especialy, an \textbf{analytic hypersurface} if $V$ is locally a single locus of nonzero holomorphic $f$.
+				\item (Irreducible Variety) We say that analytic variety $V$ is irreducible if there exists no analytic variety $V_1,V_2$ such that $V_1,V_2\not=V$, and $V_1\cup V_2=V$.
+				
+				Now, with the notion of holomorphic functions $\mathcal{O}^n$ on 
+				\begin{gather*}
+					内容...
+				\end{gather*}
+				\item Discussion of Irreducibility,Decomposition in irreducible components: For $V\subseteq U\subseteq \CC^n$, and given a hypersurface
+				\begin{gather*}
+					V=\{z\in U|f(z)=0\}
+				\end{gather*}
+				In a neighborhood of $0\in V$. $\mathcal{O}_n$ is UFD, thus
+				\begin{gather*}
+					f=\prod f_i\Rightarrow V=\cup V_i,V_i=\{z\in U|f_i(z)=0\};i=1,\dots,k
+				\end{gather*}
+				Thus
+				\begin{proposition}
+					内容...
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\item Eucilidean Algorithm:
+				\item 
+			\end{itemize}
+		\section{Complex Manifold}
+			\subsection{Hermitian Structure}
+				\subsubsection{Hermitian Structure}
+				\begin{Def}
+					A \textbf{Hermitian structure} $h$ is a sesquilinear form written
+					\begin{gather*}
+						h=g-i\omega
+					\end{gather*}
+					where $g$ is a Riemannian metric, and $\omega$ is a 2-form called a \textbf{Kähler form}, wich is o type $(1,1)$ for the almost complex structure $J$. As follows from the invariancee of $h$ under $J$:
+					\begin{gather*}
+						J:h(u,v)=h(Ju,Jv)
+					\end{gather*}
+				\end{Def}
+				\subsubsection{Kähler Manifold}
+				
+				\begin{theorem}
+					内容...
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Complex Manifold}
+				\begin{Def}
+					内容...
+				\end{Def}
+				\subsubsection{Liouville's Theorem}
+					\begin{theorem}
+						(Liouville) Let $X$ be a \underline{compact and connected complex manifold}, then
+						\begin{gather*}
+							\Gamma(X,\mathcal{O}_X)=\CC
+						\end{gather*}
+						i.e. Any \underline{global holomorphic function} on $X$ is constant.
+					\end{theorem}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{corollary}
+						Let $X$ be a complex manifold of dimension \underline{at least two} and $x\in X$, then
+						\begin{gather*}
+							\Gamma(X,\mathcal{O}_X)=\Gamma(X-\{x\},\mathcal{O}_X)
+						\end{gather*}
+						If $X$ is addition compact and connected, then $\Gamma(X-\{x\},\mathcal{O}_X)=\CC$.
+					\end{corollary}
+					\begin{proof}
+						内容...
+					\end{proof}
+				\subsubsection{Holomorphic Functions}
+				\subsubsection{Meromorphic Functions}
+				\subsubsection{The Rational Function Field}
+					\begin{proposition}
+						(Siegel)
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+				\subsubsection{Some of Typical Structures}
+					\begin{itemize}
+						\item 
+						\item 
+					\end{itemize}
+				\subsubsection{Complex Lie Groups}
+			\subsection{Poincare Duality}
+		\section{The Projective Spaces}	
+		\section{Blow-Ups}
+			\subsection{Blow-Ups on Opens}
+			\textbf{Remark} Let $X$ be a complex manifold, and $Y\subseteq X$ be a complex submanifold of codimension $k$. There exist holomorphic functions
+			\begin{gather*}
+				f_1,\dots,f_k
+			\end{gather*}
+			with (linear) independent differentials, such that(Remark: If they have independent differentials, then $\partial f_1\wedge\dots\wedge \partial f_k\not=0$)
+			\begin{gather*}
+				Y=\{z|f_i(z)=0;i=1,\dots,k\}
+			\end{gather*}
+			These equations are not unique, but we have the following:
+			\begin{lemma}
+				If $g_1,\dots,g_k$ form another system equations for $Y$, then locally in the neighbourhood of $Y$, there exists a matrix $M_{ij}$ of holomorphic functions such that
+				\begin{gather*}
+					g_i=\sum_j M_{ji} f_j
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\begin{Def}
+				(Blow Up of Open Sets) Let $U$ be an open set of $X$, on which there exists functions
+				\begin{gather*}
+					f_1,\dots,f_k
+				\end{gather*}
+				with independent differentials such that $Y\cap U=\{z\in U|f_i(z)=0;i=1,\dots,k\}$. Then, if we set
+				\begin{gather*}
+					\tilde{U}_Y=\{(Z,z)\in \mathbb{P}^{k-1}\times U|Z_i f_j(z)=Z_jf_i(z),\forall i,j\leq k\}
+				\end{gather*}
+				where $Z=(Z_i)\in \mathbb{P}^{k-1}$, 
+			\end{Def}
+			
+			\begin{lemma}
+				\begin{itemize}
+					\item Such $\hat{U}_Y$ is a smooth complex submanifold of $\mathbb{P}^{k-1}\times U$. 
+					\item We have a map
+					\begin{gather*}
+						\tau=pr_2:\hat{U}_Y\rightarrow U
+					\end{gather*}
+					which is an isomorphism on $U-Y\cap U$. 
+					\item Its inverse being given by
+					\begin{gather*}
+						z=(z_1,\dots,z_n)\mapsto ((f_1(z),\dots,f_k(z)),z)
+					\end{gather*}
+					\item Above $Y\cap U$, the fibre of $\tau$ is equal to $\mathbb{P}^{k-1}$
+				\end{itemize}
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{lemma}
+				Let $U,V$ be two open sets of $X$, in which $Y$ defined by equations:
+				\begin{gather*}
+					f_1^U,\dots,f_k^U;f_1^V,\dots,f_k^V
+				\end{gather*}
+				respectively, with independent differentials. Then, if
+				\begin{gather*}
+					\tau_U:\tilde{U}_Y\rightarrow U\qquad \tau_V:\tilde{V}_Y\rightarrow V
+				\end{gather*}
+				are blowups of $U$ and $V$ along $U\cap V$ and $V\cap Y$ respectively, there exists a natural isomorphism
+				\begin{gather*}
+					\phi_{UV}:\tau_U^{-1}(U\cap V)\cong \tau_V^{-1}(U\cap V)
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Blow-Ups on Manifolds}
+				\begin{Def}
+					内容...
+				\end{Def}
+				\subsubsection{K\"{a}hler Manifold}
+			\subsection{Line Bundles}
+		\section{Fubini-Study Metric}
+	\chapter{Kahler Manifolds}
+		\section{Definitions}
+			\subsection{Kähler Conditions}
+		\section{Kähler Metrics}
+			\subsection{Definition and Basic Properties}
+			\subsection{Hermitian and Kähler Metrics}
+			\subsection{Basic Properties}
+		\section{Characterization of Kähler Metrics}
+		\section{Kähler Metrics and Connections}
+			\subsection{Metrics}
+			\subsubsection{Complexification}
+				
+				(More Details in LA.)
+				
+				Let $V\in Vect_\RR,W:=Hom(V,R)$, then
+				\begin{gather*}
+					W_\CC:=Hom_\RR(V,\CC)
+				\end{gather*}
+				
+				There exists decomposition
+				\begin{gather*}
+					W_\CC=W^{1,0}\oplus W^{0,1}
+				\end{gather*}
+				
+				And $W_\RR^{1,1}:=W^{1,1}\cap \wedge^2 W_\RR$, we then have
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{Def}
+					内容...
+				\end{Def}
+			\subsubsection{Hermitian and K\"{a}hler Metrics}
+			\subsection{Characterisation of K\"{a}hler Metrics}
+				\subsubsection{Connections}
+					\begin{Def}
+						Recall: A \textbf{connection} on a real differentiable vector bundle $E$ of rank $k$ and class $C^\infty$, which makes it possible to differentiate the sections of $E$. i.e. an $\RR$-linear map
+						\begin{gather*}
+							\nabla:\mathcal{C}^\infty(E)\rightarrow A^1(E)
+						\end{gather*}
+						where $A^1(E)$ is the space of the $\mathcal{C}^\infty$ sections of the bundle
+						\begin{gather*}
+							\Omega_{X,\RR}\otimes E=Hom(T_X,E)
+						\end{gather*}
+					\end{Def}
+					
+					\begin{proposition}
+						If $(M,g)$ is a Riemannian manifold, there exist a \textbf{unique connection}
+						\begin{gather*}
+							内容...
+						\end{gather*}
+						on the tangent bundle $T_M$ satisfying the properties:
+						\begin{itemize}
+							\item $\nabla$ is compatible with $g$;
+							\item $\nabla$ is without torsion, satisfies
+							\begin{gather*}
+								内容...
+							\end{gather*}
+						\end{itemize}
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+	\chapter{Vector Bundles}
+		\section{Holomorphic Vector Bundle}
+		\section{Divisor}	
+			\subsection{Analytic Hypersurface Case}
+				Take the following notion: For hypersurface $H\subseteq U$, the family of functions
+				\begin{gather*}
+					\{f\in \mathcal{O}_n(V)|V\in Open(\CC^n),V\cap H=V(f)\}
+				\end{gather*}
+				Such function $f$ is called \textbf{local definition function} for $V$ near $p$.And this is \underline{unique up to} by multiplicating a nonzero functons at $p$.
+				\begin{Def}
+					If $V$ has the irreducible decomposition by analytic hypersurfaces
+					\begin{gather*}
+						V=\cup_{i=1}^k V_i
+					\end{gather*}
+					A \textbf{divisor} $D$ on $M$ is a locally finite formal linear combination 
+					\begin{gather*}
+						D=\sum a_i\cdot V_i
+					\end{gather*}
+					
+					Local finite: For any $p\in M$, there exists a neighborhood of $p$ meeting only a finite number of the $V_i$'s appearing in $D$.
+					\begin{gather*}
+						\#\{V_i|V_i\mbox{ appears in }D,p\in V_i\}<\infty
+					\end{gather*}
+				\end{Def}
+				\subsubsection{Effective Divisor}
+				\begin{Def}
+					Especially, a divisor $D=\sum a_i V_i$ is called \textbf{effective} if
+					\begin{gather*}
+						a_i\geq 0
+					\end{gather*}
+					Take the following notion
+					\begin{gather*}
+						内容...
+					\end{gather*}
+				\end{Def}
+				\subsubsection{Order}
+				\begin{Def}
+					内容...
+				\end{Def}
+				\begin{proposition}
+					There exists a natural isomorphism
+					\begin{gather*}
+						内容...
+					\end{gather*}
+				\end{proposition}
+				\subsubsection{Divisor of Meromorphic Function}
+			\subsection{Line Bundle}
+				\subsubsection{Bertini's Theorem}
+					\begin{theorem}
+						(Bertini, Complex Geometry Version) The \underline{generic element} of a linear system is smooth away from the \underline{base locus of the system}.
+					\end{theorem}
+					\begin{proof}
+						内容...
+					\end{proof}
+				\subsubsection{Chern Classes of Line Bundles}
+		\section{Vanishing Theorems, and Corollaries}
+			\subsubsection{The Kodaira Vanishing Theorem}
+			
+		\section{Algebraic Varieties}
+			\subsection{Analytic and Algebraic Varieties}
+			\subsection{Degree of Varieties}
+			\subsection{Tangent Space to Algebraic Varieties}
+		\section{The Kodaira Embedding Theorem}
+		\section{Grassmmanians}
+	\chapter{The Topology of Algebraic Varieties}
+	\chapter{Algebraic Cycles}
+	\chapter{Riemann Surfaces, and Algebraic Curves}
+		Given in 'Riemann Surface'
+	\chapter{Surfaces}
+	\chapter{Residues}
+	\chapter{The Quadric Line Complex}
+	\chapter{The Hodge Decomposition}
+	\chapter{Variantions of Hodge Structure	}
+	\chapter{Cohomology}
+		\section{Dolbeault-Cohomology}
+\end{document}

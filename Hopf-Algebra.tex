@@ -1,0 +1,172 @@
+\documentclass[Total.tex]{subfiles}
+\begin{document}
+	\chapter{Coalgebras}
+		\section{(Associative) Algebras, and Coalgebras}
+		\subsection{Review:Algebras}
+		\begin{Def}
+			An (associative) algebra is a triple $(A,m,\eta)$ with:
+			\begin{itemize}
+				\item $A$ is $k$-vector space;
+				\item Operation $m:A\otimes_k A\rightarrow A$; Bilinear.
+				\item Operation $\eta:k\rightarrow A$ which is linear.
+			\end{itemize}
+			
+			And we have
+			\begin{center}
+				\begin{tikzcd}
+					A\otimes A\otimes A\arrow[r,"\cong"] &(A\otimes A)\otimes A\arrow[r,"m\otimes id_A"]&A\otimes A\arrow[r,"m"]&A\\
+					&&=\\
+					A\otimes A\otimes A\arrow[r,"\cong"]&A\otimes (A\otimes A)\arrow[r,"id_A\otimes m"] &A\otimes A\arrow[r,"m"]& A
+				\end{tikzcd}
+			\end{center}
+			
+			And the composition
+			\begin{center}
+				\begin{tikzcd}
+					A\cong k\otimes A\arrow[r,"\eta\otimes id_A"]& A\otimes A\arrow[r,"m"]&A\\
+					A\cong A\otimes k\arrow[r,"id_A\otimes \eta"]&A\otimes A\arrow[r,"m"]&A
+				\end{tikzcd}
+			\end{center}
+			
+			are identity. i.e.
+			\begin{gather*}
+				m\circ (m\otimes id_A)=m\circ (id_A\otimes m)\\
+				m\circ (\eta\otimes id_A)=m\circ (id_A\otimes \eta)
+			\end{gather*}
+		\end{Def}
+		\subsection{Opposite Algebras}
+		\begin{Def}
+			Let $(A,m,\eta)$ be an algebra over $k$. The algebra
+			\begin{gather*}
+				(A,m^{op},\eta)
+			\end{gather*}
+			
+			is the \textbf{opposite algebra}.
+			
+			By defition, the product $m^{op}$ is defined as $a\bullet b:=b\cdot a$.
+		\end{Def}
+		
+		Thus
+		\begin{Def}
+			An algebra is \textbf{commutative} iff $m^{op}=m$.
+		\end{Def}
+		\subsection{Coalgebras}
+			\begin{Def}
+				Take the following notions: Given algebra $(A,m,\eta)$, then the coalgebras $(C,\Delta, \epsilon)$,
+				\begin{center}
+					\begin{tikzcd}
+						C\arrow[r,"\Delta"]&C\otimes C\arrow[r]\arrow[r,"\Delta \otimes id_C"]&(C\otimes C)\otimes C\simeq C\otimes C\otimes C\\
+						C\arrow[r,"\Delta"]&C\otimes C\arrow[r,"id_C\otimes \Delta "]& C\otimes (C\otimes C)\simeq C\otimes C\otimes C
+					\end{tikzcd}
+				\end{center}
+				
+				And requiring
+				\begin{center}
+					\begin{tikzcd}
+						C\arrow[r,"\Delta"]&C\otimes C\arrow[r,"\epsilon\otimes id_C"]&k\otimes C\simeq C\\
+						C\arrow[r,"\Delta"]&C\otimes C\arrow[r,"Id_C\otimes \epsilon"]&C\otimes k\simeq C
+					\end{tikzcd}
+				\end{center}
+				
+				be the identity map $I_C$. i.e.
+				\begin{gather*}
+					(\Delta\otimes Id_C)\circ \Delta=(Id_C\otimes \Delta)\circ \Delta\\
+					(\epsilon\otimes I_C)\circ \Delta=I_C=(I_C\otimes \epsilon)\circ \Delta
+				\end{gather*}
+			\end{Def}
+			
+			\begin{Def}
+				(Opposite Coalgebra)
+			\end{Def}
+			
+			\begin{Def}
+				(Commutative Coalgebra)
+			\end{Def}
+			\subsubsection{Sweedler's Notation}
+			\begin{Def}
+				Let $c\in C$, then $\Delta(c)\in C\times C$ could be denoted as a symbolic sum: Suppose $\Delta(c)=\sum_{i=1}^n a_i\otimes b_i$
+				
+				\begin{gather*}
+					\Delta(c):=\sum_{(c)} c_{(1)}\otimes c_{(2)} \qquad\mbox{(Heymann-Sweedler)}
+				\end{gather*}
+				
+				Then, the action on the first item:(For exampke)
+				\begin{gather*}
+					()\Delta(c)
+				\end{gather*}
+			\end{Def}
+			
+			\subsubsection{Subspace of Coalgebras}
+			
+			\subsubsection{Simple Coalgebras}
+			
+			\subsubsection{Grouplinke Coalgebra}
+				\begin{Def}
+					内容...
+				\end{Def}
+			\subsubsection{Coalgebra-Map}
+			\subsubsection{Coideals of a Coalgebra,Quotient of Coalgebra}
+			\begin{Def}
+				内容...
+			\end{Def}
+			\subsubsection{The Fundamental Theorem of Coalgebras}
+		\subsection{Comatrix Coalgebra}
+		\section{The Dual Algebras/Coalgebras}
+		\section{Double Duals}
+		\section{Wedge Product}
+		\section{Cofree Coalgebra on a Vector Space}
+	\chapter{Representation of Coalgebras}
+		\section{Rational Modules of the Dual Algebra}
+		\section{Comodules}
+		\section{title}
+	\chapter{Co-Radical Filtration and Related Structures}
+	\chapter{Bialgebras}
+		\begin{Def}
+			内容...
+		\end{Def}
+	\chapter{The Convolution Algebras}
+		\begin{lemma}
+			Let $A$ be a vector space over $k$. With:
+			\begin{itemize}
+				\item Algebra structure $(A,m,\eta)$;
+				\item Coalgebra structure $(A,\Delta,\epsilon)$.
+				
+				Give $A\otimes A$ the tensor product algebra, and coalgebra structures, then the following are equivalent:
+				\begin{itemize}
+					\item 
+					\item 
+				\end{itemize}
+			\end{itemize}
+		\end{lemma}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{Def}
+			Define: The \textbf{bialgebra} over the field, or a \textbf{$k$-bialgebra}, is a turple
+			\begin{gather*}
+				(A,m,\eta,\Delta,\epsilon)
+			\end{gather*}
+			where:
+			\begin{itemize}
+				\item 
+				\item 
+			\end{itemize}
+		\end{Def}
+	\chapter{Hopf Algebras}
+		\section{Definition}
+			\begin{Def}
+				Define:
+			\end{Def}
+			
+			\begin{example}
+				Group Algebra $K[G]$: Suppose $G$ be a group. Then, consider $K[G]$ with following structures:
+				\begin{itemize}
+					\item $m:(g,h)\mapsto gh$; 
+					\item $u:K\ni 1\mapsto 1_G$;
+					\item $\Delta:g\mapsto g\otimes g$;(the )
+					\item $\epsilon(g):=1_K$; (Counit)
+					\item $S:g\mapsto g^{-1}$; (Antipode)
+				\end{itemize}
+			\end{example}
+\end{document}

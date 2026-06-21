@@ -1,0 +1,104 @@
+\documentclass[Total.tex]{subfiles}
+
+\begin{document}
+	\chapter{Einf}
+		\begin{itemize}
+			\item (1-Dimensional)
+			\item (Wave)
+			 \item (Heat Core)
+			\item (Schr\"odinger)
+			\item (Burger's Equation)
+			\item (Minimal Area)
+			\item (Navier-Strokes' Equation )
+			\begin{itemize}
+				\item ($\mu\not=0$)
+				\item ($\mu=0$,Euler Equation) 
+				\begin{gather*}
+				\end{gather*}
+			\end{itemize}
+			\item (Korteweg–De Vries (KdV) equation)
+		\end{itemize}
+		\section{Warmeleitung Problem}
+			Given:
+			\begin{itemize}
+				\item Region $\Omega\subseteq \RR^3$;
+				\item Masse $u:\Omega\times I\rightarrow \RR$
+				\item Flussschade $j:\Omega\times [0,T]\rightarrow \RR^3$;
+			\end{itemize}
+			Prinzip
+			\begin{itemize}
+				\item $\forall x\in \Omega,$
+				\begin{gather*}
+					\frac{d}{dt}\int_{B_r(x)} u(-,t)dy=-\int_{\partial B_r(x)} j\cdot v dS+\int_{B_r(x)} f(-.t)dy\\
+					\Rightarrow \int_{B_r(x)} (\partial_t u+div (j)-f)dy=0\\
+					\Rightarrow \partial_t u+div(j)+f=0
+				\end{gather*}
+				Especially, $u$ const$\Rightarrow $ 
+			\end{itemize}
+		\section{Harmonic Equations}
+			\begin{Def}
+				$\Omega\subseteq \RR^n$ open. $u\in C^2(\Omega)$. $u$ is harmonic$\Leftrightarrow -\Delta u=0$ 
+			\end{Def}
+			\begin{example}
+				\begin{itemize}
+					\item $u(x)=Ax+b$;
+					\item Quadrics $A\in \RR^{n\times n},u(x):=xAx^T=\sum_{i,j=1}^n x_i a_{ij}x_j\Rightarrow D^2u=A,\Delta u=tr(d^2 u)=tr(A)$,so $u$ is harmonic$\Leftrightarrow tr(A)=0$;
+					\item Variables $n=2$, $u(x_1,x_2)=f(x_1)g(x_2)$,
+					\begin{gather*}
+						\Delta u=
+					\end{gather*}
+					\item Holomorpihc Function $\Omega\subseteq \CC$, harmonic$\Leftrightarrow u,v$ harmonic.
+					\begin{gather*}
+						\Delta f=\Delta u+i\Delta v
+					\end{gather*}
+				\end{itemize}
+			\end{example}
+		\section{Approxiamation through Convolution}
+			\begin{Def}
+				$f,g:\RR^n\rightarrow \RR$,
+				\begin{gather*}
+					(f*g)(x):=\int_{\RR^n} f(y-x)g(x)
+				\end{gather*}
+			\end{Def}
+			\begin{lemma}
+				(Convolution Approxiamation) $f\in L^p(\RR),1\leq p\leq \infty,g\in $
+			\end{lemma}
+			\begin{proof}
+				\begin{itemize}
+					\item $p=1$:
+					\item $p=\infty$:
+					\item $p\in (1,\infty)$:
+				\end{itemize}
+			\end{proof}
+			
+			\begin{lemma}
+				$f\in L^1(\RR^n),f=0$ in $\RR^n$ or $B$ for 
+				\begin{gather*}
+					g\in L^1_\infty(\RR^n)\Rightarrow f*g\in 
+				\end{gather*}
+				If 
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{lemma}
+				Suppose $(\eta)$ satandard Dirac-sequence, then
+				\begin{gather*}
+					内容...
+				\end{gather*}
+			\end{lemma}
+		\section{Regularity}
+			\begin{lemma}
+				Given a mollification $\eta$, $\eta_r(x):=r^{-n}\eta(\frac{分子}{分母})$ $u\in C^2(\Omega)$ and $u(x)=\oint_\partial BdS\Rightarrow u(x)=(u*\eta_r)(x),\forall \bar{B}_r(x)\subseteq \Omega$
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\begin{proposition}
+				$\Omega\subseteq \RR^n$ open, $U\in C^0(\Omega)$. If $u(x)=\int_{B_r(x)} udy$, then $u\in C^\infty(\Omega),\Delta u=0$.			
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+\end{document}

@@ -1,0 +1,3777 @@
+\documentclass[Total.tex]{subfiles}
+
+\begin{document}
+	\tableofcontents
+	\chapter{Projective and Injective Modules, Free Modules}
+		\section{Free Modules}
+			\begin{Def}
+				
+			\end{Def}
+			\subsubsection{Universal Properties}
+			\begin{proposition}
+				Suppose $R$ be a ring, $M$ be $R$-Mod and $I\in {\mathcal Set}$ be index, then we have a correspondence
+				\begin{gather*}
+					Hom_{Mod-R}(R^{\oplus I},M)\simeq Hom_{Set}(I,M)
+				\end{gather*} 
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+		\section{Projective Modules}
+			\begin{Def}
+				An object $P$ of a category $C$ is a \textbf{projective object} if it has the \textbf{left lifting property} against epimorphisms. 
+				
+				This means, that $P$ is projective if for any morphism $f:P\rightarrow B$ and any epimorphism $q:A\rightarrow B$, $f$ factors through
+				\begin{center}
+					\begin{tikzcd}
+						&A\arrow[d,"\forall q\in Epi"]\\
+						P\arrow[r,"\forall f"]\arrow[ru,"\exists",dashrightarrow]&B
+					\end{tikzcd}
+				\end{center}
+			\end{Def}
+			An equivalent way to say to say this is that
+			\begin{Def}
+				An object $P$ is projective precisely if the $hom-functor$ $Hom(P,-)$ preserves epimorphisms.
+			\end{Def}
+			
+			With property of epimorphism, $P\rightarrow A$ is unique up to isomorphism.
+			
+			\begin{proposition}
+				The followings are equivalent in $\mathcal Set$:
+				\begin{itemize}
+					\item Every object is projective;
+					\item The axiom of choice holds.
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				$\Rightarrow$ In ZF, $AC\Leftrightarrow$ Every surjection $f:A\xrightarrow B$ has a section structure
+				\begin{gather*}
+					g\circ f=id_A
+				\end{gather*} 
+				We take $f=id_B,P=B$.
+				
+				$\Leftarrow$ If $AC$ holds, then we could give a function $P\rightarrow A$. Now we associate $f^{-1}(b)$ with $\bar{b}\in f^{-1}(b)$ by AC. Thus we could select $g:P\rightarrow \{\bar{b}|b\in B\}$ such that $f(x)=q(g(b))$.
+				\begin{center}
+					\begin{tikzcd}
+						&C\arrow[d,"\subseteq"]\\
+						&A\arrow[d,"q"]\\
+						P\arrow[ruu,dashrightarrow]\arrow[ru,dashrightarrow]\arrow[r,"f"]&B
+					\end{tikzcd}
+				\end{center}
+			\end{proof}
+			
+			\textbf{Remark} If we replace categorey of sets by another base topolos will behave essentially precisely like set, but in general will not validate the axiom of choice. 
+			
+			Homological algebra in such a more general context is abelian sheaves, and the theory is the theory of cohomology of abelian sheaf.
+			
+			A main task is the resolution of $R$-mod.
+			
+			\textbf{Remark} Although mostly, we have a forgetful functor $\mathcal{F}\rightarrow Sets$, but the functor is not full, so not preverse the functions. 
+			\begin{Def}
+				The \textbf{projetive module} over $R$ is the projective objects in $R-Mod$.
+			\end{Def}
+			\begin{proposition}
+				\label{Homological-Algebra-Projective-Injective-Modules-Equivalent-Definition-of-Projective-Modules}
+				The following properties are equivalent:
+				
+				\begin{itemize}
+					\item $P$ is projective module;
+					\item If $g:B\rightarrow C$ is surjective, then
+					\begin{gather*}
+						g_*:Hom(P,B)\rightarrow Hom(P,C) 
+					\end{gather*}
+					is also surjective;
+					\item For short exact sequence \begin{tikzcd}
+						0\arrow[r]&A\arrow[r]&B\arrow[r]&C\arrow[r]&0
+					\end{tikzcd}
+					Then, 
+					\begin{center}
+						\begin{tikzcd}
+							0\arrow[r]&Hom_R(P,A)\arrow[r]&Hom(P,B)\arrow[r]&Hom(P,C)\arrow[r]&0
+						\end{tikzcd}
+					\end{center}
+					is exact;
+					\item Short exact sequence $0\rightarrow P\rightarrow F\rightarrow V\rightarrow 0$ is split exact;
+					\item $P$ is a direct item of free modules, i.e. there exist some $V$ such that
+					\begin{gather*}
+						F=P\oplus V
+					\end{gather*}
+					where $F$ is free.
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				\begin{itemize}
+					\item (2)$\Leftrightarrow$ (3)$\Leftrightarrow$ (4) By the discussion of exact sequence
+					\item (3)$\Leftrightarrow$ (4) By the discussion of exact sequence.
+					\item (1)$\Leftrightarrow$ (4) Consider the diagram
+					\begin{center}
+						\begin{tikzcd}
+							&&A\arrow[d,twoheadrightarrow]\\
+							F=P\oplus V\arrow[rr,dashrightarrow,bend right=20]\arrow[rru,dashrightarrow,"Epi\Rightarrow \exists p "]&P\arrow[r]\arrow[l,"\iota"]\arrow[ru,"p|P"]&B
+						\end{tikzcd}
+					\end{center}
+				\end{itemize}
+			\end{proof}
+			
+			
+			\begin{proposition}
+				Suppose $P$ be a finite projective $R$-module. Then, there exists finite free module $F$, and finite module $Q$ such that
+				\begin{gather*}
+					F=P\oplus V
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				$\Leftarrow$
+				
+				$\Rightarrow$ Consider the generators of $P$.
+			\end{proof}
+			\subsubsection{Flatness of Projective Module}
+			
+			\begin{proposition}
+				Every projective module is flat.
+			\end{proposition}
+			\begin{proof}
+				Conisder the alternative definition
+			\end{proof}
+			\subsubsection{Free Modules are Projective}
+			\begin{proposition}
+				Let $R$ be a ring.Every free $R$-module is projective.
+			\end{proposition}
+			\begin{proof}
+				Consider diagram
+				\begin{center}
+					\begin{tikzcd}
+						内容...
+					\end{tikzcd}
+				\end{center}
+			\end{proof}
+			\subsection{Sum}
+			\begin{lemma}
+				内容...
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				(Criterion of Projective Property for Sum) Suppose $P=\sum P_i$, then
+				\begin{center}
+					$P$ is projective $\Leftrightarrow$ $P_i$ is projective.
+				\end{center}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{corollary}
+				The direct sum of projective modules is projective.
+			\end{corollary}
+			\begin{proof}
+				Omitted.
+			\end{proof}
+			\subsection{Tensor}
+			\begin{proposition}
+				\begin{itemize}
+					\item Suppose $P$ be a projective right $R$-module, then: $P\otimes_R-:{}_R M\rightarrow Ab$ is an exact functor.
+					\item Similarly for $M_R$.
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\subsubsection{Flatness}
+				\begin{Def} Let $R$ be a ring:
+					\begin{itemize}
+						\item (Flat) $R$-module is \textbf{flat} if $N_1\rightarrow N_2\rightarrow N_3$ is exact$\Rightarrow M\otimes_R N_1\rightarrow M\otimes_R N_2\rightarrow M\otimes_R N_3$ is exact;
+						\item (Faithfully Flat) Instead of $\Rightarrow$ by $\Leftrightarrow$;
+						\item $R\rightarrow S$ is \textbf{flat/faithfully flat} if $S$ is flat/faithfully flat module over $R$;
+					\end{itemize}
+				\end{Def}
+				
+				
+				\begin{lemma}
+					Let $R$ be a ring, $I,J\subseteq R$ be ideals. Let $M$ be a flat $R$-module. Then
+					\begin{gather*}
+						IM\cap JM=(I\cap J) M
+					\end{gather*}
+				\end{lemma}
+				\begin{proof}
+					Consider the exact sequence
+					\begin{gather*}
+						0\rightarrow I\cap J\rightarrow R\rightarrow R/I\oplus R/J\qquad\mbox{Iso III}
+					\end{gather*}
+					
+					Tensoring with the flat module $M$, we obtain an exact sequence
+					\begin{gather*}
+						0\rightarrow(I\cap J)\otimes_R M\rightarrow M\rightarrow M/IM\oplus M/JM
+					\end{gather*}
+					
+					We have
+					\begin{gather*}
+						(I\cap J)M=Ker(M\rightarrow M/IM\oplus M/JM)=IM\cap JM
+					\end{gather*}
+					
+					By the definition of morphism.
+				\end{proof}
+				
+				\begin{lemma}
+					Let $R$ be a ring, let $\{M_i,\varphi_{ii'}\}$ be a directed system of flat $R$-modules. Then
+					\begin{gather*}
+						colim_i M_i
+					\end{gather*}
+					
+					is a flat $R$-module.
+				\end{lemma}
+				\begin{proof}
+					Firstly: $\otimes$ commutes with colimits;
+					
+					secondly: directed colimits are exact.
+					
+					Thus
+					\begin{gather*}
+						0\rightarrow A\rightarrow B\rightarrow C\rightarrow 0\Rightarrow 0\rightarrow colim_i M_i\otimes A\rightarrow colim_i M_i\otimes B\rightarrow colim_i M_i\otimes C\rightarrow 0
+					\end{gather*}
+				\end{proof}
+				
+				\begin{lemma}
+					The composition of (faithfully) flat ring maps is (faithfully) flat.
+					
+					If $R\rightarrow R'$ is (faithfully) flat, and $M'$ is a (faithfully) flat $R'$-module, then $M'$ is a (faithfully) flat $R$-module.
+				\end{lemma}
+				\begin{proof}
+					\begin{itemize}
+						\item Consider
+						\begin{gather*}
+							N_1\rightarrow N_2\rightarrow N_3
+						\end{gather*}
+						
+						an exact complex of $R$-module. Then
+						\begin{gather*}
+							R'\otimes_R N_1\rightarrow R'\otimes_R N_2\rightarrow R'\otimes_R N_3
+						\end{gather*}
+						
+						Furthermore
+						\begin{gather*}
+							M'\otimes_{R'}(R'\otimes_R N_1)\rightarrow M'\otimes_{R'}(R'\otimes_R N_2)\rightarrow M'\otimes_{R'}(R'\otimes_r N_3)
+						\end{gather*}
+						
+						And we have
+						\begin{gather*}
+							M'\otimes_{R'}(R'\otimes_R N)\cong (M'\otimes_{R'} R')\otimes_R N=M'\otimes_R N
+						\end{gather*}
+						\item Omitted.
+					\end{itemize}
+				\end{proof}
+				
+				\begin{lemma}
+					Let $M$ be an $R$-module. The following are equivalent:
+					\begin{itemize}
+						\item $M$ is flat over $R$;
+						\item For every injection of $R$-modules $N\subseteq N'$ the map
+						\begin{gather*}
+							N\otimes_R M\rightarrow N'\otimes_R M
+						\end{gather*}
+						
+						is injective.
+						\item for every ideal $I\subseteq R$, the map
+						\begin{gather*}
+							I\otimes_R M\rightarrow R\otimes_R M=M
+						\end{gather*}
+						
+						is injective;
+						\item For every finitely generated ideal $I\subseteq R$, the map
+						\begin{gather*}
+							I\otimes_R M\rightarrow R\otimes_R M=M
+						\end{gather*}
+						
+						is injective.
+					\end{itemize}
+				\end{lemma}
+				\begin{proof}
+					\begin{itemize}
+						\item (1)$\Rightarrow$ (2) By definition;
+						\item (2)$\Rightarrow$ (3) We take $I,R$ as $R$-module.
+						\item (3)$\Rightarrow$ (4) Trivial;
+						\item (4)$\Rightarrow$ (1) 
+					\end{itemize}
+				\end{proof}
+				
+				\subsubsection{Directed Limit}
+				\begin{lemma}
+					Let $\{R_i,\varphi_{ii'}\}$ be a system of rings over the directed set $I$. Let
+					\begin{gather*}
+						R=colim_i R_i
+					\end{gather*}
+					\begin{itemize}
+						\item If $M$ is an $R$-module such that $M$ is \textbf{flat} as an $R_i$-module for all $i$. Then, $M$ is flat as an $R$-module;
+						\item For $i\in I$, let $M_i$ be a flat $R_i$-moudle, and $i'\geq i$ and let $f_{ii'}:M_i\rightarrow M_{i'}$ be a $\varphi_{ii'}$-linear map such that
+						\begin{gather*}
+							f_{i'i''}\circ f_{ii'}=f_{ii''}
+						\end{gather*}
+						
+						Then, $M=colim_{i\in I} M_i$ is a flat $R$-module.
+					\end{itemize}
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{lemma}
+					Suppose that $M$ is (faithfully) flat over $R$, and $R\rightarrow R'$ is a ring map. Then
+					\begin{gather*}
+						M\otimes_R R'
+					\end{gather*}
+					
+					is (faithfully) flat over $R'$.
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{lemma}
+					Suppose that $R\rightarrow R'$ be a faithfuly flat ring map, $M$ be a module over $R$. Now, we set
+					\begin{gather*}
+						M'=S'\otimes_S M
+					\end{gather*}
+					\begin{itemize}
+						\item 
+						\item 
+					\end{itemize}
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\subsubsection{Via (faithfully) Flat over $R'$}
+				\begin{lemma}
+					Suppose that $M$ is \underline{(faithfully) flat} over $R$, $R\rightarrow R'$ is a ring map. Then
+					\begin{gather*}
+						M\otimes_R R'
+					\end{gather*}
+					
+					is \textbf{(faithfully) flat over $R'$}.
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{lemma}
+					Let $R\rightarrow R'$ be a \underline{faithfully flat} ring map. Let $M$ be flat over $R$ iff $M'$ is flat over $R$.
+				\end{lemma}
+				\begin{proof}
+					
+				\end{proof}
+				
+				\begin{lemma}
+					Let $R$ be a ring, $S\rightarrow S'$ be a flat map of $R$-algebras. Let $M$ be a module oveer $S$. Set
+					\begin{gather*}
+						M'=S'\otimes_S M
+					\end{gather*}
+					\begin{itemize}
+						\item 
+						\item 
+					\end{itemize}
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\subsubsection{Equational Criterion of Flatness}
+				\begin{lemma}
+					A module $M$ over $R$ is \textbf{flat} iff every relation in $M$ is trivial.
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\subsubsection{Flatness of Items in Exact Sequence}
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\subsubsection{Localization}
+				\subsubsection{Directed System of Faitfully Flat Algebras}	
+				\begin{proposition}
+					Let $R$ be a ring, let $\{S_i,\varphi_{ii'}\}$ be a directed system of faifully flat $R$-algebras. Then
+					\begin{gather*}
+						S=colim_i S_i
+					\end{gather*}
+					
+					is a faithfully flat $R$-algebra.
+				\end{proposition}
+				\begin{proof}
+					
+				\end{proof}
+			\subsection{Projective Basis Theorem}
+				\begin{theorem}
+					Let $R$ be a ring, $P$ is an $R$-module. The followings are equivalent:
+					\begin{itemize}
+						\item $P$ is finitely generated projective module;
+						\item Existence of projective basis: There exists a family of elements $\{x_i\}_{i=1}^n\subseteq P$, with a set of homomorphsims $\{\phi_i\}_{i=1}^n Hom_R(P,R)$, where $\phi_i$ is linear! and for all $x\in P$,
+						\begin{gather*}
+							x=\sum \phi_i(x)x_i
+						\end{gather*}
+					\end{itemize}
+				\end{theorem}
+				\begin{proof}
+					$\Rightarrow$ Suppose $P$ is projecive, then $P\oplus Q=(R)^n$. Then, there exists:
+					\begin{gather*}
+						i:P\rightarrow R^n\qquad p:R^n\rightarrow P
+					\end{gather*}
+					
+					such that $p\circ i=id_P$. Then, $x=p(i(x))=\sum a_j(x)p(e_j)$.
+					
+					$\Leftarrow$ Suppose there exists such basis, then define
+					\begin{gather*}
+						\psi:P\rightarrow R^n\qquad x\mapsto (\phi_1(x),\dots,\phi_n(x))\\
+						\theta:R^n\rightarrow P\qquad (a_1,\dots,a_n)\mapsto \sum a_ix_i\\
+						\Rightarrow (\theta\circ \psi)(x)=x
+					\end{gather*}
+				\end{proof}
+				
+				\textbf{Note: Flatness}
+				
+				\textbf{Note: Serre-Swan}
+			\subsection{Projective Resolution}
+				\begin{Def}
+					Let $M$ be $R$-module, then a \textbf{left resolution} is a complex $P_i=0,i<0$ with a map $\epsilon:P_0\rightarrow M$ and the complex
+					\begin{gather*}
+						\dots\rightarrow P_1\rightarrow P_0\rightarrow M\rightarrow 0
+					\end{gather*}
+					is exact. An resolution is \textbf{projective} iff $P_i$ is projective.
+				\end{Def}
+				
+				\begin{proposition}
+					Every $R$-module $M$ has a projective resolution.
+					
+					More generally, if an abelian category $\mathcal{A}$ has enough projectives, then every object $M$ in $\mathcal{A}$ has a projective resolution.
+				\end{proposition}
+				\begin{proof}
+					Consider the following constructions: By selecting $M_{i-1}:=ker(P_i\rightarrow P_{i-1})$ with new projective resolution $P_{i+1}\rightarrow M_i$. Now consider the compose 
+					\begin{gather*}
+						P_{i+1}\rightarrow M_i\rightarrow P_i
+					\end{gather*}
+					\begin{center}
+						\begin{tikzcd}
+							P_1\arrow[rr]\arrow[rd]&&P_0\arrow[r]&M\arrow[r]&0\\
+							&M_0\arrow[rd]\arrow[ru]\\
+							0\arrow[ru]&&0
+						\end{tikzcd}
+					\end{center}
+					
+					And $P_{n+2}$ is projective. Thus 
+					
+					
+					
+				\end{proof}
+				
+				\subsubsection{Comparision Theorem/ Homological Algebra's Fundamental Theorem}
+				\begin{theorem}
+					Let $P\stackrel{\epsilon}{\rightarrow} M$ be a projective resolution of $M$ and $f':M\rightarrow N$ be a map in $\mathcal{A}$. Then, for every resolution $Q\stackrel{\eta}{\rightarrow} N$ there is a chain map $f:P\rightarrow Q$ lifting $f'$ in the sense of
+					\begin{gather*}
+						\eta\circ f_0=f'\circ\epsilon
+					\end{gather*}
+					\begin{center}
+						\begin{tikzcd}
+							\dots\arrow[r]&P_1\arrow[r]\arrow[d,dashrightarrow]&P_0\arrow[r,"\epsilon"]\arrow[d,dashrightarrow,"f_0"]&M\arrow[r]\arrow[d,"f'"]&0\\
+							\dots\arrow[r]&Q_1\arrow[r]&Q_0\arrow[r,"\eta"]&N\arrow[r]&0
+						\end{tikzcd}
+					\end{center}
+					
+					Moreover, such $f$ is unique up to \textbf{chain homotopy}.
+				\end{theorem}
+				\begin{proof}
+					The prove the existence of such chain $P$ by induction:
+					
+					Basis Step: Consider the following square
+					\begin{center}
+						\begin{tikzcd}
+							P_0\arrow[r,"\epsilon"]\arrow[d,dashrightarrow,"f_0"]&M\arrow[d,"f'"]\\
+							Q_0\arrow[r,"\eta"]&N
+						\end{tikzcd}
+					\end{center}
+					
+					$\epsilon$ and $\eta$ are epi. So the triangle \begin{center}
+						\begin{tikzcd}
+							&Q_0\arrow[d,"\eta"]\\
+							P_0\arrow[r,"f\circ \epsilon "]\arrow[ru,dashrightarrow]&N
+						\end{tikzcd}
+					\end{center}
+					
+					Induction Step: Consider
+					\begin{center}
+						\begin{tikzcd}
+							P_{n+2}\arrow[r]\arrow[d,dashrightarrow,"f_{n+2}"]&P_{n+1}\arrow[r]\arrow[d,"f_{n+1}"]&P_n\arrow[d,"f_n"]\\
+							Q_{n+2}\arrow[r]&Q_{n+1}\arrow[r]&Q_n
+						\end{tikzcd}
+					\end{center}
+					
+					We use diagram chasing: Consider $p\in P_{n+2}$, given a $f_{n+2}$ such that
+					\begin{gather*}
+						d_{n+2}\circ f_{n+2}=f_{n+1}\circ d_{n+1}
+					\end{gather*}
+					
+					Notice that $Im(f_{n+1}\circ d_{n+2})\subseteq Ker(d_{n+1})=Im(d_{n+2})$. Thus we have the following triangle
+					\begin{center}
+						\begin{tikzcd}
+								&Q_{n+2}\arrow[d]\\
+							P_{n+2}\arrow[ru,dashrightarrow,"f_{n+2}"]\arrow[r]&Im(d_{n+2})
+						\end{tikzcd}
+					\end{center}
+				\end{proof}
+				\subsubsection{Horseshow Lemma}
+				\begin{theorem}
+					Suppose given a commutative diagram
+					\begin{center}
+						\begin{tikzcd}[cramped,sep=small]
+							&&&0\arrow[d]\\
+							\dots P_2'\arrow[r,"P_2"]&P_1'\arrow[r]&P_0'\arrow[r]&A'\arrow[r]\arrow[d]&0\\
+							&&&A\arrow[d]\\
+							\dots P_2'\arrow[r]&P_1'\arrow[r]&P_0'\arrow[r]&A'\arrow[r]\arrow[d]&0\\
+							&&&0
+						\end{tikzcd}
+					\end{center}
+					where the column is exact and the row are projective resolutions. Then, set 
+					\begin{gather*}
+						P_n:=P_n'\oplus P_n''
+					\end{gather*}
+					The right hands column lift an exact sequence of complexes
+					\begin{gather*}
+						0\rightarrow P'\stackrel{i}{\rightarrow}P\stackrel{\pi}{\rightarrow} P''\rightarrow0
+					\end{gather*}
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Projective Module over PID}
+				\begin{proposition}
+					If a ring $R$ is a PID,(especially, $R=\ZZ$) then, every projecive $R$-module is free.
+				\end{proposition}
+				\begin{proof}
+					Notice that: Every submodule of module over PID is free. Then, by the equivalent definition of projective module.
+				\end{proof}
+			\subsection{Kaplansky's Theorem}
+				\begin{lemma}
+					Suppose $P$ be a projective module, $A\subseteq P$ be a submodule. If $A$ is finitely/countably generated, then there exists an item $Q$ such that:
+					\begin{itemize}
+						\item 
+						\item 
+						\item 
+					\end{itemize}
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\begin{theorem}
+					(Kaplansky) Every projective module is the direct sum of the finitely generated projective modules.
+				\end{theorem}
+				\begin{proof}
+					Firstly, consider the chain of submodules:
+					\begin{gather*}
+						P_0\subseteq P_1\subseteq \dots \subseteq P_i\subseteq \dots
+					\end{gather*}
+					
+					where $P_{i+1}/P_i$ is a 
+				\end{proof}
+				
+				\begin{theorem}
+					Let $R$ be a ring. Then the following are equivalent:
+					\begin{itemize}
+						\item $R$ is a local ring;
+						\item Every projective module over $R$ is free, and has \textbf{indecomposable decomposition}
+						\begin{gather*}
+							M=\oplus M_i
+						\end{gather*}
+						
+						such that for each maximal direct summand $L$ of $M$, there exists a decomposition
+						\begin{gather*}
+							内容...
+						\end{gather*}
+					\end{itemize}
+				\end{theorem}
+		\section{Locally Free/Finite Locally Free Modules}
+			\begin{Def}
+				Let $R$ be a ring and $M$ be an $R$-module:
+				\begin{itemize}
+					\item We say that $M$ is \textbf{locally free} if we can cover $Spec(R)$ by \textbf{standard opens} $D(f_i),i\in I$ such that: $M_{f_i}$ is a free $R_{f_i}$-module for all $i\in I$. i.e.
+					\begin{gather*}
+						M_{f_i}=R_{f_i}^{\oplus n_i}
+					\end{gather*}
+					\item We say that $M$ is \textbf{finite locally free} if we \underline{can} choose the covering such that $M_{f_i}$ is finite free.
+					\item $M$ is \textbf{finite locally free} of \textbf{rank} $r$ if
+					\begin{gather*}
+						M_{f_i}\cong R_{f_i}^{r_i}
+					\end{gather*}
+				\end{itemize}
+			\end{Def}
+			
+			\begin{lemma}
+				Let $R$ be a ring and let $M$ be an $R$-module. The following are equivalent:
+				\begin{enumerate}
+					\item $M$ is finitely presented, and $R$-flat;
+					\item $M$ is finite projective;
+					\item $M$ is a direct summand of a finite free $R$-module;
+					\item $M$ is finitely presented and for all $p\in Spec(R)$, the localization $M_p$ is free;
+					\item $M$ is finite and locally free;
+					\item $M$ is finitely presented and for all maximal ideals, $m\subseteq R$ the localization $M_m$ is free;
+					\item $M$ is finite, for every prime $p$, the module $M_p$ is free, and the function
+					\begin{gather*}
+						\rho_M:Spec(R)\rightarrow \ZZ\qquad p\mapsto dim_{\kappa(p)} M\otimes_R \kappa(p)
+					\end{gather*}
+					is \textbf{locally constant} in Zaraski topology.
+				\end{enumerate}
+			\end{lemma}
+			\begin{proof}
+				We use this way to prove:
+				\begin{center}
+					\begin{tikzcd}
+						(2)\arrow[r,Leftrightarrow]&(3)\arrow[r,Rightarrow]&(1)\arrow[r,Rightarrow]&(7)\arrow[r,Leftrightarrow]\arrow[d,Rightarrow]\arrow[rd,Rightarrow]&(6)\\
+						&&(5)\arrow[u,Rightarrow]&(4)\arrow[l,Rightarrow]&(8)
+					\end{tikzcd}
+				\end{center}
+				\begin{itemize}
+					\item $(2)\Leftrightarrow (3)$: Consider the equivalent definition of projective module: $P$ is projective $\Leftrightarrow F=P\oplus V$, notice that, by the construction of $F$, such $F$ is also finite.
+					\item $(3)\Rightarrow (1)$:If $R^{\oplus n}=M\oplus N$, and $n$ is finite. We have
+					\begin{gather*}
+						M=R^{\oplus n}/N
+					\end{gather*}
+					which is finitely presented. And $M$ is projective $\Rightarrow -\otimes M$ is flat.  
+					\item $(1)\Rightarrow (7)$: Pick a prime $p;x_1,\dots,x_r\in M$ which map t a basis of $M\otimes_R \kappa(p)$.
+					\item (6)$\Leftrightarrow$ (7)
+					\item (7)$\Rightarrow$ (8)
+					\item (7)$\Rightarrow$ (4)
+					\item (4)$\Rightarrow$ (5)
+					\item 
+				\end{itemize}
+			\end{proof}
+			
+			\textbf{Hint} $R$-flat+finite$\not\Rightarrow$ Projective.
+			
+			Counterexample: With $R=C^\infty(\RR),M=R_m=R/I$ where $m=\{f\in R|f(0)=0\}$ and $I=\{f\in R|\exists\epsilon,\epsilon>0:f(x)=0,\forall x,|x|<\epsilon\}$. 
+			
+			\begin{proposition}
+				If $R$ be a reduced ring, and let $M$ be an $R$-module. Then, equivalent to:
+				\begin{itemize}
+					\item 
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\begin{proposition}
+				Suppose: $R$ is a local ring, $M$ is a finite flat $R$-module. Then $M$ is finite free.
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\begin{proposition}
+				Let $R\rightarrow S$ be a flat local homomorphism of local rings. Let $M$ be a finite $R$-module. Then, $M$ is finite projective over $R$ iff
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+				\begin{proposition}
+					For any $R$-module $P$ the following statements are equivalent:
+					\begin{itemize}
+						\item $P$ is finite locally free
+						\item 
+						\item 
+						\item 
+					\end{itemize}
+				\end{proposition}
+			\subsection{Faithfully flat descent for projectivity of modules}
+				\textbf{Question} Suppose $\phi:R\rightarrow S$ be a ring homomorphism, $M$ is $R$-module. Could we state, that $M\otimes_R S$ is projective $S$-module$\Rightarrow$ $M$ is projective $R$-module?
+				
+				In general not, but
+				\begin{proposition}
+					If $\phi$ is \textbf{faithfully flat},
+					\begin{gather*}
+						(0\rightarrow M'\rightarrow M\rightarrow M''\rightarrow 0)\in Exact(R-Mod)\Leftrightarrow  (0\rightarrow M'\otimes S\rightarrow M
+						\otimes S\rightarrow M''\otimes S\rightarrow 0)\in Exact(R-Mod)
+					\end{gather*} then the statement holds.
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+		\section{Injective Modules}
+			\begin{Def}
+				The \textbf{injective object} in $\mathcal{A}$ satisfies the universal lifting property: Given an injection $f:A\rightarrow B$ and a map $\alpha:A\rightarrow I$ there exists at least one map $\beta:B\rightarrow I$ such that $\alpha=\beta\circ f$
+				\begin{center}
+					\begin{tikzcd}
+						0\arrow[r]&A\arrow[r,"f"]\arrow[d,"\alpha"]&B\arrow[ld,"\beta"]\\
+						&I
+					\end{tikzcd}
+				\end{center}
+			\end{Def}
+			
+			We say $\mathcal{A}$ has enough injectives if for every object $A$ in $\mathcal{A}$, there is an injection $A\rightarrow I$ with $I$ injective. 
+			
+			\begin{proposition}
+				In category $Sets$, every nonempty object is injective.
+			\end{proposition}
+			\begin{proof}
+				内容...
+			
+			\end{proof}
+			\subsubsection{Product}
+			\begin{lemma}
+				If $I_\alpha$ is a family of injectives, so is $\prod I_\alpha$.
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\subsection{Baer's Criterion}
+			\begin{theorem}
+				(Baer) A right $R$-module $E\in Mod-R$ is injective iff for every right ideal $J$ of $R$, every map $J\rightarrow E$ can be extended to a map
+				\begin{gather*}
+					R\rightarrow E
+				\end{gather*}
+			\end{theorem}
+			
+			\begin{corollary}
+				内容...
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\subsubsection{Abelian Groups}
+			
+			\begin{corollary}
+				$\mathcal Ab$ has enough injectives.
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Embedding Theorem}
+			\subsection{Injective Resolution}
+			\begin{Def}
+				内容...
+			\end{Def}
+			
+			\subsubsection{Comparison Theorem}
+			
+			\subsubsection{Adjoint Functors}
+			
+			\begin{lemma}
+				For every right $R$-module $M$< the natural map
+				\begin{gather*}
+					\tau:Hom_{Ab}(M,A)\rightarrow Hom_{mod-R}(M,Hom_{Ab}(R,A))
+				\end{gather*}
+				is an isomorphism, where
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\begin{Def}
+				A pair of functions $L:\mathcal{A}\rightarrow \mathcal{B}$ and $R:\mathcal{B}\rightarrow \mathcal{A}$ are adjoint if there is a natural bijection for all $A\in \mathcal{A}$ and $B\in \mathcal{B}$ such that
+				\begin{gather*}
+					\tau:Hom_\mathcal{B}(L(A),B)\stackrel{\cong}{\rightarrow} Hom_\mathcal{A}(A,R(B))
+				\end{gather*}
+				Natural: For $f:A\rightarrow A'$ and $g:B\rightarrow B'$,
+				\begin{center}
+					\begin{tikzcd}
+						Hom_\mathcal{B}(L(A'),B)&Hom_\mathcal{B}(L(A),B)&Hom_\mathcal{B}(L(A),B')\\
+						Hom_\mathcal{A}(\mathcal{A}',R(B))&Hom_\mathcal{A}(A,R(B))&Hom_\mathcal{A}(A,R(B'))
+					\end{tikzcd}
+				\end{center}	
+			\end{Def}
+			\begin{corollary}
+				内容...
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{corollary}
+				内容...
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+		\section{Projective and Injective Objects in Abelian Category}
+			\subsection{Projective Object}
+				\begin{Def}
+					Object $X\in \mathcal{C}$ is \textbf{projective} if it satisfies the left lifting property for \textbf{epimorphism}.
+					\begin{center}
+						\begin{tikzcd}
+							&I\arrow[d,twoheadrightarrow]\\
+							A\arrow[r]\arrow[ru,dashrightarrow]&B
+						\end{tikzcd}
+					\end{center}
+				\end{Def}
+				\begin{proposition}
+					Let $X\in \mathcal{A},\mathcal{A}$ be an abelian category. The followings are equivalent:
+					\begin{itemize}
+						\item $X$ is projective.
+						\item $Hom(X,-)$ is exact.
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+					\begin{itemize}
+						\item $\Rightarrow$ Consider the exact sequence
+						\begin{center}
+							\begin{tikzcd}
+								0\arrow[r]&C_1\arrow[r,"f"]&C_2\arrow[r,"g"]&C_3\arrow[r]&0
+							\end{tikzcd}
+						\end{center}
+						Then the morphisms induced by the morphisms above
+						\begin{center}
+							\begin{tikzcd}
+								0\arrow[r]&Hom(X,C_1)\arrow[r,"f^*"]&Hom(X,C_2)\arrow[r,"g^*"]&Hom(X,C_3)\arrow[r]&0
+							\end{tikzcd}
+						\end{center}
+						Injective easy to verify, and surjective given by the diagram
+						\begin{center}
+							\begin{tikzcd}
+								&C_2\arrow[d,"g"]\\
+								X\arrow[ru,dashrightarrow]\arrow[r]&C_3
+							\end{tikzcd}
+						\end{center}
+						
+						$Im(f)=Ker(g)$ from exactness of $Hom(X,-)$.
+						\item $\Leftrightarrow$ If $Hom(X,-)$ is exact, now consider the following exact sequnece
+						\begin{gather*}
+							0\rightarrow Ker(g)\rightarrow A\rightarrow B\rightarrow 0
+						\end{gather*}
+						And apply $Hom(X,-)$, surjectivity of $Hom(X,A)\rightarrow Hom(X,B)$.
+					\end{itemize}
+				\end{proof}
+				\textbf{Note} Without the projective property, $Hom(X,-)$ is just left-exact. See discussion here:
+				\subsubsection{Projective Resolution}
+				\subsection{Injective Object}
+					\begin{Def}
+						An object is \textbf{injective} if it satisfies the right lifting property for \textbf{monomorphism}
+						\begin{center}
+							\begin{tikzcd}
+								B\arrow[r]&A\\
+								P\arrow[u,dashrightarrow]\arrow[ru,dashrightarrow]
+							\end{tikzcd}
+						\end{center}
+					\end{Def}
+					\subsubsection{Preservation of Injective Objects}
+					\begin{lemma}
+						Given a pair of additive adjoint functors
+						\begin{gather*}
+							(L)
+						\end{gather*}
+						betweeen abelian categories such that the left adjoint $L$ is a \textbf{left exact functor}, then the right adjoint preserve injective objects.
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{proposition}
+						内容...
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+					\subsubsection{Existence of Enough Injectives}
+					Given some categories with enough injectives:
+					\begin{itemize}
+						\item 
+						\item 
+					\end{itemize}
+					
+					\begin{lemma}
+						内容...
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+					\subsubsection{Constructions}
+					\begin{proposition}
+						\begin{itemize}
+							\item The (small) product of injective objects is injective;
+							\item The direct sum of \underline{finite} injective objects is injective;
+						\end{itemize}
+					\end{proposition}
+					\begin{proof}
+						\begin{itemize}
+							\item Consider the following diagram
+							\begin{center}
+								\begin{tikzcd}
+									&\prod I_i\arrow[d]\\
+									&I_i\arrow[d,twoheadrightarrow]\\
+									A\arrow[r]\arrow[ru]\arrow[ruu,dashrightarrow]&B
+								\end{tikzcd}
+							\end{center}
+							\item \begin{center}
+								\begin{tikzcd}
+									&\prod_{i\in I} I_i\arrow[dd,shift left=2,twoheadrightarrow,bend left=20]\\
+									&\sum I_i\arrow[u]\arrow[d,two heads]\\
+									A\arrow[r]\arrow[ru]&B
+								\end{tikzcd}
+							\end{center}
+						\end{itemize}
+					\end{proof}
+					And the injectivity of arbitrary direct sum can be judged with Baer's criterion.
+					\subsubsection{Injective Resolution}
+					\begin{Def}
+						An \textbf{injective} resolution is a cochain complex $J^*\in Ch^*(\mathcal{A})$ equipped with a \textbf{quasi-isomorphism}
+						\begin{gather*}
+							i:X\stackrel{\sim}{\rightarrow} J^*
+						\end{gather*}
+						such that $J^n\in \mathcal{A}$ is an injective object for all $n\in \NN$. i.e.Quasi-isomorphism
+						\begin{center}
+							\begin{tikzcd}
+								X\arrow[r]\arrow[d]&0\arrow[r]\arrow[d]&\dots\arrow[r]&0\arrow[d]\arrow[r]&\dots\\
+								J^0\arrow[r]&J^1\arrow[r]&\dots\arrow[r]&J^n\arrow[r]&\dots
+							\end{tikzcd}
+						\end{center}
+					\end{Def}
+					
+					\begin{proposition}
+						If $\mathcal{A}$ has enough injectives, then every $X\in \mathcal{A}$ has an injective resolution. 
+					\end{proposition}
+					\begin{proof}
+						We have
+					\end{proof}
+					
+					\begin{proposition}
+						内容...
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}	\subsubsection{Injective Resolution}
+					\begin{Def}
+					For $X\in \mathcal{A}$ an object, an \textbf{injective resolution} is a cochain complex $J^*\in Ch^*(\mathcal{A})$ equipped with a quasi-isomorphism
+					\begin{gather*}
+						i:X\stackrel{\sim}{\rightarrow} J^*
+					\end{gather*}
+					such that $J^n\in \mathcal{A}$ is an \textbf{injective object} for all $n\in \NN$.
+					\end{Def}
+					\begin{center}
+					\begin{tikzcd}
+						X\arrow[r]\arrow[d,"i^0"]&0\arrow[r]\arrow[d]&\dots\arrow[r]&0\arrow[d]\arrow[r]&\dots\\
+						J^0\arrow[r,"d^0"]&J^1\arrow[r,"d^1"]&\dots\arrow[r]&J^n\arrow[r,"d^n"]&\dots
+					\end{tikzcd}
+					\end{center}
+					\subsubsection{Projective Resolution}
+					\begin{Def}
+					For $X\in \mathcal{A}$ is an object, a \textbf{projective resolution} of $X$ is a chain ccomplex $J_*\in Ch_\bullet(\mathcal{A})$ equipped with a quasi-isomorphism
+					\begin{gather*}
+						p:J_*\stackrel{\sim}{\rightarrow} X
+					\end{gather*}
+					such that $J_n\in \mathcal{A}$ is a projective object for all $n\in \NN$.
+					\end{Def}
+					\begin{center}
+					\begin{tikzcd}
+						\dots\arrow[r]\arrow[d]&J_n\arrow[r]\arrow[d]&\dots\arrow[r]&J_1\arrow[r]\arrow[r]\arrow[d]&J_0\arrow[d]\\
+						\dots\arrow[r]&0\arrow[r]&\dots\arrow[r]&0\arrow[r]&X
+					\end{tikzcd}
+					\end{center}
+					
+					\begin{proposition}
+					Let $\mathcal{A}$ be an abelian category with enough injectives, such as $R-Mod$ for some ring $R$, then every object $X\in \mathcal{A}$ has an injective resolution.
+					\end{proposition}
+					\begin{proof}
+					内容...
+					\end{proof}
+					\begin{proposition}
+					Let $\mathcal{A}$ be an abelian category with enough projectives(such as $R$-Mod for some ring $R$). Then every object $X\in \mathcal{A}$ has a projective resolution.
+					\end{proposition}
+					\begin{proof}
+					内容...
+					\end{proof}
+					\subsection{Resolutions, and $Ext^1$}
+					Suppose $\mathcal{A}$ be an abelian category.
+					\subsubsection{Left Resolution}
+					
+					\begin{Def}
+					A \textbf{left resolution} of $M\in \mathcal{A}$ consists of:
+					\begin{itemize}
+						\item Chain complex $A_\bullet$;
+						\item Morphism $\epsilon:A_0\rightarrow M$;
+						\item Exactness
+						\begin{gather*}
+							\dots\rightarrow A_2\rightarrow A_1\rightarrow A_0\stackrel{\epsilon}{\rightarrow} M\rightarrow 0
+						\end{gather*}
+					\end{itemize}
+					\end{Def}
+					\subsubsection{Free Resolution}
+					\begin{Def}
+					Let $M\in \mathcal{A}$. A \textbf{free resolution}
+					\end{Def}
+					Conclusions
+					\begin{proposition}
+					Every finitely generated abelian group admits a free resolution with length 2.
+					\end{proposition}
+					\begin{proof}
+					Take the free object generated by
+					\end{proof}
+					Some of contents will be given in:Syzygies.
+			\subsection{Universally Injective Module Maps}
+				\begin{Def}
+					\begin{itemize}
+						\item Let $f:M\rightarrow N$ be a map of $R$-modules.
+						
+						Then $f$ is called \textbf{universally injective} if for every $R$-module $Q$, the map
+						\begin{gather*}
+							f\otimes_R id_Q:M\otimes_R Q\rightarrow N\otimes_R Q
+						\end{gather*}
+						
+						is injective.
+						\item A sequence $0\rightarrow M_1\rightarrow M_2\rightarrow M_3\rightarrow 0$ of $R$-modules is called \textbf{universally exact} if it is exact, and $M_1\rightarrow M_2$ is universally injective.
+					\end{itemize}
+				\end{Def}
+				
+				\begin{example}
+					内容...
+				\end{example}
+				
+				\begin{theorem}
+					Let 
+					\begin{gather*}
+						0\rightarrow M_1\stackrel{f_1}{\rightarrow} M_2 \stackrel{f_2}{\rightarrow} M_3\rightarrow0
+					\end{gather*}
+					be an exact sequence of $R$-modules. The following are equivalent:
+					\begin{itemize}
+						\item Sequence $0\rightarrow M_1\rightarrow M_2\rightarrow M_3\rightarrow 0$ is universally exact;
+						\item For every finitely presented $R$-module $Q$, the sequence
+						\begin{gather*}
+							0\rightarrow M_1\otimes_R Q\rightarrow M_2\otimes_R Q\rightarrow M_3\otimes_R Q\rightarrow 0
+						\end{gather*}
+						\item Given elements $x_i\in M_1;i=1,\dots,n;y_i\in M_2,j=1,\dots,m$. And $a_{ij}\in R(i=1,\dots,n,j=1,\dots,m)$ such that for all $i$
+						\begin{gather*}
+							f_1(x_i)=\sum_{j} a_{ij}y_j
+						\end{gather*}
+						
+						there exists $z_i\in M_1$ such that for all $i$:
+						\begin{gather*}
+							内容...
+						\end{gather*}
+						\item Given a commutative diagram of $R$-module maps
+						\begin{center}
+							\begin{tikzcd}
+								内容...
+							\end{tikzcd}
+						\end{center}
+						\item 
+						\item 
+					\end{itemize}
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{lemma}
+					Let
+					\begin{gather*}
+						0\rightarrow M_1\rightarrow M_2\rightarrow M_3\rightarrow 0
+					\end{gather*}
+					
+					be an exact sequence of $R$-modules. Suppose that: $M_3$ is \underline{finite presentaion}. Then, 
+					\begin{gather*}
+						内容...
+					\end{gather*}
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+		\section{Flatness}
+			\subsection{Exact Sequence}
+				
+				\begin{proposition}
+					(Exactness of Flatness) Suppose $0\rightarrow A\rightarrow B\rightarrow C\rightarrow 0$ an exact sequence with $A,C$ flat. Then, $B$ is flat.
+				\end{proposition}
+				\begin{proof}
+					We just consider the following diagram: Notice that the tensor product $-\otimes X$ is in general right-exact, $X=A,B,C$ we just need to draw the items, for the short exact sequence $0\rightarrow M'\rightarrow M$ we have
+					\begin{center}
+						\begin{tikzcd}
+							&M'\otimes A\arrow[r]\arrow[d,"f"]&M'\otimes B\arrow[r]\arrow[d,"g"]&M'\otimes C\arrow[r]\arrow[d,"h"]&0\\
+							0\arrow[r]&M\otimes A\arrow[r]&M\otimes B\arrow[r]&M\otimes C
+						\end{tikzcd}
+					\end{center}
+					
+					We can get an exact sequence $ker(f)\rightarrow ker(g)\rightarrow ker(h)$, and $ker(f)=ker(h)=0\Rightarrow ker(g)=0$.
+					
+					Another solution is to use the statement with 9-lemma:
+					\begin{center}
+						\begin{tikzcd}
+							&0\arrow[d]&0\arrow[d]&0\arrow[d]\\
+							0\arrow[r]&M'\otimes A\arrow[r]\arrow[d]&M'\otimes B\arrow[r]\arrow[d]&M'\otimes C\arrow[r]\arrow[d]&0\\
+							0\arrow[r]&M\otimes A\arrow[r]\arrow[d]&M\otimes B\arrow[r]\arrow[d]&M\otimes C\arrow[r]\arrow[d]&0\\
+							0\arrow[r]&M''\otimes A\arrow[r]\arrow[d]&M''\otimes B\arrow[r]\arrow[d]&M''\otimes C\arrow[r]\arrow[d]&0\\
+							&0&0&0
+						\end{tikzcd}
+						
+						Column 1,3 are exact, so is column 2.
+					\end{center}
+				\end{proof}
+			\subsection{Characterizing Flatness}
+				\begin{lemma}
+					Let $M$ be an $R$-module. The following are equivalent:
+					\begin{itemize}
+						\item $M$ is flat;
+						\item If $f:R^n\rightarrow M$ is a module map, $x\in Ker(f)$, then there are module maps
+						\begin{gather*}
+							h:R^n\rightarrow R^m\qquad g:R^m\rightarrow M
+						\end{gather*}
+						such that $f=g\circ h$ and $x\in Ker(h)$.
+						\item 
+						\item 
+					\end{itemize}
+				\end{lemma}
+				\begin{proof}
+				
+				\end{proof}
+				
+				\begin{theorem}
+					(Lazard's Theorem) Let $M$ be an $R$-module. Then,
+					
+					$M$ is flat$\Leftrightarrow$ It is the colimit of a directed system of free finite $R$-modules.
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				Moreover, 
+				\begin{itemize}
+					\item https://arxiv.org/pdf/1109.0439 'The Lazard-Linke's Theorem on quasi-coherent sheaves.
+				\end{itemize}
+			\subsection{Flatness over PID}
+				
+	\chapter{Chain Complexes}
+		\section{Some of Category Theory}
+			\subsection{$\mathbf{Ab}$-Category}
+			\begin{Def}
+				A category $\mathcal{A}$ is called an $\mathcal Ab$-category if every $hom$-set $Hom_\mathcal{A}(A,B)$ in $\mathcal{A}$ is given the structure of an abelian group in such a way that composition distributes over addition.
+				
+				In particular, given a diagram in $\mathcal{A}$ of the form
+				\begin{center}
+					\begin{tikzcd}
+						A\arrow[r,"f"]&B\arrow[r,shift left=3,"g'"]\arrow[r,shift right=3,"g",swap]&C\arrow[r,"h"]&D
+					\end{tikzcd}
+				\end{center}
+				We have
+				\begin{gather*}
+					h(g+g')f=hgf+hg'f
+				\end{gather*}
+			\end{Def}
+			\subsection{Preadditive Category}
+				(Stack Project, Homological Algebra, 3)
+				\begin{Def}
+					A category $\mathcal{A}$ is \textbf{preadditive} if each morphism set $Mor_\mathcal{A}(x,y)$ is endowed with a structure of an abelian group such that:
+					\begin{itemize}
+						\item  Each composition
+						\begin{gather*}
+							Mor(x,y)\times Mor(y,z)\rightarrow Mor(x,z)
+						\end{gather*}
+						is bilinaer($(f+g)\circ h=f\circ h+g\circ h,f\circ (g+h)=f\circ g+f\circ h$)
+					\end{itemize}
+				\end{Def}
+				Additive functor
+				\begin{Def}
+					\begin{itemize}
+						\item An addive functor $F:\mathcal{B}\rightarrow \mathcal{A}$ between $\mathcal Ab$-categories $\mathcal{B}$ and $\mathcal{A}$ is a functor such that each
+						\begin{gather*}
+							Hom_\mathcal{B}(B',B)\rightarrow Hom_{\mathcal{A}}(A',A)
+						\end{gather*}
+					\end{itemize}
+					is a group homomorphism;
+				\end{Def}
+				\begin{lemma}
+					Let $\mathcal{A}$ be a preadditive. Let $x\in Ob(\mathcal{A})$, the following are equivalent:
+					\begin{itemize}
+						\item $x$ is an initial object;
+						\item $x$ is a final object;
+						\item $id_x=0\in Mor_\mathcal{A}(x,x)$
+					\end{itemize}
+					Furthermore, if such $0$ exists, then: A morphism $\alpha:y\rightarrow z$ factors through $0\Leftrightarrow \alpha=0$
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				Such object is called \textbf{zero object} in preadditive category.
+				
+				\textbf{Remark} Existence:
+				\begin{lemma}
+					(Isomorphism of Finite Product, Coproduct) In preadditive category 
+					\begin{itemize}
+						\item $x\times y$ exists$\Leftrightarrow x\sqcup y$ exists;
+						\item 
+						 we have
+						\begin{gather*}
+							x\sqcup y\cong x\times y
+						\end{gather*}
+					\end{itemize}
+				\end{lemma}
+				\begin{proof}
+					\begin{itemize}
+						\item If $z=x\sqcup y$, define $p:=i\sqcup 0,p:=i'\sqcup 0$
+						\item If $z=x\times y$, define $i:=id_x\times 0,i'=0\times id_y$
+					\end{itemize}
+					\begin{center}
+						\begin{tikzcd}
+							x\arrow[rr,"id_x"]\arrow[rd,"i"]&&x\\
+							&z\arrow[rd,"p'"]\arrow[ru,"p"]\\
+							y\arrow[rr,"id_y"]\arrow[ru,"i'"]&&y
+						\end{tikzcd}
+					\end{center}
+				\end{proof}
+				\begin{Def}
+					(Direct Sum) In preadditive category, such $x\oplus y:=x\times y=x\sqcup y$.
+				\end{Def}
+				
+				\begin{lemma}
+					
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Additive Funtors, Additive Category}
+			
+			\begin{Def}
+				\begin{itemize}
+					\item An \textbf{additive category} is an $\mathcal Ab$-category $\mathcal{A}$ with:
+					\begin{itemize}
+						\item Zero Object $0\in \mathcal{A}$;
+						\item Product $A\times B$;
+					\end{itemize}
+				\end{itemize}
+			\end{Def}
+			\begin{lemma}
+				For additive category, we have
+				\begin{gather*}
+					A\times 0\cong A, A\in \mathcal{A}
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				Consider 
+				\begin{center}
+					\begin{tikzcd}
+						&A\\
+						A\times 0\arrow[ru,"p_A"]\arrow[rd]&&A\arrow[ll,"f"]\arrow[lu,"id_A"]\arrow[ld]\\
+						&0
+					\end{tikzcd}
+				\end{center}
+				We have $p_A\circ f=id_A,f\circ p_A=id_{A\times 0}$
+			\end{proof}
+			\begin{lemma}
+				(Product Map) If $f\in Mor_\mathcal{A}(B,C),g\in Mor_\mathcal{A}(D,E)$, then we have
+				\begin{gather*}
+					f\times g:B\times D\rightarrow C\times E
+				\end{gather*} 
+			\end{lemma}
+			\begin{proof}
+				Consider following diagram
+				\begin{center}
+					\begin{tikzcd}
+						B\arrow[r]&C\\
+						B\times D\arrow[r,dashrightarrow]\arrow[u]\arrow[d]&C\times E\arrow[u]\arrow[d]\\
+						D\arrow[r]&E
+					\end{tikzcd}
+				\end{center}
+			\end{proof}
+			\begin{proposition}
+				If $\mathcal{A}$ is an additive category, then the product exists, with
+				\begin{gather*}
+					A\times B=A\sqcup B
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				Firstly, $A\times B$ has following mappings $\iota_A:A\cong A\times 0\rightarrow A\times B$(B resp.); And then for $p_A:P\rightarrow A,p_B:P\rightarrow B$ we have
+				\begin{gather*}
+					\iota_A p_A+\iota_Bp_B:P\rightarrow A\times B
+				\end{gather*}
+				Thus, $A\times B$ is the coproduct.
+			\end{proof}
+			Also take the following notion
+			\begin{gather*}
+				A\times B\cong A\oplus B
+			\end{gather*}\label{Homological-Algebra-Abelian-Category-Product-Equals-Coproduct}
+			
+			Then,
+			\begin{proposition}
+				The following statements are equivalent:
+				\begin{itemize}
+					\item Category $\mathcal{C}$ is additive;
+					\item The structure maps
+					\begin{itemize}
+						\item \begin{gather*}
+							i_X:X\rightarrow X\oplus Y\\
+							i_Y:Y\rightarrow X\oplus Y
+						\end{gather*}
+						\item \begin{gather*}
+							p_X:X\oplus Y\rightarrow X\\
+							p_Y:X\oplus Y\rightarrow Y
+						\end{gather*}
+					\end{itemize}
+					with
+					\begin{itemize}
+						\item \begin{gather*}
+							p_X\circ i_X=1_X\qquad p_Y\circ i_Y=1_Y\\
+							p_X\circ i_Y=0\qquad p_Y\circ i_X=0
+						\end{gather*}
+						\item Completeness
+						\begin{gather*}
+							1_{X\oplus Y}=i_X\circ p_X+i_Y\circ p_Y
+						\end{gather*}
+					\end{itemize}
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				Omitted.
+			\end{proof}
+			
+			In additive category, the morphism between direct products can be represented as matrix
+			\begin{gather*}
+				f:A\oplus B\rightarrow C\oplus D\\
+				f=\begin{pmatrix}
+					p_W\circ f\circ i_X&p_W\circ f\circ i_Y\\
+					p_Z\circ f\circ i_X&p_Z\circ f\circ i_Y
+				\end{pmatrix}=\begin{pmatrix}
+					f_{11}&f_{12}\\
+					f_{21}&f_{22}
+				\end{pmatrix}
+			\end{gather*}
+			\subsection{Karoubian Categories}
+			(Stack Project, HA, 4) 
+			
+			\begin{Def}
+				Let $\mathcal{C}$ be a preadditive category. 
+				
+				We say $\mathcal{C}$ is \textbf{Karoubian} if every idempotent endomorphism $(f^2=f)$ of an object of $\mathcal{C}$ has a kernel.
+				\begin{gather*}
+					f^2=f\Rightarrow \exists ker(f),(0\rightarrow ker(f)\rightarrow x\rightarrow y)
+				\end{gather*}
+			\end{Def}
+			\begin{proposition}
+				(Equivalent Conditions for Karoubian Categories) The followings are equivalent:
+				\begin{itemize}
+					\item $\mathcal{C}$ is Karobian;
+					\item Each idempotent endomorphism of an object $\mathcal{C}$ has a cokernel;
+					\item Given an idempotent endomorphism $p:z\rightarrow z$, there exists a direct sum decomposition $z=x\oplus y$ such that: $p$ corresponds to the projecion onto $y$
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				\begin{itemize}
+					\item $(1)\Rightarrow (2)$
+					\item $(2)\Rightarrow (3)$
+					\item $(3)\Rightarrow (1)$
+				\end{itemize}
+			\end{proof}
+			
+			\begin{proposition}
+				(Criterias for Karoubian Category) Let $\mathcal{D}$
+				\begin{itemize}
+					\item If $\mathcal{D}$ has countable products and kernels of maps which have a right inverse, then Karoubian; $\mathcal{D}$
+					\item If $\mathcal{D}$ has countable ciproduct and cokernels of maps which have a left inverse, then Karoubian; $\mathcal{D}$
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				\begin{itemize}
+					\item 
+					\item 
+				\end{itemize}
+			\end{proof}
+			\textbf{Warning} Preadditive Category $\subset$ Karoubian Category$\subset$ Additive Category
+			
+			\begin{example}
+				Category of free modules.
+			\end{example}
+			
+			\begin{example}
+				Category $\mathcal Set$.
+			\end{example}
+			\subsection{Abelian Category}
+			\begin{Def}
+				Define: For $f\in Mor_\mathcal{A}(B,C)$,
+				\begin{itemize}
+					\item (Kernel) The \textbf{kernel} is the universal object given by $i:Ker(f)\rightarrow B$ with $fi=0$
+					\item (Cokernel) The \textbf{cokernel} is the universal object given by $j:C\rightarrow Coker(f)$ with $jf=0$.
+				\end{itemize}
+				And:
+				\begin{itemize}
+					\item $f$ is mono iff $fg=fh\Rightarrow g=h$
+					\item $f$ is epi iff $gf=hf\Rightarrow g=h$
+				\end{itemize}
+			\end{Def}
+			Then,
+			\begin{Def}
+				The \textbf{abelian category} satisfies:
+				\begin{itemize}
+					\item $f$ is  Mono/injective$\Leftrightarrow$ $Ker(f)=0$;
+					\item $f$ is Epi/surjecitve$\Leftrightarrow Coker(f)=0$;
+				\end{itemize}
+			\end{Def}
+			Define:
+			\begin{gather*}
+				Coim(f):=Coker(Ker(f)\rightarrow B)\\
+				Im(f):=Ker(C\rightarrow Coker(f))
+			\end{gather*}
+			
+			\textbf{Remark} Sometimes take the notion:
+			\begin{itemize}
+				\item inj.:$Ker(f)=0$;
+				\item sur.:$Coker(f)=0$;
+			\end{itemize}
+			
+			\begin{proposition}
+				Category $\mathcal{A}$ is abelian iff it is additive,  all kernels and cokernels exist, and the natural map
+				\begin{gather*}
+					Coim(f)\rightarrow Im(f)
+				\end{gather*}
+				is an isomorphism for all morphisms $f$ of $\mathcal{A}$.
+			\end{proposition}
+			\begin{proof}
+				Notice: $Coim(f)=Coker(Ker(f)\rightarrow B)=Ker(C\rightarrow Coker(f))=Im(f)$, now consider following property
+				\begin{gather*}
+					Ker(f)\rightarrow B\rightarrow Coim(f)=Im(f)\rightarrow C\rightarrow Coker(f)
+				\end{gather*}
+				Then, equivalent by universal property. Omitted.
+			\end{proof}
+			
+			We could define the exactness:
+			\begin{Def}
+				For abelian category $\mathcal{A}$, we could define the \textbf{exactness}
+				\begin{gather*}
+					0\rightarrow A\stackrel{f}{\rightarrow} B\stackrel{g}{\rightarrow} C\rightarrow 0
+				\end{gather*}
+				With $Im(f)=Ker(g)$.
+			\end{Def}
+			
+			\begin{lemma}
+				Let: $\mathcal{A}$ be a preadditive category.
+				
+				The addition on sets of morphisms make $\mathcal{A}^{opp}$ into a preadditive category.
+				
+				Furthermore, $\mathcal{A}$ is preadditive/additive/abelian$\Leftrightarrow \mathcal{A}^{op}$ is preadditive/additive/abelian	;
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{lemma}
+				(Finite Limimts, Colimits) The finite limits, colimits exist in the abelian category.
+			\end{lemma}
+			\begin{proof}
+				\begin{itemize}
+					\item Limit
+					\item Colimit
+				\end{itemize}
+			\end{proof}
+			
+			\begin{theorem}
+				内容...
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Pullback,Pushout Diagram}
+					\begin{Def}
+						The \textbf{intersection/pullback} of objects $x,y\in \mathcal{A}$, which satisfies the following diagram
+						\begin{center}\begin{tikzcd}
+								x \cap y \arrow[r, "p_1"] \arrow[d, "p_2"] \arrow[rd, phantom, "\lrcorner", very near start] & x \arrow[d, hookrightarrow] \\
+								y \arrow[r, hookrightarrow] & z
+							\end{tikzcd}
+						\end{center}
+						And the \textbf{cointersection/pushout}
+						\begin{center}
+							\begin{tikzcd}
+								z \arrow[r,twoheadrightarrow] \arrow[d,twoheadrightarrow] & x \arrow[d] \\
+								y \arrow[r] & x \cup_z y
+							\end{tikzcd}
+						\end{center}
+					\end{Def}
+				\subsection{Lemmas}
+					\subsubsection{3-Lemma}
+					\subsubsection{Snake Lemma}
+						\begin{proposition}
+							内容...
+						\end{proposition}
+						\begin{proof}
+							内容...
+						\end{proof}
+					\subsubsection{4-Lemma}
+					\subsubsection{5-Lemma}
+				\subsection{Grothendieck Category}
+				
+				\url{https://ncatlab.org/nlab/show/additive+and+abelian+categories}
+				
+				\url{https://ncatlab.org/nlab/show/Grothendieck+category}
+				\begin{Def}
+					(Grothendieck) 
+					\begin{itemize}
+						\item (AB1) Existence of kernel,cokernel;
+						\item (AB2) Isomorphism $Coim(f)\rightarrow Im(f)$,where $Coim(f)=Coker(Ker(f)\rightarrow A),Im(f)=Ker(A\rightarrow Coker(f))$;
+						
+						(AB1)+(AB2)=Abelian
+						\item (AB3) An abelian category with all coproducts; Hence all colimits;
+						\item (AB4) AB3 Satisfied, coproduct of monomorphism is monic;
+						\item (AB5) AB3 Satisfied, filtered limits of exact seuqneces \underline{exist} and are \underline{exact};
+						\item (AB6) AB3 Satisfied, such that for increasing directed set $J$, $(B^j)_{j\in J}$ and families $B^j=(B^j_i)_{i\in I_j}$(Thus, $B=((B^j_i)_{i\in I_j})_{j\in J}$) then, we have
+						\begin{gather*}
+							\cap_{j\in J} (\sum_{i\in I_j} B^i_j)=\sum_{(i_j)\in \prod I_j} (\cap_{j\in J} B^i_{i_j})
+						\end{gather*}
+						\item (AB$3^*$) DF
+						\item (AB$4^*$) DF
+						\item (AB$5^*$) DF
+						\item (AB$6^*$) DF	
+					\end{itemize}
+				\end{Def}
+				\subsection{Extension}
+					\begin{Def}
+						\begin{itemize}
+							\item An \textbf{extension} of $A$ by $B$ in abelian category $\mathcal{A}$ is an (short) exact sequence
+							\begin{gather*}
+								0\rightarrow A\rightarrow B\rightarrow C\rightarrow 0
+							\end{gather*}
+							\item The morphism between extensions: For short exact sequences $0\rightarrow A\rightarrow E\rightarrow B\rightarrow 0;0\rightarrow A\rightarrow F\rightarrow B\rightarrow 0$. And the following diagram commutes:
+							\begin{center}
+								\begin{tikzcd}
+									0&A&E&B&0\\
+									0&A&F&B&0
+								\end{tikzcd}
+							\end{center}
+							\item The isomorphic class:Let $A,B\in Ob(\mathcal{A})$, the set of isomorphic classes of extension of $B$ by $A$ denoted
+							\begin{gather*}
+								Ext_\mathcal{A}(B,A)
+							\end{gather*}
+							is called the \textbf{Ext-group}.
+						\end{itemize}
+					\end{Def}
+					
+					Actually, we turn $Ext(-,-)$ into functor
+					\begin{itemize}
+						\item Pullback
+						\item Pushout
+					\end{itemize}
+					
+					
+					
+					\begin{lemma}
+						The construction
+						\begin{gather*}
+							(E_1,E_2)\mapsto E_1+E_2
+						\end{gather*}
+						defines a commutative group law on $Ext_\mathcal{A}(B,A)$, which is functorial on each variable.
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{proposition}
+						(Six-Item Exact Sequence) There exists long exact sequence
+						\begin{center}
+							\begin{tikzcd}
+								0&Hom(C,X)&Hom(B,X)&Hom(A,X)\\
+								&Ext(C,X)&Ext(B,X)&Ext(A,X)&0
+							\end{tikzcd}
+						\end{center} 
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{proposition}
+						(Six-Item Exact Seuquence)
+						\begin{center}
+							\begin{tikzcd}
+								0&Hom(X,A)&Hom(X,B)&Hom(X,C)\\
+								&Ext(X,A)&Ext(X,B)&Ext(X,C)&0
+							\end{tikzcd}
+						\end{center}
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+				\subsection{Additive Functors}
+					\begin{lemma}
+						Let $\mathcal{A},\mathcal{B}$ \underline{abelian categories}, $F:\mathcal{A}\rightarrow \mathcal{B}$ is functor. Then, the followings are equivalent
+						\begin{itemize}
+							\item 
+							\item 
+							\item 
+						\end{itemize}
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{lemma}
+						内容...
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+				\subsection{Localization}
+				\subsection{Jordan-Hölder}
+				\subsection{Serre Subcategories}
+					\begin{Def}
+						Let $\mathcal{A}$ be an abelian category:
+						\begin{itemize}
+							\item A \textbf{Serre subcategory} of $\mathcal{A}$ is a \underline{nonempty full subcategory} $\mathcal{C}$ such that for every exact sequence
+							\begin{center}
+								\begin{tikzcd}
+									A\arrow[r]&B\arrow[r]&C
+								\end{tikzcd}
+							\end{center}
+							with $A.C\in Ob(\mathcal{A})$ such that
+							\begin{gather*}
+								A,C\in Ob(\mathcal{C})\Rightarrow B\in Ob(\mathcal{C})
+							\end{gather*}
+							\item A \textbf{weak Serre subcategory} $\mathcal{A}$ is a nonempty full subcategory $\mathcal{C}$ of $\mathcal{A}$ such that: Given any exact sequence
+							\begin{gather*}
+								A_0\rightarrow A_1\rightarrow A_2\rightarrow A_3\rightarrow A_4
+							\end{gather*}
+							with $A_0,A_1,A_3,A_4\in Ob(\mathcal{C})\Rightarrow A_2\in Ob(\mathcal{C})$.
+						\end{itemize}
+					\end{Def}
+					
+					\begin{lemma}
+						(Equivalent Condition of Serre Subcategory) Let $\mathcal{A}$ be an abelian category, $\mathcal{C}$ be a subcategory of $\mathcal{C}$. Then, the following condition are equivalent: $\mathcal{C}$ is Serre subcategory$\Leftrightarrow$ \begin{itemize}
+							\item $0\in Ob(\mathcal{C})$;
+							\item $\mathcal{C}$ is a strictly full subcategory of $\mathcal{A}$;
+							\item Any subobject or quotient of $\mathcal{C}$ is an object of $\mathcal{C}$;
+							\item If $A\in Ob(\mathcal{A})$ is an extension of objects of $\mathcal{C}$, then $A\in Ob(\mathcal{C})$.
+						\end{itemize}
+					\end{lemma}
+					\begin{proof}
+						$\Leftarrow$ 
+						
+						$\Rightarrow$ Omitted.
+					\end{proof}
+					
+					\begin{lemma}
+						(Equivalent Condition of Weak Serre Subcategories)
+						\begin{itemize}
+							\item 
+							\item 
+							\item 
+							\item 
+						\end{itemize}
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+					\subsubsection{Serre Subcategory by Morphism}
+						\begin{lemma}
+							Let $\mathcal{A},\mathcal{B}$ be abelian categories, and $F:\mathcal{A}\rightarrow \mathcal{B}$ be an exact functor.
+							
+							Then, the \textbf{full subcategory} specified by $F(\mathcal{C})=0$ forms a Serre subcategory of $A$.
+						\end{lemma}
+						\begin{proof}
+							Notice that the functor is exact.
+						\end{proof}
+						
+						\begin{Def}
+							Let $\mathcal{A},\mathcal{B}$ be an exact functors, then the full subcategory of objects $\mathcal{C}$ such that $F(\mathcal{C})=0$ is called the \textbf{kernel} of the functor $F$. Sometimes denoted by
+							\begin{gather*}
+								ker(\mathcal{F})
+							\end{gather*} 
+						\end{Def}
+					\subsubsection{Quotient}
+						\begin{lemma}
+							(Categoricial Quotient) Let $\mathcal{A}$ be an abelian category, $\mathcal{C}\subseteq\mathcal{A}$ be a Serre subcategory, there exists an abelian category and an exact functor
+							\begin{gather*}
+								F:\mathcal{A}\rightarrow \mathcal{A}/\mathcal{C}
+							\end{gather*}
+							which is \textbf{essentially surjective} and whose kernel is $\mathcal{C}$.
+							
+							The category $\mathcal{A}/\mathcal{C}$ is specified by the following universal property: For any exact functor
+							\begin{gather*}
+								G:\mathcal{A}\rightarrow \mathcal{B}
+							\end{gather*} 
+							Such that $\mathcal{C}\subseteq Ker(\mathcal{G})$, there exists a factorization $G=H\circ F$ for a unique exact functor $H:\mathcal{A}/\mathcal{C}\rightarrow \mathcal{B}$.
+						\end{lemma}
+						\begin{proof}
+							内容...
+						\end{proof}
+						
+						\begin{lemma}
+							Let $\mathcal{A},\mathcal{B}$ be abelian categories, $F:\mathcal{A}\rightarrow \mathcal{B}$ be an exact functor, let $\mathcal{C}\subseteq \mathcal{A}$ be Serre subcategory contained in the kernel of $F$. Then,
+							\begin{gather*}
+								\mathcal{C}=Ker(F)\Leftrightarrow \bar{F}:\mathcal{A}/\mathcal{C}\rightarrow \mathcal{B}\mbox{ is faithful}
+							\end{gather*}
+						\end{lemma}
+						\begin{proof}
+							内容...
+						\end{proof}
+				\subsection{K-Groups of Abelian Category}
+					\subsubsection{0th Abelian Category}
+					\begin{Def}
+						Let $\mathcal{A}$ be an abelian category, then, denote $K_0(\mathcal{A})$ the \textbf{zeroth K-group} of $\mathcal{A}$ and for exact sequence
+					\end{Def}
+					\textbf{Remark} Another way, we to say this is that: There exists a presentation
+					\begin{gather*}
+						\oplus_{(A\rightarrow B\rightarrow C)\in Ses} Z[A\rightarrow B\rightarrow C]\rightarrow \oplus_{A\in Ob(\mathcal{A})} Z[A]\rightarrow K_0(A)\rightarrow 0
+					\end{gather*}
+					\begin{lemma}
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{lemma}
+						内容...
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{lemma}
+						内容...
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+				\subsection{Cohomological $\delta$-Functor}
+					\begin{Def}
+						Let $\mathcal{A},\mathcal{B}$ be abelian categories, a \textbf{cohomological $\delta$-functor} or simly \textbf{$\delta$-functor} from $\mathcal{A}\rightarrow \mathcal{B}$ is given by the following datas:
+						\begin{itemize}
+							\item A collection 
+							\begin{gather*}
+								F^n:\mathcal{A}\rightarrow \mathcal{B},n\geq 0
+							\end{gather*}
+							be additive functors, and
+							\item For any short exact sequence $0\rightarrow A\rightarrow B\rightarrow C\rightarrow 0$ of $\mathcal{A}$, a collection 
+							\begin{gather*}
+								\delta_{A\rightarrow B\rightarrow C}:F^n(C)\rightarrow F^{n+1}(A),n\geq 0
+							\end{gather*}
+							of morphisms of $\mathcal{B}$.
+						\end{itemize}
+						These data are assumed to satisfy the following axioms:
+						\begin{itemize}
+							\item For any short exact sequence as above, we have the \textbf{long exact sequence}
+							\begin{center}
+								\begin{tikzcd}
+									0\arrow[r]&F^0(A)\arrow[r]&F^0(B)\arrow[r]&F^0(C)\arrow[lld]\\
+									&F^1(A)\arrow[r]&F^1(B)\arrow[r]&F^1(C)\arrow[lld]\\
+									&\dots
+								\end{tikzcd}
+							\end{center}
+							\item For every morphism of short exact sequence $(0\rightarrow A\rightarrow B\rightarrow C\rightarrow 0)\rightarrow (0\rightarrow A'\rightarrow B'\rightarrow C'\rightarrow 0)$ of short exact sequences, the diagram
+							\begin{center}
+								\begin{tikzcd}
+									F^n(C)\arrow[r,"\delta_{A\rightarrow B\rightarrow  C}"]\arrow[d]& F^{n+1}(A)\arrow[d]\\
+									F^n(C')\arrow[r,"\delta_{A'\rightarrow B'\rightarrow C'}"]&F^{n+1}(A')
+								\end{tikzcd}
+							\end{center}
+						\end{itemize}
+						This implies, that $F^0(-)$ is left-exact.
+					\end{Def}
+					\subsubsection{Morphism of $\delta$-Functors}
+					\begin{Def}
+						内容...
+					\end{Def}
+					\subsubsection{Universal $\delta$-Functor}
+					\begin{Def}
+						内容...
+					\end{Def}
+					
+					\begin{lemma}
+						内容...
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{lemma}
+						内容...
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+			\section{Chain Complex}
+				\begin{Def}
+					\begin{itemize}
+						\item A $\ZZ$-\textbf{graded chain complex} in $R-Mod$ is:
+						\begin{itemize}
+							\item A collection of obejcts $\{C_n\}_{n\in \ZZ}$;
+							\item Morphisms $\partial_n:C_n\rightarrow C_{n-1}$ such that
+							\begin{gather*}
+								\partial_n\circ \partial_{n+1}=0,n\in \NN
+							\end{gather*}
+							Then:
+							\begin{itemize}
+								\item $\partial_n$ are called the \textbf{differentials} or \textbf{boundary maps};
+								\item The elements of $C_n$ are called $n$-chains;
+								\item For $n\geq 1$ the elements in the kernel
+								\begin{gather*}
+									Z_n:=Z_n(C_\bullet)=Ker(\partial_{n})
+								\end{gather*}
+								are called \textbf{n-cycles};
+								\item The image
+								\begin{gather*}
+									B_n:=B_n(C_\bullet)=im(\partial_{n+1})
+								\end{gather*}
+								of $\partial_n:C_{n}\rightarrow C_{n-1}$ are called the \textbf{n-boundaries};
+							\end{itemize}
+							There exists an inclusion $\partial^2=0\Rightarrow 0\hookrightarrow B_n\hookrightarrow Z_n\hookrightarrow C_n$; Define $H_n:=Z_n/B_n$, then the \textbf{chain homology} of $C_*$
+							\begin{gather*}
+								0\rightarrow B_n\rightarrow Z_n\rightarrow H_n\rightarrow 0
+							\end{gather*}
+						\end{itemize}
+					\end{itemize}
+				\end{Def}
+				
+				Then,
+				\begin{Def}
+					\begin{itemize}
+						\item A \textbf{chain map} $f:V_*\rightarrow W_*$ is a collection of morphism $(f_n:V_n\rightarrow W_n)_{n\in \ZZ}$ in $\mathcal{A}$ such that all the diagram
+						\begin{center}
+							\begin{tikzcd}
+								V_{n+1}\arrow[r]\arrow[d]&V_n\arrow[d]\\
+								W_{n+1}\arrow[r]&W_n
+							\end{tikzcd}
+						\end{center}
+						\item Take the notation of $Ch(R-Mod)$ for the category. Furthermore, for the category $\mathcal{A}$, take the notion of $Ch(\mathcal{A})$.
+					\end{itemize}
+				\end{Def}
+				Especially, when $R=\ZZ$, is the chain complex of \underline{abelian groups}.
+				\begin{proposition}
+					$Ch(\mathcal{A})$ is an abelian category, iff $\mathcal{A}$ is an abelian category.
+				\end{proposition}
+				\begin{proof}
+					$\Rightarrow$ Omitted. There exists a faithful funcotor $\mathcal{A}\rightarrow Ch(\mathcal{A})$;
+					
+					$\Leftarrow$ $\mathcal{A}$ is additive, with structure induced by $\mathcal{A}$. And the biproduct is well-defined. The kernel commutes with 
+				\end{proof}
+				
+				\begin{corollary}
+					$Ch(R-Mod)$ is an abelian category.
+				\end{corollary}
+				\begin{proof}
+					Omitted.
+				\end{proof}
+				\subsubsection{Exactness}
+				\begin{lemma}
+					$Ker,Coker$ commutes with component operation $(-)_n:Ch(\mathcal{A})\rightarrow \mathcal{A}$.
+				\end{lemma}
+				\begin{proof}
+					\begin{itemize}
+						\item $Ker$:
+						\item $Coker$:
+					\end{itemize}
+				\end{proof}
+				\begin{proposition}
+					The followings are equivalent:
+					\begin{itemize}
+						\item $0\rightarrow A\rightarrow B\rightarrow C\rightarrow0$ is exact in $Ch(\mathcal{A})$;
+						\item $0\rightarrow A_n\rightarrow B_n\rightarrow C_n\rightarrow 0$ is exact for each $n\in \ZZ$ in $\mathcal{A}$;
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+					By definition, omitted.	
+				\end{proof}
+				
+				\begin{proposition}
+					Suppose $A,B,C\in \mathcal{A},\mathcal{A}$ abelian, $0\rightarrow A\rightarrow B\rightarrow C\rightarrow 0$ is exact, then
+					\begin{center}
+						$0\rightarrow A\rightarrow B\rightarrow C\rightarrow 0$ splits$\Leftrightarrow B=A\oplus C$ 
+					\end{center}
+				\end{proposition}
+				\begin{proof}
+					Consider the following diagram
+					\begin{center}
+						\begin{tikzcd}
+								0\arrow[r]&A\arrow[r,"f"]\arrow[rd]&B\arrow[d,shift right=2]\arrow[r,"g",shift right=2]&C\arrow[l,shift right=2,dashrightarrow]\arrow[ld]\arrow[r]&0\\
+								&&A\oplus C\arrow[lu,shift left=2]\arrow[ru,shift right=2]\arrow[u,shift right=2,dashrightarrow]
+						\end{tikzcd}
+						Take $f\pi _A+h \pi_B:A\oplus C\rightarrow B$
+					\end{center}
+					$\pi_A,\pi_B$ satisfied by \ref{Homological-Algebra-Abelian-Category-Product-Equals-Coproduct}.
+				\end{proof}
+				
+				\begin{proposition}
+					(Left-Exactness of $Hom(-,X)$) Suppose $X\in \mathcal{A}$, then $Hom(-,X)$ is left-exact: For exact
+					\begin{gather*}
+						0\rightarrow A\rightarrow B\rightarrow C\rightarrow 0
+					\end{gather*}
+					We get the left-exact sequence
+					\begin{gather*}
+						0\rightarrow Hom(C,X)\rightarrow Hom(B,X)\rightarrow Hom(A,X)
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					The morphisms induced by the morphims above.
+					\begin{itemize}
+						\item $Hom(C,X)\rightarrow Hom(B,X)$ is injective: We have
+						\begin{gather*}
+							h\circ g=0,g\mbox{ is surjective}\Rightarrow h=0
+						\end{gather*}
+						\item $Im(f^*)=Ker(g^*)$: 
+						\begin{itemize}
+							\item $Im(g^*)\subseteq Ker(f^*)$, easy to verify, that for $h\in Hom(C,X)$,
+							\begin{gather*}
+								f^*g^*(h)=h\circ g\circ f=0
+							\end{gather*}
+							\item $Ker(f^*)\subseteq Im(g^*)$, we have for $h\in Hom(B,X)$,
+							\begin{gather*}
+								f^*(h)=h\circ f=0
+							\end{gather*}
+							Now, we can get the diagram
+							\begin{center}
+								\begin{tikzcd}
+									0\arrow[r]&A\arrow[r,"f"]&B\arrow[r,"g"]\arrow[d,"h"]&C\arrow[r]\arrow[ld,dashrightarrow]&0\\
+									&&X
+								\end{tikzcd}
+							\end{center}
+							Notice that $Coker(f)=C$. Thus the morphism $C\rightarrow X$ is induced.
+						\end{itemize}
+					\end{itemize}
+				\end{proof}
+				Similarly
+				\begin{proposition}
+					(Left Exactness of $Hom(X,-)$) Suppose $X\in \mathcal{A}$, then $Hom(-,X)$ is right-exact:For exact
+					\begin{gather*}
+						0\rightarrow A\rightarrow B\rightarrow C\rightarrow 0
+					\end{gather*}
+					Wwe can get a right-exact sequence
+					\begin{gather*}
+						0\rightarrow Hom(X,A)\rightarrow Hom(X,B)\rightarrow Hom(X,C)
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					\begin{itemize}
+						\item $f^*:Hom(X,A)\rightarrow Hom(X,B)$ is injective: We have
+						\begin{gather*}
+							f^*(h)=0\Rightarrow f\circ h=0\Rightarrow h=0
+						\end{gather*}
+						\item Similarly $Im(f^*)=Ker(g^*)$.
+					\end{itemize}
+				\end{proof}
+				Furthermore, we have a longer exact sequence: Here
+				\subsection{Homology Sequence}
+					\begin{Def}
+						Define the homology sequence, with objects:
+						\begin{gather*}
+							H_n(C):=Im(d_{n+1})/ker(d_n)
+						\end{gather*}
+						with the 
+					\end{Def}
+					\begin{proposition}
+						$H_\bullet(-)$ is a morphism in $Ch(-)$.
+					\end{proposition}
+					\begin{proof}
+						Omitted.
+					\end{proof}
+					\begin{Def}
+						Define: A morphism $C\rightarrow D$ is a \textbf{quasi-isomorphism} if the induced map
+						\begin{gather*}
+							H_n(f):H(C)\rightarrow H(D)
+						\end{gather*}
+						is an isomorphism.
+					\end{Def}
+				\subsection{Operations on Chain Complexes}
+				\subsubsection{Product, Direct Sum}
+					\begin{Def}
+						For a family of chain complexes $\{C_\alpha\}$ in $Ch(\mathcal{A})$, where $\mathcal{A}$ is abelian category, define:
+						\begin{itemize}
+							\item Product $(\prod A_\alpha,\prod d_\alpha)$, with
+							\begin{gather*}
+								\prod d_\alpha:\prod A_{\alpha,n}\rightarrow \prod A_{\alpha,n-1} 
+							\end{gather*}
+							\item Sum $(\oplus A_\alpha,\oplus d_\alpha)$, with	
+							\begin{gather*}
+								\oplus d_\alpha:\oplus A_{\alpha,n}\rightarrow \oplus A_{\alpha,n-1}
+							\end{gather*}
+						\end{itemize}
+					\end{Def}
+					\begin{proposition}
+						The two operations commute with homology, i.e
+						\begin{gather*}
+							\oplus H_n(A_\alpha)\cong H_n(\oplus A_\alpha)\qquad \prod H_n(A_\alpha)=H_n(\prod A_\alpha)
+						\end{gather*}
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+				\subsubsection{Subcomplex,Quotient Complex}
+					\begin{Def}
+						A \textbf{subcomplex}
+					\end{Def}
+					Especially: In $Ab$ the quotient structure is defined as:
+					\begin{Def}
+						Given $A\hookrightarrow B$, then
+						\begin{gather*}
+							A/B=coker(A\rightarrow B)
+						\end{gather*}
+					\end{Def}
+					Thus, define the quotient complex
+					\begin{Def}
+						Define: For subcomplex $(B_n)\hookrightarrow (A_n)$ define
+						\begin{gather*}
+							((A_n/B_n),(\bar{d}_n))
+						\end{gather*}
+						Induced by:
+						\begin{center}
+							\begin{tikzcd}
+								&0\arrow[d]&0\arrow[d]&0\arrow[d]\\
+								\dots\arrow[r]&B_{n-1}\arrow[r]\arrow[d]&\arrow[r]B_n\arrow[r]\arrow[d]&B_{n+1}\arrow[r]\arrow[d]&\dots\\
+								\dots\arrow[r]&A_{n-1}\arrow[d]\arrow[r]&A_n\arrow[r]\arrow[d]&A_{n+1}\arrow[d]\arrow[r]&\dots\\
+								\dots\arrow[r]&A_{n-1}/B_{n-1}\arrow[r]\arrow[d]&A_n/B_n\arrow[r]\arrow[d]&A_{n+1}/B_{n+1}\arrow[r]\arrow[d]&\dots\\
+								&0&0&0
+							\end{tikzcd}
+						\end{center}
+					\end{Def}
+					The exactness is given by \underline{9-lemma}.
+				\subsubsection{Tensor Product}
+				\begin{Def}
+					For $X,Y\in Ch_\bullet(A)$ write $X\otimes Y\in Ch_\bullet(A)$ for chain complex whose component is given by:
+					\begin{gather*}
+						(X\otimes Y)_n:=\oplus_{i+j=n} X_i\otimes_R Y_j
+					\end{gather*}
+					with $\partial^{x\otimes y}(x,y)=(\partial^Xx,y)+(-1)^{deg(X)}(x,\partial^Yy)$.
+				\end{Def}
+				
+				\begin{example}
+					Let $R$ be some ring and $I_\bullet\in C_\bullet(R-Mod)$ be the chain complex given by
+					\begin{gather*}
+						I_\bullet=[\dots\rightarrow 0\rightarrow 0\rightarrow R\stackrel{\partial_0^I}{\rightarrow} R\oplus R]
+					\end{gather*}
+					where $\partial_0^I=(-id,id)$. We may think of 
+					\begin{gather*}
+						I_0=R\oplus R\cong R[\{(0),(1)\}]\qquad I_1=R\cong R[(0\rightarrow 1)]
+					\end{gather*}
+					Thus,
+					\begin{gather*}
+						\partial_0^I:(0\rightarrow 1)\mapsto (1)-(0)
+					\end{gather*}
+					Write out the tensor product $S_\bullet:=I_\bullet\otimes I_\bullet$, by definition we have
+					\begin{gather*}
+						S_0=\\
+						S_1=\\
+						S_2=
+					\end{gather*}
+				\end{example} 
+				
+				\begin{proposition}
+					For category $\mathcal{A}$, we have
+					\begin{center}
+						$Ch(\mathcal{A})$ is monoidal$\Leftrightarrow$ $\mathcal{A}$ is monoidal
+					\end{center}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\subsubsection{Chain $[X,Y]$}
+				\begin{Def}
+					\begin{itemize}
+						\item 
+						Define the category $Ch_\bullet^{ub}(\mathcal{A}):=\{C\in Ch_\bullet(\mathcal{A})|C$ is unbounded$\}$
+						\item Define:
+						\begin{gather*}
+							[X,Y]_n:=\prod_{i\in \ZZ} Hom_{RMod}(X_i,Y_{i+n})\\
+							df:=d_Y\circ f-(-1)^nf\circ d_X \quad f\in [X,Y]_n
+						\end{gather*}
+					\end{itemize}
+				\end{Def}
+				Thus,
+				\begin{gather*}
+					[-,-]:Ch_\bullet(\mathcal{A})^{op}\times Ch_\bullet(\mathcal{A})\rightarrow Ch_\bullet^{ub}(\mathcal{A})
+				\end{gather*}
+				is the \textbf{inner hom} of the category of chain complexes.
+				
+				\begin{proposition}
+					The collection of cycles of the internal $Hom[X,Y]_\bullet$ in degree $0$ coincides with the external hom functor
+					\begin{gather*}
+						Z_0([X,Y])=Hom_{Ch_\bullet^{ub}(X,Y)}
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{proposition}
+					The monoidal category $(Ch_\bullet,\otimes)$ is a closed monoidal category, the internal hom is the standard internal hom of chain complexes.
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Shifting and Translation}
+				\begin{Def}
+					Define the chain/cochain complex
+					\begin{gather*}
+						C[p]_n:=C_{n+p}\qquad C[p]^n=C^{n-p}
+					\end{gather*}
+				\end{Def}
+				Then, define the differential map
+				\begin{gather*}
+					d:=
+				\end{gather*}
+				
+			\subsection{Bicomplex}
+				\begin{Def}
+					A \textbf{double complex} or \textbf{bicomplex} in $\mathcal{A}$ is a family $\{C_{p,q}\}$ of object $\mathcal{A}$ together with maps
+					\begin{gather*}
+						d^h:C_{p,q}\rightarrow C_{p-1,q}\qquad d^v:C_{p,q}\rightarrow C_{p,q-1}
+					\end{gather*}
+					Such that: $d^h\circ d^h=d^v\circ d^v=d^vd^h+d^hd^v=0$. Lattice
+					\begin{center}
+						{\small	\begin{tikzcd}
+								&\dots\arrow[d]&\dots\arrow[d]&\dots\arrow[d]\\
+								\dots\arrow[r]&C_{p-1,q+1}\arrow[r]\arrow[d]&C_{p-1,q}\arrow[r]\arrow[d]&C_{p-1,q-1}\arrow[r]\arrow[d]&\dots\\
+								\dots\arrow[r]&C_{p,q+1}\arrow[r]\arrow[d]&C_{p,q}\arrow[d]\arrow[r]\arrow[d]&C_{p,q-1}\arrow[r]&\dots\\
+								\dots\arrow[r]&C_{p+1,q+1}\arrow[r]\arrow[d]&C_{p+1,q}\arrow[r]\arrow[d]&C_{p+1,q-1}\arrow[d]\arrow[r]&\dots\\
+								&\dots&\dots&\dots
+						\end{tikzcd}}
+					\end{center}
+				\end{Def}
+			\subsubsection{Tot Complexes}
+			\begin{Def}
+				Define:
+				\begin{gather*}
+					Tot^{\prod}_n:= \prod_{p+q=n} C_{p,q}\qquad  Tot^{\oplus}_n=\oplus_{p+q=n}C_{p,q}
+				\end{gather*}
+				With the differential
+				\begin{gather*}
+					d:Tot^{\prod}_n\rightarrow Tot^{\prod}_{n-1}\\
+					d:Tot^{\oplus}_n\rightarrow Tot^{\oplus}_{n-1}
+				\end{gather*}
+				such that $d\circ d=0$.
+			\end{Def}
+			
+			\begin{proposition}
+				$C$ is a bounded double complex with exact rows/columns$\Rightarrow Tot(C)$ is acyclic.
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Truncations,Translations}
+			\subsubsection{Truncations}
+			\begin{Def} If $C$ is a chain complex, and $n$ is an integer. We let $\tau_{\geq n} \mathcal{C}$ denote the subcomplex of $\mathcal{C}$ defined by
+				\begin{gather*}
+					(\tau_{\geq n} C)_i=\begin{cases}
+						0&i<n\\
+						Z_n&i=n\\
+						C_i&i>n
+					\end{cases}
+				\end{gather*}
+				Conversely, the quotient complex $\tau_{<n} C=C/(\tau_{\geq n} C)$
+			\end{Def}
+			\begin{proposition}
+				Chearly that:
+				\begin{gather*}
+					H_i(\tau_{\geq n}C)=\begin{cases}
+						0&i<n\\
+						H_i(C)&i\geq n
+					\end{cases}
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			
+			\subsubsection{Translations}
+			\begin{Def}
+				Let $C$ be a complex. Then, define
+				\begin{gather*}
+					C[p]_n=C_{n+p}\qquad C[p]^n=C^{n-p}
+				\end{gather*}
+			\end{Def}
+			More information will be given here:
+		\section{Long Exact Sequence}
+			\subsection{9-Lemma}
+			\begin{proposition}
+				(9-Lemma) Suppose the following commutative diagram
+				\begin{center}
+					\begin{tikzcd}
+						&0&0&0\\
+						0&A'&B'&C'&0\\
+						0&A&B&C&0\\
+						0&A''&B''&C''&0\\
+						&0&0&0
+					\end{tikzcd}
+				\end{center}
+				In abelian category $\mathcal{A}$, then:
+				\begin{itemize}
+					\item If the bottom two rows are exact, so is the top;
+					\item If the top two rows are exact, so is the bottom row;
+					\item If the top and bottom rows are exact, and the composite $A\rightarrow C$ is zero, the middle row is also exact;
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				
+			\end{proof}
+			\subsubsection{Snake's Lemma}
+			\begin{corollary}
+				(Snake's Lemma) Consider the following commutative diagram
+				\begin{center}
+					\begin{tikzcd}
+						&A\arrow[r]\arrow[d]&B\arrow[r]\arrow[d]&C\arrow[r]\arrow[d]&0\\
+						0\arrow[r]&A'\arrow[r]&B'\arrow[r]&C'
+					\end{tikzcd}
+				\end{center}
+				There exists an exact sequence:
+				\begin{center}
+					\begin{tikzcd}
+						0\arrow[r]&ker(f)\arrow[r]&ker(g)\arrow[r]&ker(h)\arrow[r]&Coker(f)\arrow[r]&Coker(g)\arrow[r]&Coker(h)\arrow[r]&0
+					\end{tikzcd}
+				\end{center}
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{5-Lemma}
+			\begin{corollary}
+				(5-Lemma) Consider the following diagram
+				\begin{center}
+					\begin{tikzcd}
+						0\arrow[r]&A_1\arrow[r]\arrow[d]&A_2\arrow[r]\arrow[d]&A_3\arrow[r]\arrow[d]&A_4\arrow[r]\arrow[d]&A_5\arrow[r]\arrow[d]&0\\
+						0\arrow[r]&B_1\arrow[r]&B_2\arrow[r]&B_3\arrow[r]&B_4\arrow[r]&B_5\arrow[r]&0
+					\end{tikzcd}
+				\end{center}
+				with following properties
+				\begin{itemize}
+					\item If$\Rightarrow$
+					\item If$\Rightarrow$
+					\item If $\Rightarrow$
+				\end{itemize}
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{3-Lemma}
+			
+			\begin{corollary}
+				(3-Lemma)For the diagram
+				\begin{center}
+					\begin{tikzcd}
+						0&A_1&B_1&C_1&0\\
+						0&A_2&B_2&C_2&0
+					\end{tikzcd}
+				\end{center}
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Long Exact Sequence}
+			\begin{theorem}
+				\begin{itemize}
+					\item Consider the following short exact sequence in $\mathcal{A}$:
+					\begin{gather*}
+						0\rightarrow A\rightarrow B\rightarrow C\rightarrow 0
+					\end{gather*}
+					be an exact sequence, then we have a long exact sequence 
+					\begin{gather*}
+						\dots\rightarrow H_n(A)\rightarrow H_n(B)\rightarrow H_n(C)\stackrel{\delta}{\rightarrow} H_{n+1}(A)\rightarrow\dots
+					\end{gather*}
+					\item Conversely, $H^{n+1}(A)\rightarrow H^n(C)$.
+				\end{itemize}
+				And in this sense, $H_\bullet$ is a covariant functor.
+			\end{theorem}
+			\begin{proof}
+				\begin{itemize}
+					\item 
+					\item 
+				\end{itemize}
+			\end{proof}
+			\subsection{Exact Triangle}
+				\begin{Def}
+					内容...
+				\end{Def}
+				
+				\begin{corollary}
+					The category of chain complexes $Ch(\mathcal{A})$ is a \textbf{triangulated category}.
+				\end{corollary}
+				\begin{proof}
+					内容...
+				\end{proof}
+		\section{Chain Homotopies}
+			\begin{Def}
+				A category 
+				\begin{itemize}
+					\item has \textbf{enough projective} if for every obeject $X$ if there is a projective object $Q$ equipped with an epimorphism $Q\rightarrow X$;
+					\item has \textbf{enough injectives} iff for every object $X$ there is an injective $Q$ equipped with monomorphism $X\rightarrow P$. 
+				\end{itemize}
+			\end{Def}
+			\begin{proposition}
+				Assuming the axiom of choice, the category $R-Mod$ has enough projective module.
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Introduction}
+				Consider the following vector space decomposition over field:
+				\begin{lemma}
+					Every exact sequence in $Vect_k$ splits.
+				\end{lemma}
+				\begin{gather*}
+					C_n=Z_n\oplus B_n';Z_n=Im(\partial_{n+1}),B_n':=C_n/Z_n=Coker(Z_n\rightarrow C_n)\cong B_{n-1}\\
+					Z_n=B_n\oplus H_n',H_n':=Z_n/B_n=H_n(C)
+				\end{gather*}
+				\begin{center}
+					{\tiny \begin{tikzcd}
+							&\dots\arrow[d]\\
+							&C_{n+1}\arrow[d,"\partial_{n+1}"]&0\arrow[d]\\
+							0\arrow[r]&Im(\partial_{n+1})=B_{n}\arrow[r]\arrow[u,dashrightarrow,shift left= 2]&Ker(\partial_n)=Z_{n}\arrow[r]\arrow[d]\arrow[l,shift left=2,dashrightarrow]&H_n(C_\bullet)\arrow[r]&0\\
+							&&C_{n}\arrow[d,"\partial_{n}"]\arrow[u,shift left=2,dashrightarrow]\\
+							&0\arrow[r]&Im(\partial_n)\arrow[r]=B_{n-1}\arrow[d]&Ker(\partial_{n-1})=Z_{n-1}\arrow[r]\arrow[d]&H_{n-1}(C_\bullet)\arrow[r]&0\\
+							&&0&C_{n-1}\arrow[d]\\
+							&&&\dots
+					\end{tikzcd}}
+				\end{center}
+				Therefore, we can form thecompositions
+				\begin{gather*}
+					C_n\stackrel{\pi}{\rightarrow}Z_n\stackrel{\pi}{\rightarrow} B_{n}\cong B_{n+1}'\subseteq C_{n+1}
+				\end{gather*}
+				By the subspace $C_{n+1}/Z_{n+1}\hookrightarrow C_{n+1}$. Define the \textbf{split map} $s_n:C_n\rightarrow C_{n+1}$. We have
+				\begin{gather*}
+					\partial_{n+1}s_n\partial_{n+1}=\partial_{n+1}
+				\end{gather*}
+				Verify:
+				\begin{gather*}
+					内容...
+				\end{gather*}
+				And:
+				\begin{itemize}
+					\item $\partial s$:
+					\item $s\partial$:
+				\end{itemize}
+				\subsubsection{Split}
+				\begin{Def}
+					A complex $C$ is called split if there exists some $s_n:C_{n}\rightarrow C_{n+1}$ such that
+					\begin{gather*}
+						d=dsd
+					\end{gather*}
+					such $s$ is called \textbf{splitting map}.
+					
+					Especially: If $C$ is exact, then we say that $C$ is \textbf{split exact}.
+				\end{Def}
+				\subsubsection{Chain Contruction}
+					\begin{Def}
+						\begin{itemize}
+							\item We say that a chain map $f:C\rightarrow D$ is \textbf{null homotopic} if there are maps $s_n:C_n\rightarrow D_{n+1}$ such that
+							\begin{gather*}
+								f=ds+sd
+							\end{gather*}
+							\item The maps $\{s_n\}$ are called a \textbf{chain constraction} of $f$.
+						\end{itemize}
+					\end{Def}
+					\begin{proposition}
+						For chain complex $C_*$, $C_*$ splits exact$\Leftrightarrow id_{C_*}$ is null homotopic.
+					\end{proposition}
+					\begin{proof}
+						\begin{itemize}
+							\item $\Rightarrow$ Then $id_{C_*}=ds+sd$.  Now, we have
+							\begin{gather*}
+								d=d(ds+sd)=dsd
+							\end{gather*}
+							\item $\Leftarrow$ If $id_{C_*}$ is null homotopic then there exists some $s_n$ such that
+							\begin{gather*}
+								id_{C_n}=d_{n+1}s_n+s_{n-1}d_n
+							\end{gather*}
+							
+							(Exactness) Suppose that $a\in C_n$, $d_n(a)=0,a\in Ker(d_n)$. Then,
+							\begin{gather*}
+								\Rightarrow s_{n-1}d_n(a)=0
+								\\ \Rightarrow a=d_{n+1}s_n(a)\\
+								\Rightarrow a\in Im(d_{n+1})\subseteq ker(d_n) \\
+								d^2=0\Rightarrow Im(d_{n+1})=Ker(d_n)
+							\end{gather*}
+							
+							(Splitting) 
+							\begin{gather*}
+								d=d(ds+sd)=dsd
+							\end{gather*}
+						\end{itemize}
+					\end{proof}
+				\subsubsection{Chain Homotopies}
+					\begin{Def}
+						\begin{itemize}
+							\item $f:C\rightarrow D$ is \textbf{null homotopic} if
+							\begin{gather*}
+								f=ds+sd
+							\end{gather*}
+							\item Consider two chain maps 
+							\begin{gather*}
+								f,g:C\rightarrow D
+							\end{gather*}
+							Then, $f$ and $g$ are \textbf{homotopic} iff $f-g$ is null homotopic. i.e.
+							\begin{gather*}
+								f-g=sd+ds
+							\end{gather*}
+							The maps $(s_n)$ are called \textbf{chain homotopy from} $C$ to $D$. 
+							\item $f:C\rightarrow D$ is a \textbf{homotopy equivalence}
+						\end{itemize}
+					\end{Def}
+					
+					\begin{lemma}
+						(Chain Homotopy Invariance for $H_\bullet$)  
+						\begin{itemize}
+							\item 
+							\item 
+						\end{itemize} 
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{proposition}
+						\begin{itemize}
+							\item 	If $f:C\rightarrow D$ is null homotopic, then every map $f_*:H_n(C)\rightarrow H_n(D)$ is zero;
+							\item If $f\simeq g$, then $H_n(f)=H_n(g):H_n(C)\rightarrow H_n(D)$
+						\end{itemize}
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+				\subsubsection{Quotient Category}
+					\begin{proposition}
+						Let $K$ be a quotient category of $Ch$.Then, the functor
+						\begin{gather*}
+							H_n:Ch(\mathcal{A})\rightarrow \mathcal{A}
+						\end{gather*}
+						will factors through:
+						\begin{itemize}
+							\item 
+							\item 
+							\item 
+							\item 
+						\end{itemize}
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+			\subsection{Resolution}
+				
+		\section{Homology Exact Sequence}
+			\begin{Def}
+				An \textbf{exact sqeunce} in $\mathcal{A}$ is a chain complex $C_\bullet$ in $\mathcal{A}$ with vanishing chain homology in each degree
+				\begin{gather*}
+					\forall n\in \NN,H_n(C)=0
+				\end{gather*}
+				
+				Especially, a \textbf{short exact sequence} is an exact sequence of the form
+				\begin{gather*}
+					\dots\rightarrow0\rightarrow A\rightarrow B\rightarrow C\rightarrow 0\rightarrow \dots
+				\end{gather*}
+				Mostly written as
+				\begin{gather*}
+					0\rightarrow A\rightarrow B\rightarrow C\rightarrow 0
+				\end{gather*}
+			\end{Def}
+			\subsection{Some of Skills in Chain }
+				\subsubsection{$3\times 3$-Lemma}
+					\begin{proposition}
+						内容...
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+				\subsubsection{Snake Lemma}
+				\subsubsection{5-Lemma}
+				\subsubsection{Addenbum}
+			\subsection{Existence of $\partial$ in Exact Chain Complexes}
+			So, the following diagram commutes:
+			\begin{center}
+				\begin{tikzcd}
+					H_*(A)&&H_*(B)\\
+					&H_*(C)
+				\end{tikzcd}\qquad(The \textbf{exact triangle})
+			\end{center}
+			
+			\begin{proposition}
+				
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Resolution}
+			\begin{proposition}
+				Suppose $A_*$ be a resoltion of $M$, then
+				\begin{gather*}
+					H_n(A_*)=\begin{cases}
+						M&n=0\\
+						0&n\in \ZZ-\{0\}
+					\end{cases}
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				Omitted.
+			\end{proof}
+			\subsection{Functor $Ext^1$}
+			\begin{Def}
+				Select an injective resolution of $X$:
+				\begin{gather*}
+					0\rightarrow X\rightarrow I^0\rightarrow I^1\rightarrow I^2\rightarrow\dots
+				\end{gather*}
+				Apply $H(A,-)$ and deleting $Hom(A,X)$ we get
+				\begin{gather*}
+					0\rightarrow Hom(A,I^0)\stackrel{d^0}{\rightarrow} Hom(A,I^1)\stackrel{d^1}{\rightarrow} Hom(A,I^2)\rightarrow \dots
+				\end{gather*}
+				Define:
+				\begin{gather*}
+					Ext^1(A,X):=ker(d^1)/im(d^0)
+				\end{gather*}
+			\end{Def}
+			We have the following isomophic construction via projective resolution:
+			\begin{proposition}
+				In in the category of $\ZZ$-module/abelian groups,we have the exact sequence as followings:
+				\begin{center}
+					\begin{tikzcd}
+						0\arrow[r]&Hom(C,X)\arrow[r]&Hom(B,X)\arrow[r]&Hom(A,X)\arrow[dll, {name=D, offset=-1}, out=0, in=180]\\
+						&Ext^1(C,X)\arrow[r]&Ext^1(B,X)\arrow[r]&Ext^1(A,X)\arrow[r]&0
+					\end{tikzcd}
+				\end{center}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			In General: In $\mathcal Ab$-category we have the long exact sequence (here ) 
+			\subsubsection{Extension and Ext}
+				Ref: Weibel 3.4
+				\begin{Def}
+					\begin{itemize}
+						\item An \textbf{extension} of $A$ by $B$ is an exact sequence
+						\begin{gather*}
+							0\rightarrow A\rightarrow X\rightarrow B\rightarrow 0
+						\end{gather*}
+						\item Two extensions of $A$ by $B$ are \textbf{equivalent} if
+						\begin{center}
+							\begin{tikzcd}
+								0\arrow[r]&B\arrow[r]\arrow[d,equal]&X\arrow[r]\arrow[d]&A\arrow[r]\arrow[d,equal]&0\\
+								0\arrow[r]&B\arrow[r]&X\arrow[r]&A\arrow[r]&0
+							\end{tikzcd}
+						\end{center}
+					\end{itemize}
+				\end{Def}
+				\begin{example}
+					(Extension of $\ZZ/p$) Consider the following equivalent class of split extensions:
+					\begin{center}
+						\begin{tikzcd}
+							0\arrow[r]&\ZZ/p\arrow[r,"p"]&\ZZ/p^2\arrow[r,"i"]&\ZZ/p\arrow[r]&0
+						\end{tikzcd},i=1,\dots,p-1
+					\end{center}
+				\end{example}
+				\begin{lemma}
+					$Ext^1(A,B)=0\Leftrightarrow $ Every extension of $A$ by $B$ splits.
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\begin{theorem}
+					内容...
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\begin{Def}
+					(Baer Sum)
+				\end{Def}
+		\section{Mapping Cones and Cylinders}
+			\subsection{Mapping Cones}
+			\begin{Def}
+				Let $f:B\rightarrow C$ be a map of chain complexes. The \textbf{mapping cone} of $f$ is the chain complex $cone(f)$ given by:
+				\begin{gather*}
+					[cone(f)]_n:=B_{n-1}\oplus C_n
+				\end{gather*}
+				With differentials
+				\begin{center}
+					$d(b,c)=(-d(b),d(c)-f(b))\quad\begin{pmatrix}
+						-d_B&0\\
+						-f&+d_C
+					\end{pmatrix}:$\qquad{\tiny \begin{tikzcd}
+					B_{n-1}\arrow[rr,"-"]\arrow[rrdd,"-"]&&B_{n-2}\\
+					\oplus&&\oplus\\
+					C_n\arrow[rr,"+"]&&C_{n-1}
+				\end{tikzcd}}
+				\end{center}
+				Then, we form a exact sequence of double complexes:
+				\begin{center}
+					\begin{tikzcd}
+						0\arrow[r,"i"]&C\arrow[r]&D=cone(f)\arrow[r,"p"]&B[-1]\arrow[r]&0
+					\end{tikzcd}
+				\end{center}
+			\end{Def}
+			
+			Especially $cone(C):=cone(id_C)$
+			
+			\textbf{Remark} This is a double complex: Verify
+			\begin{center}
+				\begin{tikzcd}
+					C_{n-1}\arrow[r]\arrow[d]&B_{n-2}\oplus C_{n-1}\arrow[r]\arrow[d]&B_{n-2}\arrow[d]\\
+					C_n\arrow[r]&B_{n-1}\oplus C_n\arrow[r]&B_{n-1}
+				\end{tikzcd}
+			\end{center}
+			We have $d(i(c))=i(d(c))=(0,d(c));c\in C_{n-1};p(d(b,c))=d(p(b,c))=d(c)$
+			
+			And exactness by definition.
+			\begin{proposition}
+				$f:C\rightarrow D$ is \textbf{null homomtopic} iff if $f$ extends $(-s,f):cone(C)\rightarrow D$.
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				With the exact sequence above, we have a long exact sequence
+				\begin{gather*}
+					\dots\rightarrow H_{n+1}(cone(f))\rightarrow H_n(B)\rightarrow H_n(C)\rightarrow H_n(cone(f))\rightarrow \dots
+				\end{gather*}
+				with $\partial=f_*:H_*(B[-1])\rightarrow H_*(C)$
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{corollary}
+				$f:B\rightarrow C$ is a quasi-isomorphism$\Leftrightarrow$ The mapping cone of $cone(f)$ is exact.
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Mapping Cylinder}
+			\begin{Def}
+				Define: For $f:B\rightarrow C$, the \textbf{mapping cylinder}
+				\begin{gather*}
+					\begin{cases}
+						cyl(f):=B_n\oplus B_{n-1}\oplus C_n\\
+						d(b,b',c):=(d(b)+b',-d(b'),d(c)-f(b'))
+					\end{cases}\\ \begin{pmatrix}
+						d_B&id_B&0\\
+						0&-d_B&0\\
+						0&-f&d_C
+					\end{pmatrix}\Rightarrow \begin{pmatrix}
+					d_B&id_B&0\\
+					0&-d_B&0\\
+					0&-f&d_C
+					\end{pmatrix}^2=\begin{pmatrix}
+						d_B^2&d_B-d_B&0\\
+						0&d_B^2&0\\
+						0&fd_B-d_Cf&d_C^2
+					\end{pmatrix}=0
+				\end{gather*}
+				The diagram as following:
+				\begin{center}
+					{\tiny \begin{tikzcd}
+							B_n\arrow[rr,"+"]&&B_{n-1}\\
+							\oplus&&\oplus\\
+							B_{n-1}\arrow[rr,"-"]\arrow[rruu,"+"]\arrow[rrdd,"-"]&&B_{n-2}\\
+							\oplus&&\oplus\\
+							C_n\arrow[rr,"+"]&&C_{n-1}
+					\end{tikzcd}}
+				\end{center}
+			\end{Def}
+			
+			\begin{lemma}
+				Let $cyl(C):=cyl(id_C)$. Then, it has 
+				\begin{gather*}
+					C_n\oplus C_{n-1}\oplus C_n
+				\end{gather*}
+				in degree $n$. Then, the two chain maps $f,g:C\rightarrow D$ are chain homotopic$\Leftrightarrow$ They extends to a map
+				\begin{gather*}
+					(f,s,g):cyl(C)\rightarrow D
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				\begin{itemize}
+					\item $\Rightarrow$ If $f-g=sd+ds$ then we have
+					\begin{gather*}
+						(f,s,g):cyl(C)\rightarrow D\qquad (a,b,c)\mapsto f_n(a)+s_{n-1}(b)+g_n(c)
+					\end{gather*}
+					Then, we have
+					\begin{gather*}
+						(f,s,g)\circ d_{Cyl(C)}=\begin{pmatrix}
+							f&s&g
+						\end{pmatrix}\begin{pmatrix}
+							d&1&0\\
+							0&-d&0\\
+							0&-1&d
+						\end{pmatrix}\begin{pmatrix}
+							1\\
+							1\\
+							1
+						\end{pmatrix}=fd+f-ds-g+gd=(s+f+g)d=d(s+f+g)
+					\end{gather*}
+					\item $\Leftarrow$ Suppose that $(f,s,g)$ is a chain map, then
+					\begin{gather*}
+						(f,s,g)\circ d_{Cyl(C)}=fd+f-ds-g+gd=fd+gd+sd\Rightarrow f-g=ds+ds
+					\end{gather*}
+				\end{itemize}
+			\end{proof}
+			
+			\begin{lemma}
+				The subcomplex of elements $(0,0,c)$ is isomorphic to $C$. 
+				
+				The corresponding inclusion 
+				\begin{gather*}
+					\alpha:C\rightarrow cyl(f)
+				\end{gather*}
+				
+				is a \underline{quasi-isomorphism}.
+			\end{lemma}
+			\begin{proof}
+				Firstly, this is a subcomplex. We have
+				\begin{gather*}
+					d(0,0,c)=(0,0,d(c))
+				\end{gather*}
+				
+				Then, $\alpha:C\rightarrow Cyl(f),c\mapsto (0,0,c)$, then
+				\begin{gather*}
+					H_n(\alpha):H_n(C)\rightarrow H_{n}(cyl(f))
+				\end{gather*}
+				
+				is a quasi-isomorphism: The quotient $cyl(f)/\alpha(C)=cone(-id_B)$. 
+				\begin{gather*}
+					内容...
+				\end{gather*}
+				So, it is null-homotopic, thus follows the long exact homology sequence
+				\begin{gather*}
+					0\rightarrow C\stackrel{\alpha}{\rightarrow} cyl(f)\rightarrow cone(-id_B)\rightarrow 0
+				\end{gather*}
+			\end{proof}
+			
+			\begin{proposition}
+				As above. $\beta:(b,b',c)\mapsto f(b)+c,cyl(f)\rightarrow C$ defines a chain map such that
+				\begin{gather*}
+					\beta\alpha=id_C
+				\end{gather*}
+				
+				And, $s(b,b',c)\rightarrow (0,b,0)$ defines a chain homotopy from the identity of $cyl(f)$ to $\alpha\beta$.
+				
+				$\alpha$ is in fact a chain homotopy equivalence between $C$ and $cyl(f)$.
+			\end{proposition}
+			\begin{proof}
+				Consider the composition
+				\begin{gather*}
+					内容...
+				\end{gather*}
+			\end{proof}
+			\subsubsection{Exact Sequence between }
+		\section{Euler Characteristics}
+			\subsection{Betti Numbers}
+			\subsection{Euler Characteristics}
+			\subsubsection{On Complex of Vector Spaces}
+			\begin{Def}
+				Let $R$ be a commutative ring, $V$ be a chain complex of $R$-modules:
+				
+				If each $V_n$ is \textbf{finitely generated and projective}. Then, the \textbf{Euler characteristic} of $V$ is the alternating sum of their ranks, if this is finite
+				\begin{gather*}
+					\chi(V)=\sum (-1)^n rank_R(V_n)
+				\end{gather*}
+		
+			\end{Def}
+				\subsubsection{On the Chain Complexes}
+			\begin{theorem}
+				(Euler-Poincare) 
+				\begin{gather*}
+					\chi(C_\bullet)=\sum (-1)^i dim(H_i(C))
+				\end{gather*}
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Euler Characteristic of a Topological Space}
+			\subsection{From Euler Characteristics to $K_0$ Groups}
+	\chapter{Derived Functors}
+		\section{$\delta$-Functors}
+			\begin{Def}
+				A (covariant) homological/cohomological $\delta$-functor between $\mathcal{A}$ and $\mathcal{B}$ is a collection of additive functors $T_n:\mathcal{A}\rightarrow \mathcal{B}$ and
+				\begin{gather*}
+					\delta_n:T_n(C)\rightarrow T_{n-1}(A)\\
+					\delta^n:T^n(C)\rightarrow T^{n+1}(A)
+				\end{gather*}
+				defined for each short exact sequence $0\rightarrow A\rightarrow B\rightarrow C\rightarrow 0$ in $\mathcal{A}$. Here we make the convention that $T^n=T_n=0,n<0$. 
+			\end{Def}
+			The two conditions are imposed:
+			\begin{itemize}
+				\item Long exact sequence
+				\begin{gather*}
+					\dots\rightarrow T_{n+1}(C)\stackrel{\delta}{\rightarrow} T_n(A)\rightarrow T_n(B)\rightarrow T_n(C)\stackrel{\delta}{\rightarrow}T_{n-1}(A)\rightarrow \dots\\
+					\dots\rightarrow T^{n-1}(C)\stackrel{\delta}{\rightarrow} T^n(A)\rightarrow T^n(B)\rightarrow T^n(C)\stackrel{\delta}{\rightarrow}T^{n+1}(A)\rightarrow \dots
+				\end{gather*}
+				\item For two exact $0\rightarrow A\rightarrow B\rightarrow C\rightarrow 0$ and $0\rightarrow A'\rightarrow B'\rightarrow C'\rightarrow 0$, we have commutes squares
+				\begin{center}
+					\begin{tikzcd}
+						T_n(C')\arrow[d]\arrow[r,"\delta"]&T_{n-1}(A')\arrow[d]\\
+						T_n(C)\arrow[r,"\delta"]&T_{n-1}(A)
+					\end{tikzcd}
+				\end{center}
+			\end{itemize}
+			\begin{example}
+				Consider the functors 
+				\begin{gather*}
+					H_*:Ch_{\geq 0}(\mathcal{A})\rightarrow\mathcal{A}\\
+					H^*:Ch^{\geq 0}(\mathcal{A})\rightarrow \mathcal{A} 
+				\end{gather*}
+				$H_*$ gives a homological $\delta$-functor, and $H^*$ gives a cohomological $\delta$-functor. See here:
+			\end{example}
+			\begin{proposition}
+				Let $\mathcal{S}$ be a category of short exact sequences
+				\begin{gather*}
+					0\rightarrow A\rightarrow B\rightarrow C\rightarrow 0\qquad(*)
+				\end{gather*}
+				in $\mathcal{A}$. Then, $\delta_i$ is a natural transformation form the functor sending from the functor sending $(*)$ to $T_i(C)$, to the functor sending $(*)$ to $T_{i-1}(A)$.
+			\end{proposition}
+			\begin{proof}
+				Consider the two functors on on the category of short exact sequences $\mathcal{S}$ to $\mathcal{B}$:
+				\begin{gather*}
+					\mathcal{F}:(0\rightarrow A\rightarrow B\rightarrow C\rightarrow 0)\mapsto T_i(C)\\
+					\mathcal{G}:(0\rightarrow A\rightarrow B\rightarrow C\rightarrow 0)\mapsto T_{i-1}(A)
+				\end{gather*} 
+				
+				Thus, the natural transformation
+				\begin{center}
+					\begin{tikzcd}
+						\mathcal{S}\arrow[rr,bend left=20,"\mathcal{F}"]\arrow[rr,bend right=20,"\mathcal{G}",swap]&{\tiny \Downarrow}&\mathcal{B}
+					\end{tikzcd}
+				\end{center}
+				
+				We could consider the following example: 
+				\begin{center}
+					\begin{tikzcd}
+						(0\rightarrow A\rightarrow B\rightarrow C\rightarrow 0)\arrow[d,"{(f,g,h)}"]&T_i(C)\arrow[r]\arrow[d,"T_i(h)"]&T_{i-1}(A)\arrow[d,"T_{i-1}(f)"]\\
+						(0\rightarrow A'\rightarrow B'\rightarrow C'\rightarrow 0)&T_i(C')\arrow[r]&T_{i-1}(A')
+					\end{tikzcd}
+				\end{center}
+			\end{proof}
+			
+			\begin{example}
+				(p-torsion) If $p$ is an integer,the functors $T_0(A):=A/pA$ and
+				\begin{gather*}
+					T_1(A)={}_pA=\{a\in A|pa=0\}
+				\end{gather*}
+				fit together to form a homological $\delta$-functor, or a cohomological $\delta$-functor from $Ab$ to $Ab$: Apply the snake lemma to
+				\begin{center}
+					\begin{tikzcd}
+						0\arrow[r]&A\arrow[r]\arrow[d,"p"]&B\arrow[r]\arrow[d,"p"]&C\arrow[r]\arrow[d]&0\\
+						0\arrow[r]&A\arrow[r]&B\arrow[r]&C\arrow[r]&0
+					\end{tikzcd}
+				\end{center}
+				We get the exact sequence:
+				\begin{gather*}
+					0\rightarrow{ }_p A\rightarrow { }_p B\rightarrow { }_p C\stackrel{\delta}{\rightarrow} A/pA\rightarrow B/pB\rightarrow C/pC\rightarrow 0
+				\end{gather*}
+			\end{example}
+			\begin{example}
+				(Generalization) Similarly, for a ring $R$ with element $r\in R$, then
+				\begin{gather*}
+					T_0(M):=M/rM\qquad T_1:={ }_r M
+				\end{gather*}
+				
+				And then, we will build a homological/cohomological functor $\delta:R-Mod\rightarrow {\mathcal Ab}$,
+				\begin{gather*}
+					T_n(M)=Tor_n^R(R/r,M)
+				\end{gather*}
+				
+				Especially, if $r$ is nonzerodivisor, equivalently to say is 
+				\begin{gather*}
+					{ }_r R:=\{s\in R|rs=0\}=0
+				\end{gather*}
+				
+				Then, we have
+				\begin{gather*}
+					T_1^R(M)=Tor_1^R(R/r,M)={ }_r M;Tor_n(R/r,M)=0,n\geq 2
+				\end{gather*}
+				
+				And:
+				\begin{gather*}
+					Tor_1^R(R/r,M)={ }_r M/\{sm|rs=0,r\in R,m\in M\}
+				\end{gather*}
+				
+				In general, ${ }_r R\not=0$.
+			\end{example}
+			
+			\subsection{Morphism of $\delta$-Functors}
+			\begin{Def}
+				Suppose $S,T$ be two collection of $\delta$-funtors. A \textbf{morphism of $\delta$-functors} is a family of natural transformations between these functors, which commute with $\delta$. i.e. For $0\rightarrow A\rightarrow B\rightarrow C\rightarrow 0$ we have
+				\begin{center}
+					\begin{tikzcd}
+						S_n(C)\arrow[r,"\delta_n"]\arrow[d,"f_n(C)"]&S_{n-1}(A)\arrow[d,"f_{n-1}(A)"]\\
+						T_n(C)\arrow[r,"\delta_n"]&T_{n-1}(A)
+					\end{tikzcd}
+				\end{center}
+			\end{Def}
+			And
+			\begin{Def}
+				\begin{itemize}
+					\item A homological functor $T$ is \textbf{universal}, if: Given
+					\begin{itemize}
+						\item Another $\delta$-Functor $S$;
+						\item A morphism $f_0:S_0\rightarrow T_0$
+					\end{itemize}
+					There exists a unique morphism $\{f_n:S_n\rightarrow T_n\}$ of $\delta$ functor extends $f_0$;
+					\item Dual Definition \textbf{couniversal} for extension $f_0:T_0\rightarrow S_0$ to $\{f_n:T_n\rightarrow S_n\}$.
+				\end{itemize}
+			\end{Def}
+			
+			\begin{proposition}
+				Functor 
+				\begin{itemize}
+					\item $H_*(-):Ch_{\geq 0}(\mathcal{A})\rightarrow \mathcal{A}$ is universal $\delta$-functor;
+					\item $H^*(-):Ch^{\geq 0}(\mathcal{A})\rightarrow \mathcal{A}$ is universal $\delta$-functor;
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\begin{proposition}
+				Consider the following functor: Suppose $F:\mathcal{A}\rightarrow \mathcal{B}$ is exact, then the following functor:
+				\begin{gather*}
+					T_0=F\qquad T_n=0,n\not=0
+				\end{gather*}
+				Then, $T=\{T_n\}$ is a universal $\delta$-functor.
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+		
+		\section{Left Derived Functors}
+			\begin{Def}
+				Let $F:\mathcal{A}\rightarrow \mathcal{B}$ be a \underline{right exact functor} between two abelian categories. 
+				
+				
+				If $\mathcal{A}$ has enough projectives, we can construct the \textbf{left derived functors} $L_iF,i\geq 0$ of $F$ as follows: If $A\in \mathcal{A}$, choose a projective resolution $P\rightarrow A$ and define
+				\begin{gather*}
+					L_iF(A):=H_i(F(P))
+				\end{gather*}
+			\end{Def}
+			
+			Notice
+			
+			\begin{center}
+				\begin{tikzcd}
+					\dots\arrow[r]& P_2\arrow[r]\arrow[d]&P_1\arrow[r]\arrow[d]&P_0\arrow[d]\\
+					\dots\arrow[r]&0\arrow[r]&0\arrow[r]&A
+				\end{tikzcd}$\Rightarrow$ Exact $ P_1\rightarrow P_0\rightarrow A\Rightarrow$ Exact $ F(P_1)\rightarrow F(P_0)\rightarrow F(A)\rightarrow 0$
+			\end{center}
+			
+			Consider the exact sequence $F(P_1)\rightarrow F(P_0)\rightarrow F(A)\rightarrow 0$, we have
+			\begin{gather*}
+				L_0F(A)=H_0(F(P))=\frac{ker(F(A)\rightarrow 0)}{Im(F(P_0)\rightarrow F(P_A))}=\frac{F(P_0)}{ker(F(P_0)\rightarrow F(A))}=Im(F(P_0)\rightarrow F(A))=F(A)
+			\end{gather*}
+			\subsection{Universal $\delta$-Functority for $L_*F(-)$}
+			The aim is to show $L_*F$ form a universal homological $\delta$-functor. 
+			
+			\begin{lemma}
+				The objects $L_i F(A)$ of $\mathcal{B}$ are well defined up to isomorphism. That is: If $Q\rightarrow A$ is a second projective resolution, there exists a canonical isomorphism
+				\begin{gather*}
+					L_i F(A)=H_i(F(P))\stackrel{\cong}{\rightarrow} H_i(F(Q))
+				\end{gather*}
+				In particular, a different choice of projective resolution would yield new functor $\hat{L}_i F$, which are naturally isomorphic to the functors $L_iF$.
+				\end{lemma}
+				This implies, that the value of $L_iF(A)$
+				\begin{proof}
+					Apply comparision theorem:
+					\begin{center}
+						\begin{tikzcd}
+							内容...
+						\end{tikzcd}
+					\end{center}
+				\end{proof}
+			\begin{corollary}
+				If $A$ is projective, then $L_i F(A)=0,i\not=0$.
+			\end{corollary}
+			\begin{proof}
+				Consider the projective resolution of $0\rightarrow P\stackrel{id}{\rightarrow} P\rightarrow 0$, then$L_iF(A)=H_i(F(P))=0$
+			\end{proof}
+			\subsection{$F$-Acyclic Functor}
+			\begin{Def}
+				An object $Q$ is called \textbf{$F$-Acyclic} if 
+				\begin{gather*}
+					L_iF(Q)=0,i\not=0
+				\end{gather*}
+			\end{Def}
+			\subsection{$L_iF$ is Universal $\delta$-Functor}
+			\begin{lemma}
+				If $f:A'\rightarrow A$ is any map in $\mathcal{A}$, there exists a natural map $L_iF(f):L_iF(A')\rightarrow L_iF(A)$. 
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\begin{proposition}
+				内容...
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\begin{theorem}
+				Each $L_iF$ is an additive functor from $\mathcal{A}$ to $\mathcal{B}$
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				(Preversing Derived Functor)
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{theorem}
+				The derived funcotr $L_*F$ form a homological $\delta$-functor.
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Dimension Shifting}
+			\begin{proposition}
+				内容...
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Homology,Cohomology}
+			\begin{proposition}
+				The functors $H_*:Ch_{\geq 0}(\mathcal{A})\rightarrow \mathcal{A}$ and $H^*:Ch^{\geq 0}(\mathcal{A})\rightarrow \mathcal{A}$ are universal $\delta$-functors.
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Effaceable Functors}
+			\begin{Def}
+				\begin{itemize}
+					\item An additive funcotr $F:\mathcal{A}\rightarrow \mathcal{B}$ is \textbf{effaceable} if for each object $A$ of $\mathcal{A}$ there is a monomorphism $u:A\rightarrow I$ such that $F(u)=0$;
+					\item Conversely, \textbf{coeffaceable} iff there exists surjection $u:P\rightarrow A$ such that $F(u)=0$.
+				\end{itemize}
+			\end{Def}
+			\begin{proposition}
+				\begin{itemize}
+					\item If $T_*$ is a homological $\delta$-functor such that $T_n$ is coeffaceable except $T_0$, then $T_*$ is universal;
+					\item If $T^*$ is a cohomological $\delta$-funcotr such that $T_n$ os effacable, then $T^*$ is universal. 
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+		\section{Right Derived Functors}
+			\subsection{Right Derived Functors}
+				\begin{Def}
+					\begin{gather*}
+						R^iF(A):=H^i(F(I))
+					\end{gather*}
+				\end{Def}
+				\begin{proposition}
+					(Right-Derived Functor is Dual of Left-Derived Functor)
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Ext Functor}
+			\subsubsection{Ext Functor on $R$-modules}
+				\begin{Def}
+					Define:
+					\begin{gather*}
+						Ext^i_R(A,B):=R^iHom_R(A,-)(B)
+					\end{gather*}
+				\end{Def}
+				
+				\begin{proposition}
+					(Criteria for Injective Modules) The followings are equivalent:
+					\begin{itemize}
+						\item $B$ is injective $R$-module;
+						\item $Hom(-,B)$ is exact;
+						\item $Ext_R^i(A,B)$ vanishes for all $i\not=0$ and all $A$; $B$ is $Hom_R(-,B)$ acyclic for all $A$.
+						\item $Ext^1_R(A,B)$ vanishes for all $A$.
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+					\begin{itemize}
+						\item 
+						\item 
+						\item 
+						\item 
+					\end{itemize}
+				\end{proof}
+				
+				\begin{proposition}
+					(Criteria for Projective Modules)The followings are equivalent:
+					\begin{itemize}
+						\item $A$ is projective;
+						\item $Hom_R(A,-)$ is exact;
+						\item $Ext_R^i(A,B)$ vanishes for all $i\not=0$ and all $B$;
+						\item $Ext^1_R(A,B)$ vanishes for all $B$.
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsubsection{Ext Functor in Abelian Categories}
+				\begin{Def}
+					\begin{itemize}
+						\item 
+						\item 
+					\end{itemize}
+				\end{Def}
+				\begin{lemma}
+					The two concepts above are equivalent in abelian category.
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\begin{example}
+					内容...
+				\end{example}
+			\subsubsection{Ext Functor in Derived Category}
+				\begin{Def}
+					Consider the \underline{derived category $D(\mathcal{A})$}. Define
+					\begin{gather*}
+						Ext^p(X,A):=Hom_{D(A)}(X,A[p])
+					\end{gather*}
+				\end{Def}
+		\section{Adjoint Functors and Left/Right Exactness}
+			\begin{theorem}
+				Suppose $L:\mathcal{A}\rightarrow \mathcal{B}$ and $R:\mathcal{B}\rightarrow \mathcal{A}$ be adjoint pair. Then, there exists a natural isomorphism
+				\begin{gather*}
+					Hom(L(A),B)\stackrel{\cong}{\rightarrow} Hom(A,R(B))
+				\end{gather*}
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{corollary}
+				\begin{itemize}
+				\item $\otimes_R B:mod-R\rightarrow Ab$ is left adjoint to $Hom_{Ab}(B,-)$, so $-\otimes_R B$ is right exact;
+				\item More generally, if $B$ is an $R-S$ bimodule, then $\otimes_RB$ takes $mod-R$ to $mod-S$ and is a left adjoint, so it is right exact.
+				\end{itemize}
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				内容...
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Tor Functor}
+			\begin{Def}
+				Define: For functor $T(A)=A\otimes_R B$, define the abelian group
+				\begin{gather*}
+					Tor^R_n(A,B):=(L_n T)(A)
+				\end{gather*}
+				
+				In particular, $Tor_0^R(A,B)=A\otimes_R B$. 
+				
+				And when $A$
+			\end{Def}
+			\subsection{Adjoint Limit and Colimits}
+		\section{Balancing Tor and Ext}
+			Recall: Tensor Complex $(A\otimes B,d\otimes 1,(-1)^p\otimes d)$, take the notation by
+			\begin{gather*}
+				P\otimes_R Q\qquad Tot^\oplus(P\otimes_R Q)
+			\end{gather*}
+			
+			\subsection{Balancing Tor}
+			\begin{theorem} 
+				For $R$-module $A,B$ we have:
+				\begin{gather*}
+					L_n(A\otimes_R -)(B)=L_n(\otimes_R B)(A)=Tor^R_n(A,B);n\in \NN
+				\end{gather*}
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{corollary}
+				We have:
+				\begin{gather*}
+					Tor^R_n(\oplus_{i\in I} A_i,B)\cong \oplus_{i\in I}Tor_n^R(A_i,B)\\
+					Tor^R_n(A,\oplus_{i\in I} B_i)\cong \oplus_{i\in I} Tor_n^R(A,B_i)
+				\end{gather*}
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			A question is: When can we state:
+			\begin{gather*}
+				Tor^R_n(\prod A_i,B)\cong \prod Tor^R_n(A_i,B)
+			\end{gather*}
+			
+			\begin{itemize}
+				\item $n=0$: $Tor^R_0(\prod A_i,B) \Leftrightarrow$
+				\item $n\geq 1$: $\Leftrightarrow$ $R$ is right-coherent ring, and $B$ is finitely generated module.
+			\end{itemize}
+			
+			\subsection{Balancing Ext}
+			\begin{theorem}
+				For $R$-module $A,B$ we have
+				\begin{gather*}
+					Ext^n_R(A,B)=R^n Hom_R(A,-)(B)=R^nHom_R(-,B)(A)
+				\end{gather*}
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{corollary}
+				We have
+				\begin{gather*}
+					Ext^n_R(A,\prod_{j\in J} B_j)=\prod_{j\in J} Ext_R^n(A,B_j)\\
+					Ext^n_R(\oplus_{i\in I} A_i,B)=\prod_{i\in I} Ext^n_R(A_i,B)
+				\end{gather*}
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+		More discussions in next chapter.
+	\chapter{Tor and Ext}
+		\section{Tor for Abelian Groups}
+			\begin{proposition}
+				Suppose $A,B$ are abelian groups. Then we have
+				\begin{gather*}
+					Tor_n^\mathbb{Z}(A,B)=\begin{cases}
+						\mathbb{Z}&n=1\\
+						0&n>1
+					\end{cases}
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{theorem}
+				(Acyclic Assembly Lemma) Let $C$ be a double complex in $mod-R$, then 
+				\begin{itemize}
+					\item 
+					\item 
+				\end{itemize}
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{Def}
+				($Hom$-Cochain Complex)
+			\end{Def}
+			
+			\begin{theorem}
+				For every pair of $R$-modules $A$ and $B$, and all $n$,
+				\begin{gather*}
+					Ext_R^n(A,B)=R^nHom_R(A,-)(B)=R^nHom_R(-,B)(A)
+				\end{gather*}
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{Def}
+				内容...
+			\end{Def}
+		\section{Tor and Flatness}
+			\begin{Def}
+				Recall:
+				\begin{itemize}
+					\item 
+					Consider $B\in R-Mod$. Then, $B$ is \textbf{flat} iff $-\otimes B$ is exact.
+					
+					\item Dual to define $A\in Mod-R$. Then, $A$ is \textbf{flat} iff $A\otimes -$ is exact.
+				\end{itemize}
+			\end{Def}
+			\subsubsection{Pontrjagin Dual}
+			\begin{Def}
+				The Pontrjagin dual $B^*$ of a left-module $B$ is the right $R$-module 
+				\begin{gather*}
+					B\in Hom_{Ab}(B,\QQ/\ZZ)
+				\end{gather*}
+				and element $r\in R$ acts via $(fr)(b)=f(rb)$. So $B^*$ is a right $R$-module.
+			\end{Def}
+			
+			\begin{theorem}
+				For any $R-moudle$ we have
+				\begin{gather*}
+					Ext^n_R(A,B^\vee)\cong (Tor_n^R(A,B))^\vee
+				\end{gather*}
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+		\section{Ext for Nice Rings}
+			\begin{lemma}
+				Let $A,B$ be abelian groups, then we have
+				\begin{gather*}
+					Ext^n_{Ab}(A,B)=\begin{cases}
+						\\
+						0&n>1
+					\end{cases}
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+		\section{Ext and Extensions}
+		\section{Derived Functor and Inverse Limits}
+			\textbf{Notion} In this section, we take
+			\begin{itemize}
+				\item $\mathcal{A}={\mathcal Ab}$;
+				\item $I$ is the poset $\dots\rightarrow 2\rightarrow 1\rightarrow 0$;
+			\end{itemize}
+			\begin{Def}
+				(Tower of Abelian Groups) Define
+				\begin{gather*}
+					\{A_i\}:\dots\rightarrow A_2\rightarrow A_1\rightarrow A_0
+				\end{gather*}
+			\end{Def}
+			
+			\subsection{Mittag-Leffers System}
+			\begin{Def}
+				(Mittag-Leffers System) Let $I$ be a directed set, $(A_i,\varphi_{ij})$ be an inverse system in $\mathcal Sets$. 
+			\end{Def}
+			\subsubsection{Limit}
+			\begin{lemma}
+				(Existence)
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\begin{lemma}
+				(Exactness) Let 
+				\begin{gather*}
+					内容...
+				\end{gather*}
+			\end{lemma}
+		\section{Universal Coefficient Theorem}
+			\begin{theorem}
+				(K\"{u}nnenth) 
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{theorem}
+				(UCT for Homology)
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{theorem}
+				(UCT for Cohomology)
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\subsection{Topology}
+			\begin{theorem}
+				(UCT in Topology)
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+	\chapter{Homological Dimension}
+		\section{Dimension}
+			Define:
+			\begin{Def}
+				\begin{itemize}
+					\item \textbf{The Projective Dimension}: 
+					\item \textbf{The Injective Dimension}:
+					\item \textbf{The Flat Dimension}
+				\end{itemize}
+			\end{Def}
+			
+			\begin{theorem}
+				(Global Dimension Theorem) The following numbers are the same for any ring $R$:
+				\begin{itemize}
+					\item 
+					\item 
+					\item 
+					\item 
+				\end{itemize}
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\begin{Def}
+				内容...
+			\end{Def}
+			
+			\subsubsection{Noetherian Ring}
+			\subsection{Rings of Small Dimension}
+		\section{Local Rings}
+		\section{Konzul Complexes}
+			\begin{Def}
+				(Konzul Complex) Take the following notion
+				\begin{gather*}
+					内容...
+				\end{gather*}
+			\end{Def}
+		\section{Local Cohomology}
+		\section{Appendix: Hilbert-Serre Theorem}
+			Our main reference:
+			\begin{itemize}
+				\item https://faculty.ustc.edu.cn/yqliang/files/myarticle/Serrethmonnoetherianregularlocalring.pdf
+			\end{itemize}
+			
+			\begin{theorem}
+				(Serre)
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+	\chapter{Spectral Sequence}
+		\section{Introductions}
+			\begin{itemize}
+				\item (Leray) Sheaf, Spectral Sequence;
+				\item (Koszul,1945) Algebraic;
+			\end{itemize}
+			\subsection{Spectral Sequence}
+			\begin{Def}
+				Let $\mathcal{A}$ be an abelian category
+				\begin{itemize}
+					\item A \textbf{spectral sequence} in $\mathcal{A}$ is given by a system
+					\begin{gather*}
+						(E_r,d_r)_{r\geq 1}
+					\end{gather*}
+					where: Each $E_r$ is an object of $\mathcal{A}$, each $d_r:E_r\rightarrow E_r$ is a morphism such that
+					\begin{gather*}
+						d_r\circ d_r=0\qquad E_{r+1}=ker(d_r)/Im(d_r)
+					\end{gather*}
+					\item A morphism of spectral sequences
+					\begin{gather*}
+						f:(E_r,d_r)_{r\geq 1}\rightarrow (E_r',d_r')_{r\geq 1}
+					\end{gather*}
+					is given by a family of morphisms $(f_r)_{r\geq 1}$ such that
+					\begin{gather*}
+						f_r\circ d_r=d_r'\circ f_r
+					\end{gather*}
+					And $f_{r+1}:E_{r+1}\rightarrow E_{r+1}'$ is indentified by the morphism induced by $f_r:E_r\rightarrow E_r'$
+					\begin{center}
+						\begin{tikzcd}
+							Im(d_r)\arrow[r,"\subseteq "]\arrow[d,"f_r|Im(d_r)"]&ker(d_r)\arrow[d,"f|ker(d_r)"]\arrow[r]&E_{r+1}\arrow[d,dashrightarrow]\\
+							Im(d_r')\arrow[r,"\subseteq"]&ker(d_r')\arrow[r]&E_{r+1}'
+						\end{tikzcd}
+					\end{center}
+				\end{itemize}
+			\end{Def}
+			\textbf{Remark} Sometimes denoted as $(E_r,d_r)_{r\geq 0}$.We loose the defition: There exists isomorphism $E_{r}\rightarrow ker(d_r)/Im(d_r)$.
+			\begin{Def}
+				内容...
+			\end{Def}
+			\subsubsection{Spectral Sequence}
+				\begin{Def}
+					Given a double complex $(E_r,d_r)_{r\geq 1}$, define
+					\begin{gather*}
+						0=B_1\subseteq B_2\subseteq \dots\subseteq Z_r\subseteq \dots\subseteq Z_2\subseteq Z_1=E_1
+					\end{gather*}
+					By following procedure:
+					\begin{gather*}
+						B_{r+1}=Im(d_r)\qquad Z_{r+1}=Ker(d_r)
+					\end{gather*}
+					Then, it is clear that $d_2:Z_2/B_2\rightarrow Z_2/B_2$. 
+				\end{Def}
+			\subsubsection{Limit of Spectral Sequence}
+			\begin{Def}
+				Let $\mathcal{A}$ be an abelian category, $(E_r,d_r)_{r\geq 1}$ be a spectral sequence.
+				\begin{itemize}
+					\item If the subobjects $Z_\infty=\cap Z_r$ and $B_\infty=\cup B_r$ of $E_1$ exist. Then, we define the \textbf{limit of spectral sequence} to be the object
+					\begin{gather*}
+						Z_\infty=\cap Z_r\qquad B_\infty=\cup B_r
+					\end{gather*}
+					\item We say that the spectral sequence degenerates at $E_r$ if the differentials $d_r,d_{r+1},\dots$ are all zero.
+				\end{itemize}
+			\end{Def}
+			If the spectral sequence degenerates at $E_r$,then we have
+			\begin{gather*}
+				E_r=E_{r+1}=\dots=E_\infty
+			\end{gather*}
+			Also, almost any abelian category we
+			will encounter has countable sums and intersections.
+			
+			\subsection{Exact Couple}
+			\begin{Def}
+				Let $\mathcal{A}$ be an exact category:
+				\begin{itemize}
+					\item An \textbf{exact couple} is a datum $(A,E,\alpha,f,g)$ where $A,E$ are objects of $\mathcal{A}$ and $\alpha,f,g$ are morphisms as in following diagram
+					\begin{center}
+						\begin{tikzcd}
+							A\arrow[rr,"\alpha"]&&A\arrow[ld,"g"]\\
+							&E
+						\end{tikzcd}
+					\end{center}
+					\item 
+				\end{itemize}
+			\end{Def}
+			\begin{lemma}
+				内容...
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Differential Object}
+			\begin{Def}
+				Let $\mathcal{A}$ be an abeian category.
+				
+				A \textbf{differential object} of $\mathcal{A}$ is a pair $(A,d)$ consisting of
+			\end{Def}
+			\subsection{Filtered Differential Object}
+			\subsection{Filtered Complexes}
+			\subsection{Double Complexes}
+			\subsection{Abelian Groups}
+		
+	\chapter{Simplicial Methods in Homological Algebra}
+		\section{Simplicial Objects}
+		\section{Operations on Simplicial Objects}
+	\chapter{Hochshild and Cyclic Homology}
+	\chapter{Derived Category}
+		\section{Triangulated Category}
+			\begin{Def}
+				Define: Let $\mathcal{D}$ be an additive category, let
+				\begin{gather*}
+					[1]:\mathcal{D}\rightarrow \mathcal{D}\qquad E\mapsto E[1]
+				\end{gather*}
+				be an additive functor which is an auto-equivalence of $\mathcal{D}$:
+				\begin{itemize}
+					\item A \textbf{triangle} is sextuple
+					\begin{gather*}
+						(X,Y,Z,f,g,h)
+					\end{gather*}
+					where
+					\begin{itemize}
+						\item $X,Y,Z\in Ob(\mathcal{D})$;
+						\item $f:X\rightarrow Y;g:Y\rightarrow Z;h:Z\rightarrow X[1]$ are morphisms of $\mathcal{D}$;
+					\end{itemize}
+					\item A morphism of triangles
+					\begin{gather*}
+						(X,Y,Z,f,g,h)\rightarrow (X',Y',Z',f',g',h')
+					\end{gather*}
+					with morphisms
+					\begin{gather*}
+						\begin{cases}
+							a:X\rightarrow X'\\
+							b:Y\rightarrow Y'\\
+							c:Z\rightarrow Z'
+						\end{cases}
+					\end{gather*}
+					of $\mathcal{D}$ such that
+					\begin{gather*}
+						\begin{cases}
+							b\circ f=f'\circ a\\
+							c\circ g=g'\circ b\\
+							a[1]\circ h=h'\circ c
+						\end{cases}
+					\end{gather*}
+				\end{itemize}
+				With visualization
+				\begin{center}
+					\begin{tikzcd}
+						X&Y&Z&X[1]\\
+						X'&Y'&Z'&X'[1]
+					\end{tikzcd}
+				\end{center}
+			\end{Def}
+			
+			\subsection{Triangulated Category}
+			\begin{Def}
+				Axioms:
+				\begin{itemize}
+					\item TR1: Any triangle category isomorphic to a distinguished triangle is a distinguished triangle. 
+					
+					Any triangle of the form $(X,X,0,id,0,0)$ is distinguished.
+					
+					For any morphism $f:X\rightarrow Y$ in $\mathcal{D}$, there exists a \textbf{distinguished triangle} of the form
+					\begin{gather*}
+						(X,Y,Z,f,g,h)
+					\end{gather*}
+					\item TR2: The triangle $(X,Y,Z,f,g,h)$ is distinguished iff $(Y,Z,X[1],g,h,-f[1])$ is
+					\item TR3: Given the diagram
+					\begin{center}
+						\begin{tikzcd}
+							X\arrow[r,"f"]&Y\arrow[r,"g"]&Z\arrow[r,"h"]&X[1]\\
+							X'\arrow[r]&Y'\arrow[r]&Z'\arrow[r]&X‘[1]
+						\end{tikzcd}
+					\end{center}
+					\item TR4: Given objects $X,Y,Z\in Ob(\mathcal{D})$, and morphisms $f:X\rightarrow Y,g:Y\rightarrow Z$ and distinguished triple
+					\begin{gather*}
+						(X,Y,Q_1,f,p_1,d_1)\quad (X,Z,g\circ f,p_2,d_2)\quad (Y,Z,Q_2,g,p_3,d_3)
+					\end{gather*}
+					There exists morphisms 
+					\begin{gather*}
+						a:Q_1\rightarrow Q_2\qquad b:Q_2\rightarrow Q_3
+					\end{gather*}
+					such that:
+					\begin{itemize}
+						\item $(Q_1,Q_2,Q_3,)$
+						\item 
+						\item 
+					\end{itemize}
+				\end{itemize}
+				We will call:
+				\begin{itemize}
+					\item 
+					\item 
+				\end{itemize}
+			\end{Def}
+			\textbf{Remark}
+			\subsubsection{Homological Functor}
+			\begin{Def}
+				\begin{itemize}
+					\item Let $\mathcal{D}$ be a pre-triangulated category, $\mathcal{A}$ be an abelian category.
+					
+					An additive category $H:\mathcal{D}\rightarrow \mathcal{A}$ is \textbf{homological} iff for every distinguished  triangle $(X,Y,Z,f,g,h)$ the sequence
+					\begin{gather*}
+						H(X)\rightarrow H(Y)\rightarrow H(Z)
+					\end{gather*}
+					is exact in the abelian category $\mathcal{A}$
+					\item Conversely, $H:\mathcal{D}^{op}\rightarrow \mathcal{A}$ if the corresponding functor
+					\begin{gather*}
+						H^{op}:\mathcal{D}\rightarrow \mathcal{A}^{op}
+					\end{gather*}
+					is homological.
+				\end{itemize}.
+			\end{Def}
+			\textbf{Remark} If $H:\mathcal{D}\rightarrow \mathcal{A}$, we write
+			\begin{gather*}
+				H^n(X):=H(X(n))
+			\end{gather*}
+				\begin{Def}
+					By TR2, a distinguished triangle $(X,Y,Z,f,g,h)$ determines a long exact sequence
+					\begin{gather*}
+						H^{-1}(Z)\stackrel{above}{\rightarrow} H^0(X)\stackrel{above}{\rightarrow} H^0(Y)\stackrel{above}{\rightarrow} H^0(Z)\stackrel{H(h)}{\rightarrow} H^1(X)
+					\end{gather*}
+				\end{Def}
+				\subsubsection{$\delta$-Functor}
+				\begin{Def}
+					Let $\mathcal{A}$ be an abelian category. Let $\mathcal{D}$ be a triangulated category. 
+					
+					A $\delta$-functor from $\mathcal{A}$ to $\mathcal{D}$ is given by a functor
+					\begin{gather*}
+						G:\mathcal{A}\rightarrow \mathcal{D}
+					\end{gather*}
+				\end{Def}
+			\subsection{Elementray Results}
+				\begin{lemma}
+					Let $\mathcal{D}$ be a pre-triangulated category, let $(X,Y,Z,f,g,h)$ be distinguished triangle, then
+					\begin{gather*}
+						g\circ f=0\quad h\circ g=0\quad f[1]\circ h=0
+					\end{gather*}
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{lemma}
+					Let $\mathcal{D}$ be a pre-triangulated category. For any object $W$ of $\mathcal{D}$, the functor $Hom_\mathcal{D}(W,-)$ is homological, and the functor $Hom_{\mathcal{D}}(-,W)$ is cohomological.
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{lemma}
+					Let $\mathcal{D}$ be a pretriangulated category, and
+					\begin{gather*}
+						(a,b,c):(X,Y,Z,f,g,h)\rightarrow 
+					\end{gather*}
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{proposition}
+					Let $\mathcal{D}$ be \underline{trianglatedd category}. Any commutative category
+					\begin{center}
+						\begin{tikzcd}
+							X&Y\\
+							X'&Y'
+						\end{tikzcd}
+					\end{center}
+					can be extended to the diagram:
+					\begin{center}
+						\begin{tikzcd}
+							X&Y&Z&X[1]\\
+							X'&Y'&Z'&X'[1]\\
+							X''&Y''&Z‘’&X''[1]\\
+							X[1]&Y[1]&Z[1]&X[2]
+						\end{tikzcd}
+					\end{center}
+					where: All square commutes, except for the lower right squrae which is anticommutative.
+					
+					Moreover, each of column and rows are distinguished triangles.
+					
+					Finally, the morphisms on the bottom row/right column are obtained from the morphisms of the top row/left column applying $[1]$.
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Constructions}
+			\subsubsection{Triangulated Functor}
+			\subsubsection{Localization of Triangulated Functor}
+				\begin{Def}
+					Let: $\mathcal{D}$ be a pre-triangulated category, we say a multiplicative system $S$ is \textbf{compatible with triangulated stucture} if the following two conditions hold:
+					\begin{itemize}
+						\item MS5: For a morphism $f$ of $\mathcal{D}$ we have
+						\begin{gather*}
+							f\in S\Leftrightarrow f[1]\in S
+						\end{gather*}
+						\item Given a solid commutative square
+						\begin{center}
+							\begin{tikzcd}
+								X\arrow[r]\arrow[d,"s"]&Y\arrow[r]\arrow[d,"{s'}"]&Z\arrow[d,dashrightarrow,"{\exists s''}"]\arrow[r]&X[1]\arrow[d,"{s[1]}"]\\
+								X'\arrow[r]&Y'\arrow[r]&Z'\arrow[r]&X'[1]
+							\end{tikzcd}
+						\end{center}
+						whose rows are distinguished triangles with $s,s'\in S$, there exists a morphism
+						\begin{gather*}
+							s'':Z\rightarrow Z'
+						\end{gather*}
+						in $S$ such that $(s,s',s'')$ is a morphism of triangles.
+					\end{itemize}
+				\end{Def}
+				\begin{lemma}
+					内容...
+				\end{lemma}
+			\subsubsection{Quotient of Triangulated Category}
+			\begin{lemma}
+				
+			\end{lemma}
+		\section{The Homotopy Category}
+			\begin{Def}
+				Let $\mathcal{A}$ be additive category:
+				\begin{itemize}
+					\item We set $Comp(\mathcal{A})=CoCh(\mathcal{A})$ be the \textbf{category of (cochain) complexes}.
+					\item A complex $K^\bullet$ is \textbf{bounded below} if:
+					\begin{gather*}
+						内容...
+					\end{gather*}
+					\item 
+					\item 
+					\item 
+					\item 
+					\item 
+				\end{itemize}
+			\end{Def}
+		\section{Derived Category}
+			\subsection{Filtered Derived Category}
+		\chapter{Appendix}
+			\section{Eckmann-Hilton}
+				\begin{theorem}
+					Suppose $X$ be a structure, with two binary operations $\circ,\star$ which satisfies
+					\begin{itemize}
+						\item (Identity) $x\circ e=e\circ x=x;x\star e=e\star x=x$;
+						\item (Eckmann-Hilton) For $a,b,c,d\in X$,
+						\begin{gather*}
+							(a\circ b)\star(c\circ d)=(a\star c)\circ (b\star d)
+						\end{gather*}
+						
+						Then:
+						\begin{itemize}
+							\item $a\circ b=a\star b$;
+							\item The operation is commutative;
+							\item The operation is associative.
+						\end{itemize}
+					\end{itemize}
+				\end{theorem}
+				\begin{proof}
+					Notice
+					\begin{itemize}
+						\item 
+						\item 
+					\end{itemize}
+				\end{proof}
+	\end{document}
+	

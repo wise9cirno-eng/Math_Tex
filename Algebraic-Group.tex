@@ -1,0 +1,381 @@
+\documentclass[Total.tex]{subfiles}
+\begin{document}
+	\chapter{Algebraic Groups}
+		\section{Definitions}
+			\subsection{Group Structure}
+			\begin{Def}
+				An \textbf{algebraic group} is a variety $G$ with group struction
+				\begin{gather*}
+					m:G\times G\rightarrow G\\
+					e:*\rightarrow G\\
+					i:G\rightarrow G
+				\end{gather*}
+				And:
+				\begin{itemize}
+					\item $m,e,i$ are regular;
+					\item The following diagrams commmutes:
+					\begin{center}
+						\begin{tikzcd}
+							G\times G\times G\arrow[r,"id\times m"]\arrow[d,"m\times id"]&G\times G\arrow[d,"m"]\\
+							G\times G\arrow[r,"m"]&G
+						\end{tikzcd}\begin{tikzcd}
+						*\times G\arrow[r,"e\times id"]\arrow[rd,"\simeq"]&G\times G\arrow[d,"m"]&G\times *\arrow[l,"id\times e"]\arrow[ld,"\simeq"]\\
+						&G
+						\end{tikzcd}\begin{tikzcd}
+							G\arrow[d,"e\times id"]\arrow[r]&G\times G\arrow[d,"m"]&G\arrow[d]\arrow[l,"id\times ie"]\\
+							*\arrow[r,"e"]&G&*\arrow[l,"e"]
+						\end{tikzcd}
+					\end{center}
+				\end{itemize}
+				Here: $*$ is the one-point vareity $Spec(k)$.
+				
+				Similarly, an \textbf{algebraic monoid} over $k$ is an algebraic scheme $M$ with $m,e$ commutes.
+			\end{Def}
+			If $G$ is affine as a scheme, then $G$ is called \textbf{linear(affine) algebraic group}.
+			\begin{Def}
+				\begin{itemize}
+					\item Let $(G,m_G),(F,m_F)$ be two algebraic groups. We say that $G$ is an $F$-group if $G$ is a $F$-scheme.
+					\item Morphsims $m,inv$ are defined over $F$;
+					\item Thus, the $F$-homomorphisms and $F$-groups are well-defined.
+				\end{itemize}
+			\end{Def}
+			
+			\begin{Def}
+				If $G$ is an $F$-group. Set
+				\begin{gather*}
+					G(F):=Hom_{Spec(F)}(Spec(F),G)
+				\end{gather*}
+				which has a canonical group structure.
+			\end{Def}
+			\begin{example}
+				Let $G$ be a linear algebraic group. Then put $A=k[T]$。 The homomorphism
+				\begin{gather*}
+					\Delta:k[T]\rightarrow k[T]\otimes_k k[T]\simeq k[T,U]\qquad \iota:k[T]\rightarrow k[T]\qquad e:k[T]\rightarrow k
+				\end{gather*}
+				is given by
+				\begin{gather*}
+					\Delta T:=T+U\\
+					\iota T:=-T\\
+					eT:=0
+				\end{gather*}
+				Denote this algebraic group as $G_a$. It is the additive group, and $F[T]$ defines an $F$-structure on $G_a$(consider the scheme morphism induced by those ring maps), for any subfield $F$ of $k$.(The morphisms are $F$-morphisms)
+			\end{example}
+			\begin{example}
+				(Laurent Series)Define: $G=A^1-\{0\}=k^*$, with multiplication as group operation. Now define
+				\begin{gather*}
+					A=k[T,T^{-1}]
+				\end{gather*}
+				and
+				\begin{gather*}
+					\Delta:k[T,T^{-1}]\rightarrow k[T,T^{-1}]\otimes k[T,T^{-1}]=k[T,T^{-1},U,U^{-1}]\qquad \Delta T:=TU\\
+					\iota:k[T,T^{-1}]\rightarrow k[T,T^{-1}]\qquad \iota T:=T^{-1}
+				\end{gather*}
+				Denote $G_m$ or $GL_1$. With $F$-structure by $F[T,T^{-1}]$.
+				
+				Especially: Let $n\in \ZZ^\times$, there exists a homomorphsim of algebraic groups
+				\begin{gather*}
+					\phi:A\rightarrow A\\
+					x\mapsto x^n
+				\end{gather*}
+				Induces a homomorphism of schemes $(\phi,\phi^\#):G_m\rightarrow G_m$.
+			\end{example}
+			\begin{example}
+				(Matrices Monoid) Define the matrices $M_n:=k^{n^2}$. Then, the determinant function is well-defined.
+			\begin{example}
+				(General Linear Groups) Then, define:
+				\begin{gather*}
+					GL_n:=\{X\in M_n|D(X)\not=0\}
+				\end{gather*}
+				with matrix multiplication as group operation.
+			\end{example}
+			\begin{example}
+				(Special Linear Group) Define
+				\begin{gather*}
+					SL_n:=Spec(k[T_{1,1},\dots,T_{n,n}])/(det(T_{ij})-1)
+				\end{gather*}
+				with matrix multiplication
+			\end{example}
+			\begin{example}
+				(Orthonormal Groups)
+			\end{example}
+			\begin{example}
+				(Special Orthonormal Groups)
+			\end{example}
+			\begin{example}
+				(Special Sympletic Groups)
+			\end{example}
+			\begin{example}
+				(Upper Triangular Groups)
+			\end{example}
+			\begin{example}
+				(Lower )
+			\end{example}
+			\begin{example}
+				(Unipotent Upper Triangular Matrices)
+			\end{example}
+			\begin{example}
+				\textbf{Nonlinear Algebraic Groups:Elliptic Curves} Considder the curve in projective plane: $V(F)\subseteq \PP^2$, where
+				\begin{gather*}
+					F=X_0X_2^2-X_1^3-aX_1X_0^2-bX_0^3
+				\end{gather*}
+				which stands for the polynomial
+				\begin{gather*}
+					f=T^3+aT+b
+				\end{gather*}
+				has no multiple roots.
+				
+				Group Operations:
+			\end{example}
+			\subsubsection{Homomorphisms}
+				\begin{Def}
+				 A homomorpism $\varphi:(G,m)\rightarrow (G',m')$
+				\end{Def}
+			\subsubsection{Subgroups}
+				\begin{Def}
+					An \textbf{algebraic subgroup} of an algebraic group $(G,m_G)$ over $k$ is an algebraic group 
+					\begin{gather*}
+						(H,m_H)
+					\end{gather*}
+					over $k$ such that:
+					\begin{itemize}
+						\item $H$ is a $k$-subscheme of $G$;
+						\item The inclusion map is a homomorphism of algebraic groups.
+					\end{itemize}
+				\end{Def}
+			\subsubsection{Homogeneity}
+				\textbf{Notation} For an algebraic scheme $X$ over $k$, we write $|X|$ for the underlying topological space. And
+				\begin{gather*}
+					\kappa(x):=\mathcal{O}_{X,x}/m_x,x\in |X|
+				\end{gather*}
+				Then, define:
+				\begin{gather*}
+					X(k):=\{x\in |X||\kappa(x)=k\},k\in K
+				\end{gather*}
+				Now, let $(G,m)$ be an algebraic group over $k$, define:
+				\begin{gather*}
+					G(k):=Hom_{Sch/k} (Spec(k),G)
+				\end{gather*}
+				 with $m(k):G(k)\times G(k)\rightarrow G(k)\rightarrow G(k)$ makes $G(k)$ into a group with neutral element $e(*)$ and inverse map $inv(k)$.
+				 (Constructions: Consider $x,y\in G(k):Spec(k)\rightarrow G$. By the universal prperty of product
+				 \begin{gather*}
+				 	(x,y):Spec(k)\rightarrow G\times_k G
+				 \end{gather*}
+				 Then, the product
+				 \begin{gather*}
+				 	Spec(k)\stackrel{(x,y)}{\rightarrow} G\times_k G\stackrel{m}{\rightarrow} G
+				 \end{gather*}
+				 
+				 And identity: 
+				 \begin{gather*}
+				 	e:Spec(k)\rightarrow G
+				 \end{gather*}
+				 
+				 Inverse Map: Suppose $(x:Spec(k)\rightarrow G)\in G(k)$, we have
+				 \begin{gather*}
+				 	Spec(k)\stackrel{x}{\rightarrow} G\stackrel{inv}{\rightarrow} G
+				 \end{gather*})
+				
+				\begin{proposition}
+					Especially, if $k$ is algebraically closed we have
+					\begin{gather*}
+						G(k)\cong G
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsubsection{Commutativity}
+				\begin{Def}
+					An algebraic grooup $(G,m)$ is \textbf{commutative} if 
+					\begin{gather*}
+						m\circ t=m
+					\end{gather*}
+					where $t$ is the transpoisition map $(x,y)\mapsto (y,x)$.
+				\end{Def}
+				\begin{propoosition}
+					内容...
+				\end{propoosition}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsubsection{Group Actions}
+				\begin{Def}
+					Let $(G,m)$ be an algebraic group over $k$.For each $a\in G(k)$, there is a translation map
+					\begin{gather*}
+						l_a:G\simeq \{a\}\times G\stackrel{m}{\rightarrow} G
+					\end{gather*}
+				\end{Def}
+			\subsubsection{Algebraic Groups over Rings}
+				\begin{Def}
+					Let $R$ be a (fnitely generated) k-algebra. Formally, an \textbf{algebraic scheme} over $R$ is a scheme $X$ equipped with a morphism
+					\begin{gather*}
+						X\rightarrow Spec(R)
+					\end{gather*}
+					of finite type.
+					
+					Less formally, we can think of $X$ as an algebraic scheme over $k$ such that $\mathcal{O}_X$ is equipped with an $R$-algebra structure compatible with its $k$-algebra strucutre.
+				\end{Def}
+				
+				\begin{Def}
+					
+				\end{Def}
+			\subsubsection{Normal and Characteristic Subgroups}
+				\begin{Def}
+					内容...
+				\end{Def}
+			\subsubsection{Normalizers}
+			\subsubsection{Centralizers}
+			\subsubsection{Complements}
+			\subsubsection{Kernels}
+				\begin{Def}
+					Let $\varphi:G\rightarrow H$ be a homomorphism of algebraic groups. And let
+					\begin{center}
+						\begin{tikzcd}
+							ker(\varphi)=G\times_H *&*\\
+							G&H
+						\end{tikzcd}
+					\end{center}
+				\end{Def}
+				Then, $Ker(\varphi)$ is a closed subscheme of $G$ such that
+				\begin{gather*rbracketlength=[0.15]}
+					内容...
+				\end{gather*}
+	**-**	\subsubsection{Group Actions}
+			
+			\subsubsection{Closed Subfunctors}
+		\subsection{Scheme Theoretic Properties}
+			\subsubsection{Density of Points}
+				Review:\begin{Def}
+					
+				\end{Def}
+			\subsubsection{Smoothness}
+				\begin{proposition}
+					The following conditions on an algebraic group $G$ are equivalent:
+					\begin{itemize}
+						\item $G$ is smooth;
+						\item $G^\circ$ is smooth;
+						\item The local ring $\mathcal{O}_{G,e}$ is regular; 
+						\item The tangent space $T_e(G)$ to $G$ at $e$ has dimension $dim(G)$;
+						\item $G$ is geometrically reduced;
+						\item for all $k$-algebra $R$ and all ideals $I$ in $R$ such that $I^2=0$. Te map
+						\begin{gather*}
+							G(R)\rightarrow G(R/I)
+						\end{gather*}
+						is surjective.
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{corollary}
+					\begin{itemize}
+						\item For an algebraic group $G$,
+						\begin{gather*}
+							dim(G)\leq dim T_e(G)
+						\end{gather*}
+						\item Equal$\Leftrightarrow$ $G$ is smooth.
+					\end{itemize}
+				\end{corollary}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsubsection{Algebraic Group vs Abelian Variety}
+			\subsubsection{Rigidity Lemma}
+			\subsubsection{Constructible Sets, Closure}
+		\subsection{Properties of Algebraic Groups}
+			\subsubsection{Uniqueness}
+				\begin{proposition}
+				The map $e:$
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Separatedness}
+			\begin{proposition}
+				(Separatedness) 
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Identity Component}
+			Recall: An algebraic scheme over a field is a finite disjoint union of its (closed-open)
+			connected components.
+			\begin{Def}
+				Fr an algebraic group $G$, let $G^\circ$ of $G$ is an algebraic subgroup of $G$, which contains $e\in G$. Then, it is called \textbf{identity/neutral} component of $G$.
+			\end{Def} 
+			\begin{proposition}
+				内容...
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Fundamental Group}
+			\begin{lemma}
+				Let $X$ be a \underline{connected algebraic scheme} over $k$ such that
+				\begin{gather*}
+					X(k)\not=\varnothing
+				\end{gather*}
+				Then, $X$ is geometrically connected. Moreover, for any algebraic scheme $Y$ over $k$,
+				\begin{gather*}
+					\pi_0(X\times Y)\simeq \pi_0(Y)
+				\end{gather*}
+				In particular: $X\times Y$ is connected if $Y$ is connected.
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\begin{corollary}
+				A connected algebraic group is irrducible.
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				Summary: The following conditions on an algebraic group $G$ over $k$ are equivavlence:
+				\begin{itemize}
+					\item 
+					\item 
+					\item 
+					\item 
+				\end{itemize}
+			\end{proposition}
+			\subsubsection{Chevalley's Theorem on Algebraic Groups}
+			\subsubsection{Identity Components}
+			\subsubsection{Closed Subgroup of Finite Index}
+		\subsection{Examples and Constructions}
+			\subsubsection{Affine Algebraic Groups}
+				\begin{Def}
+					\begin{itemize}
+						\item (Additive Group) The additivve group $G_a$ is the functor
+						\begin{gather*}
+							R (R,+)
+						\end{gather*}
+						It is represented by
+						\item (Multiplicative Group) The multiplicative group $G_m$ is the functor
+						\begin{gather*}
+							R (R^\times,\cdot)
+						\end{gather*}
+					\end{itemize}
+				\end{Def}
+				Especially: Let $F$ be a finite group. The \textbf{text}
+			\subsubsection{General Linear Group}
+				\begin{Def}
+					The \textbf{general linear group} $GL_n$ is the functor
+					\begin{gather*}
+						R\rightsquigarrow GL_n(R)
+					\end{gather*}
+					($GL_n(R)$ is the multiplicative group of invertible $n\times n$ matrices) It is represented by:
+					\begin{gather*}
+						\mathcal{O}(GL_n):=k[T_{1,1},\dots,T_{1,n},T_{2,1},\dots,T_{nn},T]/(det(T_{ij})T-1)=k[T_{1,1},\dots,T_{n,n},]
+					\end{gather*}
+					and: The universal element 
+				\end{Def}
+		\section{Affine Algebraic Groups, and Hopf Algebras}
+			\subsection{The Comultiplication Map}
+		\section{Quotient}
+		\section{title}
+		\section{Lie Algebra of Algebraic Group}
+	\chapter{Finite Group Scheme}
+\end{document}

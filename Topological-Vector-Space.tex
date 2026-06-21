@@ -1,0 +1,188 @@
+\documentclass[Total.tex]{subfiles}
+\begin{document}
+	List of Names:
+	\begin{itemize}
+		\item TVS,topological vector space;
+		\item LCTVS, Local Complact Topological Space;
+	\end{itemize}
+	\chapter{Topological Vector Space}
+		Premilinaries:
+		\begin{itemize}
+			\item General Topology;
+			\item Filter;
+			\item Linear Space, Linear Maps;
+		\end{itemize}
+		\section{Definition}
+			\subsection{Linear Structure, and Compatibilities}
+				\begin{Def}
+					Let $E$ be a vector space over the field of complex field $F$. Let 
+					\begin{gather*}
+						A_v:E\times E\rightarrow E\qquad (x,y)\mapsto x+y\\
+						M_s:F\times E\rightarrow E\qquad (\lambda,x)\mapsto \lambda x
+					\end{gather*}
+					Then, a topology $\tau$ on $E$ is said to be \textbf{compatible with linear structure of }$E$ if:
+					\begin{itemize}
+						\item $A_v:(E\times E,\tau\times \tau)\rightarrow (E,\tau)$ is continuous under product topology;
+						\item $M_s:(F\times E,\mathcal{F}\times \tau)\rightarrow (E,\tau)$ is continuous under product topology. 
+					\end{itemize}
+				\end{Def}
+				Then,
+				\begin{Def}
+					A vector space compactible with linear structure of $E$ is called \textbf{topological vector space}(TVS).
+				\end{Def}
+				\textbf{Remark} The topology is 'translation invariant'. 
+		\subsection{title}
+		\begin{Def}
+			\begin{itemize}
+				\item (Absorbing)
+				\item (Balanced)
+			\end{itemize}
+		\end{Def}
+		\begin{theorem}
+			A filter $\mathcal{F}$ on the vector space $E$ is the filter of neighborhoods of the origin in topology compatible with the linear structure if and only if it has the following properties:
+			\begin{itemize}
+				\item The origin belongs to every subset $U$ belonging to $\mathcal{F}$;
+				\item To every $U\in \mathcal{F}$
+				\item 
+				\item 
+				\item 
+			\end{itemize}
+		\end{theorem}
+		\begin{proof}
+			内容...
+		\end{proof}
+		\section{Hausdorff Topological Vector Spaces}
+		\begin{Def}
+			内容...
+		\end{Def}
+		\section{Quotient Topological Vector Spaces}
+		\section{Cauchy Filter, Complete Subsets, Completion}
+		\section{Compact Sets}
+	\chapter{Semi-Norms,Norms}
+		\section{Semi-Norms}
+			\subsection{Convexity}
+				\begin{Def}
+					内容...
+				\end{Def}
+			\subsection{Barrel TVS}
+				\begin{Def}
+					内容...
+				\end{Def}
+			\subsection{LCTVS}
+				\subsubsection{Local Convexity}
+				\begin{Def}
+					A TVS is said to be locally convex space if there is a basis of neighborhoods in $E$ consisting of convex sets.
+				\end{Def}
+				\begin{proposition}
+					内容...
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+		\section{Metrizabible TVS}
+		\section{Norms}
+	\chapter{Frechet Space}
+	\section{Definitions}
+	\subsection{F-Space}
+	\begin{Def}
+		A \textbf{Frechet space} is a TVS with following properties:
+		\begin{itemize}
+			\item It is metrizable;
+			\item Compelete;
+			\item Locally convex;
+		\end{itemize}
+		Sometimes written as $F$-Space
+	\end{Def}
+	\begin{proposition}
+		The following propositions are equivalent:
+		\begin{itemize}
+			\item $(E,P)$ is Frechet space;
+			\item $(E,P)$ is a LCTVS, and $P$ can be choosen as a countable family.
+		\end{itemize}
+	\end{proposition}
+	\begin{proof}
+		\begin{itemize}
+			\item $\Rightarrow$
+			\item $\Leftarrow$ Metric
+			\begin{gather*}
+				d(x,y):=\sum_{j=0}^\infty 2^{-j}\frac{P(x,y)}{1+P(x,y)}
+			\end{gather*}
+		\end{itemize}
+	\end{proof}
+	\subsection{LF-Space}
+	\begin{Def}
+		内容...
+	\end{Def}
+	\subsubsection{Compeleteness}
+	\begin{lemma}
+		Suppose $E$ be LF-Space, with filtration
+		\begin{gather*}
+			E_0\subseteq\dots\subseteq E_n\subseteq E_{n+1}\subseteq \dots,E=\cup E_n
+		\end{gather*}
+		We have: For sequencee $(x_n)\in Seq(E)$,
+		\begin{center}
+			$(x_n)$ converges$\Leftrightarrow$ There exists some $N\in \NN$ such that: $\forall x_n\in E_N$, $(x_n)$ converges in $E_N$.
+		\end{center}
+	\end{lemma}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\begin{proposition}
+		内容...
+	\end{proposition}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\subsection{Hormander's Proposition for $C^\infty_c(\Omega)$}
+		\begin{lemma}
+			内容...
+		\end{lemma}
+		\begin{proof}
+			内容...
+		\end{proof}
+		\begin{theorem}
+			(Hormander) Suppose $\Omega\subseteq \RR^n$. We have
+			\begin{gather*}
+				C^\infty_C(\Omega)=\lim_{K\subseteq \Omega,K\mbox{ is compact}} C_c^\infty(K)
+			\end{gather*}
+		\end{theorem}
+		\begin{proof}
+			内容...
+		\end{proof}
+	\section{The Space of Holomorphic Functions in Open Subset of $\CC^n$}
+	\section{The Space of Formal Power Series in $n$ Interminates}
+	\section{LF Space}
+	\chapter{Normable Space, Banach Space}
+		\section{Norms}
+		\section{Linear Operators on a Banach Space}
+			\subsection{The Hille-Yosida Theorem}
+	\chapter{Lesbegue Space}
+	\chapter{Sobolev Spaces}
+	\chapter{Hilbert Spaces}
+		\section{Basic Definitions}
+			\subsection{Sesquilinear Form}
+				\begin{Def}
+					内容...
+				\end{Def}
+			\subsection{Pre-Hilbert Space}
+				\begin{Def}
+					The pair consisting of a vector space $E$ and a positive definite sesquilinear form $B$ on $E$ is called a \textbf{complex Hausdorff pre-Hilbert space}.
+				\end{Def}
+		\section{Operators on Hilbert Space}
+			\begin{proposition}
+				(Continuity of Operators) Let $\mathfrak{F},\mathfrak{K}$ be Hilbert spaces and $A:\mathfrak{F}\rightarrow \mathfrak{K}$ is a \underline{linear transformation}. The following statements are equivalent:
+				\begin{itemize}
+					\item 
+					\item 
+					\item 
+					\item 
+				\end{itemize}
+			\end{proposition}
+			\subsection{The Adjoint of An Operator}
+			\subsection{Projections and Idempotents;Invariant and Reducing Subspaces}
+			\subsection{Compact Operators}
+			\subsection{The Diagonalization of Compact Self-Adjoint Operators}
+			\subsection{Sturm-Liouville Systems}
+			\subsection{Spectral Theorem and Functional Calculus for Compact Normal Operators}
+			\subsection{Unitary Equivalence for Compact Normal Operators}
+\end{document}

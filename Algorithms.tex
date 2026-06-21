@@ -1,0 +1,588 @@
+\documentclass[Total.tex]{subfiles}
+\usepackage{booktabs}
+\usepackage{array}
+\begin{document}
+	\begin{prob}
+		(Das Problem des Handluingsereisenden/Traveling Salesman Problem) Given $n$ cities, with the distance between them. Then, we want to find the shortest cycle, which goes through each cities.
+		
+		Solution 1: With a start point, then at most $\frac{(n-1)!}{2}$ possibilities.
+	\end{prob}
+	\begin{prob}
+		(Calculation of Pressure of Network) The calculation of graph of networks
+	\end{prob}
+	\chapter{Fundamentals}
+		\subsection{Programs}
+			The following list:
+			\begin{table}[h]
+				\centering
+				\caption{Struktur und Bestandteile der Programmiersprache}
+				\vspace{2mm}
+				\begin{tabular}{@{}ll@{}}
+					\toprule
+					\textbf{Einheit} & \textbf{Bestandteile} \\ \midrule
+					\textbf{Block} & \{ Programm \} \\ \addlinespace
+					\textbf{Funktion} & Funktionskopf Block \\ \addlinespace
+					\textbf{Funktionskopf} & Rückgabetyp Funktionsname ( Argumente ) \\ \addlinespace
+					\textbf{Anweisung} & 
+					\begin{tabular}[c]{@{}l@{}}
+						; \\
+						Ausdruck ; \\
+						if-Bedingung \\
+						while-Schleife \\
+						for-Schleife \\
+						Block
+					\end{tabular} \\ \addlinespace
+					\textbf{Ausdruck} & 
+					\begin{tabular}[c]{@{}l@{}}
+						Konstante \\
+						Variablenauswertung \\
+						Funktionsaufruf \\
+						Operatoranwendung ( Ausdrücke )
+					\end{tabular} \\ \addlinespace
+					\textbf{Programm} & Variablendeklarationen, Funktionen, Anweisungen \\ \bottomrule
+				\end{tabular}
+			\end{table}
+		\section{Logic}
+			Omitted.
+			\begin{gather*}
+				NAND(a,b):=\neg(a\wedge b)=\neg a\vee \neg b\\
+				Nor(a,b):=\neg(a\vee b)=\neg a\wedge \neg b\\
+				Xor(a,b):=a\oplus b:=a\not=b
+			\end{gather*}
+			With C-codes:
+			\begin{table}[h]
+				\centering
+				\caption{Logische Operatoren und Syntaxvergleich}
+				\vspace{2mm}
+				\begin{tabular}{@{}llll@{}}
+					\toprule
+					\textbf{Logik} & \textbf{Schriftform} & \textbf{C-Syntax} & \textbf{Assoziativität} \\ \midrule
+					Negation       & $\neg$               & \texttt{!}        & von rechts nach links   \\
+					Gleich         & $=$                  & \texttt{==}       & von links nach rechts   \\
+					Ungleich       & $\neq$               & \texttt{!=}       & von links nach rechts   \\
+					Und            & $\wedge$             & \texttt{\&\&}     & von links nach rechts   \\
+					Oder           & $\vee$               & \texttt{||}       & von links nach rechts   \\
+					Zuweisung      & $\leftarrow$         & \texttt{=}        & von rechts nach links   \\ \bottomrule
+				\end{tabular}
+			\end{table}
+			\begin{Def}
+				内容...
+			\end{Def}
+			
+			\begin{Def}
+				The output is logically false, iff it is $0$.
+				
+				The definition is well-defined for the output with image except $0$ and $1$.
+			\end{Def}
+			
+			\begin{Def}
+				A \textbf{program} consists of a sequence of commands.
+				
+				The most simple command is $;$.
+				
+				And 
+			\end{Def}
+			\subsection{If-Else}
+		\section{Set}
+			Omitted
+		\section{Bit Operations}
+			\begin{Def}
+				A \textbf{bit} is the basic unit of information. 
+			\end{Def}
+			And:
+			\begin{Def}
+				Define the 
+			\end{Def}
+			Especially:
+			\begin{Def}
+				A word is a sequence of bits:With length $n$ called $n$-bit.
+				\begin{itemize}
+					\item A \textbf{byte} is a $8$-bit;
+					\item A \textbf{nibble} is a $4$-bit;
+				\end{itemize}
+			\end{Def}
+			\subsection{Logic Operations(for words)}
+			\begin{gather*}
+				\sim w:=(\neg wA_{n-1},\dots,\neg w_0)\\
+				v\&w:=(v_{n-1}\wedge w_{n-1},\dots,v_0\wedge w_0)\\
+				v|w:=(v_{n-1}\vee w_{n-1},\dots,v_0\vee w_0)\\
+				v\hat{ }w:=(v_{n-1}\oplus w_{n-1}\dots,v_0\oplus w_0)		
+			\end{gather*}
+			\textbf{Remark} In C-program the "int" is not universal: (For example)It depends on $\#include<stdint.h>$.
+			\begin{Def}
+				(Logic Shifting) Define te operation:
+				\begin{gather*}
+					w<<m:=(w_{n-1-m},\dots,w_0,0,\dots,0)\\
+					w>>m:=(0,\dots,0,w_{n-1},\dots,w_m)
+				\end{gather*}
+				Especially, $m=0,w<<(-)=id,w>>(-)=id$.
+			\end{Def}
+			\begin{Def}
+				($0$-Word) A $0$-word is defined as the word with all bits are $0$.
+			\end{Def}
+			\subsection{Functions}
+			\begin{table}[h]
+				\centering
+				\caption{Bitweise Operatoren und Zuweisungen in C}
+				\vspace{2mm}
+				\begin{tabular}{@{}lll@{}}
+					\toprule
+					\textbf{Operator} & \textbf{C-Syntax} & \textbf{Assoziativität} \\ \midrule
+					Bitweise Negation & \texttt{\textasciitilde} & von rechts nach links \\
+					Bitweiser Shift   & \texttt{<<, >>} & von links nach rechts \\
+					Bitweises Und     & \texttt{\&} & von links nach rechts \\
+					Bitweises XOR     & \texttt{\textasciicircum} & von links nach rechts \\
+					Bitweises Oder    & \texttt{|} & von links nach rechts \\ \addlinespace
+					Zuweisung         & \begin{tabular}[c]{@{}l@{}} \texttt{=, \&=, \textasciicircum=, |=,} \\ \texttt{<<=, >>=} \end{tabular} & von rechts nach links \\ \bottomrule
+				\end{tabular}
+			\end{table}
+			Then define:
+			\begin{Def}
+				\begin{itemize}
+					\item Set $i$ Bit to $0$:
+					\begin{gather*}
+						w\&=\sim(1<<i)
+					\end{gather*}
+					\item Set $i$ Bit to $1$:
+					\begin{gather*}
+						w|=1<<i
+					\end{gather*}
+					\item Bit Flip of $i$:
+					\begin{gather*}
+						w^{ }=1<<i
+					\end{gather*}
+					\item Testing $i$ bit is $0$ or $1$
+					\begin{gather*}
+						w \& (1 << i)\qquad \mbox{equivalent to}\qquad (w>>i)\&1
+					\end{gather*}
+				\end{itemize}
+			\end{Def}
+		
+		\section{Natural Numbers}
+			\subsection{Construction of Natural Number}
+				We construct the natural number through bytes: Define the function
+				\begin{gather*}
+					s_n(w):=\begin{cases}
+						(01)&w=(w_0)=(0),n=1\\
+						(10)&w=(w_0)=(1),n=1\\
+						(w_{n-1}\wedge w_{n-1}',w_{n-1}\oplus w_{n-1}',w_{n-2}',\dots,w_0')&w'=s_{n-1}(w_{n-2},\dots,w_0)
+					\end{cases}
+				\end{gather*}
+				This actually defines
+				\begin{gather*}
+					s(-):\cup \{Seq_n()\}
+				\end{gather*}
+				which is actuarlly $s(n)=n+1$.
+				\begin{proposition}
+					There exists no $n$-bit word $w$ with $s_n(w)=0$.
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				This implies, that $0$ is the initial object.
+				
+				\begin{proposition}
+					$s_n(w):=(1,q_{n-1},\dots,q_0)\Rightarrow q_i=0$
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\begin{proposition}
+					The followings are equivalent:
+					\begin{gather*}
+						w=(1,\dots,1)\Leftrightarrow s_n(w)=(1,0,\dots,0)
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				This gives a correspondence:
+				\begin{gather*}
+					\{f\in 2^\NN|f\mbox{ is finite}\}\Leftrightarrow \NN
+				\end{gather*}
+				\begin{proposition}
+					(Injectivity of Function $s_n$) $s_n$ is injective. 
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Order Relation}
+				\begin{Def}
+					Suppose $v$ be $m$-bit word and $w$ be $n$-bit word.
+				\end{Def}
+				
+				\begin{corollary}
+					Two words are equivalent, 
+					\begin{gather*}
+						v\sim w\Leftrightarrow [v]=[w]
+					\end{gather*}
+				\end{corollary}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{Def}
+					内容...
+				\end{Def}
+				\begin{proposition}
+					内容...
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{proposition}
+					内容...
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{Def}
+					内容...
+				\end{Def}
+		\section{Integers of Fixed Byte}
+			\subsection{$b$-adic representation}
+			\begin{Def}
+				Define the $b$-adic representation of fixed byte:
+				\begin{gather*}
+					B(w)=\sum_{i=0}^{n-1} w_i b_i
+				\end{gather*}
+				Mostly we have $b_i=b^i$, so $B(w)$ is a 
+			\end{Def}
+			Then, recursively:
+			
+			\begin{proposition}
+				(Horner-Schema) 
+				\begin{gather*}
+					\sum w_i b_i=b\dots(b(bw_{n-1}+w_{n-2})+w_{n-3}\dots)+w_0
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				Omitted.
+			\end{proof}
+			
+			\begin{example}
+				$10$-adic: 
+				
+				$16$-adic:
+				
+				$2$-adic:
+				
+				Define
+				\begin{gather*}
+					U(w)=\sum_{i=0}^{n-1} w_i 2^i\qquad \mathbb{U}=\NN\cap [0,2^n)
+				\end{gather*}
+				Then,
+				\begin{gather*}
+					U(w)=\sum_{i=0}^{n-1} w_i 2^i=\sum_{j=0}^{m-1}\sum_{i=0}^3 w_{4j+i}2^{4j+i}=\\
+					\qquad\qquad =\sum_{j=0}^{m-1} 2^{4j}\sum_{i=0}^3 w_{4j+i}2^i\\
+					\qquad\qquad =\sum_{j=0}^{m-1} z_j 16^h\qquad z_j=U(w_{4j+3},\dots,w_{4j})
+				\end{gather*}
+			\end{example}
+			
+			\subsection{Additions}
+			\begin{Def}
+				With adic representation as above, we have
+				\begin{gather*}
+					u_n(w)=\\
+					v_n(v,w)=
+				\end{gather*}
+			\end{Def}
+			\begin{proposition}
+				
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{Def}
+				Suppose $v,w$ be $n$-bit words, then define the \textbf{Two's complement}
+				\begin{gather*}
+					-_uw:=\sim w+_u 1
+				\end{gather*}
+				Then, define the operator
+				\begin{gather*}
+					v-_u w:=v+_u (-_u w)
+				\end{gather*}
+			\end{Def}
+			\begin{proposition}
+				内容...
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{corollary}
+				内容...
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Modifications}
+			\subsection{Types in $C$}
+		\section{The Natural Numbers}
+			Omitted.
+		\section{Complexivity}
+		
+			\subsection{Landau-Symbols}
+			\begin{Def}
+				(Landau-Symbol)
+				\begin{gather*}
+					f(x)=\mathcal{O}(g(x))\Leftrightarrow \exists c\exists x_0(c\in \RR,x_0\in \RR,\forall x(x\geq x_0\rightarrow f(x)\leq cg(x))\\
+					f(x)=o(g(x))\Leftrightarrow \forall c(c>0\rightarrow \exists x_0(x_0\in \RR\wedge \forall x(x\geq x_0\rightarrow f(x)\leq cg(x))))\\
+					f(x)=\Theta(g(x))\Leftrightarrow 
+				\end{gather*}
+			\end{Def}
+			Some of elementary results:
+			\subsection{C of Algorithms}
+		\section{Error Analysis}
+	\chapter{Solution of Linear System of Equations}
+		\section{Matrices, Vectors and their Implementation}
+		\section{Gauss Algorithm, and LR-Decomposition}
+			\subsection{Gauss Algorithms}
+				\begin{proposition}
+					Consider $n\times n$ matrix. Ten, Gauss-algorithm has the time complexivity of
+					\begin{gather*}
+						\mathcal{O}(n^3)
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{LR-Decomposition}
+				Given a $A\in M_n(F)$. During the Gauss-elimination , define:
+				\begin{gather*}
+					l_{ik}:=\frac{a_{ik}^{(k-1)}}{a_k^{(k-1)}}
+				\end{gather*}
+				Define
+				\begin{gather*}
+					[G_k]_{ij}:=\begin{cases}
+						l_{ik}&j=k,ik+1,\dots,n\\
+						0&sonst
+					\end{cases}
+				\end{gather*}
+				Then, we have
+				\begin{gather*}
+					A^{(k)}=(I-G_k)\cdot A^{(k-1)}\\
+					b^{(k)}=(I-G_k)\cdot b^{k-1}
+				\end{gather*}
+				By
+				\begin{gather*}
+					[G_k A^{(k-1)}]_{ij}=\sum_{m=1}^n [G_k]_{im}[A^{(k-1)}]_{mj}=[G_k]_{ik}[A^{k-1}]_{kj}
+				\end{gather*}
+				\begin{proposition}
+					Suppose $A\in M_n(F)$, and Gauss-Elimination can be applied without row exchange. 
+					\begin{itemize}
+						\item $(I-G_{n-1})\cdot \dots \cdot (I-G_1)A=R$;
+						\item $G_k\cdot G_l=0$, $k\leq l$;
+						\item $(I-G_k)^{-1}=(I+G_k)$;
+						\item $((I-G_{n-1})\cdot \dots \cdot (I-G_1))^{-1}=I+\sum G_k=L$.
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{corollary}
+					\begin{gather*}
+						A=L\cdot R
+					\end{gather*}
+				\end{corollary}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{corollary}
+					\begin{gather*}
+						PA=LR
+					\end{gather*}
+				\end{corollary}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Pivotelement}
+			
+		\section{Cholesky-Decomposition}
+			Consider the positive definite matrix.
+			
+			\begin{proposition}
+				\begin{itemize}
+					\item 
+					\item 
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\begin{proposition}
+				（Orthonormal Decomposition for s.p.d) 
+				\begin{gather*}
+					A=LL^T
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				\begin{itemize}
+					\item 
+					\item $\Rightarrow$ Consider the s.p.d matrix
+					\begin{gather*}
+						\begin{pmatrix}
+							A_{n-1}&b\\
+							b^T&a_{nn}
+						\end{pmatrix}\qquad b\in \RR^{n-1},A_{n-1}\in M_{n-1}(\RR)
+					\end{gather*}
+					By induction we have $A_{n-1}=L_{n-1}L_{n-1}^T$. Then, set
+					\begin{gather*}
+						L=\begin{pmatrix}
+							L_{n-1}&0\\
+							c^T&\alpha
+						\end{pmatrix}
+					\end{gather*}
+					We have
+					\begin{gather*}
+						LL^T=\begin{pmatrix}
+							L_{n-1}&0\\
+							c^T&\alpha
+						\end{pmatrix}\begin{pmatrix}
+							L_{n-1}^T&c\\
+							0&\alpha
+						\end{pmatrix}=\begin{pmatrix}
+							A_{n-1}&L_{n-1}c\\
+							c^TL_{n-1}^T&c^Tc+\alpha^2
+						\end{pmatrix}
+					\end{gather*}
+					We just need to get the value:
+					\begin{gather*}
+						\begin{cases}
+							L_{n-1}c=b\\
+							\alpha=\sqrt{a_{nn}-c^Tc}
+						\end{cases}
+					\end{gather*}
+					And $L_{n-1}$ is inversable.
+				\end{itemize}
+			\end{proof}
+			And we could apply the following correspondence by
+			\begin{gather*}
+				A=LL^T
+			\end{gather*}
+			Finally, we have
+			\begin{gather*}
+				\sum_{j=1}^n (n-j+1)=\mathcal{O}(n^2)+\frac{1}{6}n^3
+			\end{gather}
+	\chapter{Sorting Algorthims}
+		\section{Definitions}
+		\begin{prob}
+			Suppose there exists $n\in \NN$ numbers, $z_i\in \RR$. Find a permutation $\pi_1,\dots,\pi_n$, with
+			\begin{gather*}
+				内容...
+			\end{gather*}
+		\end{prob}
+		\section{Bumble Sort}
+			Firstly, $<$ is well-defined. Then, by the applying the following steps:
+			\begin{gather*}
+				w_i>w_{i+1}\rightarrow \mbox{swap},i++\\
+				Elsewise\rightarrow i++
+			\end{gather*}
+			Until the end. And consider the group of $w_{n-1},\dots,w_1$. Finaally, we get the sequence with
+			\begin{gather*}
+				w_{n-1}<\dots<w_0
+			\end{gather*}
+			\subsection{Time Complexity}
+				\begin{itemize}
+					\item Worst-Case: $\mathcal{O}(n^2)$;
+					\item Average-Case: $\mathcal{O}(n^2)$;
+					\item Best Basee: $\mathcal{O}(n)$, if we have the extra process
+					\begin{gather*}
+						\mbox{no exchange}\rightarrow stop
+					\end{gather*}
+				\end{itemize}
+		\section{Mergesort}
+			The main method:
+			\begin{itemize}
+				\item Divide the set $S$ into two part $S_1,S_2$;
+				\item Apply the process recursively for $S_1,S_3$;
+				\item Merge;
+			\end{itemize}
+			\begin{lemma}
+				Given $S_x=\{x_1<\dot<x_m\},S_y=\{y_1<\dots<y_n\}$. Then $S=S_x\cup S_y$ can be sorted with at most $m+n-1$ steps.
+			\end{lemma}
+			\begin{proof}
+				By creating a list 
+			\end{proof}
+			\subsection{Time Complexity}
+			\begin{proposition}
+				The mergesort has the time complexity of  $\mathcal{O}(nlogn)$
+			\end{proposition}
+			\begin{proof}
+				Suppose $n=2^m$, We have:
+				\begin{gather*}
+					A(n)=(n-1)+2A(\frac{n}{2})
+				\end{gather*}
+			\end{proof}
+		\section{Quicksort}
+			By applying following process:
+			\begin{itemize}
+				\item Select Pivot:
+				\item Recursitve Call:
+				\item End:
+			\end{itemize}
+			\subsection{Time complexity}
+			
+		\section{Heapsort}
+		\subsection{Binanry Tree,Arborescence,Heap}	
+		\begin{Def}
+			内容...
+		\end{Def}
+	\chapter{Graph Algorithms}
+		Consider: Following datas
+		\begin{itemize}
+			\item $n$ vertices $V=\{v_0,\dots,v_{n-1}\}$;
+			\item $m$ edges $E=\{e_0,\dots,e_{m-1}\}$;
+		\end{itemize}
+		where 
+		\begin{gather*}
+			e_j=\{v_{x_j},v_{y_j}\}\qquad e_j=(v_{x_j,v_{y_j}})\qquad x_j,y_j\in \{0,\dots,n-1\}
+		\end{gather*}
+		And define:
+		\begin{gather*}
+			C_0:=0\\
+			C_{i+1}:=C_i+|\delta(v_i)|;i=0,\dots,n-=1
+		\end{gather*}
+		Then obviously, we have $C_n=2m$.
+		
+		For directed graph, define
+		\begin{gather*}
+			C_0^+:=0\qquad \\
+			C_{i+1}^+:=\qquad 
+		\end{gather*}
+		\begin{Def}
+			The 
+		\end{Def}
+	\chapter{Structure of Data}
+	
+		\section{Elementary Data Structures}
+		
+			\subsection{Stacks and Queues}
+			
+			\subsection{Linked Lists}
+			
+			\subsection{Implementing pointers and objects}
+			
+			\subsection{Representing Root Trees}
+			
+		\section{Hash-Table}
+		
+		\section{Binary Search Trees}
+		
+		\section{Red-Black Trees}
+		
+		\section{Augmenting Data Structures}
+		
+		\section{B-Trees}
+		
+		\section{Binomial Heaps}
+		
+		\section{Fibonacci Heaps}
+		
+		\section{Data Structures for Disjointed Sets}
+\end{document}

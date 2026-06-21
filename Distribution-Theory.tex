@@ -1,0 +1,118 @@
+\documentclass[Total.tex]{subfiles}
+
+\begin{document}
+	\chapter{Distribution and Derivatives}
+		\section{Motivation and Overview}
+			\subsection{Introduction}
+				Take the following notion:
+				\begin{gather*}
+					C^m(I)=\{u:I\rightarrow \CC|\frac{d^j}{dx^j}u\mbox{ exists and is continuous on }I,0\leq j\leq m\}
+				\end{gather*}
+				
+				\textbf{absolutely continuous functions}:
+				\begin{gather*}
+					内容...
+				\end{gather*}
+		\section{Existence of Test Functions}
+			\begin{Def}
+				\begin{itemize}
+					\item For an open sest $X$ in $\RR^n$, we shall denote by $C^k(X)$ the space off $k$ times continuously differentiable complex valued functions in $X$ if $k$ is a non-negative integer.
+					\item Take the notion of
+					\begin{gather*}
+						C^\infty(X):=\cap C^k(X)
+					\end{gather*}
+					\item Take the following notion\begin{gather*}
+						supp(u):=\overline{\{x|f(x)\not=0\}}
+					\end{gather*}
+					\item The test functions: Take the notion of
+					\begin{gather*}
+					C_0^k(X):=\{u\in C^k(X)|supp(u)\mbox{ is compact}\}
+					\end{gather*}
+				\end{itemize}
+			\end{Def}
+			
+			\subsection{Convolution}
+				\begin{Def}
+					If $u$ and $v$ are in $C(\RR^n)$ and either one has compact support, then the convolution $u*v$ is the continuous function defined by
+					\begin{gather*}
+						(u*v)(x):=\int u(x-y)v(y)dy
+					\end{gather*}
+				\end{Def}
+		\section{Cutoff Functions and Partitions of Unity}
+			\begin{theorem}
+				If $X$ is an open set in $\RR^n$ and $K$ is a compact subset, then one can find $\phi\in C^\infty_0(X)$ with $0\leq \phi\leq 1$ so that
+				\begin{gather*}
+					\phi(x)=1,x\in U\supseteq K,U\mbox{ is open}
+				\end{gather*}
+			\end{theorem}
+			\begin{proof}
+				
+			\end{proof}
+			
+			\begin{theorem}
+				Let $X$ be an open set in the $N$ dimensional vector space $V$ with norm $\Vert-\Vert$, and $K$ be a compact subset. If
+				\begin{gather*}
+					d=inf\{\Vert x-y\Vert|x\in V-X,y\in K\}
+				\end{gather*}
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{lemma}
+				If $K$ is a convex symmetric body in the $n$ dimensional vector space, then one can find an \textbf{ellipsoid} $B$ with center at $0$, and
+				\begin{gather*}
+					内容...
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{theorem}
+				Let $X_1,\dots,X_k$ be open sets in $\RR^n$, and let $\phi\in C^\infty_0(\cup_{1}^k X_j)$. Then one can find
+				\begin{gather*}
+					\phi_j\in C_0^\infty(X_j),j=1,\dots,k
+				\end{gather*}
+				If $\phi\geq 0$ one can take all $\phi_j\geq 0$.
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{theorem}
+				Let $X_1,\dots,X_k$ be open sets in $\RR^n$ and $K$ a compact subset of $\cup_{1}^k X_j$.
+				
+				Then, one can find $\phi_j\in C^\infty_0(X_j)$ so that $\phi_j\geq 0$ and 
+				\begin{gather*}
+					\sum \phi_j\leq 1
+				\end{gather*}
+				with equality in a neighborhood of $K$.
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{theorem}
+				For every neighborood $X$ of the cube
+				\begin{gather*}
+					内容...
+				\end{gather*}
+				one can find a non-negative function $\phi\in C_0^\infty(X)$ such that
+				\begin{gather*}
+					内容...
+				\end{gather*}
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+	\chapter{Definition and Basic Properties of Distributions}
+		\section{Basic Definition}
+	\chapter{Differentiation and Multiplication by Functions}
+	\chapter{Convolution}
+	\chapter{Distibution in Product Spaces}
+	\chapter{Composition with Smooth Maps}
+	\chapter{The Fourier Transformation}
+	\chapter{Spectral Analysis of Singularities}
+	\chapter{Hyperfunctions}
+\end{document}

@@ -1,0 +1,151 @@
+\contentsline {chapter}{\numberline {1}Fundamentals}{4}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Affine and Projective Spaces}{4}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Affine Spaces,Affine Varieties,Quasi-Affine Varieties}{4}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Projective Space, Projective Varieties}{4}{subsection.1.1.2}%
+\contentsline {subsubsection}{Projective Space, Projective Varieties}{4}{subsubsection*.2}%
+\contentsline {subsubsection}{Action of $PGL_{n+1}K$}{4}{subsubsection*.3}%
+\contentsline {subsubsection}{Homogeneous Coordinates,Dual Space}{5}{subsubsection*.4}%
+\contentsline {subsubsection}{Affine Coverings}{6}{subsubsection*.5}%
+\contentsline {subsubsection}{Dual Projective Space}{6}{subsubsection*.6}%
+\contentsline {subsection}{\numberline {1.1.3}Examples}{7}{subsection.1.1.3}%
+\contentsline {subsubsection}{Linear Spaces}{7}{subsubsection*.7}%
+\contentsline {subsubsection}{Finite Sets}{8}{subsubsection*.8}%
+\contentsline {subsubsection}{Dependent and Independent}{8}{subsubsection*.9}%
+\contentsline {subsubsection}{General Position}{9}{subsubsection*.10}%
+\contentsline {subsubsection}{Cross Ratio}{11}{subsubsection*.11}%
+\contentsline {subsubsection}{Hypersurfaces}{11}{subsubsection*.12}%
+\contentsline {subsubsection}{Analytic Subvarieties and Submanifolds}{12}{subsubsection*.13}%
+\contentsline {subsubsection}{The Twisted Cubic}{12}{subsubsection*.14}%
+\contentsline {subsubsection}{Rational Normal Curve}{13}{subsubsection*.15}%
+\contentsline {subsubsection}{Determinantal Representation of Rational Normal Curve}{13}{subsubsection*.16}%
+\contentsline {subsubsection}{Another Parametrization of the Rational Normal Curve}{14}{subsubsection*.17}%
+\contentsline {subsubsection}{The Family of Plane Conics}{14}{subsubsection*.18}%
+\contentsline {subsubsection}{Other Rational Curves}{14}{subsubsection*.19}%
+\contentsline {subsection}{\numberline {1.1.4}Quasi-Projective Varieties}{14}{subsection.1.1.4}%
+\contentsline {section}{\numberline {1.2}Regular Functions, Regular Maps and Irreducibility}{14}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Zariski Topology}{14}{subsection.1.2.1}%
+\contentsline {subsubsection}{Quasi-Affine/Projective Variety}{14}{subsubsection*.20}%
+\contentsline {subsection}{\numberline {1.2.2}Regular Functions on Affine Varieties}{15}{subsection.1.2.2}%
+\contentsline {subsubsection}{Continuation of Regular Functions on Irrreducible Sets}{16}{subsubsection*.21}%
+\contentsline {subsection}{\numberline {1.2.3}Regular Functions on Projective Varieties}{16}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Regular Maps}{16}{subsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.2.5}The Veronese Map}{16}{subsection.1.2.5}%
+\contentsline {subsubsection}{Properties of Ideals of Veronese Variety}{17}{subsubsection*.22}%
+\contentsline {subsubsection}{Subvarieties}{18}{subsubsection*.23}%
+\contentsline {subsubsection}{Coordinate-Free Description}{18}{subsubsection*.24}%
+\contentsline {subsection}{\numberline {1.2.6}The Segre Map}{18}{subsection.1.2.6}%
+\contentsline {subsubsection}{Subvarieties of Segre Varieties}{19}{subsubsection*.25}%
+\contentsline {subsection}{\numberline {1.2.7}Product, Fibre Product, Tensor Product}{19}{subsection.1.2.7}%
+\contentsline {subsubsection}{Product}{19}{subsubsection*.26}%
+\contentsline {subsubsection}{Fibre Product}{19}{subsubsection*.27}%
+\contentsline {subsubsection}{Tensor Product}{19}{subsubsection*.28}%
+\contentsline {subsection}{\numberline {1.2.8}Graphs}{19}{subsection.1.2.8}%
+\contentsline {subsection}{\numberline {1.2.9}Category of Varieties}{19}{subsection.1.2.9}%
+\contentsline {section}{\numberline {1.3}Smoothness and Dimension}{19}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Smooth and Singular Points}{19}{subsection.1.3.1}%
+\contentsline {subsubsection}{(Zariski Affine) Tangent Space of Hyperplane}{19}{subsubsection*.29}%
+\contentsline {subsubsection}{Tangent Space of Irrducible Variety}{20}{subsubsection*.30}%
+\contentsline {subsubsection}{Jacobian Criterion}{21}{subsubsection*.31}%
+\contentsline {subsubsection}{Zariski Cotangent Space}{21}{subsubsection*.32}%
+\contentsline {subsubsection}{Example:Real and Smooth Manifolds}{21}{subsubsection*.33}%
+\contentsline {subsection}{\numberline {1.3.2}Algebraic Characterizations}{21}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.4}Ideals of Varieties, Irreducible Decomposition and Nullstellensatz}{21}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Generating Ideals}{21}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Ideals of Projective Varieties}{22}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Irreducible Varieties and Irreducible Decomposition}{22}{subsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.4}General Object}{23}{subsection.1.4.4}%
+\contentsline {subsection}{\numberline {1.4.5}Algebras}{23}{subsection.1.4.5}%
+\contentsline {section}{\numberline {1.5}Cones, Projection and More about Product}{23}{section.1.5}%
+\contentsline {subsubsection}{The Joint of Two Varieties}{23}{subsubsection*.34}%
+\contentsline {subsection}{\numberline {1.5.1}Quadrics}{24}{subsection.1.5.1}%
+\contentsline {subsubsection}{Classifying Problem of Quadratics}{24}{subsubsection*.35}%
+\contentsline {subsection}{\numberline {1.5.2}Projection}{24}{subsection.1.5.2}%
+\contentsline {subsubsection}{Resultant}{24}{subsubsection*.36}%
+\contentsline {subsubsection}{Constructible Sets}{25}{subsubsection*.37}%
+\contentsline {section}{\numberline {1.6}Rational Function and Rational Maps}{25}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Affine Rational Functions}{26}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.6.2}Projective Rational Functions}{27}{subsection.1.6.2}%
+\contentsline {subsection}{\numberline {1.6.3}Rational Maps}{27}{subsection.1.6.3}%
+\contentsline {subsubsection}{Rational Map in $\mathbb {A}^n$}{27}{subsubsection*.38}%
+\contentsline {subsubsection}{Rational Maps}{28}{subsubsection*.39}%
+\contentsline {subsection}{\numberline {1.6.4}Graphs}{29}{subsection.1.6.4}%
+\contentsline {subsubsection}{Rational Normal Curve}{30}{subsubsection*.40}%
+\contentsline {subsubsection}{General Fiber}{30}{subsubsection*.41}%
+\contentsline {subsubsection}{Domain of Regularity}{30}{subsubsection*.42}%
+\contentsline {subsection}{\numberline {1.6.5}Birational Isomorphisms}{30}{subsection.1.6.5}%
+\contentsline {subsubsection}{Dominant}{30}{subsubsection*.43}%
+\contentsline {subsubsection}{Pullback}{30}{subsubsection*.44}%
+\contentsline {subsubsection}{Birationality}{31}{subsubsection*.45}%
+\contentsline {subsubsection}{Example: The Brationality from $X$ of dimension $r$ to a hypersurface $Y$ of $\mathbb {P}^{r+1}$(Hartshorne)}{32}{subsubsection*.46}%
+\contentsline {subsection}{\numberline {1.6.6}Degree of Rational Map}{33}{subsection.1.6.6}%
+\contentsline {subsection}{\numberline {1.6.7}Blowing Up}{33}{subsection.1.6.7}%
+\contentsline {subsection}{\numberline {1.6.8}Unrationality}{34}{subsection.1.6.8}%
+\contentsline {subsection}{\numberline {1.6.9}Appendix: Lüroth Problem}{34}{subsection.1.6.9}%
+\contentsline {subsubsection}{Dimension 1}{34}{subsubsection*.47}%
+\contentsline {subsubsection}{Dimension 2(Castelnuovo, Enriques)}{35}{subsubsection*.48}%
+\contentsline {subsubsection}{Higher Dimension}{35}{subsubsection*.49}%
+\contentsline {section}{\numberline {1.7}Blow-Ups, Nash Blow-Ups and the Resolution of Singularities}{35}{section.1.7}%
+\contentsline {chapter}{\numberline {2}Parameterizations}{36}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Parameter Spaces}{36}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Parameter Spaces and Moduli Spaces}{37}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Grassmannians and Related Varieties}{37}{section.2.3}%
+\contentsline {subsubsection}{Special Case:$k=2$}{38}{subsubsection*.50}%
+\contentsline {subsection}{\numberline {2.3.1}Subvarieties of Grassmannians}{38}{subsection.2.3.1}%
+\contentsline {subsubsection}{Grassmannians $\mathbf {G}(1,3)$}{38}{subsubsection*.51}%
+\contentsline {subsubsection}{Fano Varieties}{38}{subsubsection*.52}%
+\contentsline {subsection}{\numberline {2.3.2}Tangent Spaces to Grassmannians}{38}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Gauss Map, Tangential and Dual Varieties}{38}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Rational Maps}{39}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Plane Curves}{40}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Plane Curves}{40}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Intersection Multiplicities}{40}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}Local Properties}{40}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Multiplicities}{40}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Intersection Numbers}{40}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Projective Plane Curves}{40}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Divisors}{40}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Bezout's Theorem}{41}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Degree}{41}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Join of Varieties}{41}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Multiplicities}{41}{subsection.4.5.3}%
+\contentsline {subsubsection}{Compeletions Operation}{41}{subsubsection*.53}%
+\contentsline {subsection}{\numberline {4.5.4}Bezout's Theorem}{41}{subsection.4.5.4}%
+\contentsline {chapter}{\numberline {5}Normalization}{42}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Quadrics}{43}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Tangent Spaces to Quadrics}{43}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Quadrics on Plane and in Space}{43}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Quadrics on Plane}{43}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Quadrics in Space}{43}{subsection.6.2.2}%
+\contentsline {section}{\numberline {6.3}Linear Spaces on Quadrics}{44}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Families of Quadrics}{44}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Pencils of Quadrics}{44}{section.6.5}%
+\contentsline {chapter}{\numberline {7}Cubics}{45}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Plane Cubic Curve}{45}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Classification of Smooth Plane Cubics}{45}{subsection.7.1.1}%
+\contentsline {section}{\numberline {7.2}Cubic Surfaces}{45}{section.7.2}%
+\contentsline {subsubsection}{Polar}{45}{subsubsection*.54}%
+\contentsline {subsubsection}{Resultant}{45}{subsubsection*.55}%
+\contentsline {subsubsection}{The Configuration of the 27 Lines}{45}{subsubsection*.56}%
+\contentsline {subsection}{\numberline {7.2.1}Rationality of Cubics}{45}{subsection.7.2.1}%
+\contentsline {chapter}{\numberline {8}Algebraic Groups}{46}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Matrix Algebraic Groups}{46}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}The General Linear Group, $GL_nK$}{46}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Subgroup $SL_nK$}{46}{subsection.8.1.2}%
+\contentsline {section}{\numberline {8.2}Group Action}{47}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}$PGL_{n+1}K$ on $\mathbb {P}^n$}{47}{subsection.8.2.1}%
+\contentsline {section}{\numberline {8.3}Quotient}{47}{section.8.3}%
+\contentsline {chapter}{\numberline {9}Intersections and Degree Reasearch}{48}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Varieties of Arbitrary Dimension}{49}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Dimension of Arbitrary Varieties}{49}{section.10.1}%
+\contentsline {chapter}{\numberline {11}Hilbert Functions}{50}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Hilbert Function, Hilbert Polynomials}{50}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Syzygies}{50}{section.11.2}%
+\contentsline {chapter}{\numberline {12}Resolutions}{51}{chapter.12}%
+\contentsline {chapter}{\numberline {13}Segre Varieties}{52}{chapter.13}%
+\contentsline {chapter}{\numberline {14}Appendix: From Classical Algebraic Geometry to Algebraic Geometry}{53}{chapter.14}%
+\contentsline {chapter}{\numberline {15}Polarity}{55}{chapter.15}%
+\contentsline {section}{\numberline {15.1}The Polar Paring}{55}{section.15.1}%
+\contentsline {subsection}{\numberline {15.1.1}Hypersurface}{56}{subsection.15.1.1}%
+\contentsline {subsubsection}{Structure Sheaf on $|E|$}{56}{subsubsection*.57}%
+\contentsline {chapter}{\numberline {16}Conics and Quadric Surfaces}{57}{chapter.16}%
+\contentsfinish 

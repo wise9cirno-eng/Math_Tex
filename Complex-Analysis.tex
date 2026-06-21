@@ -1,0 +1,799 @@
+\documentclass[Total.tex]{subfiles}
+\begin{document}
+	\chapter{Differentials in Complex Field}
+		\section{Previews}
+			Review:
+			\begin{itemize}
+				\item Complex Field
+				\item Continuity
+			\end{itemize}
+			\subsection{Real and Complex Vector Spaces, Complexification}
+				Consider the notation as follwing: 
+				\begin{itemize}
+					\item $Hom_\RR(\CC)$ for $\RR$-linear mappings;
+					\item $Hom_\CC(\CC)$ for $\CC$-linear mappings;
+				\end{itemize}
+				Then,
+				\begin{lemma}
+					Let $T\in Hom_\RR(\CC)$ be an $\RR$-linear endomorphisms of $\CC$, with following matrix representation for basis s$1,i$
+					\begin{gather*}
+						T=\begin{pmatrix}
+							a&b\\
+							c&d
+						\end{pmatrix}
+					\end{gather*}
+					Then, 
+					\begin{gather*}
+						Tz=\lambda z+\mu \bar{z}\qquad\begin{cases}	\lambda=\lambda_1+i\lambda_2=\frac{1}{2}[(a+d)-(b-c)i]\\
+							\mu=\mu_1+i\mu_2=\frac{1}{2}[(a-d)+(b+c)i]
+						\end{cases}
+					\end{gather*}
+					we have: $T$ is $\CC$-linear$\Leftrightarrow a=d,b=-c$.
+				\end{lemma}
+				\begin{proof}
+					With $z=\begin{pmatrix}
+						x\\
+						y
+					\end{pmatrix}$ we have
+					\begin{gather*}
+						Tz=\begin{pmatrix}
+							a&b\\
+							c&d
+						\end{pmatrix}\begin{pmatrix}
+							x\\
+							y
+						\end{pmatrix}=\begin{pmatrix}
+							ax+by\\
+							cx+dy
+						\end{pmatrix}=(\lambda_1+i\lambda_2)(x+iy)+(\mu_1+i\mu_2)(x-iy)=\begin{pmatrix}
+							\lambda_1 x-\lambda_2y+\mu_1x+\mu_2y\\
+							\lambda_2 x+\lambda_1 y-\mu_1 y+\mu_2 x
+						\end{pmatrix}
+					\end{gather*}
+					Which implies
+					\begin{gather*}
+						\begin{cases}
+							a=\lambda_1+\mu_1\\
+							b=-\lambda_2+\mu_2\\
+							c=\lambda_2+\mu_2\\
+							d=\lambda_1-\mu_1
+						\end{cases}\Rightarrow \begin{cases}
+							\lambda_1=\frac{a+d}{2}\\
+							\lambda_2=-\frac{b-c}{2}\\
+							\mu_1=\frac{a-d}{2}\\
+							\mu_2=\frac{b+c}{2}
+						\end{cases}\Rightarrow \begin{cases}
+							\lambda=\lambda_1+i\lambda_2=\frac{1}{2}[(a+d)-(b-c)i]\\
+							\mu=\mu_1+i\mu_2=\frac{1}{2}[(a-d)+(b+c)i]
+						\end{cases}
+					\end{gather*}
+					And $\CC$-Linearity: Notice $id_\CC$ is linear, but $\bar{(-)}:\CC\rightarrow \CC$ is not.
+				\end{proof}
+		\section{Complex Differentials, Cauchy-Riemann Equation}
+			\subsection{Differentiability}
+				\subsubsection{Complex Derivative}
+					\begin{Def}
+						Define
+						\begin{gather*}
+							f'(z_0):=\lim_{z\rightarrow z_0} \frac{f(z)-f(z_0)}{z-z_0}
+						\end{gather*}
+					\end{Def}
+					Then, we have: $f(z)=u(z)+i(z)$, and notation $u(z)=u(x+iy),v(z)=v(x+iy)$, if $f'(z_0)$ exists,
+					\begin{gather*}
+						f'(z_0)=\lim_{z\rightarrow z_0} \frac{u(z)-u(z_0)}{z-z_0}+i\lim_{z\rightarrow z_0} \frac{v(z)-v(z_0)}{z-z_0}\\
+						\qquad=\lim_{\Delta y\rightarrow 0}\lim_{\Delta x\rightarrow 0} \frac{u(z+\Delta x+i\Delta y)-u(z+\Delta x)}{\Delta x+i\Delta y}\\+\lim_{\Delta x\rightarrow 0}\lim_{\Delta y\rightarrow 0}\frac{u(z+\Delta x)-u(z)}{\Delta x+i\Delta y}\\+i\lim_{\Delta y\rightarrow 0}\lim_{\Delta x\rightarrow 0} \frac{v(z+\Delta x+i\Delta y)-v(z+\Delta x)}{\Delta x+i\Delta y}\\+i\lim_{\Delta x\rightarrow 0}\lim_{\Delta y\rightarrow 0}\frac{v(z+\Delta x)-v(z)}{\Delta x+i\Delta y}\\
+						=[-i\frac{\partial u}{\partial y}+\frac{\partial u}{\partial x}-\frac{\partial v}{\partial y}+i\frac{\partial v}{\partial x}](z_0)
+					\end{gather*}
+					As matrix coordinate
+					\begin{gather*}
+						\begin{pmatrix}
+							\frac{\partial u}{\partial x}(z_0)&-\frac{\partial v}{\partial y}(z_0)\\
+							-\frac{\partial u}{\partial y}(z_0)&\frac{\partial v}{\partial y}(z_0)
+						\end{pmatrix}
+					\end{gather*}
+			\subsection{Cauchy-Riemann Equation}
+				\begin{theorem}
+					(Cauchy-Riemann) 
+					\begin{gather*}
+						f'(z)\mbox{ is }\CC\mbox{-linear}\Leftrightarrow \begin{cases}
+							\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y}\\
+							\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}
+						\end{cases}
+					\end{gather*}
+				\end{theorem}
+				\begin{proof}
+					Omitted.
+				\end{proof}
+			\subsection{Wirtinger Derivation}
+				Define:
+				\begin{Def}
+					With
+					\begin{gather*}
+						f(z)=f(z_0)+\lambda(z-z_0)+\overline{z-z_0}+o(z-z_0)
+					\end{gather*}
+					We have
+					\begin{gather*}
+						\frac{\partial f}{\partial z}(z_0)=\lambda=\frac{1}{2}(\frac{\partial}{\partial x}-i\frac{\partial f}{\partial y})\\
+						\frac{\partial f}{\partial \bar{z}}(z_0)=\mu=\frac{1}{2}(\frac{\partial}{\partial x}+i\frac{\partial f}{\partial y})
+					\end{gather*}
+				\end{Def}
+				\begin{proposition}
+					We have:
+					\begin{itemize}
+						\item If $f$　is at $z_0$ (real)-differentiable, then
+						\begin{gather*}
+							f(z)=f(z_0)+\frac{\partial f}{\partial z}(z_0)(z-z_0)+\frac{\partial f}{\partial \bar{z}}\overline{(z-z_0)}+o(z-z_0)\qquad z\rightarrow z_0
+						\end{gather*}
+						\item $\frac{\partial}{\partial z}(f\cdot g)=\frac{\partial f}{\partial z}\cdot g+f\cdot \frac{\partial f}{\partial z}$;
+						\item We have:
+						\begin{gather*}
+							\frac{\partial f}{\partial z}=\overline{\frac{\partial \bar{f}}{\partial \bar{z}}}\qquad \frac{\partial \bar{f}}{\partial \bar{z}}=\overline{\frac{\partial \bar{f}}{\partial z}}
+						\end{gather*}
+						\item For $f:z\mapsto z,g:z\mapsto \bar{z}$ we have
+						\begin{gather*}
+							\frac{\partial}{\partial z} f=1;\frac{\partial}{\partial \bar{z}}f=0;\frac{\partial}{\partial \bar{z}}g=1;\frac{\partial}{\partial z}f=0
+						\end{gather*}
+						\item (Chain-Rule I) Suppose $g(w),f(z)$ continuous differentiable, we have
+						\begin{gather*}
+							\frac{g\circ f}{\partial z}=\frac{\partial g}{\partial w}\circ
+						\end{gather*}
+						\item (Chain-Rule II) Suppose $\varphi:[a,b]\rightarrow \CC$ continuous differentiable, then
+						\begin{gather*}
+							\frac{d}{dt}(f\circ \varphi)=\frac{df}{dz}\circ \varphi\cdot \frac{d\varphi}{dt}+\frac{d}{d\bar{z}}\circ \varphi\cdot \overline{\frac{d\varphi}{dt}}
+						\end{gather*}
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+					\begin{itemize}
+						\item 
+						\item 
+						\item 
+						\item 
+						\item 
+						\item 
+					\end{itemize}
+				\end{proof}
+			\subsection{Complex Differentiablity}
+				\begin{proposition}
+					Suppose $f:U\rightarrow \CC$ be a function with $U\subseteq\CC$ open. The followings are equivalent:
+					\begin{itemize}
+						\item 
+						\item 
+						\item 
+						\item 
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+					\begin{itemize}
+						\item 
+					\end{itemize}
+				\end{proof}
+				
+				\begin{Def}
+					(Holomorphic Functions)
+					\begin{itemize}
+						\item $f$ is \textbf{holomorphic} on $U$, if $f$ is \underline{complex-differentiable} at each $z\in U$;
+						\item Take the notion of $\mathcal{O}(U)$ for the collection of holomorphic functions.
+					\end{itemize}
+				\end{Def}
+				
+				\begin{proposition}
+					(Rules of Complex Derivative) \begin{itemize}
+						\item Suppose $f,g$ complex differentiable at $z_0$, then at the point $z_0$, we have
+						\begin{gather*}
+							内容...
+						\end{gather*}
+						\item 
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Polynomials,Power Series}
+			\subsubsection{Polynomials}
+			\begin{proposition}
+				Polynomial $p\in \CC[z]$ is complex differentiable, and
+				\begin{gather*}
+					p'(z)=\sum _{j=1}^n j a_jz^{j-1}
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				Omitted.
+			\end{proof}
+			\subsubsection{Power Series}
+			\begin{Def}
+				Define the power series:
+				\begin{gather*}
+					f(z)=\sum_{i=0}^\infty a_i(z-z_0);z_0\in \CC
+				\end{gather*}
+			\end{Def}
+			We have
+			\begin{proposition}
+				(Cauchy-Hadamard) The convergence radius
+				\begin{gather*}
+					R=\frac{1}{\lim\sup|c_n|^\frac{1}{n}}
+				\end{gather*}
+				
+				where:
+				\begin{itemize}
+					\item $|z|>R$ Disvergent;
+					\item $|z|=R$ Convergent or Disvergent;
+					\item $|z|<R$ Convergent.
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				\begin{itemize}
+					\item $|z|>R$, 
+					\begin{gather*}
+						\sqrt[n]{|c_n|}
+					\end{gather*}
+					\item $|z|<R$,
+					\begin{gather*}
+						\sqrt{n}{|c_n|}\geq t+\epsilon
+					\end{gather*}
+					
+					for finite of $n$. And for others,
+					\begin{gather*}
+						\sqrt{n}{c_n}<t+\epsilon\Rightarrow 
+					\end{gather*}
+				\end{itemize}
+			\end{proof}
+			\begin{corollary}
+				If the radius $R$ and $\lim |\frac{a_{n+1}}{a_n}|$ exists, then,
+				\begin{gather*}
+					R=\lim |\frac{a_{n+1}}{a_n}|
+				\end{gather*}
+			\end{corollary}
+			Some of review in analysis
+			\begin{proposition}
+				If $\{a_n\},\{b_n\}$ is absolute convergent, then definen $c_n:=\sum_{k=0}^n a_k b_{n-k}$,
+				\begin{gather*}
+					\sum_{n=0}^\infty c_n=(\sum a_n)(\sum b_n)
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+		\section{Fundamental Theorems in Complex Analysis}
+			\subsection{Invertible Function}
+				\begin{proposition}
+					Suppose $f:U\rightarrow V$ continuous \underline{continuous complex differentiable,bijective}. If for every $z\in U$,
+					\begin{gather*}
+						f'(z)\not=0
+					\end{gather*}
+					Then, there exists an inverse $f^{-1}:V\rightarrow U$ with 
+					\begin{gather*}
+						(Df^{-1}(f(z)))=(Df(z))^{-1},z\in U
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{proposition}
+					Suppose $f:U\rightarrow V$ be continuous complex differentiable, with $U,V\subseteq \CC$ open. And $f$ is \underline{bijective}, $f'(z)\not=0,z\in U$.
+					
+					Then, the inverse $f^{-1}:V\rightarrow U$ is also continuous complex differentiable, with
+					\begin{gather*}
+						(f^{-1})'(w)f'(f(w))=1
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					Omitted.
+				\end{proof}
+			\subsection{Analytic Branch}
+				\subsubsection{Logarithms}
+					
+					\begin{Def}
+						Define:
+						\begin{itemize}
+							\item $C_\alpha=\CC-\{re^{i\alpha}|r\geq 0\},0$
+							\item $\Omega_\alpha=\{z\in \CC|\alpha-2\pi<Im z<\alpha\}$
+						\end{itemize}
+						We have:
+						\begin{itemize}
+							\item Exponential
+							\begin{gather*}
+								exp:\Omega_\alpha\rightarrow C_\alpha
+							\end{gather*}
+							\item Logarithms
+							\begin{gather*}
+								log_\alpha:C_\alpha\rightarrow \Omega_\alpha
+							\end{gather*}
+							Especially, logarithm $log_\pi$ is called \textbf{main branch}.
+						\end{itemize}
+					\end{Def}
+				\subsubsection{Roots}
+					\begin{Def}
+						Define:
+						\begin{itemize}
+							\item \begin{gather*}
+								z\mapsto z^n\qquad \{z\in \CC^*|0\leq |arg(z)|\leq \pi/n\}\rightarrow \CC_\pi
+							\end{gather*}
+							which is bijective.
+							\item  Then, the inverse
+							\begin{gather*}
+								\sqrt[n]{-}:z\mapsto \sqrt[n]{z}
+							\end{gather*}
+						\end{itemize}
+					\end{Def}
+			\subsection{Complex Integration}
+				\subsubsection{Area Integraion}
+					As what we did in $\RR^2$;
+				\subsubsection{Path Integration}
+					Define the path integration as following:
+					\begin{gather*}
+						\int_\gamma f(z)dz=\lim_{\Delta\rightarrow 0} \sum f(z_i)\Delta z_i
+					\end{gather*}
+					And we have the coordinate decomposition
+					\begin{gather*}
+						f(z)=u(z)+iv(z)\qquad dz=dx+idy
+					\end{gather*}
+					Finally:
+					\begin{gather*}
+						=\int_\gamma (u+iv)(dx+idy)=\int_\gamma udx-vdy+i\int_\gamma vdx+udy
+					\end{gather*}
+					
+					Especially:If the path $\gamma$ is continuous, and $\gamma|[t_i,t_{i+1}]\in C^1([t_i,t_{i+1}])$, we have
+					\begin{gather*}
+						\int_\gamma f(z)dz=\int_a^b (f\circ\gamma)(t)\cdot \gamma'(t)dt=\sum \int_{t_{i-1}}^{t_i} f(\gamma(t))\cdot \gamma'(t)dt
+					\end{gather*}
+					\begin{example}
+						
+					\end{example}
+					
+					\begin{proposition}
+						内容...
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+				\subsubsection{'Holzhammer Ungleichung'}
+					\begin{proposition}
+						内容...
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{proposition}
+						(Main Theorem of Calculus for Path Integration in Complex Analysis) 
+						\begin{gather*}
+							\int_\gamma F'(z)dz=F(\gamma(b))-F(\gamma(a))
+						\end{gather*}
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+			\subsection{The Winding Numbers}
+				\begin{Def}
+					For a path $\gamma$ with $a\notin sp\gamma$, define
+					\begin{gather*}
+						wind(\gamma,a)=\frac{1}{2\pi i} \frac{d\gamma}{z-a}
+					\end{gather*}
+				\end{Def}
+				\begin{lemma}
+					$f:U\rightarrow \CC$ continuous complex differentiable, with $\gamma$ a path in $U$, then,
+					\begin{gather*}
+						exp(\int_\gamma \frac{f'}{f}(z)dz)=\frac{f(\gamma(b))}{f(\gamma(a))}
+					\end{gather*}
+				\end{lemma}
+				\begin{proof}
+					Consider 
+					\begin{gather*}
+						\Phi(t)=exp(-\int_a^t \frac{f'}{f}(\gamma(s))\gamma'(s)ds)\cdot f(\gamma(t)) 
+					\end{gather*}
+					We have:
+					\begin{gather*}
+						...\\
+						\Rightarrow \Phi(a)=\Phi(b),exp(\int_\gamma \frac{f'}{f}(z)dz)=\frac{f(\gamma(b))}{f(\gamma(a))}
+					\end{gather*}
+				\end{proof}
+				\begin{proposition}
+					\begin{gather*}
+						\oint_{|\gamma-a|=r} \frac{d\xi}{(\xi-z)^n}=\begin{cases}
+							0&n\not=-1\\
+							2\pi i&n=-1
+						\end{cases}
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					Now consider $exp()$
+				\end{proof}
+			\subsection{Cauchy's Formula}
+				\subsubsection{Triangle}
+					\begin{theorem}
+						(Cauchy) If $f$ is analytic on $\Omega\subseteq \CC$, with triangle $\Delta ABC\subseteq \Omega$,
+					\end{theorem}
+					\begin{proof}
+						内容...
+					\end{proof}
+				\subsubsection{Star Region}
+					\begin{Def}
+						(Star Region) 
+					\end{Def}
+				\subsubsection{Stroke$\Rightarrow$ Cauchy's Integration Formula}
+			\subsection{Mean Value Property}
+				\begin{proposition}
+					Suppose $f$ is analytic in $B(z_0,R);R>r$ then,
+					\begin{gather*}
+						f(z_0)=\frac{1}{2\pi} \int_0^{2\pi} f(z_0+re^{i\theta})d\theta
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{corollary}
+					We have
+					\begin{gather*}
+						|f(z_0)|=\frac{1}{2\pi} \int_0^{2\pi}  |f(z_0+re^{i\theta})|d\theta
+					\end{gather*}
+				\end{corollary}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Argument Principle}
+			
+				Suppsoe that $f(z)=(z-a)^mg(z)$, with $m$ th zero pole, then
+				\begin{gather*}
+					f'(z)= (z-a)^mg'(z)+m(z-a)^{m-1}g(z);m\geq 1\Rightarrow \frac{f'(z)}{f(z)}=\frac{g'(z)}{g(z)}+\frac{m}{z-a} 
+				\end{gather*}
+				
+				Conversely, suppose $f(z)=(z-a)^{-m}g(z)$ with pole of order $m$, then
+				\begin{gather*}
+					f'(z)=\Rightarrow 
+				\end{gather*}
+				
+				\begin{theorem}
+					(Argument Principle) Let 
+					\begin{gather*}
+						\frac{1}{2\pi}\int\frac{f'(z)}{f(z)}dz=\sum n(\gamma;z_i)-\sum n(\gamma,p_i)
+					\end{gather*}
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Rouche's Theorem}
+				\begin{theorem}
+					(Rouche) Suppose $D$ be a region on $\CC$, with a 
+				\end{theorem}
+			\subsection{Open Mapping's Theorem}
+				\begin{theorem}
+					Suppose $f$ is a non-constant analytic function on the region $\Omega$, then its image
+					\begin{gather*}
+						f(\Omega)
+					\end{gather*}
+					
+					is open.
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+		\section{Singularities}
+			\subsection{Classification}
+				\subsubsection{Isolated Singularities}
+				\begin{Def}
+					A function $f$ is has an \textbf{isolated singularity} at $a\in \CC$, if there exists $R>0$ with
+					\begin{itemize}
+						\item $f$ is analytic on $B(a,R)-a$;
+						\item $f$ is not analyti on $B(a,r)$;
+					\end{itemize}
+					
+					Classification of Isolated Singularities:
+					\begin{itemize}
+						\item $f$ is called \textbf{removable} if 
+						\item $f$ is called \textbf{text} if 
+					\end{itemize}
+				\end{Def}
+				
+			\subsection{Residue's Theorem}
+				\begin{theorem}
+					(Residue's Theorem)
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+		\section{The Maximum and Minimum Modulus Theorem}
+			\subsection{Maximum Modulus Theorem}
+			\begin{theorem}
+				(Maximum Modulus Theorem,the First Version) Suppose $G$ be a region, with $f$ analytic on $G$. $a\in G$ with 
+				\begin{gather*}
+					|f(z)|\leq |f(a)|\qquad z\in G
+				\end{gather*}
+				
+				Then, $f$ is constant.
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{theorem}
+				(Maximum Modulus Theorem, the Second Version)
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{theorem}
+				(Maximum Modulus Theorem, the Third Version)
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			Another proof can also be given as following:
+			
+			\textbf{Statement} The harmonic function has the maximum/minimum on the boundary.
+			
+			
+			\subsection{Minimum Modulus Theorem}
+			\begin{theorem}
+				内容...
+			\end{theorem}
+			\subsection{Schwarz's Theorem}
+			\subsection{Hadamard's Three Circle Theorem}
+			
+		\section{Compactness and Convergence in the Space of Analytic Functions}
+			\subsection{The Riemann's Mapping Theorem}
+				\begin{theorem}
+					内容...
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				More topics will be given in: Theory of Univalent Functions.
+				\subsubsection{Topic:Biberbach's Polynomial}
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof} 
+			\section{Weierstrass's Factorization Theorem}
+				\begin{theorem}
+					内容...
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+		\section{Runge's Theorem}
+		\section{Analytic Continuation}
+			Original Riemann Surface: Solution of algebraic function
+			\begin{gather*}
+				f(w,z)=0
+			\end{gather*}
+			
+			Especially: If $f(w_0,z_0)=0;f_z(w_0,z_0)\not=0\Rightarrow $ Locally $z=z(w)$.
+			
+			\begin{Def}
+				\begin{itemize}
+					\item Suppose $\gamma:[0,1]\rightarrow \Omega$, then $D_j(\gamma(t_i),r_i)\subseteq \Omega$ is a \textbf{chain of disks} iff
+					\begin{itemize}
+						\item There exists cut $0=t_1<\dots<t_N=1$,
+						\begin{gather*}
+							\gamma([t_i,t_{i+1}])\subseteq D_i\cap D_{i+1}
+						\end{gather*}
+					\end{itemize}
+					\item $g\in \mathcal{H}(V)$ is an \textbf{analytic continuation} of $f$ if there exists a chain of disks with $f_j=f_{j+1}$ on $D_j\cap D_{j+1}$ and 
+					\begin{gather*}
+						f_0=f\qquad f_J=g
+					\end{gather*}
+				\end{itemize}
+			\end{Def}
+			
+			\begin{lemma}
+				The analytic continuation $g$ of $f$ along $\gamma$ only depends of $f$ and $\gamma$, but not on the choice of circles. 
+				
+				In particular, it is unique.
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{theorem}
+				Suppose $\gamma_0,\gamma_1$ two homotopic curves relative to some region $\Omega\subseteq \CC$, with initiao and end points $p,q$. 
+				
+				Let $U$ be a neighborhood of $p$, assume $f\in \mathcal{H}(U)$, then the analytic continuation agrees locally around $p,q$.
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\textbf{Remark}
+			
+			\subsubsection{Example: $\Gamma(z)$}
+			
+			Consider
+			\begin{gather*}
+				\Gamma(z):=\int_0^\infty e^{-t}t^{z-1}dt
+			\end{gather*}
+			
+			It is analytic on the half plane: 
+	\chapter{Harmonic Functions}
+	\chapter{Entire Functions}
+		\section{Convergence, and Normal Families}
+			\begin{lemma}
+				Suppose
+				\begin{gather*}
+					\{f_n\}_{n=1}^\infty \subseteq \mathcal{H}(\Omega)
+				\end{gather*}
+				
+				converges uniformly on compact subsets of $\Omega$ to a function $f$, then 
+				\begin{itemize}
+					\item $f\in \mathcal{H}(\Omega)$;
+					\item $f_n^{(k)}\rightarrow f^{(k)}$ uniformly on compact subset of $\Omega$ for each $k\geq 1$. 
+				\end{itemize}
+				
+				Furthermore, suppose 
+				\begin{gather*}
+					\sup_{n\geq 1}\#\{z\in \Omega|f_n(z)=w\}\leq N\leq \infty
+				\end{gather*}
+				
+				Then, either $f\equiv w$ in $\Omega$ or $\#\{z\in \Omega|f(z)=w\}\leq N$.
+				
+				\textbf{Remark} The cardinalities include multiplicity.
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{Def}
+				(Normal Family) One says that $\mathcal{F}=\{f_\alpha\}_{\alpha\in A}\subseteq \mathcal{H}(\Omega)$ is a \textbf{normal family} provided for each compact $K\subseteq \Omega$ one has
+				\begin{gather*}
+					\sup_{z\in K}\sup_{\alpha\in \mathcal{A}}|f_\alpha(z)|<\infty
+				\end{gather*} 
+			\end{Def}
+			
+			\begin{proposition}
+				One says: $\mathcal{F}=\{f_\alpha\}_{\alpha\in \mathcal{A}}\subseteq \mathcal{H}(\Omega)$ is a \textbf{normal family}. Then, there exists a sequence $f_n$ in $\mathcal{F}$ that converges uniformly on compact subset of $\Omega$. The limit again being a holomorphic function.
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{theorem}
+				Let $\mathscr{F}$ be a family of meromorphic functions in $\Omega$, such that for each $z_0\in \Omega$ there is a neighborhood $U(z_0)\subseteq \Omega$ and constant $M(z_0)$ such that:
+				\begin{itemize}
+					\item Either $|f(z)|<M(z_0)$;
+					\item Or $\frac{1}{|f(z)|}<M(z_0),\forall z\in U(z_0),\forall f\in \mathscr{F}$
+				\end{itemize}
+				
+				Then, $\mathscr{F}$ is normal.
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+		\section{Mittag-Lefflers Theorem}
+			Review: Mittag-Leffers system,HA
+			
+			\begin{theorem}
+				(Mittag-Lefflers Theorem) Given $\{z_n\}_{n=1}^N\subseteq \CC$, with $|z_n|\rightarrow \infty$ if $N\rightarrow \infty$, and polynomial $P_n$ with positive degrees and no constant terms, there exists $f\in \mathcal{M}(\CC)$ so that $f$ has poles exactly at $z_n$, and
+				\begin{gather*}
+					f(z)-P_n(\frac{1}{z-z_n})
+				\end{gather*} 
+				
+				is analytic around $z_n$ for each $1\leq n\leq N$.
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{corollary}
+				Consider the following exact sequence
+				\begin{gather*}
+					0\rightarrow \mathcal{O}\rightarrow \mathcal{M}\rightarrow \mathcal{M}/\mathcal{O}\rightarrow 0
+				\end{gather*}
+				
+				which induces a long sequence:$$0 \to H^0(X, \mathcal{O}) \xrightarrow{i} H^0(X, \mathcal{M}) \xrightarrow{\pi} H^0(X, \mathcal{M}/\mathcal{O}) \xrightarrow{\delta} H^1(X, \mathcal{O}) \to \dots$$
+				
+				where $X\subseteq\CC$ is a domain.Now, we have:$$H^1(X, \mathcal{O}) = 0$$
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+		\section{Runge's Theorem}
+			\subsection{Runge's Theorem}
+			Firstly: If $f\in \mathcal{O}(U)$, then it is analytic, and has an approxiamation
+			\begin{gather*}
+				f=\lim_{n}\sum a_i (z-z_0)^i;z\in D(z_0,r)
+			\end{gather*}
+			
+			But a question is:
+			\begin{center}
+				If we can replace disk $D(z_0,r)$ with \textbf{arbitrary region}?
+			\end{center}
+			
+			The answer is \textbf{no}: 
+			\begin{example}
+				Consider $G=\{z\in \CC|0<|z|<1\}$. Then, if $p_n\rightarrow f$, then consider the path
+				\begin{gather*}
+					\gamma=e^{it}
+				\end{gather*}
+				
+				We have 
+				\begin{gather*}
+					\lim \oint_\gamma p_n=\oint_\gamma \lim p_n=\oint_\gamma f=0
+				\end{gather*}
+				
+				But, $\oint z^{-1}=0$, and $z^{-1}$ is analytic on $G$. The main reason is simply-coonectedness.
+			\end{example}
+			
+			\begin{lemma}
+				Suppose $K$ a \underline{compact} subset of the region $G$, then there are upper line segments
+				\begin{gather*}
+					\gamma_1,\dots,\gamma_n\subseteq G-K
+				\end{gather*}
+				
+				such that for every function $f$ in $G$,
+				\begin{gather*}
+					f(z)=\sum \frac{1}{2\pi i}\int_{\gamma_k} \frac{f(w)}{w-z}dw
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{lemma}
+				$B(E)$ is a closed subalgebra of $C(K,\CC)$ that contains every rational function with a pole in $E$.
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{lemma}
+				内容...
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{lemma}
+				内容...
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{theorem}
+				Let $K$ compact subset of $\CC$, and $E$ a subset of $\CC_\infty-K$. 
+				
+				If: 
+				\begin{itemize}
+					\item $E$ meets each (connected) components of $\CC_\infty-K$;
+					\item $f$ is analytic in an open set containing $K$;
+					\item $\epsilon>0$
+				\end{itemize}
+				
+				Then, there exists a rational number $R(z)$, whose only pole lie in $E$, and such that
+				\begin{gather*}
+					|f(z)-R(z)|<\epsilon
+				\end{gather*}
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			
+			\textbf{Remark} Here, we could give another proofs:
+			\begin{itemize}
+				\item 
+			\end{itemize}
+			\subsection{The Density of Functions}
+			\subsection{Polynomially Convex}
+			\begin{Def}
+				内容...
+			\end{Def}
+			
+			
+	\chapter{The Range of Analytic Functions}
+	\chapter{Univalent Functions}
+		Given in a new topic of part.
+	
+	\newpage
+	
+	Continuation of Analytic Functions, given in Riemann Surface.
+\end{document}

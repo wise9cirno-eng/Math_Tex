@@ -1,0 +1,137 @@
+\documentclass[Total.tex]{subfiles}
+\begin{document}
+	\chapter{Laplacian}
+		List of Notions:
+		\begin{itemize}
+			\item 
+			\item Local integrable functions
+			\begin{gather*}
+				L_{loc}^1(\Omega)
+			\end{gather*}
+		\end{itemize}
+		\section{The Laplace Operator}
+			\begin{Def}
+				(The Laplace Operator) In $\RR^d$, define the Cartesian coordinates $x=(x^1,\dots,x^d)$. Now, let
+				\begin{gather*}
+					\Delta f=\sum_j \frac{\partial^2 f}{\partial x_j^2}
+				\end{gather*}
+				$f=f(x_1,\dots,x_d)$ is twice differentiable function. This operator is called \textbf{Laplace operator}.
+			\end{Def}
+			Some of equations:
+			\begin{itemize}
+				\item Wave equation
+				\begin{gather*}
+					\frac{\partial^2 U}{\partial t^2}=\Delta U(t,x)
+				\end{gather*}
+				Here, $U(t,x)$ denotes the displacement from the equilibrium of the vibrating object at the point $x\in R^d$ at time $t$.
+				\item Heat equation
+				\begin{gather*}
+					\frac{\partial U(t,x)}{\partial t}=\Delta U(t,x)
+				\end{gather*}
+				\item Laplace equation
+				\begin{gather*}
+					\Delta U(t)=0
+				\end{gather*}
+				\item Poisson equation
+				\begin{gather*}
+					-\Delta U(x)=f(x)
+				\end{gather*}
+				\item Schrödinger Equation
+				\begin{gather*}
+					i\frac{\partial U(t,x)}{\partial t}=-\Delta U(t,x)
+				\end{gather*}
+			\end{itemize}
+			\subsection{The Laplcian on a Riemannian Manifold}
+		\section{The Spectral Theorems}
+			\subsection{Weak Derivatives, Sobolev Spaces}
+				\subsubsection{Weak Derivatives}
+					\begin{Def}
+						Let $\Omega\subseteq \RR^d$ be a domain, $u,v\in L^1_{loc}(\Omega)$, suppose that for any $\varphi\in C^1_0(\Omega)$
+						\begin{gather*}
+							\int_\Omega u\partial_j \varphi dx=-\int_\Omega v\varphi dx
+						\end{gather*}
+						where $\partial_j=\frac{\partial}{\partial x_j}$. 
+						
+						We say: $\partial_j u$ exists in $\Omega$ in the \textbf{weak sense};equals to $v$.
+					\end{Def}
+					\textbf{Remark} Suppose that $u\in C^1(\Omega)$. With the integration by part, we have
+					\begin{gather*}
+						u\partial_j \varphi +\partial_j u \varphi =\partial_j (u\varphi)
+					\end{gather*}
+					Then,
+					\begin{gather*}
+						\int_\Omega u\partial_j\varphi dx=\int_\Omega \partial_j (u\varphi)dx-\int_\Omega  \varphi\partial_j udx
+					\end{gather*}
+					And with Gauss's theorem, we have
+					\begin{gather*}
+						\int_\Omega \partial_j(u\varphi)=\int_{\partial\Omega} (u\varphi)\cdot v_j dS
+					\end{gather*}
+					Suppose that $\varphi$ is a test function, then,
+					\begin{gather*}
+						\varphi|\partial \Omega=0\Rightarrow (u\varphi)|\partial \Omega=0
+					\end{gather*}
+					Thus, we can assumpt, that
+					\begin{proposition}
+						For $\Omega\subseteq \RR^d$ we have
+					\end{proposition}
+				\subsubsection{Sobolev Space}	
+					\begin{Def}
+						Set $H^0(\Omega)=L^2(\Omega),m\in N$. The \textbf{Soblev space} $H^m(\Omega)$ is defined as following:
+						\begin{gather*}
+							H^m(\Omega):=\{u\in L^2(\Omega)|\partial_j u\mbox{ exists in the weak sense,}\partial_j u\in H^{m-1}(\Omega),j=1,\dots,d\}
+						\end{gather*}
+						In general, if we take the following notion
+						\begin{gather*}
+							\int_\Omega u(D^\alpha \varphi) dx=(-1)^{|\alpha|}\int_\Omega v\varphi dx,\varphi\in 
+						\end{gather*}
+						Then, $v$ is called the \textbf{weak derivative} of order $\alpha$. Denoted by $D^\alpha u=v$.
+						\begin{gather*}
+						 W^{k,p}(\Omega):=\{u\in L^p(\Omega)|D^\alpha u\in L^p(\Omega)\}
+						\end{gather*}
+					\end{Def}
+					\begin{itemize}
+						\item $H^m(\Omega)$ is equipped with the inner product
+						\begin{gather*}
+							(u,v)_{H^1(\Omega)}:=\int_\Omega uvdx+\int_\Omega <\nabla u,\nabla v>dx\\
+							\qquad=\int_\Omega uvdx+\int_\Omega \sum_{j} \frac{\partial u}{\partial x_j} \frac{\partial v}{\partial x_j}dx\\
+							\qquad =\int_\Omega uvdx+\sum_j \int_\Omega \frac{\partial u}{\partial x_j} \frac{\partial v}{\partial x_j}dx
+						\end{gather*}
+						Then,
+						\begin{gather*}
+							(u,v)_{H^m(\Omega)}=(u,v)_{L^2\Omega}+\sum_j \int_\Omega (\partial_j u,\partial_j v)_{H^{m-1}(\Omega)},m\geq 2
+						\end{gather*}
+						The induced norm
+						\begin{gather*}
+							\begin{cases}
+								\Vert u\Vert^2_{H^1(\Omega)}=\Vert u\Vert^2_{L^2(\Omega)}+\Vert \nabla u\Vert^2_{L^2(\Omega)}\\
+								\Vert u\Vert^2_{H^m(\Omega)}:=\Vert u\Vert^2_{L^2(\Omega)}+\sum_j \Vert\partial_j u\Vert^2_{H^{{m-1}}(\Omega)},m\geq 2
+							\end{cases}
+						\end{gather*}
+					\end{itemize}
+					Thus, the Sobolev space is a Hilbert space.
+					\subsubsection{Weak Solutions}
+					\begin{lemma}
+						内容...
+					\end{lemma}
+				\subsection{The Weak Spectral Theorem for Dirichlet Laplacian}
+				\subsection{Self-Adjoint Unbounded Linear Operators}
+				\subsection{The Dirichlet Laplacian via the Friedrichs Extension}
+				\section{Elliptic Regularity, and Strong Spectral Theorems}
+		\chapter{Variational Principles and Applications}
+			\section{Variational Principles for Laplace Eigenvalues}
+				\subsection{The Rayleigh Quotient}
+					\begin{Def}
+						(Semi-Bounded Quadratic Form) Let $\mathcal{H}$ be a real Hilbert space, with inner product $(-,-)_\mathcal{H}$. Consider the symmetric bilinear form
+						\begin{gather*}
+							\mathcal{L}:U\times U\rightarrow \RR;U:=Dom(\mathcal{L})\qquad\mbox{dense in }\mathcal{H}
+						\end{gather*} We say that \textbf{a quadratic semibounded from below} if there exists a constant $c\in \RR$, such that
+						\begin{gather*}
+							\mathcal{L}[u,u]\geq c(u,u)_\mathcal{H},u\in Dom(\mathcal{L})
+						\end{gather*}
+					\end{Def}
+			\section{Consequences of Variational Principles}
+			\section{Weyl's Law and Polya's Conjecture}
+			\section{Eigenvalue Inequalities}
+		\chapter{The Steklov Problem, and the Dirichlet-to-Neumann Map}
+		 
+\end{document}

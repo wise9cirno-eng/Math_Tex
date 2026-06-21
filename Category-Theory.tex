@@ -1,0 +1,370 @@
+\documentclass[Total.tex]{subfiles}
+
+\begin{document}
+	\chapter{Fundamentals}
+		\section{Definitions}
+		
+			\subsection{Categories}
+			
+			\subsection{Functors}
+				\subsubsection{Full,Faithful}
+					\begin{Def}
+						A functor $F:X\rightarrow Y$
+						\begin{gather*}
+							F_{X,Y}:Hom_\mathcal{C}(X,Y)\rightarrow Hom_\mathcal{D}(FX,FY)
+						\end{gather*} is called
+						\begin{itemize}
+							\item \textbf{full} if surjective; 
+							\item \textbf{faithful} if injective;
+							\item \textbf{faithfully full} if bijective;
+						\end{itemize}
+					\end{Def}
+					\subsubsection{Continuous Functors}
+					\begin{Def}
+						A functor $F:C\rightarrow D$ is \textbf{continuous} if it preserves all \textbf{small limits} that exists in the domain $\mathcal{C}$.
+						
+						i.e. given any \textbf{small category diagram} $A:E\rightarrow \mathcal{C}$ in $\mathcal{C}$ for which
+						\begin{itemize}
+							\item $lim(A)$ exists;
+							\item the universal cone $lim(A)\rightarrow A$
+						\end{itemize}
+						
+						Application of $F$ to that cone results in a universal cone $F(lim(A))\rightarrow F\circ A$. Thus making $F(lim(A))$ the limit of $F\circ A$.
+						
+						The limit $lim(F\circ A)$ exists, and te natural map induced by the universal property of the limit
+						\begin{gather*}
+							F(lim(A))\rightarrow lim(F\circ A)
+						\end{gather*}
+						
+						is an isomorphism.
+					\end{Def}
+					
+					\textbf{Continuous Functors in Enriched Category Theory}
+					\begin{Def}
+						内容...
+					\end{Def}
+				\subsection{Natural Transformation}
+			\begin{Def}
+				Consider the natural transformation of two  \textbf{natural isomorphism} if there exists functor $G:\mathcal{D}\rightarrow \mapsto\mathcal{C}$ such that
+				\begin{gather*}
+					GF=id_\mathcal{C}\qquad FG=id_\mathcal{D}
+				\end{gather*}
+			\end{Def}
+			
+			\begin{lemma}
+				Consider a natural transformation $\eta:F\rightarrow G$, where $F,G:\mathcal{C}\rightarrow \mathcal{D}$. 
+				
+				$\eta$ is a natural isomorphism$\Leftrightarrow \eta(x):F(x)\rightarrow G(x)$ are isomorphisms, $x\in X$. 
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Adjunction}
+			\begin{Def}
+				Let $\mathcal{C},\mathcal{D}$ be categories. pair of functors 
+				\begin{gather*}
+					F:\mathcal{C}\rightarrow \mathcal{D}\qquad G:\mathcal{D}\rightarrow \mathcal{C}
+				\end{gather*}
+				
+				are called \textbf{adjunction}, if there exists a bijection
+				\begin{gather*}
+					\Phi_{x,y}:Hom_\mathcal{C}(Fx,y)\rightarrow Hom_\mathcal{D}(x,Gy) 
+				\end{gather*}
+			\end{Def}
+			
+			\subsubsection{Unit;Counit}
+			
+			\begin{Def}
+				Let $\mathcal{C},\mathcal{D}$ be categories, consider a pair of functors
+				\begin{gather*}
+					F:\mathcal{C}\rightarrow \mathcal{D}\qquad G:\mathcal{D}\rightarrow \mathcal{C}
+				\end{gather*}
+				
+				then, the natural transformation
+				\begin{gather*}
+					\epsilon:id_\mathcal{C}\rightarrow GF\qquad \eta:FG\rightarrow id_\mathcal{D}
+				\end{gather*}
+				
+				are called \textbf{unit} and \textbf{counit} of $F,G$, if together they satsifying
+				\begin{gather*}
+					(\eta*F)\circ (F*\epsilon)=id_F\\
+					(\eta*G)\circ (G*\epsilon)=id_G
+				\end{gather*}
+				\begin{center}
+					\begin{tikzcd}
+						&FGF\arrow[rd,"\eta*F"]\\
+						F\arrow[rr,"id_F"]\arrow[ru,"F*\epsilon"]&&F
+					\end{tikzcd}\begin{tikzcd}
+						&GFG\arrow[rd,"\eta*G"]\\
+						G\arrow[rr,"id_G"]\arrow[ru,"\epsilon*G"]&&G
+					\end{tikzcd}
+				\end{center}
+			\end{Def}
+			
+			\begin{proposition}
+				内容...
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\subsubsection{Adjoint Functor Theorem}
+				
+				\begin{theorem}
+					Sufficient Conditions for a Limit-preserving functor $R:\mathcal{C}\rightarrow \mathcal{D}$ to be a \textbf{right adjoint} include:
+					\begin{itemize}
+						\item (\textbf{GAFT}, General Adjoint Functor Theorem)$\mathcal{C}$ is \textbf{complete} and \textbf{locally small}, and $R$ satisfies set condition;
+						\item (\textbf{SAFT}, Special Adjoint Functor Theorem)$\mathcal{C}$  is \textbf{compelete}, \textbf{locally small}, \textbf{well-powered}, and as a \textbf{small cogenerating set}, and $D$ is \textbf{locally small}. This
+					\end{itemize}
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				
+				\begin{theorem}
+					Let $F:\mathcal{C}\rightarrow\mathcal{D}$ be a functor between \textbf{locally presentable categories}, then
+					\begin{itemize}
+						\item $F$ has a right adjoint$\Leftrightarrow$ It reserves all smallt colimits;
+						\item 
+					\end{itemize}
+				\end{theorem}
+			\subsection{Equivalence of  Categories}
+				\subsubsection{'Principle of Equivalence'}
+				
+				\url{https://ncatlab.org/nlab/show/principle+of+equivalence}
+				\subsubsection{Equivalence of Categories}
+				\begin{Def}
+					\begin{itemize}
+						\item One object $A\in \mathcal{C}$ is equivalent to another object $B\in \mathcal{C}$, every context with $A$ can be replaced by $B$.
+						
+						\item In higher category theory, an \textbf{equivalence} often means a morphism which is invertible in a maximally weak sence.
+						
+						Tow objects are \textbf{equivalent} if there is an equivalence between them.
+					\end{itemize}
+				\end{Def}
+					\begin{Def}
+					Let $F:\mathcal{C}\leftrightarrow \mathcal{D}$ be an adjunction. The adjunction is called an \textbf{adjoint equivalence}, if the unit and counit are natural isomorphisms.
+					
+					In this case, $F$ and $G$ are called \textbf{equivalences of categories}.
+				\end{Def}
+			
+				\subsubsection{Colimits}
+			\subsection{Product Category}
+				
+				\begin{Def}
+					For $\mathcal{C}$ and $\mathcal{D}$ two categories. The \textbf{product category} $C\times D$ is the category:
+					\begin{itemize}
+						\item Objects are the \textbf{pairs}
+						\begin{gather*}
+							(c,d)\qquad c\in \mathcal{C},d\in \mathcal{D}
+						\end{gather*}
+						
+						written as $Obj(\mathcal{C}\times \mathcal{D})=Ob(\mathcal{C})\times Ob(\mathcal{D})$;
+						\item Morphisms
+						\begin{gather*}
+							(f:c\rightarrow c',g:d\rightarrow d')\qquad Mor(\mathcal{C}\times \mathcal{D})=Mor(\mathcal{C})\times Mor(\mathcal{D})
+						\end{gather*}
+						\item Composition of Morphisms, defined componentwie by composition in $\mathcal{C}$ and $\mathcal{D}$.
+					\end{itemize}
+				\end{Def}
+				
+				\begin{lemma}
+					The following types are equivalent:
+					\begin{itemize}
+						\item Functors $A\times B\rightarrow C$;
+						\item Functors $A\rightarrow C^B$.
+					\end{itemize}
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\subsection{Generating Objects}
+					\begin{Def}
+						Let $\mathcal{C}$ be a category. An object $G$ is called a \textbf{generator} if it satisfies the following property: For $f,g:X\rightarrow Y;f\not= g$, then there exists a morpism from generator $G$,
+						\begin{gather*}
+							h:G\rightarrow X
+						\end{gather*}			
+						
+						such that $f\circ h\not= g\circ h$.
+					\end{Def}
+					
+					This implies, that the performance of $h$ decides the performance of $X$.
+			\section{Limits,Colimits (in Small Category)}
+			\subsection{Limits}
+			\subsubsection{Set-Thoeretic Limits}
+			\subsubsection{Limit of Functors in an Arbitrary Category}
+			
+			\begin{Def}
+				(Limit of a functor, wth values in an arbitrary category) Now,  take the notion of limit for functors
+				\begin{gather*}
+					F^{op}:D^{op}\rightarrow \mathcal{C}
+				\end{gather*}
+				
+				for $\mathcal{C}$ an arbitrary category, if we construct a certain presheaf $\mathcal{C}$, which we will call $\hat{lim}F$.
+				
+				More precisely, using the \textbf{Yoneda embedding}
+				\begin{gather*}
+					内容...
+				\end{gather*}
+				
+				Then:
+				\begin{gather*}
+					(\hat{lim})(c):=Hom_{Set^{D^{op}}}(pt,Hom_\mathcal{C}(c,F(-)))
+				\end{gather*}
+			\end{Def}
+			
+			\subsubsection{Universal Cone}
+			\begin{Def}
+				(Universal Cone) Let $F:D^{op}\rightarrow \mathcal{C}$ be a functor. Then, every object $c\in \mathcal{C}$, an element
+				\begin{gather*}
+					*\rightarrow Hom(pt,Hom(c,F(-)))
+				\end{gather*}
+				
+				is identiafied with a collection of morphisms $(c\rightarrow F(d))$.
+				
+				For all $d\in D$, such that all triangles
+				\begin{center}
+					\begin{tikzcd}
+						&c\\
+						F(d_i)&&F(d_j)
+					\end{tikzcd}
+				\end{center}
+				
+				Such a collection of morphisms is called a \textbf{cone} over $F$.
+			\end{Def}
+			\subsection{Colimits}
+			
+			\subsection{Compeleteness,Co-Compeleteness}
+			\begin{Def}
+				内容...
+			\end{Def}
+	\chapter{Presheaves, Yoneda Lemma}
+		\section{Presheaves}
+			\begin{Def}
+				Let $C$ be a category:
+				\begin{itemize}
+					\item A \textbf{presheaf} is a functor
+					\begin{gather*}
+						\mathscr{F}:C^{op}\rightarrow Set
+					\end{gather*}
+				\end{itemize}
+			\end{Def}
+			\subsection{Yoneda Embedding}
+			\begin{Def}
+				Define:
+				\begin{gather*}
+					Y:C\rightarrow Psh(C)\qquad
+				\end{gather*}
+			\end{Def}
+			
+			With $Hom$-functor $Hom:C^{op}\times C\rightarrow Set$, there exists adjunction
+			\begin{lemma}
+				内容...
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				Yoneda functor is:
+				\begin{itemize}
+					\item fully faithful;
+					\item Preservation and Reflection the Isomorphsims;
+					\item Dense(Density);
+					\item Interaction With Density Comonads;
+					\item Interaction With Codensity Monads;
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\subsection{Yoneda's Lemma}
+			
+			\begin{theorem}
+				(Yoneda) Let $\mathcal{F}:C^{op}\rightarrow Set$ be a presheaf. We have following bijection
+				\begin{gather*}
+					Nat(h_A,\mathcal{F})\cong\mathcal{F}(A)
+				\end{gather*}
+				Natural in $A\in Obj(C)$. Especially,determining a natural isomorphism of functors
+				\begin{gather*}
+					Nat(h_{-},\mathcal{F})\cong \mathcal{F}
+				\end{gather*}
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Properties of Categories of Presheaves}
+			\begin{proposition}
+				内容...
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+		
+		\section{Representable Functors}
+		
+		\subsection{Generalized Element}
+		
+		\begin{itemize}
+			\item 	\url{https://ncatlab.org/nlab/show/generalized+element}
+			
+			\item \url{https://www.voutsadakis.com/TEACH/LECTURES/CATEGORY/Chapter4.pdf?utm_source=chatgpt.com} P31
+		\end{itemize}
+		
+		In category ${\mathcal Set}$, the element can be seen as the maps
+		
+		\begin{gather*}
+			x:1\rightarrow A;A\in Ob({\mathcal Set})
+		\end{gather*}
+		
+		And in general
+		
+		\begin{Def}
+			\label{Category-Theory-Generalized-Element}Let: $\mathcal{C}$ be an category and $A\in \mathcal{C}$. Then, a morphism
+			
+			\begin{gather*}
+				x:S\rightarrow A
+			\end{gather*}
+			
+			is a generalized element of $A$ of shape $S$.
+		\end{Def}
+		
+		Especially, the generalized element is associated to the Yoneda embedding
+		
+		\begin{gather*}
+			Y:\mathcal{C}\hookrightarrow [\mathcal{C}^{op},{\mathcal Set}]\qquad X\mapsto GenEl(X)
+		\end{gather*}
+		
+		Under this embedding, $GenEl(X):\mathcal{C}^{op}\rightarrow {\mathcal Set}, Ob(\mathcal{C})\ni U\mapsto (U\rightarrow X)$. 
+		
+		\subsection{Locally Representable Category}
+		\begin{Def}
+			内容...
+		\end{Def}
+		\section{Copresheaf}
+		\section{Restsricted Yoneda Embedding,Yoneda Extension}
+	\chapter{Monoid Category}
+		\section{Fundamentals}
+			\subsection{Moduli Category}
+				\begin{Def}
+					A \textbf{monoidal category} is a category $\mathcal{C}$ equpped with
+					\begin{itemize}
+						\item A functor
+						\begin{gather*}
+							\otimes: \mathcal{C}\times \mathcal{C}\rightarrow \mathcal{C}
+						\end{gather*}
+						
+						out of the product cateegory of $\mathcal{C}$ with itself, called the \textbf{tensor product}.
+						\item 
+					\end{itemize}
+				\end{Def}
+				
+				\begin{example}
+					\begin{itemize}
+						\item Category $Vect_k$;
+					\end{itemize}
+				\end{example}
+\end{document}

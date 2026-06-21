@@ -1,0 +1,499 @@
+\documentclass[Total.tex]{subfiles}
+
+\begin{document}
+	\chapter{Topological Spaces}
+		\section{Definitions}
+		
+			\subsection{Topological Space}
+			\begin{Def}
+				内容...
+			\end{Def}
+			\subsection{Generating of Topological Spaces}
+			\subsection{Bases, Subbases}
+			
+			\subsection{Continuous Mapping}
+		\section{Constructions}
+			\subsection{Quotient Space}
+				\subsubsection{Quotient Topology}
+				\begin{Def}
+					Suppose $X$ be a set with equivalence relation $(X,\sim)$:
+					\begin{itemize}
+						\item Given $x\in X$, we denote $[x]$ the unique equivalence class that contains $x$;
+						\item We refer to the map
+						\begin{gather*}
+							p:X\rightarrow X/\sim\qquad x\mapsto [x]
+						\end{gather*}
+						Natural projection;
+						\item Let $f:X\rightarrow Y$ be a map between sets such that $f(x)=f(y)$ whenever $x\sim y$. By the quotient factorization the map
+						\begin{gather*}
+							g:X/\sim\rightarrow Y\qquad [x]\mapsto f(x)
+						\end{gather*}
+						is well-defined and it is the unique map $g:X/\sim\rightarrow Y$ such that $f=g\circ p$.
+					\end{itemize}
+				\end{Def}
+				
+				\begin{proposition}
+					(Topological-Quotient Proposition)
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\begin{Def}
+					内容...
+				\end{Def}
+				\subsubsection{Open Map, Closed Map}
+			\subsection{Product, Coproduct}
+			\subsection{Limits and Colimits}
+			\subsection{Pullback,Pushout}
+				
+				\subsubsection{Pullback}
+				\begin{proposition}
+					Let $p:X\rightarrow B$ be a continuous map of topological spaces. Let $C$ be a topological space and $f:C\rightarrow B$ be a continuous map. We consider the topological space:
+					\begin{gather*}
+						f^*X:=\{(c,x)\in C\times X|f(c)=p(x)\}
+					\end{gather*}
+					and the maps
+					\begin{gather*}
+						\varphi:f^*X\rightarrow C\qquad (c,x)\mapsto c\\
+						\psi:f^*X\rightarrow X\qquad (c,x)\mapsto x
+					\end{gather*}
+					The following statements hold:
+					\begin{itemize}
+						\item \begin{enumerate}
+							\item The maps $\varphi:f^*X\rightarrow C$ and $\psi:f^*X\rightarrow X$ are continuous;
+							\item Suppose we are given a topological space $W$ and two continuous maps $\alpha:W\rightarrow C$ and $\beta:W\rightarrow X$ such that
+							\begin{gather*}
+								f\circ \alpha=p\circ \beta
+							\end{gather*}
+							The map
+							\begin{gather*}
+								\Phi:W\rightarrow f^*X\\
+								w\mapsto (\alpha(w),\beta(w))
+							\end{gather*}
+							is continuous. In particular we obtain the following commutative diagram
+							\begin{center}
+								\begin{tikzcd}
+									W\arrow[rd,"\exists!\Phi",dashrightarrow]\arrow[rrd,"\beta",bend left=10]\arrow[ddr,"\alpha",bend right=10]\\
+									&f^*X\arrow[r,"\psi"]\arrow[d,"\varphi"]&X\arrow[d,"p"]\\
+									&C\arrow[r,"f"]&B
+								\end{tikzcd}
+							\end{center}
+						\end{enumerate}
+						A map $\Phi:W\rightarrow f^*X$ is continuous iff the maps $\varphi\circ\Phi:W\rightarrow C$ and $\psi\circ\Phi:W\rightarrow X$ are continuous.
+						\item The topological space $f^*X$ with natural maps $\varphi:f^*X\rightarrow C$ and $\psi:f^*X\rightarrow X$ is the pullback, in the category $\mathcal Top$.
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+					\begin{itemize}
+						\item 
+						\begin{itemize}
+							\item Consider $f^*X$ as a subspace of $W=X\times C$. Then, $\varphi$ and $\psi$ can be seen as restriction of $\pi_C,\pi_X$ on $f^*X$.
+							\item 
+							\item 
+						\end{itemize}
+						\item 
+					\end{itemize}
+				\end{proof}
+				\begin{proposition}
+					(Pullback-Properties Proposition) Let $p:X\rightarrow B$ be a continuous map of topological spaces, let $C$ be a topological space and let $f:C\rightarrow B$ be a continuous map:
+					\begin{itemize}
+						\item If $X$ and $C$ are compact and if $X,B,C$ are Hausdorff, then $f^*X$ is compact;
+						\item Connectedness: \begin{itemize}
+							\item Even if $X,B,C$ are connected, it does not necessarily follow that the pullback $f^*X$ is connected;
+							\item Suppose that $X,B,C$ are connected. We also assume that for each $b\in B$ the preimage $p^{-1}(b)\subseteq X$ is connected. It does not follow $f^*X$ is connected;
+						\end{itemize}
+						\item If $X,C$ are Hausdorff, the pullback $f^*X$ is also Hausdorff.
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\subsubsection{Pushout}
+				\begin{proposition}
+					(Topological-Pushout Proposition) Let $f:A\rightarrow Y$ and $g:A\rightarrow Z$ be two continuous maps between topological spaces. We consider the topological space
+					\begin{gather*}
+						Y\cup_A Z:=(Y\sqcup Z)/\sim\qquad f(a)\simeq g(a),a\in A
+					\end{gather*}
+					and the map
+					\begin{gather*}
+						i:Y\rightarrow Y\sqcup_A Z\qquad j:Z\rightarrow Y\sqcup_A Z
+					\end{gather*}
+					The following statements hold:
+					\begin{itemize}
+						\item $U\subseteq Y\cup_A Z$ is open$\Leftrightarrow i^{-1}(U)\subseteq Y,j^{-1}(U)\subseteq Z$ are open.
+						\item 
+						\item 
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{Def}
+					内容...
+				\end{Def}
+				\begin{proposition}
+					(Pushout-Properties Proposition) Let $f:A\rightarrow Y,g:A\rightarrow Z$ be two continuous maps betwween topolgoical spaces. We consider the corresponding pushout 
+				\end{proposition}
+			\subsection{Fibre Product}
+			\subsection{Specialization}
+				\begin{Def}
+					In topology, the \textbf{specialization preoreder} is a preorder on the point sets of topological space.
+					
+					For \textbf{T0 Space}, this is a partial order. called \textbf{specialization order}: For topological space $(X,\tau)$,
+					
+					\begin{gather*}
+						x\leq y\Leftrightarrow x\in \overline{\{y\}}
+					\end{gather*}
+				\end{Def}
+				
+				\begin{proposition}
+					We have:
+					\begin{itemize}
+						\item If the space is $T_0$, the preorder is a partial order.
+						\item The symmetry of specialization preorder: $x\leq y\wedge y\leq x\rightarrow x=y\Leftrightarrow R_0$ Axiom;
+						\item For $T_1$ Space, we have
+						\begin{gather*}
+							x\leq y\Leftrightarrow x=y
+						\end{gather*} 
+						\item For sober space with specialization order $(X,\leq)$:
+							\begin{itemize}
+								\item 
+								\item 
+							\end{itemize}
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\subsubsection{Morphsims between Specialization Preorders}
+					
+		\section{Locally Closed Space}
+			\begin{proposition}
+				The following properties are equivalent:
+				\begin{itemize}
+					\item $E$ is the intersection of an open set and a closed set in $X$; 
+					\item For each $x\in E$, there is a neighborhood $U$ of $x$ such that $E\cap U$ of $x$ such that $E\cap U$ is closed in $U$;
+					\item $E$ is open in its closure $\bar{E}$;
+					\item The set $\bar{E}-E$ is closed in $X$;
+					\item $E$ is the difference of two closed sets in $X$;
+					\item $E$ is difference of two open sets in $X$;
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				\begin{itemize}
+					\item (1)$\Rightarrow$ (2)
+					\item (2)$\Rightarrow$ (3)
+					\item (3)$\Rightarrow$ (4)
+					\item (4)$\Rightarrow$ (5)
+					\item (5)$\Rightarrow$ (6)
+					\item (6)$\Rightarrow$ (1)
+				\end{itemize}
+			\end{proof}
+		\section{Noetherian Space}
+		
+			\begin{Def}
+				\begin{itemize}
+					\item A topological space is called \textbf{Noetherian} if the descending chain condition holds for closed subsets of $X$. 
+					
+					\item A topological space is called \textbf{locally Noetherian} if every point has a neighborhood which is Noetherian.
+				\end{itemize}
+			\end{Def}
+			
+			\begin{lemma}
+				Let $X$ be a topological space:
+				
+				\begin{itemize}
+					\item Any subset of $X$ with the induced topology is Noetherian;
+					\item The space $X$ has finitely many irreducible components;
+					\item Each irreducible component of $X$ contains a nonempty open of $X$;
+				\end{itemize}
+			\end{lemma}
+			
+			\begin{proof}
+				\begin{itemize}
+					\item 
+					\item 
+					\item 
+				\end{itemize}
+			\end{proof}
+			
+			\begin{lemma}
+				(Noetherian Property via Continuous Mapping) Let $f:X\rightarrow Y$ be a continuous map of topological spaces:
+				
+				\begin{itemize}
+					\item If $X$ is Noetherian, then $f(X)$ is Noetherian;
+					\item If $X$ is locally Noetherian and $f$ open, then $f(X)$ is locally Noetherian;
+				\end{itemize}
+			\end{lemma}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{lemma}
+				Let $X$ be a topological space and $X_i\subseteq X;i=1,\dots,n$. If each $X_i$ is Noetherian, then $\cup X_i$ is Noetherian(with induced topology).
+			\end{lemma}
+			
+			\begin{proof}
+				
+			\end{proof}
+			
+			\begin{lemma}
+				Let $X$ be a locally Noetherian topological space, then $X$ is locally connected.
+			\end{lemma}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+		\section{Elementary Knowledge in Dimension}
+		
+			\subsection{Krull Dimension}
+				
+				\begin{Def}
+					Let $X$ be a topological space:
+					
+					\begin{itemize}
+						\item A chain of \textbf{irreducible closed subsets} of $X$ is a sequence
+						
+						\begin{gather*}
+							Z_0\subset\dots \subset Z_n\subset X
+						\end{gather*} 
+						
+						with $Z_i$ 
+						
+						\item 
+						\item 
+						\item 
+					\end{itemize}
+				\end{Def}
+				
+				
+			
+			\subsection{Codimension and Catenary Maps}
+			
+				\begin{Def}
+					Let $X$ be a topological space. Let $Y\subseteq X$ be an \textbf{irreducible} closed subset. The \textbf{codimension} of $Y$ in $X$ is the supremum of lenghts $e$ of chains
+					
+					\begin{gather*}
+						Y=Y_0\subset \dots\subset Y_e\subset X
+					\end{gather*}
+				\end{Def}
+				
+				\begin{lemma}
+					Let $X$ be a topological space, and $Y\subseteq X$ is an irreducible closed subset. And $U\subseteq X$ is an open subset such that $Y\cap U$ is nonempty, then
+					
+					\begin{gather*}
+						codim(Y,X)=codim(Y\cap U,U)
+					\end{gather*}
+				\end{lemma}
+				
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Catenary Space}
+			
+				\begin{Def}
+					内容...
+				\end{Def}
+		\section{Jacobson Spaces}
+			
+			\begin{Def}
+				Let $X$ be a topological space, and $X_0$ be the set of \textbf{closed points} in $X$(i.e. $\overline{\{x\}}=\{x\}$). We say that: $X$ is \textbf{Jacobson} if every closed subset $Z\subseteq X$ is the closure of $Z\cap X_0$. 
+				
+			
+			\end{Def}
+			
+				\begin{lemma}
+				A topological space $X$ is Jacobson iff every locally closed subset of $X$ has a point closed in $X$.
+			\end{lemma}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\textbf{Remark}
+			
+			\begin{lemma}
+				Let $X$ be a topological space and $X_0$ be a set of closed points in $X$. Suppose that for every $x\in U\cap Z$, we have that
+				
+				\begin{gather*}
+					内容...
+				\end{gather*}
+			\end{lemma}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+		\section{Limit of Spces}
+	\chapter{Filter,Nets}
+		\section{Convergence of Filters}
+			\subsection{Filter}
+				\begin{Def}
+					Let $E$ be a set: A family of subsets of $E$ satisfies
+					\begin{itemize}
+						\item $\varnothing\notin\mathcal{F}$;(F1)
+						\item $A,B\in \mathcal{F}\Rightarrow A\cap B\in \mathcal{F}$;(F2)
+						\item $B\in \mathcal{F},B\subseteq A\Rightarrow A\in \mathcal{F}$;(F3)
+					\end{itemize}
+				\end{Def}
+				
+				\begin{example}
+					Consider a sequence of points $x_1,\dots,x_n\in E$:
+					\begin{Def}
+						The \textbf{associated filter} is the family of all subsets of $E$ such that: The subset of $E$ contains all $x_i,i\in \NN$ except possibly a finite number of items.
+					\end{Def}
+				\end{example}
+				
+				\subsubsection{Basis of Filter}
+				
+				\begin{Def}
+					A family $\mathfrak{B}$ is a \textbf{basis of filter} $\mathcal{F}$ if:
+					\begin{itemize}
+						\item $\mathfrak{B}\subseteq \mathcal{F}$;(BF1)
+						\item Every subset of $E$ belonging to $\mathcal{F}$ contains some subsets of $E$ belongs to $\mathfrak{B}$:
+						\begin{gather*}
+							S\in \mathcal{F}\Rightarrow \exists T\in \mathfrak{B}, T\subseteq S
+						\end{gather*}(BF2)
+					\end{itemize}
+				\end{Def}
+				
+				\begin{example}
+					Filter of neighborhoods of $0$ on real line:
+					\begin{gather*}
+						\mathcal{F}=\{(-a,a)|a>0\}
+					\end{gather*}
+				\end{example}
+				
+				\begin{example}
+					Consider a sequence with $S=\{x_i|i\in \NN\}$, then the filter given by
+					\begin{gather*}
+						S_n:=\{x_n,x_{n+1},\dots\},S_0\supseteq S_1\supseteq \dots	 
+					\end{gather*}
+					is a basis of $\mathcal{F}$.
+				\end{example}
+				
+				\textbf{Question} Given some family of subsets $\mathcal{A}$. Is there a filter $\mathcal{F}$ having basis $\mathcal{A}$ as a basis?
+				
+				\begin{lemma}
+					Given two filter $\mathcal{F}_1,\mathcal{F}_2$ with basis of $\mathfrak{B}$. Then, $\mathcal{F}_1=\mathcal{F}_2$. It is uniquely determined.
+				\end{lemma}
+				\begin{proof}
+					Suppose $S\in \mathcal{F}_1$, then there exists some $T\in \mathfrak{B}$ such that $T\subseteq S$. And then, $S\in \mathcal{F}_2$.
+				\end{proof}
+				
+				So finally, this leads the question to: Is $\mathcal{F}$ a filter? (F2) equivalent to:
+				\begin{itemize}
+					\item The intersection of any two sets beloing to $\mathcal{A}$, contains a set which belongs to $\mathcal{A}$.(BF)
+				\end{itemize}
+				This is weaker than (F2). Thus we may state:
+				\begin{center}
+					A basis of filter on $E$ is a family of \underline{nonempty subsets} of $E$ satisfying condition (BF).
+				\end{center}
+				The filter is uniquely determined by (BF2)
+				
+				\subsubsection{Comparison of Filters}
+				Consider the order relation induced by $(P(E),\subseteq)$:
+				\begin{itemize}
+					\item Finer;
+					\item less fine;
+				\end{itemize}
+				
+				\subsubsection{Topology}
+				The definition of topology can be rewritten as following:
+				\begin{itemize}
+					\item $S\in \mathcal{F}(x)\Rightarrow x\in S$;(N1)
+					\item $U\in \mathcal{F}(x)\Rightarrow \exists V\in \mathcal{F}(x),\forall y\in V,S\in \mathcal{F}(y)$.(N2)
+				\end{itemize}
+				Such $\mathcal{F}(x)$ is called the \textbf{filter of neighborhoods} of the point $x$.
+			\subsection{Convergence with Filter}
+			\begin{Def}
+				\begin{itemize}
+					\item Define: Filter $\mathfrak{F}$ converges to the point $x\Leftrightarrow$ Every neighborhood of $x$ belongs to $\mathfrak{F}$.
+					
+					In other word: $\mathcal{F}$ is finer filter than neighborhoods of $x$.
+					\item Sequence $(x_n)$ converges to $x$ if its associated filter converges to $x$.
+				\end{itemize}
+			\end{Def}
+			\subsection{Continuity}
+				Then: The continuity can be rewritten as the following form
+				\begin{gather*}
+					内容...
+				\end{gather*}
+		\section{Moore-Smith Convergence}
+			\subsection{Directed Set, Nets}
+				\begin{Def}
+					内容...
+				\end{Def}
+	\chapter{Connectedness and Irreducibility}
+	
+		\section{Connectedness}
+		
+		\section{Irreduciblity}
+	
+	\chapter{Compactness}
+		\section{Compactness}
+		
+			\subsection{Compact Spaces}
+			
+			\begin{Def}
+				\begin{itemize}
+					\item We say: A space is \textbf{(quasi-)comapct} if every open covering $X=\cup U_i$ has a finite subcovering;
+					\item A continuous map $f:X\rightarrow Y$ is \textbf{(quasi-)comapct} iff the inverse image $f^{-1}(V)$ is compact for any compact $V\subseteq Y$;
+					\item A subset $Z\subseteq X$ is called \textbf{retrocompact} if for every compact open $U\subseteq X$, $Z\cap U$ is compact;
+				\end{itemize}
+			\end{Def}
+			
+			\subsection{Compact Maps}
+			
+		\section{Locally Compact Spaces}
+		\section{Constructible Sets}
+		
+			\begin{Def}
+				Let $X$ be a topological space and $E\subseteq X$ is a subset:
+				
+				\begin{itemize}
+					\item We say $E$ is \textbf{constructible} in $E$ iff $E$ is a finite union of subsets of the form
+					
+					\begin{gather*}
+						U\cap V^C
+					\end{gather*}
+					
+					where $U,V$ are both open and retrocompact;
+					
+					\item We say $E$ is \textbf{locally constructible} if for there exists an open covering $X=\cup V_i$ such that each $E\cap V_i$ is constructible in $V_i$;
+				\end{itemize}
+			\end{Def}
+			
+			\begin{lemma}
+				The collection of constructible sets is closed under:
+				
+				\begin{itemize}
+					\item Finite Union;
+					\item Finite Intersection;
+					\item Compelement;
+				\end{itemize}
+			\end{lemma}
+			
+			\begin{proof}
+				\begin{itemize}
+					\item 
+					\item 
+					\item 
+				\end{itemize}
+			\end{proof}
+		\section{Partition of Unity}
+		
+	\chapter{Separation Axioms}
+	
+	\chapter{Conuntable Axioms}
+	
+	\chapter{Function Spaces and Metrization Problem}
+	
+	\chapter{Baire Spaces}
+	
+	\chapter{Dimension}
+		
+\end{document}

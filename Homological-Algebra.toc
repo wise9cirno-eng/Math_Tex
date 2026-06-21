@@ -1,0 +1,196 @@
+\contentsline {chapter}{\numberline {1}Projective and Injective Modules, Free Modules}{4}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Free Modules}{4}{section.1.1}%
+\contentsline {subsubsection}{Universal Properties}{4}{subsubsection*.2}%
+\contentsline {section}{\numberline {1.2}Projective Modules}{4}{section.1.2}%
+\contentsline {subsubsection}{Flatness of Projective Module}{6}{subsubsection*.3}%
+\contentsline {subsubsection}{Free Modules are Projective}{6}{subsubsection*.4}%
+\contentsline {subsection}{\numberline {1.2.1}Sum}{6}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Tensor}{7}{subsection.1.2.2}%
+\contentsline {subsubsection}{Flatness}{7}{subsubsection*.5}%
+\contentsline {subsubsection}{Directed Limit}{9}{subsubsection*.6}%
+\contentsline {subsubsection}{Via (faithfully) Flat over $R'$}{9}{subsubsection*.7}%
+\contentsline {subsubsection}{Equational Criterion of Flatness}{10}{subsubsection*.8}%
+\contentsline {subsubsection}{Flatness of Items in Exact Sequence}{10}{subsubsection*.9}%
+\contentsline {subsubsection}{Localization}{10}{subsubsection*.10}%
+\contentsline {subsubsection}{Directed System of Faitfully Flat Algebras}{10}{subsubsection*.11}%
+\contentsline {subsection}{\numberline {1.2.3}Projective Basis Theorem}{10}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Projective Resolution}{11}{subsection.1.2.4}%
+\contentsline {subsubsection}{Comparision Theorem/ Homological Algebra's Fundamental Theorem}{11}{subsubsection*.12}%
+\contentsline {subsubsection}{Horseshow Lemma}{12}{subsubsection*.13}%
+\contentsline {subsection}{\numberline {1.2.5}Projective Module over PID}{13}{subsection.1.2.5}%
+\contentsline {subsection}{\numberline {1.2.6}Kaplansky's Theorem}{13}{subsection.1.2.6}%
+\contentsline {section}{\numberline {1.3}Locally Free/Finite Locally Free Modules}{14}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Faithfully flat descent for projectivity of modules}{15}{subsection.1.3.1}%
+\contentsline {section}{\numberline {1.4}Injective Modules}{15}{section.1.4}%
+\contentsline {subsubsection}{Product}{16}{subsubsection*.14}%
+\contentsline {subsection}{\numberline {1.4.1}Baer's Criterion}{16}{subsection.1.4.1}%
+\contentsline {subsubsection}{Abelian Groups}{16}{subsubsection*.15}%
+\contentsline {subsection}{\numberline {1.4.2}Embedding Theorem}{16}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Injective Resolution}{16}{subsection.1.4.3}%
+\contentsline {subsubsection}{Comparison Theorem}{17}{subsubsection*.16}%
+\contentsline {subsubsection}{Adjoint Functors}{17}{subsubsection*.17}%
+\contentsline {section}{\numberline {1.5}Projective and Injective Objects in Abelian Category}{17}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Projective Object}{17}{subsection.1.5.1}%
+\contentsline {subsubsection}{Projective Resolution}{18}{subsubsection*.18}%
+\contentsline {subsection}{\numberline {1.5.2}Injective Object}{18}{subsection.1.5.2}%
+\contentsline {subsubsection}{Preservation of Injective Objects}{18}{subsubsection*.19}%
+\contentsline {subsubsection}{Existence of Enough Injectives}{19}{subsubsection*.20}%
+\contentsline {subsubsection}{Constructions}{19}{subsubsection*.21}%
+\contentsline {subsubsection}{Injective Resolution}{19}{subsubsection*.22}%
+\contentsline {subsubsection}{Injective Resolution}{20}{subsubsection*.23}%
+\contentsline {subsubsection}{Projective Resolution}{20}{subsubsection*.24}%
+\contentsline {subsection}{\numberline {1.5.3}Resolutions, and $Ext^1$}{21}{subsection.1.5.3}%
+\contentsline {subsubsection}{Left Resolution}{21}{subsubsection*.25}%
+\contentsline {subsubsection}{Free Resolution}{21}{subsubsection*.26}%
+\contentsline {subsection}{\numberline {1.5.4}Universally Injective Module Maps}{21}{subsection.1.5.4}%
+\contentsline {section}{\numberline {1.6}Flatness}{22}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Exact Sequence}{22}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.6.2}Characterizing Flatness}{23}{subsection.1.6.2}%
+\contentsline {subsection}{\numberline {1.6.3}Flatness over PID}{23}{subsection.1.6.3}%
+\contentsline {chapter}{\numberline {2}Chain Complexes}{24}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Some of Category Theory}{24}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}$\mathbf {Ab}$-Category}{24}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Preadditive Category}{24}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Additive Funtors, Additive Category}{25}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Karoubian Categories}{27}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}Abelian Category}{28}{subsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.1.6}Pullback,Pushout Diagram}{29}{subsection.2.1.6}%
+\contentsline {subsection}{\numberline {2.1.7}Lemmas}{29}{subsection.2.1.7}%
+\contentsline {subsubsection}{3-Lemma}{29}{subsubsection*.27}%
+\contentsline {subsubsection}{Snake Lemma}{29}{subsubsection*.28}%
+\contentsline {subsubsection}{4-Lemma}{30}{subsubsection*.29}%
+\contentsline {subsubsection}{5-Lemma}{30}{subsubsection*.30}%
+\contentsline {subsection}{\numberline {2.1.8}Grothendieck Category}{30}{subsection.2.1.8}%
+\contentsline {subsection}{\numberline {2.1.9}Extension}{30}{subsection.2.1.9}%
+\contentsline {subsection}{\numberline {2.1.10}Additive Functors}{31}{subsection.2.1.10}%
+\contentsline {subsection}{\numberline {2.1.11}Localization}{32}{subsection.2.1.11}%
+\contentsline {subsection}{\numberline {2.1.12}Jordan-Hölder}{32}{subsection.2.1.12}%
+\contentsline {subsection}{\numberline {2.1.13}Serre Subcategories}{32}{subsection.2.1.13}%
+\contentsline {subsubsection}{Serre Subcategory by Morphism}{32}{subsubsection*.31}%
+\contentsline {subsubsection}{Quotient}{33}{subsubsection*.32}%
+\contentsline {subsection}{\numberline {2.1.14}K-Groups of Abelian Category}{33}{subsection.2.1.14}%
+\contentsline {subsubsection}{0th Abelian Category}{33}{subsubsection*.33}%
+\contentsline {subsection}{\numberline {2.1.15}Cohomological $\delta $-Functor}{34}{subsection.2.1.15}%
+\contentsline {subsubsection}{Morphism of $\delta $-Functors}{34}{subsubsection*.34}%
+\contentsline {subsubsection}{Universal $\delta $-Functor}{34}{subsubsection*.35}%
+\contentsline {section}{\numberline {2.2}Chain Complex}{35}{section.2.2}%
+\contentsline {subsubsection}{Exactness}{36}{subsubsection*.36}%
+\contentsline {subsection}{\numberline {2.2.1}Homology Sequence}{37}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Operations on Chain Complexes}{38}{subsection.2.2.2}%
+\contentsline {subsubsection}{Product, Direct Sum}{38}{subsubsection*.37}%
+\contentsline {subsubsection}{Subcomplex,Quotient Complex}{38}{subsubsection*.38}%
+\contentsline {subsubsection}{Tensor Product}{39}{subsubsection*.39}%
+\contentsline {subsubsection}{Chain $[X,Y]$}{39}{subsubsection*.40}%
+\contentsline {subsection}{\numberline {2.2.3}Shifting and Translation}{40}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Bicomplex}{40}{subsection.2.2.4}%
+\contentsline {subsubsection}{Tot Complexes}{40}{subsubsection*.41}%
+\contentsline {subsection}{\numberline {2.2.5}Truncations,Translations}{41}{subsection.2.2.5}%
+\contentsline {subsubsection}{Truncations}{41}{subsubsection*.42}%
+\contentsline {subsubsection}{Translations}{41}{subsubsection*.43}%
+\contentsline {section}{\numberline {2.3}Long Exact Sequence}{41}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}9-Lemma}{41}{subsection.2.3.1}%
+\contentsline {subsubsection}{Snake's Lemma}{42}{subsubsection*.44}%
+\contentsline {subsubsection}{5-Lemma}{42}{subsubsection*.45}%
+\contentsline {subsubsection}{3-Lemma}{42}{subsubsection*.46}%
+\contentsline {subsubsection}{Long Exact Sequence}{43}{subsubsection*.47}%
+\contentsline {subsection}{\numberline {2.3.2}Exact Triangle}{43}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Chain Homotopies}{43}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Introduction}{44}{subsection.2.4.1}%
+\contentsline {subsubsection}{Split}{44}{subsubsection*.48}%
+\contentsline {subsubsection}{Chain Contruction}{44}{subsubsection*.49}%
+\contentsline {subsubsection}{Chain Homotopies}{45}{subsubsection*.50}%
+\contentsline {subsubsection}{Quotient Category}{46}{subsubsection*.51}%
+\contentsline {subsection}{\numberline {2.4.2}Resolution}{46}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.5}Homology Exact Sequence}{46}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Some of Skills in Chain }{46}{subsection.2.5.1}%
+\contentsline {subsubsection}{$3\times 3$-Lemma}{46}{subsubsection*.52}%
+\contentsline {subsubsection}{Snake Lemma}{46}{subsubsection*.53}%
+\contentsline {subsubsection}{5-Lemma}{46}{subsubsection*.54}%
+\contentsline {subsubsection}{Addenbum}{46}{subsubsection*.55}%
+\contentsline {subsection}{\numberline {2.5.2}Existence of $\partial $ in Exact Chain Complexes}{46}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Resolution}{47}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}Functor $Ext^1$}{47}{subsection.2.5.4}%
+\contentsline {subsubsection}{Extension and Ext}{47}{subsubsection*.56}%
+\contentsline {section}{\numberline {2.6}Mapping Cones and Cylinders}{48}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Mapping Cones}{48}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Mapping Cylinder}{49}{subsection.2.6.2}%
+\contentsline {subsubsection}{Exact Sequence between }{51}{subsubsection*.57}%
+\contentsline {section}{\numberline {2.7}Euler Characteristics}{51}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Betti Numbers}{51}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}Euler Characteristics}{51}{subsection.2.7.2}%
+\contentsline {subsubsection}{On Complex of Vector Spaces}{51}{subsubsection*.58}%
+\contentsline {subsubsection}{On the Chain Complexes}{51}{subsubsection*.59}%
+\contentsline {subsection}{\numberline {2.7.3}Euler Characteristic of a Topological Space}{51}{subsection.2.7.3}%
+\contentsline {subsection}{\numberline {2.7.4}From Euler Characteristics to $K_0$ Groups}{51}{subsection.2.7.4}%
+\contentsline {chapter}{\numberline {3}Derived Functors}{52}{chapter.3}%
+\contentsline {section}{\numberline {3.1}$\delta $-Functors}{52}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Morphism of $\delta $-Functors}{53}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}Left Derived Functors}{54}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Universal $\delta $-Functority for $L_*F(-)$}{54}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}$F$-Acyclic Functor}{55}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}$L_iF$ is Universal $\delta $-Functor}{55}{subsection.3.2.3}%
+\contentsline {subsubsection}{Dimension Shifting}{56}{subsubsection*.60}%
+\contentsline {subsubsection}{Homology,Cohomology}{56}{subsubsection*.61}%
+\contentsline {subsubsection}{Effaceable Functors}{56}{subsubsection*.62}%
+\contentsline {section}{\numberline {3.3}Right Derived Functors}{56}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Right Derived Functors}{56}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Ext Functor}{56}{subsection.3.3.2}%
+\contentsline {subsubsection}{Ext Functor on $R$-modules}{56}{subsubsection*.63}%
+\contentsline {subsubsection}{Ext Functor in Abelian Categories}{57}{subsubsection*.64}%
+\contentsline {subsubsection}{Ext Functor in Derived Category}{57}{subsubsection*.65}%
+\contentsline {section}{\numberline {3.4}Adjoint Functors and Left/Right Exactness}{58}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Tor Functor}{58}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Adjoint Limit and Colimits}{58}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}Balancing Tor and Ext}{58}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Balancing Tor}{58}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Balancing Ext}{59}{subsection.3.5.2}%
+\contentsline {chapter}{\numberline {4}Tor and Ext}{60}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Tor for Abelian Groups}{60}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Tor and Flatness}{60}{section.4.2}%
+\contentsline {subsubsection}{Pontrjagin Dual}{60}{subsubsection*.66}%
+\contentsline {section}{\numberline {4.3}Ext for Nice Rings}{61}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Ext and Extensions}{61}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Derived Functor and Inverse Limits}{61}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Mittag-Leffers System}{61}{subsection.4.5.1}%
+\contentsline {subsubsection}{Limit}{61}{subsubsection*.67}%
+\contentsline {section}{\numberline {4.6}Universal Coefficient Theorem}{62}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Topology}{62}{subsection.4.6.1}%
+\contentsline {chapter}{\numberline {5}Homological Dimension}{63}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Dimension}{63}{section.5.1}%
+\contentsline {subsubsection}{Noetherian Ring}{63}{subsubsection*.68}%
+\contentsline {subsection}{\numberline {5.1.1}Rings of Small Dimension}{63}{subsection.5.1.1}%
+\contentsline {section}{\numberline {5.2}Local Rings}{63}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Konzul Complexes}{63}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Local Cohomology}{63}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Appendix: Hilbert-Serre Theorem}{63}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Spectral Sequence}{65}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Introductions}{65}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Spectral Sequence}{65}{subsection.6.1.1}%
+\contentsline {subsubsection}{Spectral Sequence}{65}{subsubsection*.69}%
+\contentsline {subsubsection}{Limit of Spectral Sequence}{65}{subsubsection*.70}%
+\contentsline {subsection}{\numberline {6.1.2}Exact Couple}{66}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Differential Object}{66}{subsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.1.4}Filtered Differential Object}{66}{subsection.6.1.4}%
+\contentsline {subsection}{\numberline {6.1.5}Filtered Complexes}{66}{subsection.6.1.5}%
+\contentsline {subsection}{\numberline {6.1.6}Double Complexes}{66}{subsection.6.1.6}%
+\contentsline {subsection}{\numberline {6.1.7}Abelian Groups}{66}{subsection.6.1.7}%
+\contentsline {chapter}{\numberline {7}Simplicial Methods in Homological Algebra}{67}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Simplicial Objects}{67}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Operations on Simplicial Objects}{67}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Hochshild and Cyclic Homology}{68}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Derived Category}{69}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Triangulated Category}{69}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Triangulated Category}{69}{subsection.9.1.1}%
+\contentsline {subsubsection}{Homological Functor}{70}{subsubsection*.71}%
+\contentsline {subsubsection}{$\delta $-Functor}{71}{subsubsection*.72}%
+\contentsline {subsection}{\numberline {9.1.2}Elementray Results}{71}{subsection.9.1.2}%
+\contentsline {subsection}{\numberline {9.1.3}Constructions}{72}{subsection.9.1.3}%
+\contentsline {subsubsection}{Triangulated Functor}{72}{subsubsection*.73}%
+\contentsline {subsubsection}{Localization of Triangulated Functor}{72}{subsubsection*.74}%
+\contentsline {subsubsection}{Quotient of Triangulated Category}{72}{subsubsection*.75}%
+\contentsline {section}{\numberline {9.2}The Homotopy Category}{72}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Derived Category}{73}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Filtered Derived Category}{73}{subsection.9.3.1}%
+\contentsline {chapter}{\numberline {10}Appendix}{74}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Eckmann-Hilton}{74}{section.10.1}%
+\contentsfinish 

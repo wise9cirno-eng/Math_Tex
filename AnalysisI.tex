@@ -1,0 +1,519 @@
+\documentclass[Total.tex]{subfiles}
+
+\begin{document}
+	
+	\chapter{Continuous Function on $\mathbf{R}$,Limits of Function}
+		
+	
+		\section{Sequence}
+			
+			Topology of $\NN$ given by $(\NN,<)$.
+			\subsection{Cluster Points}
+			
+			\begin{Def}
+				Let $(a_n)\in Func(\NN,\RR)$ or $Func(\NN,\CC)$. $z$ is a \textbf{cluster point} of $(a_n)$ if 
+				\begin{gather*}
+					\forall \epsilon>0 \forall N_0\exists n(n>N_0\wedge a_n\in B_\epsilon(z))
+				\end{gather*}
+			\end{Def}
+			
+			Equivalently, for all $B_\epsilon(z)\cap \{a_n|n\geq N_0\}\not=\varnothing,\forall N_0$. 
+			
+			\subsection{Convergence}
+			(Definition in general in topology)
+			\begin{Def}
+				Given $(a_n)\in Func(\NN,\RR)$ or $Func(\NN,\CC)$. Then 
+				\begin{gather*}
+					a_n\rightarrow z:=(\forall \epsilon\exists N_0(A_{N_0}\subseteq B_\epsilon(z)))
+				\end{gather*}
+				
+				where $A_{N_0}:=\{a_n|n\geq N_0\}$.
+			\end{Def}
+			
+			Equivalently, $\forall \epsilon\exists N_0(n\geq N_0\rightarrow |a_n-z|<\epsilon)$. Take the notion of
+			\begin{gather*}
+				\lim_{n\rightarrow \infty} a_n=z
+			\end{gather*}
+			
+			(In this section) $P((a_n),A):=\forall\exists \exists N_0(n>N_0\rightarrow a_n\in B_\epsilon(A))$
+			
+			\begin{lemma}
+				(Uniqueness of Convergence in $\RR,\CC$) If $P((a_n),A),P(a_n,B)$, then $A=B$.
+			\end{lemma}
+			\begin{proof}
+				Via Hausdorffness.
+			\end{proof}
+			
+			\subsubsection{Operations}
+			\begin{proposition}
+				(Operations limits of $\RR$ or $\CC$)  Suppose the following limits exists:
+				\begin{gather*}
+					\lim_{n\rightarrow \infty}(a_n+b_n)=\lim_{n\rightarrow \infty} a_n+ \lim_{n\rightarrow \infty} b_n\\
+					\lim_{n\rightarrow \infty} (a_n\cdot b_n)=(\lim_{n\rightarrow \infty} a_n)\cdot(\lim_{n\rightarrow \infty} b_n)\\
+					\lim_{n\rightarrow \infty} \frac{a_n}{b_n}=\frac{\lim_{n\rightarrow \infty} a_n}{\lim_{n\rightarrow \infty} b_n},\lim_{n\rightarrow \infty} b_n\not=0
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				\begin{itemize}
+					\item  Suppose $A=\lim_{n\rightarrow \infty} a_n,B=\lim_{n\rightarrow \infty}$. Now selection $N=\max\{N_1,N_2\}$, $|a_n-A|<\epsilon/2,|b_n-B|<\epsilon/2$, then $|(a_n+b_n)-(A+B)|<\epsilon$. With uniqueness.
+					\item Similarly.
+					\item 
+				\end{itemize}
+			\end{proof}
+			
+			\begin{lemma}
+				(Majorance of Sequence) Suppose $(a_n),(b_n),(c_n)$ be sequence. Then, we have
+				\begin{gather*}
+					a_n\leq b_n\leq c_n,n\geq N_0\Rightarrow \lim_{n\rightarrow \infty} a_n\leq \lim_{n\rightarrow \infty} b_n\leq \lim_{n\rightarrow \infty} c_n
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				It is easy to verify: Suppose $a_n\leq b_n,n\geq N_0$. If $\lim_{n\rightarrow \infty} a_n>\lim_{n\rightarrow \infty} b_n$, then 
+				\begin{gather*}
+					b_n<B+\epsilon<A-\epsilon<a_n,\epsilon=(B-A)/2
+				\end{gather*}
+				
+				Contradiction.
+			\end{proof}
+			
+			\begin{lemma}
+				(The Sequence with Limit is Bounded) Suppose $\lim_{n\rightarrow \infty} a_n=A$, then $\{a_n\}$ is bounded.
+			\end{lemma}
+			\begin{proof}
+				Omitted.
+			\end{proof}
+			
+			\subsubsection{Averange}
+			
+			\begin{proposition}
+				Suppose $\lim_{n\rightarrow \infty} a_n=A$, then
+				\begin{gather*}
+					\lim_{n\rightarrow \infty} \frac{a_0+\dots+a_n}{n+1}=A
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				Suppose $n>N_1,|a_n-A|<\epsilon$. Now, select some $N_2$ such that 
+				\begin{gather*}
+					\frac{(a_0-A)+\dots+(a_{N_1}-A)}{n+1}<\epsilon,n>N_2
+				\end{gather*}
+				
+				so, $N=\max\{N_1,N_2\}$,
+				\begin{gather*}
+					|\frac{(a_0-A)+\dots+(a_N-A)}{N+1}|\leq |\frac{a_0+\dots+a_{N_1}}{N+1}|+|\frac{a_{N_1+1}+\dots}{N+1}|<2\epsilon
+				\end{gather*}
+			\end{proof}
+			
+			\subsection{Monotone Sequence}
+			\begin{Def} Let $(a_n)$ be a sequence
+				\begin{itemize}
+					\item $(a_n)$ is \textbf{strictly increasing} if $a_{n+1}>a_n$;
+					\item $(a_n)$ is increasing if $a_{n+1}\geq a_n$.
+				\end{itemize}
+				
+				Similarly for decreasing.
+			\end{Def}
+			
+			\begin{proposition}
+				If $(a_n)$ is increasing and has a upper bound, then 
+				\begin{gather*}
+					\lim_{n\rightarrow \infty} a_n=\sup\{a_n|n\in \NN\}\in \RR
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				Firstly the limit exists: Because of compeleteness of $\RR,sup\{a_n|n\in \NN\}\in \RR$. Then omitted.
+			\end{proof}
+			
+				\subsection{Subsequence}
+			
+			\begin{Def}
+				\begin{itemize}
+					\item We firstly define the \textbf{strictly increasing function} of index
+					\begin{gather*}
+						\sigma:\NN\rightarrow \NN
+					\end{gather*}
+					such that: $\sigma(n)<\sigma(n+1),n\in \NN$.
+					\item Let $(a_n)\in Func(\NN,S)$ a subsequence is $(a_{\sigma(n)})$. 
+				\end{itemize}
+			\end{Def}
+			
+			\begin{theorem}
+				(Bolzano-Weistrasss) Every bounded sequence in $\RR$ has a convergent subsequence.  
+			\end{theorem}
+			\begin{proof}
+				Furthremore, this theorem has a equivalent explanation: $\RR$ is secondly countable, and there exists at least one cluster point. 
+				
+				Such point could be given by 
+				\begin{gather*}
+					\sup\{a_n|n\in \NN\}
+				\end{gather*}
+				And the elements by countable basis.
+			\end{proof}
+			
+			Furthermore, we could extend $\infty$ to the topology by compactification, so bounded condition could be removed.
+			
+			\begin{Def}
+				Define:
+				\begin{itemize}
+					\item $\overline{lim} a_n:=\lim_{N\rightarrow \infty} sup_{n\leq N} a_n$;
+					\item $\underline{lim} a_n:=\lim_{N\rightarrow \infty} inf_{n\in \NN} a_n$;
+				\end{itemize}
+			\end{Def}
+			
+			\begin{proposition}
+				We have
+				\begin{gather*}
+					\lim_{n\rightarrow \infty} sup(a_n)\geq \lim_{n\rightarrow \infty} inf(a_n)
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				Omitted.
+			\end{proof}
+			
+			\subsection{Cauchy Sequence}
+			\begin{Def}
+				A sequence $(a_n)$ is \textbf{Cauchy sequence} if
+				\begin{gather*}
+					\forall\epsilon\exists N(N\in \NN\wedge \forall n\forall m(n>N\wedge m\geq0\rightarrow |a_{m+n}-a_n|<\epsilon))
+				\end{gather*}
+			\end{Def}
+			
+			\begin{proposition}
+				\begin{center}
+					Cauchy Sequence$\Leftrightarrow$ Convergent.
+				\end{center}
+			\end{proposition}
+			\begin{proof}
+				\begin{itemize}
+					\item $\Rightarrow$ If the sequence is Cauchy, then take monotone $\overline{lim} a_n$ and $\underline{lim} a_n$. We have 
+					\item $\Leftarrow$ $|a_{n+m}-a_n|\leq |a_{n+m}-A|+|a_n-A|\leq \epsilon$. 
+				\end{itemize}
+			\end{proof}
+			
+	
+		
+			\subsection{Series}
+				\begin{Def}
+					A \textbf{series} is the limit of a formal sum
+					\begin{gather*}
+						S_n:=\sum_{k=0}^n a_n\qquad S:=\lim_{n\rightarrow \infty} S_{n}
+					\end{gather*}
+				\end{Def}
+				
+				\subsubsection{Convergence}
+				
+				\begin{Def}
+					Series $\sum_{k=0}^\infty a_k$ is \textbf{convergent} if the limit exists. 
+				\end{Def}
+				
+				\begin{proposition}
+					For convergent series $\sum_{k=0}^\infty a_k,\sum_{k=0}^\infty b_k$, we have
+					\begin{gather*}
+						\sum_{k=0}^\infty (a_k+b_k)=\sum_{k=0}^\infty a_k+\sum_{k=0}^\infty b_k\\
+						\sum_{k=0}^\infty (ca_k)=c\sum_{k=0}^\infty a_k
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					Omitted.
+				\end{proof}
+				
+				\begin{proposition}
+					(Cauchy's Criterion) $\sum_{k=0}^\infty a_k$ is convergent iff 
+					\begin{gather*}
+						\forall \epsilon>0\exists N(\forall n\geq N\forall p>0(|\sum_{k=n}^{n+p} a_k|<\epsilon))
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					Omitted.
+				\end{proof}
+				
+				\subsubsection{Positive Series}
+				
+				\begin{Def}
+					Series $\sum_{k=0}^\infty a_k$ is \textbf{positive} iff $a_k\geq 0$.
+				\end{Def}
+				
+				\begin{proposition}
+					Positive series $\sum_{k=0}^\infty a_k$ is convergent$\Leftrightarrow \sum_{k=0}^\infty a_k\leq M$ for some $M$. 
+				\end{proposition}
+				\begin{proof}
+					Omitted.
+				\end{proof}
+				
+				\begin{proposition}
+					If $a_k\geq b_k\geq 0$, then 
+					
+					\begin{gather*}
+						\sum_{k=0}^\infty a_k\mbox{ is convergent}\Rightarrow \sum_{k=0}^\infty b_k\mbox{ is convergnet}
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					Omitted.
+				\end{proof}
+				
+				\subsubsection{Absolute Convergence}
+				
+				\begin{Def}
+					$\sum_{k=0}^\infty a_k$ is \textbf{absolutely covergent} if $\sum_{k=0}^\infty |a_k|$ is convergent.
+				\end{Def}
+			
+				\subsubsection{D'Alembert's Criterion}
+					
+					\begin{lemma}
+						(D'Alembert) Suppose $\sum_{k=0}^\infty a_k$ is positive series. If there exists some $N\in \NN$, 
+						
+						\begin{itemize}
+							\item $r<1$ such that for all $n\geq N,a_n>0$
+							\begin{gather*}
+								\frac{a_{n+1}}{a_n}\leq r
+							\end{gather*}
+							
+							Then, $\sum_{k=0}^\infty a_k$ is convergent.
+							\item such that for all $n\geq N$,
+							\begin{gather*}
+								\frac{a_{n+1}}{a_n}\geq 1
+							\end{gather*}
+							
+							Then, $\sum_{k=0}^\infty a_k$ is disvergent.
+						\end{itemize}
+					\end{lemma}
+					\begin{proof}
+						\begin{itemize}
+							\item 
+							\item 
+						\end{itemize}
+					\end{proof}
+					
+					\textbf{Remark}
+				
+				\subsubsection{Cauchy's Root Criterion}
+				
+					\begin{lemma}
+						(Cauchy) Suppose $\sum_{k=0}^\infty a_k$ is positive series. If there exists some $N$,
+						\begin{itemize}
+							\item and $r<1$ such that for all $n\geq N$
+							\begin{gather*}
+								\sqrt[n]{a_n}<r
+							\end{gather*}
+							\item such that $n\geq N$
+							\begin{gather*}
+								\sqrt[n]{a_n}\geq 1
+							\end{gather*}
+							
+							Then, $\sum_{k=0}^\infty a_k$ is disvergent. 
+						\end{itemize}
+					\end{lemma}
+					\begin{proof}
+						\begin{itemize}
+							\item 
+							\item 
+						\end{itemize}
+					\end{proof}
+				
+				\subsubsection{Cauchy's }
+				
+				\subsubsection{Kummer/Raabe/Betrand's Criterion}
+				\subsubsection{Abel's Criterion}
+				\subsubsection{Dirichlet's Criterion}
+				\subsubsection{Lebnitz's Criterion}
+			\subsection{Power Series}
+				\begin{Def}
+					A \textbf{power series} is a formal sum of
+					
+					\begin{gather*}
+						f(z):=\sum_{k=0}^\infty a_k z^k
+					\end{gather*}
+				\end{Def}
+				
+				\begin{theorem}
+					(Cauchy-Hadamard) For $\sum_{k=0}^\infty a_nx^n$, define
+					\begin{gather*}
+						\rho:=\frac{1}{\overline{lim}_{n\rightarrow \infty} \sqrt[n]{a_n}}
+					\end{gather*}
+					
+					Then, the series is absolutly convergent in $|z|<\rho$, disvergent in $|z|>\rho$. 
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsubsection{Exponential}
+				Define:
+				\begin{gather*}
+					e:=\lim_{n\rightarrow \infty} (1+\frac{1}{n})^n\\
+					exp(x):=\sum_{k=0}^\infty \frac{x^k}{k!}
+				\end{gather*}
+			\subsubsection{Geometric Sequence}
+			\begin{Def}
+				Geometric Sequence
+				\begin{gather*}
+					G(z)=\sum_{i=0}^\infty z^i=\lim_{n\rightarrow \infty} G_n(z)\qquad G_n(z)=\sum_{i=0}^n z^i
+				\end{gather*}
+			\end{Def}
+			
+			\begin{proposition}
+				\begin{itemize}
+					\item 
+					\item $G(z)=\frac{1}{1-z},|z|<1$
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				With $G(z)=\lim_{n\rightarrow \infty} \frac{1-z^{n+1}}{1-z}=\frac{1}{1-z}$.
+			\end{proof}
+			\subsubsection{Newton's Method}
+			
+			\subsection{Riemann's Sequence Theorem}
+				\begin{theorem}
+					(Riemann)
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Fubini's Theorem,Tonelli's Theorem}
+			
+				\begin{theorem}
+					(Fubini)
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{theorem}
+					(Tonelli) 
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{L'Hospital's Law}
+			
+			\subsection{Infinite Product}
+		\section{Limit of Functions}
+		\section{Continuous Functions on $\RR$}
+			\begin{Def}
+				$f:U\rightarrow \RR$ is \textbf{continuous} at $a\in U$ if 
+				\begin{gather*}
+					\lim_{x\rightarrow a} f(x)=f(a)
+				\end{gather*}
+			\end{Def}
+			
+			\subsection{Intermediate Value Theorem}	
+			
+			\begin{lemma}
+				If $f\in C([a,b],\RR)$ with $f(c)>0,c\in [a,b]$. Then, there exists $\delta>0$ such that
+				\begin{gather*}
+					\forall x\in (c-\delta,c+\delta)\cap [a,b](f(x)>0)
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+		
+			
+			\begin{theorem}
+				(Intermediate Value Theorem) Suppose $f:[a,b]\rightarrow \RR$ is continuous with 
+				\begin{gather*}
+					f(a)>c\qquad 
+				\end{gather*}
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\subsection{Extreme Value Theorem}
+				\subsubsection{Lesbegue Value}
+			\subsection{title}
+	\chapter{Derivative}
+		\section{Derivatives}
+			\begin{Def}
+				Define:
+			\end{Def}
+	\chapter{Integration}
+		\section{Antiderivative}
+			\begin{Def}
+				(Indefinite Function) Suppose 
+				\begin{gather*}
+					f:[a,b]\rightarrow \RR
+				\end{gather*}
+				Then, $F:[a,b]\rightarrow \RR$ is an antiderivative of $f$ if
+				\begin{itemize}
+					\item $F$ is continuous;
+					\item $F'(x)=f(x),x\in (a,b)$;
+				\end{itemize}
+			\end{Def}	
+			\begin{lemma}
+				Suppose $F,G$ be the antiderivative, then we have
+				\begin{gather*}
+					F-G=C
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				Notice that
+				\begin{gather*}
+					\frac{d}{dx}(F-G)=F'-G'=0\Rightarrow F-G=C
+				\end{gather*}
+			\end{proof}
+			\begin{lemma}
+				(Linearity) Suppose $F_1,F_2$ be antiderivative of $f_1,f_2$, then
+				\begin{gather*}
+					(\alpha F_1+\beta F_2+c)'=\alpha f_1+\beta f_2
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				Omitted
+			\end{proof}
+			\begin{lemma}
+				(Chain's Rule) Suppose $g:D\rightarrow \RR,h:I\rightarrow D$ with antiderivative $G$ of $g$. Then, suppose
+				\begin{gather*}
+					f=(g\circ h)h':I\rightarrow \RR
+				\end{gather*}
+				We have
+				\begin{gather*}
+					F=G\circ h
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				Omitted.
+			\end{proof}
+			
+			\subsection{Partial Integration}
+			
+			\begin{proposition}
+				内容...
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{corollary}
+				内容...
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+		\section{Riemannian Integration}
+			\subsection{title}
+		\section{Theorems of Integration in One Variable}
+			\subsection{Newton-Lebnitz Theorem}
+				\begin{theorem}
+					内容...
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Integrations Intermediate Value Theorem}
+		\section{Indefinite Integration}
+		\section{Summe and Integration}
+			\begin{lemma}
+				We have: For $f:\RR_+\rightarrow \RR_+$ 
+				\begin{gather*}
+					\sum_{i=1}^n f(n)\mbox{ is convergent}\Leftrightarrow \int_1^\infty f(x)dx\mbox{is convergent}
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			
+	
+	\chapter{Disccusion of Series and Infinite Product, in the Category of Analysis in One Variable}
+	\chapter{ODE}
+		\section{title}
+\end{document}

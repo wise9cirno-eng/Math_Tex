@@ -1,0 +1,70 @@
+\documentclass[Total.tex]{subfiles}
+
+\begin{document}
+	\chapter{ZFC Axioms}
+	\chapter{Construction of Real Numbers}
+		\section{Natural Numbers}
+		\section{Integer Numbers}
+		\section{Rational Numbers}
+		\section{Real Numbers}
+			\begin{axiom}
+				We could construct real number $(\RR,+,\times,<) as following$:
+				
+				\begin{itemize}
+					\item Field Axioms:
+					\item Order Field Axioms:
+					\item Archimede Field: 
+				\end{itemize}
+			\end{axiom}
+			\subsection{Compeleteness Condition}
+				
+				\begin{proposition}
+					The followings are equivalent:
+					\begin{itemize}
+						\item Metric space $(\RR,|-|$) is compelete;
+						\item For any upper subset $M\subseteq \RR$, $sup(M)$ exists;
+					\end{itemize}
+				\end{proposition}
+				
+				\subsubsection{Cauchy Sequence}
+				
+				\begin{lemma}
+					Suppose $M\subseteq \RR$ be upper bounded, then $sup(M)$ exists. 
+				\end{lemma}
+				\begin{proof}
+					Select upper bound $N$ and $x\in M$,
+					
+					\begin{gather*}
+						a_0:=x,b_0=N,c_n:=\frac{a_n+b_n}{2}\quad
+						a_{n+1}:=\begin{cases}
+							a_n&\forall_{x\in M} c_{n}\geq x\\
+							c_{n}&Elsewise
+						\end{cases}\quad b_{n+1}=\begin{cases}
+							b_n&\exists_{x\in M} c_n<x\\
+							c_n&Elsewise 
+						\end{cases}
+					\end{gather*}
+					
+					$(a_n),(b_n)$ are monotone.
+					
+					Then, $|a_n-b_n|\leq 2^{-(n-1)}|a_1-b_1|\Rightarrow|b_{n+m}-b_n|\leq |b_n-a_n|\leq 2^{-(n-1)} |b_1-a_1|$. It is Cauchy sequence. Thus $b_n\rightarrow z\in \RR$. And $a_n\rightarrow z$: 
+					
+					$z$ is $sup(M)$. Suppose $y\in M$, we have
+					\begin{gather*}
+						y>z\Leftrightarrow \exists N_0(n>N_0\rightarrow y>a_n)
+					\end{gather*}
+					
+					Contradict to the definition.
+				\end{proof}
+				
+				\begin{lemma}
+					If we define $\RR$ as
+					\begin{gather*}
+						\RR:=2^\NN
+					\end{gather*}
+					
+					Then, 
+				\end{lemma}
+					
+		\chapter{title}
+\end{document}

@@ -1,0 +1,219 @@
+\documentclass[Total.tex]{subfiles}
+\begin{document}
+	\chapter{Fundamentals}
+	\chapter{De Rham Cohomology, and Harmonic Differential Form}
+		\section{The Laplace Operator}
+			Review:
+			\begin{itemize}
+				\item The scalar product
+				\begin{gather*}
+					<-,->:\wedge^p V\times \wedge^p V\rightarrow \RR\\
+					(v_1\wedge\dots\wedge v_p,w_1\wedge \dots\wedge w_p)=det(<v_i,w_j>)
+				\end{gather*}
+				\item If $e_1,\dots,e_d$ is an orthonormal basis, then 
+				\begin{gather*}
+					e_{i_1}\wedge \dots\wedge e_{i_p};1\leq i_1<\dots<i_p\leq d
+				\end{gather*}
+				is an orthonormal basis of $\wedge^p V$;
+				\item Given an orientation, then the \textbf{star operator}
+				\begin{gather*}
+					*:\wedge^p(V)\rightarrow\wedge^{d-p}(V);0\leq p\leq d\\
+					(e_{i_1}\wedge\dots\wedge e_{i_p})\mapsto e_{j_1}\wedge\dots\wedge e_{j_{d-p}}
+				\end{gather*}
+				where $\{j_1,\dots,j_{d-p},i_1,\dots,i_p\}=\{1,\dots,d\}$.
+				
+				In paraticular:
+				\begin{gather*}
+					*(1)=e_1\wedge\dots\wedge e_d\\
+					*(e_1\wedge\dots\wedge e_d)=1\\
+					*(Af_1\wedge\dots\wedge Af_p)=det(A)*(f_1\wedge\dots\wedge f_p)
+				\end{gather*}
+				\item $*(Af_1\wedge \dots\wedge Af_p)=det(A)*(f_1\wedge \dots\wedge f_p)$.
+				\item We have:
+				\begin{gather*}
+					**=(-1)^{p(d-p)}:\wedge^p(V)\rightarrow \wedge^p(V)\\
+					<v,w>=*(w\wedge *v)=*(v\wedge *w)\\
+					\wedge(V)=\oplus \wedge^p(V),\wedge^p(V)\perp \wedge^q(V),p\not=q\\
+					*(1)=\frac{1}{\sqrt{det(<v_i,v_j>)}}
+				\end{gather*}
+			\end{itemize}
+			We obtain the operator
+			\begin{gather*}
+				*:\wedge^p(T_x^*M)\rightarrow \wedge^{d-p}(T_x^* M)
+			\end{gather*}
+			i.e. a base point preserving operator
+			\begin{gather*}
+				*:\Omega^p(M)\rightarrow \Omega^{d-p}(M)\qquad \Omega^k(M):=\Gamma(\wedge^k(M))=\Gamma(\wedge^k (TM))
+			\end{gather*}
+			Recall the metric on $T_x^*M$ is given by
+			\begin{gather*}
+				(g^{ij}(x))=(g_{ij}(x))^{-1}
+			\end{gather*}
+			Therefore,
+			\begin{gather*}
+				*(1)=\sqrt{det(g_{ij})}dx^1\wedge \dots\wedge dx^d
+			\end{gather*}
+			
+			\begin{Def}
+				Such form $*(1)$ is called \textbf{volume form}.
+			\end{Def}
+			\subsubsection{Inner Product}
+				\begin{Def}
+					Suppose $\alpha,\beta\in \Omega^p(M)$. Then, define the $L^2$-product of $\Omega^p(M)$ as following:
+					\begin{gather*}
+						(\alpha,\beta)=\int_M <\alpha,\beta>*(1)\\
+						\qquad=\int_M det(<\alpha_i,\beta_j>)\sqrt{det(g_{ij})}dx^1\wedge\dots\wedge dx^d\\
+						\qquad=\int_M <\alpha,*\beta>
+					\end{gather*}
+					The product on $\Omega^p(M)$ is obviously bilinear and positive definite.
+				\end{Def}
+			\subsubsection{Operator $d^*$}
+				\begin{Def}
+					Consider the operator $d:\Omega^{p} M\rightarrow \Omega^{p-1}M$. Then, it adjoint $d^*$ on $\oplus \Omega^{p}(M)$,
+					\begin{gather*}
+						(d\alpha,\beta)=(\alpha,d^*\beta)
+					\end{gather*}
+					Therefore, $d^*:\Omega^pM\rightarrow \Omega^{p-1}M$.
+				\end{Def}
+				
+				\begin{lemma}
+					Let $d^*:\Omega^{p}(M)\rightarrow \Omega^{p-1}(M)$ satisfies:
+					\begin{gather*}
+						d^*(-):=(-1)^{d(p+1)+1}*[d(*(-))]
+					\end{gather*}
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Laplace-Beltrami Operator}
+				\begin{Def}
+					The \textbf{Laplace-Beltrami operator} on $\Omega^p(M)$ is 
+					\begin{gather*}
+						\Delta=dd^*+d^*d:\Omega^p(M)\rightarrow \Omega^p(M)
+					\end{gather*}
+				\end{Def}
+				And
+				\begin{Def}
+					$\omega\in \Omega^p(M)$ is called \textbf{harmonic} if
+					\begin{gather*}
+						\Delta \omega=0
+					\end{gather*}
+				\end{Def}
+				\begin{corollary}
+					$\Delta$ is self-adjoint. i.e.
+					\begin{gather*}
+						(\Delta \alpha,\beta)=(\alpha,\Delta \beta)
+					\end{gather*}
+				\end{corollary}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{lemma}
+					(Harmonic Form) $\Delta\alpha=0\Leftrightarrow d\alpha=0,d^*\alpha=0$.
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{corollary}
+					内容...
+				\end{corollary}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\subsubsection{Local Representation}
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{proposition}
+					For a differentiable $f:M\rightarrow \RR$,
+					\begin{gather*}
+						\Delta f=-\frac{1}{\sqrt{g}}\frac{\partial}{\partial x^j}(\sqrt{g}g^{ij}\frac{\partial f}{\partial x^i})\qquad g=det(g_{ij})
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+		\section{Representing Cohomology Classes by Harmonic Forms}
+			\begin{Def}
+				内容...
+			\end{Def}
+			
+			\begin{theorem}
+				(Existence of Harmonic Form in Homology Class)
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+		\section{Generalization: Sobolev Space,Elliptic}
+			\subsection{Sobolev Space by Bundles}
+				\begin{Def}
+					Let $E,F$ be vector bundles over \underline{compact, oriented,differentiable manifold} $M$. Let $\Gamma(E),\Gamma(F)$ be the spaces of differentiable sections.
+					
+					\textbf{Sobolev spaces of sections} can be defined with the help of bundle charts: Let $(f,U)$ be a bundle chart of $E$. $f$ then identifies $E|U$ with $U\times \RR^n$. A section $s$ of $E$ is then contained in the Sobolev space $H^{k,p}(E)$, if for any such bundle chart, and $U'\subseteq U$ we have
+					\begin{gather*}
+						p_2\circ f\circ s|U'\in H^{k,p}(U',\RR^n)
+					\end{gather*}  
+					where $p_2$ is the projection $p_2:U'\times \RR^n\rightarrow \RR^n$.
+				\end{Def}
+				
+				\subsubsection{Differential Operator}
+				\begin{Def}
+					A linear map
+					\begin{gather*}
+						L:\Gamma(E)\rightarrow \Gamma(F)
+					\end{gather*}
+					is called \textbf{(linear) differential operator} of order $l$ from $E$ to $F$
+					
+					In bundle chart, we write $L$ as 
+					\begin{gather*}
+						L=P_0(D)+\dots+P_l(D)
+					\end{gather*}
+				\end{Def}
+				\subsubsection{Elliptic Operator}
+				\begin{Def}
+					内容...
+				\end{Def}
+		\section{Some of Unclassified Conclusions}
+			\begin{proposition}
+				Let $\omega\in \Omega^1(S^2)$ be a 1-form of $S^2$, suppose that
+				\begin{gather*}
+					\varphi^*\omega=\omega
+				\end{gather*}
+				$\varphi\in SO3$. Then, 
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				内容...
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+	\chapter{Parallel Transport, Connections and Covariant Derivatives}
+		Some of reviews in Riemannian geometry.
+		\section{title}
+		\section{Metric Connections, The Yang-Mills Functional}
+		\section{The Levi-Civita Connection}
+		\section{Connections for Spin Structures, and the Dirac Operator}
+	\chapter{Geodesics and Jacobi Fields}
+	\chapter{Symmetric Spaces, and Kahler Manifolds}
+	\chapter{Morse Theory, and Floer Homology}
+	\chapter{Variational Problems from Quantum Field Theory}
+	\chapter{Harmonic Maps}
+\end{document}

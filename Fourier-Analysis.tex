@@ -1,0 +1,114 @@
+\documentclass[Total.tex]{subfiles}
+\begin{document}
+	\chapter{Introduction}
+		\begin{itemize}
+			\item The vibrating string;
+			
+			Solution of the following equation
+			\begin{gather*}
+				-kx(t)=m\ddot{x}(t)
+			\end{gather*}
+			
+			This second order ordinary differentail equation becomes
+			\begin{gather*}
+				\ddot{x}(t)+c^2x(t)=0\qquad c=\sqrt{k/m}
+			\end{gather*}
+			
+			The general solution is 
+			\begin{gather*}
+				x(t)=acos(ct)+bsin(ct)
+			\end{gather*}
+			
+			Where $a,b$ are constant give by $x(0)$ and $\dot{x}(0)$.
+			
+			Furthermore,
+			\begin{gather*}
+				x(t)=\sqrt{a^2+b^2}cos(ct-\varphi)=Acos(ct-\varphi)
+			\end{gather*}
+			\item Standing and Traveling Waves;
+			\begin{itemize}
+				\item Standing Wave:
+				\begin{gather*}
+					内容...
+				\end{gather*}
+				\item Traveling Wave:
+				\begin{gather*}
+					内容...
+				\end{gather*}
+			\end{itemize}
+			\item Harmonic and Superposition of Tones;
+			\item 
+		\end{itemize}
+		\section{Solution to the Wave Equation}
+		\section{Fourier Coeffiecient}
+			Suppose $f$ is a \underline{Riemann integrable functon}
+			\begin{gather*}
+				f:T=\RR/2\pi \ZZ\rightarrow \CC\mbox{ or }\RR
+			\end{gather*}
+			We have
+			\begin{gather*}
+				\hat{f}(r)=\frac{1}{2\pi}\int_0^{2\pi} f(t)e^{-irt}dt=\frac{1}{2\pi}\int_T f(t)e^{-irt}dt
+			\end{gather*}
+			According to the research in 19th,
+			
+			\begin{theorem}
+				(Fejer's Theorem)
+			\end{theorem}
+	\chapter{Fourier Series}
+		\section{Fundamentals}
+			\subsection{Fourier Coeffiecient}
+				\begin{Def}
+					Define:
+					\begin{gather*}
+						a_n:=\frac{1}{L}\int_0^L f(x)e^{-\frac{2\pi i}{L}x}dx;n\in \ZZ
+					\end{gather*}
+				\end{Def}
+				\textbf{Remark} We now assume that $f$ is Riemann-integrable on $[0,L]$. 
+			\subsection{Some of Concepts in Analysis}
+				\subsubsection{Everywhere Continuous Functions}
+				\subsubsection{Piecewise Continuous Functions}
+			\subsection{Definitions}
+				\begin{Def}
+					Take the following notion of
+					\begin{gather*}
+						\hat{f}(n):=a_n
+					\end{gather*}
+					Then, the \textbf{Fourier series} is given formally by:
+					\begin{gather*}
+						\sum_{n=-\infty}^\infty \hat{f}(n)e^{\frac{2\pi inx}{L}}
+					\end{gather*}
+				\end{Def}
+				Then, 
+				\begin{gather*}
+					f(x)\sim \sum_{n=-\infty}^\infty a_n e^{\frac{2\pi inx}{L}}
+				\end{gather*}
+				
+				Especially: Suppose $f$ is integrable on $[-\pi,\pi]$, then the $n$th Fourier coefficient of $f$ is
+				\begin{gather*}
+					\hat{f}(n)=a_n=\frac{1}{2\pi}\int_{-\pi}^{\pi} f(\theta)e^{-in\theta} d\theta;n\in \ZZ
+				\end{gather*}
+				
+				Thus
+				\subsection{Calculating of Some Fourier Coefiecients}
+					\subsubsection{Poisson Kernel}
+						\begin{gather*}
+							D_N(x)=\sum_{n=-N}^N e^{inx}
+						\end{gather*}
+						is called n\textbf{th} Dirchlet kernel. It can be seen as the Fourier series with property $a_n=\begin{cases}
+							1&|n|\leq N\\
+							0&elsewise
+						\end{cases}$. 
+						
+						A \textbf{closed form formula} for Dirchlet kernel is
+						\begin{gather*}
+							D_N(x)=
+						\end{gather*}
+					\subsubsection{Dirichlet Kernel}
+				\subsection{Uniqueness}
+				\subsection{Convolutions}
+			\section{Good Kernels}
+			\section{title}
+			\section{Convergence}
+	\chapter{Fourier Transforms}
+	\chapter{Finite Fourier Analysis}
+\end{document}

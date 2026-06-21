@@ -1,0 +1,186 @@
+\documentclass[Total.tex]{subfiles}
+
+\begin{document}
+	\chapter{Fields and Galois Theory}
+		\section{Fields}
+		
+			\begin{Def}
+				A \textbf{field} is a five-turple $(K,+,\times,0,1)$, where:
+				
+				\begin{itemize}
+					\item $(K,+,0)$ is an additive group;
+					
+					\item $(K^\times,\times,0)$ is a multiplicative group; 
+				\end{itemize}
+			\end{Def}
+			
+			We have know the construction of
+			
+			\begin{gather*}
+				Ring\rightarrow CRing\rightarrow ID\rightarrow Fields
+			\end{gather*}
+			
+			\begin{proposition}
+				Let $A$ be a domain. Then for every ring morphsim $\phi:A\rightarrow K$ where $K$ is a field, there exists factorization
+				
+				\begin{center}
+					\begin{tikzcd}
+						Quot(A)\arrow[r]&K\\
+						A\arrow[u,hookrightarrow]\arrow[ru]
+					\end{tikzcd}
+				\end{center}
+			\end{proposition}
+			
+			\begin{proof}
+				It is well-defined, induced by
+				
+				\begin{gather*}
+					\frac{a}{b}\mapsto \frac{\phi(a)}{\phi(b)}
+				\end{gather*}
+				
+				Universal property omitted.	
+			\end{proof}
+			
+			\subsubsection{Vector Spaces}
+			
+				\begin{lemma}
+					Every $V\in Vect_k$ is free.
+				\end{lemma}
+				
+				\begin{proof}
+					Consider the Bases. (If infinite, rely on AC)
+				\end{proof}
+				
+				\begin{corollary}
+					Every exact sequence of modules over a field splits. 
+				\end{corollary}
+				
+				\begin{proof}
+					Each vector space is free, so is projective. And according to the proposition here: \ref{Homological-Algebra-Projective-Injective-Modules-Equivalent-Definition-of-Projective-Modules}
+				\end{proof}
+			
+			\subsubsection{Characteristic}
+			
+				\begin{Def}
+					Let $F$ be a field, and a ring map 
+					
+					\begin{gather*}
+						\phi:\ZZ\rightarrow F\qquad 1\mapsto 1
+					\end{gather*}
+					
+					Then, the kernel $ker(\phi)=(p)$, $char(F):=p$, is called the \textbf{characteristic} of $F$.
+				\end{Def}
+				
+				Under this notation:
+				
+				\begin{Def}
+					Let $F$ be a field:
+					
+					\begin{itemize}
+						\item $char(F)=0,\QQ\subseteq F$
+						\item $char(F)=p,F_p\subseteq F$
+					\end{itemize}
+					
+					is called \textbf{prime field}, which is the smallest subfield of $F$.
+				\end{Def}
+			
+			\subsection{Field Extensions}
+			
+				\begin{lemma}
+					
+					\label{Fields-Morphisms-from-Field-to-Ring}
+					If $F$ is a field and $R$ is a nonzero ring, then, any ring homomorphism
+					
+					\begin{gather*}
+						\phi:F\rightarrow R
+					\end{gather*}
+					
+					is injective.
+				\end{lemma}
+				
+				\begin{proof}
+					Suppose $a\in Ker(\varphi);a\not=0$. Then, notice that
+					
+					\begin{gather*}
+						\varphi(1)=\varphi(aa^{-1})=0\Rightarrow 1=\varphi(1)=0
+					\end{gather*}
+					
+					Contradiction. 
+				\end{proof}
+				
+				\begin{Def}
+					If $F$ is a field contained in a field $E$, then $E$ is said to be a \textbf{field extension} of $F$. We shall wirte 
+					
+					\begin{gather*}
+						E/F
+					\end{gather*}
+					
+					to indicate that $E$ is an extension of $F$.
+				\end{Def}
+				
+				
+				\subsubsection{Category of Field Extension}
+				
+				With \ref{Fields-Morphisms-from-Field-to-Ring}, we have known: The ring morphsims between fields must be injective. And: Those morphisms represent the field extensions. 
+				
+				For morphism $\phi:F\rightarrow K$, $K$ can be seen as $F$-algebra.
+				
+				\begin{Def}
+					Let $k$ be a field. There is a \textbf{category of field extensions} of $k$. 
+					
+					\begin{itemize}
+						\item Objects: Morphisms $k\rightarrow E$;
+						\item Morphsims: \begin{tikzcd}
+							E\arrow[rr]&&E'\\
+							&k\arrow[lu]\arrow[ru]
+						\end{tikzcd}
+						
+						Take the notation of morphsims $Mor_k(E,E')$.
+					\end{itemize}
+				\end{Def}
+				
+				\begin{Def}
+					(Tower of Extensions) A \textbf{tower of fields} $E_n/E_{n-1}/\dots/E_0$ consists of a sequence of extensions of fields $E_n/E_{n-1},\dots,E_1/E_0$.
+				\end{Def}
+				
+				\begin{Def}
+					
+				\end{Def}
+				
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				
+				\begin{proof}
+					内容...
+				\end{proof}
+			
+				\subsubsection{Finite Extensions}
+				
+				\begin{Def}
+					Let $F/E$ be an extension of fields. The dimension of $F$ considered as an $E$-vector space is called \textbf{degree of extension} and is denoted as:
+					
+					\begin{gather*}
+						[E:F]:=dim_E(F)
+					\end{gather*}
+				\end{Def}
+				\subsubsection{Algebraic Extension}
+				
+					\begin{Def}
+						Consider a field extension $F/E$. An element $\alpha\in F$ is said to be \textbf{algebraic} over $E$ is $\alpha$ is the root of some nonzero polynomial with coefficients in $E$.
+						
+						If all elements of $F$ are algebraic then $F$ is said to be an \textbf{algebraic extension} of $E$.
+					\end{Def}
+				
+				\subsubsection{Minimal Polynomials}
+				
+				\subsubsection{Algebraic Closure}
+			\subsection{Separation Extension}
+	
+	\chapter{The Fundamental Theorem of Galois Theory}
+	
+	\chapter{Algebraic Closure}
+	
+	\chapter{Infinite Galois Extensions}
+	
+\end{document}

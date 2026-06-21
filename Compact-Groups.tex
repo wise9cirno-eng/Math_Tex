@@ -1,0 +1,304 @@
+\documentclass[Total.tex]{subfiles}
+\begin{document}
+	\chapter{Representation of Compact Groups}
+		\section{Basic Representation Theory}
+			\subsection{Definitions}
+			\subsubsection{The Topology of $E$}
+			\subsubsection{Representation of Topological Group}
+			\begin{Def}
+				Let $G$ be a topological group, and $E$ be a \underline{topological vector space}.
+				\begin{itemize}
+					\item We say that: $E$ is a $G$-module, if there is an action
+					\begin{gather*}
+						G\times E\rightarrow E\qquad (g,x)\mapsto gx
+					\end{gather*}
+					\item 
+					an action $(g,x)\mapsto gx:G\times E\rightarrow E$ such that:
+					\begin{itemize}
+						\item $:x\mapsto gx,E\rightarrow E$ is a \textbf{continuous vector space endomorphism} of $E$, for each $g\in G$;
+						\item $g\mapsto gx,G\rightarrow E$ is continuous for each $x\in E$;
+					\end{itemize}
+					\item A \textbf{representation} of $G$ is a continuous map
+					\begin{gather*}
+						\pi:G\rightarrow \mathcal{L}_p(E)
+					\end{gather*}
+					
+					satysfying
+					\begin{gather*}
+						\pi(1)=id_E\qquad \pi(gh)=\pi(g)\pi(h);g,h\in G
+					\end{gather*}
+				\end{itemize}
+			\end{Def}
+			
+			\textbf{Remark} \begin{itemize}
+				\item  Possible Representation
+				\begin{gather*}
+					\pi:G\rightarrow \mathcal{L}_p(E)\qquad g\mapsto (x\mapsto gx)
+				\end{gather*}
+				\item If $\pi:G\rightarrow \mathcal{L}_p(E)$ is a representation, then the function
+				\begin{gather*}
+					G\times E\rightarrow E\qquad (g,x)\mapsto gx:=\pi(g)(x)
+				\end{gather*}
+				
+				endows $E$ with the structure of a $G$-module.
+			\end{itemize}
+			
+			We could have another famous statement:  It is the theory of $G$-module.
+			\begin{theorem}
+				Assume that: $E$ is a $G$-module for a topological group $G$, and that
+				\begin{gather*}
+					\pi:G\rightarrow \mathcal{L}_p(E)
+				\end{gather*}
+				
+				is the associated representation. 
+				
+				If: $E$ is a Baire space, then for every compact subspace $K$ of $G$, the set
+				\begin{gather*}
+					\pi(K)\subseteq Hom(E,E)
+				\end{gather*}
+				
+				is equi-continuous at $0$. That is: For any neighborhood $V$ of $0$ in $E$, there is a neighborhood $U$ of $0$ such that
+				\begin{gather*}
+					KU\subseteq V
+				\end{gather*}
+				
+				As a consequence, if $G$ is locally compact, the function
+				\begin{gather*}
+					G\times E\rightarrow E\qquad (g,x)\mapsto gx
+				\end{gather*}
+				
+				is continuous.
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{example}
+				内容...
+			\end{example}
+			
+			\begin{corollary}
+				内容...
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Haar Integral}
+			
+			Take the following notion: Given a measure $\mu$,
+			\begin{gather*}
+				\mu(f):=\int_X fd\mu=(\mu,f)
+			\end{gather*}
+			
+			or indeed $=\int_G f(g)d\mu(g)$. A special case is the classical Fourier analysis
+			\begin{gather*}
+				\mathbb{T}=\RR/\ZZ
+			\end{gather*}
+			
+			\subsubsection{Invariant Measure}
+			
+			Take the following notation $(_gf)(x):=f(g^{-1}x);g\in G$(multiplicative group).
+			
+			\begin{Def}
+				\begin{itemize}
+					\item Let $G$ denote a compact group.
+					
+					A measure $\mu$ is called \textbf{invariant} if
+					\begin{gather*}
+						\mu(_g f)=\mu(f),\forall g\in G;f\in E=C(G,\mathbb{K})
+					\end{gather*}
+					\item A measure $\mu$ is called \textbf{Haar measure}, if it is invariant and positive.
+					
+					Positive: $\mu(f)\geq 0,\forall f\geq 0$.
+					\item The measure is \textbf{normalized} if $\mu(1)=1$.
+				\end{itemize}
+			\end{Def}
+			
+			\begin{example}
+				Consider the morphism
+				\begin{gather*}
+					p:\mathbb{R}\rightarrow \mathbb{T}\qquad t\mapsto t+\mathbb{Z}
+				\end{gather*}
+			\end{example}
+			
+			\begin{example}
+				内容...
+			\end{example}
+			\subsubsection{Measure on Group}
+				Preparations for existence theorem:
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				
+				\begin{theorem}
+					(The existence and Uniqueness Theorem of Haar Measure) For each \textbf{compact group}
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{corollary}
+					内容...
+				\end{corollary}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Consequence of Haar Measure}
+				\begin{theorem}
+					(Weyl's Trick) 
+					\begin{itemize}
+						\item Let $G$ be a compact group, $E$ a $G$-module which is also a Hilbert space.(not Hilbert $G$-module) 
+						
+						Then, there is a scalar product relative to which all operators $\pi(g)$ are unitary.
+						\item Specifically, if $(-,-)$ is the given scalar product on $E$, then
+						\begin{gather*}
+							<x|y>=\int_G (gx|gy)dg
+						\end{gather*}
+						
+						defines a scalar product such that
+						\begin{gather*}
+							M^{-2}(x|x)\leq \left\langle x|x\right\rangle \leq M^2(x|x)\qquad M=sup\{\sqrt{(gx|gx)}|g\in G,(x|x)\leq 1\}
+						\end{gather*}
+						
+						and that 
+						\begin{gather*}
+							\langle gx| gy\rangle=\langle x| y\rangle;x,y\in E,g\in G
+						\end{gather*}
+					\end{itemize}
+				\end{theorem}
+				\begin{proof}
+					Firstly, the new-defined product is well-defined. Then, since Haar measure is positive, we have $(gx|gx)\geq 0\Rightarrow \langle x|x\rangle\geq 0$. Thus, the constant $M$ is well-defined.
+					
+					Then,
+					\begin{gather*}
+						内容...
+					\end{gather*}
+					
+					Finally:
+					\begin{gather*}
+						<hx|hy>=\int_G (ghx|ghy)dg=\int_G (gx|gy)dg=<x,y>\qquad\mbox{(Invariance of Haar Measure)}
+					\end{gather*}
+				\end{proof}
+				\subsubsection{Hilbert $G$-module}
+				\begin{Def}
+					(Hilbert $G$-module) If $G$ is a \underline{topological space}. Then, a \textbf{Hilbert $G$-module} is a \underline{Hilbert space} $E$ and a $G$-module such that: All operators $\pi(g)$ is unitary. i.e.
+					\begin{gather*}
+						(gx|gy)=(x,y);x,y\in E,g\in G
+					\end{gather*}
+				\end{Def}
+				
+				\begin{example}
+					Let $G$ be a compact group and $\mathcal{H}_0$ the vector space $C(G,\mathcal{K})$ equipped with the scalar product
+					\begin{gather*}
+						(f_1|f_2)=\gamma(f_1\bar{f}_2)=\int_G f_1(g)\overline{f_2(g)}dg
+					\end{gather*}
+					
+					Indeed:
+					\begin{itemize}
+						\item 
+						\item 
+					\end{itemize}
+					
+					Then, the open set $U=\{t\in G|(f\bar{f})(t)>0\}$ contains $g$. Hence is nonempty.
+				\end{example}
+				\subsection{The Main Theorem on Hilbert Modules for Compact Groups}
+					Recall:
+					\begin{itemize}
+						\item A \textbf{sesquilinear form} is a function
+						\begin{gather*}
+							B:\mathcal{H}\times \mathcal{H}\rightarrow K
+						\end{gather*}
+						that is linear in the first and conjugate linear in the second. (in the sense of $\CC$-linear)
+						\item  It is \textbf{bounded} if 
+						\begin{gather*}
+							|B(x,y)|\leq M\Vert x\Vert\cdot \Vert y\Vert\qquad x,y\in \mathcal{H}
+						\end{gather*}
+						\item A way to define sesquilinear form: Suppose $T$ be a \textbf{bounded linear operator} on $\mathcal{H}$. Then,
+						\begin{gather*}
+							B(x,y)=(Tx|y)
+						\end{gather*}
+						
+						defines a sesquilineaar from with $M=\Vert T\Vert$: In the view of Cauchy-Schwartz
+						\begin{gather*}
+							|(x,y)|\leq \Vert x\Vert\cdot \Vert y\Vert 
+						\end{gather*}
+					\end{itemize}
+					But conversely:
+					\begin{lemma}
+						If $B$ is a sesquilinear form, then there exists a unique bounded operator $T$ of $\mathcal{H}$ such that
+						\begin{gather*}
+							\Vert T\Vert\leq M\qquad B(x,y)=(Tx|y)
+						\end{gather*}
+					\end{lemma}
+					\begin{proof}
+						Such $T$ is specified by:
+						
+						Uniqueness:
+					\end{proof}
+					
+					Under this trick, we could define another operator, which is stabil under group actions:
+					\begin{lemma}
+						Let $G$ denote a compact grooup and $T$ a bounded operator on a Hilbert $G$-module $E$. Then: There exists a unique bounded operator $\tilde{T}$ on $E$, with $\Vert\tilde{T}\Vert\leq \Vert T\Vert$ such that
+						\begin{gather*}
+							(\tilde{T}x|y)=\int_G (Tgx|gy)dg=\int_G  (\pi(g)^{-1}T\pi(g)(x)|y)dg
+						\end{gather*}
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{proposition}
+						(Criterion for $\tilde{S}$) The following statements are equivalent for an operator $S$ of $H$:
+						\begin{itemize}
+							\item $S\in Hom_G(H,H)$;
+							\item $S=\tilde{S}$;
+							\item There is an operator $T$ such that $S=\tilde{T}$;
+						\end{itemize}
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+					\subsubsection{$G$-Submodules}
+					\begin{Def}
+						If $G$ is a topological group, $E$ a $G$-module, then a vector-subspace $V$ of $E$ is called a \textbf{submodule} if
+						\begin{gather*}
+							GV\subseteq V
+						\end{gather*}
+						
+						also called \textbf{invariant subspace}.
+					\end{Def}
+					\begin{lemma}
+						内容...
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{lemma}
+						内容...
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+				\subsection{The Fundamental Theorem on Unitary Modules}
+				\subsection{Definition of a Compact Lie Group,Compact Group by Compact Lie Groups}
+				
+				Given in Lie Theory.
+				
+		\section{Theorem of Peter and Weyl}
+		\section{G-Module Theory}
+			\subsection{Vector Valued Integration}
+		\section{Compact Groups-Hopf Algebras}
+	\chapter{Characters}
+	\chapter{Lie Group}
+		These will be given in the note of Lie group and Algebras;
+		\begin{itemize}
+			\item Linear Lie Groups;
+			\item Compact Lie Groups;
+		\end{itemize}
+	\chapter{Abelian Groups}
+\end{document}
