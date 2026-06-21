@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2023.3.13)  22 JUN 2026 00:49
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2023.3.13)  22 JUN 2026 01:12
  restricted system commands enabled.
 **Univalent-Funcitons.tex
 (./Univalent-Funcitons.tex
@@ -1054,32 +1054,104 @@ Package hyperref Info: Link coloring OFF on input line 2.
 \openout4 = Univalent-Funcitons.out
 
 Chapter 1.
+Package mdframed Info: mdframed works in twoside mode on input line 5.
+LaTeX Font Info:    Trying to load font information for LS1+stixscr on input li
+ne 6.
+(c:/texlive/2022/texmf-dist/tex/latex/stix/ls1stixscr.fd
+File: ls1stixscr.fd 2015/04/17 v1.1.2-latex STIX script LS1 font definitions
+)
+LaTeX Font Info:    Trying to load font information for LS2+stixex on input lin
+e 6.
+
+(c:/texlive/2022/texmf-dist/tex/latex/stix/ls2stixex.fd
+File: ls2stixex.fd 2015/04/17 v1.1.2-latex STIX extentions LS2 font definitions
+
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 6.
+
+(c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
+
+(c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for LS1+stixfrak on input l
+ine 6.
+
+(c:/texlive/2022/texmf-dist/tex/latex/stix/ls1stixfrak.fd
+File: ls1stixfrak.fd 2015/04/17 v1.1.2-latex STIX fraktur LS1 font definitions
+)
+LaTeX Font Info:    Trying to load font information for LS1+stixbb on input lin
+e 6.
+
+(c:/texlive/2022/texmf-dist/tex/latex/stix/ls1stixbb.fd
+File: ls1stixbb.fd 2015/04/17 v1.1.2-latex STIX blackboard LS1 font definitions
+
+)
+LaTeX Font Info:    Trying to load font information for LS2+stixcal on input li
+ne 6.
+
+(c:/texlive/2022/texmf-dist/tex/latex/stix/ls2stixcal.fd
+File: ls2stixcal.fd 2015/04/17 v1.1.2-latex STIX calligraphic LS2 font definiti
+ons
+)
+LaTeX Font Info:    Trying to load font information for LS1+stixsf on input lin
+e 6.
+
+(c:/texlive/2022/texmf-dist/tex/latex/stix/ls1stixsf.fd
+File: ls1stixsf.fd 2015/04/17 v1.1.2-latex STIX sans-serif LS1 font definitions
+
+)
+LaTeX Font Info:    Trying to load font information for LS2+stixtt on input lin
+e 6.
+
+(c:/texlive/2022/texmf-dist/tex/latex/stix/ls2stixtt.fd
+File: ls2stixtt.fd 2015/04/17 v1.1.2-latex STIX typewriter LS2 font definitions
+
+)
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 6.
+
+
+(c:/texlive/2022/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+
+LaTeX Font Warning: Font shape `U/lasy/m/n' in size <7.5> not available
+(Font)              size <7> substituted on input line 6.
+
 [1
 
 
 {c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./Univalent-Funcitons.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.5pt have occurred.
+
 Package rerunfilecheck Info: File `Univalent-Funcitons.out' has not changed.
-(rerunfilecheck)             Checksum: 0A2582BFE43BD6FDDD154046D6204849;250.
+(rerunfilecheck)             Checksum: DF0B5499F53BEAF86D40677C17694122;359.
 )
 
 Here is how much of LuaTeX's memory you used:
- 27071 strings out of 478290
+ 27388 strings out of 478290
  100000,1977958 words of node,token memory allocated
  716 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 7 attribute, 97 glue_spec,
  7 attribute_list, 2 write nodes
-   avail lists: 2:81,3:41,4:21,5:66,6:3,7:253,8:9,9:66,10:1,11:24
- 46179 multiletter control sequences out of 65536+600000
- 18 fonts using 684511 bytes
- 155i,5n,148p,538b,335s stack positions out of 10000i,1000n,20000p,200000b,200000s
+   avail lists: 2:447,3:401,4:57,5:99,6:12,7:817,8:15,9:165,10:1,11:57
+ 46424 multiletter control sequences out of 65536+600000
+ 67 fonts using 3257551 bytes
+ 155i,10n,148p,538b,1199s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc}<c:/texlive/2022/te
 xmf-dist/fonts/type1/public/stix/STIXGeneral-Bold.pfb><c:/texlive/2022/texmf-dis
-t/fonts/type1/public/stix/STIXGeneral-Regular.pfb>
-Output written on Univalent-Funcitons.pdf (1 page, 36199 bytes).
+t/fonts/type1/public/stix/STIXGeneral-Regular.pfb><c:/texlive/2022/texmf-dist/fo
+nts/type1/public/stix/stix-mathit.pfb>
+Output written on Univalent-Funcitons.pdf (1 page, 75279 bytes).
 
-PDF statistics: 30 PDF objects out of 1000 (max. 8388607)
- 24 compressed objects within 1 object stream
- 3 named destinations out of 1000 (max. 131072)
- 24 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 39 PDF objects out of 1000 (max. 8388607)
+ 32 compressed objects within 1 object stream
+ 5 named destinations out of 1000 (max. 131072)
+ 32 words of extra memory for PDF output out of 10000 (max. 100000000)
 
