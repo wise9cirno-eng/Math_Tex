@@ -3,6 +3,58 @@
 	\chapter{Elementary Theory pf Univalent Mappings}
 		\section{Definitions}
 			\begin{Def}
-				A \textbf{single-valued} function $f$ is said to be \textbf{univalent} in a domain 
+				\begin{itemize}
+					\item A \textbf{single-valued} function $f$ is said to be \textbf{univalent} in a domain 
+					\begin{gather*}
+						D\subseteq \CC
+					\end{gather*}
+					
+					if it never takes the same value twice. That is $f(z_1)\not=f(z_2)$ for all points $z_1$ and $z_2$ in $D$, with $z_1\not=z_2$.
+					
+					\textbf{Remark} It might be non-holomorphic!
+					
+					
+					\item $f$ is \textbf{locally univalent} if it is univalent in some neighborhood of $z_0$;
+					
+					\item Especially: An \textbf{analytic} univalent function is called \textbf{conformal mapping}, because of angle-preserving property.
+				\end{itemize}
 			\end{Def}
+			
+			We have
+			\begin{center}
+				Univalent$\Rightarrow$ Locally Univalent
+			\end{center}
+			
+			but conversely may not hold, for example
+			\begin{example}
+				Consider the exponential map
+				\begin{gather*}
+					t\mapsto e^{it}
+				\end{gather*}
+				
+				It is locally univalent, because $f'(z_0)\not=0,z_0\in \CC$. But it is not univalent because of period $2\pi$.
+			\end{example}
+			
+			More precisely:
+			\begin{proposition}
+				If $f$ is analytic at $z_0,f'(z_0)\not=0$, then $f$ is univalent in some neighborhood of $z_0$;
+				
+				Conversely, if $f$ is locally univalent, then $f'(z_0)\not=0$.
+			\end{proposition}
+			
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			And according to
+			\begin{center}
+				Angle-Preserving$\Leftrightarrow f'(z)\not=0$ 
+			\end{center}
+			
+			\begin{corollary}
+				The univalent functions have angle-preserving property.
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
 \end{document}
